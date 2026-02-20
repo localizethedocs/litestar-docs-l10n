@@ -27,7 +27,7 @@ msgstr ""
 
 #: ../../../reference/params.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/params.py:docstring of litestar.params.Body:3
 #: litestar.params.Parameter:4

@@ -38,7 +38,7 @@ msgstr ""
 
 #: ../../../reference/stores/valkey.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/stores/valkey.py:docstring of
 #: litestar.stores.valkey.ValkeyStore.__init__:3

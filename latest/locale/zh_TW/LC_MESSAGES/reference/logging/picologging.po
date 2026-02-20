@@ -40,7 +40,7 @@ msgstr ""
 
 #: ../../../reference/logging/picologging.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/logging/picologging.py:docstring of
 #: litestar.logging.picologging.QueueListenerHandler.__init__:3

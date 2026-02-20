@@ -44,11 +44,11 @@ msgstr ""
 #: ../../../../litestar/stores/file.py:docstring of
 #: litestar.stores.file.FileStore.__init__:1
 msgid "Initialize ``FileStorage``."
-msgstr ""
+msgstr "初始化 ``FileStorage``。"
 
 #: ../../../reference/stores/file.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/stores/file.py:docstring of
 #: litestar.stores.file.FileStore.__init__:3
@@ -165,7 +165,7 @@ msgstr ""
 #: ../../../../litestar/stores/file.py:docstring of
 #: litestar.stores.file.FileStore.delete_expired:1
 msgid "Delete expired items."
-msgstr ""
+msgstr "刪除過期的項目。"
 
 #: ../../../../litestar/stores/file.py:docstring of
 #: litestar.stores.file.FileStore.delete_expired:3

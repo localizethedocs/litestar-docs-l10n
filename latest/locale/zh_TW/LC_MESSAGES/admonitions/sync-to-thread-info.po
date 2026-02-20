@@ -51,4 +51,4 @@ msgstr ""
 
 #: ../../../admonitions/sync-to-thread-info.rst:21
 msgid ":doc:`/topics/sync-vs-async`"
-msgstr ""
+msgstr ":doc:`/topics/sync-vs-async`"

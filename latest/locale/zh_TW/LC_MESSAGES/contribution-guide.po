@@ -23,11 +23,11 @@ msgstr ""
 
 #: ../../../../CONTRIBUTING.rst:5
 msgid "Getting Started"
-msgstr ""
+msgstr "開始使用"
 
 #: ../../../../CONTRIBUTING.rst:8
 msgid "Supported Python Versions"
-msgstr ""
+msgstr "支援的 Python 版本"
 
 #: ../../../../CONTRIBUTING.rst:10
 msgid ""

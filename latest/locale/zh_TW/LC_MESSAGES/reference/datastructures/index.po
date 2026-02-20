@@ -78,7 +78,7 @@ msgstr ""
 
 #: ../../../reference/datastructures/index.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/datastructures/__init__.py:docstring of
 #: litestar.datastructures.url.URL.__new__:3
@@ -780,7 +780,7 @@ msgstr ""
 #: litestar.datastructures.state.ImmutableState.__init__:7
 #: litestar.datastructures.state.State.__init__:7
 msgid "Examples"
-msgstr ""
+msgstr "範例"
 
 #: ../../../../litestar/datastructures/__init__.py:docstring of
 #: litestar.datastructures.state.ImmutableState.__init__:10

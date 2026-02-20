@@ -36,7 +36,7 @@ msgstr ""
 
 #: ../../../migration/fastapi.rst:0
 msgid "FastAPI"
-msgstr ""
+msgstr "FastAPI"
 
 #: ../../../migration/fastapi.rst:17
 msgid ""
@@ -52,7 +52,7 @@ msgstr ""
 
 #: ../../../migration/fastapi.rst:0
 msgid "Starlette"
-msgstr ""
+msgstr "Starlette"
 
 #: ../../../migration/fastapi.rst:32
 msgid ""
@@ -70,7 +70,7 @@ msgstr ""
 
 #: ../../../migration/fastapi.rst:0
 msgid "Litestar"
-msgstr ""
+msgstr "Litestar"
 
 #: ../../../migration/fastapi.rst:48
 msgid ""

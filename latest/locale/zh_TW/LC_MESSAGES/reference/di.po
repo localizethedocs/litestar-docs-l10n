@@ -35,7 +35,7 @@ msgstr ""
 
 #: ../../../reference/di.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/di.py:docstring of litestar.di.Provide.__init__:3
 msgid ""

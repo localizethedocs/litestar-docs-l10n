@@ -48,7 +48,7 @@ msgstr ""
 
 #: ../../../reference/repository/abc.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/repository/abc/__init__.py:docstring of
 #: litestar.repository.abc._async.AbstractAsyncRepository.add:3

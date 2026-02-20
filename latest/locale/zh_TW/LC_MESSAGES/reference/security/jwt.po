@@ -64,7 +64,7 @@ msgstr ""
 
 #: ../../../reference/security/jwt.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/security/jwt/__init__.py:docstring of
 #: litestar.security.jwt.auth.BaseJWTAuth.create_token:3

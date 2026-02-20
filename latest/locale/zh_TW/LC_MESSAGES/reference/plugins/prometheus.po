@@ -374,7 +374,7 @@ msgstr ""
 
 #: ../../../reference/plugins/prometheus.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/plugins/prometheus/__init__.py:docstring of
 #: litestar.plugins.prometheus.middleware.PrometheusMiddleware.__init__:3

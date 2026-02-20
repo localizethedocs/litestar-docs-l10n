@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../topics/deployment/index.rst:2
 msgid "Deployment"
-msgstr ""
+msgstr "部署"
 
 #: ../../../topics/deployment/index.rst:4
 msgid ""

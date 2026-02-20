@@ -38,7 +38,7 @@ msgstr ""
 
 #: ../../../reference/middleware/logging.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/middleware/logging.py:docstring of
 #: litestar.middleware.logging.LoggingMiddleware.__init__:3
@@ -280,7 +280,7 @@ msgstr ""
 #: ../../../../litestar/middleware/logging.py:docstring of
 #: litestar.middleware.logging.LoggingMiddlewareConfig.middleware:3
 msgid "Examples"
-msgstr ""
+msgstr "範例"
 
 #: ../../../../litestar/middleware/logging.py:docstring of
 #: litestar.middleware.logging.LoggingMiddlewareConfig.middleware:6

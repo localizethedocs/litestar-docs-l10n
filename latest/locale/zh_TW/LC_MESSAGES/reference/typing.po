@@ -277,7 +277,7 @@ msgstr ""
 
 #: ../../../reference/typing.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/typing.py:docstring of
 #: litestar.typing.FieldDefinition.has_inner_subclass_of:3

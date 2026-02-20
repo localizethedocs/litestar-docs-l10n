@@ -41,7 +41,7 @@ msgstr ""
 
 #: ../../../reference/routes.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/routes/__init__.py:docstring of
 #: litestar.routes.asgi.ASGIRoute.__init__:3

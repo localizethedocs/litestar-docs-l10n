@@ -56,7 +56,7 @@ msgstr ""
 
 #: ../../../reference/dto/msgspec_dto.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/dto/msgspec_dto.py:docstring of
 #: litestar.dto.msgspec_dto.MsgspecDTO.detect_nested_field:3

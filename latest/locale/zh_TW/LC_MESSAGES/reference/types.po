@@ -269,7 +269,7 @@ msgstr ""
 
 #: ../../../reference/types.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/types/protocols.py:docstring of
 #: litestar.types.protocols.Logger.critical:3

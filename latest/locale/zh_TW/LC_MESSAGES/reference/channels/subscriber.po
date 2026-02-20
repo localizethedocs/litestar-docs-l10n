@@ -55,7 +55,7 @@ msgstr ""
 
 #: ../../../reference/channels/subscriber.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/channels/subscriber.py:docstring of
 #: litestar.channels.subscriber.Subscriber.run_in_background:7

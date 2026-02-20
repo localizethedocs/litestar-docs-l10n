@@ -64,7 +64,7 @@ msgstr ""
 
 #: ../../../reference/dto/field.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/dto/field.py:docstring of
 #: litestar.dto.field.dto_field:3

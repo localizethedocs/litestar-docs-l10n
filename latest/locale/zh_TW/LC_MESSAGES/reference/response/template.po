@@ -40,7 +40,7 @@ msgstr ""
 
 #: ../../../reference/response/template.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/response/template.py:docstring of
 #: litestar.response.template.Template.__init__:3

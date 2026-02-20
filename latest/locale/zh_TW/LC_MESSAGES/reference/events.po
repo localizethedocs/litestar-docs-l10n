@@ -41,7 +41,7 @@ msgstr ""
 
 #: ../../../reference/events.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/events/__init__.py:docstring of
 #: litestar.events.emitter.BaseEventEmitterBackend.__init__:3

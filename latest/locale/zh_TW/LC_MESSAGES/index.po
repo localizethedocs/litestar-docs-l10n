@@ -19,11 +19,11 @@ msgstr ""
 
 #: ../../../index.rst:333
 msgid "Documentation"
-msgstr ""
+msgstr "文件"
 
 #: ../../../index.rst:342
 msgid "Guides"
-msgstr ""
+msgstr "指南"
 
 #: ../../../index.rst:351
 msgid "Available Issues"
@@ -31,11 +31,11 @@ msgstr ""
 
 #: ../../../index.rst:351
 msgid "Code of Conduct"
-msgstr ""
+msgstr "行為守則"
 
 #: ../../../index.rst:351
 msgid "Contributing"
-msgstr ""
+msgstr "參與貢獻"
 
 #: ../../../index.rst:2
 msgid "Litestar library documentation"

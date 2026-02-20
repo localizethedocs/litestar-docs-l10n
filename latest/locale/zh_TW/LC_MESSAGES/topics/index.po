@@ -19,11 +19,11 @@ msgstr ""
 
 #: ../../../topics/index.rst:10
 msgid "Articles"
-msgstr ""
+msgstr "文章"
 
 #: ../../../topics/index.rst:2
 msgid "Topics"
-msgstr ""
+msgstr "話題"
 
 #: ../../../topics/index.rst:4
 msgid ""

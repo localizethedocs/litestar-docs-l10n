@@ -68,7 +68,7 @@ msgstr ""
 
 #: ../../../reference/plugins/structlog.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/plugins/structlog.py:docstring of
 #: litestar.plugins.structlog.StructlogPlugin.on_app_init:3

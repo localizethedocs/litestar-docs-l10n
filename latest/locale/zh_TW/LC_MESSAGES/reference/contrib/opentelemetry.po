@@ -141,7 +141,7 @@ msgstr ""
 
 #: ../../../reference/contrib/opentelemetry.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/contrib/opentelemetry/__init__.py:docstring of
 #: litestar.contrib.opentelemetry._utils.get_route_details_from_scope:3
@@ -219,7 +219,7 @@ msgstr ""
 #: ../../../../litestar/contrib/opentelemetry/__init__.py:docstring of
 #: litestar.contrib.opentelemetry.plugin.OpenTelemetryPlugin.on_app_init:3
 msgid "Examples"
-msgstr ""
+msgstr "範例"
 
 #: ../../../../litestar/contrib/opentelemetry/__init__.py:docstring of
 #: litestar.contrib.opentelemetry.plugin.OpenTelemetryPlugin.on_app_init:6
@@ -247,6 +247,28 @@ msgid ""
 "\n"
 "app = Litestar(plugins=[MyPlugin()])"
 msgstr ""
+"from litestar import Litestar, get\n"
+"from litestar.di import Provide\n"
+"from litestar.plugins import InitPluginProtocol\n"
+"\n"
+"\n"
+"def get_name() -> str:\n"
+"    return \"world\"\n"
+"\n"
+"\n"
+"@get(\"/my-path\")\n"
+"def my_route_handler(name: str) -> dict[str, str]:\n"
+"    return {\"hello\": name}\n"
+"\n"
+"\n"
+"class MyPlugin(InitPluginProtocol):\n"
+"    def on_app_init(self, app_config: AppConfig) -> AppConfig:\n"
+"        app_config.dependencies[\"name\"] = Provide(get_name)\n"
+"        app_config.route_handlers.append(my_route_handler)\n"
+"        return app_config\n"
+"\n"
+"\n"
+"app = Litestar(plugins=[MyPlugin()])"
 
 #: ../../../../litestar/contrib/opentelemetry/__init__.py:docstring of
 #: litestar.contrib.opentelemetry.plugin.OpenTelemetryPlugin.on_app_init:30

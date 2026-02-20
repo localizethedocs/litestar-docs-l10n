@@ -124,7 +124,7 @@ msgstr ""
 
 #: ../../../reference/connection.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/connection/__init__.py:docstring of
 #: litestar.connection.base.ASGIConnection.__init__:3

@@ -54,7 +54,7 @@ msgstr ""
 
 #: ../../../reference/pagination.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/pagination.py:docstring of
 #: litestar.pagination.AbstractAsyncClassicPaginator.__call__:3

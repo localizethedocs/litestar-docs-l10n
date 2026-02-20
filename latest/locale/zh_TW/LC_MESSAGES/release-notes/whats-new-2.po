@@ -147,109 +147,109 @@ msgstr ""
 
 #: ../../../release-notes/whats-new-2.rst:66
 msgid "``starlite.BackgroundTasks``"
-msgstr ""
+msgstr "``starlite.BackgroundTasks``"
 
 #: ../../../release-notes/whats-new-2.rst:66
 msgid ":class:`.background_tasks.BackgroundTasks`"
-msgstr ""
+msgstr ":class:`.background_tasks.BackgroundTasks`"
 
 #: ../../../release-notes/whats-new-2.rst:68
 msgid "``starlite.State``"
-msgstr ""
+msgstr "``starlite.State``"
 
 #: ../../../release-notes/whats-new-2.rst:68
 msgid ":class:`.datastructures.State`"
-msgstr ""
+msgstr ":class:`.datastructures.State`"
 
 #: ../../../release-notes/whats-new-2.rst:70
 msgid "``starlite.ImmutableState``"
-msgstr ""
+msgstr "``starlite.ImmutableState``"
 
 #: ../../../release-notes/whats-new-2.rst:70
 msgid ":class:`.datastructures.ImmutableState`"
-msgstr ""
+msgstr ":class:`.datastructures.ImmutableState`"
 
 #: ../../../release-notes/whats-new-2.rst:72
 msgid "``starlite.Cookie``"
-msgstr ""
+msgstr "``starlite.Cookie``"
 
 #: ../../../release-notes/whats-new-2.rst:72
 msgid ":class:`.datastructures.Cookie`"
-msgstr ""
+msgstr ":class:`.datastructures.Cookie`"
 
 #: ../../../release-notes/whats-new-2.rst:74
 msgid "``starlite.FormMultiDict``"
-msgstr ""
+msgstr "``starlite.FormMultiDict``"
 
 #: ../../../release-notes/whats-new-2.rst:74
 msgid ":class:`.datastructures.FormMultiDict`"
-msgstr ""
+msgstr ":class:`.datastructures.FormMultiDict`"
 
 #: ../../../release-notes/whats-new-2.rst:76
 msgid "``starlite.ResponseHeader``"
-msgstr ""
+msgstr "``starlite.ResponseHeader``"
 
 #: ../../../release-notes/whats-new-2.rst:76
 msgid ":class:`.datastructures.ResponseHeader`"
-msgstr ""
+msgstr ":class:`.datastructures.ResponseHeader`"
 
 #: ../../../release-notes/whats-new-2.rst:78
 msgid "``starlite.UploadFile``"
-msgstr ""
+msgstr "``starlite.UploadFile``"
 
 #: ../../../release-notes/whats-new-2.rst:78
 msgid ":class:`.datastructures.UploadFile`"
-msgstr ""
+msgstr ":class:`.datastructures.UploadFile`"
 
 #: ../../../release-notes/whats-new-2.rst:80
 msgid "**Configuration**"
-msgstr ""
+msgstr "**組態**"
 
 #: ../../../release-notes/whats-new-2.rst:82
 msgid "``starlite.AllowedHostsConfig``"
-msgstr ""
+msgstr "``starlite.AllowedHostsConfig``"
 
 #: ../../../release-notes/whats-new-2.rst:82
 msgid ":class:`.config.allowed_hosts.AllowedHostsConfig`"
-msgstr ""
+msgstr ":class:`.config.allowed_hosts.AllowedHostsConfig`"
 
 #: ../../../release-notes/whats-new-2.rst:84
 #: ../../../release-notes/whats-new-2.rst:198
 msgid "``starlite.AbstractSecurityConfig``"
-msgstr ""
+msgstr "``starlite.AbstractSecurityConfig``"
 
 #: ../../../release-notes/whats-new-2.rst:84
 #: ../../../release-notes/whats-new-2.rst:198
 msgid ":class:`.security.AbstractSecurityConfig`"
-msgstr ""
+msgstr ":class:`.security.AbstractSecurityConfig`"
 
 #: ../../../release-notes/whats-new-2.rst:86
 msgid "``starlite.CacheConfig``"
-msgstr ""
+msgstr "``starlite.CacheConfig``"
 
 #: ../../../release-notes/whats-new-2.rst:86
 msgid ":class:`.config.response_cache.ResponseCacheConfig`"
-msgstr ""
+msgstr ":class:`.config.response_cache.ResponseCacheConfig`"
 
 #: ../../../release-notes/whats-new-2.rst:88
 msgid "``starlite.CompressionConfig``"
-msgstr ""
+msgstr "``starlite.CompressionConfig``"
 
 #: ../../../release-notes/whats-new-2.rst:88
 msgid ":class:`.config.compression.CompressionConfig`"
-msgstr ""
+msgstr ":class:`.config.compression.CompressionConfig`"
 
 #: ../../../release-notes/whats-new-2.rst:90
 msgid "``starlite.CORSConfig``"
-msgstr ""
+msgstr "``starlite.CORSConfig``"
 
 #: ../../../release-notes/whats-new-2.rst:90
 msgid ":class:`.config.cors.CORSConfig`"
-msgstr ""
+msgstr ":class:`.config.cors.CORSConfig`"
 
 #: ../../../release-notes/whats-new-2.rst:92
 msgid "``starlite.CSRFConfig``"
-msgstr ""
+msgstr "``starlite.CSRFConfig``"
 
 #: ../../../release-notes/whats-new-2.rst:92
 msgid ":class:`.config.csrf.CSRFConfig`"
@@ -357,39 +357,39 @@ msgstr ""
 
 #: ../../../release-notes/whats-new-2.rst:120
 msgid ":class:`.pagination.AbstractSyncCursorPaginator`"
-msgstr ""
+msgstr ":class:`.pagination.AbstractSyncCursorPaginator`"
 
 #: ../../../release-notes/whats-new-2.rst:122
 msgid "``starlite.AbstractSyncOffsetPaginator``"
-msgstr ""
+msgstr "``starlite.AbstractSyncOffsetPaginator``"
 
 #: ../../../release-notes/whats-new-2.rst:122
 msgid ":class:`.pagination.AbstractSyncOffsetPaginator`"
-msgstr ""
+msgstr ":class:`.pagination.AbstractSyncOffsetPaginator`"
 
 #: ../../../release-notes/whats-new-2.rst:124
 msgid "``starlite.ClassicPagination``"
-msgstr ""
+msgstr "``starlite.ClassicPagination``"
 
 #: ../../../release-notes/whats-new-2.rst:124
 msgid ":class:`.pagination.ClassicPagination`"
-msgstr ""
+msgstr ":class:`.pagination.ClassicPagination`"
 
 #: ../../../release-notes/whats-new-2.rst:126
 msgid "``starlite.CursorPagination``"
-msgstr ""
+msgstr "``starlite.CursorPagination``"
 
 #: ../../../release-notes/whats-new-2.rst:126
 msgid ":class:`.pagination.CursorPagination`"
-msgstr ""
+msgstr ":class:`.pagination.CursorPagination`"
 
 #: ../../../release-notes/whats-new-2.rst:128
 msgid "``starlite.OffsetPagination``"
-msgstr ""
+msgstr "``starlite.OffsetPagination``"
 
 #: ../../../release-notes/whats-new-2.rst:128
 msgid ":class:`.pagination.OffsetPagination`"
-msgstr ""
+msgstr ":class:`.pagination.OffsetPagination`"
 
 #: ../../../release-notes/whats-new-2.rst:130
 msgid "**Response Containers**"
@@ -702,55 +702,55 @@ msgstr ""
 
 #: ../../../release-notes/whats-new-2.rst:218
 msgid "``starlite.ASGIRoute``"
-msgstr ""
+msgstr "``starlite.ASGIRoute``"
 
 #: ../../../release-notes/whats-new-2.rst:218
 msgid ":class:`.routes.ASGIRoute`"
-msgstr ""
+msgstr ":class:`.routes.ASGIRoute`"
 
 #: ../../../release-notes/whats-new-2.rst:220
 msgid "``starlite.BaseRoute``"
-msgstr ""
+msgstr "``starlite.BaseRoute``"
 
 #: ../../../release-notes/whats-new-2.rst:220
 msgid ":class:`.routes.BaseRoute`"
-msgstr ""
+msgstr ":class:`.routes.BaseRoute`"
 
 #: ../../../release-notes/whats-new-2.rst:222
 msgid "``starlite.HTTPRoute``"
-msgstr ""
+msgstr "``starlite.HTTPRoute``"
 
 #: ../../../release-notes/whats-new-2.rst:222
 msgid ":class:`.routes.HTTPRoute`"
-msgstr ""
+msgstr ":class:`.routes.HTTPRoute`"
 
 #: ../../../release-notes/whats-new-2.rst:224
 msgid "``starlite.WebSocketRoute``"
-msgstr ""
+msgstr "``starlite.WebSocketRoute``"
 
 #: ../../../release-notes/whats-new-2.rst:224
 msgid ":class:`.routes.WebSocketRoute`"
-msgstr ""
+msgstr ":class:`.routes.WebSocketRoute`"
 
 #: ../../../release-notes/whats-new-2.rst:226
 msgid "**Parameters**"
-msgstr ""
+msgstr "**參數**"
 
 #: ../../../release-notes/whats-new-2.rst:228
 msgid "``starlite.Body``"
-msgstr ""
+msgstr "``starlite.Body``"
 
 #: ../../../release-notes/whats-new-2.rst:228
 msgid ":class:`.params.Body`"
-msgstr ""
+msgstr ":class:`.params.Body`"
 
 #: ../../../release-notes/whats-new-2.rst:230
 msgid "``starlite.Parameter``"
-msgstr ""
+msgstr "``starlite.Parameter``"
 
 #: ../../../release-notes/whats-new-2.rst:230
 msgid ":class:`.params.Parameter`"
-msgstr ""
+msgstr ":class:`.params.Parameter`"
 
 #: ../../../release-notes/whats-new-2.rst:235
 msgid "Response headers"
@@ -1278,7 +1278,7 @@ msgstr ""
 
 #: ../../../release-notes/whats-new-2.rst:478
 msgid "Excluding fields"
-msgstr ""
+msgstr "排除欄位"
 
 #: ../../../release-notes/whats-new-2.rst:478
 msgid ""
@@ -1492,19 +1492,19 @@ msgstr ""
 
 #: ../../../release-notes/whats-new-2.rst:495
 msgid "``before_startup``"
-msgstr ""
+msgstr "``before_startup``"
 
 #: ../../../release-notes/whats-new-2.rst:496
 msgid "``after_startup``"
-msgstr ""
+msgstr "``after_startup``"
 
 #: ../../../release-notes/whats-new-2.rst:497
 msgid "``before_shutdown``"
-msgstr ""
+msgstr "``before_shutdown``"
 
 #: ../../../release-notes/whats-new-2.rst:498
 msgid "``after_shutdown``"
-msgstr ""
+msgstr "``after_shutdown``"
 
 #: ../../../release-notes/whats-new-2.rst:501
 msgid ""
@@ -1795,12 +1795,16 @@ msgid ""
 "@get(\"/\")\n"
 "def index(param: int = Parameter(gt=5)) -> dict[str, int]: ..."
 msgstr ""
+"@get(\"/\")\n"
+"def index(param: int = Parameter(gt=5)) -> dict[str, int]: ..."
 
 #: ../../../release-notes/whats-new-2.rst:668
 msgid ""
 "@get(\"/\")\n"
 "def index(param: Annotated[int, Parameter(gt=5)]) -> dict[str, int]: ..."
 msgstr ""
+"@get(\"/\")\n"
+"def index(param: Annotated[int, Parameter(gt=5)]) -> dict[str, int]: ..."
 
 #: ../../../release-notes/whats-new-2.rst:674
 msgid "Channels"

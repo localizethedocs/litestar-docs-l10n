@@ -328,7 +328,7 @@ msgstr ""
 
 #: ../../../usage/cli.rst:0
 msgid "Python 3.8+"
-msgstr ""
+msgstr "Python 3.8+"
 
 #: ../../../usage/cli.rst:184
 msgid ""
@@ -356,7 +356,7 @@ msgstr ""
 
 #: ../../../usage/cli.rst:0
 msgid "Python 3.9+"
-msgstr ""
+msgstr "Python 3.9+"
 
 #: ../../../usage/cli.rst:184
 msgid ""

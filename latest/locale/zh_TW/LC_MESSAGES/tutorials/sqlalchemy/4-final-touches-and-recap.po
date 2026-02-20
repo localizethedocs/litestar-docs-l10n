@@ -39,7 +39,7 @@ msgstr ""
 
 #: ../../../tutorials/sqlalchemy/4-final-touches-and-recap.rst:0
 msgid "Python 3.8+"
-msgstr ""
+msgstr "Python 3.8+"
 
 #: ../../../tutorials/sqlalchemy/4-final-touches-and-recap.rst:14
 msgid ""
@@ -236,7 +236,7 @@ msgstr ""
 
 #: ../../../tutorials/sqlalchemy/4-final-touches-and-recap.rst:0
 msgid "Python 3.10+"
-msgstr ""
+msgstr "Python 3.10+"
 
 #: ../../../tutorials/sqlalchemy/4-final-touches-and-recap.rst:14
 msgid ""
