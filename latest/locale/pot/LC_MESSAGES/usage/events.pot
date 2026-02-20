@@ -1,0 +1,260 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../usage/events.rst:2
+msgid "Events"
+msgstr ""
+
+#: ../../../usage/events.rst:4
+msgid ""
+"Litestar supports a simple implementation of the event emitter / listener "
+"pattern:"
+msgstr ""
+
+#: ../../../usage/events.rst:7
+msgid ""
+"from dataclasses import dataclass\n"
+"\n"
+"from litestar import Request, post\n"
+"from litestar.events import listener\n"
+"from litestar import Litestar\n"
+"\n"
+"from db import user_repository\n"
+"from utils.email import send_welcome_mail\n"
+"\n"
+"\n"
+"@listener(\"user_created\")\n"
+"async def send_welcome_email_handler(email: str) -> None:\n"
+"    # do something here to send an email\n"
+"    await send_welcome_mail(email)\n"
+"\n"
+"\n"
+"@dataclass\n"
+"class CreateUserDTO:\n"
+"    first_name: str\n"
+"    last_name: str\n"
+"    email: str\n"
+"\n"
+"\n"
+"@post(\"/users\")\n"
+"async def create_user_handler(data: UserDTO, request: Request) -> None:\n"
+"    # do something here to create a new user\n"
+"    # e.g. insert the user into a database\n"
+"    await user_repository.insert(data)\n"
+"\n"
+"    # assuming we have now inserted a user, we want to send a welcome "
+"email.\n"
+"    # To do this in a none-blocking fashion, we will emit an event to a "
+"listener, which will send the email,\n"
+"    # using a different async block than the one where we are returning a "
+"response.\n"
+"    request.app.emit(\"user_created\", email=data.email)\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[create_user_handler], "
+"listeners=[send_welcome_email_handler]\n"
+")"
+msgstr ""
+
+#: ../../../usage/events.rst:48
+msgid ""
+"The above example illustrates the power of this pattern - it allows us to "
+"perform async operations without blocking, and without slowing down the "
+"response cycle."
+msgstr ""
+
+#: ../../../usage/events.rst:52
+msgid "Listening to Multiple Events"
+msgstr ""
+
+#: ../../../usage/events.rst:54
+msgid "Event listeners can listen to multiple events:"
+msgstr ""
+
+#: ../../../usage/events.rst:57
+msgid ""
+"from litestar.events import listener\n"
+"\n"
+"\n"
+"@listener(\"user_created\", \"password_changed\")\n"
+"async def send_email_handler(email: str, message: str) -> None:\n"
+"    # do something here to send an email\n"
+"\n"
+"    await send_email(email, message)"
+msgstr ""
+
+#: ../../../usage/events.rst:71
+msgid "Using Multiple Listeners"
+msgstr ""
+
+#: ../../../usage/events.rst:73
+msgid "You can also listen to the same events using multiple listeners:"
+msgstr ""
+
+#: ../../../usage/events.rst:76
+msgid ""
+"from dataclasses import dataclass\n"
+"\n"
+"from litestar import Request, post\n"
+"from litestar.events import listener\n"
+"\n"
+"from db import user_repository\n"
+"from utils.client import client\n"
+"from utils.email import send_farewell_email\n"
+"\n"
+"\n"
+"@listener(\"user_deleted\")\n"
+"async def send_farewell_email_handler(email: str, **kwargs) -> None:\n"
+"    # do something here to send an email\n"
+"    await send_farewell_email(email)\n"
+"\n"
+"\n"
+"@listener(\"user_deleted\")\n"
+"async def notify_customer_support(reason: str, **kwargs) -> None:\n"
+"    # do something here to send an email\n"
+"    await client.post(\"some-url\", reason)\n"
+"\n"
+"\n"
+"@dataclass\n"
+"class DeleteUserDTO:\n"
+"    email: str\n"
+"    reason: str\n"
+"\n"
+"\n"
+"@post(\"/users\")\n"
+"async def delete_user_handler(data: UserDTO, request: Request) -> None:\n"
+"    await user_repository.delete({\"email\": email})\n"
+"    request.app.emit(\"user_deleted\", email=data.email, reason=\"deleted\")"
+msgstr ""
+
+#: ../../../usage/events.rst:113
+msgid ""
+"In the above example we are performing two side effect for the same event, "
+"one sends the user an email, and the other sending an HTTP request to a "
+"service management system to create an issue."
+msgstr ""
+
+#: ../../../usage/events.rst:117
+msgid "Passing Arguments to Listeners"
+msgstr ""
+
+#: ../../../usage/events.rst:119
+msgid ""
+"The method :meth:`emit <litestar.events.BaseEventEmitterBackend.emit>` has "
+"the following signature:"
+msgstr ""
+
+#: ../../../usage/events.rst:122
+msgid "def emit(self, event_id: str, *args: Any, **kwargs: Any) -> None: ..."
+msgstr ""
+
+#: ../../../usage/events.rst:127
+msgid ""
+"This means that it expects a string for ``event_id`` following by any number "
+"of positional and keyword arguments. While this is highly flexible, it also "
+"means you need to ensure the listeners for a given event can handle all the "
+"expected args and kwargs."
+msgstr ""
+
+#: ../../../usage/events.rst:131
+msgid "For example, the following would raise an exception in python:"
+msgstr ""
+
+#: ../../../usage/events.rst:134
+msgid ""
+"@listener(\"user_deleted\")\n"
+"async def send_farewell_email_handler(email: str) -> None:\n"
+"    await send_farewell_email(email)\n"
+"\n"
+"\n"
+"@listener(\"user_deleted\")\n"
+"async def notify_customer_support(reason: str) -> None:\n"
+"    # do something here to send an email\n"
+"    await client.post(\"some-url\", reason)\n"
+"\n"
+"\n"
+"@dataclass\n"
+"class DeleteUserDTO:\n"
+"    email: str\n"
+"    reason: str\n"
+"\n"
+"\n"
+"@post(\"/users\")\n"
+"async def delete_user_handler(data: UserDTO, request: Request) -> None:\n"
+"    await user_repository.delete({\"email\": email})\n"
+"    request.app.emit(\"user_deleted\", email=data.email, reason=\"deleted\")"
+msgstr ""
+
+#: ../../../usage/events.rst:159
+msgid ""
+"The reason for this is that both listeners will receive two kwargs - "
+"``email`` and ``reason``. To avoid this, the previous example had "
+"``**kwargs`` in both:"
+msgstr ""
+
+#: ../../../usage/events.rst:163
+msgid ""
+"@listener(\"user_deleted\")\n"
+"async def send_farewell_email_handler(email: str, **kwargs) -> None:\n"
+"    await send_farewell_email(email)\n"
+"\n"
+"\n"
+"@listener(\"user_deleted\")\n"
+"async def notify_customer_support(reason: str, **kwargs) -> None:\n"
+"    await client.post(\"some-url\", reason)"
+msgstr ""
+
+#: ../../../usage/events.rst:176
+msgid "Creating Event Emitters"
+msgstr ""
+
+#: ../../../usage/events.rst:178
+msgid ""
+"An \"event emitter\" is a class that inherits from :class:"
+"`BaseEventEmitterBackend <litestar.events.BaseEventEmitterBackend>`, which "
+"itself inherits from :obj:`contextlib.AbstractAsyncContextManager`."
+msgstr ""
+
+#: ../../../usage/events.rst:182
+msgid ""
+":meth:`emit <litestar.events.BaseEventEmitterBackend.emit>`: This is the "
+"method that performs the actual emitting logic."
+msgstr ""
+
+#: ../../../usage/events.rst:185
+msgid ""
+"Additionally, the abstract ``__aenter__`` and ``__aexit__`` methods from :"
+"obj:`contextlib.AbstractAsyncContextManager` must be implemented, allowing "
+"the emitter to be used as an async context manager."
+msgstr ""
+
+#: ../../../usage/events.rst:189
+msgid ""
+"By default Litestar uses the :class:`SimpleEventEmitter <litestar.events."
+"SimpleEventEmitter>`, which offers an in-memory async queue."
+msgstr ""
+
+#: ../../../usage/events.rst:193
+msgid ""
+"This solution works well if the system does not need to rely on complex "
+"behaviour, such as a retry mechanism, persistence, or scheduling/cron. For "
+"these more complex use cases, users should implement their own backend using "
+"either a DB/Key store that supports events (Redis, Postgres, etc.), or a "
+"message broker, job queue, or task queue technology."
+msgstr ""

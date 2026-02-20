@@ -1,0 +1,37 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../topics/index.rst:10
+msgid "Articles"
+msgstr ""
+
+#: ../../../topics/index.rst:2
+msgid "Topics"
+msgstr ""
+
+#: ../../../topics/index.rst:4
+msgid ""
+"Topics are a collection of articles about technical concepts, background "
+"information, design decisions and similar topics on a higher level."
+msgstr ""
+
+#: ../../../topics/index.rst:7
+msgid ""
+"This includes things like the difference between synchronous and "
+"asynchronous, API design, deployment strategies, ASGI and WSGI, and so on."
+msgstr ""

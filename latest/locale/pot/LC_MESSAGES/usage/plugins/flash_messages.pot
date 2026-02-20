@@ -1,0 +1,243 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../usage/plugins/flash_messages.rst:3
+msgid "Flash Messages"
+msgstr ""
+
+#: ../../../usage/plugins/flash_messages.rst:7
+msgid ""
+"Flash messages are a powerful tool for conveying information to the user, "
+"such as success notifications, warnings, or errors through one-time messages "
+"alongside a response due to some kind of user action."
+msgstr ""
+
+#: ../../../usage/plugins/flash_messages.rst:11
+msgid ""
+"They are typically used to display a message on the next page load and are a "
+"great way to enhance user experience by providing immediate feedback on "
+"their actions from things like form submissions."
+msgstr ""
+
+#: ../../../usage/plugins/flash_messages.rst:15
+msgid "Registering the plugin"
+msgstr ""
+
+#: ../../../usage/plugins/flash_messages.rst:17
+msgid ""
+"The FlashPlugin can be easily integrated with different templating engines. "
+"Below are examples of how to register the ``FlashPlugin`` with ``Jinja2``, "
+"``Mako``, and ``MiniJinja`` templating engines."
+msgstr ""
+
+#: ../../../usage/plugins/flash_messages.rst:0
+msgid "Jinja2"
+msgstr ""
+
+#: ../../../usage/plugins/flash_messages.rst:26
+msgid "Registering the flash message plugin using the Jinja2 templating engine"
+msgstr ""
+
+#: ../../../usage/plugins/flash_messages.rst:26
+msgid ""
+"from litestar import Litestar\n"
+"from litestar.contrib.jinja import JinjaTemplateEngine\n"
+"from litestar.middleware.session.server_side import ServerSideSessionConfig\n"
+"from litestar.plugins.flash import FlashConfig, FlashPlugin\n"
+"from litestar.template.config import TemplateConfig\n"
+"\n"
+"template_config = TemplateConfig(engine=JinjaTemplateEngine, "
+"directory=\"templates\")\n"
+"flash_plugin = "
+"FlashPlugin(config=FlashConfig(template_config=template_config))\n"
+"\n"
+"app = Litestar(\n"
+"    plugins=[flash_plugin],\n"
+"    middleware=[ServerSideSessionConfig().middleware],\n"
+")"
+msgstr ""
+
+#: ../../../usage/plugins/flash_messages.rst:0
+msgid "Mako"
+msgstr ""
+
+#: ../../../usage/plugins/flash_messages.rst:33
+msgid "Registering the flash message plugin using the Mako templating engine"
+msgstr ""
+
+#: ../../../usage/plugins/flash_messages.rst:33
+msgid ""
+"from litestar import Litestar\n"
+"from litestar.contrib.mako import MakoTemplateEngine\n"
+"from litestar.middleware.session.server_side import ServerSideSessionConfig\n"
+"from litestar.plugins.flash import FlashConfig, FlashPlugin\n"
+"from litestar.template.config import TemplateConfig\n"
+"\n"
+"template_config = TemplateConfig(engine=MakoTemplateEngine, "
+"directory=\"templates\")\n"
+"flash_plugin = "
+"FlashPlugin(config=FlashConfig(template_config=template_config))\n"
+"\n"
+"app = Litestar(\n"
+"    plugins=[flash_plugin],\n"
+"    middleware=[ServerSideSessionConfig().middleware],\n"
+")"
+msgstr ""
+
+#: ../../../usage/plugins/flash_messages.rst:0
+msgid "MiniJinja"
+msgstr ""
+
+#: ../../../usage/plugins/flash_messages.rst:40
+msgid ""
+"Registering the flash message plugin using the MiniJinja templating engine"
+msgstr ""
+
+#: ../../../usage/plugins/flash_messages.rst:40
+msgid ""
+"from litestar import Litestar\n"
+"from litestar.contrib.minijinja import MiniJinjaTemplateEngine\n"
+"from litestar.middleware.session.server_side import ServerSideSessionConfig\n"
+"from litestar.plugins.flash import FlashConfig, FlashPlugin\n"
+"from litestar.template.config import TemplateConfig\n"
+"\n"
+"template_config = TemplateConfig(engine=MiniJinjaTemplateEngine, "
+"directory=\"templates\")\n"
+"flash_plugin = "
+"FlashPlugin(config=FlashConfig(template_config=template_config))\n"
+"\n"
+"app = Litestar(\n"
+"    plugins=[flash_plugin],\n"
+"    middleware=[ServerSideSessionConfig().middleware],\n"
+")"
+msgstr ""
+
+#: ../../../usage/plugins/flash_messages.rst:44
+msgid "Using the plugin"
+msgstr ""
+
+#: ../../../usage/plugins/flash_messages.rst:46
+msgid ""
+"After registering the FlashPlugin with your application, you can start using "
+"it to add and display flash messages within your application routes."
+msgstr ""
+
+#: ../../../usage/plugins/flash_messages.rst:49
+msgid ""
+"Here is an example showing how to use the FlashPlugin with the Jinja2 "
+"templating engine to display flash messages. The same approach applies to "
+"Mako and MiniJinja engines as well."
+msgstr ""
+
+#: ../../../usage/plugins/flash_messages.rst:53
+msgid ""
+"Using the flash message plugin with Jinja2 templating engine to display "
+"flash messages"
+msgstr ""
+
+#: ../../../usage/plugins/flash_messages.rst:53
+msgid ""
+"from litestar import Litestar, Request, get\n"
+"from litestar.contrib.jinja import JinjaTemplateEngine\n"
+"from litestar.middleware.session.server_side import ServerSideSessionConfig\n"
+"from litestar.plugins.flash import FlashConfig, FlashPlugin, flash\n"
+"from litestar.response import Template\n"
+"from litestar.template.config import TemplateConfig\n"
+"\n"
+"template_config = TemplateConfig(engine=JinjaTemplateEngine, "
+"directory=\"templates\")\n"
+"flash_plugin = "
+"FlashPlugin(config=FlashConfig(template_config=template_config))\n"
+"\n"
+"\n"
+"@get()\n"
+"async def index(request: Request) -> Template:\n"
+"    \"\"\"Example of adding and displaying a flash message.\"\"\"\n"
+"    flash(request, \"Oh no! I've been flashed!\", category=\"error\")\n"
+"\n"
+"    return Template(\n"
+"        template_str=\"\"\"\n"
+"    <h1>Flash Message Example</h1>\n"
+"    {% for message in get_flashes() %}\n"
+"    <p>{{ message.message }} (Category:{{ message.category }})</p>\n"
+"    {% endfor %}\n"
+"    \"\"\"\n"
+"    )\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    plugins=[flash_plugin],\n"
+"    route_handlers=[index],\n"
+"    template_config=template_config,\n"
+"    middleware=[ServerSideSessionConfig().middleware],\n"
+")"
+msgstr ""
+
+#: ../../../usage/plugins/flash_messages.rst:57
+msgid "Breakdown"
+msgstr ""
+
+#: ../../../usage/plugins/flash_messages.rst:59
+msgid ""
+"Here we import the requires classes and functions from the Litestar package "
+"and related plugins."
+msgstr ""
+
+#: ../../../usage/plugins/flash_messages.rst:60
+msgid ""
+"Flash messages requires a valid session configuration, so we create and "
+"enable the ``ServerSideSession`` middleware."
+msgstr ""
+
+#: ../../../usage/plugins/flash_messages.rst:61
+msgid ""
+"We then create our ``TemplateConfig`` and ``FlashConfig`` instances, each "
+"setting up the configuration for the template engine and flash messages, "
+"respectively."
+msgstr ""
+
+#: ../../../usage/plugins/flash_messages.rst:63
+msgid ""
+"A single route handler named ``index`` is defined using the ``@get()`` "
+"decorator."
+msgstr ""
+
+#: ../../../usage/plugins/flash_messages.rst:65
+msgid ""
+"Within this handler, the ``flash`` function is called to add a new flash "
+"message. This message is stored in the request's context, making it "
+"accessible to the template engine for rendering in the response."
+msgstr ""
+
+#: ../../../usage/plugins/flash_messages.rst:67
+msgid ""
+"The function returns a ``Template`` instance, where ``template_str`` (read "
+"more about :ref:`template strings <usage/templating:template files vs. "
+"strings>`) contains inline HTML and Jinja2 template code. This template "
+"dynamically displays any flash messages by iterating over them with a Jinja2 "
+"for loop. Each message is wrapped in a paragraph (``<p>``) tag, showing the "
+"message content and its category."
+msgstr ""
+
+#: ../../../usage/plugins/flash_messages.rst:73
+msgid ""
+"Finally, a ``Litestar`` application instance is created, specifying the "
+"``flash_plugin`` and ``index`` route handler in its configuration. The "
+"application is also configured with the ``template_config``, which includes "
+"the ``Jinja2`` templating engine and the path to the templates directory."
+msgstr ""

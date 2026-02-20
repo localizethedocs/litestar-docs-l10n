@@ -1,0 +1,203 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/stores/redis.rst:2
+msgid "redis"
+msgstr ""
+
+#: ../../../../litestar/stores/redis.py:docstring of
+#: litestar.stores.redis.RedisStore:1
+msgid "Bases: :py:class:`~litestar.stores.base.NamespacedStore`"
+msgstr ""
+
+#: ../../../../litestar/stores/redis.py:docstring of
+#: litestar.stores.redis.RedisStore:1
+msgid "Redis based, thread and process safe asynchronous key/value store."
+msgstr ""
+
+#: ../../../../litestar/stores/redis.py:docstring of
+#: litestar.stores.redis.RedisStore.__init__:1
+msgid "Initialize :class:`RedisStore`"
+msgstr ""
+
+#: ../../../reference/stores/redis.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../litestar/stores/redis.py:docstring of
+#: litestar.stores.redis.RedisStore.__init__:3
+msgid "An :class:`redis.asyncio.Redis` instance"
+msgstr ""
+
+#: ../../../../litestar/stores/redis.py:docstring of
+#: litestar.stores.redis.RedisStore.__init__:4
+msgid ""
+"A key prefix to simulate a namespace in redis. If not given, defaults to "
+"``LITESTAR``. Namespacing can be explicitly disabled by passing ``None``. "
+"This will make :meth:`.delete_all` unavailable."
+msgstr ""
+
+#: ../../../../litestar/stores/redis.py:docstring of
+#: litestar.stores.redis.RedisStore.__init__:7
+msgid ""
+"If ``True``, handle the shutdown of the `redis` instance automatically "
+"during the store's lifespan. Should be set to `True` unless the shutdown is "
+"handled externally"
+msgstr ""
+
+#: ../../../../litestar/stores/redis.py:docstring of
+#: litestar.stores.redis.RedisStore.with_client:1
+msgid ""
+"Initialize a :class:`RedisStore` instance with a new class:`redis.asyncio."
+"Redis` instance."
+msgstr ""
+
+#: ../../../../litestar/stores/redis.py:docstring of
+#: litestar.stores.redis.RedisStore.with_client:3
+msgid "Redis URL to connect to"
+msgstr ""
+
+#: ../../../../litestar/stores/redis.py:docstring of
+#: litestar.stores.redis.RedisStore.with_client:4
+msgid "Redis database to use"
+msgstr ""
+
+#: ../../../../litestar/stores/redis.py:docstring of
+#: litestar.stores.redis.RedisStore.with_client:5
+msgid "Redis port to use"
+msgstr ""
+
+#: ../../../../litestar/stores/redis.py:docstring of
+#: litestar.stores.redis.RedisStore.with_client:6
+msgid "Redis username to use"
+msgstr ""
+
+#: ../../../../litestar/stores/redis.py:docstring of
+#: litestar.stores.redis.RedisStore.with_client:7
+msgid "Redis password to use"
+msgstr ""
+
+#: ../../../../litestar/stores/redis.py:docstring of
+#: litestar.stores.redis.RedisStore.with_client:8
+msgid "Virtual key namespace to use"
+msgstr ""
+
+#: ../../../../litestar/stores/redis.py:docstring of
+#: litestar.stores.redis.RedisStore.with_namespace:1
+msgid ""
+"Return a new :class:`RedisStore` with a nested virtual key namespace. The "
+"current instances namespace will serve as a prefix for the namespace, so it "
+"can be considered the parent namespace."
+msgstr ""
+
+#: ../../../../litestar/stores/redis.py:docstring of
+#: litestar.stores.redis.RedisStore.set:1
+msgid "Set a value."
+msgstr ""
+
+#: ../../../../litestar/stores/redis.py:docstring of
+#: litestar.stores.redis.RedisStore.set:3
+msgid "Key to associate the value with"
+msgstr ""
+
+#: ../../../../litestar/stores/redis.py:docstring of
+#: litestar.stores.redis.RedisStore.set:4
+msgid "Value to store"
+msgstr ""
+
+#: ../../../../litestar/stores/redis.py:docstring of
+#: litestar.stores.redis.RedisStore.set:5
+msgid "Time in seconds before the key is considered expired"
+msgstr ""
+
+#: ../../../reference/stores/redis.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/stores/redis.py:docstring of
+#: litestar.stores.redis.RedisStore.set:7
+msgid "``None``"
+msgstr ""
+
+#: ../../../../litestar/stores/redis.py:docstring of
+#: litestar.stores.redis.RedisStore.get:1
+msgid "Get a value."
+msgstr ""
+
+#: ../../../../litestar/stores/redis.py:docstring of
+#: litestar.stores.redis.RedisStore.get:3
+msgid "Key associated with the value"
+msgstr ""
+
+#: ../../../../litestar/stores/redis.py:docstring of
+#: litestar.stores.redis.RedisStore.get:4
+msgid ""
+"If given and the value had an initial expiry time set, renew the expiry time "
+"for ``renew_for`` seconds. If the value has not been set with an expiry time "
+"this is a no-op. Atomicity of this step is guaranteed by using a lua script "
+"to execute fetch and renewal. If ``renew_for`` is not given, the script will "
+"be bypassed so no overhead will occur"
+msgstr ""
+
+#: ../../../../litestar/stores/redis.py:docstring of
+#: litestar.stores.redis.RedisStore.get:10
+msgid ""
+"The value associated with ``key`` if it exists and is not expired, else "
+"``None``"
+msgstr ""
+
+#: ../../../../litestar/stores/redis.py:docstring of
+#: litestar.stores.redis.RedisStore.delete:1
+msgid "Delete a value."
+msgstr ""
+
+#: ../../../../litestar/stores/redis.py:docstring of
+#: litestar.stores.redis.RedisStore.delete:3
+msgid "If no such key exists, this is a no-op."
+msgstr ""
+
+#: ../../../../litestar/stores/redis.py:docstring of
+#: litestar.stores.redis.RedisStore.delete:5
+msgid "Key of the value to delete"
+msgstr ""
+
+#: ../../../../litestar/stores/redis.py:docstring of
+#: litestar.stores.redis.RedisStore.delete_all:1
+msgid "Delete all stored values in the virtual key namespace."
+msgstr ""
+
+#: ../../../reference/stores/redis.rst:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../litestar/stores/redis.py:docstring of
+#: litestar.stores.redis.RedisStore.delete_all:3
+msgid "If no namespace was configured"
+msgstr ""
+
+#: ../../../../litestar/stores/redis.py:docstring of
+#: litestar.stores.redis.RedisStore.exists:1
+msgid "Check if a given ``key`` exists."
+msgstr ""
+
+#: ../../../../litestar/stores/redis.py:docstring of
+#: litestar.stores.redis.RedisStore.expires_in:1
+msgid ""
+"Get the time in seconds ``key`` expires in. If no such ``key`` exists or no "
+"expiry time was set, return ``None``."
+msgstr ""

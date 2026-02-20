@@ -1,0 +1,425 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../topics/deployment/supervisor.rst:2
+msgid "Supervisor (Linux)"
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:4
+msgid ""
+"``supervisor`` is a process control system for Linux, which allows you to "
+"monitor and control a number of processes on UNIX-like operating systems. It "
+"is particularly useful for managing processes that need to be running "
+"continuously, and for monitoring and controlling processes that are running "
+"in the background."
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:10
+msgid "Use When"
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:12
+msgid ""
+"``supervisor`` is ideal for managing Python web applications that need "
+"continuous uptime and robust process control. It's particularly useful when "
+"you need extensive process management, monitoring, log management, and "
+"customized control over the start, stop, and restart of application "
+"processes."
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:16
+msgid ""
+"For detailed understanding and further information, refer to the official "
+"`Supervisor documentation <http://supervisord.org/introduction.html>`_."
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:20
+msgid "Alternatives"
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:22
+msgid "For different deployment scenarios, consider these alternatives:"
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:24
+msgid ":doc:`Docker <docker>`:"
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:25
+msgid ""
+"Ideal for containerized environments, offering isolation and scalability."
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:26
+msgid "`systemd <https://www.freedesktop.org/wiki/Software/systemd/>`_:"
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:27
+msgid ""
+"A system and service manager, integrated into many Linux distributions for "
+"managing system processes."
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:29
+msgid "Official documentation coming soon"
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:30
+msgid ":doc:`Manually with an ASGI server <manually-with-asgi-server>`:"
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:31
+msgid ""
+"Direct control by running the application with an ASGI server like Uvicorn, "
+"Hypercorn, Daphne, etc."
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:33
+msgid ""
+"This resource provides comprehensive guidance on installation, "
+"configuration, and usage of ``supervisor`` for service management."
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:39
+msgid "Setup"
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:41
+msgid ""
+"``supervisor`` uses a config file for defining services. You can read more "
+"about the config file in the `Supervisor configuration documentation <http://"
+"supervisord.org/configuration.html>`_."
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:44
+msgid "Example supervisor config file"
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:44
+msgid ""
+"[program:exampleapp]  # Defines the service name.\n"
+"directory=/opt/exampleapp/src  # Specifies the directory where the service "
+"should run.\n"
+"command=/opt/exampleapp/venv/bin/litestar app.py  # Specifies the command to "
+"run the service.\n"
+"redirect_stderr=true  # Redirects stderr to stdout.\n"
+"stdout_logfile=/var/log/exampleapp.log  # Specifies the log file to write "
+"to.\n"
+"stdout_logfile_backups=10  # Specifies the number of backups to keep.\n"
+"autostart=true  # Specifies that the service should start automatically when "
+"``supervisor`` starts.\n"
+"autorestart=true  # Specifies that the service should restart automatically "
+"if it exits unexpectedly."
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:56
+msgid ""
+"You can place the above config file in ``/etc/supervisor/conf.d/exampleapp."
+"conf``. After you have created the config file, you will need to reload the "
+"``supervisor`` config to load your new service file."
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:0
+msgid "Helpful Commands"
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:61
+msgid "Reload supervisor config"
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:61
+msgid ""
+"sudo supervisorctl reread\n"
+"sudo supervisorctl update"
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:67
+msgid "Start/Stop/Restart/Status"
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:67
+msgid ""
+"sudo supervisorctl start exampleapp\n"
+"sudo supervisorctl stop exampleapp\n"
+"sudo supervisorctl restart exampleapp\n"
+"sudo supervisorctl status exampleapp"
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:75
+msgid "View logs"
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:75
+msgid "sudo supervisorctl tail -f exampleapp"
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:80
+msgid "Now you are ready to start your application."
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:82
+msgid ""
+"Start the service if it's not already running: ``sudo supervisorctl start "
+"exampleapp``."
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:83
+msgid ""
+"Ensure it's operating correctly by checking the output for errors: ``sudo "
+"supervisorctl status exampleapp``."
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:84
+msgid ""
+"Once confirmed, your Litestar application should be accessible (By default "
+"at ``http://0.0.0.0:8000``)."
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:86
+msgid ""
+"After that, you are done! You can now use ``supervisor`` to manage your "
+"application. The following sections were written to provide suggestions for "
+"making things easier to manage and they are not required."
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:90
+msgid "Suggestions"
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:94
+msgid ""
+"This follows onto the setup above, but provides some suggestions for making "
+"things easier to manage."
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:98
+msgid "Aliases"
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:100
+msgid "Create an alias file: ``/etc/profile.d/exampleapp.sh``."
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:102
+msgid ""
+"This is where the magic happens to let us simply use ``exampleapp start`` "
+"instead of ``sudo supervisorctl start exampleapp``."
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:0
+msgid "Alias Examples"
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:107
+msgid "Example commands provided by the alias file"
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:107
+msgid ""
+"exampleapp start\n"
+"exampleapp stop\n"
+"exampleapp restart\n"
+"exampleapp status\n"
+"exampleapp watch"
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:116
+msgid "Example alias file"
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:116
+msgid ""
+"exampleapp() {\n"
+"  case $1 in\n"
+"    start)\n"
+"      echo \"Starting exampleapp...\"\n"
+"      sudo supervisorctl start exampleapp\n"
+"      ;;\n"
+"\n"
+"    stop)\n"
+"      echo \"Stopping exampleapp...\"\n"
+"      sudo supervisorctl stop exampleapp\n"
+"      ;;\n"
+"\n"
+"    restart)\n"
+"      echo \"Restarting exampleapp...\"\n"
+"      sudo supervisorctl restart exampleapp\n"
+"      ;;\n"
+"\n"
+"    status)\n"
+"      echo \"Checking status of exampleapp...\"\n"
+"      sudo supervisorctl status exampleapp\n"
+"      ;;\n"
+"\n"
+"    watch)\n"
+"      echo \"Tailing logs for exampleapp...\"\n"
+"      sudo supervisorctl tail -f exampleapp\n"
+"      ;;\n"
+"\n"
+"    help)\n"
+"      cat << EOF\n"
+"      Available options:\n"
+"        exampleapp start    - Start the exampleapp service\n"
+"        exampleapp stop     - Stop the exampleapp service\n"
+"        exampleapp restart  - Restart the exampleapp service\n"
+"        exampleapp status   - Check the status of the exampleapp service\n"
+"        exampleapp watch    - Tail the logs for the exampleapp service\n"
+"      EOF\n"
+"      ;;\n"
+"\n"
+"    *)\n"
+"      echo \"Unknown command: $1\"\n"
+"      echo \"Use 'exampleapp help' for a list of available commands.\"\n"
+"      ;;\n"
+"  esac\n"
+"}"
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:165
+msgid ""
+"To activate the alias without restarting your session use ``source /etc/"
+"profile.d/exampleapp.sh``. Using the ``watch`` command lets you monitor the "
+"realtime output of your application."
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:169
+msgid "Update Script"
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:171
+msgid ""
+"The ``exampleapp`` function can be extended to include an ``update`` "
+"command, facilitating the complete update process of the application:"
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:0
+msgid "Update Script Example"
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:176
+msgid "Example update command"
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:176
+msgid ""
+"exampleapp() {\n"
+"  case $1 in\n"
+"    # ... other cases ... #\n"
+"\n"
+"    update)\n"
+"      echo \"Updating exampleapp...\"\n"
+"\n"
+"      # Stop the service\n"
+"      echo \" > Stopping service...\"\n"
+"      sudo supervisorctl stop exampleapp\n"
+"\n"
+"      # Update application files\n"
+"      echo \" > Pulling latest changes from repository...\"\n"
+"      cd /opt/exampleapp\n"
+"      git fetch --all\n"
+"      git reset --hard origin/master\n"
+"\n"
+"      # Update Supervisor configuration and alias\n"
+"      echo \" > Updating Supervisor and shell configurations...\"\n"
+"      sudo ln -sf /opt/exampleapp/server/service.conf /etc/supervisor/conf.d/"
+"exampleapp.conf\n"
+"      sudo ln -sf /opt/exampleapp/server/alias.sh /etc/profile.d/exampleapp."
+"sh\n"
+"      source /etc/profile.d/exampleapp.sh\n"
+"\n"
+"      # Update Supervisor to apply new configurations\n"
+"      echo \" > Reloading Supervisor configuration...\"\n"
+"      sudo supervisorctl reread\n"
+"      sudo supervisorctl update\n"
+"\n"
+"      # Update Python dependencies using requirements.txt\n"
+"      # Here you could replace with poetry, pdm, etc., alleviating the need "
+"for\n"
+"      # a requirements.txt file and virtual environment activation.\n"
+"      source venv/bin/activate\n"
+"      echo \" > Installing updated dependencies...\"\n"
+"      python3 -m pip install -r requirements.txt\n"
+"      deactivate\n"
+"\n"
+"      # ... other update processes like docs building, cleanup, etc. ... #\n"
+"\n"
+"      echo \"Update process complete.\"\n"
+"\n"
+"      # Prompt to start the service\n"
+"      read -p \"Start the service? (y/n) \" -n 1 -r\n"
+"      echo\n"
+"      if [[ $REPLY =~ ^[Yy]$ ]]\n"
+"      then\n"
+"          echo \" > Starting service...\"\n"
+"          sudo supervisorctl start exampleapp\n"
+"      fi\n"
+"      ;;\n"
+"\n"
+"    # ... #\n"
+"  esac\n"
+"}"
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:234
+msgid "This update process includes the following steps:"
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:236
+msgid ""
+"**Stop the Service:** Safely halts the application before making changes."
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:237
+msgid ""
+"**Git Operations:** Ensures the latest code is pulled from the repository."
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:238
+msgid ""
+"**Configuration Symlinking:** Updates ``supervisor`` configuration and shell "
+"alias to reflect any changes."
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:239
+msgid ""
+"**Supervisor Reload:** Applies new configuration settings to ``supervisor`` "
+"service."
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:240
+msgid ""
+"**Dependency Update:** Installs or updates Python dependencies as defined in "
+"lockfiles or ``requirements.txt``."
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:241
+msgid ""
+"**User Prompt:** Offers a choice to immediately start the service after "
+"updating."
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:244
+msgid "Execution"
+msgstr ""
+
+#: ../../../topics/deployment/supervisor.rst:246
+msgid ""
+"Run the ``exampleapp update`` command to execute this update process. It "
+"streamlines the deployment of new code and configuration changes, ensuring a "
+"smooth and consistent application update cycle."
+msgstr ""

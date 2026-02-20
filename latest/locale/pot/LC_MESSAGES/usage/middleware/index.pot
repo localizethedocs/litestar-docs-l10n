@@ -1,0 +1,46 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../usage/middleware/index.rst:2
+msgid "Middleware"
+msgstr ""
+
+#: ../../../usage/middleware/index.rst:4
+msgid ""
+"Middlewares in Litestar are ASGI apps that are called \"in the middle\" "
+"between the application entrypoint and the route handler function."
+msgstr ""
+
+#: ../../../usage/middleware/index.rst:7
+msgid ""
+"Litestar ships with several builtin middlewares that are easy to configure "
+"and use. See :doc:`the documentation regarding these </usage/middleware/"
+"builtin-middleware>` for more details."
+msgstr ""
+
+#: ../../../usage/middleware/index.rst:12
+msgid ""
+"If you're coming from Starlette / FastAPI, take a look at the migration "
+"guide:"
+msgstr ""
+
+#: ../../../usage/middleware/index.rst:14
+msgid ""
+":ref:`Migration - FastAPI/Starlette - Middlewares <migration/fastapi:"
+"Middleware>`"
+msgstr ""
