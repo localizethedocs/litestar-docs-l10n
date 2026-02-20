@@ -1473,12 +1473,16 @@ msgid ""
 "def on_startup(state: State) -> None:\n"
 "    print(state.something)"
 msgstr ""
+"def on_startup(state: State) -> None:\n"
+"    print(state.something)"
 
 #: ../../../release-notes/whats-new-2.rst:514
 msgid ""
 "def on_startup(app: Litestar) -> None:\n"
 "    print(app.state.something)"
 msgstr ""
+"def on_startup(app: Litestar) -> None:\n"
+"    print(app.state.something)"
 
 #: ../../../release-notes/whats-new-2.rst:521
 msgid "Dependencies without ``Provide``"
@@ -1498,6 +1502,10 @@ msgid ""
 "\n"
 "app = Litestar(dependencies={\"some\": Provide(some_dependency)})"
 msgstr ""
+"async def some_dependency() -> str: ...\n"
+"\n"
+"\n"
+"app = Litestar(dependencies={\"some\": Provide(some_dependency)})"
 
 #: ../../../release-notes/whats-new-2.rst:537
 msgid ""
@@ -1506,10 +1514,14 @@ msgid ""
 "\n"
 "app = Litestar(dependencies={\"some\": some_dependency})"
 msgstr ""
+"async def some_dependency() -> str: ...\n"
+"\n"
+"\n"
+"app = Litestar(dependencies={\"some\": some_dependency})"
 
 #: ../../../release-notes/whats-new-2.rst:545
 msgid "``sync_to_thread``"
-msgstr ""
+msgstr "``sync_to_thread``"
 
 #: ../../../release-notes/whats-new-2.rst:547
 msgid ""
