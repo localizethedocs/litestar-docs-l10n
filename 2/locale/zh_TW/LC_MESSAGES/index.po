@@ -320,7 +320,7 @@ msgstr ""
 
 #: ../../../index.rst:136
 msgid "Sponsors"
-msgstr ""
+msgstr "贊助者"
 
 #: ../../../index.rst:138
 msgid ""
