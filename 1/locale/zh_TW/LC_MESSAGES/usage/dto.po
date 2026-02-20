@@ -1,0 +1,641 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../usage/dto.rst:2
+msgid "Data Transfer Objects (DTOs)"
+msgstr ""
+
+#: ../../../usage/dto.rst:4
+msgid ""
+"Starlite includes a :class:`DTOFactory <starlite.dto.DTOFactory>` class that "
+"allows you to create DTOs from pydantic models, dataclasses, :class:`typing."
+"TypedDict`, and any other class supported via plugins."
+msgstr ""
+
+#: ../../../usage/dto.rst:7
+msgid ""
+"An instance of the factory must first be created, optionally passing plugins "
+"to it as a kwarg. It can then be used to create a :class:`DTO <starlite.dto."
+"DTO>` by calling the instance like a function. Additionally, it can exclude "
+"(drop) attributes, remap field names and field types, and add new fields."
+msgstr ""
+
+#: ../../../usage/dto.rst:11
+msgid ""
+"The created :class:`DTO <starlite.dto.DTO>` can be used for data parsing, "
+"validation and OpenAPI schema generation like a regularly declared pydantic "
+"model."
+msgstr ""
+
+#: ../../../usage/dto.rst:16
+msgid ""
+"Although the value generated is a pydantic factory, because it is being "
+"generated programmatically, it's currently impossible to extend editor auto-"
+"complete for the DTO properties - it will be typed as `DTO[T]`, with T being "
+"a generic argument representing the original model used to create the DTO."
+msgstr ""
+
+#: ../../../usage/dto.rst:22
+msgid ""
+"MyPy doesn't support using types defined using `Type[]` as a type, and MyPy "
+"will regard these as invalid types. There is currently no way to circumvent "
+"this (not even with a plugin) except using a # type: ignore comment."
+msgstr ""
+
+#: ../../../usage/dto.rst:25
+msgid ""
+"The :class:`DTOFactory <starlite.dto.DTOFactory>` class supports :doc:"
+"`plugins </usage/plugins/index>`, for example, this is how it could be used "
+"with an SQLAlchemy declarative class using the :doc:`SQLAlchemyPlugin </"
+"usage/plugins/sqlalchemy>`:"
+msgstr ""
+
+#: ../../../usage/dto.rst:30
+msgid "Declaring a DTO"
+msgstr ""
+
+#: ../../../usage/dto.rst:30
+msgid ""
+"from sqlalchemy import Column, Float, Integer, String\n"
+"from sqlalchemy.orm import Mapped, declarative_base\n"
+"\n"
+"from starlite import DTOFactory\n"
+"from starlite.plugins.sql_alchemy import SQLAlchemyPlugin\n"
+"\n"
+"dto_factory = DTOFactory(plugins=[SQLAlchemyPlugin()])\n"
+"\n"
+"Base = declarative_base()\n"
+"\n"
+"\n"
+"class Company(Base):  # pyright: ignore\n"
+"    __tablename__ = \"company\"\n"
+"    id: Mapped[int] = Column(Integer, primary_key=True)  # pyright: ignore\n"
+"    name: Mapped[str] = Column(String)  # pyright: ignore\n"
+"    worth: Mapped[float] = Column(Float)  # pyright: ignore\n"
+"\n"
+"\n"
+"CompanyDTO = dto_factory(\"CompanyDTO\", Company)"
+msgstr ""
+
+#: ../../../usage/dto.rst:34
+msgid "The created ``CompanyDTO`` is equal to this pydantic model declaration:"
+msgstr ""
+
+#: ../../../usage/dto.rst:37
+msgid ""
+"from pydantic import BaseModel\n"
+"\n"
+"\n"
+"class CompanyDTO(BaseModel):\n"
+"    id: int\n"
+"    name: str\n"
+"    worth: float"
+msgstr ""
+
+#: ../../../usage/dto.rst:46
+msgid ""
+"You can now use it in route handler functions as you would any other "
+"pydantic model. The one caveat though is lack of editor completion and mypy "
+"support - this requires the implementation of a mypy plugin, which is "
+"planned for the future."
+msgstr ""
+
+#: ../../../usage/dto.rst:50
+msgid "Excluding Fields"
+msgstr ""
+
+#: ../../../usage/dto.rst:52
+msgid ""
+"You can exclude any field in the original model class from the :class:`DTO "
+"<starlite.dto.DTO>`:"
+msgstr ""
+
+#: ../../../usage/dto.rst:55
+msgid "Excluding fields"
+msgstr ""
+
+#: ../../../usage/dto.rst:55
+msgid ""
+"from pydantic import BaseModel\n"
+"\n"
+"from starlite import DTOFactory\n"
+"\n"
+"\n"
+"class MyClass(BaseModel):\n"
+"    first: int\n"
+"    second: int\n"
+"\n"
+"\n"
+"dto_factory = DTOFactory()\n"
+"\n"
+"MyClassDTO = dto_factory(\"MyClassDTO\", MyClass, exclude=[\"first\"])"
+msgstr ""
+
+#: ../../../usage/dto.rst:59 ../../../usage/dto.rst:83
+#: ../../../usage/dto.rst:103 ../../../usage/dto.rst:131
+msgid "The generated ``MyClassDTO`` is equal to this model declaration:"
+msgstr ""
+
+#: ../../../usage/dto.rst:62
+msgid ""
+"from pydantic import BaseModel\n"
+"\n"
+"\n"
+"class MyClassDTO(BaseModel):\n"
+"    second: int"
+msgstr ""
+
+#: ../../../usage/dto.rst:71
+msgid "Remapping Fields"
+msgstr ""
+
+#: ../../../usage/dto.rst:73
+msgid "You can remap fields in two ways:"
+msgstr ""
+
+#: ../../../usage/dto.rst:76
+msgid "you can switch change their keys:"
+msgstr ""
+
+#: ../../../usage/dto.rst:79
+msgid "Remapping fields"
+msgstr ""
+
+#: ../../../usage/dto.rst:79
+msgid ""
+"from pydantic import BaseModel\n"
+"\n"
+"from starlite import DTOFactory\n"
+"\n"
+"\n"
+"class MyClass(BaseModel):\n"
+"    first: int\n"
+"    second: int\n"
+"\n"
+"\n"
+"dto_factory = DTOFactory()\n"
+"\n"
+"MyClassDTO = dto_factory(\"MyClassDTO\", MyClass, field_mapping={\"first\": "
+"\"third\"})"
+msgstr ""
+
+#: ../../../usage/dto.rst:86
+msgid ""
+"from pydantic import BaseModel\n"
+"\n"
+"\n"
+"class MyClassDTO(BaseModel):\n"
+"    second: int\n"
+"    third: int"
+msgstr ""
+
+#: ../../../usage/dto.rst:95
+msgid ""
+"You can remap name and type. To do this use a tuple instead of a string for "
+"the object value:"
+msgstr ""
+
+#: ../../../usage/dto.rst:99
+msgid "Remapping fields with types"
+msgstr ""
+
+#: ../../../usage/dto.rst:99
+msgid ""
+"from pydantic import BaseModel\n"
+"\n"
+"from starlite import DTOFactory\n"
+"\n"
+"\n"
+"class MyClass(BaseModel):\n"
+"    first: int\n"
+"    second: int\n"
+"\n"
+"\n"
+"dto_factory = DTOFactory()\n"
+"\n"
+"MyClassDTO = dto_factory(\"MyClassDTO\", MyClass, field_mapping={\"first\": "
+"\"third\", \"second\": (\"fourth\", float)})"
+msgstr ""
+
+#: ../../../usage/dto.rst:106
+msgid ""
+"from pydantic import BaseModel\n"
+"\n"
+"\n"
+"class MyClassDTO(BaseModel):\n"
+"    third: int\n"
+"    fourth: float"
+msgstr ""
+
+#: ../../../usage/dto.rst:115
+msgid "Add New Fields"
+msgstr ""
+
+#: ../../../usage/dto.rst:117
+msgid ""
+"You add fields that do not exist in the original model by passing in a "
+"``field_definitions`` dictionary. This dictionary should have field names as "
+"keys, and a tuple following the format supported by the `pydantic "
+"create_model helper <https://pydantic-docs.helpmanual.io/usage/models/"
+"#dynamic-model-creation>`_:"
+msgstr ""
+
+#: ../../../usage/dto.rst:122
+msgid ""
+"For required fields use a tuple of type + ellipsis, for example "
+"``(str, ...)``."
+msgstr ""
+
+#: ../../../usage/dto.rst:123
+msgid ""
+"For optional fields use a tuple of type + ``None`` , for example ``(str, "
+"None)``"
+msgstr ""
+
+#: ../../../usage/dto.rst:124
+msgid ""
+"To set a default value use a tuple of type + default value, for example "
+"``(str, \"Hello World\")``"
+msgstr ""
+
+#: ../../../usage/dto.rst:127
+msgid "Add new fields"
+msgstr ""
+
+#: ../../../usage/dto.rst:127
+msgid ""
+"from pydantic import BaseModel\n"
+"\n"
+"from starlite import DTOFactory\n"
+"\n"
+"\n"
+"class MyClass(BaseModel):\n"
+"    first: int\n"
+"    second: int\n"
+"\n"
+"\n"
+"dto_factory = DTOFactory()\n"
+"\n"
+"MyClassDTO = dto_factory(\"MyClassDTO\", MyClass, "
+"field_definitions={\"third\": (str, ...)})"
+msgstr ""
+
+#: ../../../usage/dto.rst:134
+msgid ""
+"from pydantic import BaseModel\n"
+"\n"
+"\n"
+"class MyClassDTO(BaseModel):\n"
+"    first: int\n"
+"    second: int\n"
+"    third: str"
+msgstr ""
+
+#: ../../../usage/dto.rst:144
+msgid "DTO Methods"
+msgstr ""
+
+#: ../../../usage/dto.rst:147
+msgid "DTO.from_model_instance"
+msgstr ""
+
+#: ../../../usage/dto.rst:149
+msgid ""
+"Once you create a DTO class you can use its class method :meth:"
+"`from_model_instance <starlite.dto.DTO.from_model_instance>` to create an "
+"instance from an existing instance of the model from which the DTO was "
+"generated:"
+msgstr ""
+
+#: ../../../usage/dto.rst:153
+msgid "DTO.from_model_instance()"
+msgstr ""
+
+#: ../../../usage/dto.rst:153
+msgid ""
+"from sqlalchemy import Column, Float, Integer, String\n"
+"from sqlalchemy.orm import Mapped, declarative_base\n"
+"\n"
+"from starlite import DTOFactory\n"
+"from starlite.plugins.sql_alchemy import SQLAlchemyPlugin\n"
+"\n"
+"dto_factory = DTOFactory(plugins=[SQLAlchemyPlugin()])\n"
+"\n"
+"Base = declarative_base()\n"
+"\n"
+"\n"
+"class Company(Base):  # pyright: ignore\n"
+"    __tablename__ = \"company\"\n"
+"\n"
+"    id: Mapped[int] = Column(Integer, primary_key=True)  # pyright: ignore\n"
+"    name: Mapped[str] = Column(String)  # pyright: ignore\n"
+"    worth: Mapped[float] = Column(Float)  # pyright: ignore\n"
+"\n"
+"\n"
+"CompanyDTO = dto_factory(\"CompanyDTO\", Company)\n"
+"\n"
+"company_instance = Company(id=1, name=\"My Firm\", worth=1000000.0)\n"
+"\n"
+"dto_instance = CompanyDTO.from_model_instance(company_instance)"
+msgstr ""
+
+#: ../../../usage/dto.rst:157
+msgid "In the above, ``dto_instance`` is a validated pydantic model instance."
+msgstr ""
+
+#: ../../../usage/dto.rst:160
+msgid "DTO.to_model_instance"
+msgstr ""
+
+#: ../../../usage/dto.rst:162
+msgid ""
+"When you have an instance of a :class:`DTO <starlite.dto.DTO>` model, you "
+"can convert it into a model instance using the :meth:`to_model_instance "
+"<starlite.dto.DTO.to_model_instance>` method:"
+msgstr ""
+
+#: ../../../usage/dto.rst:166
+msgid "DTO.to_model_instance()"
+msgstr ""
+
+#: ../../../usage/dto.rst:166
+msgid ""
+"from sqlalchemy import Column, Float, Integer, String\n"
+"from sqlalchemy.orm import Mapped, declarative_base\n"
+"\n"
+"from starlite import DTOFactory, post\n"
+"from starlite.plugins.sql_alchemy import SQLAlchemyPlugin\n"
+"\n"
+"dto_factory = DTOFactory(plugins=[SQLAlchemyPlugin()])\n"
+"\n"
+"Base = declarative_base()\n"
+"\n"
+"\n"
+"class Company(Base):  # pyright: ignore\n"
+"    __tablename__ = \"company\"\n"
+"\n"
+"    id: Mapped[int] = Column(Integer, primary_key=True)  # pyright: ignore\n"
+"    name: Mapped[str] = Column(String)  # pyright: ignore\n"
+"    worth: Mapped[float] = Column(Float)  # pyright: ignore\n"
+"\n"
+"\n"
+"CompanyDTO = dto_factory(\"CompanyDTO\", Company)\n"
+"\n"
+"\n"
+"@post()\n"
+"def create_company(data: CompanyDTO) -> Company:  # type: ignore\n"
+"    return data.to_model_instance()  # type: ignore"
+msgstr ""
+
+#: ../../../usage/dto.rst:170
+msgid ""
+"In the above ``company_instance`` is an instance of the SQLAlchemy "
+"declarative class ``Company``. It is correctly typed as ``Company`` because "
+"the :class:`DTO <starlite.dto.DTO>` class uses generic to store this data."
+msgstr ""
+
+#: ../../../usage/dto.rst:175
+msgid ""
+"If you exclude keys or add additional fields, you should make sure this does "
+"not cause an error when trying to generate a model class from a dto "
+"instance. For example, if you exclude required fields from a pydantic model "
+"and try to create an instance from a dto that doesn't have these, a "
+"validation error will be raised."
+msgstr ""
+
+#: ../../../usage/dto.rst:180
+msgid "Automatic Conversion on Response"
+msgstr ""
+
+#: ../../../usage/dto.rst:182
+msgid ""
+"When you use a DTO as a return type in a route handler, if the returned data "
+"is a model or a dict, it will be converted to the DTO automatically:"
+msgstr ""
+
+#: ../../../usage/dto.rst:0
+msgid "Python 3.8+"
+msgstr ""
+
+#: ../../../usage/dto.rst:186
+msgid "DTO automatic conversion"
+msgstr ""
+
+#: ../../../usage/dto.rst:186
+msgid ""
+"from typing import List\n"
+"\n"
+"from sqlalchemy import Column, Float, Integer, String\n"
+"from sqlalchemy.orm import Mapped, declarative_base\n"
+"\n"
+"from starlite import DTOFactory, HTTPException, Starlite, get\n"
+"from starlite.plugins.sql_alchemy import SQLAlchemyPlugin\n"
+"from starlite.status_codes import HTTP_404_NOT_FOUND\n"
+"\n"
+"sqlalchemy_plugin = SQLAlchemyPlugin()\n"
+"dto_factory = DTOFactory(plugins=[sqlalchemy_plugin])\n"
+"\n"
+"Base = declarative_base()\n"
+"\n"
+"\n"
+"class Company(Base):  # pyright: ignore\n"
+"    __tablename__ = \"company\"\n"
+"\n"
+"    id: Mapped[int] = Column(Integer, primary_key=True)  # pyright: ignore\n"
+"    name: Mapped[str] = Column(String)  # pyright: ignore\n"
+"    worth: Mapped[float] = Column(Float)  # pyright: ignore\n"
+"    secret: Mapped[str] = Column(String)  # pyright: ignore\n"
+"\n"
+"\n"
+"ReadCompanyDTO = dto_factory(\"CompanyDTO\", Company, exclude=[\"secret\"])\n"
+"\n"
+"companies: List[Company] = [\n"
+"    Company(id=1, name=\"My Firm\", worth=1000000.0, secret=\"secret\"),\n"
+"    Company(id=2, name=\"My New Firm\", worth=1000.0, secret=\"abc123\"),\n"
+"]\n"
+"\n"
+"\n"
+"@get(\"/{company_id: int}\")\n"
+"def get_company(company_id: int) -> ReadCompanyDTO:  # type: ignore\n"
+"    try:\n"
+"        return companies[company_id - 1]\n"
+"    except IndexError:\n"
+"        raise HTTPException(\n"
+"            detail=\"Company not found\",\n"
+"            status_code=HTTP_404_NOT_FOUND,\n"
+"        )\n"
+"\n"
+"\n"
+"@get()\n"
+"def get_companies() -> List[ReadCompanyDTO]:  # type: ignore\n"
+"    return companies\n"
+"\n"
+"\n"
+"app = Starlite(\n"
+"    route_handlers=[get_company, get_companies],\n"
+"    plugins=[sqlalchemy_plugin],\n"
+")"
+msgstr ""
+
+#: ../../../usage/dto.rst:0
+msgid "Python 3.10+"
+msgstr ""
+
+#: ../../../usage/dto.rst:186
+msgid ""
+"from sqlalchemy import Column, Float, Integer, String\n"
+"from sqlalchemy.orm import Mapped, declarative_base\n"
+"\n"
+"from starlite import DTOFactory, HTTPException, Starlite, get\n"
+"from starlite.plugins.sql_alchemy import SQLAlchemyPlugin\n"
+"from starlite.status_codes import HTTP_404_NOT_FOUND\n"
+"\n"
+"sqlalchemy_plugin = SQLAlchemyPlugin()\n"
+"dto_factory = DTOFactory(plugins=[sqlalchemy_plugin])\n"
+"\n"
+"Base = declarative_base()\n"
+"\n"
+"\n"
+"class Company(Base):  # pyright: ignore\n"
+"    __tablename__ = \"company\"\n"
+"\n"
+"    id: Mapped[int] = Column(Integer, primary_key=True)  # pyright: ignore\n"
+"    name: Mapped[str] = Column(String)  # pyright: ignore\n"
+"    worth: Mapped[float] = Column(Float)  # pyright: ignore\n"
+"    secret: Mapped[str] = Column(String)  # pyright: ignore\n"
+"\n"
+"\n"
+"ReadCompanyDTO = dto_factory(\"CompanyDTO\", Company, exclude=[\"secret\"])\n"
+"\n"
+"companies: list[Company] = [\n"
+"    Company(id=1, name=\"My Firm\", worth=1000000.0, secret=\"secret\"),\n"
+"    Company(id=2, name=\"My New Firm\", worth=1000.0, secret=\"abc123\"),\n"
+"]\n"
+"\n"
+"\n"
+"@get(\"/{company_id: int}\")\n"
+"def get_company(company_id: int) -> ReadCompanyDTO:  # type: ignore\n"
+"    try:\n"
+"        return companies[company_id - 1]\n"
+"    except IndexError:\n"
+"        raise HTTPException(\n"
+"            detail=\"Company not found\",\n"
+"            status_code=HTTP_404_NOT_FOUND,\n"
+"        )\n"
+"\n"
+"\n"
+"@get()\n"
+"def get_companies() -> list[ReadCompanyDTO]:  # type: ignore\n"
+"    return companies\n"
+"\n"
+"\n"
+"app = Starlite(\n"
+"    route_handlers=[get_company, get_companies],\n"
+"    plugins=[sqlalchemy_plugin],\n"
+")"
+msgstr ""
+
+#: ../../../usage/dto.rst:190
+msgid ""
+"In the above, when requesting route of a company, the ``secret`` attribute "
+"will not be included in the response. And it also works when returning a "
+"list of companies."
+msgstr ""
+
+#: ../../../usage/dto.rst:196
+msgid "Creating partial DTOs"
+msgstr ""
+
+#: ../../../usage/dto.rst:198
+msgid ""
+"Sometimes you may only need to partially modify a resource. In these cases, "
+"DTOs can be wrapped with :class:`Partial <starlite.types.Partial>`."
+msgstr ""
+
+#: ../../../usage/dto.rst:202
+msgid ""
+"from pydantic import BaseModel\n"
+"from starlite.types.partial import Partial\n"
+"\n"
+"\n"
+"class CompanyDTO(BaseModel):\n"
+"    id: int\n"
+"    name: str\n"
+"    worth: float\n"
+"\n"
+"\n"
+"PartialCompanyDTO = Partial[CompanyDTO]"
+msgstr ""
+
+#: ../../../usage/dto.rst:215
+msgid ""
+"The created ``PartialCompanyDTO`` is equivalent to the following declaration:"
+msgstr ""
+
+#: ../../../usage/dto.rst:218
+msgid ""
+"from typing import Optional\n"
+"from pydantic import BaseModel\n"
+"\n"
+"\n"
+"class PartialCompanyDTO(BaseModel):\n"
+"    id: Optional[int]\n"
+"    name: Optional[str]\n"
+"    worth: Optional[float]"
+msgstr ""
+
+#: ../../../usage/dto.rst:218
+msgid ""
+"from pydantic import BaseModel\n"
+"\n"
+"\n"
+"class PartialCompanyDTO(BaseModel):\n"
+"    id: int | None\n"
+"    name: str | None\n"
+"    worth: float | None"
+msgstr ""
+
+#: ../../../usage/dto.rst:228
+msgid ""
+":class:`Partial <starlite.types.Partial>` can also be used inline when "
+"creating routes."
+msgstr ""
+
+#: ../../../usage/dto.rst:231
+msgid ""
+"from pydantic import UUID4, BaseModel\n"
+"from starlite.controller import Controller\n"
+"from starlite.handlers import patch\n"
+"from starlite.types.partial import Partial\n"
+"\n"
+"\n"
+"class UserOrder(BaseModel):\n"
+"    order_id: UUID4\n"
+"    order_item_id: UUID4\n"
+"    notes: str\n"
+"\n"
+"\n"
+"class UserOrderController(Controller):\n"
+"    path = \"/user\"\n"
+"\n"
+"    @patch(path=\"/{order_id:uuid}\")\n"
+"    async def update_user_order(\n"
+"        self, order_id: UUID4, data: Partial[UserOrder]\n"
+"    ) -> UserOrder: ..."
+msgstr ""

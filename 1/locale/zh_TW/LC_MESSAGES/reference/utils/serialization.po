@@ -1,0 +1,150 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/utils/serialization.rst:2
+msgid "serialization"
+msgstr ""
+
+#: ../../../../starlite/utils/serialization.py:docstring of
+#: starlite.utils.serialization.default_serializer:1
+msgid "Transform values non-natively supported by ``msgspec``"
+msgstr ""
+
+#: ../../../../starlite/utils/serialization.py:docstring of
+#: starlite.utils.serialization.decode_json:0
+#: starlite.utils.serialization.decode_msgpack:0
+#: starlite.utils.serialization.default_serializer:0
+#: starlite.utils.serialization.encode_json:0
+#: starlite.utils.serialization.encode_msgpack:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../starlite/utils/serialization.py:docstring of
+#: starlite.utils.serialization.default_serializer:3
+msgid "A value to serialize#"
+msgstr ""
+
+#: ../../../../starlite/utils/serialization.py:docstring of
+#: starlite.utils.serialization.default_serializer:4
+msgid "Mapping of types to callables to transforming types"
+msgstr ""
+
+#: ../../../../starlite/utils/serialization.py:docstring of
+#: starlite.utils.serialization.decode_json:0
+#: starlite.utils.serialization.decode_msgpack:0
+#: starlite.utils.serialization.default_serializer:0
+#: starlite.utils.serialization.encode_json:0
+#: starlite.utils.serialization.encode_msgpack:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/utils/serialization.py:docstring of
+#: starlite.utils.serialization.default_serializer:6
+msgid "A serialized value"
+msgstr ""
+
+#: ../../../../starlite/utils/serialization.py:docstring of
+#: starlite.utils.serialization.decode_json:0
+#: starlite.utils.serialization.decode_msgpack:0
+#: starlite.utils.serialization.default_serializer:0
+#: starlite.utils.serialization.encode_json:0
+#: starlite.utils.serialization.encode_msgpack:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../starlite/utils/serialization.py:docstring of
+#: starlite.utils.serialization.default_serializer:8
+msgid "if value is not supported"
+msgstr ""
+
+#: ../../../../starlite/utils/serialization.py:docstring of
+#: starlite.utils.serialization.encode_json:1
+msgid "Encode a value into JSON."
+msgstr ""
+
+#: ../../../../starlite/utils/serialization.py:docstring of
+#: starlite.utils.serialization.encode_json:3
+#: starlite.utils.serialization.encode_msgpack:3
+msgid "Value to encode"
+msgstr ""
+
+#: ../../../../starlite/utils/serialization.py:docstring of
+#: starlite.utils.serialization.encode_json:4
+msgid "Optional callable to support non-natively supported types."
+msgstr ""
+
+#: ../../../../starlite/utils/serialization.py:docstring of
+#: starlite.utils.serialization.encode_json:6
+msgid "JSON as bytes"
+msgstr ""
+
+#: ../../../../starlite/utils/serialization.py:docstring of
+#: starlite.utils.serialization.encode_json:8
+#: starlite.utils.serialization.encode_msgpack:8
+msgid "If error encoding ``obj``."
+msgstr ""
+
+#: ../../../../starlite/utils/serialization.py:docstring of
+#: starlite.utils.serialization.decode_json:1
+msgid "Decode a JSON string/bytes into an object."
+msgstr ""
+
+#: ../../../../starlite/utils/serialization.py:docstring of
+#: starlite.utils.serialization.decode_json:3
+#: starlite.utils.serialization.decode_msgpack:3
+msgid "Value to decode"
+msgstr ""
+
+#: ../../../../starlite/utils/serialization.py:docstring of
+#: starlite.utils.serialization.decode_json:4
+#: starlite.utils.serialization.decode_msgpack:4
+msgid "An optional type to decode the data into"
+msgstr ""
+
+#: ../../../../starlite/utils/serialization.py:docstring of
+#: starlite.utils.serialization.decode_json:6
+#: starlite.utils.serialization.decode_msgpack:6
+msgid "An object"
+msgstr ""
+
+#: ../../../../starlite/utils/serialization.py:docstring of
+#: starlite.utils.serialization.decode_json:8
+#: starlite.utils.serialization.decode_msgpack:8
+msgid "If error decoding ``raw``."
+msgstr ""
+
+#: ../../../../starlite/utils/serialization.py:docstring of
+#: starlite.utils.serialization.encode_msgpack:1
+msgid "Encode a value into MessagePack."
+msgstr ""
+
+#: ../../../../starlite/utils/serialization.py:docstring of
+#: starlite.utils.serialization.encode_msgpack:4
+msgid "Optional callable to support non-natively supported types"
+msgstr ""
+
+#: ../../../../starlite/utils/serialization.py:docstring of
+#: starlite.utils.serialization.encode_msgpack:6
+msgid "MessagePack as bytes"
+msgstr ""
+
+#: ../../../../starlite/utils/serialization.py:docstring of
+#: starlite.utils.serialization.decode_msgpack:1
+msgid "Decode a MessagePack string/bytes into an object."
+msgstr ""

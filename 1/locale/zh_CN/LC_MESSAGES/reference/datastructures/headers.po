@@ -1,0 +1,396 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/datastructures/headers.rst:2
+msgid "headers"
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.Headers:1
+msgid ""
+"Bases: :py:class:`~multidict._multidict.CIMultiDictProxy`\\ [:py:class:"
+"`str`], :py:class:`~starlite.datastructures.multi_dicts.MultiMixin`\\ [:py:"
+"class:`str`]"
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.Headers:1
+msgid "An immutable, case-insensitive for HTTP headers."
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.Headers.__init__:1
+msgid "Initialize ``Headers``."
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.CacheControlHeader.from_header:0
+#: starlite.datastructures.headers.Header.to_header:0
+#: starlite.datastructures.headers.Headers.__init__:0
+#: starlite.datastructures.headers.Headers.from_scope:0
+#: starlite.datastructures.headers.MutableScopeHeaders.__init__:0
+#: starlite.datastructures.headers.MutableScopeHeaders.add:0
+#: starlite.datastructures.headers.MutableScopeHeaders.extend_header_value:0
+#: starlite.datastructures.headers.MutableScopeHeaders.from_message:0
+#: starlite.datastructures.headers.MutableScopeHeaders.getall:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.Headers.__init__:3
+msgid "Initial value."
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.Headers.from_scope:1
+msgid "Create headers from a send-message."
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.Headers.from_scope:3
+#: starlite.datastructures.headers.MutableScopeHeaders.__init__:3
+msgid "The ASGI connection scope."
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.CacheControlHeader.from_header:0
+#: starlite.datastructures.headers.Headers.from_scope:0
+#: starlite.datastructures.headers.Headers.to_header_list:0
+#: starlite.datastructures.headers.MutableScopeHeaders.add:0
+#: starlite.datastructures.headers.MutableScopeHeaders.extend_header_value:0
+#: starlite.datastructures.headers.MutableScopeHeaders.from_message:0
+#: starlite.datastructures.headers.MutableScopeHeaders.getall:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.Headers.from_scope:5
+msgid "Headers"
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.Headers.from_scope:0
+#: starlite.datastructures.headers.MutableScopeHeaders.from_message:0
+#: starlite.datastructures.headers.MutableScopeHeaders.getall:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.Headers.from_scope:7
+msgid "If the message does not have a ``headers`` key"
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.Headers.to_header_list:1
+msgid "Raw header value."
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.Headers.to_header_list:3
+msgid "A list of tuples contain the header and header-value as bytes"
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.MutableScopeHeaders:1
+msgid "Bases: :py:class:`~typing.MutableMapping`"
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.MutableScopeHeaders:1
+msgid ""
+"A case-insensitive, multidict-like structure that can be used to mutate "
+"headers within a :class:`Scope <starlite.types.Scope>`"
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.MutableScopeHeaders.__init__:1
+msgid "Initialize ``MutableScopeHeaders`` from a ``HeaderScope``."
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.MutableScopeHeaders.from_message:1
+msgid "Construct a header from a message object."
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.MutableScopeHeaders.from_message:3
+msgid ":class:`Message <starlite.types.Message>`."
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.MutableScopeHeaders.from_message:5
+msgid "MutableScopeHeaders."
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.MutableScopeHeaders.from_message:7
+msgid "If the message does not have a ``headers`` key."
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.MutableScopeHeaders.add:1
+msgid "Add a header to the scope."
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.MutableScopeHeaders.add:3
+#: starlite.datastructures.headers.MutableScopeHeaders.extend_header_value:3
+msgid "Notes"
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.MutableScopeHeaders.add:5
+msgid "This method keeps duplicates."
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.MutableScopeHeaders.add:7
+#: starlite.datastructures.headers.MutableScopeHeaders.extend_header_value:8
+#: starlite.datastructures.headers.MutableScopeHeaders.getall:3
+msgid "Header key."
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.MutableScopeHeaders.add:8
+msgid "Header value."
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.MutableScopeHeaders.add:10
+msgid "None."
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.MutableScopeHeaders.getall:1
+msgid "Get all values of a header."
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.MutableScopeHeaders.getall:4
+msgid "Default value to return if ``name`` is not found."
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.MutableScopeHeaders.getall:6
+msgid "A list of strings."
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.MutableScopeHeaders.getall:8
+msgid "if no header for ``name`` was found and ``default`` is not given."
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.MutableScopeHeaders.extend_header_value:1
+msgid "Extend a multivalued header."
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.MutableScopeHeaders.extend_header_value:5
+msgid "A multivalues header is a header that can take a comma separated list."
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.MutableScopeHeaders.extend_header_value:6
+msgid "If the header previously did not exist, it will be added."
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.MutableScopeHeaders.extend_header_value:9
+msgid "Header value to add,"
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.MutableScopeHeaders.extend_header_value:11
+msgid "None"
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.MutableScopeHeaders.__getitem__:1
+msgid "Get the first header matching ``name``"
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.MutableScopeHeaders.__setitem__:1
+msgid "Set a header in the scope, overwriting duplicates."
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.MutableScopeHeaders.__delitem__:1
+msgid "Delete all headers matching ``name``"
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.MutableScopeHeaders.__len__:1
+msgid ""
+"Return the length of the internally stored headers, including duplicates."
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.MutableScopeHeaders.__iter__:1
+msgid "Create an iterator of header names including duplicates."
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.Header:1
+msgid "Bases: :py:class:`~pydantic.main.BaseModel`, :py:class:`~abc.ABC`"
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.Header:1
+msgid "An abstract type for HTTP headers."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.headers.Header.documentation_only:1
+msgid "Defines the header instance as for OpenAPI documentation purpose only."
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.Header.from_header:1
+msgid "Construct a header from its string representation."
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.Header.to_header:1
+msgid "Get the header as string."
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.Header.to_header:3
+msgid ""
+"should include the header name in the return value. If set to false the "
+"return value will only include the header value. if set to true the return "
+"value will be: ``<header name>: <header value>``. Defaults to false."
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.CacheControlHeader:1
+#: starlite.datastructures.headers.ETag:1
+msgid "Bases: :py:class:`~starlite.datastructures.headers.Header`"
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.CacheControlHeader:1
+msgid "A ``cache-control`` header."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.headers.CacheControlHeader.max_age:1
+msgid "Accessor for the ``max-age`` directive."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.headers.CacheControlHeader.s_maxage:1
+msgid "Accessor for the ``s-maxage`` directive."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.headers.CacheControlHeader.no_cache:1
+msgid "Accessor for the ``no-cache`` directive."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.headers.CacheControlHeader.no_store:1
+msgid "Accessor for the ``no-store`` directive."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.headers.CacheControlHeader.private:1
+msgid "Accessor for the ``private`` directive."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.headers.CacheControlHeader.public:1
+msgid "Accessor for the ``public`` directive."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.headers.CacheControlHeader.no_transform:1
+msgid "Accessor for the ``no-transform`` directive."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.headers.CacheControlHeader.must_revalidate:1
+msgid "Accessor for the ``must-revalidate`` directive."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.headers.CacheControlHeader.proxy_revalidate:1
+msgid "Accessor for the ``proxy-revalidate`` directive."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.headers.CacheControlHeader.must_understand:1
+msgid "Accessor for the ``must-understand`` directive."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.headers.CacheControlHeader.immutable:1
+msgid "Accessor for the ``immutable`` directive."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.headers.CacheControlHeader.stale_while_revalidate:1
+msgid "Accessor for the ``stale-while-revalidate`` directive."
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.CacheControlHeader.from_header:1
+msgid "Create a ``CacheControlHeader`` instance from the header value."
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.CacheControlHeader.from_header:3
+msgid "the header value as string"
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.CacheControlHeader.from_header:5
+msgid "An instance of ``CacheControlHeader``"
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.CacheControlHeader.prevent_storing:1
+msgid ""
+"Create a ``cache-control`` header with the ``no-store`` directive which "
+"indicates that any caches of any kind (private or shared) should not store "
+"this response."
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.ETag:1
+msgid "An ``etag`` header."
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.ETag.from_header:1
+msgid "Construct an ``etag`` header from its string representation."
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.ETag.from_header:3
+msgid "Note that this will unquote etag-values"
+msgstr ""
+
+#: ../../../../starlite/datastructures/headers.py:docstring of
+#: starlite.datastructures.headers.ETag.validate_value:1
+msgid ""
+"Ensure that either value is set or the instance is for documentation_only."
+msgstr ""

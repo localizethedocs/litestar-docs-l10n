@@ -1,0 +1,1271 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/config.rst:2
+msgid "starlite.config"
+msgstr ""
+
+#: ../../../../starlite/config/allowed_hosts.py:docstring of
+#: starlite.config.allowed_hosts.AllowedHostsConfig:1
+#: ../../../../starlite/config/app.py:docstring starlite.config.app.AppConfig:1
+#: ../../../../starlite/config/cache.py:docstring
+#: starlite.config.cache.CacheConfig:1
+#: ../../../../starlite/config/compression.py:docstring
+#: starlite.config.compression.CompressionConfig:1
+#: ../../../../starlite/config/cors.py:docstring
+#: starlite.config.cors.CORSConfig:1
+#: ../../../../starlite/config/csrf.py:docstring
+#: starlite.config.csrf.CSRFConfig:1
+#: ../../../../starlite/config/openapi.py:docstring
+#: starlite.config.openapi.OpenAPIConfig:1
+#: ../../../../starlite/config/static_files.py:docstring
+#: starlite.config.static_files.StaticFilesConfig:1
+msgid "Bases: :py:class:`~pydantic.main.BaseModel`"
+msgstr ""
+
+#: ../../../../starlite/config/app.py:docstring of
+#: starlite.config.app.AppConfig:1
+msgid ""
+"The parameters provided to the ``Starlite`` app are used to instantiate an "
+"instance, and then the instance is passed to any callbacks registered to "
+"``on_app_init`` in the order they are provided."
+msgstr ""
+
+#: ../../../../starlite/config/app.py:docstring of
+#: starlite.config.app.AppConfig:4
+msgid ""
+"The final attribute values are used to instantiate the application object."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.after_exception:1
+msgid ""
+"An application level :class:`exception hook handler <starlite.types."
+"AfterExceptionHookHandler>` or list thereof."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.after_exception:3
+msgid ""
+"This hook is called after an exception occurs. In difference to exception "
+"handlers, it is not meant to return a response - only to process the "
+"exception (e.g. log it, send it to Sentry etc.)."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.after_request:1
+msgid ""
+"A sync or async function executed after the route handler function returned "
+"and the response object has been resolved."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.after_request:4
+msgid ""
+"Receives the response object which may be any subclass of :class:`Response "
+"<starlite.response.Response>`."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.after_response:1
+msgid ""
+"A sync or async function called after the response has been awaited. It "
+"receives the."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.after_response:3
+msgid ""
+":class:`Request <starlite.connection.Request>` object and should not return "
+"any values."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.after_shutdown:1
+#: starlite.config.AppConfig.after_startup:1
+#: starlite.config.AppConfig.before_shutdown:1
+#: starlite.config.AppConfig.before_startup:1
+msgid ""
+"An application level :class:`life-span hook handler <starlite.types."
+"LifeSpanHookHandler>` or list thereof."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.after_shutdown:3
+msgid ""
+"This hook is called during the ASGI shutdown, after all callables in the "
+"'on_shutdown' list have been called."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.after_startup:3
+msgid ""
+"This hook is called during the ASGI startup, after all callables in the "
+"'on_startup' list have been called."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.allowed_hosts:1
+msgid "If set enables the builtin allowed hosts middleware."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.before_request:1
+msgid ""
+"A sync or async function called immediately before calling the route "
+"handler. Receives the."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.before_request:3
+msgid ""
+":class:`Request <starlite.connection.Request>` instance and any non-``None`` "
+"return value is used for the response, bypassing the route handler."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.before_send:1
+msgid ""
+"An application level :class:`before send hook handler <starlite.types."
+"BeforeMessageSendHookHandler>` or list thereof."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.before_send:3
+msgid "This hook is called when the ASGI send function is called."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.before_shutdown:3
+msgid ""
+"This hook is called during the ASGI shutdown, before any callables in the "
+"'on_shutdown' list have been called."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.before_startup:3
+msgid ""
+"This hook is called during the ASGI startup, before any callables in the "
+"'on_startup' list have been called."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.cache_config:1
+msgid "Configures caching behavior of the application."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.cache_control:1
+msgid ""
+"A ``cache-control`` header of type :class:`CacheControlHeader <starlite."
+"datastructures.CacheControlHeader>` to add to route handlers of this app."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.cache_control:4
+#: starlite.config.AppConfig.etag:3
+msgid "Can be overridden by route handlers."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.compression_config:1
+msgid ""
+"Configures compression behaviour of the application, this enabled a builtin "
+"or user defined Compression middleware."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.cors_config:1
+msgid "If set this enables the builtin CORS middleware."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.csrf_config:1
+msgid "If set this enables the builtin CSRF middleware."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.debug:1
+msgid "If ``True``, app errors rendered as HTML with a stack trace."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.dependencies:1
+msgid ""
+"A string keyed dictionary of dependency :class:`Provider <starlite."
+"datastructures.Provide>` instances."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.etag:1
+msgid ""
+"An ``etag`` header of type :class:`ETag <starlite.datastructures.ETag>` to "
+"add to route handlers of this app."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.exception_handlers:1
+#: starlite.config.StaticFilesConfig.exception_handlers:1
+msgid ""
+"A dictionary that maps handler functions to status codes and/or exception "
+"types."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.guards:1
+#: starlite.config.StaticFilesConfig.guards:1
+msgid "A list of :class:`Guard <starlite.types.Guard>` callables."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.initial_state:1
+msgid "An object from which to initialize the app state."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.logging_config:1
+msgid ""
+"An instance of :class:`BaseLoggingConfig <starlite.config.logging."
+"BaseLoggingConfig>` subclass."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.middleware:1
+msgid "A list of :class:`Middleware <starlite.types.Middleware>`."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.on_shutdown:1
+msgid ""
+"A list of :class:`LifeSpanHandler <starlite.types.LifeSpanHandler>` called "
+"during application shutdown."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.on_startup:1
+msgid ""
+"A list of :class:`LifeSpanHandler <starlite.types.LifeSpanHandler>` called "
+"during application startup."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.openapi_config:1
+msgid ""
+"Defaults to :data:`DEFAULT_OPENAPI_CONFIG <starlite.app."
+"DEFAULT_OPENAPI_CONFIG>`"
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.opt:1
+msgid ""
+"A string keyed dictionary of arbitrary values that can be accessed in :class:"
+"`Guards <starlite.types.Guard>` or wherever you have access to :class:"
+"`Request <starlite.connection.request.Request>` or :class:`ASGI Scope "
+"<starlite.types.Scope>`."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.opt:4
+msgid "Can be overridden by routers and router handlers."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.parameters:1
+msgid ""
+"A mapping of :class:`Parameter <starlite.params.Parameter>` definitions "
+"available to all application paths."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.plugins:1
+msgid "List of :class:`PluginProtocol <starlite.plugins.base.PluginProtocol>`."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.request_class:1
+msgid ""
+"An optional subclass of :class:`Request <starlite.connection.request."
+"Request>` to use for http connections."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.response_class:1
+msgid ""
+"A custom subclass of [starlite.response.Response] to be used as the app's "
+"default response."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.response_cookies:1
+msgid "A list of [Cookie](starlite.datastructures.Cookie] instances."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.response_headers:1
+msgid ""
+"A string keyed dictionary mapping :class:`ResponseHeader <starlite."
+"datastructures.ResponseHeader>` instances."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.route_handlers:1
+msgid ""
+"A required list of route handlers, which can include instances of :class:"
+"`Router <starlite.router.Router>`, subclasses of."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.route_handlers:4
+msgid ""
+":class:`Controller <starlite.controller.Controller>` or any function "
+"decorated by the route handler decorators."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.security:1
+msgid ""
+"A list of dictionaries that will be added to the schema of all route "
+"handlers in the application. See."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.security:3
+msgid ""
+":class:`SecurityRequirement <pydantic_openapi_schema.v3_1_0."
+"security_requirement.SecurityRequirement>` for details."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.static_files_config:1
+msgid ""
+"An instance or list of :class:`StaticFilesConfig <starlite.config."
+"StaticFilesConfig>`."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.tags:1
+msgid ""
+"A list of string tags that will be appended to the schema of all route "
+"handlers under the application."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.template_config:1
+msgid ""
+"An instance of :class:`TemplateConfig <starlite.config.TemplateConfig>`."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.type_encoders:1
+msgid ""
+"A mapping of types to callables that transform them into types supported for "
+"serialization."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AppConfig.websocket_class:1
+msgid ""
+"An optional subclass of :class:`WebSocket <starlite.connection.websocket."
+"WebSocket>` to use for websocket connections."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.config.AppConfig.multipart_form_part_limit:1
+msgid ""
+"The maximal number of allowed parts in a multipart/formdata request. This "
+"limit is intended to protect from DoS attacks."
+msgstr ""
+
+#: ../../../../starlite/config/app.py:docstring of
+#: starlite.config.app.AppConfig.validate_allowed_hosts:1
+msgid "Normalize the allowed hosts to be a config or None."
+msgstr ""
+
+#: ../../../../starlite/config/allowed_hosts.py:docstring of
+#: starlite.config.allowed_hosts.AllowedHostsConfig.validate_allowed_hosts:0
+#: ../../../../starlite/config/app.py:docstring
+#: starlite.config.app.AppConfig.validate_allowed_hosts:0
+#: ../../../../starlite/config/cors.py:docstring
+#: starlite.config.cors.CORSConfig.is_origin_allowed:0
+#: ../../../../starlite/config/logging.py:docstring
+#: starlite.config.logging.LoggingConfig.validate_handlers:0
+#: starlite.config.logging.LoggingConfig.validate_loggers:0
+#: ../../../../starlite/config/static_files.py:docstring
+#: starlite.config.static_files.StaticFilesConfig.validate_file_system:0
+#: starlite.config.static_files.StaticFilesConfig.validate_path:0
+#: ../../../../starlite/config/template.py:docstring
+#: starlite.config.template.TemplateConfig.validate_config:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../starlite/config/app.py:docstring of
+#: starlite.config.app.AppConfig.validate_allowed_hosts:3
+msgid "Optional a list of hosts or allowed hosts config"
+msgstr ""
+
+#: ../../../../starlite/config/allowed_hosts.py:docstring of
+#: starlite.config.allowed_hosts.AllowedHostsConfig.validate_allowed_hosts:0
+#: ../../../../starlite/config/app.py:docstring
+#: starlite.config.app.AppConfig.validate_allowed_hosts:0
+#: ../../../../starlite/config/cache.py:docstring
+#: starlite.config.cache.CacheConfig.to_cache:0
+#: ../../../../starlite/config/cors.py:docstring
+#: starlite.config.CORSConfig.allowed_origins_regex:0
+#: starlite.config.CORSConfig.is_allow_all_headers:0
+#: starlite.config.CORSConfig.is_allow_all_methods:0
+#: starlite.config.CORSConfig.is_allow_all_origins:0
+#: starlite.config.CORSConfig.preflight_headers:0
+#: starlite.config.CORSConfig.simple_headers:0
+#: starlite.config.cors.CORSConfig.is_origin_allowed:0
+#: starlite.config.cors.CORSConfig.validate_allow_headers:0
+#: ../../../../starlite/config/logging.py:docstring
+#: starlite.config.logging.BaseLoggingConfig.configure:0
+#: starlite.config.logging.LoggingConfig.configure:0
+#: starlite.config.logging.LoggingConfig.validate_handlers:0
+#: starlite.config.logging.LoggingConfig.validate_loggers:0
+#: starlite.config.logging.StructLoggingConfig.configure:0
+#: ../../../../starlite/config/openapi.py:docstring
+#: starlite.config.openapi.OpenAPIConfig.to_openapi_schema:0
+#: ../../../../starlite/config/static_files.py:docstring
+#: starlite.config.static_files.StaticFilesConfig.to_static_files_app:0
+#: starlite.config.static_files.StaticFilesConfig.validate_file_system:0
+#: starlite.config.static_files.StaticFilesConfig.validate_path:0
+#: ../../../../starlite/config/template.py:docstring
+#: starlite.config.template.TemplateConfig.validate_config:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/config/app.py:docstring of
+#: starlite.config.app.AppConfig.validate_allowed_hosts:5
+msgid "Optional config."
+msgstr ""
+
+#: ../../../../starlite/config/logging.py:docstring of
+#: starlite.config.logging.BaseLoggingConfig:1
+msgid "Bases: :py:class:`~abc.ABC`"
+msgstr ""
+
+#: ../../../../starlite/config/logging.py:docstring of
+#: starlite.config.logging.BaseLoggingConfig:1
+msgid "Abstract class that should be extended by logging configs."
+msgstr ""
+
+#: ../../../../starlite/config/logging.py:docstring of
+#: starlite.config.logging.BaseLoggingConfig.configure:1
+#: starlite.config.logging.LoggingConfig.configure:1
+#: starlite.config.logging.StructLoggingConfig.configure:1
+msgid "Return logger with the given configuration."
+msgstr ""
+
+#: ../../../../starlite/config/logging.py:docstring of
+#: starlite.config.logging.BaseLoggingConfig.configure:3
+#: starlite.config.logging.LoggingConfig.configure:3
+#: starlite.config.logging.StructLoggingConfig.configure:3
+msgid "A 'logging.getLogger' like function."
+msgstr ""
+
+#: ../../../../starlite/config/cors.py:docstring of
+#: starlite.config.cors.CORSConfig:1
+msgid "Configuration for CORS (Cross-Origin Resource Sharing)."
+msgstr ""
+
+#: ../../../../starlite/config/cors.py:docstring of
+#: starlite.config.cors.CORSConfig:3
+msgid ""
+"To enable CORS, pass an instance of this class to the :class:`Starlite "
+"<starlite.app.Starlite>` constructor using the 'cors_config' key."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.CORSConfig.allow_origins:1
+msgid "List of origins that are allowed."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.CORSConfig.allow_origins:3
+msgid ""
+"Can use '*' in any component of the path, e.g. 'domain.*'. Sets the 'Access-"
+"Control-Allow-Origin' header."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.CORSConfig.allow_methods:1
+msgid "List of allowed HTTP methods."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.CORSConfig.allow_methods:3
+msgid "Sets the 'Access-Control-Allow-Methods' header."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.CORSConfig.allow_headers:1
+msgid "List of allowed headers."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.CORSConfig.allow_headers:3
+msgid "Sets the 'Access-Control-Allow-Headers' header."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.CORSConfig.allow_credentials:1
+msgid ""
+"Boolean dictating whether or not to set the 'Access-Control-Allow-"
+"Credentials' header."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.CORSConfig.allow_origin_regex:1
+msgid "Regex to match origins against."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.CORSConfig.expose_headers:1
+msgid ""
+"List of headers that are exposed via the 'Access-Control-Expose-Headers' "
+"header."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.CORSConfig.max_age:1
+msgid "Response caching TTL in seconds, defaults to 600."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.CORSConfig.max_age:3
+msgid "Sets the 'Access-Control-Max-Age' header."
+msgstr ""
+
+#: ../../../../starlite/config/cors.py:docstring of
+#: starlite.config.cors.CORSConfig.validate_allow_headers:1
+msgid ""
+"Ensure that allow headers are all lower cased. :param value: A list of "
+"headers."
+msgstr ""
+
+#: ../../../../starlite/config/cors.py:docstring of
+#: starlite.config.cors.CORSConfig.validate_allow_headers:4
+msgid "A list of lower-cased headers."
+msgstr ""
+
+#: ../../../../starlite/config/cors.py:docstring of
+#: starlite.config.CORSConfig.allowed_origins_regex:1
+msgid "Get or create a compiled regex for allowed origins."
+msgstr ""
+
+#: ../../../../starlite/config/cors.py:docstring of
+#: starlite.config.CORSConfig.allowed_origins_regex:3
+msgid "A compiled regex of the allowed path."
+msgstr ""
+
+#: ../../../../starlite/config/cors.py:docstring of
+#: starlite.config.CORSConfig.is_allow_all_origins:1
+msgid "Get a cached boolean flag dictating whether all origins are allowed."
+msgstr ""
+
+#: ../../../../starlite/config/cors.py:docstring of
+#: starlite.config.CORSConfig.is_allow_all_origins:3
+msgid "Boolean dictating whether all origins are allowed."
+msgstr ""
+
+#: ../../../../starlite/config/cors.py:docstring of
+#: starlite.config.CORSConfig.is_allow_all_methods:1
+msgid "Get a cached boolean flag dictating whether all methods are allowed."
+msgstr ""
+
+#: ../../../../starlite/config/cors.py:docstring of
+#: starlite.config.CORSConfig.is_allow_all_methods:3
+msgid "Boolean dictating whether all methods are allowed."
+msgstr ""
+
+#: ../../../../starlite/config/cors.py:docstring of
+#: starlite.config.CORSConfig.is_allow_all_headers:1
+msgid "Get a cached boolean flag dictating whether all headers are allowed."
+msgstr ""
+
+#: ../../../../starlite/config/cors.py:docstring of
+#: starlite.config.CORSConfig.is_allow_all_headers:3
+msgid "Boolean dictating whether all headers are allowed."
+msgstr ""
+
+#: ../../../../starlite/config/cors.py:docstring of
+#: starlite.config.CORSConfig.preflight_headers:1
+msgid "Get cached pre-flight headers."
+msgstr ""
+
+#: ../../../../starlite/config/cors.py:docstring of
+#: starlite.config.CORSConfig.preflight_headers:3
+#: starlite.config.CORSConfig.simple_headers:3
+msgid "A dictionary of headers to set on the response object."
+msgstr ""
+
+#: ../../../../starlite/config/cors.py:docstring of
+#: starlite.config.CORSConfig.simple_headers:1
+msgid "Get cached simple headers."
+msgstr ""
+
+#: ../../../../starlite/config/cors.py:docstring of
+#: starlite.config.cors.CORSConfig.is_origin_allowed:1
+msgid "Check whether a given origin is allowed."
+msgstr ""
+
+#: ../../../../starlite/config/cors.py:docstring of
+#: starlite.config.cors.CORSConfig.is_origin_allowed:3
+msgid "An origin header value."
+msgstr ""
+
+#: ../../../../starlite/config/cors.py:docstring of
+#: starlite.config.cors.CORSConfig.is_origin_allowed:5
+msgid "Boolean determining whether an origin is allowed."
+msgstr ""
+
+#: ../../../../starlite/config/csrf.py:docstring of
+#: starlite.config.csrf.CSRFConfig:1
+msgid "Configuration for CSRF (Cross Site Request Forgery) protection."
+msgstr ""
+
+#: ../../../../starlite/config/csrf.py:docstring of
+#: starlite.config.csrf.CSRFConfig:3
+msgid ""
+"To enable CSRF protection, pass an instance of this class to the :class:"
+"`Starlite <starlite.app.Starlite>` constructor using the 'csrf_config' key."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.CSRFConfig.secret:1
+msgid "A string that is used to create an HMAC to sign the CSRF token."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.CSRFConfig.cookie_name:1
+msgid "The CSRF cookie name."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.CSRFConfig.cookie_path:1
+msgid "The CSRF cookie path."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.CSRFConfig.header_name:1
+msgid "The header that will be expected in each request."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.CSRFConfig.cookie_secure:1
+msgid ""
+"A boolean value indicating whether to set the ``Secure`` attribute on the "
+"cookie."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.CSRFConfig.cookie_httponly:1
+msgid ""
+"A boolean value indicating whether to set the ``HttpOnly`` attribute on the "
+"cookie."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.CSRFConfig.cookie_samesite:1
+msgid "The value to set in the ``SameSite`` attribute of the cookie."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.CSRFConfig.cookie_domain:1
+msgid "Specifies which hosts can receive the cookie."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.CSRFConfig.safe_methods:1
+msgid "A set of \"safe methods\" that can set the cookie."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.CSRFConfig.exclude:1
+msgid "A pattern or list of patterns to skip in the CSRF middleware."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.CSRFConfig.exclude_from_csrf_key:1
+msgid "An identifier to use on routes to disable CSRF for a particular route."
+msgstr ""
+
+#: ../../../../starlite/config/cache.py:docstring of
+#: starlite.config.cache.CacheConfig:1
+msgid "Configuration for response caching."
+msgstr ""
+
+#: ../../../../starlite/config/cache.py:docstring of
+#: starlite.config.cache.CacheConfig:3
+msgid ""
+"To enable response caching, pass an instance of this class to the :class:"
+"`Starlite <starlite.app.Starlite>` constructor using the 'cache_config' key."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.CacheConfig.backend:1
+msgid ""
+"Instance conforming to :class:`CacheBackendProtocol <starlite.cache."
+"CacheBackendProtocol>`, default."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.CacheConfig.backend:3
+msgid ":class:`SimpleCacheBackend() <starlite.cache.SimpleCacheBackend>`"
+msgstr ""
+
+#: ../../../../docstring of starlite.config.CacheConfig.expiration:1
+msgid "Default cache expiration in seconds."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.CacheConfig.cache_key_builder:1
+msgid ":class:`CacheKeyBuilder <starlite.types.CacheKeyBuilder>`,"
+msgstr ""
+
+#: ../../../../docstring of starlite.config.CacheConfig.cache_key_builder:3
+msgid ""
+":func:`default_cache_key_builder <starlite.config.cache."
+"default_cache_key_builder>` if not provided"
+msgstr ""
+
+#: ../../../../starlite/config/cache.py:docstring of
+#: starlite.config.cache.CacheConfig.to_cache:1
+msgid "Create a cache wrapper from the config."
+msgstr ""
+
+#: ../../../../starlite/config/cache.py:docstring of
+#: starlite.config.cache.CacheConfig.to_cache:3
+msgid "An instance of :class:`Cache <starlite.cache.base.Cache>`"
+msgstr ""
+
+#: ../../../../starlite/config/compression.py:docstring of
+#: starlite.config.compression.CompressionConfig:1
+msgid "Configuration for response compression."
+msgstr ""
+
+#: ../../../../starlite/config/compression.py:docstring of
+#: starlite.config.compression.CompressionConfig:3
+msgid ""
+"To enable response compression, pass an instance of this class to the :class:"
+"`Starlite <starlite.app.Starlite>` constructor using the "
+"'compression_config' key."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.CompressionConfig.backend:1
+msgid "Literal of \"gzip\" or \"brotli\"."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.CompressionConfig.minimum_size:1
+msgid ""
+"Minimum response size (bytes) to enable compression, affects all backends."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.config.CompressionConfig.gzip_compress_level:1
+msgid "//docs.python.org/3/library/gzip.html)."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.config.CompressionConfig.gzip_compress_level:0
+msgid "type"
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.config.CompressionConfig.gzip_compress_level:3
+msgid "Range [0-9], see [official docs](https"
+msgstr ""
+
+#: ../../../../docstring of starlite.config.CompressionConfig.brotli_quality:1
+msgid ""
+"Range [0-11], Controls the compression-speed vs compression-density tradeoff."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.CompressionConfig.brotli_quality:3
+msgid "The higher the quality, the slower the compression."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.CompressionConfig.brotli_mode:1
+msgid ""
+"MODE_GENERIC, MODE_TEXT (for UTF-8 format text input, default) or MODE_FONT "
+"(for WOFF 2.0)."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.CompressionConfig.brotli_lgwin:1
+msgid "Base 2 logarithm of size."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.CompressionConfig.brotli_lgwin:3
+msgid "Range is 10 to 24. Defaults to 22."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.CompressionConfig.brotli_lgblock:1
+msgid "Base 2 logarithm of the maximum input block size."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.CompressionConfig.brotli_lgblock:3
+msgid ""
+"Range is 16 to 24. If set to 0, the value will be set based on the quality. "
+"Defaults to 0."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.config.CompressionConfig.brotli_gzip_fallback:1
+msgid "Use GZIP if Brotli is not supported."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.config.CompressionConfig.middleware_class:1
+msgid "Middleware class to use, should be a subclass of CompressionMiddleware."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.CompressionConfig.exclude:1
+msgid "A pattern or list of patterns to skip in the compression middleware."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.CompressionConfig.exclude_opt_key:1
+msgid ""
+"An identifier to use on routes to disable compression for a particular route."
+msgstr ""
+
+#: ../../../../starlite/config/logging.py:docstring of
+#: starlite.config.logging.LoggingConfig:1
+#: starlite.config.logging.StructLoggingConfig:1
+msgid ""
+"Bases: :py:class:`~starlite.config.logging.BaseLoggingConfig`, :py:class:"
+"`~pydantic.main.BaseModel`"
+msgstr ""
+
+#: ../../../../starlite/config/logging.py:docstring of
+#: starlite.config.logging.LoggingConfig:1
+msgid "Configuration class for standard logging."
+msgstr ""
+
+#: ../../../../starlite/config/logging.py:docstring of
+#: starlite.config.logging.LoggingConfig:3
+#: starlite.config.logging.StructLoggingConfig:3 ../../../../docstring
+#: starlite.config.LoggingConfig.incremental:3
+#: starlite.config.StaticFilesConfig.file_system:3
+msgid "Notes"
+msgstr ""
+
+#: ../../../../starlite/config/logging.py:docstring of
+#: starlite.config.logging.LoggingConfig:5
+msgid "If 'picologging' is installed it will be used by default."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.LoggingConfig.version:1
+msgid "The only valid value at present is 1."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.LoggingConfig.incremental:1
+msgid ""
+"Whether the configuration is to be interpreted as incremental to the "
+"existing configuration."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.LoggingConfig.incremental:5
+msgid "This option is ignored for 'picologging'"
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.config.LoggingConfig.disable_existing_loggers:1
+msgid "Whether any existing non-root loggers are to be disabled."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.LoggingConfig.filters:1
+msgid ""
+"A dict in which each key is a filter id and each value is a dict describing "
+"how to configure the corresponding Filter instance."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.LoggingConfig.propagate:1
+msgid ""
+"If messages must propagate to handlers higher up the logger hierarchy from "
+"this logger."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.LoggingConfig.handlers:1
+msgid ""
+"A dict in which each key is a handler id and each value is a dict describing "
+"how to configure the corresponding Handler instance."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.LoggingConfig.loggers:1
+msgid ""
+"A dict in which each key is a logger name and each value is a dict "
+"describing how to configure the corresponding Logger instance."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.LoggingConfig.root:1
+msgid "This will be the configuration for the root logger."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.LoggingConfig.root:3
+msgid ""
+"Processing of the configuration will be as for any logger, except that the "
+"propagate setting will not be applicable."
+msgstr ""
+
+#: ../../../../starlite/config/logging.py:docstring of
+#: starlite.config.logging.LoggingConfig.validate_handlers:1
+msgid "Ensure that 'queue_listener' is always set."
+msgstr ""
+
+#: ../../../../starlite/config/logging.py:docstring of
+#: starlite.config.logging.LoggingConfig.validate_handlers:3
+#: starlite.config.logging.LoggingConfig.validate_handlers:5
+msgid "A dict of route handlers."
+msgstr ""
+
+#: ../../../../starlite/config/logging.py:docstring of
+#: starlite.config.logging.LoggingConfig.validate_loggers:1
+msgid "Ensure that the 'starlite' logger is always set."
+msgstr ""
+
+#: ../../../../starlite/config/logging.py:docstring of
+#: starlite.config.logging.LoggingConfig.validate_loggers:3
+#: starlite.config.logging.LoggingConfig.validate_loggers:5
+msgid "A dict of loggers."
+msgstr ""
+
+#: ../../../../starlite/config/openapi.py:docstring of
+#: starlite.config.openapi.OpenAPIConfig:1
+msgid "Configuration for OpenAPI."
+msgstr ""
+
+#: ../../../../starlite/config/openapi.py:docstring of
+#: starlite.config.openapi.OpenAPIConfig:3
+msgid ""
+"To enable OpenAPI schema generation and serving, pass an instance of this "
+"class to the :class:`Starlite <starlite.app.Starlite>` constructor using the "
+"'openapi_config' kwargs."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.OpenAPIConfig.create_examples:1
+msgid "Generate examples using the pydantic-factories library."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.OpenAPIConfig.openapi_controller:1
+msgid "Controller for generating OpenAPI routes."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.OpenAPIConfig.openapi_controller:3
+msgid ""
+"Must be subclass of :class:`OpenAPIController <starlite.openapi.controller."
+"OpenAPIController>`."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.OpenAPIConfig.title:1
+msgid "Title of API documentation."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.OpenAPIConfig.version:1
+msgid "API version, e.g. '1.0.0'."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.OpenAPIConfig.contact:1
+msgid ""
+"API contact information, should be an :class:`Contact "
+"<pydantic_openapi_schema.v3_1_0.contact.Contact>` instance."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.OpenAPIConfig.description:1
+msgid "API description."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.OpenAPIConfig.external_docs:1
+msgid "Links to external documentation."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.OpenAPIConfig.external_docs:3
+msgid ""
+"Should be an instance of :class:`ExternalDocumentation "
+"<pydantic_openapi_schema.v3_1_0.external_documentation."
+"ExternalDocumentation>`."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.OpenAPIConfig.license:1
+msgid "API Licensing information."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.OpenAPIConfig.license:3
+msgid ""
+"Should be an instance of :class:`License <pydantic_openapi_schema.v3_1_0."
+"license.License>`."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.OpenAPIConfig.security:1
+msgid "API Security requirements information."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.OpenAPIConfig.security:3
+msgid ""
+"Should be an instance of :class:`SecurityRequirement "
+"<pydantic_openapi_schema.v3_1_0.security_requirement.SecurityRequirement>`."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.OpenAPIConfig.components:1
+msgid "API Components information."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.OpenAPIConfig.components:3
+msgid ""
+"Should be an instance of :class:`Components <pydantic_openapi_schema.v3_10_0."
+"components.Components>` or a list thereof."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.OpenAPIConfig.servers:1
+msgid ""
+"A list of :class:`Server <pydantic_openapi_schema.v3_1_0.server.Server>` "
+"instances."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.OpenAPIConfig.summary:1
+msgid "A summary text."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.OpenAPIConfig.tags:1
+msgid ""
+"A list of :class:`Tag <pydantic_openapi_schema.v3_1_0.tag.Tag>` instances."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.OpenAPIConfig.terms_of_service:1
+msgid "URL to page that contains terms of service."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.config.OpenAPIConfig.use_handler_docstrings:1
+msgid ""
+"Draw operation description from route handler docstring if not otherwise "
+"provided."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.OpenAPIConfig.webhooks:1
+msgid ""
+"A mapping of key to either :class:`PathItem <pydantic_openapi_schema.v3_1_0."
+"path_item.PathItem>` or."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.OpenAPIConfig.webhooks:3
+msgid ""
+":class:`Reference <pydantic_openapi_schema.v3_1_0.reference.Reference>` "
+"objects."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.OpenAPIConfig.root_schema_site:1
+msgid "The static schema generator to use for the \"root\" path of `/schema/`."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.OpenAPIConfig.enabled_endpoints:1
+msgid "A set of the enabled documentation sites and schema download endpoints."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.OpenAPIConfig.by_alias:1
+msgid "Render pydantic model schema using field aliases, if defined."
+msgstr ""
+
+#: ../../../../starlite/config/openapi.py:docstring of
+#: starlite.config.openapi.OpenAPIConfig.to_openapi_schema:1
+msgid "Return an ``OpenAPI`` instance from the values stored in ``self``."
+msgstr ""
+
+#: ../../../../starlite/config/openapi.py:docstring of
+#: starlite.config.openapi.OpenAPIConfig.to_openapi_schema:3
+msgid ""
+"An instance of :class:`OpenAPI <pydantic_openapi_schema.v3_1_0.open_api."
+"OpenAPI>`."
+msgstr ""
+
+#: ../../../../starlite/config/static_files.py:docstring of
+#: starlite.config.static_files.StaticFilesConfig:1
+msgid "Configuration for static file service."
+msgstr ""
+
+#: ../../../../starlite/config/static_files.py:docstring of
+#: starlite.config.static_files.StaticFilesConfig:3
+msgid ""
+"To enable static files, pass an instance of this class to the :class:"
+"`Starlite <starlite.app.Starlite>` constructor using the "
+"'static_files_config' key."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.StaticFilesConfig.path:1
+msgid "Path to serve static files from."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.StaticFilesConfig.path:3
+msgid "Note that the path cannot contain path parameters."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.StaticFilesConfig.directories:1
+msgid "A list of directories to serve files from."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.StaticFilesConfig.html_mode:1
+msgid "Flag dictating whether serving html."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.StaticFilesConfig.html_mode:3
+msgid "If true, the default file will be 'index.html'."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.StaticFilesConfig.name:1
+msgid "An optional string identifying the static files handler."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.StaticFilesConfig.file_system:1
+msgid "The file_system spec to use for serving files."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.StaticFilesConfig.file_system:5
+msgid "A file_system is a class that adheres to the"
+msgstr ""
+
+#: ../../../../docstring of starlite.config.StaticFilesConfig.file_system:6
+msgid ":class:`FileSystemProtocol <starlite.types.FileSystemProtocol>`."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.StaticFilesConfig.file_system:7
+msgid "You can use any of the file systems exported from the"
+msgstr ""
+
+#: ../../../../docstring of starlite.config.StaticFilesConfig.file_system:8
+msgid ""
+"[fsspec](https://filesystem-spec.readthedocs.io/en/latest/) library for this "
+"purpose."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.StaticFilesConfig.opt:1
+msgid ""
+"A string key dictionary of arbitrary values that will be added to the static "
+"files handler."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.config.StaticFilesConfig.send_as_attachment:1
+msgid "Whether to send the file as an attachment."
+msgstr ""
+
+#: ../../../../starlite/config/static_files.py:docstring of
+#: starlite.config.static_files.StaticFilesConfig.validate_path:1
+msgid "Ensure the path has no path parameters."
+msgstr ""
+
+#: ../../../../starlite/config/static_files.py:docstring of
+#: starlite.config.static_files.StaticFilesConfig.validate_path:3
+msgid "A path string"
+msgstr ""
+
+#: ../../../../starlite/config/static_files.py:docstring of
+#: starlite.config.static_files.StaticFilesConfig.validate_path:5
+msgid "The passed in value"
+msgstr ""
+
+#: ../../../../starlite/config/static_files.py:docstring of
+#: starlite.config.static_files.StaticFilesConfig.validate_file_system:1
+msgid "Ensure the value is a file system spec."
+msgstr ""
+
+#: ../../../../starlite/config/static_files.py:docstring of
+#: starlite.config.static_files.StaticFilesConfig.validate_file_system:3
+#: starlite.config.static_files.StaticFilesConfig.validate_file_system:5
+msgid "A file system spec."
+msgstr ""
+
+#: ../../../../starlite/config/static_files.py:docstring of
+#: starlite.config.static_files.StaticFilesConfig.to_static_files_app:1
+msgid "Return an ASGI app serving static files based on the config."
+msgstr ""
+
+#: ../../../../starlite/config/static_files.py:docstring of
+#: starlite.config.static_files.StaticFilesConfig.to_static_files_app:3
+msgid ":class:`StaticFiles <starlite.static_files.StaticFiles>`"
+msgstr ""
+
+#: ../../../../starlite/config/logging.py:docstring of
+#: starlite.config.logging.StructLoggingConfig:1
+msgid "Configuration class for structlog."
+msgstr ""
+
+#: ../../../../starlite/config/logging.py:docstring of
+#: starlite.config.logging.StructLoggingConfig:5
+msgid "requires 'structlog' to be installed."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.StructLoggingConfig.processors:1
+msgid "Iterable of structlog logging processors."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.StructLoggingConfig.wrapper_class:1
+msgid "Structlog bindable logger."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.StructLoggingConfig.context_class:1
+msgid "Context class (a 'contextvar' context) for the logger."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.config.StructLoggingConfig.logger_factory:1
+msgid "Logger factory to use."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.config.StructLoggingConfig.cache_logger_on_first_use:1
+msgid "Whether to cache the logger configuration and reuse."
+msgstr ""
+
+#: ../../../../starlite/config/template.py:docstring of
+#: starlite.config.template.TemplateConfig:1
+msgid ""
+"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~starlite.config.template."
+"T`], :py:class:`~pydantic.generics.GenericModel`"
+msgstr ""
+
+#: ../../../../starlite/config/template.py:docstring of
+#: starlite.config.template.TemplateConfig:1
+msgid "Configuration for Templating."
+msgstr ""
+
+#: ../../../../starlite/config/template.py:docstring of
+#: starlite.config.template.TemplateConfig:3
+msgid ""
+"To enable templating, pass an instance of this class to the :class:`Starlite "
+"<starlite.app.Starlite>` constructor using the 'template_config' key."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.TemplateConfig.directory:1
+msgid "A directory or list of directories from which to serve templates."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.TemplateConfig.engine:1
+msgid ""
+"A template engine adhering to the :class:`TemplateEngineProtocol <starlite."
+"template.base.TemplateEngineProtocol>`."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.TemplateConfig.engine_callback:1
+msgid ""
+"A callback function that allows modifying the instantiated templating "
+"protocol."
+msgstr ""
+
+#: ../../../../starlite/config/template.py:docstring of
+#: starlite.config.template.TemplateConfig.validate_config:1
+msgid "Ensure that directory is set if engine is a class."
+msgstr ""
+
+#: ../../../../starlite/config/template.py:docstring of
+#: starlite.config.template.TemplateConfig.validate_config:3
+msgid "The dictionary of values to validate"
+msgstr ""
+
+#: ../../../../starlite/config/template.py:docstring of
+#: starlite.config.template.TemplateConfig.validate_config:5
+msgid "The validated dictionary of values."
+msgstr ""
+
+#: ../../../../starlite/config/template.py:docstring of
+#: starlite.config.template.TemplateConfig.to_engine:1
+msgid "Instantiate the template engine."
+msgstr ""
+
+#: ../../../../starlite/config/template.py:docstring of
+#: starlite.config.TemplateConfig.engine_instance:1
+msgid "Return the template engine instance."
+msgstr ""
+
+#: ../../../../starlite/config/allowed_hosts.py:docstring of
+#: starlite.config.allowed_hosts.AllowedHostsConfig:1
+msgid "Configuration for allowed hosts protection."
+msgstr ""
+
+#: ../../../../starlite/config/allowed_hosts.py:docstring of
+#: starlite.config.allowed_hosts.AllowedHostsConfig:3
+msgid ""
+"To enable allowed hosts protection, pass an instance of this class to the :"
+"class:`Starlite <starlite.app.Starlite>` constructor using the "
+"``allowed_hosts`` key."
+msgstr ""
+
+#: ../../../../starlite/config/allowed_hosts.py:docstring of
+#: starlite.config.allowed_hosts.AllowedHostsConfig.validate_allowed_hosts:3
+#: starlite.config.allowed_hosts.AllowedHostsConfig.validate_allowed_hosts:5
+#: ../../../../docstring starlite.config.AllowedHostsConfig.allowed_hosts:1
+msgid "A list of trusted hosts."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AllowedHostsConfig.allowed_hosts:3
+msgid ""
+"Use ``*.`` to allow all hosts, or prefix domains with ``*.`` to allow all "
+"sub domains."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AllowedHostsConfig.exclude:1
+msgid "A pattern or list of patterns to skip in the Allowed Hosts middleware."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.config.AllowedHostsConfig.exclude_opt_key:1
+msgid ""
+"An identifier to use on routes to disable hosts check for a particular route."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AllowedHostsConfig.scopes:1
+msgid ""
+"ASGI scopes processed by the middleware, if None both ``http`` and "
+"``websocket`` will be processed."
+msgstr ""
+
+#: ../../../../docstring of starlite.config.AllowedHostsConfig.www_redirect:1
+msgid ""
+"A boolean dictating whether to redirect requests that start with ``www.`` "
+"and otherwise match a trusted host."
+msgstr ""
+
+#: ../../../../starlite/config/allowed_hosts.py:docstring of
+#: starlite.config.allowed_hosts.AllowedHostsConfig.validate_allowed_hosts:1
+msgid "Ensure that the trusted hosts have correct domain wildcards."
+msgstr ""

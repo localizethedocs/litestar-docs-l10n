@@ -1,0 +1,373 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/connection/base.rst:2
+msgid "base"
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection:1
+msgid ""
+"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~starlite.connection.base."
+"Handler`, :py:obj:`~starlite.connection.base.User`, :py:obj:`~starlite."
+"connection.base.Auth`]"
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection:1
+msgid "The base ASGI connection container."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.__init__:1
+msgid "Initialize ``ASGIConnection``."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.__init__:0
+#: starlite.connection.base.ASGIConnection.set_session:0
+#: starlite.connection.base.ASGIConnection.url_for:0
+#: starlite.connection.base.ASGIConnection.url_for_static_asset:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.__init__:3
+msgid "The ASGI connection scope."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.__init__:4 ../../../../docstring
+#: starlite.connection.base.ASGIConnection.receive:1
+msgid "The ASGI receive function."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.__init__:5 ../../../../docstring
+#: starlite.connection.base.ASGIConnection.send:1
+msgid "The ASGI send function."
+msgstr ""
+
+#: ../../../../docstring of starlite.connection.base.ASGIConnection.scope:1
+msgid "The ASGI scope attached to the connection."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.app:1
+msgid "Return the ``app`` for this connection."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.app:0
+#: starlite.connection.base.ASGIConnection.auth:0
+#: starlite.connection.base.ASGIConnection.base_url:0
+#: starlite.connection.base.ASGIConnection.cache:0
+#: starlite.connection.base.ASGIConnection.clear_session:0
+#: starlite.connection.base.ASGIConnection.client:0
+#: starlite.connection.base.ASGIConnection.cookies:0
+#: starlite.connection.base.ASGIConnection.headers:0
+#: starlite.connection.base.ASGIConnection.logger:0
+#: starlite.connection.base.ASGIConnection.path_params:0
+#: starlite.connection.base.ASGIConnection.query_params:0
+#: starlite.connection.base.ASGIConnection.route_handler:0
+#: starlite.connection.base.ASGIConnection.session:0
+#: starlite.connection.base.ASGIConnection.set_session:0
+#: starlite.connection.base.ASGIConnection.state:0
+#: starlite.connection.base.ASGIConnection.url:0
+#: starlite.connection.base.ASGIConnection.url_for:0
+#: starlite.connection.base.ASGIConnection.url_for_static_asset:0
+#: starlite.connection.base.ASGIConnection.user:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.app:3
+msgid "The :class:`Starlite <starlite.app.Starlite>` application instance"
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.route_handler:1
+msgid "Return the ``route_handler`` for this connection."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.route_handler:3
+msgid "The target route handler instance."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.state:1
+msgid "Return the ``State`` of this connection."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.state:3
+msgid "A State instance constructed from the scope[\"state\"] value."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.url:1
+msgid "Return the URL of this connection's ``Scope``."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.url:3
+msgid "A URL instance constructed from the request's scope."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.base_url:1
+msgid "Return the base URL of this connection's ``Scope``."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.base_url:3
+msgid ""
+"A URL instance constructed from the request's scope, representing only the "
+"base part (host + domain + prefix) of the request."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.headers:1
+msgid "Return the headers of this connection's ``Scope``."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.headers:3
+msgid "A Headers instance with the request's scope[\"headers\"] value."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.query_params:1
+msgid "Return the query parameters of this connection's ``Scope``."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.query_params:3
+msgid ""
+"A normalized dict of query parameters. Multiple values for the same key are "
+"returned as a list."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.path_params:1
+msgid "Return the ``path_params`` of this connection's ``Scope``."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.path_params:3
+msgid "A string keyed dictionary of path parameter values."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.cookies:1
+msgid "Return the ``cookies`` of this connection's ``Scope``."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.cookies:3
+msgid "Returns any cookies stored in the header as a parsed dictionary."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.client:1
+msgid "Return the ``client`` data of this connection's ``Scope``."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.client:3
+msgid "A two tuple of the host name and port number."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.auth:1
+msgid "Return the ``auth`` data of this connection's ``Scope``."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.auth:0
+#: starlite.connection.base.ASGIConnection.logger:0
+#: starlite.connection.base.ASGIConnection.session:0
+#: starlite.connection.base.ASGIConnection.url_for:0
+#: starlite.connection.base.ASGIConnection.url_for_static_asset:0
+#: starlite.connection.base.ASGIConnection.user:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.auth:3
+msgid ""
+"If ``auth`` is not set in scope via an ``AuthMiddleware``, raises an "
+"exception"
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.auth:5
+msgid "A type correlating to the generic variable Auth."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.user:1
+msgid "Return the ``user`` data of this connection's ``Scope``."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.user:3
+msgid ""
+"If ``user`` is not set in scope via an ``AuthMiddleware``, raises an "
+"exception"
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.user:5
+msgid "A type correlating to the generic variable User."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.session:1
+msgid ""
+"Return the session for this connection if a session was previously set in "
+"the ``Scope``"
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.session:3
+msgid "A dictionary representing the session value - if existing."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.session:5
+msgid "if session is not set in scope."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.logger:1
+msgid "Return the ``Logger`` instance for this connection."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.logger:3
+msgid "A ``Logger`` instance."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.logger:5
+msgid "if ``log_config`` has not been passed to the Starlite constructor."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.cache:1
+msgid "Return the ``Cache`` for this connection."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.cache:3
+msgid "A ``Cache`` instance."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.set_session:1
+msgid "Set the session in the connection's ``Scope``."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.set_session:3
+msgid ""
+"If the :class:`Starlite SessionMiddleware <starlite.middleware.session."
+"SessionMiddleware>` is enabled, the session will be added to the response as "
+"a cookie header."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.set_session:6
+msgid "Dictionary or pydantic model instance for the session data."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.clear_session:6
+#: starlite.connection.base.ASGIConnection.set_session:8
+msgid "None."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.clear_session:1
+msgid "Remove the session from the connection's ``Scope``."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.clear_session:3
+msgid ""
+"If the :class:`Starlite SessionMiddleware <starlite.middleware.session."
+"SessionMiddleware>` is enabled, this will cause the session data to be "
+"cleared."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.url_for:1
+msgid "Return the url for a given route handler name."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.url_for:3
+msgid "The ``name`` of the request route handler."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.url_for:4
+msgid "Values for path parameters in the route"
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.url_for:6
+msgid ""
+"If route with ``name`` does not exist, path parameters are missing or have "
+"a     wrong type."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.url_for:8
+msgid "A string representing the absolute url of the route handler."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.url_for_static_asset:1
+msgid ""
+"Receives a static files handler name, an asset file path and returns "
+"resolved absolute url to the asset."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.url_for_static_asset:3
+msgid "A static handler unique name."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.url_for_static_asset:4
+msgid "a string containing path to an asset."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.url_for_static_asset:6
+msgid "If static files handler with ``name`` does not exist."
+msgstr ""
+
+#: ../../../../starlite/connection/base.py:docstring of
+#: starlite.connection.base.ASGIConnection.url_for_static_asset:8
+msgid "A string representing absolute url to the asset."
+msgstr ""

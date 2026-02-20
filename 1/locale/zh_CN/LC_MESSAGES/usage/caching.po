@@ -1,0 +1,280 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../usage/caching.rst:2
+msgid "Caching"
+msgstr ""
+
+#: ../../../usage/caching.rst:5
+msgid "Cache backends"
+msgstr ""
+
+#: ../../../usage/caching.rst:7
+msgid ""
+"Starlite includes a builtin :class:`Cache <starlite.cache.Cache>` that "
+"offers a uniform interface to interact with different \"Cache Backends\". A "
+"*Cache Backend* is a class that either implements or fulfills the interface "
+"specified by :class:`CacheBackendProtocol <starlite.cache."
+"CacheBackendProtocol>` to provide cache services."
+msgstr ""
+
+#: ../../../usage/caching.rst:12
+msgid "Builtin cache backends"
+msgstr ""
+
+#: ../../../usage/caching.rst:14
+msgid "Starlite comes with the following builtin cache backends:"
+msgstr ""
+
+#: ../../../usage/caching.rst:16
+msgid ""
+"By default, Starlite uses the :class:`SimpleCacheBackend <starlite.cache."
+"SimpleCacheBackend>`, which stores values in local memory with the added "
+"security of async locks. This is fine for local development, but it's not a "
+"good solution for production environments."
+msgstr ""
+
+#: ../../../usage/caching.rst:20
+msgid "Starlite also ships with two other ready to use cache backends:"
+msgstr ""
+
+#: ../../../usage/caching.rst:0 ../../../usage/caching.rst:23
+msgid "Redis"
+msgstr ""
+
+#: ../../../usage/caching.rst:25
+msgid ""
+":class:`RedisCacheBackend <starlite.cache.redis_cache_backend."
+"RedisCacheBackend>`, which uses `Redis <https://github.com/redis/redis-py>`_ "
+"as the caching database. Under the hood it uses `redis-py asyncio <https://"
+"redis-py.readthedocs.io/en/stable/examples/asyncio_examples.html>`_ to make "
+"sure requests are not blocked and `hiredis <https://github.com/redis/"
+"hiredis>`_ to boost performance."
+msgstr ""
+
+#: ../../../usage/caching.rst:32
+msgid ""
+"``redis`` is a required dependency when using this backend. You can install "
+"it as an extra with ``pip install starlite[redis]`` or independently."
+msgstr ""
+
+#: ../../../usage/caching.rst:0 ../../../usage/caching.rst:36
+msgid "Memcached"
+msgstr ""
+
+#: ../../../usage/caching.rst:38
+msgid ""
+":class:`MemcachedCacheBackend <starlite.cache.memcached_cache_backend."
+"MemcachedCacheBackend>`, which uses `memcached <https://memcached.org/>`_ as "
+"the caching database. Under the hood it uses `aiomcache <https://github.com/"
+"aio-libs/aiomcache>`_ to make sure requests are not blocked."
+msgstr ""
+
+#: ../../../usage/caching.rst:44
+msgid ""
+"``aiomcache`` is a required dependency when using this backend. You can "
+"install it as an extra with ``pip install starlite[memcached]`` or "
+"independently."
+msgstr ""
+
+#: ../../../usage/caching.rst:49
+msgid "Configuring caching"
+msgstr ""
+
+#: ../../../usage/caching.rst:51
+msgid ""
+"You can configure caching behaviour on the application level by passing an "
+"instance of :class:`CacheConfig <.config.CacheConfig>` to the :class:"
+"`Starlite instance <starlite.app.Starlite>`."
+msgstr ""
+
+#: ../../../usage/caching.rst:54
+msgid "Here is an example of how to configure a cache backend"
+msgstr ""
+
+#: ../../../usage/caching.rst:62
+msgid ""
+"from starlite import CacheConfig\n"
+"from starlite.cache.redis_cache_backend import (\n"
+"    RedisCacheBackendConfig,\n"
+"    RedisCacheBackend,\n"
+")\n"
+"\n"
+"config = RedisCacheBackendConfig(url=\"redis://localhost/\", port=6379, "
+"db=0)\n"
+"redis_backend = RedisCacheBackend(config=config)\n"
+"\n"
+"cache_config = CacheConfig(backend=redis_backend)"
+msgstr ""
+
+#: ../../../usage/caching.rst:78
+msgid ""
+"from starlite import CacheConfig\n"
+"from starlite.cache.memcached_cache_backend import (\n"
+"    MemcachedCacheBackendConfig,\n"
+"    MemcachedCacheBackend,\n"
+")\n"
+"\n"
+"config = MemcachedCacheBackendConfig(url=\"127.0.0.1\", port=11211)\n"
+"memcached_backend = MemcachedCacheBackend(config=config)\n"
+"\n"
+"cache_config = CacheConfig(backend=memcached_backend)"
+msgstr ""
+
+#: ../../../usage/caching.rst:92
+msgid "Creating a custom cache backend"
+msgstr ""
+
+#: ../../../usage/caching.rst:94
+msgid ""
+"Since Starlite relies on the :class:`CacheBackendProtocol <starlite.cache."
+"CacheBackendProtocol>` to define cache, creating a custom cache backend is "
+"very simple - all that is required is to create a class that inherits from "
+"the protocol and implements all its methods, or even a class that simply "
+"implements these methods without inheriting from the protocol. Once this is "
+"done, you can use the backend in the cache config."
+msgstr ""
+
+#: ../../../usage/caching.rst:101
+msgid "Response caching"
+msgstr ""
+
+#: ../../../usage/caching.rst:103
+msgid ""
+"Sometimes it's desirable to cache some responses, especially if these "
+"involve expensive calculations, or when polling is expected. Starlite comes "
+"with a simple mechanism for caching:"
+msgstr ""
+
+#: ../../../usage/caching.rst:107
+msgid ""
+"from starlite import get\n"
+"\n"
+"\n"
+"@get(\"/cached-path\", cache=True)\n"
+"def my_cached_handler() -> str: ..."
+msgstr ""
+
+#: ../../../usage/caching.rst:114
+msgid ""
+"By setting ``cache=True`` in the route handler, caching for the route "
+"handler will be enabled for the default duration, which is 60 seconds unless "
+"modified."
+msgstr ""
+
+#: ../../../usage/caching.rst:117
+msgid ""
+"Alternatively you can specify the number of seconds to cache the responses "
+"from the given handler like so:"
+msgstr ""
+
+#: ../../../usage/caching.rst:120
+msgid ""
+"from starlite import get\n"
+"\n"
+"\n"
+"@get(\"/cached-path\", cache=120)  # seconds\n"
+"def my_cached_handler() -> str: ..."
+msgstr ""
+
+#: ../../../usage/caching.rst:129
+msgid "Specifying a cache key builder"
+msgstr ""
+
+#: ../../../usage/caching.rst:131
+msgid ""
+"Starlite uses the request's path + sorted query parameters as the cache key. "
+"You can provide a \"Key Builder\" function to the route handler if you want "
+"to generate different cache keys:"
+msgstr ""
+
+#: ../../../usage/caching.rst:135
+msgid ""
+"from starlite import Request, get\n"
+"\n"
+"\n"
+"def my_custom_key_builder(request: Request) -> str:\n"
+"    return request.url.path + request.headers.get(\"my-header\", \"\")\n"
+"\n"
+"\n"
+"@get(\"/cached-path\", cache=True, cache_key_builder=my_custom_key_builder)\n"
+"def my_cached_handler() -> str: ..."
+msgstr ""
+
+#: ../../../usage/caching.rst:146
+msgid ""
+"You can also specify the default cache key builder to use for the entire "
+"application (see below)."
+msgstr ""
+
+#: ../../../usage/caching.rst:151
+msgid "Interacting with the cache"
+msgstr ""
+
+#: ../../../usage/caching.rst:153
+msgid ""
+"The Starlite app's cache is exposed as :attr:`cache <.app.Starlite.cache>`, "
+"which makes it accessible via the ``scope`` object. For example, you can "
+"access the cache in a custom middleware thus:"
+msgstr ""
+
+#: ../../../usage/caching.rst:157
+msgid ""
+"from starlite import MiddlewareProtocol\n"
+"from starlite.types import Scope, Receive, Send, ASGIApp\n"
+"\n"
+"\n"
+"class MyMiddleware(MiddlewareProtocol):\n"
+"    def __init__(self, app: ASGIApp):\n"
+"        self.app = app\n"
+"\n"
+"    async def __call__(self, scope: Scope, receive: Receive, send: Send) -> "
+"None:\n"
+"        cached_value = await scope[\"app\"].cache.get(\"my-key\")\n"
+"        if cached_value:\n"
+"            ..."
+msgstr ""
+
+#: ../../../usage/caching.rst:171
+msgid ""
+"The cache is also exposed as a property on the :class:`ASGIConnection "
+"<starlite.connection.ASGIConnection>` and the :class:`Request <starlite."
+"connection.Request>` and :class:`WebSocket <starlite.connection.WebSocket>` "
+"classes that inherit from it. You can thus interact with the cache inside a "
+"route handler easily, for example by doing this:"
+msgstr ""
+
+#: ../../../usage/caching.rst:176
+msgid ""
+"from starlite import Request, get\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"async def my_handler(request: Request) -> None:\n"
+"    cached_value = await request.cache.get(\"my-key\")\n"
+"    if cached_value:\n"
+"        ..."
+msgstr ""
+
+#: ../../../usage/caching.rst:188
+msgid ""
+"Cache based operations are async because async locking is used to protect "
+"against race conditions. If you need to use caching - use an async route "
+"handler."
+msgstr ""

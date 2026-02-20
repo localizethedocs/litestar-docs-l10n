@@ -1,0 +1,161 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/cache/redis_cache_backend.rst:2
+msgid "redis_cache_backend"
+msgstr ""
+
+#: ../../../../starlite/cache/redis_cache_backend.py:docstring of
+#: starlite.cache.redis_cache_backend.RedisCacheBackendConfig:1
+msgid "Bases: :py:class:`~pydantic.main.BaseModel`"
+msgstr ""
+
+#: ../../../../starlite/cache/redis_cache_backend.py:docstring of
+#: starlite.cache.redis_cache_backend.RedisCacheBackendConfig:1
+msgid "Redis cache backend configuration."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.cache.redis_cache_backend.RedisCacheBackendConfig.url:1
+msgid "Redis connection URL."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.cache.redis_cache_backend.RedisCacheBackendConfig.db:1
+msgid "Redis DB ID (optional)"
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.cache.redis_cache_backend.RedisCacheBackendConfig.port:1
+msgid "Redis port (optional)"
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.cache.redis_cache_backend.RedisCacheBackendConfig.username:1
+msgid "A username to use when connecting to Redis (optional)"
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.cache.redis_cache_backend.RedisCacheBackendConfig.password:1
+msgid "A password to use when connecting to Redis (optional)"
+msgstr ""
+
+#: ../../../../starlite/cache/redis_cache_backend.py:docstring of
+#: starlite.cache.redis_cache_backend.RedisCacheBackend:1
+msgid "Bases: :py:class:`~starlite.cache.base.CacheBackendProtocol`"
+msgstr ""
+
+#: ../../../../starlite/cache/redis_cache_backend.py:docstring of
+#: starlite.cache.redis_cache_backend.RedisCacheBackend:1
+msgid "Redis-based cache backend."
+msgstr ""
+
+#: ../../../../starlite/cache/redis_cache_backend.py:docstring of
+#: starlite.cache.redis_cache_backend.RedisCacheBackend.__init__:1
+msgid "Initialize ``RedisCacheBackend``"
+msgstr ""
+
+#: ../../../../starlite/cache/redis_cache_backend.py:docstring of
+#: starlite.cache.redis_cache_backend.RedisCacheBackend.__init__:0
+#: starlite.cache.redis_cache_backend.RedisCacheBackend.delete:0
+#: starlite.cache.redis_cache_backend.RedisCacheBackend.get:0
+#: starlite.cache.redis_cache_backend.RedisCacheBackend.set:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../starlite/cache/redis_cache_backend.py:docstring of
+#: starlite.cache.redis_cache_backend.RedisCacheBackend.__init__:3
+msgid "required configuration to connect to Redis."
+msgstr ""
+
+#: ../../../../starlite/cache/redis_cache_backend.py:docstring of
+#: starlite.cache.redis_cache_backend.RedisCacheBackend.get:1
+msgid "Retrieve a value from cache corresponding to the given key."
+msgstr ""
+
+#: ../../../../starlite/cache/redis_cache_backend.py:docstring of
+#: starlite.cache.redis_cache_backend.RedisCacheBackend.get:3
+msgid "name of cached value."
+msgstr ""
+
+#: ../../../../starlite/cache/redis_cache_backend.py:docstring of
+#: starlite.cache.redis_cache_backend.RedisCacheBackend.delete:0
+#: starlite.cache.redis_cache_backend.RedisCacheBackend.get:0
+#: starlite.cache.redis_cache_backend.RedisCacheBackend.set:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/cache/redis_cache_backend.py:docstring of
+#: starlite.cache.redis_cache_backend.RedisCacheBackend.get:5
+msgid "Cached value if existing else ``None``."
+msgstr ""
+
+#: ../../../../starlite/cache/redis_cache_backend.py:docstring of
+#: starlite.cache.redis_cache_backend.RedisCacheBackend.set:1
+msgid ""
+"Set a value in cache for a given key for a duration determined by expiration."
+msgstr ""
+
+#: ../../../../starlite/cache/redis_cache_backend.py:docstring of
+#: starlite.cache.redis_cache_backend.RedisCacheBackend.set:3
+msgid "key to cache ``value`` under."
+msgstr ""
+
+#: ../../../../starlite/cache/redis_cache_backend.py:docstring of
+#: starlite.cache.redis_cache_backend.RedisCacheBackend.set:4
+msgid "the value to be cached."
+msgstr ""
+
+#: ../../../../starlite/cache/redis_cache_backend.py:docstring of
+#: starlite.cache.redis_cache_backend.RedisCacheBackend.set:5
+msgid "expiration of cached value in seconds."
+msgstr ""
+
+#: ../../../../starlite/cache/redis_cache_backend.py:docstring of
+#: starlite.cache.redis_cache_backend.RedisCacheBackend.delete:5
+#: starlite.cache.redis_cache_backend.RedisCacheBackend.set:7
+msgid "Notes"
+msgstr ""
+
+#: ../../../../starlite/cache/redis_cache_backend.py:docstring of
+#: starlite.cache.redis_cache_backend.RedisCacheBackend.set:9
+msgid "expiration is in seconds."
+msgstr ""
+
+#: ../../../../starlite/cache/redis_cache_backend.py:docstring of
+#: starlite.cache.redis_cache_backend.RedisCacheBackend.delete:7
+#: starlite.cache.redis_cache_backend.RedisCacheBackend.set:10
+msgid "return value is not used by Starlite internally."
+msgstr ""
+
+#: ../../../../starlite/cache/redis_cache_backend.py:docstring of
+#: starlite.cache.redis_cache_backend.RedisCacheBackend.delete:9
+#: starlite.cache.redis_cache_backend.RedisCacheBackend.set:12
+msgid "None"
+msgstr ""
+
+#: ../../../../starlite/cache/redis_cache_backend.py:docstring of
+#: starlite.cache.redis_cache_backend.RedisCacheBackend.delete:1
+msgid "Delete a value from the cache and removes the given key."
+msgstr ""
+
+#: ../../../../starlite/cache/redis_cache_backend.py:docstring of
+#: starlite.cache.redis_cache_backend.RedisCacheBackend.delete:3
+msgid "key to be deleted from the cache."
+msgstr ""

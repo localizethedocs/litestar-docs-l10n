@@ -1,0 +1,744 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/contrib/jwt.rst:2
+msgid "jwt"
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.jwt_auth.JWTAuth:1
+msgid ""
+"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~starlite.security.base."
+"UserType`], :py:class:`~starlite.security.base.AbstractSecurityConfig`\\ [:"
+"py:obj:`~starlite.security.base.UserType`, :py:class:`~starlite.contrib.jwt."
+"jwt_token.Token`]"
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.jwt_auth.JWTAuth:1
+msgid "JWT Authentication Configuration."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.jwt_auth.JWTAuth:3
+msgid ""
+"This class is the main entry point to the library, and it includes methods "
+"to create the middleware, provide login functionality, and create OpenAPI "
+"documentation."
+msgstr ""
+
+#: ../../../../docstring of starlite.contrib.jwt.JWTAuth.algorithm:1
+msgid "Algorithm to use for JWT hashing."
+msgstr ""
+
+#: ../../../../docstring of starlite.contrib.jwt.JWTAuth.auth_header:1
+msgid "Request header key from which to retrieve the token."
+msgstr ""
+
+#: ../../../../docstring of starlite.contrib.jwt.JWTAuth.auth_header:3
+msgid "E.g. ``Authorization`` or 'X-Api-Key'."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.contrib.jwt.JWTAuth.default_token_expiration:1
+msgid "The default value for token expiration."
+msgstr ""
+
+#: ../../../../docstring of starlite.contrib.jwt.JWTAuth.token_secret:1
+msgid "Key with which to generate the token hash."
+msgstr ""
+
+#: ../../../../docstring of starlite.contrib.jwt.JWTAuth.token_secret:3
+msgid "Notes"
+msgstr ""
+
+#: ../../../../docstring of starlite.contrib.jwt.JWTAuth.token_secret:5
+msgid ""
+"This value should be kept as a secret and the standard practice is to inject "
+"it into the environment."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.contrib.jwt.JWTAuth.openapi_security_scheme_name:1
+msgid ""
+"The value to use for the OpenAPI security scheme and security requirements."
+msgstr ""
+
+#: ../../../../docstring of starlite.contrib.jwt.JWTAuth.description:1
+#: starlite.contrib.jwt.JWTCookieAuth.description:1
+#: starlite.contrib.jwt.OAuth2PasswordBearerAuth.description:1
+msgid "Description for the OpenAPI security scheme."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.contrib.jwt.JWTAuth.authentication_middleware_class:1
+#: starlite.contrib.jwt.JWTCookieAuth.authentication_middleware_class:1
+msgid "The authentication middleware class to use."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.contrib.jwt.JWTAuth.authentication_middleware_class:3
+msgid "Must inherit from :class:`JWTAuthenticationMiddleware`"
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.JWTAuth.openapi_components:1
+msgid "Create OpenAPI documentation for the JWT auth schema used."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.JWTAuth.middleware:0
+#: starlite.contrib.jwt.JWTAuth.openapi_components:0
+#: starlite.contrib.jwt.JWTAuth.security_requirement:0
+#: starlite.contrib.jwt.JWTCookieAuth.middleware:0
+#: starlite.contrib.jwt.JWTCookieAuth.openapi_components:0
+#: starlite.contrib.jwt.OAuth2PasswordBearerAuth.oauth_flow:0
+#: starlite.contrib.jwt.OAuth2PasswordBearerAuth.openapi_components:0
+#: starlite.contrib.jwt.jwt_auth.JWTAuth.create_token:0
+#: starlite.contrib.jwt.jwt_auth.JWTAuth.format_auth_header:0
+#: starlite.contrib.jwt.jwt_auth.JWTAuth.login:0
+#: starlite.contrib.jwt.jwt_auth.JWTCookieAuth.login:0
+#: starlite.contrib.jwt.jwt_auth.OAuth2PasswordBearerAuth.login:0
+#: ../../../../starlite/contrib/jwt/jwt_token.py:docstring
+#: starlite.contrib.jwt.jwt_token.Token.decode:0
+#: starlite.contrib.jwt.jwt_token.Token.encode:0
+#: starlite.contrib.jwt.jwt_token.Token.validate_exp:0
+#: starlite.contrib.jwt.jwt_token.Token.validate_iat:0
+#: ../../../../starlite/contrib/jwt/middleware.py:docstring
+#: starlite.contrib.jwt.middleware.JWTAuthenticationMiddleware.authenticate_request:0
+#: starlite.contrib.jwt.middleware.JWTAuthenticationMiddleware.authenticate_token:0
+#: starlite.contrib.jwt.middleware.JWTCookieAuthenticationMiddleware.authenticate_request:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.JWTAuth.openapi_components:3
+#: starlite.contrib.jwt.JWTCookieAuth.openapi_components:3
+#: starlite.contrib.jwt.OAuth2PasswordBearerAuth.openapi_components:3
+msgid ""
+"An :class:`Components <pydantic_openapi_schema.v3_1_0.components."
+"Components>` instance."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.JWTAuth.security_requirement:1
+msgid "Return OpenAPI 3.1."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.JWTAuth.security_requirement:3
+msgid ""
+":class:`SecurityRequirement <pydantic_openapi_schema.v3_1_0."
+"security_requirement.SecurityRequirement>`"
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.JWTAuth.security_requirement:5
+msgid ""
+"An OpenAPI 3.1 :class:`SecurityRequirement <pydantic_openapi_schema.v3_1_0."
+"security_requirement.SecurityRequirement>` dictionary."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.JWTAuth.middleware:1
+msgid ""
+"Create ``JWTAuthenticationMiddleware`` wrapped in Starlite's "
+"``DefineMiddleware``."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.JWTAuth.middleware:3
+#: starlite.contrib.jwt.JWTCookieAuth.middleware:3
+msgid ""
+"An instance of :class:`DefineMiddleware <starlite.middleware.base."
+"DefineMiddleware>`."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.jwt_auth.JWTAuth.login:1
+#: starlite.contrib.jwt.jwt_auth.JWTCookieAuth.login:1
+#: starlite.contrib.jwt.jwt_auth.OAuth2PasswordBearerAuth.login:1
+msgid ""
+"Create a response with a JWT header. Calls the 'JWTAuth.store_token_handler' "
+"to persist the token ``sub``."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.jwt_auth.JWTAuth.create_token:0
+#: starlite.contrib.jwt.jwt_auth.JWTAuth.format_auth_header:0
+#: starlite.contrib.jwt.jwt_auth.JWTAuth.login:0
+#: starlite.contrib.jwt.jwt_auth.JWTCookieAuth.login:0
+#: starlite.contrib.jwt.jwt_auth.OAuth2PasswordBearerAuth.login:0
+#: ../../../../starlite/contrib/jwt/jwt_token.py:docstring
+#: starlite.contrib.jwt.jwt_token.Token.decode:0
+#: starlite.contrib.jwt.jwt_token.Token.encode:0
+#: starlite.contrib.jwt.jwt_token.Token.validate_exp:0
+#: starlite.contrib.jwt.jwt_token.Token.validate_iat:0
+#: ../../../../starlite/contrib/jwt/middleware.py:docstring
+#: starlite.contrib.jwt.middleware.JWTAuthenticationMiddleware.__init__:0
+#: starlite.contrib.jwt.middleware.JWTAuthenticationMiddleware.authenticate_request:0
+#: starlite.contrib.jwt.middleware.JWTAuthenticationMiddleware.authenticate_token:0
+#: starlite.contrib.jwt.middleware.JWTCookieAuthenticationMiddleware.__init__:0
+#: starlite.contrib.jwt.middleware.JWTCookieAuthenticationMiddleware.authenticate_request:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.jwt_auth.JWTAuth.create_token:3
+#: starlite.contrib.jwt.jwt_auth.JWTAuth.login:3
+#: starlite.contrib.jwt.jwt_auth.JWTCookieAuth.login:3
+#: starlite.contrib.jwt.jwt_auth.OAuth2PasswordBearerAuth.login:3
+msgid ""
+"Unique identifier of the token subject. Usually this is a user ID or "
+"equivalent kind of value."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.jwt_auth.JWTAuth.login:4
+#: starlite.contrib.jwt.jwt_auth.JWTCookieAuth.login:4
+#: starlite.contrib.jwt.jwt_auth.OAuth2PasswordBearerAuth.login:4
+msgid "An optional response body to send."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.jwt_auth.JWTAuth.login:5
+#: starlite.contrib.jwt.jwt_auth.JWTCookieAuth.login:5
+#: starlite.contrib.jwt.jwt_auth.OAuth2PasswordBearerAuth.login:5
+msgid "An optional 'Content-Type'. Defaults to 'application/json'."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.jwt_auth.JWTAuth.login:6
+#: starlite.contrib.jwt.jwt_auth.JWTCookieAuth.login:6
+#: starlite.contrib.jwt.jwt_auth.OAuth2PasswordBearerAuth.login:6
+msgid "An optional status code for the response. Defaults to '201 Created'."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.jwt_auth.JWTAuth.create_token:4
+#: starlite.contrib.jwt.jwt_auth.JWTAuth.login:7
+#: starlite.contrib.jwt.jwt_auth.JWTCookieAuth.login:7
+#: starlite.contrib.jwt.jwt_auth.OAuth2PasswordBearerAuth.login:7
+msgid "An optional timedelta for the token expiration."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.jwt_auth.JWTAuth.create_token:5
+#: starlite.contrib.jwt.jwt_auth.JWTAuth.login:8
+#: starlite.contrib.jwt.jwt_auth.JWTCookieAuth.login:8
+#: starlite.contrib.jwt.jwt_auth.OAuth2PasswordBearerAuth.login:8
+msgid "An optional value of the token ``iss`` field."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.jwt_auth.JWTAuth.create_token:6
+#: starlite.contrib.jwt.jwt_auth.JWTAuth.login:9
+#: starlite.contrib.jwt.jwt_auth.JWTCookieAuth.login:9
+#: starlite.contrib.jwt.jwt_auth.OAuth2PasswordBearerAuth.login:9
+msgid "An optional value for the token ``aud`` field."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.jwt_auth.JWTAuth.create_token:7
+#: starlite.contrib.jwt.jwt_auth.JWTAuth.login:10
+#: starlite.contrib.jwt.jwt_auth.JWTCookieAuth.login:10
+#: starlite.contrib.jwt.jwt_auth.OAuth2PasswordBearerAuth.login:10
+msgid "An optional value for the token ``jti`` field."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.jwt_auth.JWTAuth.login:11
+#: starlite.contrib.jwt.jwt_auth.JWTCookieAuth.login:11
+msgid ""
+"If ``True`` the response will be a dict including the token: ``{ \"token\": "
+"<token> }`` will be returned as the response body. Note: if a response body "
+"is passed this setting will be ignored."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.jwt_auth.JWTAuth.login:14
+#: starlite.contrib.jwt.jwt_auth.JWTCookieAuth.login:14
+#: starlite.contrib.jwt.jwt_auth.OAuth2PasswordBearerAuth.login:14
+msgid "A :class:`Response <starlite.response.Response>` instance."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.jwt_auth.JWTAuth.create_token:1
+msgid ""
+"Create a Token instance from the passed in parameters, persists and returns "
+"it."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.jwt_auth.JWTAuth.create_token:9
+msgid "The created token."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.jwt_auth.JWTAuth.format_auth_header:1
+msgid "Format a token according to the specified OpenAPI scheme."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.jwt_auth.JWTAuth.format_auth_header:3
+msgid "An encoded JWT token"
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.jwt_auth.JWTAuth.format_auth_header:5
+msgid "The encoded token formatted for the HTTP headers"
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/middleware.py:docstring of
+#: starlite.contrib.jwt.middleware.JWTAuthenticationMiddleware:1
+msgid ""
+"Bases: :py:class:`~starlite.middleware.authentication."
+"AbstractAuthenticationMiddleware`"
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/middleware.py:docstring of
+#: starlite.contrib.jwt.middleware.JWTAuthenticationMiddleware:1
+msgid "JWT Authentication middleware."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/middleware.py:docstring of
+#: starlite.contrib.jwt.middleware.JWTAuthenticationMiddleware:3
+msgid "This class provides JWT authentication functionalities."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/middleware.py:docstring of
+#: starlite.contrib.jwt.middleware.JWTAuthenticationMiddleware.__init__:1
+msgid ""
+"Check incoming requests for an encoded token in the auth header specified, "
+"and if present retrieve the user from persistence using the provided "
+"function."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/middleware.py:docstring of
+#: starlite.contrib.jwt.middleware.JWTAuthenticationMiddleware.__init__:4
+#: starlite.contrib.jwt.middleware.JWTCookieAuthenticationMiddleware.__init__:4
+msgid "JWT hashing algorithm to use."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/middleware.py:docstring of
+#: starlite.contrib.jwt.middleware.JWTAuthenticationMiddleware.__init__:5
+#: starlite.contrib.jwt.middleware.JWTCookieAuthenticationMiddleware.__init__:5
+msgid ""
+"An ASGIApp, this value is the next ASGI handler to call in the middleware "
+"stack."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/middleware.py:docstring of
+#: starlite.contrib.jwt.middleware.JWTAuthenticationMiddleware.__init__:6
+#: starlite.contrib.jwt.middleware.JWTCookieAuthenticationMiddleware.__init__:7
+msgid ""
+"Request header key from which to retrieve the token. E.g. ``Authorization`` "
+"or 'X-Api-Key'."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/middleware.py:docstring of
+#: starlite.contrib.jwt.middleware.JWTAuthenticationMiddleware.__init__:7
+#: starlite.contrib.jwt.middleware.JWTCookieAuthenticationMiddleware.__init__:8
+msgid "A pattern or list of patterns to skip."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/middleware.py:docstring of
+#: starlite.contrib.jwt.middleware.JWTAuthenticationMiddleware.__init__:8
+#: starlite.contrib.jwt.middleware.JWTCookieAuthenticationMiddleware.__init__:9
+msgid ""
+"An identifier to use on routes to disable authentication for a particular "
+"route."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/middleware.py:docstring of
+#: starlite.contrib.jwt.middleware.JWTAuthenticationMiddleware.__init__:9
+#: starlite.contrib.jwt.middleware.JWTCookieAuthenticationMiddleware.__init__:10
+msgid ""
+"A function that receives an instance of ``Token`` and returns a user, which "
+"can be any arbitrary value."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/middleware.py:docstring of
+#: starlite.contrib.jwt.middleware.JWTAuthenticationMiddleware.__init__:11
+#: starlite.contrib.jwt.middleware.JWTCookieAuthenticationMiddleware.__init__:12
+msgid "ASGI scopes processed by the authentication middleware."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/middleware.py:docstring of
+#: starlite.contrib.jwt.middleware.JWTAuthenticationMiddleware.__init__:12
+#: starlite.contrib.jwt.middleware.JWTCookieAuthenticationMiddleware.__init__:13
+msgid ""
+"Secret for decoding the JWT token. This value should be equivalent to the "
+"secret used to encode it."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/middleware.py:docstring of
+#: starlite.contrib.jwt.middleware.JWTAuthenticationMiddleware.authenticate_request:1
+#: starlite.contrib.jwt.middleware.JWTCookieAuthenticationMiddleware.authenticate_request:1
+msgid ""
+"Given an HTTP Connection, parse the JWT api key stored in the header and "
+"retrieve the user correlating to the token from the DB."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/middleware.py:docstring of
+#: starlite.contrib.jwt.middleware.JWTAuthenticationMiddleware.authenticate_request:4
+#: starlite.contrib.jwt.middleware.JWTCookieAuthenticationMiddleware.authenticate_request:4
+msgid "An Starlite HTTPConnection instance."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/middleware.py:docstring of
+#: starlite.contrib.jwt.middleware.JWTAuthenticationMiddleware.authenticate_request:6
+#: starlite.contrib.jwt.middleware.JWTCookieAuthenticationMiddleware.authenticate_request:6
+msgid "AuthenticationResult"
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_token.py:docstring of
+#: starlite.contrib.jwt.jwt_token.Token.decode:0
+#: starlite.contrib.jwt.jwt_token.Token.encode:0
+#: starlite.contrib.jwt.jwt_token.Token.validate_exp:0
+#: starlite.contrib.jwt.jwt_token.Token.validate_iat:0
+#: ../../../../starlite/contrib/jwt/middleware.py:docstring
+#: starlite.contrib.jwt.middleware.JWTAuthenticationMiddleware.authenticate_request:0
+#: starlite.contrib.jwt.middleware.JWTAuthenticationMiddleware.authenticate_token:0
+#: starlite.contrib.jwt.middleware.JWTCookieAuthenticationMiddleware.authenticate_request:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/middleware.py:docstring of
+#: starlite.contrib.jwt.middleware.JWTAuthenticationMiddleware.authenticate_request:8
+#: starlite.contrib.jwt.middleware.JWTAuthenticationMiddleware.authenticate_token:6
+#: starlite.contrib.jwt.middleware.JWTCookieAuthenticationMiddleware.authenticate_request:8
+msgid "If token is invalid or user is not found."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/middleware.py:docstring of
+#: starlite.contrib.jwt.middleware.JWTAuthenticationMiddleware.authenticate_token:1
+msgid ""
+"Given an encoded JWT token, parse, validate and look up sub within token."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/middleware.py:docstring of
+#: starlite.contrib.jwt.middleware.JWTAuthenticationMiddleware.authenticate_token:3
+#: starlite.contrib.jwt.middleware.JWTAuthenticationMiddleware.authenticate_token:8
+msgid "_description_"
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/middleware.py:docstring of
+#: starlite.contrib.jwt.middleware.JWTAuthenticationMiddleware.authenticate_token:4
+msgid "An ASGI connection instance."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/middleware.py:docstring of
+#: starlite.contrib.jwt.middleware.JWTAuthenticationMiddleware.authenticate_token:0
+msgid "Return type"
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.jwt_auth.JWTCookieAuth:1
+msgid ""
+"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~starlite.security.base."
+"UserType`], :py:class:`~starlite.contrib.jwt.jwt_auth.JWTAuth`\\ [:py:obj:"
+"`~starlite.security.base.UserType`]"
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.jwt_auth.JWTCookieAuth:1
+msgid "JWT Cookie Authentication Configuration."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.jwt_auth.JWTCookieAuth:3
+msgid ""
+"This class is an alternate entry point to the library, and it includes all "
+"the functionality of the ``JWTAuth`` class and adds support for passing JWT "
+"tokens ``HttpOnly`` cookies."
+msgstr ""
+
+#: ../../../../docstring of starlite.contrib.jwt.JWTCookieAuth.key:1
+msgid "Key for the cookie."
+msgstr ""
+
+#: ../../../../docstring of starlite.contrib.jwt.JWTCookieAuth.path:1
+msgid ""
+"Path fragment that must exist in the request url for the cookie to be valid."
+msgstr ""
+
+#: ../../../../docstring of starlite.contrib.jwt.JWTCookieAuth.path:3
+msgid "Defaults to '/'."
+msgstr ""
+
+#: ../../../../docstring of starlite.contrib.jwt.JWTCookieAuth.domain:1
+msgid "Domain for which the cookie is valid."
+msgstr ""
+
+#: ../../../../docstring of starlite.contrib.jwt.JWTCookieAuth.secure:1
+msgid "Https is required for the cookie."
+msgstr ""
+
+#: ../../../../docstring of starlite.contrib.jwt.JWTCookieAuth.samesite:1
+msgid ""
+"Controls whether or not a cookie is sent with cross-site requests. Defaults "
+"to ``lax``."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.contrib.jwt.JWTCookieAuth.authentication_middleware_class:3
+msgid "Must inherit from :class:`JWTCookieAuthenticationMiddleware`"
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.JWTCookieAuth.openapi_components:1
+msgid "Create OpenAPI documentation for the JWT Cookie auth scheme."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.JWTCookieAuth.middleware:1
+msgid ""
+"Create ``JWTCookieAuthenticationMiddleware`` wrapped in Starlite's "
+"``DefineMiddleware``."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/middleware.py:docstring of
+#: starlite.contrib.jwt.middleware.JWTCookieAuthenticationMiddleware:1
+msgid ""
+"Bases: :py:class:`~starlite.contrib.jwt.middleware."
+"JWTAuthenticationMiddleware`"
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/middleware.py:docstring of
+#: starlite.contrib.jwt.middleware.JWTCookieAuthenticationMiddleware:1
+msgid "Cookie based JWT authentication middleware."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/middleware.py:docstring of
+#: starlite.contrib.jwt.middleware.JWTCookieAuthenticationMiddleware.__init__:1
+msgid ""
+"Check incoming requests for an encoded token in the auth header or cookie "
+"name specified, and if present retrieves the user from persistence using the "
+"provided function."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/middleware.py:docstring of
+#: starlite.contrib.jwt.middleware.JWTCookieAuthenticationMiddleware.__init__:6
+msgid ""
+"Cookie name from which to retrieve the token. E.g. ``token`` or "
+"``accessToken``."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.jwt_auth.OAuth2Login:1
+#: ../../../../starlite/contrib/jwt/jwt_token.py:docstring
+#: starlite.contrib.jwt.jwt_token.Token:1
+msgid "Bases: :py:class:`~pydantic.main.BaseModel`"
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.jwt_auth.OAuth2Login:1
+msgid "OAuth2 Login DTO"
+msgstr ""
+
+#: ../../../../docstring of starlite.contrib.jwt.OAuth2Login.access_token:1
+msgid "Valid JWT access token"
+msgstr ""
+
+#: ../../../../docstring of starlite.contrib.jwt.OAuth2Login.refresh_token:1
+msgid "Optional valid refresh token JWT"
+msgstr ""
+
+#: ../../../../docstring of starlite.contrib.jwt.OAuth2Login.expires_in:1
+msgid "Expiration time of the token in seconds."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.jwt_auth.OAuth2PasswordBearerAuth:1
+msgid ""
+"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~starlite.security.base."
+"UserType`], :py:class:`~starlite.contrib.jwt.jwt_auth.JWTCookieAuth`\\ [:py:"
+"obj:`~starlite.security.base.UserType`]"
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.jwt_auth.OAuth2PasswordBearerAuth:1
+msgid "OAUTH2 Schema for Password Bearer Authentication."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.jwt_auth.OAuth2PasswordBearerAuth:3
+msgid ""
+"This class implements an OAUTH2 authentication flow entry point to the "
+"library, and it includes all the functionality of the ``JWTAuth`` class and "
+"adds support for passing JWT tokens ``HttpOnly`` cookies."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.jwt_auth.OAuth2PasswordBearerAuth:7
+msgid ""
+"``token_url`` is the only additional argument that is required, and it "
+"should point at your login route"
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.contrib.jwt.OAuth2PasswordBearerAuth.token_url:1
+msgid "The URL for retrieving a new token."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.contrib.jwt.OAuth2PasswordBearerAuth.oauth_scopes:1
+msgid "Oauth Scopes available for the token."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.OAuth2PasswordBearerAuth.oauth_flow:1
+msgid ""
+"Create an OpenAPI OAuth2 flow for the password bearer authentication scheme."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.OAuth2PasswordBearerAuth.oauth_flow:3
+msgid ""
+"An :class:`OAuthFlow <pydantic_openapi_schema.v3_1_0.oauth_flow.OAuthFlow>` "
+"instance."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.OAuth2PasswordBearerAuth.openapi_components:1
+msgid ""
+"Create OpenAPI documentation for the OAUTH2 Password bearer auth scheme."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
+#: starlite.contrib.jwt.jwt_auth.OAuth2PasswordBearerAuth.login:11
+msgid ""
+"If ``True`` the response will be an oAuth2 token response dict. Note: if a "
+"response body is passed this setting will be ignored."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_token.py:docstring of
+#: starlite.contrib.jwt.jwt_token.Token:1
+msgid "JWT Token DTO."
+msgstr ""
+
+#: ../../../../docstring of starlite.contrib.jwt.Token.exp:1
+msgid "Expiration - datetime for token expiration."
+msgstr ""
+
+#: ../../../../docstring of starlite.contrib.jwt.Token.iat:1
+msgid "Issued at - should always be current now."
+msgstr ""
+
+#: ../../../../docstring of starlite.contrib.jwt.Token.sub:1
+msgid "Subject - usually a unique identifier of the user or equivalent entity."
+msgstr ""
+
+#: ../../../../docstring of starlite.contrib.jwt.Token.iss:1
+msgid "Issuer - optional unique identifier for the issuer."
+msgstr ""
+
+#: ../../../../docstring of starlite.contrib.jwt.Token.aud:1
+msgid "Audience - intended audience."
+msgstr ""
+
+#: ../../../../docstring of starlite.contrib.jwt.Token.jti:1
+msgid "JWT ID - a unique identifier of the JWT between different issuers."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_token.py:docstring of
+#: starlite.contrib.jwt.jwt_token.Token.validate_exp:1
+msgid "Ensure that ``exp`` value is a future datetime."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_token.py:docstring of
+#: starlite.contrib.jwt.jwt_token.Token.validate_exp:3
+#: starlite.contrib.jwt.jwt_token.Token.validate_iat:3
+msgid "A datetime instance."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_token.py:docstring of
+#: starlite.contrib.jwt.jwt_token.Token.validate_exp:5
+msgid "if value is not a future datetime instance."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_token.py:docstring of
+#: starlite.contrib.jwt.jwt_token.Token.validate_exp:7
+#: starlite.contrib.jwt.jwt_token.Token.validate_iat:7
+msgid "The validated datetime."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_token.py:docstring of
+#: starlite.contrib.jwt.jwt_token.Token.validate_iat:1
+msgid "Ensure that ``iat`` value is a past or current datetime."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_token.py:docstring of
+#: starlite.contrib.jwt.jwt_token.Token.validate_iat:5
+msgid "if value is not a past or current datetime instance."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_token.py:docstring of
+#: starlite.contrib.jwt.jwt_token.Token.decode:1
+msgid "Decode a passed in token string and returns a Token instance."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_token.py:docstring of
+#: starlite.contrib.jwt.jwt_token.Token.decode:3
+msgid "A base64 string containing an encoded JWT."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_token.py:docstring of
+#: starlite.contrib.jwt.jwt_token.Token.decode:4
+msgid ""
+"The secret with which the JWT is encoded. It may optionally be an individual "
+"JWK or JWS set dict"
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_token.py:docstring of
+#: starlite.contrib.jwt.jwt_token.Token.decode:5
+#: starlite.contrib.jwt.jwt_token.Token.encode:4
+msgid "The algorithm used to encode the JWT."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_token.py:docstring of
+#: starlite.contrib.jwt.jwt_token.Token.decode:7
+msgid "A decoded Token instance."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_token.py:docstring of
+#: starlite.contrib.jwt.jwt_token.Token.decode:9
+msgid "If token is invalid."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_token.py:docstring of
+#: starlite.contrib.jwt.jwt_token.Token.encode:1
+msgid "Encode the token instance into a string."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_token.py:docstring of
+#: starlite.contrib.jwt.jwt_token.Token.encode:3
+msgid "The secret with which the JWT is encoded."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_token.py:docstring of
+#: starlite.contrib.jwt.jwt_token.Token.encode:6
+msgid "An encoded token string."
+msgstr ""
+
+#: ../../../../starlite/contrib/jwt/jwt_token.py:docstring of
+#: starlite.contrib.jwt.jwt_token.Token.encode:8
+msgid "If encoding fails."
+msgstr ""

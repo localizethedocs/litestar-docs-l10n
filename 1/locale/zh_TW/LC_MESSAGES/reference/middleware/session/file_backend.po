@@ -1,0 +1,170 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/middleware/session/file_backend.rst:2
+msgid "file_backend"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/file_backend.py:docstring of
+#: starlite.middleware.session.file_backend.FileStorageMetadataWrapper:1
+msgid "Bases: :py:class:`~typing.NamedTuple`"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/file_backend.py:docstring of
+#: starlite.middleware.session.file_backend.FileStorageMetadataWrapper:1
+msgid "Metadata of a session file."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.middleware.session.file_backend.FileStorageMetadataWrapper.expires:1
+msgid "Alias for field number 0"
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.middleware.session.file_backend.FileStorageMetadataWrapper.data:1
+msgid "Alias for field number 1"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/file_backend.py:docstring of
+#: namedtuple_FileStorageMetadataWrapper.FileStorageMetadataWrapper.__new__:1
+msgid "Create new instance of FileStorageMetadataWrapper(expires, data)"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/file_backend.py:docstring of
+#: starlite.middleware.session.file_backend.FileBackend:1
+msgid ""
+"Bases: :py:class:`~starlite.middleware.session.base.ServerSideBackend`\\ [:"
+"py:class:`FileBackendConfig`]"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/file_backend.py:docstring of
+#: starlite.middleware.session.file_backend.FileBackend:1
+msgid "Session backend to store data in files."
+msgstr ""
+
+#: ../../../../starlite/middleware/session/file_backend.py:docstring of
+#: starlite.middleware.session.file_backend.FileBackend.__init__:1
+msgid "Initialize ``FileBackend``"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/file_backend.py:docstring of
+#: starlite.middleware.session.file_backend.FileBackend.__init__:0
+#: starlite.middleware.session.file_backend.FileBackend.delete:0
+#: starlite.middleware.session.file_backend.FileBackend.get:0
+#: starlite.middleware.session.file_backend.FileBackend.set:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/file_backend.py:docstring of
+#: starlite.middleware.session.file_backend.FileBackend.__init__:3
+msgid "A ``FileBackendConfig``"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/file_backend.py:docstring of
+#: starlite.middleware.session.file_backend.FileBackend.get:1
+msgid "Load data associated with ``session_id`` from a file."
+msgstr ""
+
+#: ../../../../starlite/middleware/session/file_backend.py:docstring of
+#: starlite.middleware.session.file_backend.FileBackend.delete:5
+#: starlite.middleware.session.file_backend.FileBackend.get:3
+#: starlite.middleware.session.file_backend.FileBackend.set:4
+msgid "The session-ID"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/file_backend.py:docstring of
+#: starlite.middleware.session.file_backend.FileBackend.delete:0
+#: starlite.middleware.session.file_backend.FileBackend.delete_all:0
+#: starlite.middleware.session.file_backend.FileBackend.delete_expired:0
+#: starlite.middleware.session.file_backend.FileBackend.get:0
+#: starlite.middleware.session.file_backend.FileBackend.set:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/file_backend.py:docstring of
+#: starlite.middleware.session.file_backend.FileBackend.get:5
+msgid "The session data, if existing, otherwise ``None``."
+msgstr ""
+
+#: ../../../../starlite/middleware/session/file_backend.py:docstring of
+#: starlite.middleware.session.file_backend.FileBackend.set:1
+msgid ""
+"Store ``data`` alongside metadata under the ``session_id``, using the ID as "
+"a filename. If a file already exists for ``session_id``, replace it with "
+"``data`` and reset its expiry time."
+msgstr ""
+
+#: ../../../../starlite/middleware/session/file_backend.py:docstring of
+#: starlite.middleware.session.file_backend.FileBackend.set:5
+msgid "Serialized session data"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/file_backend.py:docstring of
+#: starlite.middleware.session.file_backend.FileBackend.delete:7
+#: starlite.middleware.session.file_backend.FileBackend.delete_all:3
+#: starlite.middleware.session.file_backend.FileBackend.delete_expired:3
+#: starlite.middleware.session.file_backend.FileBackend.set:7
+msgid "None"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/file_backend.py:docstring of
+#: starlite.middleware.session.file_backend.FileBackend.delete:1
+msgid "Delete the file associated with ``session_id``."
+msgstr ""
+
+#: ../../../../starlite/middleware/session/file_backend.py:docstring of
+#: starlite.middleware.session.file_backend.FileBackend.delete:3
+msgid "Fails silently if no such file exists"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/file_backend.py:docstring of
+#: starlite.middleware.session.file_backend.FileBackend.delete_all:1
+msgid "Delete all files in the storage path."
+msgstr ""
+
+#: ../../../../starlite/middleware/session/file_backend.py:docstring of
+#: starlite.middleware.session.file_backend.FileBackend.delete_expired:1
+msgid "Delete expired session files."
+msgstr ""
+
+#: ../../../../starlite/middleware/session/file_backend.py:docstring of
+#: starlite.middleware.session.file_backend.FileBackendConfig:1
+msgid ""
+"Bases: :py:class:`~starlite.middleware.session.base.ServerSideSessionConfig`"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/file_backend.py:docstring of
+#: starlite.middleware.session.file_backend.FileBackendConfig:1
+msgid "Backend configuration for ``FileBackend``"
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.middleware.session.file_backend.FileBackendConfig.storage_path:1
+msgid "Disk path under which to store session files."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.middleware.session.file_backend.FileBackendConfig.make_filename:1
+msgid "Callable that turns a session-ID into a filename used for storage."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.middleware.session.file_backend.FileBackendConfig.make_filename:3
+msgid "By default, the session-ID will be used as a filename"
+msgstr ""

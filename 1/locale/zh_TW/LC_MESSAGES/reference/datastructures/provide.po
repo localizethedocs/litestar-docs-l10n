@@ -1,0 +1,151 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/datastructures/provide.rst:2
+msgid "provide"
+msgstr ""
+
+#: ../../../../starlite/datastructures/provide.py:docstring of
+#: starlite.datastructures.provide.DependencyCleanupGroup:1
+#: starlite.datastructures.provide.Provide:1
+msgid "Bases: :py:class:`object`"
+msgstr ""
+
+#: ../../../../starlite/datastructures/provide.py:docstring of
+#: starlite.datastructures.provide.Provide:1
+msgid "Wrapper class for dependency injection"
+msgstr ""
+
+#: ../../../../starlite/datastructures/provide.py:docstring of
+#: starlite.datastructures.provide.Provide.__init__:1
+msgid "Initialize ``Provide``"
+msgstr ""
+
+#: ../../../../starlite/datastructures/provide.py:docstring of
+#: starlite.datastructures.provide.DependencyCleanupGroup.__init__:0
+#: starlite.datastructures.provide.DependencyCleanupGroup.add:0
+#: starlite.datastructures.provide.DependencyCleanupGroup.throw:0
+#: starlite.datastructures.provide.Provide.__init__:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../starlite/datastructures/provide.py:docstring of
+#: starlite.datastructures.provide.Provide.__init__:3
+msgid "Callable to inject, can be a function, method or class."
+msgstr ""
+
+#: ../../../../starlite/datastructures/provide.py:docstring of
+#: starlite.datastructures.provide.Provide.__init__:4
+msgid "Cache the dependency return value. Defaults to False."
+msgstr ""
+
+#: ../../../../starlite/datastructures/provide.py:docstring of
+#: starlite.datastructures.provide.Provide.__init__:5
+msgid "Run sync code in an async thread. Defaults to False."
+msgstr ""
+
+#: ../../../../starlite/datastructures/provide.py:docstring of
+#: starlite.datastructures.provide.Provide.__call__:1
+msgid "Proxy a call to ``self.proxy``."
+msgstr ""
+
+#: ../../../../starlite/datastructures/provide.py:docstring of
+#: starlite.datastructures.provide.DependencyCleanupGroup:1
+msgid "Wrapper for generator based dependencies."
+msgstr ""
+
+#: ../../../../starlite/datastructures/provide.py:docstring of
+#: starlite.datastructures.provide.DependencyCleanupGroup:3
+msgid ""
+"Simplify cleanup by wrapping :func:`next` / :func:`anext` calls and "
+"providing facilities to :meth:`throw <generator.throw>` / :meth:`athrow "
+"<agen.athrow>` into all generators consecutively. An instance of this class "
+"can be used as a contextmanager, which will automatically throw any "
+"exceptions into its generators. All exceptions caught in this manner will be "
+"re-raised after they have been thrown in the generators."
+msgstr ""
+
+#: ../../../../starlite/datastructures/provide.py:docstring of
+#: starlite.datastructures.provide.DependencyCleanupGroup.__init__:1
+msgid "Initialize ``DependencyCleanupGroup``."
+msgstr ""
+
+#: ../../../../starlite/datastructures/provide.py:docstring of
+#: starlite.datastructures.provide.DependencyCleanupGroup.__init__:3
+msgid "An optional list of generators to be called at cleanup"
+msgstr ""
+
+#: ../../../../starlite/datastructures/provide.py:docstring of
+#: starlite.datastructures.provide.DependencyCleanupGroup.add:1
+msgid "Add a new generator to the group."
+msgstr ""
+
+#: ../../../../starlite/datastructures/provide.py:docstring of
+#: starlite.datastructures.provide.DependencyCleanupGroup.add:3
+msgid "The generator to add"
+msgstr ""
+
+#: ../../../../starlite/datastructures/provide.py:docstring of
+#: starlite.datastructures.provide.DependencyCleanupGroup.add:0
+#: starlite.datastructures.provide.DependencyCleanupGroup.cleanup:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/datastructures/provide.py:docstring of
+#: starlite.datastructures.provide.DependencyCleanupGroup.add:5
+#: starlite.datastructures.provide.DependencyCleanupGroup.cleanup:5
+msgid "None"
+msgstr ""
+
+#: ../../../../starlite/datastructures/provide.py:docstring of
+#: starlite.datastructures.provide.DependencyCleanupGroup.cleanup:1
+msgid ""
+"Execute cleanup by calling :func:`next` / :func:`anext` on all generators."
+msgstr ""
+
+#: ../../../../starlite/datastructures/provide.py:docstring of
+#: starlite.datastructures.provide.DependencyCleanupGroup.cleanup:3
+msgid ""
+"If there are multiple generators to be called, they will be executed in a :"
+"class:`anyio.TaskGroup`."
+msgstr ""
+
+#: ../../../../starlite/datastructures/provide.py:docstring of
+#: starlite.datastructures.provide.DependencyCleanupGroup.__aenter__:1
+msgid ""
+"Support the async contextmanager protocol to allow for easier catching and "
+"throwing of exceptions into the generators."
+msgstr ""
+
+#: ../../../../starlite/datastructures/provide.py:docstring of
+#: starlite.datastructures.provide.DependencyCleanupGroup.__aexit__:1
+msgid ""
+"If an exception was raised within the contextmanager block, throw it into "
+"all generators."
+msgstr ""
+
+#: ../../../../starlite/datastructures/provide.py:docstring of
+#: starlite.datastructures.provide.DependencyCleanupGroup.throw:1
+msgid "Throw an exception in all generators sequentially."
+msgstr ""
+
+#: ../../../../starlite/datastructures/provide.py:docstring of
+#: starlite.datastructures.provide.DependencyCleanupGroup.throw:3
+msgid "Exception to throw"
+msgstr ""

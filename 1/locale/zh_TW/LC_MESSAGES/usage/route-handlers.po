@@ -1,0 +1,856 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../usage/route-handlers.rst:2
+msgid "Route handlers"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:4
+msgid ""
+"Route handlers are the core of Starlite. They are constructed by decorating "
+"a function or class method with one of the handler decorators exported from "
+"Starlite."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:7 ../../../usage/route-handlers.rst:99
+msgid "For example:"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:10
+msgid ""
+"from starlite import MediaType, get\n"
+"\n"
+"\n"
+"@get(\"/\", media_type=MediaType.TEXT)\n"
+"def greet() -> str:\n"
+"    return \"hello world\""
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:18
+msgid ""
+"In the above example, the decorator includes all the information required to "
+"define the endpoint operation for the combination of the path ``\"/\"`` and "
+"the http verb ``GET``. In this case it will be a http response with a "
+"\"Content-Type\" header of ``text/plain``."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:22
+msgid ""
+"What the decorator does, is wrap the function or method within a class "
+"instance that inherits from :class:`BaseRouteHandler <.handlers.base."
+"BaseRouteHandler>`. These classes are optimized descriptor classes that "
+"record all the data necessary for the given function or method - this "
+"includes a modelling of the function signature, which allows for injection "
+"of kwargs and dependencies, as well as data pertinent to OpenAPI spec "
+"generation."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:29
+msgid "Declaring path(s)"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:31
+msgid ""
+"All route handler decorator accept an optional path argument. This argument "
+"can be declared as a kwarg using the ``path`` key word:"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:35
+msgid ""
+"from starlite import get\n"
+"\n"
+"\n"
+"@get(path=\"/some-path\")\n"
+"def my_route_handler() -> None: ..."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:42
+msgid "It can also be passed as an argument without the key-word:"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:45
+msgid ""
+"from starlite import get\n"
+"\n"
+"\n"
+"@get(\"/some-path\")\n"
+"def my_route_handler() -> None: ..."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:52
+msgid ""
+"And the value for this argument can be either a string path, as in the above "
+"examples, or a list of string paths:"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:55
+msgid ""
+"from starlite import get\n"
+"\n"
+"\n"
+"@get([\"/some-path\", \"/some-other-path\"])\n"
+"def my_route_handler() -> None: ..."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:62
+msgid ""
+"This is particularly useful when you want to have optional :ref:`path "
+"parameters <usage/parameters:Path Parameters>`:"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:65
+msgid ""
+"from starlite import get\n"
+"\n"
+"\n"
+"@get(\n"
+"    [\"/some-path\", \"/some-path/{some_id:int}\"],\n"
+")\n"
+"def my_route_handler(some_id: int = 1) -> None: ..."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:75
+msgid "Handler function kwargs"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:77
+msgid ""
+"Route handler functions or methods access various data by declaring these as "
+"annotated function kwargs. The annotated kwargs are inspected by Starlite "
+"and then injected into the request handler."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:80
+msgid "The following sources can be accessed using annotated function kwargs:"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:82
+msgid ""
+":ref:`path, query, header and cookie parameters <usage/parameters:the "
+"parameter function>`"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:83
+msgid ":doc:`/usage/request-data`"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:84
+msgid ":doc:`injected dependencies </usage/dependency-injection>`"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:86
+msgid ""
+"Additionally, you can specify the following special kwargs, what's called "
+"\"reserved keywords\" internally:"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:89
+msgid ""
+"``cookies``: injects the request :class:`cookies <.datastructures.cookie."
+"Cookie>` as a parsed dictionary."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:90
+msgid ""
+"``headers``: injects the request headers as an instance of :class:`Headers <."
+"datastructures.headers.Headers>` , which is a case-insensitive mapping."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:92
+msgid ""
+"``query`` : injects the request ``query_params`` as a parsed dictionary."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:93
+msgid ""
+"``request``: injects the :class:`Request <.connection.Request>` instance. "
+"Available only for `http route handlers`_"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:94
+msgid "``scope`` : injects the ASGI scope dictionary."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:95
+msgid ""
+"``socket``: injects the :class:`WebSocket <.connection.WebSocket>` instance. "
+"Available only for `websocket route handlers`_"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:96
+msgid ""
+"``state`` : injects a copy of the application :class:`State <.datastructures."
+"state.State>`."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:97
+msgid ""
+"``body`` : the raw request body. Available only for `http route handlers`_"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:0
+msgid "Python 3.8+"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:102
+msgid ""
+"from typing import Any, Dict\n"
+"from starlite import State, Request, get\n"
+"from starlite.datastructures import Headers\n"
+"\n"
+"\n"
+"@get(path=\"/\")\n"
+"def my_request_handler(\n"
+"    state: State,\n"
+"    request: Request,\n"
+"    headers: Headers,\n"
+"    query: Dict[str, Any],\n"
+"    cookies: Dict[str, Any],\n"
+") -> None: ..."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:0
+msgid "Python 3.10+"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:102
+msgid ""
+"from typing import Any\n"
+"from starlite import State, Request, get\n"
+"from starlite.datastructures import Headers\n"
+"\n"
+"\n"
+"@get(path=\"/\")\n"
+"def my_request_handler(\n"
+"    state: State,\n"
+"    request: Request,\n"
+"    headers: Headers,\n"
+"    query: dict[str, Any],\n"
+"    cookies: dict[str, Any],\n"
+") -> None: ..."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:119
+msgid ""
+"You can define a custom typing for your application state and then use it as "
+"a type instead of just using the State class from Starlite"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:123
+msgid "Handler function type annotations"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:125
+msgid ""
+"Starlite enforces strict type annotations. Functions decorated by a route "
+"handler **must** have all their kwargs and return value type annotated. If a "
+"type annotation is missing, an :class:`ImproperlyConfiguredException "
+"<starlite.exceptions.ImproperlyConfiguredException>` will be raised during "
+"the application boot-up process."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:130
+msgid "There are several reasons for why this limitation is enforced:"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:133
+msgid "to ensure best practices"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:134
+msgid "to ensure consistent OpenAPI schema generation"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:135
+msgid ""
+"to allow Starlite to compute during the application bootstrap all the kwargs "
+"required by a function"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:139
+msgid "HTTP route handlers"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:141
+msgid ""
+"The most commonly used route handlers are those that handle http requests "
+"and responses. These route handlers all inherit from the class :class:"
+"`HTTPRouteHandler <starlite.handlers.http.HTTPRouteHandler>`, which is "
+"aliased as the decorator called :func:`route <starlite.handlers.route>`:"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:146
+msgid ""
+"from starlite import HttpMethod, route\n"
+"\n"
+"\n"
+"@route(path=\"/some-path\", http_method=[HttpMethod.GET, HttpMethod.POST])\n"
+"def my_endpoint() -> None: ..."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:153
+msgid ""
+"As mentioned above, ``route`` does is merely an alias for "
+"``HTTPRouteHandler``\\ , thus the below code is equivalent to the one above:"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:157
+msgid ""
+"from starlite import HttpMethod, HTTPRouteHandler\n"
+"\n"
+"\n"
+"@HTTPRouteHandler(path=\"/some-path\", http_method=[HttpMethod.GET, "
+"HttpMethod.POST])\n"
+"def my_endpoint() -> None: ..."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:165
+msgid "HTTP route handlers kwargs"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:167
+msgid ""
+"The ``route`` decorator **requires** an ``http_method`` kwarg, which is a "
+"member of the :class:`HttpMethod <.enums.HttpMethod>` enum or a list of "
+"members, e.g. ``HttpMethod.GET`` or ``[HttpMethod.PATCH, HttpMethod.PUT]``."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:173
+msgid "Semantic handler decorators"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:175
+msgid ""
+"Starlite also includes \"semantic\" decorators, that is, decorators the pre-"
+"set the ``http_method`` kwarg to a specific HTTP verb, which correlates with "
+"their name:"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:179
+msgid ":func:`delete <starlite.handlers.delete>`"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:180
+msgid ":func:`get <starlite.handlers.get>`"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:181
+msgid ":func:`head <starlite.handlers.head>`"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:182
+msgid ":func:`patch <starlite.handlers.patch>`"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:183
+msgid ":func:`post <starlite.handlers.post>`"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:184
+msgid ":func:`put <starlite.handlers.put>`"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:186
+msgid ""
+"These are used exactly like ``route`` with the sole exception that you "
+"cannot configure the ``http_method`` kwarg:"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:189
+msgid ""
+"from starlite import Partial, delete, get, patch, post, put, head\n"
+"from pydantic import BaseModel\n"
+"\n"
+"\n"
+"class Resource(BaseModel): ...\n"
+"\n"
+"\n"
+"@get(path=\"/resources\")\n"
+"def list_resources() -> list[Resource]: ...\n"
+"\n"
+"\n"
+"@post(path=\"/resources\")\n"
+"def create_resource(data: Resource) -> Resource: ...\n"
+"\n"
+"\n"
+"@get(path=\"/resources/{pk:int}\")\n"
+"def retrieve_resource(pk: int) -> Resource: ...\n"
+"\n"
+"\n"
+"@head(path=\"/resources/{pk:int}\")\n"
+"def retrieve_resource_head(pk: int) -> None: ...\n"
+"\n"
+"\n"
+"@put(path=\"/resources/{pk:int}\")\n"
+"def update_resource(data: Resource, pk: int) -> Resource: ...\n"
+"\n"
+"\n"
+"@patch(path=\"/resources/{pk:int}\")\n"
+"def partially_update_resource(data: Partial[Resource], pk: int) -> "
+"Resource: ...\n"
+"\n"
+"\n"
+"@delete(path=\"/resources/{pk:int}\")\n"
+"def delete_resource(pk: int) -> None: ..."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:224
+msgid ""
+"Although these decorators are merely subclasses of :class:`HTTPRouteHandler "
+"<starlite.handlers.http.HTTPRouteHandler>` that pre-set the "
+"``http_method``\\ , using *get*\\ , *patch*\\ , *put*\\ , *delete* or *post* "
+"instead of *route* makes the code clearer and simpler."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:228
+msgid ""
+"Furthermore, in the OpenAPI specification each unique combination of http "
+"verb (e.g. \"GET\", \"POST\" etc.) and path is regarded as a distinct "
+"`operation <https://spec.openapis.org/oas/latest.html#operation-"
+"object>`_\\ , and each operation should be distinguished by a unique "
+"``operationId`` and optimally also have a ``summary`` and ``description`` "
+"sections."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:232
+msgid ""
+"As such, using the ``route`` decorator is discouraged. Instead, the "
+"preferred pattern is to share code using secondary class methods or by "
+"abstracting code to reusable functions."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:236
+msgid "Using sync handler functions"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:238
+msgid ""
+"You can use both sync and async functions as the base for route handler "
+"functions, but which should you use? and when?"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:240
+msgid ""
+"If your route handler needs to perform an I/O operation (read or write data "
+"from or to a service / db etc.), the most performant solution within the "
+"scope of an ASGI application, including Starlite, is going to be by using an "
+"async solution for this purpose."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:244
+msgid ""
+"The reason for this is that async code, if written correctly, is **non-"
+"blocking**. That is, async code can be paused and resumed, and it therefore "
+"does not interrupt the main event loop from executing (if written "
+"correctly). On the other hand, sync I/O handling is often **blocking**\\ , "
+"and if you use such code in your function it can create performance issues."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:249
+msgid ""
+"In this case you should use the ``sync_to_thread`` option. What this does, "
+"is tell Starlite to run the sync function in a separate async thread, where "
+"it can block but will not interrupt the main event loop's execution."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:252
+msgid ""
+"The problem with this though is that this will slow down the execution of "
+"your sync code quite dramatically - by between %40-60%. So this is really "
+"quite far from performant. Thus, you should use this option **only** when "
+"your sync code performs blocking I/O operations. If your sync code simply "
+"performs simple tasks, non-expensive calculations, etc. you should not use "
+"the ``sync_to_thread`` option."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:260
+msgid "Websocket route handlers"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:262
+msgid ""
+"Starlite supports Websockets via the :func:`websocket <starlite.handlers."
+"websocket>` decorator:"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:265
+msgid ""
+"from starlite import WebSocket, websocket\n"
+"\n"
+"\n"
+"@websocket(path=\"/socket\")\n"
+"async def my_websocket_handler(socket: WebSocket) -> None:\n"
+"    await socket.accept()\n"
+"    await socket.send_json({...})\n"
+"    await socket.close()"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:275
+msgid ""
+"The\\ ``websocket`` decorator is an alias of the class :class:"
+"`WebsocketRouteHandler <starlite.handlers.websocket.WebsocketRouteHandler>`. "
+"Thus, the below code is equivalent to the one above:"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:280
+msgid ""
+"from starlite import WebSocket, WebsocketRouteHandler\n"
+"\n"
+"\n"
+"@WebsocketRouteHandler(path=\"/socket\")\n"
+"async def my_websocket_handler(socket: WebSocket) -> None:\n"
+"    await socket.accept()\n"
+"    await socket.send_json({...})\n"
+"    await socket.close()"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:290
+msgid ""
+"In difference to HTTP routes handlers, websocket handlers have the following "
+"requirements:"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:293
+msgid "they **must** declare a ``socket`` kwarg."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:294
+msgid "they **must** have a return annotation of ``None``."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:295
+msgid "they **must** be async functions."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:297
+msgid ""
+"These requirements are enforced using inspection, and if any of them is "
+"unfulfilled an informative exception will be raised."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:301
+msgid ""
+"OpenAPI currently does not support websockets. As such no schema will be "
+"generated for these route handlers."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:303
+msgid ""
+"See the :class:`API Reference <starlite.handlers.WebsocketRouteHandler>` for "
+"full details on the ``websocket`` decorator and the kwargs it accepts."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:307
+msgid "ASGI route handlers"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:309
+msgid ""
+"If you need to write your own ASGI application, you can do so using the :"
+"func:`asgi <starlite.handlers.asgi>` decorator:"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:312
+msgid ""
+"from starlite.types import Scope, Receive, Send\n"
+"from starlite.status_codes import HTTP_400_BAD_REQUEST\n"
+"from starlite import Response, asgi\n"
+"\n"
+"\n"
+"@asgi(path=\"/my-asgi-app\")\n"
+"async def my_asgi_app(scope: Scope, receive: Receive, send: Send) -> None:\n"
+"    if scope[\"type\"] == \"http\":\n"
+"        if scope[\"method\"] == \"GET\":\n"
+"            response = Response({\"hello\": \"world\"})\n"
+"            await response(scope=scope, receive=receive, send=send)\n"
+"        return\n"
+"    response = Response(\n"
+"        {\"detail\": \"unsupported request\"}, "
+"status_code=HTTP_400_BAD_REQUEST\n"
+"    )\n"
+"    await response(scope=scope, receive=receive, send=send)"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:330
+msgid ""
+"Like other route handlers, the ``asgi`` decorator is an alias of the class :"
+"class:`ASGIRouteHandler <.handlers.asgi.ASGIRouteHandler>`. Thus, the code "
+"below is equivalent to the one above:"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:335
+msgid ""
+"from starlite.types import Scope, Receive, Send\n"
+"from starlite.status_codes import HTTP_400_BAD_REQUEST\n"
+"from starlite import ASGIRouteHandler, Response\n"
+"\n"
+"\n"
+"@ASGIRouteHandler(path=\"/my-asgi-app\")\n"
+"async def my_asgi_app(scope: Scope, receive: Receive, send: Send) -> None:\n"
+"    if scope[\"type\"] == \"http\":\n"
+"        if scope[\"method\"] == \"GET\":\n"
+"            response = Response({\"hello\": \"world\"})\n"
+"            await response(scope=scope, receive=receive, send=send)\n"
+"        return\n"
+"    response = Response(\n"
+"        {\"detail\": \"unsupported request\"}, "
+"status_code=HTTP_400_BAD_REQUEST\n"
+"    )\n"
+"    await response(scope=scope, receive=receive, send=send)"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:354
+msgid "Limitations of ASGI route handlers"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:356
+msgid ""
+"In difference to the other route handlers, the ``asgi`` route handler "
+"accepts only 3 kwargs that **must** be defined:"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:359
+msgid ""
+"``scope`` , a mapping of values describing the ASGI connection. It always "
+"includes a ``type`` key, with the values being either ``http`` or "
+"``websocket`` , and a ``path`` key. If the type is ``http`` , the scope "
+"dictionary will also include a ``method`` key with the value being one of "
+"``DELETE, GET, POST, PATCH, PUT, HEAD``."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:362
+msgid ""
+"``receive`` , an injected function by which the ASGI application receives "
+"messages."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:363
+msgid ""
+"``send`` , an injected function by which the ASGI application sends messages."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:365
+msgid ""
+"You can read more about these in the `ASGI specification <https://asgi."
+"readthedocs.io/en/latest/specs/main.html>`_."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:367
+msgid ""
+"Additionally, ASGI route handler functions **must** be async functions. This "
+"is enforced using inspection, and if the function is not an async function, "
+"an informative exception will be raised."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:370
+msgid ""
+"See the :class:`API Reference <starlite.handlers.ASGIRouteHandler>` for full "
+"details on the ``asgi`` decorator and the kwargs it accepts."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:376
+msgid "Route handler indexing"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:378
+msgid ""
+"You can provide in all route handler decorators a ``name`` kwarg. The value "
+"for this kwarg **must be unique**\\ , otherwise :class:"
+"`ImproperlyConfiguredException <starlite.exceptions."
+"ImproperlyConfiguredException>` exception will be raised. Default value for "
+"``name`` is value returned by ``handler.__str__`` which should be the full "
+"dotted path to the handler (e.g. ``app.controllers.projects.list`` for "
+"``list`` function residing in ``app/controllers/projects.py`` file). "
+"``name`` can be used to dynamically retrieve (i.e. during runtime) a mapping "
+"containing the route handler instance and paths, also it can be used to "
+"build a URL path for that handler:"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:386
+msgid ""
+"from starlite import Starlite, Request, Redirect, NotFoundException, get\n"
+"\n"
+"\n"
+"@get(\"/abc\", name=\"one\")\n"
+"def handler_one() -> None:\n"
+"    pass\n"
+"\n"
+"\n"
+"@get(\"/xyz\", name=\"two\")\n"
+"def handler_two() -> None:\n"
+"    pass\n"
+"\n"
+"\n"
+"@get(\"/def/{param:int}\", name=\"three\")\n"
+"def handler_three(param: int) -> None:\n"
+"    pass\n"
+"\n"
+"\n"
+"@get(\"/{handler_name:str}\", name=\"four\")\n"
+"def handler_four(request: Request, name: str) -> Redirect:\n"
+"    handler_index = request.app.get_handler_index_by_name(name)\n"
+"    if not handler_index:\n"
+"        raise NotFoundException(f\"no handler matching the name {name} was "
+"found\")\n"
+"\n"
+"    # handler_index == { \"paths\": [\"/\"], \"handler\": ..., "
+"\"qualname\": ... }\n"
+"    # do something with the handler index below, e.g. send a redirect "
+"response to the handler, or access\n"
+"    # handler.opt and some values stored there etc.\n"
+"\n"
+"    return Redirect(path=handler_index[0])\n"
+"\n"
+"\n"
+"@get(\"/redirect/{param_value:int}\", name=\"five\")\n"
+"def handler_five(request: Request, param_value: int) -> Redirect:\n"
+"    path = request.app.route_reverse(\"three\", param=param_value)\n"
+"    return Redirect(path=path)\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[handler_one, handler_two, handler_three])"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:426
+msgid ""
+":meth:`route_reverse <.app.Starlite.route_reverse>` will raise :class:"
+"`NoMatchRouteFoundException <.exceptions.NoRouteMatchFoundException>` if "
+"route with given name was not found or if any of path parameters is missing "
+"or if any of passed path parameters types do not match types in the "
+"respective route declaration. However, :class:`str` is accepted in place of :"
+"class:`datetime.datetime`, :class:`datetime.date`, :class:`datetime.time`, :"
+"class:`datetime.timedelta`, :class:`float`, and :class:`pathlib.Path` "
+"parameters, so you can apply custom formatting and pass the result to "
+"``route_reverse``."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:433
+msgid ""
+"If handler has multiple paths attached to it ``route_reverse`` will return "
+"the path that consumes the most number of keywords arguments passed to the "
+"function."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:437
+msgid ""
+"from starlite import get, Request\n"
+"\n"
+"\n"
+"@get(\n"
+"    [\"/some-path\", \"/some-path/{id:int}\", \"/some-path/{id:int}/{val:"
+"str}\"],\n"
+"    name=\"handler_name\",\n"
+")\n"
+"def handler(id: int = 1, val: str = \"default\") -> None: ...\n"
+"\n"
+"\n"
+"@get(\"/path-info\")\n"
+"def path_info(request: Request) -> str:\n"
+"    path_optional = request.app.route_reverse(\"handler_name\")\n"
+"    # /some-path`\n"
+"\n"
+"    path_partial = request.app.route_reverse(\"handler_name\", id=100)\n"
+"    # /some-path/100\n"
+"\n"
+"    path_full = request.app.route_reverse(\"handler_name\", id=100, "
+"val=\"value\")\n"
+"    # /some-path/100/value`\n"
+"\n"
+"    return f\"{path_optional} {path_partial} {path_full}\""
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:461
+msgid ""
+"If there are multiple paths attached to a handler that have the same path "
+"parameters (for example indexed handler has been registered on multiple "
+"routers) the result of ``route_reverse`` is not defined. The function will "
+"return a formatted path, but it might be picked randomly so reversing urls "
+"in such cases is highly discouraged."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:466
+msgid ""
+"If you have access to :class:`request <starlite.connection.request.Request>` "
+"instance you can make reverse lookups using :meth:`url_for <.connection.base."
+"ASGIConnection.url_for>` function which is similar to ``route_reverse`` but "
+"returns absolute URL."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:474
+msgid "Handler ``opts``"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:476
+msgid ""
+"All route handler decorators accept a key called ``opt`` which accepts a "
+"dictionary of arbitrary values, e.g."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:479
+msgid ""
+"from starlite import get\n"
+"\n"
+"\n"
+"@get(\"/\", opt={\"my_key\": \"some-value\"})\n"
+"def handler() -> None: ..."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:486
+msgid ""
+"This dictionary can be accessed by a :doc:`route guard </usage/security/"
+"guards>`, or by accessing the ``route_handler`` property on a :class:"
+"`request <starlite.connection.request.Request>`, or using the :class:`ASGI "
+"scope <starlite.types.Scope>` object directly."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:491
+msgid "Passing keyword arguments to handlers"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:493
+msgid ""
+"Building on ``opts`` , you can pass any arbitrary kwarg to the route handler "
+"decorator, and it will be automatically set as a key in the opt dictionary:"
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:497
+msgid ""
+"from starlite import get\n"
+"\n"
+"\n"
+"@get(\"/\", my_key=\"some-value\")\n"
+"def handler() -> None: ...\n"
+"\n"
+"\n"
+"assert handler.opt[\"my_key\"] == \"some-value\""
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:507
+msgid ""
+"You can specify the ``opt`` dictionary at all levels of your application. On "
+"specific route handlers, on a controller, a router, and even on the app "
+"instance itself."
+msgstr ""
+
+#: ../../../usage/route-handlers.rst:510
+msgid ""
+"The resulting dictionary is constructed by merging opt dictionaries of all "
+"levels. If multiple layers define the same key, the value from the closest "
+"layer to the response handler will take precedence."
+msgstr ""

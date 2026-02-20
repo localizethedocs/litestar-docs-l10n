@@ -1,0 +1,206 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/security/session_auth.rst:2
+msgid "session_auth"
+msgstr ""
+
+#: ../../../../starlite/security/session_auth/auth.py:docstring of
+#: starlite.security.session_auth.auth.SessionAuth:1
+msgid ""
+"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~starlite.security.base."
+"UserType`], :py:class:`~starlite.security.base.AbstractSecurityConfig`\\ [:"
+"py:obj:`~starlite.security.base.UserType`, :py:class:`~typing.Dict`\\ [:py:"
+"class:`str`, :py:obj:`~typing.Any`]]"
+msgstr ""
+
+#: ../../../../starlite/security/session_auth/auth.py:docstring of
+#: starlite.security.session_auth.auth.SessionAuth:1
+msgid "Session Based Security Backend."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.security.session_auth.SessionAuth.session_backend_config:1
+msgid "A session backend config."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.security.session_auth.SessionAuth.authentication_middleware_class:1
+msgid "The authentication middleware class to use."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.security.session_auth.SessionAuth.authentication_middleware_class:3
+msgid ""
+"Must inherit from :class:`SessionAuthMiddleware <starlite.security."
+"session_auth.middleware.SessionAuthMiddleware>`"
+msgstr ""
+
+#: ../../../../starlite/security/session_auth/auth.py:docstring of
+#: starlite.security.session_auth.SessionAuth.middleware:1
+msgid ""
+"Use this property to insert the config into a middleware list on one of the "
+"application layers."
+msgstr ""
+
+#: ../../../../starlite/security/session_auth/auth.py:docstring of
+#: starlite.security.session_auth.SessionAuth.middleware:3
+msgid "Examples"
+msgstr ""
+
+#: ../../../../starlite/security/session_auth/auth.py:docstring of
+#: starlite.security.session_auth.SessionAuth.middleware:0
+#: starlite.security.session_auth.SessionAuth.openapi_components:0
+#: starlite.security.session_auth.SessionAuth.security_requirement:0
+#: starlite.security.session_auth.SessionAuth.session_backend:0
+#: ../../../../starlite/security/session_auth/middleware.py:docstring
+#: starlite.security.session_auth.middleware.SessionAuthMiddleware.authenticate_request:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/security/session_auth/auth.py:docstring of
+#: starlite.security.session_auth.SessionAuth.middleware:31
+msgid ""
+"An instance of DefineMiddleware including ``self`` as the config kwarg value."
+msgstr ""
+
+#: ../../../../starlite/security/session_auth/auth.py:docstring of
+#: starlite.security.session_auth.SessionAuth.session_backend:1
+msgid "Create a session backend."
+msgstr ""
+
+#: ../../../../starlite/security/session_auth/auth.py:docstring of
+#: starlite.security.session_auth.SessionAuth.session_backend:3
+msgid ""
+"A subclass of :class:`BaseSessionBackend <starlite.middleware.session.base."
+"BaseSessionBackend>`"
+msgstr ""
+
+#: ../../../../starlite/security/session_auth/auth.py:docstring of
+#: starlite.security.session_auth.SessionAuth.openapi_components:1
+msgid ""
+"Create OpenAPI documentation for the Session Authentication schema used."
+msgstr ""
+
+#: ../../../../starlite/security/session_auth/auth.py:docstring of
+#: starlite.security.session_auth.SessionAuth.openapi_components:3
+msgid ""
+"An :class:`Components <pydantic_openapi_schema.v3_1_0.components."
+"Components>` instance."
+msgstr ""
+
+#: ../../../../starlite/security/session_auth/auth.py:docstring of
+#: starlite.security.session_auth.SessionAuth.security_requirement:1
+msgid "Return OpenAPI 3.1."
+msgstr ""
+
+#: ../../../../starlite/security/session_auth/auth.py:docstring of
+#: starlite.security.session_auth.SessionAuth.security_requirement:3
+msgid ""
+":class:`SecurityRequirement <pydantic_openapi_schema.v3_1_0."
+"security_requirement.SecurityRequirement>` for the auth backend."
+msgstr ""
+
+#: ../../../../starlite/security/session_auth/auth.py:docstring of
+#: starlite.security.session_auth.SessionAuth.security_requirement:6
+msgid ""
+"An OpenAPI 3.1 :class:`SecurityRequirement <pydantic_openapi_schema.v3_1_0."
+"security_requirement.SecurityRequirement>` dictionary."
+msgstr ""
+
+#: ../../../../starlite/security/session_auth/middleware.py:docstring of
+#: starlite.security.session_auth.middleware.SessionAuthMiddleware:1
+msgid ""
+"Bases: :py:class:`~starlite.middleware.authentication."
+"AbstractAuthenticationMiddleware`"
+msgstr ""
+
+#: ../../../../starlite/security/session_auth/middleware.py:docstring of
+#: starlite.security.session_auth.middleware.SessionAuthMiddleware:1
+msgid "Session Authentication Middleware."
+msgstr ""
+
+#: ../../../../starlite/security/session_auth/middleware.py:docstring of
+#: starlite.security.session_auth.middleware.SessionAuthMiddleware.__init__:1
+msgid "Session based authentication middleware."
+msgstr ""
+
+#: ../../../../starlite/security/session_auth/middleware.py:docstring of
+#: starlite.security.session_auth.middleware.SessionAuthMiddleware.__init__:0
+#: starlite.security.session_auth.middleware.SessionAuthMiddleware.authenticate_request:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../starlite/security/session_auth/middleware.py:docstring of
+#: starlite.security.session_auth.middleware.SessionAuthMiddleware.__init__:3
+msgid ""
+"An ASGIApp, this value is the next ASGI handler to call in the middleware "
+"stack."
+msgstr ""
+
+#: ../../../../starlite/security/session_auth/middleware.py:docstring of
+#: starlite.security.session_auth.middleware.SessionAuthMiddleware.__init__:4
+msgid "A pattern or list of patterns to skip in the authentication middleware."
+msgstr ""
+
+#: ../../../../starlite/security/session_auth/middleware.py:docstring of
+#: starlite.security.session_auth.middleware.SessionAuthMiddleware.__init__:5
+msgid ""
+"An identifier to use on routes to disable authentication and authorization "
+"checks for a particular route."
+msgstr ""
+
+#: ../../../../starlite/security/session_auth/middleware.py:docstring of
+#: starlite.security.session_auth.middleware.SessionAuthMiddleware.__init__:6
+msgid "ASGI scopes processed by the authentication middleware."
+msgstr ""
+
+#: ../../../../starlite/security/session_auth/middleware.py:docstring of
+#: starlite.security.session_auth.middleware.SessionAuthMiddleware.__init__:7
+msgid ""
+"Callable that receives the ``session`` value from the authentication "
+"middleware and returns a ``user`` value."
+msgstr ""
+
+#: ../../../../starlite/security/session_auth/middleware.py:docstring of
+#: starlite.security.session_auth.middleware.SessionAuthMiddleware.authenticate_request:1
+msgid "Authenticate an incoming connection."
+msgstr ""
+
+#: ../../../../starlite/security/session_auth/middleware.py:docstring of
+#: starlite.security.session_auth.middleware.SessionAuthMiddleware.authenticate_request:3
+msgid "A Starlette ``HTTPConnection`` instance."
+msgstr ""
+
+#: ../../../../starlite/security/session_auth/middleware.py:docstring of
+#: starlite.security.session_auth.middleware.SessionAuthMiddleware.authenticate_request:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../starlite/security/session_auth/middleware.py:docstring of
+#: starlite.security.session_auth.middleware.SessionAuthMiddleware.authenticate_request:5
+msgid "if session data is empty or user     is not found."
+msgstr ""
+
+#: ../../../../starlite/security/session_auth/middleware.py:docstring of
+#: starlite.security.session_auth.middleware.SessionAuthMiddleware.authenticate_request:7
+msgid ""
+":class:`AuthenticationResult <starlite.middleware.authentication."
+"AuthenticationResult>`"
+msgstr ""

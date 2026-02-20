@@ -1,0 +1,631 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/plugins/sql_alchemy.rst:2
+msgid "sql_alchemy"
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin:1
+msgid ""
+"Bases: :py:class:`~starlite.plugins.base.PluginProtocol`\\ [:py:class:"
+"`~sqlalchemy.orm.decl_api.DeclarativeMeta`]"
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin:1
+msgid "A Plugin for SQLAlchemy."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.__init__:1
+msgid "Initialize ``SQLAlchemyPlugin``."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.__init__:3
+msgid ""
+"Support (de)serialization and OpenAPI generation for SQLAlchemy ORM types."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/config.py:docstring of
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyConfig.check_connection_string_or_engine_instance:0
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyConfig.config_sql_alchemy_logging:0
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyConfig.create_db_session_dependency:0
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyConfig.on_shutdown:0
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyConfig.update_app_state:0
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyConfig.validate_before_send_handler:0
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.__init__:0
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.from_dict:0
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.from_pydantic_model_instance:0
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.get_pydantic_type:0
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.handle_enum:0
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.handle_list_type:0
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.handle_numeric_type:0
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.handle_string_type:0
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.handle_tuple_type:0
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.is_plugin_supported_type:0
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.on_app_init:0
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.parse_model:0
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.to_dict:0
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.to_pydantic_model_class:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.__init__:6
+msgid ""
+"Optional :class:`SQLAlchemyConfig <starlite.plugins.sql_alchemy."
+"SQLAlchemyConfig>` instance. If passed, the plugin will establish a DB "
+"connection and hook handlers and dependencies."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.on_app_init:1
+msgid ""
+"If config has been passed to the plugin, it will initialize SQLAlchemy and "
+"add the dependencies as expected."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.on_app_init:3
+msgid "Executed on the application's init process."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.on_app_init:5
+msgid "The :class:`Starlite <starlite.app.Starlite>` application instance."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/config.py:docstring of
+#: starlite.plugins.sql_alchemy.SQLAlchemyConfig.engine:0
+#: starlite.plugins.sql_alchemy.SQLAlchemyConfig.engine_config_dict:0
+#: starlite.plugins.sql_alchemy.SQLAlchemyConfig.session_maker:0
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyConfig.check_connection_string_or_engine_instance:0
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyConfig.config_sql_alchemy_logging:0
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyConfig.create_db_session_dependency:0
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyConfig.on_shutdown:0
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyConfig.update_app_state:0
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyConfig.validate_before_send_handler:0
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring
+#: starlite.plugins.sql_alchemy.SQLAlchemyPlugin.providers_map:6
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.from_dict:0
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.from_pydantic_model_instance:0
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.get_pydantic_type:0
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.handle_enum:0
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.handle_list_type:0
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.handle_numeric_type:0
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.handle_string_type:0
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.handle_tuple_type:0
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.is_plugin_supported_type:0
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.on_app_init:0
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.parse_model:0
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.to_dict:0
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.to_pydantic_model_class:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/config.py:docstring of
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyConfig.on_shutdown:5
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyConfig.update_app_state:5
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.on_app_init:7
+msgid "None"
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.is_plugin_supported_type:1
+msgid ""
+":class:`typing.TypeGuard` testing whether values are subclasses of "
+"SQLAlchemy's ``DeclarativeMeta`` class."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.is_plugin_supported_type:3
+msgid "An arbitrary type to test."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.is_plugin_supported_type:5
+msgid "A boolean typeguard."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.handle_string_type:1
+msgid "Handle the SQLAlchemy String types, including Blob and Binary types."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.get_pydantic_type:3
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.handle_enum:3
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.handle_list_type:3
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.handle_numeric_type:3
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.handle_string_type:3
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.handle_tuple_type:3
+msgid "The type of the SQLColumn."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.handle_string_type:5
+msgid "An appropriate string type"
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.handle_numeric_type:1
+msgid "Handle the SQLAlchemy non-int Numeric types."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.handle_numeric_type:5
+msgid "An appropriate numerical type"
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.handle_list_type:1
+msgid "Handle the SQLAlchemy Array type."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.handle_list_type:5
+msgid "An appropriate list type"
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.handle_tuple_type:1
+msgid "Handle the SQLAlchemy Tuple type."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.handle_tuple_type:5
+msgid "An appropriate tuple type"
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.handle_enum:1
+msgid "Handle the SQLAlchemy Enum types."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.handle_enum:5
+msgid "An appropriate enum type"
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.SQLAlchemyPlugin.providers_map:1
+msgid "Map of SQLAlchemy column types to provider functions."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.SQLAlchemyPlugin.providers_map:3
+msgid "This method is separated to allow for easy overriding in subclasses."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.SQLAlchemyPlugin.providers_map:7
+msgid "A dictionary mapping SQLAlchemy types to callables."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.get_pydantic_type:1
+msgid "Given a 'Column.type' value, return a type supported by pydantic."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.get_pydantic_type:5
+msgid "A pydantic supported type."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.parse_model:1
+msgid ""
+"Validate that the passed in model_class is an SQLAlchemy declarative model, "
+"and return a ``Mapper`` of it."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.parse_model:3
+msgid "An SQLAlchemy declarative class."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.parse_model:5
+msgid "A SQLAlchemy ``Mapper``."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.to_pydantic_model_class:1
+msgid ""
+"Generate a pydantic model for a given SQLAlchemy declarative table and any "
+"nested relations."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.to_pydantic_model_class:3
+msgid "An SQLAlchemy declarative class instance."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.to_pydantic_model_class:4
+msgid "Kwargs to pass to the model."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.from_pydantic_model_instance:4
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.to_pydantic_model_class:6
+msgid "A pydantic model instance."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.from_pydantic_model_instance:1
+msgid ""
+"Create an instance of a given model_class using the values stored in the "
+"given pydantic_model_instance."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.from_dict:3
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.from_pydantic_model_instance:3
+msgid "A declarative table class."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.from_pydantic_model_instance:6
+msgid "A declarative meta table instance."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.to_dict:1
+msgid ""
+"Given a model instance, convert it to a dict of values that can be "
+"serialized."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.to_dict:3
+msgid "An SQLAlchemy declarative table instance."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.to_dict:5
+msgid "A string keyed dict of values."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.from_dict:1
+msgid ""
+"Given a dictionary of kwargs, return an instance of the given model_class."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.from_dict:4
+msgid "Kwargs to instantiate the table with."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
+#: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.from_dict:6
+msgid "An instantiated table instance."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/config.py:docstring of
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyConfig:1
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyEngineConfig:1
+#: starlite.plugins.sql_alchemy.config.SQLAlchemySessionConfig:1
+msgid "Bases: :py:class:`~pydantic.main.BaseModel`"
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/config.py:docstring of
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyConfig:1
+msgid ""
+"Configuration for SQLAlchemy's :class:`sessionmaker <sqlalchemy.orm."
+"sessionmaker>`."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/config.py:docstring of
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyConfig:3
+msgid "For details see: https://docs.sqlalchemy.org/en/14/orm/session_api.html"
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.plugins.sql_alchemy.SQLAlchemyConfig.connection_string:1
+msgid ""
+"Database connection string in one of the formats supported by SQLAlchemy."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/config.py:docstring of
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyConfig.config_sql_alchemy_logging:3
+#: ../../../../docstring
+#: starlite.plugins.sql_alchemy.SQLAlchemyConfig.connection_string:3
+#: starlite.plugins.sql_alchemy.SQLAlchemyConfig.set_json_serializers:3
+#: starlite.plugins.sql_alchemy.SQLAlchemyConfig.use_async_engine:3
+msgid "Notes"
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.plugins.sql_alchemy.SQLAlchemyConfig.connection_string:5
+msgid ""
+"For async connections, the connection string must include the correct async "
+"prefix. e.g. ``'postgresql+asyncpg://...'`` instead of ``'postgresql://'``, "
+"and for sync connections its the opposite."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.plugins.sql_alchemy.SQLAlchemyConfig.use_async_engine:1
+msgid "Dictate whether the engine created is an async connection or not."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.plugins.sql_alchemy.SQLAlchemyConfig.use_async_engine:5
+msgid ""
+"This option must correlate to the type of ``connection_string``. That is, an "
+"async connection string required an async connection and vice versa."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.plugins.sql_alchemy.SQLAlchemyConfig.create_async_engine_callable:1
+msgid ""
+"Callable that creates an :class:`AsyncEngine <sqlalchemy.ext.asyncio."
+"AsyncEngine>` instance or instance of its subclass."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.plugins.sql_alchemy.SQLAlchemyConfig.create_engine_callable:1
+msgid ""
+"Callable that creates an :class:`Engine <sqlalchemy.engine.Engine>` or "
+"``FutureEngine`` instance or instance of its subclass."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.plugins.sql_alchemy.SQLAlchemyConfig.dependency_key:1
+msgid "Key to use for the dependency injection of database sessions."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.plugins.sql_alchemy.SQLAlchemyConfig.engine_app_state_key:1
+msgid ""
+"Key under which to store the SQLAlchemy engine in the application :class:"
+"`State <starlite.datastructures.State>` instance."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.plugins.sql_alchemy.SQLAlchemyConfig.engine_config:1
+msgid "Configuration for the SQLAlchemy engine."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.plugins.sql_alchemy.SQLAlchemyConfig.engine_config:3
+#: starlite.plugins.sql_alchemy.SQLAlchemyConfig.session_config:3
+msgid ""
+"The configuration options are documented in the SQLAlchemy documentation."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.plugins.sql_alchemy.SQLAlchemyConfig.set_json_serializers:1
+msgid ""
+"A boolean flag dictating whether to set ``msgspec`` based serializer/"
+"deserializer functions."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.plugins.sql_alchemy.SQLAlchemyConfig.set_json_serializers:5
+msgid ""
+"Some databases or some versions of some databases do not have a JSON column "
+"type. E.g. some older versions of SQLite for example. In this case this flag "
+"should be false or an error will be raised by SQLAlchemy."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.plugins.sql_alchemy.SQLAlchemyConfig.session_class:1
+msgid "The session class to use."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.plugins.sql_alchemy.SQLAlchemyConfig.session_class:3
+msgid ""
+"If not set, the session class will default to :class:`sqlalchemy.orm."
+"Session` for sync connections and :class:`sqlalchemy.ext.asyncio."
+"AsyncSession` for async ones."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.plugins.sql_alchemy.SQLAlchemyConfig.session_config:1
+msgid "Configuration options for the ``sessionmaker``."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.plugins.sql_alchemy.SQLAlchemyConfig.session_maker_class:1
+msgid "Sessionmaker class to use."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.plugins.sql_alchemy.SQLAlchemyConfig.session_maker_app_state_key:1
+msgid ""
+"Key under which to store the SQLAlchemy ``sessionmaker`` in the application :"
+"class:`State <starlite.datastructures.State>` instance."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.plugins.sql_alchemy.SQLAlchemyConfig.session_maker_instance:1
+msgid "Optional sessionmaker to use."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.plugins.sql_alchemy.SQLAlchemyConfig.session_maker_instance:3
+msgid ""
+"If set, the plugin will use the provided instance rather than instantiate a "
+"sessionmaker."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.plugins.sql_alchemy.SQLAlchemyConfig.engine_instance:1
+msgid "Optional engine to use."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.plugins.sql_alchemy.SQLAlchemyConfig.engine_instance:3
+msgid ""
+"If set, the plugin will use the provided instance rather than instantiate an "
+"engine."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.plugins.sql_alchemy.SQLAlchemyConfig.before_send_handler:1
+msgid "Handler to call before the ASGI message is sent."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.plugins.sql_alchemy.SQLAlchemyConfig.before_send_handler:3
+msgid ""
+"The handler should handle closing the session stored in the ASGI scope, if "
+"its still open, and committing and uncommitted data."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/config.py:docstring of
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyConfig.validate_before_send_handler:1
+msgid "Wrap ``before_send_handler`` in an ``AsyncCallable``"
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/config.py:docstring of
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyConfig.validate_before_send_handler:3
+msgid "A before send handler callable."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/config.py:docstring of
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyConfig.validate_before_send_handler:5
+msgid "An ``AsyncCallable``"
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/config.py:docstring of
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyConfig.check_connection_string_or_engine_instance:1
+msgid ""
+"Either ``connection_string`` or ``engine_instance`` must be specified, and "
+"not both."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/config.py:docstring of
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyConfig.check_connection_string_or_engine_instance:3
+msgid "Field values, after validation."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/config.py:docstring of
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyConfig.check_connection_string_or_engine_instance:5
+msgid "Field values."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/config.py:docstring of
+#: starlite.plugins.sql_alchemy.SQLAlchemyConfig.engine_config_dict:1
+msgid "Return the engine configuration as a dict."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/config.py:docstring of
+#: starlite.plugins.sql_alchemy.SQLAlchemyConfig.engine_config_dict:3
+msgid ""
+"A string keyed dict of config kwargs for the SQLAlchemy ``create_engine`` "
+"function."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/config.py:docstring of
+#: starlite.plugins.sql_alchemy.SQLAlchemyConfig.engine:1
+msgid "Return an engine. If none exists yet, create one."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/config.py:docstring of
+#: starlite.plugins.sql_alchemy.SQLAlchemyConfig.engine:3
+msgid "Getter that returns the engine instance used by the plugin."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/config.py:docstring of
+#: starlite.plugins.sql_alchemy.SQLAlchemyConfig.session_maker:1
+msgid "Get a sessionmaker. If none exists yet, create one."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/config.py:docstring of
+#: starlite.plugins.sql_alchemy.SQLAlchemyConfig.session_maker:3
+msgid "Getter that returns the session_maker instance used by the plugin."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/config.py:docstring of
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyConfig.create_db_session_dependency:1
+msgid "Create a session instance."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/config.py:docstring of
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyConfig.create_db_session_dependency:3
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyConfig.on_shutdown:3
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyConfig.update_app_state:3
+msgid "The 'application.state' instance."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/config.py:docstring of
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyConfig.create_db_session_dependency:4
+msgid "The current connection's scope."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/config.py:docstring of
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyConfig.create_db_session_dependency:6
+msgid "A session instance T."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/config.py:docstring of
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyConfig.update_app_state:1
+msgid "Create a DB engine and stores it in the application state."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/config.py:docstring of
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyConfig.on_shutdown:1
+msgid "Disposes of the SQLAlchemy engine."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/config.py:docstring of
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyConfig.config_sql_alchemy_logging:1
+msgid "Add the SQLAlchemy loggers to the logging config."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/config.py:docstring of
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyConfig.config_sql_alchemy_logging:5
+msgid ""
+"Currently only works with :class:`LoggingConfig <starlite.config.logging."
+"LoggingConfig>`."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/config.py:docstring of
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyConfig.config_sql_alchemy_logging:7
+msgid "Logging config."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/config.py:docstring of
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyConfig.config_sql_alchemy_logging:9
+msgid "None."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/config.py:docstring of
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyEngineConfig:1
+msgid ""
+"Configuration for SQLAlchemy's :class`Engine <sqlalchemy.engine.Engine>`."
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/config.py:docstring of
+#: starlite.plugins.sql_alchemy.config.SQLAlchemyEngineConfig:3
+msgid "For details see: https://docs.sqlalchemy.org/en/14/core/engines.html"
+msgstr ""
+
+#: ../../../../starlite/plugins/sql_alchemy/config.py:docstring of
+#: starlite.plugins.sql_alchemy.config.SQLAlchemySessionConfig:1
+msgid "Configuration for a SQLAlchemy-Session."
+msgstr ""

@@ -1,0 +1,425 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/openapi.rst:2
+msgid "starlite.openapi"
+msgstr ""
+
+#: ../../../../starlite/openapi/controller.py:docstring of
+#: starlite.openapi.controller.OpenAPIController:1
+msgid "Bases: :py:class:`~starlite.controller.Controller`"
+msgstr ""
+
+#: ../../../../starlite/openapi/controller.py:docstring of
+#: starlite.openapi.controller.OpenAPIController:1
+msgid "Controller for OpenAPI endpoints."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.controller.OpenAPIController.path:1
+msgid "Base path for the OpenAPI documentation endpoints."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.controller.OpenAPIController.style:1
+msgid "Base styling of the html body."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.controller.OpenAPIController.redoc_version:1
+msgid "Redoc version to download from the CDN."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.controller.OpenAPIController.swagger_ui_version:1
+msgid "SwaggerUI version to download from the CDN."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.controller.OpenAPIController.stoplight_elements_version:1
+msgid "StopLight Elements version to download from the CDN."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.controller.OpenAPIController.favicon_url:1
+msgid "URL to download a favicon from."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.controller.OpenAPIController.redoc_google_fonts:1
+msgid "Download google fonts via CDN."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.controller.OpenAPIController.redoc_google_fonts:3
+msgid "Should be set to ``False`` when not using a CDN."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.controller.OpenAPIController.redoc_js_url:1
+msgid "Download url for the Redoc JS bundle."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.controller.OpenAPIController.swagger_css_url:1
+msgid "Download url for the Swagger UI CSS bundle."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.controller.OpenAPIController.swagger_ui_bundle_js_url:1
+msgid "Download url for the Swagger UI JS bundle."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.controller.OpenAPIController.swagger_ui_standalone_preset_js_url:1
+msgid "Download url for the Swagger Standalone Preset JS bundle."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.controller.OpenAPIController.stoplight_elements_css_url:1
+msgid "Download url for the Stoplight Elements CSS bundle."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.controller.OpenAPIController.stoplight_elements_js_url:1
+msgid "Download url for the Stoplight Elements JS bundle."
+msgstr ""
+
+#: ../../../../starlite/openapi/controller.py:docstring of
+#: starlite.openapi.controller.OpenAPIController.get_schema_from_request:1
+msgid "Return the OpenAPI pydantic model from the request instance."
+msgstr ""
+
+#: ../../../../starlite/openapi/controller.py:docstring of
+#: starlite.openapi.controller.OpenAPIController.get_schema_from_request:0
+#: starlite.openapi.controller.OpenAPIController.render_redoc:0
+#: starlite.openapi.controller.OpenAPIController.render_stoplight_elements:0
+#: starlite.openapi.controller.OpenAPIController.render_swagger_ui:0
+#: starlite.openapi.controller.OpenAPIController.should_serve_endpoint:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../starlite/openapi/controller.py:docstring of
+#: starlite.openapi.controller.OpenAPIController.get_schema_from_request:3
+msgid "A :class:`Starlite <starlite.connection.Request>` instance."
+msgstr ""
+
+#: ../../../../starlite/openapi/controller.py:docstring of
+#: starlite.openapi.controller.OpenAPIController.favicon:0
+#: starlite.openapi.controller.OpenAPIController.get_schema_from_request:0
+#: starlite.openapi.controller.OpenAPIController.render_404_page:0
+#: starlite.openapi.controller.OpenAPIController.render_methods_map:0
+#: starlite.openapi.controller.OpenAPIController.render_redoc:0
+#: starlite.openapi.controller.OpenAPIController.render_stoplight_elements:0
+#: starlite.openapi.controller.OpenAPIController.render_swagger_ui:0
+#: starlite.openapi.controller.OpenAPIController.should_serve_endpoint:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/openapi/controller.py:docstring of
+#: starlite.openapi.controller.OpenAPIController.get_schema_from_request:5
+msgid ""
+"An :class:`OpenAPI <pydantic_openapi_schema.v3_1_0.open_api.OpenAPI>` "
+"instance."
+msgstr ""
+
+#: ../../../../starlite/openapi/controller.py:docstring of
+#: starlite.openapi.controller.OpenAPIController.get_schema_from_request:0
+#: starlite.openapi.controller.OpenAPIController.should_serve_endpoint:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../starlite/openapi/controller.py:docstring of
+#: starlite.openapi.controller.OpenAPIController.get_schema_from_request:7
+#: starlite.openapi.controller.OpenAPIController.should_serve_endpoint:7
+msgid "If the application ``openapi_config`` attribute is ``None``."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.controller.OpenAPIController.after_request:1
+msgid ""
+"A sync or async function executed before a :class:`Request <starlite."
+"connection.Request>` is passed to any route handler."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.controller.OpenAPIController.after_request:3
+msgid ""
+"If this function returns a value, the request will not reach the route "
+"handler, and instead this value will be used."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.controller.OpenAPIController.after_response:1
+msgid "A sync or async function called after the response has been awaited."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.controller.OpenAPIController.after_response:3
+msgid ""
+"It receives the :class:`Request <starlite.connection.Request>` instance and "
+"should not return any values."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.controller.OpenAPIController.before_request:1
+msgid ""
+"A sync or async function called immediately before calling the route handler."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.controller.OpenAPIController.before_request:3
+msgid ""
+"It receives the :class:`Request <starlite.connection.Request>` instance and "
+"any non-``None`` return value is used for the response, bypassing the route "
+"handler."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.controller.OpenAPIController.dependencies:1
+msgid ""
+"A string keyed dictionary of dependency :class:`Provider <starlite."
+"datastructures.Provide>` instances."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.controller.OpenAPIController.dependencies:0
+msgid "type"
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.controller.OpenAPIController.dependencies:3
+msgid "dependencies"
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.controller.OpenAPIController.etag:1
+msgid ""
+"An ``etag`` header of type :class:`ETag <starlite.datastructures.ETag>` to "
+"add to route handlers of this controller."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.controller.OpenAPIController.etag:3
+msgid "Can be overridden by route handlers."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.controller.OpenAPIController.exception_handlers:1
+msgid ""
+"A dictionary that maps handler functions to status codes and/or exception "
+"types."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.controller.OpenAPIController.guards:1
+msgid "A list of :class:`Guard <starlite.types.Guard>` callables."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.controller.OpenAPIController.middleware:1
+msgid "A list of :class:`Middleware <starlite.types.Middleware>`."
+msgstr ""
+
+#: ../../../../docstring of starlite.openapi.controller.OpenAPIController.opt:1
+msgid ""
+"A string key dictionary of arbitrary values that can be accessed in :class:"
+"`Guards <starlite.types.Guard>` or wherever you have access to :class:"
+"`Request <starlite.connection.request.Request>` or :class:`ASGI Scope "
+"<starlite.types.Scope>`."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.controller.OpenAPIController.owner:1
+msgid ""
+"The :class:`Router <starlite.router.Router>` or :class:`Starlite <starlite."
+"app.Starlite>` app that owns the controller."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.controller.OpenAPIController.owner:3
+msgid ""
+"This value is set internally by Starlite and it should not be set when "
+"subclassing the controller."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.controller.OpenAPIController.parameters:1
+msgid ""
+"A mapping of :class:`Parameter <starlite.params.Parameter>` definitions "
+"available to all application paths."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.controller.OpenAPIController.response_class:1
+msgid ""
+"A custom subclass of [starlite.response.Response] to be used as the default "
+"response for all route handlers under the controller."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.controller.OpenAPIController.response_cookies:1
+msgid "A list of [Cookie](starlite.datastructures.Cookie] instances."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.controller.OpenAPIController.response_headers:1
+msgid ""
+"A string keyed dictionary mapping :class:`ResponseHeader <starlite."
+"datastructures.ResponseHeader>` instances."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.controller.OpenAPIController.security:1
+msgid ""
+"A list of dictionaries that to the schema of all route handlers under the "
+"controller."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.controller.OpenAPIController.tags:1
+msgid ""
+"A list of string tags that will be appended to the schema of all route "
+"handlers under the controller."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.controller.OpenAPIController.type_encoders:1
+msgid ""
+"A mapping of types to callables that transform them into types supported for "
+"serialization."
+msgstr ""
+
+#: ../../../../starlite/openapi/controller.py:docstring of
+#: starlite.openapi.controller.OpenAPIController.should_serve_endpoint:1
+msgid ""
+"Verify that the requested path is within the enabled endpoints in the "
+"openapi_config."
+msgstr ""
+
+#: ../../../../starlite/openapi/controller.py:docstring of
+#: starlite.openapi.controller.OpenAPIController.should_serve_endpoint:3
+msgid "To be tested if endpoint enabled."
+msgstr ""
+
+#: ../../../../starlite/openapi/controller.py:docstring of
+#: starlite.openapi.controller.OpenAPIController.should_serve_endpoint:5
+msgid "A boolean."
+msgstr ""
+
+#: ../../../../starlite/openapi/controller.py:docstring of
+#: starlite.openapi.controller.OpenAPIController.favicon:1
+msgid "Return favicon `<link>` tag, if applicable."
+msgstr ""
+
+#: ../../../../starlite/openapi/controller.py:docstring of
+#: starlite.openapi.controller.OpenAPIController.favicon:3
+msgid ""
+"A `<link>` tag if self.favicon_url is not empty, otherwise returns a "
+"placeholder meta tag."
+msgstr ""
+
+#: ../../../../starlite/openapi/controller.py:docstring of
+#: starlite.openapi.controller.OpenAPIController.render_methods_map:1
+msgid "Map render method names to render methods."
+msgstr ""
+
+#: ../../../../starlite/openapi/controller.py:docstring of
+#: starlite.openapi.controller.OpenAPIController.render_methods_map:3
+msgid "A mapping of string keys to render methods."
+msgstr ""
+
+#: ../../../../starlite/openapi/controller.py:docstring of
+#: starlite.openapi.controller.OpenAPIController.render_swagger_ui:1
+msgid "Render an HTML page for Swagger-UI."
+msgstr ""
+
+#: ../../../../starlite/openapi/controller.py:docstring of
+#: starlite.openapi.controller.OpenAPIController.render_redoc:3
+#: starlite.openapi.controller.OpenAPIController.render_stoplight_elements:3
+#: starlite.openapi.controller.OpenAPIController.render_swagger_ui:3
+msgid "Notes"
+msgstr ""
+
+#: ../../../../starlite/openapi/controller.py:docstring of
+#: starlite.openapi.controller.OpenAPIController.render_redoc:5
+#: starlite.openapi.controller.OpenAPIController.render_stoplight_elements:5
+#: starlite.openapi.controller.OpenAPIController.render_swagger_ui:5
+msgid "override this method to customize the template."
+msgstr ""
+
+#: ../../../../starlite/openapi/controller.py:docstring of
+#: starlite.openapi.controller.OpenAPIController.render_redoc:7
+#: starlite.openapi.controller.OpenAPIController.render_stoplight_elements:7
+#: starlite.openapi.controller.OpenAPIController.render_swagger_ui:7
+msgid "A :class:`Request <starlite.connection.Request>` instance."
+msgstr ""
+
+#: ../../../../starlite/openapi/controller.py:docstring of
+#: starlite.openapi.controller.OpenAPIController.render_404_page:3
+#: starlite.openapi.controller.OpenAPIController.render_redoc:9
+#: starlite.openapi.controller.OpenAPIController.render_stoplight_elements:9
+#: starlite.openapi.controller.OpenAPIController.render_swagger_ui:9
+msgid "A rendered html string."
+msgstr ""
+
+#: ../../../../starlite/openapi/controller.py:docstring of
+#: starlite.openapi.controller.OpenAPIController.render_stoplight_elements:1
+msgid "Render an HTML page for StopLight Elements."
+msgstr ""
+
+#: ../../../../starlite/openapi/controller.py:docstring of
+#: starlite.openapi.controller.OpenAPIController.render_redoc:1
+msgid "Render an HTML page for Redoc."
+msgstr ""
+
+#: ../../../../starlite/openapi/controller.py:docstring of
+#: starlite.openapi.controller.OpenAPIController.render_404_page:1
+msgid "Render an HTML 404 page."
+msgstr ""
+
+#: ../../../../starlite/openapi/datastructures.py:docstring of
+#: starlite.openapi.datastructures.ResponseSpec:1
+msgid "Bases: :py:class:`~pydantic.main.BaseModel`"
+msgstr ""
+
+#: ../../../../starlite/openapi/datastructures.py:docstring of
+#: starlite.openapi.datastructures.ResponseSpec:1
+msgid "Container type of additional responses."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.datastructures.ResponseSpec.model:1
+msgid "A model that describes the content of the response."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.datastructures.ResponseSpec.generate_examples:1
+msgid "Generate examples for the response content."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.datastructures.ResponseSpec.description:1
+msgid "A description of the response."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.openapi.datastructures.ResponseSpec.media_type:1
+msgid "Response media type."
+msgstr ""

@@ -1,0 +1,235 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/utils/predicates.rst:2
+msgid "predicates"
+msgstr ""
+
+#: ../../../../starlite/utils/predicates.py:docstring of
+#: starlite.utils.predicates.is_class_and_subclass:1
+msgid ""
+"Return ``True`` if ``value`` is a ``class`` and is a subtype of ``t_type``."
+msgstr ""
+
+#: ../../../../starlite/utils/predicates.py:docstring of
+#: starlite.utils.predicates.is_class_and_subclass:3
+msgid "See https://github.com/starlite-api/starlite/issues/367"
+msgstr ""
+
+#: ../../../../starlite/utils/predicates.py:docstring of
+#: starlite.utils.predicates.is_class_and_subclass:0
+#: starlite.utils.predicates.is_dataclass_class:0
+#: starlite.utils.predicates.is_dataclass_class_or_instance:0
+#: starlite.utils.predicates.is_optional_union:0
+#: starlite.utils.predicates.is_typed_dict:0
+#: starlite.utils.predicates.is_union:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../starlite/utils/predicates.py:docstring of
+#: starlite.utils.predicates.is_class_and_subclass:5
+msgid "The value to check if is class and subclass of ``t_type``."
+msgstr ""
+
+#: ../../../../starlite/utils/predicates.py:docstring of
+#: starlite.utils.predicates.is_class_and_subclass:6
+msgid "Type used for :func:`issubclass` check of ``value``"
+msgstr ""
+
+#: ../../../../starlite/utils/predicates.py:docstring of
+#: starlite.utils.predicates.is_any:0
+#: starlite.utils.predicates.is_class_and_subclass:0
+#: starlite.utils.predicates.is_dataclass_class:0
+#: starlite.utils.predicates.is_dataclass_class_or_instance:0
+#: starlite.utils.predicates.is_generic:0
+#: starlite.utils.predicates.is_mapping:0
+#: starlite.utils.predicates.is_non_string_iterable:0
+#: starlite.utils.predicates.is_non_string_sequence:0
+#: starlite.utils.predicates.is_optional_union:0
+#: starlite.utils.predicates.is_typed_dict:0
+#: starlite.utils.predicates.is_union:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/utils/predicates.py:docstring of
+#: starlite.utils.predicates.is_class_and_subclass:8
+msgid "bool"
+msgstr ""
+
+#: ../../../../starlite/utils/predicates.py:docstring of
+#: starlite.utils.predicates.is_generic:1
+msgid "Given a type annotation determine if the annotation is a generic class."
+msgstr ""
+
+#: ../../../../starlite/utils/predicates.py:docstring of
+#: starlite.utils.predicates.is_any:3 starlite.utils.predicates.is_generic:3
+#: starlite.utils.predicates.is_mapping:3
+#: starlite.utils.predicates.is_non_string_iterable:3
+#: starlite.utils.predicates.is_non_string_sequence:3
+msgid "Args: annotation: A type."
+msgstr ""
+
+#: ../../../../starlite/utils/predicates.py:docstring of
+#: starlite.utils.predicates.is_generic:6
+msgid ""
+"True if the annotation is a subclass of :data:`Generic <typing.Generic>` "
+"otherwise ``False``."
+msgstr ""
+
+#: ../../../../starlite/utils/predicates.py:docstring of
+#: starlite.utils.predicates.is_mapping:1
+msgid "Given a type annotation determine if the annotation is a mapping type."
+msgstr ""
+
+#: ../../../../starlite/utils/predicates.py:docstring of
+#: starlite.utils.predicates.is_mapping:6
+msgid ""
+"A typeguard determining whether the type can be cast as :class:`Mapping "
+"<typing.Mapping>`."
+msgstr ""
+
+#: ../../../../starlite/utils/predicates.py:docstring of
+#: starlite.utils.predicates.is_non_string_iterable:1
+msgid "Given a type annotation determine if the annotation is an iterable."
+msgstr ""
+
+#: ../../../../starlite/utils/predicates.py:docstring of
+#: starlite.utils.predicates.is_non_string_iterable:6
+msgid ""
+"A typeguard determining whether the type can be cast as :class:`Iterable "
+"<typing.Iterable>` that is not a string."
+msgstr ""
+
+#: ../../../../starlite/utils/predicates.py:docstring of
+#: starlite.utils.predicates.is_non_string_sequence:1
+msgid "Given a type annotation determine if the annotation is a sequence."
+msgstr ""
+
+#: ../../../../starlite/utils/predicates.py:docstring of
+#: starlite.utils.predicates.is_non_string_sequence:6
+msgid "class`Sequence <typing.Sequence>` that is not a string."
+msgstr ""
+
+#: ../../../../starlite/utils/predicates.py:docstring of
+#: starlite.utils.predicates.is_non_string_sequence:0
+msgid "Return type"
+msgstr ""
+
+#: ../../../../starlite/utils/predicates.py:docstring of
+#: starlite.utils.predicates.is_any:1
+msgid "Given a type annotation determine if the annotation is Any."
+msgstr ""
+
+#: ../../../../starlite/utils/predicates.py:docstring of
+#: starlite.utils.predicates.is_any:6
+msgid "A typeguard determining whether the type is :data:`Any <typing.Any>`."
+msgstr ""
+
+#: ../../../../starlite/utils/predicates.py:docstring of
+#: starlite.utils.predicates.is_optional_union:1
+#: starlite.utils.predicates.is_union:1
+msgid ""
+"Given a type annotation determine if the annotation infers an optional union."
+msgstr ""
+
+#: ../../../../starlite/utils/predicates.py:docstring of
+#: starlite.utils.predicates.is_optional_union:3
+#: starlite.utils.predicates.is_union:3
+msgid "A type."
+msgstr ""
+
+#: ../../../../starlite/utils/predicates.py:docstring of
+#: starlite.utils.predicates.is_union:5
+msgid ""
+"A typeguard determining whether the type is :data:`Union typing.Union>`."
+msgstr ""
+
+#: ../../../../starlite/utils/predicates.py:docstring of
+#: starlite.utils.predicates.is_optional_union:5
+msgid ""
+"A typeguard determining whether the type is :data:`Union typing.Union>` with "
+"a     None value or :data:`Optional <typing.Optional>` which is equivalent."
+msgstr ""
+
+#: ../../../../starlite/utils/predicates.py:docstring of
+#: starlite.utils.predicates.is_optional_union:7
+msgid ""
+"A typeguard determining whether the type is :data:`Union typing.Union>` with "
+"a"
+msgstr ""
+
+#: ../../../../starlite/utils/predicates.py:docstring of
+#: starlite.utils.predicates.is_optional_union:8
+msgid "None value or :data:`Optional <typing.Optional>` which is equivalent."
+msgstr ""
+
+#: ../../../../starlite/utils/predicates.py:docstring of
+#: starlite.utils.predicates.is_dataclass_class:2
+msgid ""
+"Wrap :func:`is_dataclass <dataclasses.is_dataclass>` in a :data:`typing."
+"TypeGuard`, narrowing to type only, not"
+msgstr ""
+
+#: ../../../../starlite/utils/predicates.py:docstring of
+#: starlite.utils.predicates.is_dataclass_class:2
+msgid "instance."
+msgstr ""
+
+#: ../../../../starlite/utils/predicates.py:docstring of
+#: starlite.utils.predicates.is_dataclass_class:4
+msgid "tested to determine if type of :class:`dataclasses.dataclass`."
+msgstr ""
+
+#: ../../../../starlite/utils/predicates.py:docstring of
+#: starlite.utils.predicates.is_dataclass_class:6
+msgid "``True`` if ``value`` is a ``dataclass`` type."
+msgstr ""
+
+#: ../../../../starlite/utils/predicates.py:docstring of
+#: starlite.utils.predicates.is_dataclass_class_or_instance:1
+msgid ""
+"Wrap :func:`is_dataclass <dataclasses.is_dataclass>` in a :data:`typing."
+"TypeGuard`."
+msgstr ""
+
+#: ../../../../starlite/utils/predicates.py:docstring of
+#: starlite.utils.predicates.is_dataclass_class_or_instance:3
+msgid ""
+"tested to determine if instance or type of :class:`dataclasses.dataclass`."
+msgstr ""
+
+#: ../../../../starlite/utils/predicates.py:docstring of
+#: starlite.utils.predicates.is_dataclass_class_or_instance:5
+msgid "``True`` if instance or type of ``dataclass``."
+msgstr ""
+
+#: ../../../../starlite/utils/predicates.py:docstring of
+#: starlite.utils.predicates.is_typed_dict:1
+msgid "Wrap :func:`typing.is_typeddict` in a :data:`typing.TypeGuard`."
+msgstr ""
+
+#: ../../../../starlite/utils/predicates.py:docstring of
+#: starlite.utils.predicates.is_typed_dict:3
+msgid "tested to determine if instance or type of :class:`typing.TypedDict`."
+msgstr ""
+
+#: ../../../../starlite/utils/predicates.py:docstring of
+#: starlite.utils.predicates.is_typed_dict:5
+msgid "``True`` if instance or type of ``TypedDict``."
+msgstr ""

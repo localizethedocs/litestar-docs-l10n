@@ -1,0 +1,157 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/middleware/session/memcached_backend.rst:2
+msgid "memcached_backend"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/memcached_backend.py:docstring of
+#: starlite.middleware.session.memcached_backend.MemcachedBackend:1
+msgid ""
+"Bases: :py:class:`~starlite.middleware.session.base.ServerSideBackend`\\ [:"
+"py:class:`MemcachedBackendConfig`]"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/memcached_backend.py:docstring of
+#: starlite.middleware.session.memcached_backend.MemcachedBackend:1
+msgid "Session backend to store data in memcached."
+msgstr ""
+
+#: ../../../../starlite/middleware/session/memcached_backend.py:docstring of
+#: starlite.middleware.session.memcached_backend.MemcachedBackend.__init__:1
+msgid "Initialize ``MemcachedBackend``"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/memcached_backend.py:docstring of
+#: starlite.middleware.session.memcached_backend.MemcachedBackend.__init__:0
+#: starlite.middleware.session.memcached_backend.MemcachedBackend.delete:0
+#: starlite.middleware.session.memcached_backend.MemcachedBackend.get:0
+#: starlite.middleware.session.memcached_backend.MemcachedBackend.set:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/memcached_backend.py:docstring of
+#: starlite.middleware.session.memcached_backend.MemcachedBackend.__init__:3
+msgid "A ``MemcachedBackendConfig`` instance"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/memcached_backend.py:docstring of
+#: starlite.middleware.session.memcached_backend.MemcachedBackend.__init__:5
+#: starlite.middleware.session.memcached_backend.MemcachedBackend.delete_all:5
+msgid "Notes"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/memcached_backend.py:docstring of
+#: starlite.middleware.session.memcached_backend.MemcachedBackend.__init__:7
+msgid ""
+"Requires ``aiomcache``. Install with ``pip install starlite[memcached]``"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/memcached_backend.py:docstring of
+#: starlite.middleware.session.memcached_backend.MemcachedBackend.get:1
+msgid "Retrieve data associated with ``session_id`` from memcached."
+msgstr ""
+
+#: ../../../../starlite/middleware/session/memcached_backend.py:docstring of
+#: starlite.middleware.session.memcached_backend.MemcachedBackend.delete:3
+#: starlite.middleware.session.memcached_backend.MemcachedBackend.get:3
+#: starlite.middleware.session.memcached_backend.MemcachedBackend.set:4
+msgid "The session-ID"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/memcached_backend.py:docstring of
+#: starlite.middleware.session.memcached_backend.MemcachedBackend.delete:0
+#: starlite.middleware.session.memcached_backend.MemcachedBackend.delete_all:0
+#: starlite.middleware.session.memcached_backend.MemcachedBackend.get:0
+#: starlite.middleware.session.memcached_backend.MemcachedBackend.set:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/memcached_backend.py:docstring of
+#: starlite.middleware.session.memcached_backend.MemcachedBackend.get:5
+msgid "The session data, if existing, otherwise ``None``."
+msgstr ""
+
+#: ../../../../starlite/middleware/session/memcached_backend.py:docstring of
+#: starlite.middleware.session.memcached_backend.MemcachedBackend.set:1
+msgid ""
+"Store ``data`` in memcached under ``<prefix>:<session_id>``. If there is "
+"already data associated with ``session_id``, replace it with ``data`` and "
+"reset its expiry time."
+msgstr ""
+
+#: ../../../../starlite/middleware/session/memcached_backend.py:docstring of
+#: starlite.middleware.session.memcached_backend.MemcachedBackend.set:5
+msgid "Serialized session data"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/memcached_backend.py:docstring of
+#: starlite.middleware.session.memcached_backend.MemcachedBackend.delete:5
+#: starlite.middleware.session.memcached_backend.MemcachedBackend.delete_all:3
+#: starlite.middleware.session.memcached_backend.MemcachedBackend.set:7
+msgid "None"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/memcached_backend.py:docstring of
+#: starlite.middleware.session.memcached_backend.MemcachedBackend.delete:1
+msgid ""
+"Delete the data associated with ``session_id``. Fail silently if no such "
+"session-ID exists."
+msgstr ""
+
+#: ../../../../starlite/middleware/session/memcached_backend.py:docstring of
+#: starlite.middleware.session.memcached_backend.MemcachedBackend.delete_all:1
+msgid "Delete all data stored within this backend."
+msgstr ""
+
+#: ../../../../starlite/middleware/session/memcached_backend.py:docstring of
+#: starlite.middleware.session.memcached_backend.MemcachedBackend.delete_all:7
+msgid ""
+"This has poor performance since memcached does not offer utilities to "
+"properly scan or match keys by prefix."
+msgstr ""
+
+#: ../../../../starlite/middleware/session/memcached_backend.py:docstring of
+#: starlite.middleware.session.memcached_backend.MemcachedBackend.delete_all:12
+msgid ""
+"This method is deprecated since 1.43.0. If you need this functionality, "
+"consider using the redis backend instead."
+msgstr ""
+
+#: ../../../../starlite/middleware/session/memcached_backend.py:docstring of
+#: starlite.middleware.session.memcached_backend.MemcachedBackendConfig:1
+msgid ""
+"Bases: :py:class:`~starlite.middleware.session.base.ServerSideSessionConfig`"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/memcached_backend.py:docstring of
+#: starlite.middleware.session.memcached_backend.MemcachedBackendConfig:1
+msgid "Configuration for ``MemcachedBackend``"
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.middleware.session.memcached_backend.MemcachedBackendConfig.memcached:1
+msgid "An ``aiomcache.Client`` instance."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.middleware.session.memcached_backend.MemcachedBackendConfig.key_prefix:1
+msgid ""
+"Prefix to store data under after the schema of ``<prefix>:<session-ID>``"
+msgstr ""

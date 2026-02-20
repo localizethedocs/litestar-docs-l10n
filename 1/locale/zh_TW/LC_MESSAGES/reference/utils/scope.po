@@ -1,0 +1,112 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/utils/scope.rst:2
+msgid "scope"
+msgstr ""
+
+#: ../../../../starlite/utils/scope.py:docstring of
+#: starlite.utils.scope.get_serializer_from_scope:1
+msgid "Return a serializer given a scope object."
+msgstr ""
+
+#: ../../../../starlite/utils/scope.py:docstring of
+#: starlite.utils.scope.get_serializer_from_scope:0
+#: starlite.utils.scope.get_starlite_scope_state:0
+#: starlite.utils.scope.set_starlite_scope_state:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../starlite/utils/scope.py:docstring of
+#: starlite.utils.scope.get_serializer_from_scope:3
+msgid "The ASGI connection scope."
+msgstr ""
+
+#: ../../../../starlite/utils/scope.py:docstring of
+#: starlite.utils.scope.get_serializer_from_scope:0
+#: starlite.utils.scope.get_starlite_scope_state:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/utils/scope.py:docstring of
+#: starlite.utils.scope.get_serializer_from_scope:5
+msgid "A serializer function"
+msgstr ""
+
+#: ../../../../starlite/utils/scope.py:docstring of
+#: starlite.utils.scope.get_starlite_scope_state:1
+msgid "Get an internal value from connection scope state."
+msgstr ""
+
+#: ../../../../starlite/utils/scope.py:docstring of
+#: starlite.utils.scope.get_starlite_scope_state:5
+msgid ""
+"If called with a default value, this method behaves like to `dict."
+"set_default()`, both setting the key in the namespace to the default value, "
+"and returning it."
+msgstr ""
+
+#: ../../../../starlite/utils/scope.py:docstring of
+#: starlite.utils.scope.get_starlite_scope_state:8
+msgid ""
+"If called without a default value, the method behaves like `dict.get()`, "
+"returning ``None`` if the key does not exist."
+msgstr ""
+
+#: ../../../../starlite/utils/scope.py:docstring of
+#: starlite.utils.scope.get_starlite_scope_state:11
+#: starlite.utils.scope.set_starlite_scope_state:3
+msgid "The connection scope."
+msgstr ""
+
+#: ../../../../starlite/utils/scope.py:docstring of
+#: starlite.utils.scope.get_starlite_scope_state:12
+msgid "Key to get from internal namespace in scope state."
+msgstr ""
+
+#: ../../../../starlite/utils/scope.py:docstring of
+#: starlite.utils.scope.get_starlite_scope_state:13
+msgid "Default value to return."
+msgstr ""
+
+#: ../../../../starlite/utils/scope.py:docstring of
+#: starlite.utils.scope.get_starlite_scope_state:14
+msgid ""
+"Boolean flag dictating whether the value should be deleted from the state."
+msgstr ""
+
+#: ../../../../starlite/utils/scope.py:docstring of
+#: starlite.utils.scope.get_starlite_scope_state:16
+msgid "Value mapped to ``key`` in internal connection scope namespace."
+msgstr ""
+
+#: ../../../../starlite/utils/scope.py:docstring of
+#: starlite.utils.scope.set_starlite_scope_state:1
+msgid "Set an internal value in connection scope state."
+msgstr ""
+
+#: ../../../../starlite/utils/scope.py:docstring of
+#: starlite.utils.scope.set_starlite_scope_state:4
+msgid "Key to set under internal namespace in scope state."
+msgstr ""
+
+#: ../../../../starlite/utils/scope.py:docstring of
+#: starlite.utils.scope.set_starlite_scope_state:5
+msgid "Value for key."
+msgstr ""
