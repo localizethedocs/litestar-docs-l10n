@@ -1,0 +1,786 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/handlers/http.rst:2
+msgid "http"
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler:1
+msgid ""
+"Bases: :py:class:`~starlite.handlers.base.BaseRouteHandler`\\ [:py:class:"
+"`HTTPRouteHandler`]"
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler:1
+msgid "HTTP Route Decorator."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler:3
+msgid "Use this decorator to decorate an HTTP handler with multiple methods."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__init__:1
+msgid "Initialize ``HTTPRouteHandler``."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__init__:0
+#: starlite.handlers.http.HTTPRouteHandler.to_response:0
+#: starlite.handlers.http.delete.__init__:0
+#: starlite.handlers.http.get.__init__:0 starlite.handlers.http.head.__init__:0
+#: starlite.handlers.http.patch.__init__:0
+#: starlite.handlers.http.post.__init__:0 starlite.handlers.http.put.__init__:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__init__:3
+#: starlite.handlers.http.delete.__init__:3
+#: starlite.handlers.http.get.__init__:3 starlite.handlers.http.head.__init__:8
+#: starlite.handlers.http.patch.__init__:3
+#: starlite.handlers.http.post.__init__:3 starlite.handlers.http.put.__init__:3
+msgid ""
+"A path fragment for the route handler function or a list of path fragments. "
+"If not given defaults to ``'/'``"
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__init__:5
+#: starlite.handlers.http.delete.__init__:5
+#: starlite.handlers.http.get.__init__:5
+#: starlite.handlers.http.head.__init__:10
+#: starlite.handlers.http.patch.__init__:5
+#: starlite.handlers.http.post.__init__:5 starlite.handlers.http.put.__init__:5
+msgid ""
+"A sync or async function executed before a :class:`Request <starlite."
+"connection.Request>` is passed to any route handler. If this function "
+"returns a value, the request will not reach the route handler, and instead "
+"this value will be used."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__init__:8
+#: starlite.handlers.http.delete.__init__:8
+#: starlite.handlers.http.get.__init__:8
+#: starlite.handlers.http.head.__init__:13
+#: starlite.handlers.http.patch.__init__:8
+#: starlite.handlers.http.post.__init__:8 starlite.handlers.http.put.__init__:8
+msgid ""
+"A sync or async function called after the response has been awaited. It "
+"receives the :class:`Request <starlite.connection.Request>` object and "
+"should not return any values."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__init__:10
+#: starlite.handlers.http.delete.__init__:10
+#: starlite.handlers.http.get.__init__:10
+#: starlite.handlers.http.head.__init__:15
+#: starlite.handlers.http.patch.__init__:10
+#: starlite.handlers.http.post.__init__:10
+#: starlite.handlers.http.put.__init__:10
+msgid ""
+"A :class:`BackgroundTask <starlite.datastructures.BackgroundTask>` instance "
+"or :class:`BackgroundTasks <starlite.datastructures.BackgroundTasks>` to "
+"execute after the response is finished. Defaults to ``None``."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__init__:13
+#: starlite.handlers.http.delete.__init__:13
+#: starlite.handlers.http.get.__init__:13
+#: starlite.handlers.http.head.__init__:18
+#: starlite.handlers.http.patch.__init__:13
+#: starlite.handlers.http.post.__init__:13
+#: starlite.handlers.http.put.__init__:13
+msgid ""
+"A sync or async function called immediately before calling the route "
+"handler. Receives the `starlite.connection.Request`` instance and any non-"
+"``None`` return value is used for the response, bypassing the route handler."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__init__:16
+#: starlite.handlers.http.delete.__init__:16
+#: starlite.handlers.http.get.__init__:16
+#: starlite.handlers.http.head.__init__:21
+#: starlite.handlers.http.patch.__init__:16
+#: starlite.handlers.http.post.__init__:16
+#: starlite.handlers.http.put.__init__:16
+msgid ""
+"Enables response caching if configured on the application level. Valid "
+"values are ``True`` or a number of seconds (e.g. ``120``) to cache the "
+"response."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__init__:18
+#: starlite.handlers.http.delete.__init__:18
+#: starlite.handlers.http.get.__init__:18
+#: starlite.handlers.http.head.__init__:23
+#: starlite.handlers.http.patch.__init__:18
+#: starlite.handlers.http.post.__init__:18
+#: starlite.handlers.http.put.__init__:18
+msgid ""
+"A ``cache-control`` header of type :class:`CacheControlHeader <starlite."
+"datastructures.CacheControlHeader>` that will be added to the response."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__init__:20
+#: starlite.handlers.http.delete.__init__:20
+#: starlite.handlers.http.get.__init__:20
+#: starlite.handlers.http.head.__init__:25
+#: starlite.handlers.http.patch.__init__:20
+#: starlite.handlers.http.post.__init__:20
+#: starlite.handlers.http.put.__init__:20
+msgid ""
+"A :class:`cache-key builder function <starlite.types.CacheKeyBuilder>`. "
+"Allows for customization of the cache key if caching is configured on the "
+"application level."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__init__:22
+#: starlite.handlers.http.delete.__init__:22
+#: starlite.handlers.http.get.__init__:22
+#: starlite.handlers.http.head.__init__:27
+#: starlite.handlers.http.patch.__init__:22
+#: starlite.handlers.http.post.__init__:22
+#: starlite.handlers.http.put.__init__:22
+msgid ""
+"A string keyed dictionary of dependency :class:`Provider <starlite."
+"datastructures.Provide>` instances."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__init__:23
+#: starlite.handlers.http.delete.__init__:23
+#: starlite.handlers.http.get.__init__:23
+#: starlite.handlers.http.patch.__init__:23
+#: starlite.handlers.http.post.__init__:23
+#: starlite.handlers.http.put.__init__:23
+msgid ""
+"An ``etag`` header of type :class:`ETag <starlite.datastructures.ETag>` that "
+"will be added to the response."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__init__:24
+#: starlite.handlers.http.delete.__init__:24
+#: starlite.handlers.http.get.__init__:24
+#: starlite.handlers.http.head.__init__:28
+#: starlite.handlers.http.patch.__init__:24
+#: starlite.handlers.http.post.__init__:24
+#: starlite.handlers.http.put.__init__:24
+msgid ""
+"A dictionary that maps handler functions to status codes and/or exception "
+"types."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__init__:25
+#: starlite.handlers.http.delete.__init__:25
+#: starlite.handlers.http.get.__init__:25
+#: starlite.handlers.http.head.__init__:29
+#: starlite.handlers.http.patch.__init__:25
+#: starlite.handlers.http.post.__init__:25
+#: starlite.handlers.http.put.__init__:25
+msgid "A list of :class:`Guard <starlite.types.Guard>` callables."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__init__:26
+msgid ""
+"An :class:`http method string <starlite.types.Method>`, a member of the "
+"enum :class:`HttpMethod <starlite.enums.HttpMethod>` or a list of these that "
+"correlates to the methods the route handler function should handle."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__init__:29
+#: starlite.handlers.http.delete.__init__:26
+#: starlite.handlers.http.get.__init__:26
+#: starlite.handlers.http.head.__init__:30
+#: starlite.handlers.http.patch.__init__:26
+#: starlite.handlers.http.post.__init__:26
+#: starlite.handlers.http.put.__init__:26
+msgid ""
+"A member of the :class:`MediaType <starlite.enums.MediaType>` enum or a "
+"string with a valid IANA Media-Type."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__init__:31
+#: starlite.handlers.http.delete.__init__:28
+#: starlite.handlers.http.get.__init__:28
+#: starlite.handlers.http.head.__init__:32
+#: starlite.handlers.http.patch.__init__:28
+#: starlite.handlers.http.post.__init__:28
+#: starlite.handlers.http.put.__init__:28
+msgid "A list of :class:`Middleware <starlite.types.Middleware>`."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__init__:32
+#: starlite.handlers.http.delete.__init__:29
+#: starlite.handlers.http.get.__init__:29
+#: starlite.handlers.http.head.__init__:33
+#: starlite.handlers.http.patch.__init__:29
+#: starlite.handlers.http.post.__init__:29
+#: starlite.handlers.http.put.__init__:29
+msgid "A string identifying the route handler."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__init__:33
+#: starlite.handlers.http.delete.__init__:30
+#: starlite.handlers.http.get.__init__:30
+#: starlite.handlers.http.head.__init__:34
+#: starlite.handlers.http.patch.__init__:30
+#: starlite.handlers.http.post.__init__:30
+#: starlite.handlers.http.put.__init__:30
+msgid ""
+"A string keyed dictionary of arbitrary values that can be accessed in :class:"
+"`Guards <starlite.types.Guard>` or wherever you have access to :class:"
+"`Request <starlite.connection.request.Request>` or :class:`ASGI Scope "
+"<starlite.types.Scope>`."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__init__:35
+#: starlite.handlers.http.delete.__init__:32
+#: starlite.handlers.http.get.__init__:32
+#: starlite.handlers.http.head.__init__:36
+#: starlite.handlers.http.patch.__init__:32
+#: starlite.handlers.http.post.__init__:32
+#: starlite.handlers.http.put.__init__:32
+msgid ""
+"A custom subclass of :class:`Response <starlite.response.Response>` to be "
+"used as route handler's default response."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__init__:37
+#: starlite.handlers.http.HTTPRouteHandler.resolve_response_cookies:3
+#: starlite.handlers.http.delete.__init__:34
+#: starlite.handlers.http.get.__init__:34
+#: starlite.handlers.http.head.__init__:38
+#: starlite.handlers.http.patch.__init__:34
+#: starlite.handlers.http.post.__init__:34
+#: starlite.handlers.http.put.__init__:34
+msgid "A list of :class:`Cookie <starlite.datastructures.Cookie>` instances."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__init__:38
+#: starlite.handlers.http.delete.__init__:35
+#: starlite.handlers.http.get.__init__:35
+#: starlite.handlers.http.head.__init__:39
+#: starlite.handlers.http.patch.__init__:35
+#: starlite.handlers.http.post.__init__:35
+#: starlite.handlers.http.put.__init__:35
+msgid ""
+"A string keyed dictionary mapping :class:`ResponseHeader <starlite."
+"datastructures.ResponseHeader>` instances."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__init__:40
+#: starlite.handlers.http.delete.__init__:37
+#: starlite.handlers.http.get.__init__:37
+#: starlite.handlers.http.head.__init__:41
+#: starlite.handlers.http.patch.__init__:37
+#: starlite.handlers.http.post.__init__:37
+#: starlite.handlers.http.put.__init__:37
+msgid ""
+"A dictionary of additional status codes and a description of their expected "
+"content. This information will be included in the OpenAPI schema"
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__init__:42
+msgid ""
+"An http status code for the response. Defaults to ``200`` for mixed method "
+"or ``GET``, ``PUT`` and ``PATCH``, ``201`` for ``POST`` and ``204`` for "
+"``DELETE``."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__init__:44
+#: starlite.handlers.http.delete.__init__:40
+#: starlite.handlers.http.get.__init__:40
+#: starlite.handlers.http.head.__init__:44
+#: starlite.handlers.http.patch.__init__:40
+#: starlite.handlers.http.post.__init__:40
+#: starlite.handlers.http.put.__init__:40
+msgid ""
+"A boolean dictating whether the handler function will be executed in a "
+"worker thread or the main event loop. This has an effect only for sync "
+"handler functions. See using sync handler functions."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__init__:46
+#: starlite.handlers.http.delete.__init__:42
+#: starlite.handlers.http.get.__init__:42
+#: starlite.handlers.http.head.__init__:46
+#: starlite.handlers.http.patch.__init__:42
+#: starlite.handlers.http.post.__init__:42
+#: starlite.handlers.http.put.__init__:42
+msgid "A string describing the encoding of the content, e.g. ``\"base64\"``."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__init__:47
+#: starlite.handlers.http.delete.__init__:43
+#: starlite.handlers.http.get.__init__:43
+#: starlite.handlers.http.head.__init__:47
+#: starlite.handlers.http.patch.__init__:43
+#: starlite.handlers.http.post.__init__:43
+#: starlite.handlers.http.put.__init__:43
+msgid ""
+"A string designating the media-type of the content, e.g. ``\"image/png\"``."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__init__:48
+#: starlite.handlers.http.delete.__init__:44
+#: starlite.handlers.http.get.__init__:44
+#: starlite.handlers.http.head.__init__:48
+#: starlite.handlers.http.patch.__init__:44
+#: starlite.handlers.http.post.__init__:44
+#: starlite.handlers.http.put.__init__:44
+msgid ""
+"A boolean dictating whether this route should be marked as deprecated in the "
+"OpenAPI schema."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__init__:49
+#: starlite.handlers.http.delete.__init__:45
+#: starlite.handlers.http.get.__init__:45
+#: starlite.handlers.http.head.__init__:49
+#: starlite.handlers.http.patch.__init__:45
+#: starlite.handlers.http.post.__init__:45
+#: starlite.handlers.http.put.__init__:45
+msgid "Text used for the route's schema description section."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__init__:50
+#: starlite.handlers.http.delete.__init__:46
+#: starlite.handlers.http.get.__init__:46
+#: starlite.handlers.http.head.__init__:50
+#: starlite.handlers.http.patch.__init__:46
+#: starlite.handlers.http.post.__init__:46
+#: starlite.handlers.http.put.__init__:46
+msgid ""
+"A boolean flag dictating whether  the route handler should be documented in "
+"the OpenAPI schema."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__init__:51
+#: starlite.handlers.http.delete.__init__:47
+#: starlite.handlers.http.get.__init__:47
+#: starlite.handlers.http.head.__init__:51
+#: starlite.handlers.http.patch.__init__:47
+#: starlite.handlers.http.post.__init__:47
+#: starlite.handlers.http.put.__init__:47
+msgid ""
+"An identifier used for the route's schema operationId. Defaults to the "
+"``__name__`` of the wrapped function."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__init__:52
+#: starlite.handlers.http.delete.__init__:48
+#: starlite.handlers.http.get.__init__:48
+#: starlite.handlers.http.head.__init__:52
+#: starlite.handlers.http.patch.__init__:48
+#: starlite.handlers.http.post.__init__:48
+#: starlite.handlers.http.put.__init__:48
+msgid ""
+"A list of exception classes extending from starlite.HttpException that is "
+"used for the OpenAPI documentation. This list should describe all exceptions "
+"raised within the route handler's function/method. The Starlite "
+"ValidationException will be added automatically for the schema if any "
+"validation is involved."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__init__:55
+#: starlite.handlers.http.delete.__init__:51
+#: starlite.handlers.http.get.__init__:51
+#: starlite.handlers.http.head.__init__:55
+#: starlite.handlers.http.patch.__init__:51
+#: starlite.handlers.http.post.__init__:51
+#: starlite.handlers.http.put.__init__:51
+msgid "Text used for the route's response schema description section."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__init__:56
+#: starlite.handlers.http.delete.__init__:52
+#: starlite.handlers.http.get.__init__:52
+#: starlite.handlers.http.head.__init__:56
+#: starlite.handlers.http.patch.__init__:52
+#: starlite.handlers.http.post.__init__:52
+#: starlite.handlers.http.put.__init__:52
+msgid ""
+"A list of dictionaries that contain information about which security scheme "
+"can be used on the endpoint."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__init__:57
+#: starlite.handlers.http.delete.__init__:53
+#: starlite.handlers.http.get.__init__:53
+#: starlite.handlers.http.head.__init__:57
+#: starlite.handlers.http.patch.__init__:53
+#: starlite.handlers.http.post.__init__:53
+#: starlite.handlers.http.put.__init__:53
+msgid "Text used for the route's schema summary section."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__init__:58
+#: starlite.handlers.http.delete.__init__:54
+#: starlite.handlers.http.head.__init__:58
+#: starlite.handlers.http.patch.__init__:54
+#: starlite.handlers.http.post.__init__:54
+#: starlite.handlers.http.put.__init__:54
+msgid "A list of string tags that will be appended to the OpenAPI schema."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__init__:59
+#: starlite.handlers.http.delete.__init__:55
+#: starlite.handlers.http.get.__init__:56
+#: starlite.handlers.http.head.__init__:59
+#: starlite.handlers.http.patch.__init__:55
+#: starlite.handlers.http.post.__init__:55
+#: starlite.handlers.http.put.__init__:55
+msgid ""
+"A mapping of types to callables that transform them into types supported for "
+"serialization."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__init__:60
+#: starlite.handlers.http.delete.__init__:56
+#: starlite.handlers.http.get.__init__:57
+#: starlite.handlers.http.head.__init__:60
+#: starlite.handlers.http.patch.__init__:56
+#: starlite.handlers.http.post.__init__:56
+#: starlite.handlers.http.put.__init__:56
+msgid "Any additional kwarg - will be set in the opt dictionary."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.__call__:1
+msgid "Replace a function with itself."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.resolve_response_class:1
+msgid ""
+"Return the closest custom Response class in the owner graph or the default "
+"Response class."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.resolve_response_class:3
+#: starlite.handlers.http.HTTPRouteHandler.resolve_response_handler:3
+msgid "This method is memoized so the computation occurs only once."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.resolve_after_response:0
+#: starlite.handlers.http.HTTPRouteHandler.resolve_before_request:0
+#: starlite.handlers.http.HTTPRouteHandler.resolve_response_class:0
+#: starlite.handlers.http.HTTPRouteHandler.resolve_response_cookies:0
+#: starlite.handlers.http.HTTPRouteHandler.resolve_response_handler:0
+#: starlite.handlers.http.HTTPRouteHandler.resolve_response_headers:0
+#: starlite.handlers.http.HTTPRouteHandler.resolve_type_encoders:0
+#: starlite.handlers.http.HTTPRouteHandler.to_response:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.resolve_response_class:5
+msgid ""
+"The default :class:`Response <starlite.response.Response>` class for the "
+"route handler."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.resolve_response_headers:1
+msgid "Return all header parameters in the scope of the handler function."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.resolve_response_headers:3
+msgid ""
+"A dictionary mapping keys to :class:`ResponseHeader <starlite.datastructures."
+"ResponseHeader>` instances."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.resolve_response_cookies:1
+msgid ""
+"Return a list of Cookie instances. Filters the list to ensure each cookie "
+"key is unique."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.resolve_before_request:1
+msgid ""
+"Resolve the before_handler handler by starting from the route handler and "
+"moving up."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.resolve_after_response:3
+#: starlite.handlers.http.HTTPRouteHandler.resolve_before_request:3
+msgid ""
+"If a handler is found it is returned, otherwise None is set. This method is "
+"memoized so the computation occurs only once."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.resolve_before_request:6
+msgid ""
+"An optional :class:`before request lifecycle hook handler <starlite.types."
+"BeforeRequestHookHandler>`"
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.resolve_after_response:1
+msgid ""
+"Resolve the after_response handler by starting from the route handler and "
+"moving up."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.resolve_after_response:6
+msgid ""
+"An optional :class:`after response lifecycle hook handler <starlite.types."
+"AfterResponseHookHandler>`"
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.resolve_type_encoders:1
+msgid ""
+"Resolve ``type_encoders`` by merging existing ``type_encoders`` from all "
+"layers."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.resolve_type_encoders:3
+msgid "A ``TypeEncodersMap`` to use for this response or ``None``"
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.resolve_response_handler:1
+msgid "Resolve the response_handler function for the route handler."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.resolve_response_handler:5
+msgid "Async Callable to handle an HTTP Request"
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.to_response:1
+msgid ""
+"Return a :class:`Response <starlite.Response>` from the handler by resolving "
+"and calling it."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.to_response:3
+msgid "The :class:`Starlite <starlite.app.Starlite>` app instance"
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.to_response:4
+msgid ""
+"Either an instance of a :class:`ResponseContainer <starlite.datastructures."
+"ResponseContainer>`, a Response instance or an arbitrary value."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.to_response:6
+msgid "An optional mapping of plugins"
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.to_response:7
+msgid "A :class:`Request <starlite.connection.request.Request>` instance"
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.HTTPRouteHandler.to_response:9
+msgid "A Response instance"
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.delete:1 starlite.handlers.http.get:1
+#: starlite.handlers.http.head:1 starlite.handlers.http.patch:1
+#: starlite.handlers.http.post:1 starlite.handlers.http.put:1
+msgid "Bases: :py:class:`~starlite.handlers.http.HTTPRouteHandler`"
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.get:1
+msgid "GET Route Decorator."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.get:3
+msgid "Use this decorator to decorate an HTTP handler for GET requests."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.get.__init__:1
+msgid "Initialize ``get``."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.get.__init__:39
+#: starlite.handlers.http.head.__init__:43
+#: starlite.handlers.http.patch.__init__:39
+#: starlite.handlers.http.put.__init__:39
+msgid "An http status code for the response. Defaults to ``200``."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.get.__init__:54
+msgid ""
+"A list of string tags that will be appended to the OpenAPI schema. "
+"type_encoders: A mapping of types to callables that transform them into "
+"types supported for serialization."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.head:1
+msgid "HEAD Route Decorator."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.head:3
+msgid "Use this decorator to decorate an HTTP handler for HEAD requests."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.head.__init__:1
+msgid "Initialize ``head``."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.head.__init__:3
+msgid "Notes"
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.head.__init__:5
+msgid "A response to a head request cannot include a body."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.head.__init__:6
+msgid ""
+"See: [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/HEAD)."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.post:1
+msgid "POST Route Decorator."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.post:3
+msgid "Use this decorator to decorate an HTTP handler for POST requests."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.post.__init__:1
+msgid "Initialize ``post``"
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.post.__init__:39
+msgid "An http status code for the response. Defaults to ``201`` for ``POST``."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.put:1
+msgid "PUT Route Decorator."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.put:3
+msgid "Use this decorator to decorate an HTTP handler for PUT requests."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.put.__init__:1
+msgid "Initialize ``put``"
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.patch:1
+msgid "PATCH Route Decorator."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.patch:3
+msgid "Use this decorator to decorate an HTTP handler for PATCH requests."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.patch.__init__:1
+msgid "Initialize ``patch``."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.delete:1
+msgid "DELETE Route Decorator."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.delete:3
+msgid "Use this decorator to decorate an HTTP handler for DELETE requests."
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.delete.__init__:1
+msgid "Initialize ``delete``"
+msgstr ""
+
+#: ../../../../starlite/handlers/http.py:docstring of
+#: starlite.handlers.http.delete.__init__:39
+msgid "An http status code for the response. Defaults to ``204``."
+msgstr ""

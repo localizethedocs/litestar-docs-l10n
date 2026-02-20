@@ -1,0 +1,431 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/utils/extractors.rst:2
+msgid "extractors"
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.obfuscate:1
+msgid "Obfuscate values in a dictionary, replacing values with `******`"
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.__call__:0
+#: starlite.utils.extractors.ConnectionDataExtractor.__init__:0
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_body:0
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_client:0
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_content_type:0
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_cookies:0
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_headers:0
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_method:0
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_path:0
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_path_params:0
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_query:0
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_scheme:0
+#: starlite.utils.extractors.ResponseDataExtractor.__call__:0
+#: starlite.utils.extractors.ResponseDataExtractor.__init__:0
+#: starlite.utils.extractors.ResponseDataExtractor.extract_cookies:0
+#: starlite.utils.extractors.ResponseDataExtractor.extract_headers:0
+#: starlite.utils.extractors.ResponseDataExtractor.extract_response_body:0
+#: starlite.utils.extractors.ResponseDataExtractor.extract_status_code:0
+#: starlite.utils.extractors.obfuscate:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.obfuscate:3
+msgid "A dictionary of strings"
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.obfuscate:4
+msgid "keys to obfuscate"
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.__call__:0
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_body:0
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_client:0
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_content_type:0
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_cookies:0
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_headers:0
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_method:0
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_path:0
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_path_params:0
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_query:0
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_scheme:0
+#: starlite.utils.extractors.ResponseDataExtractor.__call__:0
+#: starlite.utils.extractors.ResponseDataExtractor.extract_cookies:0
+#: starlite.utils.extractors.ResponseDataExtractor.extract_headers:0
+#: starlite.utils.extractors.ResponseDataExtractor.extract_response_body:0
+#: starlite.utils.extractors.ResponseDataExtractor.extract_status_code:0
+#: starlite.utils.extractors.obfuscate:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.obfuscate:6
+msgid "A dictionary with obfuscated strings"
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ExtractedRequestData:1
+#: starlite.utils.extractors.ExtractedResponseData:1
+msgid "Bases: :py:class:`~typing_extensions.TypedDict`"
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ExtractedRequestData:1
+msgid "Dictionary representing extracted request data."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor:1
+#: starlite.utils.extractors.ResponseDataExtractor:1
+msgid "Bases: :py:class:`object`"
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor:1
+msgid ""
+"Utility class to extract data from an :class:`ASGIConnection <starlite."
+"connection.ASGIConnection>`, :class:`Request <starlite.connection.Request>` "
+"or :class:`WebSocket <starlite.connection.WebSocket>` instance."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.__init__:1
+msgid "Initialize ``ConnectionDataExtractor``"
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.__init__:3
+msgid "Whether to extract body, (for requests only)."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.__init__:4
+msgid "Whether to extract the client (host, port) mapping."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.__init__:5
+msgid "Whether to extract the content type and any options."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.__init__:6
+msgid "Whether to extract cookies."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.__init__:7
+msgid "Whether to extract headers."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.__init__:8
+msgid "Whether to extract the HTTP method, (for requests only)."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.__init__:9
+msgid "Whether to extract the path."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.__init__:10
+msgid "Whether to extract path parameters."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.__init__:11
+msgid "Whether to extract query parameters."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.__init__:12
+msgid "Whether to extract the http scheme."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.__init__:13
+#: starlite.utils.extractors.ResponseDataExtractor.__init__:8
+msgid "headers keys to obfuscate. Obfuscated values are replaced with '*****'."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.__init__:14
+#: starlite.utils.extractors.ResponseDataExtractor.__init__:7
+msgid "cookie keys to obfuscate. Obfuscated values are replaced with '*****'."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.__init__:15
+msgid ""
+"Whether to parse the body value or return the raw byte string, (for requests "
+"only)."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.__init__:16
+msgid "Whether to parse query parameters or return the raw byte string."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.__call__:1
+msgid "Extract data from the connection, returning a dictionary of values."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.__call__:3
+msgid "Notes"
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.__call__:5
+msgid ""
+"The value for ``body`` - if present - is an unresolved Coroutine and as such "
+"should be awaited by the receiver."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.__call__:7
+msgid "An ASGI connection or its subclasses."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.__call__:9
+#: starlite.utils.extractors.ResponseDataExtractor.__call__:7
+msgid "A string keyed dictionary of extracted values."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_scheme:1
+msgid "Extract the scheme from an ``ASGIConnection``"
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_client:3
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_cookies:3
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_headers:3
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_path:3
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_path_params:3
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_query:3
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_scheme:3
+msgid ""
+"An :class:`ASGIConnection <starlite.connection.ASGIConnection>` instance."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_scheme:5
+msgid "The connection's scope[\"scheme\"] value"
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_client:1
+msgid "Extract the client from an ``ASGIConnection``"
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_client:5
+msgid "The connection's scope[\"client\"] value or a default value."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_path:1
+msgid "Extract the path from an ``ASGIConnection``"
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_path:5
+msgid "The connection's scope[\"path\"] value"
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_headers:1
+msgid "Extract headers from an ``ASGIConnection``"
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_headers:5
+msgid "A dictionary with the connection's headers."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_cookies:1
+msgid "Extract cookies from an ``ASGIConnection``"
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_cookies:5
+msgid "A dictionary with the connection's cookies."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_query:1
+msgid "Extract query from an ``ASGIConnection``"
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_query:5
+msgid ""
+"Either a dictionary with the connection's parsed query string or the raw "
+"query byte-string."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_path_params:1
+msgid "Extract the path parameters from an ``ASGIConnection``"
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_path_params:5
+msgid "A dictionary with the connection's path parameters."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_method:1
+msgid "Extract the method from an ``ASGIConnection``"
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_body:3
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_content_type:3
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_method:3
+msgid "A :class:`Request <starlite.connection.Request>` instance."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_method:5
+msgid "The request's scope[\"method\"] value."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_content_type:1
+msgid "Extract the content-type from an ``ASGIConnection``"
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_content_type:5
+msgid "A tuple containing the request's parsed 'Content-Type' header."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_body:1
+msgid "Extract the body from an ``ASGIConnection``"
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ConnectionDataExtractor.extract_body:5
+msgid "Either the parsed request body or the raw byte-string."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ExtractedResponseData:1
+msgid "Dictionary representing extracted response data."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ResponseDataExtractor:1
+msgid "Utility class to extract data from a ``Message``"
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ResponseDataExtractor.__init__:1
+msgid "Initialize ``ResponseDataExtractor`` with options."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ResponseDataExtractor.__init__:3
+msgid "Whether to extract the body."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ResponseDataExtractor.__init__:4
+msgid "Whether to extract the cookies."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ResponseDataExtractor.__init__:5
+msgid "Whether to extract the headers."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ResponseDataExtractor.__init__:6
+msgid "Whether to extract the status code."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ResponseDataExtractor.__call__:1
+msgid "Extract data from the response, returning a dictionary of values."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ResponseDataExtractor.__call__:3
+#: starlite.utils.extractors.ResponseDataExtractor.extract_cookies:3
+#: starlite.utils.extractors.ResponseDataExtractor.extract_headers:3
+#: starlite.utils.extractors.ResponseDataExtractor.extract_response_body:3
+#: starlite.utils.extractors.ResponseDataExtractor.extract_status_code:3
+msgid ""
+"A tuple containing :class:`HTTPResponseStartEvent <starlite.types.asgi_types."
+"HTTPResponseStartEvent>` and :class:`HTTPResponseBodyEvent <starlite.types."
+"asgi_types.HTTPResponseBodyEvent>`."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ResponseDataExtractor.extract_response_body:1
+msgid "Extract the response body from a ``Message``"
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ResponseDataExtractor.extract_response_body:7
+msgid "The Response's body as a byte-string."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ResponseDataExtractor.extract_status_code:1
+msgid "Extract a status code from a ``Message``"
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ResponseDataExtractor.extract_status_code:7
+msgid "The Response's status-code."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ResponseDataExtractor.extract_headers:1
+msgid "Extract headers from a ``Message``"
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ResponseDataExtractor.extract_headers:7
+msgid "The Response's headers dict."
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ResponseDataExtractor.extract_cookies:1
+msgid "Extract cookies from a ``Message``"
+msgstr ""
+
+#: ../../../../starlite/utils/extractors.py:docstring of
+#: starlite.utils.extractors.ResponseDataExtractor.extract_cookies:7
+msgid "The Response's cookies dict."
+msgstr ""

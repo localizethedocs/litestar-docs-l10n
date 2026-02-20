@@ -1,0 +1,226 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/router.rst:2
+msgid "starlite.router"
+msgstr ""
+
+#: ../../../../starlite/router.py:docstring of starlite.router.Router:1
+msgid "Bases: :py:class:`object`"
+msgstr ""
+
+#: ../../../../starlite/router.py:docstring of starlite.router.Router:1
+msgid "The Starlite Router class."
+msgstr ""
+
+#: ../../../../starlite/router.py:docstring of starlite.router.Router:3
+msgid ""
+"A Router instance is used to group controller, routers and route handler "
+"functions under a shared path fragment"
+msgstr ""
+
+#: ../../../../starlite/router.py:docstring of
+#: starlite.router.Router.__init__:1
+msgid "Initialize a ``Router``."
+msgstr ""
+
+#: ../../../../starlite/router.py:docstring of
+#: starlite.router.Router.__init__:0 starlite.router.Router.register:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../starlite/router.py:docstring of
+#: starlite.router.Router.__init__:3
+msgid ""
+"A sync or async function executed before a :class:`Request <starlite."
+"connection.Request>` is passed to any route handler. If this function "
+"returns a value, the request will not reach the route handler, and instead "
+"this value will be used."
+msgstr ""
+
+#: ../../../../starlite/router.py:docstring of
+#: starlite.router.Router.__init__:6
+msgid ""
+"A sync or async function called after the response has been awaited. It "
+"receives the :class:`Request <starlite.connection.Request>` object and "
+"should not return any values."
+msgstr ""
+
+#: ../../../../starlite/router.py:docstring of
+#: starlite.router.Router.__init__:8
+msgid ""
+"A sync or async function called immediately before calling the route "
+"handler. Receives the :class:`starlite.connection.Request` instance and any "
+"non-``None`` return value is used for the response, bypassing the route "
+"handler."
+msgstr ""
+
+#: ../../../../starlite/router.py:docstring of
+#: starlite.router.Router.__init__:11
+msgid ""
+"A ``cache-control`` header of type :class:`CacheControlHeader <starlite."
+"datastructures.CacheControlHeader>` to add to route handlers of this router. "
+"Can be overridden by route handlers."
+msgstr ""
+
+#: ../../../../starlite/router.py:docstring of
+#: starlite.router.Router.__init__:14
+msgid ""
+"A string keyed dictionary of dependency :class:`Provider <starlite."
+"datastructures.Provide>` instances."
+msgstr ""
+
+#: ../../../../starlite/router.py:docstring of
+#: starlite.router.Router.__init__:16
+msgid ""
+"An ``etag`` header of type :class:`ETag <starlite.datastructures.ETag>` to "
+"add to route handlers of this router. Can be overridden by route handlers."
+msgstr ""
+
+#: ../../../../starlite/router.py:docstring of
+#: starlite.router.Router.__init__:18
+msgid ""
+"A dictionary that maps handler functions to status codes and/or exception "
+"types."
+msgstr ""
+
+#: ../../../../starlite/router.py:docstring of
+#: starlite.router.Router.__init__:19
+msgid "A list of :class:`Guard <starlite.types.Guard>` callables."
+msgstr ""
+
+#: ../../../../starlite/router.py:docstring of
+#: starlite.router.Router.__init__:20
+msgid "A list of :class:`Middleware <starlite.types.Middleware>`."
+msgstr ""
+
+#: ../../../../starlite/router.py:docstring of
+#: starlite.router.Router.__init__:21
+msgid ""
+"A string keyed dictionary of arbitrary values that can be accessed in :class:"
+"`Guards <starlite.types.Guard>` or wherever you have access to :class:"
+"`Request <starlite.connection.request.Request>` or :class:`ASGI Scope "
+"<starlite.types.Scope>`."
+msgstr ""
+
+#: ../../../../starlite/router.py:docstring of
+#: starlite.router.Router.__init__:24
+msgid ""
+"A mapping of :class:`Parameter <starlite.params.Parameter>` definitions "
+"available to all application paths."
+msgstr ""
+
+#: ../../../../starlite/router.py:docstring of
+#: starlite.router.Router.__init__:26
+msgid ""
+"A path fragment that is prefixed to all route handlers, controllers and "
+"other routers associated with the router instance."
+msgstr ""
+
+#: ../../../../starlite/router.py:docstring of
+#: starlite.router.Router.__init__:28
+msgid ""
+"A custom subclass of [starlite.response.Response] to be used as the default "
+"for all route handlers, controllers and other routers associated with the "
+"router instance."
+msgstr ""
+
+#: ../../../../starlite/router.py:docstring of
+#: starlite.router.Router.__init__:30
+msgid "A list of [Cookie](starlite.datastructures.Cookie] instances."
+msgstr ""
+
+#: ../../../../starlite/router.py:docstring of
+#: starlite.router.Router.__init__:31
+msgid ""
+"A string keyed dictionary mapping :class:`ResponseHeader <starlite."
+"datastructures.ResponseHeader>` instances."
+msgstr ""
+
+#: ../../../../starlite/router.py:docstring of
+#: starlite.router.Router.__init__:33
+msgid ""
+"A required list of route handlers, which can include instances of :class:"
+"`Router <starlite.router.Router>`, subclasses of :class:`Controller "
+"<starlite.controller.Controller>` or any function decorated by the route "
+"handler decorators."
+msgstr ""
+
+#: ../../../../starlite/router.py:docstring of
+#: starlite.router.Router.__init__:37
+msgid ""
+"A list of dictionaries that will be added to the schema of all route "
+"handlers under the router."
+msgstr ""
+
+#: ../../../../starlite/router.py:docstring of
+#: starlite.router.Router.__init__:38
+msgid ""
+"A list of string tags that will be appended to the schema of all route "
+"handlers under the router."
+msgstr ""
+
+#: ../../../../starlite/router.py:docstring of
+#: starlite.router.Router.__init__:39
+msgid ""
+"A mapping of types to callables that transform them into types supported for "
+"serialization."
+msgstr ""
+
+#: ../../../../starlite/router.py:docstring of
+#: starlite.router.Router.register:1
+msgid "Register a Controller, Route instance or RouteHandler on the router."
+msgstr ""
+
+#: ../../../../starlite/router.py:docstring of
+#: starlite.router.Router.register:3
+msgid ""
+"a subclass or instance of Controller, an instance of ``Router`` or a "
+"function/method that has been decorated by any of the routing decorators, e."
+"g. :class:`get <starlite.handlers.http.get>`, :class:`post <starlite."
+"handlers.http.post>`."
+msgstr ""
+
+#: ../../../../starlite/router.py:docstring of
+#: starlite.router.Router.register:0
+#: starlite.router.Router.route_handler_method_map:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/router.py:docstring of
+#: starlite.router.Router.register:7
+msgid "Collection of handlers added to the router."
+msgstr ""
+
+#: ../../../../starlite/router.py:docstring of
+#: starlite.router.Router.route_handler_method_map:1
+msgid ""
+"Map route paths to :class:`RouteHandlerMapItem <starlite.types.internal_typ "
+"es.RouteHandlerMapItem>`"
+msgstr ""
+
+#: ../../../../starlite/router.py:docstring of
+#: starlite.router.Router.route_handler_method_map:3
+msgid "A dictionary mapping paths to route handlers"
+msgstr ""
+
+#: ../../../../starlite/router.py:docstring of
+#: starlite.router.Router.get_route_handler_map:1
+msgid "Map route handlers to HTTP methods."
+msgstr ""

@@ -1,0 +1,467 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../../CONTRIBUTING.rst:2
+msgid "Contribution guide"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:5
+msgid "Setting up the environment"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:7
+msgid "Install `poetry <https://python-poetry.org/>`_"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:8
+msgid ""
+"Run ``poetry install`` to create a `virtual environment <https://docs.python."
+"org/3/tutorial/venv.html>`_ and install the dependencies"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:10
+msgid ""
+"If you're working on the documentation and need to build it locally, install "
+"the extra dependencies with ``poetry install --with docs``"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:11
+msgid "Install `pre-commit <https://pre-commit.com/>`_"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:12
+msgid "Run ``pre-commit install`` to install pre-commit hooks"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:16
+msgid "Code contributions"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:19
+msgid "Workflow"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:21
+msgid ""
+"`Fork <https://github.com/starlite-api/starlite/fork>`_ the `Starlite "
+"repository <https://github.com/starlite-api/starlite>`_"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:22
+msgid "Clone your fork locally with git"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:23
+msgid "`Set up the environment <#setting-up-the-environment>`_"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:24
+msgid "Make your changes"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:25
+msgid ""
+"(Optional) Run ``pre-commit run --all-files`` to run linters and formatters. "
+"This step is optional and will be executed automatically by git before you "
+"make a commit, but you may want to run it manually in order to apply fixes"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:27
+msgid "Commit your changes to git"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:28
+msgid "Push the changes to your fork"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:29
+msgid ""
+"Open a `pull request <https://docs.github.com/en/pull-requests>`_. Give the "
+"pull request a descriptive title indicating what it changes. If it has a "
+"corresponding open issue, the issue number should be included in the title "
+"as well. For example a pull request that fixes issue ``Bug: Increased stack "
+"size making it impossible to find needle #100`` could be titled ``Fix #100 - "
+"Make needles easier to find by applying fire to haystack``"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:33
+msgid ""
+"Add yourself as a contributor using the `all-contributors bot <https://"
+"allcontributors.org/docs/en/bot/usage>`_"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:37
+msgid "Guidelines for writing code"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:39
+msgid "Code should be `Pythonic and zen <https://peps.python.org/pep-0020/>`_"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:40
+msgid ""
+"All code should be fully `typed <https://peps.python.org/pep-0484/>`_. This "
+"is enforced via `mypy <https://mypy.readthedocs.io/en/stable/>`_ and "
+"`pyright <https://github.com/microsoft/pyright>`_"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:43
+msgid ""
+"When requiring complex types, use a `type alias <https://docs.python.org/3/"
+"library/typing.html#type-aliases>`_. Check ``starlite/types`` if a type "
+"alias for your use case already exists"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:45
+msgid ""
+"If something cannot be typed correctly due to a limitation of the type "
+"checkers, you may use `typing.cast <https://docs.python.org/3/library/typing."
+"html#typing.cast>`_ to rectify the situation. However, you should only use "
+"as a last resort if you've exhausted all other options of `type narrowing "
+"<https://mypy.readthedocs.io/en/stable/type_narrowing.html>`_, such as "
+"`isinstance() <https://docs.python.org/3/library/functions."
+"html#isinstance>`_ checks and `type guards <https://docs.python.org/3/"
+"library/typing.html#typing.TypeGuard>`_"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:51
+msgid ""
+"You may use ``type: ignore`` if you ensured that a line is correct, but "
+"mypy / pyright has issues with it. Don't use blank ``type: ignore`` though, "
+"and instead supply the specific error code, e.g. ``type: ignore[attr-"
+"defined]``"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:54
+msgid ""
+"If you are adding or modifying existing code, ensure that it's fully tested. "
+"100% test coverage is mandatory, and will be checked on the PR using "
+"`SonarCloud <https://www.sonarsource.com/products/sonarcloud/>`_"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:56
+msgid ""
+"All functions, methods, classes and attributes should be documented with a "
+"docstring. We use the `Google docstring style <https://sphinxcontrib-"
+"napoleon.readthedocs.io/en/latest/example_google.html>`_. If you come across "
+"a function or method that doesn't conform to this standard, please update it "
+"as you go"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:59
+msgid ""
+"When adding a new public interface, it has to be  included in the reference "
+"documentation located in ``docs/reference``. If applicable, add or modify "
+"examples in the docs related to the new functionality implemented, following "
+"the guidelines established in `Adding examples`_"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:65
+msgid "Writing and running tests"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:67
+msgid ""
+"Tests are contained within the ``tests`` directory, and follow the same "
+"directory structure as the ``starlite`` module. If you are adding a test "
+"case, it should be located within the correct submodule of ``tests``. E.g. "
+"tests for ``starlite/utils./sync.py`` reside in ``tests/utils/test_sync.py``."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:71
+msgid "The ``Makefile`` includes several commands for running tests:"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:73
+msgid "``make test`` to run tests located in ``tests``"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:74
+msgid "``make test-examples`` to run tests located in ``docs/examples/tests``"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:75
+msgid "``make test-all`` to run all tests"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:76
+msgid ""
+"``make coverage`` to run tests with coverage and generate an html report"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:80
+msgid "Project documentation"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:82
+msgid ""
+"The documentation is located in the ``/docs`` directory and is `ReST "
+"<https://docutils.sourceforge.io/rst.html>`_ and `Sphinx <https://www.sphinx-"
+"doc.org/en/master/>`_. If you're unfamiliar with any of those, "
+"`ReStructuredText primer <https://www.sphinx-doc.org/en/master/usage/"
+"restructuredtext/basics.html>`_ and `Sphinx quickstart <https://www.sphinx-"
+"doc.org/en/master/usage/quickstart.html>`_ are recommended reads."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:88
+msgid "Docs theme and appearance"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:90
+msgid ""
+"We welcome contributions that enhance / improve the appearance and usability "
+"of the docs. We use the excellent `Furo <https://pradyunsg.me/furo/"
+"quickstart/>`_ theme, which comes with a lot of options out of the box. If "
+"you wish to contribute to the docs style / setup, or static site generation, "
+"you should consult the theme docs as a first step."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:95
+msgid "Running the docs locally"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:97
+msgid ""
+"To run or build the docs locally, you need to first install the required "
+"dependencies:"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:99
+msgid "``poetry install --with docs``"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:101
+msgid ""
+"Then you can serve the documentation with ``make docs-serve``, or build them "
+"with ``make docs``"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:104
+msgid "Writing and editing docs"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:106
+msgid ""
+"We welcome contributions that enhance / improve the content of the docs. "
+"Feel free to add examples, clarify text, restructure the docs etc., but make "
+"sure to follow these guidelines:"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:109
+msgid "Write text in idiomatic english, using simple language"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:110
+msgid "Keep examples simple and self contained"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:111
+msgid "Provide links where applicable"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:112
+msgid ""
+"Use `intersphinx <https://www.sphinx-doc.org/en/master/usage/extensions/"
+"intersphinx.html>`_ wherever possible when referencing external libraries"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:114
+msgid ""
+"Provide diagrams using `mermaidjs <https://mermaid.js.org/>`_ where "
+"applicable and possible"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:117
+msgid "Adding examples"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:119
+msgid ""
+"The examples from the docs are located in their own modules inside the ``/"
+"docs/examples`` folder. This makes it easier to test them alongside the rest "
+"of the test suite, ensuring they do not become stale as Starlite evolves."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:122
+msgid "Please follow the next guidelines when adding a new example:"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:124
+msgid ""
+"Add the example in the corresponding module directory in ``/docs/examples`` "
+"or create a new one if necessary"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:125
+msgid ""
+"Create a suite for the module in ``/docs/examples/tests`` that tests the "
+"aspects of the example that it demonstrates"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:126
+msgid ""
+"Reference the example in the rst file with an external reference code block, "
+"e.g."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:128
+msgid ""
+".. literalinclude:: /examples/test_thing.py\n"
+"  :caption: test_thing.py\n"
+"  :language: python"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:135
+msgid "Automatically execute examples"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:137
+msgid ""
+"Our docs include a Sphinx extension that can automatically run requests "
+"against example apps and include their result in the documentation page when "
+"its being built. This only requires 2 steps:"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:140
+msgid ""
+"Create an example file with an ``app`` object in it, which is an instance of "
+"``Starlite``"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:141
+msgid "Add a comment in the form of ``# run: /hello`` to the example file"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:143
+msgid ""
+"When building the docs (or serving them locally), a process serving the "
+"``app`` instance will be launched, and the requests specified in the "
+"comments will be run against it. The comments will be stripped from the "
+"result, and the output of the ``curl`` invocation inserted after the example "
+"code-block."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:148
+msgid ""
+"The ``# run:`` syntax is nothing special; Everything after the colon will be "
+"passed to the ``curl`` command that's being invoked. The URL is built "
+"automatically, so the specified path can just be a path relative to the app."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:152
+msgid "In practice, this looks like the following:"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:154
+msgid ""
+"from typing import Dict\n"
+"\n"
+"from starlite import Starlite, get\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"def hello_world() -> Dict[str, str]:\n"
+"    \"\"\"Handler function that returns a greeting dictionary.\"\"\"\n"
+"    return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[hello_world])\n"
+"\n"
+"# run: /"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:172
+msgid "This is equivalent to:"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:175
+msgid ""
+".. code-block:: python\n"
+"\n"
+"    from typing import Dict\n"
+"\n"
+"    from starlite import Starlite, get\n"
+"\n"
+"\n"
+"    @get(\"/\")\n"
+"    def hello_world() -> Dict[str, str]:\n"
+"        \"\"\"Handler function that returns a greeting dictionary.\"\"\"\n"
+"        return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"    app = Starlite(route_handlers=[hello_world])\n"
+"\n"
+"\n"
+".. admonition:: Run it\n"
+"\n"
+"    .. code-block:: bash\n"
+"\n"
+"        > curl http://127.0.0.1:8000/\n"
+"        {\"hello\": \"world\"}"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:202
+msgid "Creating a new release"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:204
+msgid ""
+"Increment the version in ``pyproject.toml`` according to the `versioning "
+"scheme <https://starlite-api.github.io/starlite/latest/starlite-versions."
+"html#version-numbering>`_"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:206
+msgid ""
+"`Draft a new release <https://github.com/starlite-api/starlite/releases/"
+"new>`_ on GitHub"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:208
+msgid ""
+"Use ``vMAJOR.MINOR.PATCH`` (e.g. ``v1.2.3``) as both the tag and release "
+"title"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:209
+msgid ""
+"Fill in the release description. You can use the \"Generate release notes\" "
+"function to get a draft for this"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:211
+msgid ""
+"Update ``CHANGELOG.rst`` by adding a new section, with the version number as "
+"a heading. Include the contents of the release notes as they relate to "
+"changes in code"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:213
+msgid "Commit your changes and push to ``main``"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:214
+msgid "Publish the release"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:215
+msgid ""
+"Check that the \"publish\" `action <https://github.com/starlite-api/starlite/"
+"actions>`_ has run successfully"
+msgstr ""

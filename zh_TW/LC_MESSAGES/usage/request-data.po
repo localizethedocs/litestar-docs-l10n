@@ -1,0 +1,540 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../usage/request-data.rst:2
+msgid "Request data"
+msgstr ""
+
+#: ../../../usage/request-data.rst:5
+msgid "Request body"
+msgstr ""
+
+#: ../../../usage/request-data.rst:7
+msgid ""
+"The body of HTTP requests can be accessed using the special ``data`` "
+"parameter in a handler function."
+msgstr ""
+
+#: ../../../usage/request-data.rst:0
+msgid "Python 3.8+"
+msgstr "Python 3.8+"
+
+#: ../../../usage/request-data.rst:10
+msgid ""
+"from typing import Dict\n"
+"\n"
+"from starlite import Starlite, post\n"
+"\n"
+"\n"
+"@post(path=\"/\")\n"
+"async def index(data: Dict[str, str]) -> Dict[str, str]:\n"
+"    return data\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[index])"
+msgstr ""
+
+#: ../../../usage/request-data.rst:0
+msgid "Python 3.10+"
+msgstr "Python 3.10+"
+
+#: ../../../usage/request-data.rst:10
+msgid ""
+"from starlite import Starlite, post\n"
+"\n"
+"\n"
+"@post(path=\"/\")\n"
+"async def index(data: dict[str, str]) -> dict[str, str]:\n"
+"    return data\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[index])"
+msgstr ""
+
+#: ../../../usage/request-data.rst:14
+msgid "The type of ``data`` an be any supported type, including"
+msgstr ""
+
+#: ../../../usage/request-data.rst:17
+msgid ":func:`dataclasses <dataclasses.dataclass>`"
+msgstr ""
+
+#: ../../../usage/request-data.rst:18
+msgid ":class:`TypedDicts <typing.TypedDict>`"
+msgstr ""
+
+#: ../../../usage/request-data.rst:19
+msgid "Pydantic models"
+msgstr ""
+
+#: ../../../usage/request-data.rst:20
+msgid "Arbitrary stdlib types"
+msgstr ""
+
+#: ../../../usage/request-data.rst:21
+msgid "Typed supported via :doc:`plugins </usage/plugins/index>`"
+msgstr ""
+
+#: ../../../usage/request-data.rst:24
+msgid ""
+"from dataclasses import dataclass\n"
+"\n"
+"from starlite import Starlite, post\n"
+"\n"
+"\n"
+"@dataclass\n"
+"class User:\n"
+"    id: int\n"
+"    name: str\n"
+"\n"
+"\n"
+"@post(path=\"/\")\n"
+"async def index(data: User) -> User:\n"
+"    return data\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[index])"
+msgstr ""
+
+#: ../../../usage/request-data.rst:29
+msgid "Validation and customizing OpenAPI documentation"
+msgstr ""
+
+#: ../../../usage/request-data.rst:31
+msgid ""
+"With the help of :class:`Body <starlite.params.Body>`, you have fine-grained "
+"control over the validation of the request body, and can also customize the "
+"OpenAPI documentation:"
+msgstr ""
+
+#: ../../../usage/request-data.rst:35
+msgid ""
+"from dataclasses import dataclass\n"
+"\n"
+"from starlite import Body, Starlite, post\n"
+"\n"
+"\n"
+"@dataclass\n"
+"class User:\n"
+"    id: int\n"
+"    name: str\n"
+"\n"
+"\n"
+"@post(path=\"/\")\n"
+"async def create_user(\n"
+"    data: User = Body(title=\"Create User\", description=\"Create a new user."
+"\"),\n"
+") -> User:\n"
+"    return data\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[create_user])"
+msgstr ""
+
+#: ../../../usage/request-data.rst:40
+msgid "Specifying a content-type"
+msgstr ""
+
+#: ../../../usage/request-data.rst:42
+msgid ""
+"By default, Starlite will try to parse the request body as JSON. While this "
+"may be desired in most cases, you might want to specify a different type. "
+"You can do so by passing a :class:`RequestEncodingType <starlite.enums."
+"RequestEncodingType>` to ``Body``. This will also help to generate the "
+"correct media-type in the OpenAPI schema."
+msgstr ""
+
+#: ../../../usage/request-data.rst:48
+msgid "URL Encoded Form Data"
+msgstr ""
+
+#: ../../../usage/request-data.rst:50
+msgid ""
+"To access data sent as `url-encoded form data <https://developer.mozilla.org/"
+"en-US/docs/Web/HTTP/Methods/POST>`_, i.e. ``application/x-www-form-"
+"urlencoded`` Content-Type header, use :class:`Body <starlite.params.Body>` "
+"and specify :class:`RequestEncodingType.URL_ENCODED <starlite.enums."
+"RequestEncodingType>` as the ``media_type``:"
+msgstr ""
+
+#: ../../../usage/request-data.rst:55
+msgid ""
+"from dataclasses import dataclass\n"
+"\n"
+"from starlite import Body, RequestEncodingType, Starlite, post\n"
+"\n"
+"\n"
+"@dataclass\n"
+"class User:\n"
+"    id: int\n"
+"    name: str\n"
+"\n"
+"\n"
+"@post(path=\"/\")\n"
+"async def create_user(\n"
+"    data: User = Body(media_type=RequestEncodingType.URL_ENCODED),\n"
+") -> User:\n"
+"    return data\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[create_user])"
+msgstr ""
+
+#: ../../../usage/request-data.rst:59
+msgid ""
+"URL encoded data is inherently less versatile than JSON data - for example, "
+"it cannot handle complex dictionaries and deeply nested data. It should only "
+"be used for simple data structures."
+msgstr ""
+
+#: ../../../usage/request-data.rst:64
+msgid "MultiPart Form Data"
+msgstr ""
+
+#: ../../../usage/request-data.rst:66
+msgid ""
+"You can access data uploaded using a request with a `multipart/form-data "
+"<https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST>`_ Content-"
+"Type header by specifying it in the :class:`Body <starlite.params.Body>` "
+"function:"
+msgstr ""
+
+#: ../../../usage/request-data.rst:71
+msgid ""
+"from dataclasses import dataclass\n"
+"\n"
+"from starlite import Body, RequestEncodingType, Starlite, post\n"
+"\n"
+"\n"
+"@dataclass\n"
+"class User:\n"
+"    id: int\n"
+"    name: str\n"
+"\n"
+"\n"
+"@post(path=\"/\")\n"
+"async def create_user(\n"
+"    data: User = Body(media_type=RequestEncodingType.MULTI_PART),\n"
+") -> User:\n"
+"    return data\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[create_user])"
+msgstr ""
+
+#: ../../../usage/request-data.rst:76
+msgid "File uploads"
+msgstr ""
+
+#: ../../../usage/request-data.rst:78
+msgid ""
+"In case of files uploaded, Starlite transforms the results into an instance "
+"of :class:`UploadFile <.datastructures.upload_file.UploadFile>` class, which "
+"offer a convenient interface for working with files. Therefore, you need to "
+"type your file uploads accordingly."
+msgstr ""
+
+#: ../../../usage/request-data.rst:82
+msgid ""
+"To access a single file simply type ``data`` as :class:`UploadFile <."
+"datastructures.upload_file.UploadFile>`:"
+msgstr ""
+
+#: ../../../usage/request-data.rst:0
+msgid "Async"
+msgstr ""
+
+#: ../../../usage/request-data.rst:90
+msgid ""
+"from starlite import Body, MediaType, RequestEncodingType, Starlite, "
+"UploadFile, post\n"
+"\n"
+"\n"
+"@post(path=\"/\", media_type=MediaType.TEXT)\n"
+"async def handle_file_upload(\n"
+"    data: UploadFile = Body(media_type=RequestEncodingType.MULTI_PART),\n"
+") -> str:\n"
+"    content = await data.read()\n"
+"    filename = data.filename\n"
+"    return f\"{filename}, {content.decode()}\"\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[handle_file_upload])"
+msgstr ""
+
+#: ../../../usage/request-data.rst:0
+msgid "Sync"
+msgstr ""
+
+#: ../../../usage/request-data.rst:95
+msgid ""
+"from starlite import Body, MediaType, RequestEncodingType, Starlite, "
+"UploadFile, post\n"
+"\n"
+"\n"
+"@post(path=\"/\", media_type=MediaType.TEXT)\n"
+"def handle_file_upload(\n"
+"    data: UploadFile = Body(media_type=RequestEncodingType.MULTI_PART),\n"
+") -> str:\n"
+"    content = data.file.read()\n"
+"    filename = data.filename\n"
+"    return f\"{filename}, {content.decode()}\"\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[handle_file_upload])"
+msgstr ""
+
+#: ../../../usage/request-data.rst:97
+msgid "Technical details"
+msgstr ""
+
+#: ../../../usage/request-data.rst:100
+msgid ""
+":class:`UploadFile <.datastructures.UploadFile>` wraps :class:"
+"`SpooledTemporaryFile <tempfile.SpooledTemporaryFile>` so it can be used "
+"asynchronously. Inside of a synchronous function we don't need this wrapper, "
+"so we can use :meth:`SpooledTemporaryFile.read <tempfile."
+"SpooledTemporaryFile.read>` directly."
+msgstr ""
+
+#: ../../../usage/request-data.rst:108
+msgid "Multiple files"
+msgstr ""
+
+#: ../../../usage/request-data.rst:110
+msgid ""
+"To access multiple files with known filenames, you can use a pydantic model:"
+msgstr ""
+
+#: ../../../usage/request-data.rst:113
+msgid ""
+"from typing import Dict\n"
+"\n"
+"from pydantic import BaseConfig, BaseModel\n"
+"\n"
+"from starlite import Body, RequestEncodingType, Starlite, UploadFile, post\n"
+"\n"
+"\n"
+"class FormData(BaseModel):\n"
+"    cv: UploadFile\n"
+"    diploma: UploadFile\n"
+"\n"
+"    class Config(BaseConfig):\n"
+"        arbitrary_types_allowed = True\n"
+"\n"
+"\n"
+"@post(path=\"/\")\n"
+"async def handle_file_upload(\n"
+"    data: FormData = Body(media_type=RequestEncodingType.MULTI_PART),\n"
+") -> Dict:\n"
+"    cv_content = await data.cv.read()\n"
+"    diploma_content = await data.diploma.read()\n"
+"\n"
+"    return {\"cv\": cv_content.decode(), \"diploma\": diploma_content."
+"decode()}\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[handle_file_upload])"
+msgstr ""
+
+#: ../../../usage/request-data.rst:113
+msgid ""
+"from pydantic import BaseConfig, BaseModel\n"
+"\n"
+"from starlite import Body, RequestEncodingType, Starlite, UploadFile, post\n"
+"\n"
+"\n"
+"class FormData(BaseModel):\n"
+"    cv: UploadFile\n"
+"    diploma: UploadFile\n"
+"\n"
+"    class Config(BaseConfig):\n"
+"        arbitrary_types_allowed = True\n"
+"\n"
+"\n"
+"@post(path=\"/\")\n"
+"async def handle_file_upload(\n"
+"    data: FormData = Body(media_type=RequestEncodingType.MULTI_PART),\n"
+") -> dict:\n"
+"    cv_content = await data.cv.read()\n"
+"    diploma_content = await data.diploma.read()\n"
+"\n"
+"    return {\"cv\": cv_content.decode(), \"diploma\": diploma_content."
+"decode()}\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[handle_file_upload])"
+msgstr ""
+
+#: ../../../usage/request-data.rst:118
+msgid "Files as a dictionary"
+msgstr ""
+
+#: ../../../usage/request-data.rst:120
+msgid ""
+"If you do not care about parsing and validation and only want to access the "
+"form data as a dictionary, you can use a ``dict`` instead:"
+msgstr ""
+
+#: ../../../usage/request-data.rst:123
+msgid ""
+"from typing import Dict\n"
+"\n"
+"from starlite import Body, RequestEncodingType, Starlite, UploadFile, post\n"
+"\n"
+"\n"
+"@post(path=\"/\")\n"
+"async def handle_file_upload(\n"
+"    data: Dict[str, UploadFile] = Body(media_type=RequestEncodingType."
+"MULTI_PART),\n"
+") -> Dict[str, str]:\n"
+"    file_contents = {}\n"
+"    for name, file in data.items():\n"
+"        content = await file.read()\n"
+"        file_contents[name] = content.decode()\n"
+"\n"
+"    return file_contents\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[handle_file_upload])"
+msgstr ""
+
+#: ../../../usage/request-data.rst:123
+msgid ""
+"from starlite import Body, RequestEncodingType, Starlite, UploadFile, post\n"
+"\n"
+"\n"
+"@post(path=\"/\")\n"
+"async def handle_file_upload(\n"
+"    data: dict[str, UploadFile] = Body(media_type=RequestEncodingType."
+"MULTI_PART),\n"
+") -> dict[str, str]:\n"
+"    file_contents = {}\n"
+"    for name, file in data.items():\n"
+"        content = await file.read()\n"
+"        file_contents[name] = content.decode()\n"
+"\n"
+"    return file_contents\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[handle_file_upload])"
+msgstr ""
+
+#: ../../../usage/request-data.rst:128
+msgid "Files as a list"
+msgstr ""
+
+#: ../../../usage/request-data.rst:130
+msgid "Finally, you can also access the files as a list without the filenames:"
+msgstr ""
+
+#: ../../../usage/request-data.rst:133
+msgid ""
+"from typing import Dict, List\n"
+"\n"
+"from starlite import Body, RequestEncodingType, Starlite, UploadFile, post\n"
+"\n"
+"\n"
+"@post(path=\"/\")\n"
+"async def handle_file_upload(\n"
+"    data: List[UploadFile] = Body(media_type=RequestEncodingType."
+"MULTI_PART),\n"
+") -> Dict[str, str]:\n"
+"    file_contents = {}\n"
+"    for file in data:\n"
+"        content = await file.read()\n"
+"        file_contents[file.filename] = content.decode()\n"
+"\n"
+"    return file_contents\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[handle_file_upload])"
+msgstr ""
+
+#: ../../../usage/request-data.rst:133
+msgid ""
+"from starlite import Body, RequestEncodingType, Starlite, UploadFile, post\n"
+"\n"
+"\n"
+"@post(path=\"/\")\n"
+"async def handle_file_upload(\n"
+"    data: list[UploadFile] = Body(media_type=RequestEncodingType."
+"MULTI_PART),\n"
+") -> dict[str, str]:\n"
+"    file_contents = {}\n"
+"    for file in data:\n"
+"        content = await file.read()\n"
+"        file_contents[file.filename] = content.decode()\n"
+"\n"
+"    return file_contents\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[handle_file_upload])"
+msgstr ""
+
+#: ../../../usage/request-data.rst:137
+msgid "MessagePack data"
+msgstr ""
+
+#: ../../../usage/request-data.rst:139
+msgid ""
+"To receive `MessagePack <https://msgpack.org/>`_ data, specify the "
+"appropriate ``Content-Type`` for ``Body`` , by using :class:"
+"`RequestEncodingType.MESSAGEPACK <.enums.RequestEncodingType>`:"
+msgstr ""
+
+#: ../../../usage/request-data.rst:143
+msgid "msgpack_request.py"
+msgstr ""
+
+#: ../../../usage/request-data.rst:143
+msgid ""
+"from typing import Dict\n"
+"\n"
+"from starlite import Body, RequestEncodingType, Starlite, post\n"
+"\n"
+"\n"
+"@post(path=\"/\")\n"
+"def msgpack_handler(data: Dict = Body(media_type=RequestEncodingType."
+"MESSAGEPACK)) -> Dict:\n"
+"    # This will try to parse the request body as `MessagePack` regardless of "
+"the\n"
+"    # `Content-Type`\n"
+"    return data\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[msgpack_handler])"
+msgstr ""
+
+#: ../../../usage/request-data.rst:143
+msgid ""
+"from starlite import Body, RequestEncodingType, Starlite, post\n"
+"\n"
+"\n"
+"@post(path=\"/\")\n"
+"def msgpack_handler(data: dict = Body(media_type=RequestEncodingType."
+"MESSAGEPACK)) -> dict:\n"
+"    # This will try to parse the request body as `MessagePack` regardless of "
+"the\n"
+"    # `Content-Type`\n"
+"    return data\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[msgpack_handler])"
+msgstr ""
