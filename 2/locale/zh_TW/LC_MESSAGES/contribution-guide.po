@@ -1,0 +1,749 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../../CONTRIBUTING.rst:2
+msgid "Contribution Guide"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:5
+msgid "Getting Started"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:8
+msgid "Supported Python Versions"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:10
+msgid ""
+"The lowest currently supported version is Python 3.8. At a minimum you will "
+"need Python 3.8 for code changes and 3.12 if you plan on doing documentation "
+"building / changes."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:13
+msgid ""
+"You can use various tools to manage multiple Python versions on your system "
+"including:"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:15
+msgid ""
+"Using `uv built-in <https://docs.astral.sh/uv/guides/install-python/>`_ "
+"Python version management."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:16
+msgid ""
+"`pyenv <https://github.com/pyenv/pyenv>`_ and `pyenv-win for Windows "
+"<https://github.com/pyenv-win/pyenv-win>`_"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:17
+msgid "`rtx / mise <https://mise.jdx.dev/>`_"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:18
+msgid "`asdf <https://asdf-vm.com/>`_"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:19
+msgid ""
+"`Building each version manually from source <https://www.build-python-from-"
+"source.com/>`_"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:20
+msgid ""
+"Utilizing `GitHub Codespaces <https://codespaces.new/litestar-org/litestar?"
+"quickstart=1>`_"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:22
+msgid ""
+"We use the lowest supported version in our type-checking CI, this ensures "
+"that the changes you made are backward compatible."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:26
+msgid "Setting up the environment"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:28
+msgid ""
+"We maintain a Makefile with several commands to help with common tasks. You "
+"can run ``make help`` to see a list of available commands."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:31
+msgid ""
+"If you are utilizing `GitHub Codespaces <https://codespaces.new/litestar-org/"
+"litestar?quickstart=1>`_, the environment will bootstrap itself "
+"automatically. The steps below are for local development."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:34
+msgid ""
+"Install `uv <https://docs.astral.sh/uv/getting-started/installation/>`_:"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:36
+msgid ""
+"Run ``make install`` to create a `virtual environment <https://docs.python."
+"org/3/tutorial/venv.html>`_ and install the required development "
+"dependencies or run the ``uv sync`` command manually:"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:39
+msgid "Installing the development dependencies"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:39
+msgid "uv sync"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:45
+msgid ""
+"Many modern IDEs like PyCharm or VS Code will enable the uv-managed "
+"virtualenv that is created in step 2 for you automatically. If your IDE / "
+"editor does not offer this functionality, then you will need to manually "
+"activate the virtualenv yourself. Otherwise you may encounter errors or "
+"unexpected behaviour when trying to run the commands referenced within this "
+"document."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:51
+msgid ""
+"To activate the virtualenv manually, please consult uv's documentation on "
+"`working with virtual environments <https://docs.astral.sh/uv/pip/"
+"environments/>`_."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:54
+msgid ""
+"The rest of this document will assume this environment is active wherever "
+"commands are referenced."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:57
+msgid "Code contributions"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:60
+msgid ""
+"Documentation PRs are always welcome; it's often a very good entry point to "
+"get familiar with the project."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:61
+msgid ""
+"Bug fixes and small improvements are also a good way to get started. There "
+"is no shortage of small things that can be improved."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:62
+msgid ""
+"We're all humans (hopefully) and may forget about your particular PR. If you "
+"feel your PR has stalled, feel free to gently nudge us."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:63
+msgid ""
+"Large features or refactors may take time. Please be patient; we're all "
+"volunteers and want to ensure the best possible outcome."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:64
+msgid ""
+"Use LLMs intelligently. Most PRs automatically generated are not usable, and "
+"incur a higher than normal cost from reviewers and maintainers, as they "
+"still need to be thoroughly evaluated, even if they are ultimately not "
+"acceptable."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:68
+msgid "Workflow"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:70
+msgid ""
+"`Fork <https://github.com/litestar-org/litestar/fork>`_ the `Litestar "
+"repository <https://github.com/litestar-org/litestar>`_"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:71
+msgid "Clone your fork locally with git"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:72
+msgid "`Set up the environment <#setting-up-the-environment>`_"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:73
+msgid "Make your changes"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:74
+msgid ""
+"(Optional) Run ``pre-commit run --all-files`` to run linters and formatters. "
+"This step is optional and will be executed automatically by git before you "
+"make a commit, but you may want to run it manually in order to apply fixes"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:76
+msgid ""
+"Commit your changes to git. We follow `conventional commits <https://www."
+"conventionalcommits.org/>`_ which are enforced using a ``pre-commit`` hook."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:78
+msgid "Push the changes to your fork"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:79
+msgid ""
+"Open a `pull request <https://docs.github.com/en/pull-requests>`_. Give the "
+"pull request a descriptive title indicating what it changes. The style of "
+"the PR title should also follow `conventional commits <https://www."
+"conventionalcommits.org/>`_, and this is enforced using a GitHub action."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:82
+msgid ""
+"Add yourself as a contributor using the `all-contributors bot <https://"
+"allcontributors.org/docs/en/bot/usage>`_"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:85
+msgid "Guidelines for writing code"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:87
+msgid "Code should be `Pythonic and zen <https://peps.python.org/pep-0020/>`_"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:88
+msgid ""
+"All code should be fully `typed <https://peps.python.org/pep-0484/>`_. This "
+"is enforced via `mypy <https://mypy.readthedocs.io/en/stable/>`_ and "
+"`Pyright <https://github.com/microsoft/pyright/>`_"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:91
+msgid ""
+"When requiring complex types, use a `type alias <https://docs.python.org/3/"
+"library/typing.html#type-aliases>`_. Check :doc:`reference/types` if a type "
+"alias for your use case already exists"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:93
+msgid ""
+"If something cannot be typed correctly due to a limitation of the type "
+"checkers, you may use :func:`typing.cast` to rectify the situation. However, "
+"you should only use this as a last resort if you've exhausted all other "
+"options of `type narrowing <https://mypy.readthedocs.io/en/stable/"
+"type_narrowing.html>`_, such as :func:`isinstance` checks and `type guards "
+"<https://docs.python.org/3/library/typing.html#typing.TypeGuard>`_."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:97
+msgid ""
+"You may use a properly scoped ``type: ignore`` if you ensured that a line is "
+"correct, but mypy / pyright has issues with it."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:100
+msgid ""
+"Properly scoped meaning do not use blank ``type: ignore``, instead supply "
+"the specific error code, e.g., ``type: ignore[attr-defined]``"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:103
+msgid ""
+"If you are adding or modifying existing code, ensure that it's fully tested. "
+"100% test coverage is mandatory, and will be checked on the PR using "
+"`SonarCloud <https://www.sonarsource.com/products/sonarcloud/>`_ and "
+"`Codecov <https://codecov.io/>`_"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:106
+msgid ""
+"All functions, methods, classes, and attributes should be documented with a "
+"docstring. We use the `Google docstring style <https://sphinxcontrib-"
+"napoleon.readthedocs.io/en/latest/example_google.html>`_. If you come across "
+"a function or method that doesn't conform to this standard, please update it "
+"as you go"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:109
+msgid ""
+"When adding a new public interface, it has to be  included in the reference "
+"documentation located in ``docs/reference``. If applicable, add or modify "
+"examples in the docs related to the new functionality implemented, following "
+"the guidelines established in `Adding examples`_."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:115
+msgid "Writing and running tests"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:117
+msgid ""
+"Tests are contained within the ``tests`` directory, and follow the same "
+"directory structure as the ``litestar`` module. If you are adding a test "
+"case, it should be located within the correct submodule of ``tests``. E.g., "
+"tests for ``litestar/utils/sync.py`` reside in ``tests/utils/test_sync.py``."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:121
+msgid "The ``Makefile`` includes several commands for running tests:"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:123
+msgid "``make test`` to run tests located in ``tests``"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:124
+msgid "``make test-examples`` to run tests located in ``docs/examples/tests``"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:125
+msgid "``make test-all`` to run all tests"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:126
+msgid ""
+"``make coverage`` to run tests with coverage and generate an html report"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:128
+msgid ""
+"The tests make use of `pytest-xdist <https://pytest-xdist.readthedocs.io>`_ "
+"to speed up test runs. These are enabled by default when running ``make "
+"test``, ``make test-all`` or ``make coverage``. Due to the nature of pytest-"
+"xdist, attaching a debugger isn't as straightforward. For debugging, it's "
+"recommended to run the tests individually with ``pytest <test name>`` or via "
+"an IDE, which will skip ``pytest-xdist``."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:135
+msgid "Running type checkers"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:137
+msgid ""
+"We use `mypy <https://mypy.readthedocs.io/en/stable/>`_ and `pyright "
+"<https://github.com/microsoft/pyright/>`_ to enforce type safety. You can "
+"run them with:"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:140
+msgid "``make mypy``"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:141
+msgid "``make pyright``"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:142
+msgid "``make type-check`` to run both"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:143
+msgid "``make lint`` to run pre-commit hooks and type checkers."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:145
+msgid ""
+"Our type checkers are run on Python 3.8 in CI, so you should make sure to "
+"run them on the same version locally as well."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:148
+msgid "Project documentation"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:150
+msgid ""
+"The documentation is located in the ``/docs`` directory and is written  in "
+"`reStructuredText <https://docutils.sourceforge.io/rst.html>`_ with the "
+"`Sphinx <https://www.sphinx-doc.org/en/master/>`_. library. If you're "
+"unfamiliar with any of those, `reStructuredText primer <https://www.sphinx-"
+"doc.org/en/master/usage/restructuredtext/basics.html>`_ and `Sphinx "
+"quickstart <https://www.sphinx-doc.org/en/master/usage/quickstart.html>`_ "
+"are recommended reads."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:157
+msgid "Docs theme and appearance"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:159
+msgid ""
+"We welcome contributions that enhance / improve the appearance and usability "
+"of the docs. We use the excellent `PyData Sphinx Theme <https://pydata-"
+"sphinx-theme.readthedocs.io/>`_ theme, which comes with a lot of options out "
+"of the box. If you wish to contribute to the docs style / setup, or static "
+"site generation, you should consult the theme docs as a first step."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:165
+msgid "Running the docs locally"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:167
+msgid "You can serve the documentation locally with"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:169 ../../../../CONTRIBUTING.rst:176
+msgid "Serving the documentation locally"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:169
+msgid "make docs-serve"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:174
+msgid "or build it with"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:176
+msgid "make docs"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:183
+msgid "Writing and editing docs"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:185
+msgid ""
+"We welcome contributions that enhance / improve the content of the docs. "
+"Feel free to add examples, clarify text, restructure the docs, etc., but "
+"make sure to follow these guidelines:"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:188
+msgid "Write text in idiomatic English, using simple language"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:189
+msgid ""
+"Do not use contractions for ease of reading for non-native English speakers"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:190
+msgid ""
+"Opt for `Oxford commas <https://en.wikipedia.org/wiki/Serial_comma>`_ when "
+"listing a series of terms"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:191
+msgid ""
+"Keep examples simple and self contained (see `Adding examples`_). This is to "
+"ensure they are tested alongside the rest of the test suite and properly "
+"type checked and linted."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:193
+msgid "Provide links where applicable."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:194
+msgid ""
+"Use `intersphinx <https://www.sphinx-doc.org/en/master/usage/extensions/"
+"intersphinx.html>`_ wherever possible when referencing external libraries"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:196
+msgid ""
+"Provide diagrams using `Mermaid <https://mermaid.js.org/>`_ where applicable "
+"and possible"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:199
+msgid "Adding examples"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:201
+msgid ""
+"The examples from the docs are located in their own modules inside the ``/"
+"docs/examples`` folder. This makes it easier to test them alongside the rest "
+"of the test suite, ensuring they do not become stale as Litestar evolves."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:204
+msgid "Please follow the next guidelines when adding a new example:"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:206
+msgid ""
+"Add the example in the corresponding module directory in ``/docs/examples`` "
+"or create a new one if necessary"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:207
+msgid ""
+"Create a suite for the module in ``/tests/examples`` that tests the aspects "
+"of the example that it demonstrates"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:208
+msgid ""
+"Reference the example in the rst file with an external reference code block, "
+"e.g."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:210
+msgid "An example of how to use literal includes of external files"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:210
+msgid ""
+".. literalinclude:: /examples/test_thing.py\n"
+"   :language: python\n"
+"   :caption: All includes should have a descriptive caption"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:218
+msgid "Automatically execute examples"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:220
+msgid ""
+"Our docs include a Sphinx extension that can automatically run requests "
+"against example apps and include their result in the documentation page when "
+"its being built. This only requires 2 steps:"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:223
+msgid ""
+"Create an example file with an ``app`` object in it, which is an instance of "
+"``Litestar``"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:224
+msgid "Add a comment in the form of ``# run: /hello`` to the example file"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:226
+msgid ""
+"When building the docs (or serving them locally), a process serving the "
+"``app`` instance will be launched, and the requests specified in the "
+"comments will be run against it. The comments will be stripped from the "
+"result, and the output of the ``curl`` invocation inserted after the example "
+"code-block."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:231
+msgid ""
+"The ``# run:`` syntax is nothing special; everything after the colon will be "
+"passed to the ``curl`` command that's being invoked. The URL is built "
+"automatically, so the specified path can just be a path relative to the app."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:235
+msgid "In practice, this looks like the following:"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:237 ../../../../CONTRIBUTING.rst:259
+msgid "An example of how to use the automatic example runner"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:237
+msgid ""
+"from typing import Dict\n"
+"\n"
+"from litestar import Litestar, get\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"def hello_world() -> Dict[str, str]:\n"
+"    \"\"\"Handler function that returns a greeting dictionary.\"\"\"\n"
+"    return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[hello_world])\n"
+"\n"
+"# run: /"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:256
+msgid "This is equivalent to:"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:259
+msgid ""
+"   from typing import Dict\n"
+"\n"
+"   from litestar import Litestar, get\n"
+"\n"
+"\n"
+"   @get(\"/\")\n"
+"   def hello_world() -> Dict[str, str]:\n"
+"       \"\"\"Handler function that returns a greeting dictionary.\"\"\"\n"
+"       return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"   app = Litestar(route_handlers=[hello_world])"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:275
+msgid "Run it"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:277
+msgid ""
+"> curl http://127.0.0.1:8000/\n"
+"{\"hello\": \"world\"}"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:284
+msgid "Creating a New Release"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:286
+msgid "Checkout the ``main`` branch:"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:288
+msgid "Checking out the main branch of the ``litestar`` repository"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:288
+msgid "git checkout main"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:293
+msgid "Run the release preparation script:"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:295
+msgid "Preparing  a new release"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:295
+msgid ""
+"python tools/prepare_release.py <new version number> --update-version --"
+"create-draft-release"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:300
+msgid ""
+"Replace ``<new version number>`` with the desired version number following "
+"the `versioning scheme <https://litestar.dev/about/litestar-releases#version-"
+"numbering>`_."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:303
+msgid "This script will:"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:305
+msgid "Update the version in ``pyproject.toml``"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:306
+msgid "Generate a changelog entry in :doc:`/release-notes/changelog`"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:307
+msgid "Create a draft release on GitHub"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:309
+msgid ""
+"Review the generated changelog entry in :doc:`/release-notes/changelog` to "
+"ensure it looks correct."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:311
+msgid "Commit the changes to ``main``:"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:313
+msgid "Committing the changes to the main branch"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:313
+msgid "git commit -am \"chore(release): prepare release vX.Y.Z\""
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:318
+msgid "Replace ``vX.Y.Z`` with the actual version number."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:320
+msgid "Create a new branch for the release:"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:322
+msgid "Creating a new branch for the release"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:322
+msgid "git checkout -b vX.Y.Z"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:327
+msgid "Push the changes to a ``vX.Y.Z`` branch:"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:329
+msgid "Pushing the changes to the ``vX.Y.Z`` branch"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:329
+msgid "git push origin vX.Y.Z"
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:334
+msgid "Open a pull request from the ``vX.Y.Z`` branch to ``main``."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:335
+msgid ""
+"Once the pull request is approved, go to the draft release on GitHub (the "
+"release preparation script will provide a link)."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:337
+msgid ""
+"Review the release notes in the draft release to ensure they look correct."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:338
+msgid ""
+"If everything looks good, click \"Publish release\" to make the release "
+"official."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:339
+msgid ""
+"Go to the `Release Action <https://github.com/litestar-org/litestar/actions/"
+"workflows/publish.yml>`_ and approve the release workflow if necessary."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:341
+msgid "Check that the release workflow runs successfully."
+msgstr ""
+
+#: ../../../../CONTRIBUTING.rst:343
+msgid ""
+"The version number should follow `semantic versioning <https://semver.org/"
+">`_ and `PEP 440 <https://peps.python.org/pep-0440/>`_."
+msgstr ""

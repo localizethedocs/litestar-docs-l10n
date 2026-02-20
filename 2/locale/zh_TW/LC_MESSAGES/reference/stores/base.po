@@ -1,0 +1,195 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/stores/base.rst:2
+msgid "base"
+msgstr ""
+
+#: ../../../reference/stores/base.rst:0
+msgid "members"
+msgstr ""
+
+#: ../../../reference/stores/base.rst:7
+msgid "Store, NamespacedStore"
+msgstr ""
+
+#: ../../../../litestar/stores/base.py:docstring of
+#: litestar.stores.base.NamespacedStore:1
+msgid "Bases: :py:class:`~litestar.stores.base.Store`"
+msgstr ""
+
+#: ../../../../litestar/stores/base.py:docstring of
+#: litestar.stores.base.NamespacedStore:1
+msgid "A subclass of :class:`Store`, offering hierarchical namespacing."
+msgstr ""
+
+#: ../../../../litestar/stores/base.py:docstring of
+#: litestar.stores.base.NamespacedStore:3
+msgid ""
+"Bulk actions on a parent namespace should affect all child namespaces, "
+"whereas other operations on all namespaces should be isolated."
+msgstr ""
+
+#: ../../../../litestar/stores/base.py:docstring of
+#: litestar.stores.base.NamespacedStore.with_namespace:1
+msgid ""
+"Return a new instance of :class:`NamespacedStore`, which exists in a child "
+"namespace of the current namespace. Bulk actions on the parent namespace "
+"should affect all child namespaces, whereas other operations on all "
+"namespaces should be isolated."
+msgstr ""
+
+#: ../../../../litestar/stores/base.py:docstring of
+#: litestar.stores.base.StorageObject:1
+msgid "Bases: :py:class:`~msgspec.Struct`"
+msgstr ""
+
+#: ../../../../litestar/stores/base.py:docstring of
+#: litestar.stores.base.StorageObject:1
+msgid ""
+":class:`msgspec.Struct` to store serialized data alongside with their expiry "
+"time."
+msgstr ""
+
+#: ../../../../litestar/stores/base.py:docstring of
+#: litestar.stores.base.StorageObject.new:1
+msgid "Construct a new :class:`StorageObject` instance."
+msgstr ""
+
+#: ../../../../litestar/stores/base.py:docstring of
+#: litestar.stores.base.StorageObject.expired:1
+msgid "Return if the :class:`StorageObject` is expired"
+msgstr ""
+
+#: ../../../../litestar/stores/base.py:docstring of
+#: litestar.stores.base.StorageObject.expires_in:1
+msgid ""
+"Return the expiry time of this ``StorageObject`` in seconds. If no expiry "
+"time was set, return ``-1``."
+msgstr ""
+
+#: ../../../../litestar/stores/base.py:docstring of
+#: litestar.stores.base.StorageObject.to_bytes:1
+msgid "Encode the instance to bytes"
+msgstr ""
+
+#: ../../../../litestar/stores/base.py:docstring of
+#: litestar.stores.base.StorageObject.from_bytes:1
+msgid "Load a previously encoded with :meth:`StorageObject.to_bytes`"
+msgstr ""
+
+#: ../../../../litestar/stores/base.py:docstring of
+#: litestar.stores.base.Store:1
+msgid "Bases: :py:class:`~abc.ABC`"
+msgstr ""
+
+#: ../../../../litestar/stores/base.py:docstring of
+#: litestar.stores.base.Store:1
+msgid "Thread and process safe asynchronous key/value store."
+msgstr ""
+
+#: ../../../../litestar/stores/base.py:docstring of
+#: litestar.stores.base.Store.set:1
+msgid "Set a value."
+msgstr ""
+
+#: ../../../reference/stores/base.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../litestar/stores/base.py:docstring of
+#: litestar.stores.base.Store.set:3
+msgid "Key to associate the value with"
+msgstr ""
+
+#: ../../../../litestar/stores/base.py:docstring of
+#: litestar.stores.base.Store.set:4
+msgid "Value to store"
+msgstr ""
+
+#: ../../../../litestar/stores/base.py:docstring of
+#: litestar.stores.base.Store.set:5
+msgid "Time in seconds before the key is considered expired"
+msgstr ""
+
+#: ../../../reference/stores/base.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/stores/base.py:docstring of
+#: litestar.stores.base.Store.set:7
+msgid "``None``"
+msgstr ""
+
+#: ../../../../litestar/stores/base.py:docstring of
+#: litestar.stores.base.Store.get:1
+msgid "Get a value."
+msgstr ""
+
+#: ../../../../litestar/stores/base.py:docstring of
+#: litestar.stores.base.Store.get:3
+msgid "Key associated with the value"
+msgstr ""
+
+#: ../../../../litestar/stores/base.py:docstring of
+#: litestar.stores.base.Store.get:4
+msgid ""
+"If given and the value had an initial expiry time set, renew the expiry time "
+"for ``renew_for`` seconds. If the value has not been set with an expiry time "
+"this is a no-op"
+msgstr ""
+
+#: ../../../../litestar/stores/base.py:docstring of
+#: litestar.stores.base.Store.get:8
+msgid ""
+"The value associated with ``key`` if it exists and is not expired, else "
+"``None``"
+msgstr ""
+
+#: ../../../../litestar/stores/base.py:docstring of
+#: litestar.stores.base.Store.delete:1
+msgid "Delete a value."
+msgstr ""
+
+#: ../../../../litestar/stores/base.py:docstring of
+#: litestar.stores.base.Store.delete:3
+msgid "If no such key exists, this is a no-op."
+msgstr ""
+
+#: ../../../../litestar/stores/base.py:docstring of
+#: litestar.stores.base.Store.delete:5
+msgid "Key of the value to delete"
+msgstr ""
+
+#: ../../../../litestar/stores/base.py:docstring of
+#: litestar.stores.base.Store.delete_all:1
+msgid "Delete all stored values."
+msgstr ""
+
+#: ../../../../litestar/stores/base.py:docstring of
+#: litestar.stores.base.Store.exists:1
+msgid "Check if a given ``key`` exists."
+msgstr ""
+
+#: ../../../../litestar/stores/base.py:docstring of
+#: litestar.stores.base.Store.expires_in:1
+msgid ""
+"Get the time in seconds ``key`` expires in. If no such ``key`` exists or no "
+"expiry time was set, return ``None``."
+msgstr ""

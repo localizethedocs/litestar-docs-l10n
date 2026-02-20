@@ -1,0 +1,338 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/plugins/index.rst:3
+msgid "plugins"
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.CLIPlugin:1
+msgid "Bases: :py:class:`~litestar.plugins.base.CLIPluginProtocol`"
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.CLIPlugin:1
+msgid "Plugin protocol to extend the CLI Server Lifespan."
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.CLIPluginProtocol:1
+#: litestar.plugins.base.InitPluginProtocol:1
+#: litestar.plugins.base.OpenAPISchemaPluginProtocol:1
+#: litestar.plugins.base.SerializationPluginProtocol:1
+msgid "Bases: :py:class:`~typing.Protocol`"
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.CLIPluginProtocol:1
+msgid "Plugin protocol to extend the CLI."
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.CLIPluginProtocol.on_cli_init:1
+msgid "Called when the CLI is initialized."
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.CLIPluginProtocol.on_cli_init:3
+msgid "This can be used to extend or override existing commands."
+msgstr ""
+
+#: ../../../reference/plugins/index.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.CLIPluginProtocol.on_cli_init:5
+msgid "The root :class:`click.Group` of the Litestar CLI"
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.CLIPluginProtocol.on_cli_init:7
+#: litestar.plugins.base.InitPlugin.on_app_init:3
+#: litestar.plugins.base.InitPluginProtocol.on_app_init:3
+msgid "Examples"
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.CLIPluginProtocol.on_cli_init:10
+msgid ""
+"from litestar import Litestar\n"
+"from litestar.plugins import CLIPluginProtocol\n"
+"from click import Group\n"
+"\n"
+"\n"
+"class CLIPlugin(CLIPluginProtocol):\n"
+"    def on_cli_init(self, cli: Group) -> None:\n"
+"        @cli.command()\n"
+"        def is_debug_mode(app: Litestar):\n"
+"            print(app.debug)\n"
+"\n"
+"\n"
+"app = Litestar(plugins=[CLIPlugin()])"
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.DIPlugin:1
+msgid "Bases: :py:class:`~abc.ABC`"
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.DIPlugin:1
+msgid "Extend dependency injection"
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.DIPlugin.get_typed_init:1
+msgid ""
+"Return signature and type information about the ``type_``\\ s :func:"
+"`__init__` method."
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.DIPlugin.has_typed_init:1
+msgid ""
+"Return ``True`` if ``type_`` has type information available for its :func:"
+"`__init__` method that cannot be extracted from this method's type "
+"annotations (e.g. a Pydantic BaseModel subclass), and :meth:`DIPlugin."
+"get_typed_init` supports extraction of these annotations."
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.InitPlugin:1
+msgid "Bases: :py:class:`~litestar.plugins.base.InitPluginProtocol`"
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.InitPlugin:1
+#: litestar.plugins.base.InitPluginProtocol:1
+msgid ""
+"Protocol used to define plugins that affect the application's init process."
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.InitPlugin.on_app_init:1
+#: litestar.plugins.base.InitPluginProtocol.on_app_init:1
+msgid ""
+"Receive the :class:`AppConfig<.config.app.AppConfig>` instance after "
+"`on_app_init` hooks have been called."
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.InitPlugin.on_app_init:6
+#: litestar.plugins.base.InitPluginProtocol.on_app_init:6
+msgid ""
+"from litestar import Litestar, get\n"
+"from litestar.di import Provide\n"
+"from litestar.plugins import InitPluginProtocol\n"
+"\n"
+"\n"
+"def get_name() -> str:\n"
+"    return \"world\"\n"
+"\n"
+"\n"
+"@get(\"/my-path\")\n"
+"def my_route_handler(name: str) -> dict[str, str]:\n"
+"    return {\"hello\": name}\n"
+"\n"
+"\n"
+"class MyPlugin(InitPluginProtocol):\n"
+"    def on_app_init(self, app_config: AppConfig) -> AppConfig:\n"
+"        app_config.dependencies[\"name\"] = Provide(get_name)\n"
+"        app_config.route_handlers.append(my_route_handler)\n"
+"        return app_config\n"
+"\n"
+"\n"
+"app = Litestar(plugins=[MyPlugin()])"
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.InitPlugin.on_app_init:30
+#: litestar.plugins.base.InitPluginProtocol.on_app_init:30
+msgid "The :class:`AppConfig <litestar.config.app.AppConfig>` instance."
+msgstr ""
+
+#: ../../../reference/plugins/index.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.InitPlugin.on_app_init:32
+#: litestar.plugins.base.InitPluginProtocol.on_app_init:32
+msgid "The app config object."
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.InitPluginProtocol:3
+msgid "Use 'InitPlugin' instead"
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.OpenAPISchemaPlugin:1
+msgid "Bases: :py:class:`~litestar.plugins.base.OpenAPISchemaPluginProtocol`"
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.OpenAPISchemaPlugin:1
+msgid ""
+"Plugin to extend the support of OpenAPI schema generation for non-library "
+"types."
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.OpenAPISchemaPlugin.is_constrained_field:1
+msgid ""
+"Return ``True`` if the field should be treated as constrained. If returning "
+"``True``, constraints should be defined in the field's extras"
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.OpenAPISchemaPlugin.is_plugin_supported_field:1
+msgid ""
+"Given a :class:`FieldDefinition <litestar.typing.FieldDefinition>` that "
+"represents an indeterminate type, determine if this value is supported by "
+"the plugin"
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.OpenAPISchemaPlugin.is_plugin_supported_field:4
+#: litestar.plugins.base.SerializationPlugin.create_dto_for_type:3
+#: litestar.plugins.base.SerializationPlugin.supports_type:3
+#: litestar.plugins.base.SerializationPluginProtocol.create_dto_for_type:3
+#: litestar.plugins.base.SerializationPluginProtocol.supports_type:3
+msgid "A parsed type."
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.OpenAPISchemaPlugin.is_plugin_supported_field:6
+#: litestar.plugins.base.SerializationPlugin.supports_type:5
+#: litestar.plugins.base.SerializationPluginProtocol.supports_type:5
+msgid "Whether the type is supported by the plugin."
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.OpenAPISchemaPlugin.is_plugin_supported_type:1
+#: litestar.plugins.base.OpenAPISchemaPluginProtocol.is_plugin_supported_type:1
+#: litestar.plugins.base.SerializationPlugin.supports_type:1
+#: litestar.plugins.base.SerializationPluginProtocol.supports_type:1
+msgid ""
+"Given a value of indeterminate type, determine if this value is supported by "
+"the plugin."
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.OpenAPISchemaPlugin.is_plugin_supported_type:3
+msgid ""
+"This is called by the default implementation of :meth:"
+"`is_plugin_supported_field` for backwards compatibility. User's should "
+"prefer to override that method instead."
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.OpenAPISchemaPlugin.is_plugin_supported_type:6
+#: litestar.plugins.base.OpenAPISchemaPluginProtocol.is_plugin_supported_type:3
+msgid "An arbitrary value."
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.OpenAPISchemaPlugin.is_plugin_supported_type:8
+msgid "A bool indicating whether the value is supported by the plugin."
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.OpenAPISchemaPlugin.is_undefined_sentinel:1
+msgid "Return ``True`` if ``value`` should be treated as an undefined field"
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.OpenAPISchemaPluginProtocol:1
+msgid ""
+"Plugin protocol to extend the support of OpenAPI schema generation for non-"
+"library types."
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.OpenAPISchemaPluginProtocol.is_plugin_supported_type:5
+msgid "A typeguard dictating whether the value is supported by the plugin."
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.OpenAPISchemaPluginProtocol.to_openapi_schema:1
+msgid "Given a type annotation, transform it into an OpenAPI schema class."
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.OpenAPISchemaPluginProtocol.to_openapi_schema:3
+#: litestar.plugins.base.OpenAPISchemaPluginProtocol.to_openapi_schema:6
+msgid "An :class:`OpenAPI <litestar.openapi.spec.schema.Schema>` instance."
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.OpenAPISchemaPluginProtocol.to_openapi_schema:4
+msgid "An instance of the openapi SchemaCreator."
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.ReceiveRoutePlugin:1
+msgid "Bases: :py:class:`object`"
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.ReceiveRoutePlugin:1
+msgid "Receive routes as they are added to the application."
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.ReceiveRoutePlugin.receive_route:1
+msgid "Receive routes as they are registered on an application."
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.SerializationPlugin:1
+msgid ""
+"Bases: :py:class:`~litestar.plugins.base.SerializationPluginProtocol`, :py:"
+"class:`~abc.ABC`"
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.SerializationPlugin:1
+msgid "Abstract base class for plugins that extend DTO functionality"
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.SerializationPlugin.create_dto_for_type:1
+#: litestar.plugins.base.SerializationPluginProtocol.create_dto_for_type:1
+msgid "Given a parsed type, create a DTO class."
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.SerializationPlugin.create_dto_for_type:5
+#: litestar.plugins.base.SerializationPluginProtocol.create_dto_for_type:5
+msgid "A DTO class."
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.SerializationPluginProtocol:1
+msgid "Protocol used to define a serialization plugin for DTOs."
+msgstr ""
+
+#: ../../../../litestar/plugins/__init__.py:docstring of
+#: litestar.plugins.base.SerializationPluginProtocol:3
+msgid "Use 'litestar.plugins.SerializationPluginProtocol' instead"
+msgstr ""

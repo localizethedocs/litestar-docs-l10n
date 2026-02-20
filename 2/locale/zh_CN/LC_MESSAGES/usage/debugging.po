@@ -1,0 +1,191 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../usage/debugging.rst:2
+msgid "Debugging"
+msgstr ""
+
+#: ../../../usage/debugging.rst:5
+msgid "Using the Python debugger"
+msgstr ""
+
+#: ../../../usage/debugging.rst:7
+msgid ""
+"You can configure Litestar to drop into the :doc:`Python Debugger <python:"
+"library/pdb>` when an exception occurs. This can be configured in different "
+"ways:"
+msgstr ""
+
+#: ../../../usage/debugging.rst:10
+msgid "Configuring ``Litestar`` with the ``pdb_on_exception`` option"
+msgstr ""
+
+#: ../../../usage/debugging.rst:12
+msgid "app = Litestar(pdb_on_exception=True)"
+msgstr ""
+
+#: ../../../usage/debugging.rst:16
+msgid "Running your app with the CLI and using the ``--pdb`` flag"
+msgstr ""
+
+#: ../../../usage/debugging.rst:17
+msgid "litestar run --pdb"
+msgstr ""
+
+#: ../../../usage/debugging.rst:21
+msgid "Using the ``LITESTAR_PDB`` environment variable"
+msgstr ""
+
+#: ../../../usage/debugging.rst:22
+msgid "``LITESTAR_PDB=1``"
+msgstr ""
+
+#: ../../../usage/debugging.rst:26
+msgid "Debugging with an IDE"
+msgstr ""
+
+#: ../../../usage/debugging.rst:28
+msgid ""
+"You can easily attach your IDEs debugger to your application, whether you're "
+"running it via the CLI or a webserver like `uvicorn <https://www.uvicorn.org/"
+">`_."
+msgstr ""
+
+#: ../../../usage/debugging.rst:32
+msgid "Intellij / PyCharm"
+msgstr ""
+
+#: ../../../usage/debugging.rst:35 ../../../usage/debugging.rst:77
+msgid "Using the CLI"
+msgstr ""
+
+#: ../../../usage/debugging.rst:37 ../../../usage/debugging.rst:60
+msgid "Create a new debug configuration via ``Run`` > ``Edit Configurations``"
+msgstr ""
+
+#: ../../../usage/debugging.rst:38
+msgid "Select ``Module name`` option and set it to ``litestar``"
+msgstr ""
+
+#: ../../../usage/debugging.rst:39
+msgid ""
+"Add the ``run`` parameter and optionally additional parameters you want to "
+"pass to the CLI"
+msgstr ""
+
+#: ../../../usage/debugging.rst:44 ../../../usage/debugging.rst:66
+msgid "Run your application in the debugger via ``Run`` > ``Debug Litestar``"
+msgstr ""
+
+#: ../../../usage/debugging.rst:51
+msgid ""
+"Breakpoints inside route handlers might not work correctly when used in "
+"conjunction with the ``--reload`` and ``--web-concurrency`` parameters. If "
+"you want to use the CLI while making use of these options, you can attach "
+"the debugger manually to the running uvicorn process via ``Run`` > ``Attach "
+"to process``."
+msgstr ""
+
+#: ../../../usage/debugging.rst:58 ../../../usage/debugging.rst:105
+msgid "Using uvicorn"
+msgstr ""
+
+#: ../../../usage/debugging.rst:61
+msgid "Select ``Module name`` option and set it to ``uvicorn``"
+msgstr ""
+
+#: ../../../usage/debugging.rst:62
+msgid ""
+"Add the ``app:app`` parameter (or the equivalent path to your application "
+"object)"
+msgstr ""
+
+#: ../../../usage/debugging.rst:73
+msgid "VS Code"
+msgstr ""
+
+#: ../../../usage/debugging.rst:80 ../../../usage/debugging.rst:107
+msgid "Add a new debugging configuration via ``Run`` > ``Add configuration``"
+msgstr ""
+
+#: ../../../usage/debugging.rst:83 ../../../usage/debugging.rst:110
+msgid "From the ``Select a debug configuration`` dialog, select ``Module``"
+msgstr ""
+
+#: ../../../usage/debugging.rst:85
+msgid "Enter ``litestar`` as the module name"
+msgstr ""
+
+#: ../../../usage/debugging.rst:87 ../../../usage/debugging.rst:114
+msgid "In the opened JSON file, alter the configuration as follows:"
+msgstr ""
+
+#: ../../../usage/debugging.rst:88
+msgid ""
+"{\n"
+"    \"name\": \"Python: Litestar app\",\n"
+"    \"type\": \"debugpy\",\n"
+"    \"request\": \"launch\",\n"
+"    \"module\": \"litestar\",\n"
+"    \"justMyCode\": true,\n"
+"    \"args\": [\"run\"]\n"
+"}"
+msgstr ""
+
+#: ../../../usage/debugging.rst:99 ../../../usage/debugging.rst:126
+msgid "Run your application via the debugger via ``Run`` > ``Start debugging``"
+msgstr ""
+
+#: ../../../usage/debugging.rst:112
+msgid "Enter ``uvicorn`` as the module name"
+msgstr ""
+
+#: ../../../usage/debugging.rst:115
+msgid ""
+"{\n"
+"    \"name\": \"Python: Litestar app\",\n"
+"    \"type\": \"debugpy\",\n"
+"    \"request\": \"launch\",\n"
+"    \"module\": \"uvicorn\",\n"
+"    \"justMyCode\": true,\n"
+"    \"args\": [\"app:app\"]\n"
+"}"
+msgstr ""
+
+#: ../../../usage/debugging.rst:132
+msgid "Customizing the debugger"
+msgstr ""
+
+#: ../../../usage/debugging.rst:134
+msgid ""
+"You can configure Litestar with the debug_module option to enable "
+"interactive debugging. Currently, it supports the following debugging tools: "
+"`ipdb <https://github.com/gotcha/ipdb>`_, `PuDB <https://documen.tician.de/"
+"pudb/>`_ and `pdbr <https://github.com/cansarigol/pdbr>`_. Also supports "
+"`pdb++ <https://github.com/pdbpp/pdbpp>`_. The default value is `pdb "
+"<https://docs.python.org/3/library/pdb.html>`_."
+msgstr ""
+
+#: ../../../usage/debugging.rst:139
+msgid ""
+"import ipdb\n"
+"\n"
+"\n"
+"app = Litestar(pdb_on_exception=True, debugger_module=ipdb)"
+msgstr ""

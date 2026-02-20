@@ -1,0 +1,182 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/contrib/mako.rst:2
+msgid "mako"
+msgstr ""
+
+#: ../../../../litestar/contrib/mako.py:docstring of
+#: litestar.contrib.mako.MakoTemplate:1
+msgid "Bases: :py:class:`~litestar.template.base.TemplateProtocol`"
+msgstr ""
+
+#: ../../../../litestar/contrib/mako.py:docstring of
+#: litestar.contrib.mako.MakoTemplate:1
+msgid "Mako template, implementing ``TemplateProtocol``"
+msgstr ""
+
+#: ../../../../litestar/contrib/mako.py:docstring of
+#: litestar.contrib.mako.MakoTemplate.__init__:1
+msgid "Initialize a template."
+msgstr ""
+
+#: ../../../reference/contrib/mako.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../litestar/contrib/mako.py:docstring of
+#: litestar.contrib.mako.MakoTemplate.__init__:3
+msgid "Base ``MakoTemplate`` used by the underlying mako-engine"
+msgstr ""
+
+#: ../../../../litestar/contrib/mako.py:docstring of
+#: litestar.contrib.mako.MakoTemplate.__init__:4
+msgid "List of callables passed to the template"
+msgstr ""
+
+#: ../../../../litestar/contrib/mako.py:docstring of
+#: litestar.contrib.mako.MakoTemplate.render:1
+msgid "Render a template."
+msgstr ""
+
+#: ../../../../litestar/contrib/mako.py:docstring of
+#: litestar.contrib.mako.MakoTemplate.render:3
+msgid "Positional arguments passed to the engines ``render`` function"
+msgstr ""
+
+#: ../../../../litestar/contrib/mako.py:docstring of
+#: litestar.contrib.mako.MakoTemplate.render:4
+msgid "Keyword arguments passed to the engines ``render`` function"
+msgstr ""
+
+#: ../../../reference/contrib/mako.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/contrib/mako.py:docstring of
+#: litestar.contrib.mako.MakoTemplate.render:6
+msgid "Rendered template as a string"
+msgstr ""
+
+#: ../../../../litestar/contrib/mako.py:docstring of
+#: litestar.contrib.mako.MakoTemplateEngine:1
+msgid ""
+"Bases: :py:class:`~litestar.template.base.TemplateEngineProtocol`\\ [:py:"
+"class:`~litestar.contrib.mako.MakoTemplate`, :py:class:`~typing.Mapping`\\ [:"
+"py:class:`str`, :py:obj:`~typing.Any`]]"
+msgstr ""
+
+#: ../../../../litestar/contrib/mako.py:docstring of
+#: litestar.contrib.mako.MakoTemplateEngine:1
+msgid "Mako-based TemplateEngine."
+msgstr ""
+
+#: ../../../../litestar/contrib/mako.py:docstring of
+#: litestar.contrib.mako.MakoTemplateEngine.__init__:1
+msgid "Initialize template engine."
+msgstr ""
+
+#: ../../../../litestar/contrib/mako.py:docstring of
+#: litestar.contrib.mako.MakoTemplateEngine.__init__:3
+msgid "Direct path or list of directory paths from which to serve templates."
+msgstr ""
+
+#: ../../../../litestar/contrib/mako.py:docstring of
+#: litestar.contrib.mako.MakoTemplateEngine.__init__:4
+#: litestar.contrib.mako.MakoTemplateEngine.from_template_lookup:3
+msgid "A mako TemplateLookup instance."
+msgstr ""
+
+#: ../../../../litestar/contrib/mako.py:docstring of
+#: litestar.contrib.mako.MakoTemplateEngine.get_template:1
+msgid ""
+"Retrieve a template by matching its name (dotted path) with files in the "
+"directory or directories provided."
+msgstr ""
+
+#: ../../../../litestar/contrib/mako.py:docstring of
+#: litestar.contrib.mako.MakoTemplateEngine.get_template:3
+msgid "A dotted path"
+msgstr ""
+
+#: ../../../../litestar/contrib/mako.py:docstring of
+#: litestar.contrib.mako.MakoTemplateEngine.get_template:5
+msgid "MakoTemplate instance"
+msgstr ""
+
+#: ../../../reference/contrib/mako.rst:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../litestar/contrib/mako.py:docstring of
+#: litestar.contrib.mako.MakoTemplateEngine.get_template:7
+msgid "if no template is found."
+msgstr ""
+
+#: ../../../../litestar/contrib/mako.py:docstring of
+#: litestar.contrib.mako.MakoTemplateEngine.register_template_callable:1
+msgid "Register a callable on the template engine."
+msgstr ""
+
+#: ../../../../litestar/contrib/mako.py:docstring of
+#: litestar.contrib.mako.MakoTemplateEngine.register_template_callable:3
+msgid ""
+"The callable key, i.e. the value to use inside the template to call the "
+"callable."
+msgstr ""
+
+#: ../../../../litestar/contrib/mako.py:docstring of
+#: litestar.contrib.mako.MakoTemplateEngine.register_template_callable:4
+msgid "A callable to register."
+msgstr ""
+
+#: ../../../../litestar/contrib/mako.py:docstring of
+#: litestar.contrib.mako.MakoTemplateEngine.register_template_callable:6
+msgid "None"
+msgstr ""
+
+#: ../../../../litestar/contrib/mako.py:docstring of
+#: litestar.contrib.mako.MakoTemplateEngine.render_string:1
+msgid "Render a template from a string with the given context."
+msgstr ""
+
+#: ../../../../litestar/contrib/mako.py:docstring of
+#: litestar.contrib.mako.MakoTemplateEngine.render_string:3
+msgid "The template string to render."
+msgstr ""
+
+#: ../../../../litestar/contrib/mako.py:docstring of
+#: litestar.contrib.mako.MakoTemplateEngine.render_string:4
+msgid "A dictionary of variables to pass to the template."
+msgstr ""
+
+#: ../../../../litestar/contrib/mako.py:docstring of
+#: litestar.contrib.mako.MakoTemplateEngine.render_string:6
+msgid "The rendered template as a string."
+msgstr ""
+
+#: ../../../../litestar/contrib/mako.py:docstring of
+#: litestar.contrib.mako.MakoTemplateEngine.from_template_lookup:1
+msgid "Create a template engine from an existing mako TemplateLookup instance."
+msgstr ""
+
+#: ../../../../litestar/contrib/mako.py:docstring of
+#: litestar.contrib.mako.MakoTemplateEngine.from_template_lookup:5
+msgid "MakoTemplateEngine instance"
+msgstr ""

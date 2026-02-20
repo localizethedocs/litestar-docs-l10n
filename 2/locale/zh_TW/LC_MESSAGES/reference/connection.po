@@ -1,0 +1,778 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/connection.rst:2
+msgid "connection"
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection:1
+msgid ""
+"Some code in this module was adapted from https://github.com/encode/"
+"starlette/blob/master/starlette/requests.py and https://github.com/encode/"
+"starlette/blob/master/starlette/websockets.py."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection:4
+msgid ""
+"Copyright © 2018, [Encode OSS Ltd](https://www.encode.io/). All rights "
+"reserved."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection:7
+msgid ""
+"Redistribution and use in source and binary forms, with or without "
+"modification, are permitted provided that the following conditions are met:"
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection:10
+msgid ""
+"Redistributions of source code must retain the above copyright notice, this "
+"list of conditions and the following disclaimer."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection:13
+msgid ""
+"Redistributions in binary form must reproduce the above copyright notice, "
+"this list of conditions and the following disclaimer in the documentation "
+"and/or other materials provided with the distribution."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection:17
+msgid ""
+"Neither the name of the copyright holder nor the names of its contributors "
+"may be used to endorse or promote products derived from this software "
+"without specific prior written permission."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection:21
+msgid ""
+"THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS "
+"IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, "
+"THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR "
+"PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR "
+"CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, "
+"EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, "
+"PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; "
+"OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, "
+"WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR "
+"OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF "
+"ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.base.ASGIConnection:1
+msgid ""
+"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~litestar.connection.base."
+"HandlerT`, :py:obj:`~litestar.connection.base.UserT`, :py:obj:`~litestar."
+"connection.base.AuthT`, :py:obj:`~litestar.connection.base.StateT`]"
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.base.ASGIConnection:1
+msgid "The base ASGI connection container."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.base.ASGIConnection.__init__:4
+#: litestar.connection.request.Request.__init__:4
+#: litestar.connection.websocket.WebSocket.__init__:4
+#: litestar.connection.websocket.WebSocket.receive_wrapper:3
+#: ../../../../docstring litestar.connection.ASGIConnection.receive:1
+msgid "The ASGI receive function."
+msgstr ""
+
+#: ../../../../docstring of litestar.connection.ASGIConnection.scope:1
+msgid "The ASGI scope attached to the connection."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.base.ASGIConnection.__init__:5
+#: litestar.connection.request.Request.__init__:5
+#: litestar.connection.websocket.WebSocket.__init__:5
+#: litestar.connection.websocket.WebSocket.send_wrapper:3 ../../../../docstring
+#: litestar.connection.ASGIConnection.send:1
+msgid "The ASGI send function."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.base.ASGIConnection.__init__:1
+msgid "Initialize ``ASGIConnection``."
+msgstr ""
+
+#: ../../../reference/connection.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.base.ASGIConnection.__init__:3
+#: litestar.connection.request.Request.__init__:3
+#: litestar.connection.websocket.WebSocket.__init__:3
+msgid "The ASGI connection scope."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.ASGIConnection.app:1
+msgid "Return the ``app`` for this connection."
+msgstr ""
+
+#: ../../../reference/connection.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.ASGIConnection.app:3
+msgid "The :class:`Litestar <litestar.app.Litestar>` application instance"
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.ASGIConnection.auth:1
+msgid "Return the ``auth`` data of this connection's ``Scope``."
+msgstr ""
+
+#: ../../../reference/connection.rst:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.ASGIConnection.auth:3
+msgid ""
+"If ``auth`` is not set in scope via an ``AuthMiddleware``, raises an "
+"exception"
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.ASGIConnection.auth:5
+msgid "A type correlating to the generic variable Auth."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.ASGIConnection.base_url:1
+msgid "Return the base URL of this connection's ``Scope``."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.ASGIConnection.base_url:3
+msgid ""
+"A URL instance constructed from the request's scope, representing only the "
+"base part (host + domain + prefix) of the request."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.base.ASGIConnection.clear_session:1
+msgid "Remove the session from the connection's ``Scope``."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.base.ASGIConnection.clear_session:3
+msgid ""
+"If the :class:`Litestar SessionMiddleware <.middleware.session.base."
+"SessionMiddleware>` is enabled, this will cause the session data to be "
+"cleared."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.base.ASGIConnection.clear_session:6
+msgid "None."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.ASGIConnection.client:1
+msgid "Return the ``client`` data of this connection's ``Scope``."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.ASGIConnection.client:3
+msgid "A two tuple of the host name and port number."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.ASGIConnection.cookies:1
+msgid "Return the ``cookies`` of this connection's ``Scope``."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.ASGIConnection.cookies:3
+msgid "Returns any cookies stored in the header as a parsed dictionary."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.ASGIConnection.headers:1
+msgid "Return the headers of this connection's ``Scope``."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.ASGIConnection.headers:3
+msgid "A Headers instance with the request's scope[\"headers\"] value."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.ASGIConnection.logger:1
+msgid "Return the ``Logger`` instance for this connection."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.ASGIConnection.logger:3
+msgid "A ``Logger`` instance."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.ASGIConnection.logger:5
+msgid "if ``log_config`` has not been passed to the Litestar constructor."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.ASGIConnection.path_params:1
+msgid "Return the ``path_params`` of this connection's ``Scope``."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.ASGIConnection.path_params:3
+msgid "A string keyed dictionary of path parameter values."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.ASGIConnection.query_params:1
+msgid "Return the query parameters of this connection's ``Scope``."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.ASGIConnection.query_params:3
+msgid ""
+"A normalized dict of query parameters. Multiple values for the same key are "
+"returned as a list."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.ASGIConnection.route_handler:1
+msgid "Return the ``route_handler`` for this connection."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.ASGIConnection.route_handler:3
+msgid "The target route handler instance."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.ASGIConnection.session:1
+msgid ""
+"Return the session for this connection if a session was previously set in "
+"the ``Scope``"
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.ASGIConnection.session:3
+msgid "A dictionary representing the session value - if existing."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.ASGIConnection.session:5
+msgid "if session is not set in scope."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.base.ASGIConnection.set_session:1
+msgid "Set the session in the connection's ``Scope``."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.base.ASGIConnection.set_session:3
+msgid ""
+"If the :class:`SessionMiddleware <.middleware.session.base."
+"SessionMiddleware>` is enabled, the session will be added to the response as "
+"a cookie header."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.base.ASGIConnection.set_session:6
+msgid "Dictionary or pydantic model instance for the session data."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.base.ASGIConnection.set_session:8
+#: litestar.connection.request.Request.send_push_promise:9
+#: litestar.connection.websocket.WebSocket.accept:6
+#: litestar.connection.websocket.WebSocket.close:6
+#: litestar.connection.websocket.WebSocket.send_bytes:6
+#: litestar.connection.websocket.WebSocket.send_data:7
+#: litestar.connection.websocket.WebSocket.send_json:8
+#: litestar.connection.websocket.WebSocket.send_msgpack:10
+#: litestar.connection.websocket.WebSocket.send_text:6
+msgid "None"
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.ASGIConnection.state:1
+msgid "Return the ``State`` of this connection."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.ASGIConnection.state:3
+msgid "A State instance constructed from the scope[\"state\"] value."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.ASGIConnection.url:1
+msgid "Return the URL of this connection's ``Scope``."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.ASGIConnection.url:3
+msgid "A URL instance constructed from the request's scope."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.base.ASGIConnection.url_for:1
+msgid "Return the url for a given route handler / handler name."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.base.ASGIConnection.url_for:3
+msgid "The ``name`` of the route handler, or the route handler itself."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.base.ASGIConnection.url_for:4
+msgid "Values for path parameters in the route"
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.base.ASGIConnection.url_for:6
+msgid ""
+"If route with ``name`` does not exist, path parameters are missing or have "
+"a     wrong type."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.base.ASGIConnection.url_for:8
+msgid "A string representing the absolute url of the route handler."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.base.ASGIConnection.url_for_static_asset:1
+msgid ""
+"Receives a static files handler name, an asset file path and returns "
+"resolved absolute url to the asset."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.base.ASGIConnection.url_for_static_asset:3
+msgid "A static handler unique name."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.base.ASGIConnection.url_for_static_asset:4
+msgid "a string containing path to an asset."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.base.ASGIConnection.url_for_static_asset:6
+msgid "If static files handler with ``name`` does not exist."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.base.ASGIConnection.url_for_static_asset:8
+msgid "A string representing absolute url to the asset."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.ASGIConnection.user:1
+msgid "Return the ``user`` data of this connection's ``Scope``."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.ASGIConnection.user:3
+msgid ""
+"If ``user`` is not set in scope via an ``AuthMiddleware``, raises an "
+"exception"
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.ASGIConnection.user:5
+msgid "A type correlating to the generic variable User."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.request.Request:1
+msgid ""
+"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~litestar.connection.base."
+"UserT`, :py:obj:`~litestar.connection.base.AuthT`, :py:obj:`~litestar."
+"connection.base.StateT`], :py:class:`~litestar.connection.base."
+"ASGIConnection`\\ [:py:class:`HTTPRouteHandler`, :py:obj:`~litestar."
+"connection.base.UserT`, :py:obj:`~litestar.connection.base.AuthT`, :py:obj:"
+"`~litestar.connection.base.StateT`]"
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.request.Request:1
+msgid "The Litestar Request class."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.request.Request.__init__:1
+msgid "Initialize ``Request``."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.Request.accept:1
+msgid ""
+"Parse the request's 'Accept' header, returning an :class:`Accept <litestar."
+"datastructures.headers.Accept>` instance."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.Request.accept:3
+msgid ""
+"An :class:`Accept <litestar.datastructures.headers.Accept>` instance, "
+"representing the list of acceptable media types."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.request.Request.body:1
+msgid "Return the body of the request."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.request.Request.body:3
+msgid "A byte-string representing the body of the request."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.Request.content_type:1
+msgid ""
+"Parse the request's 'Content-Type' header, returning the header value and "
+"any options as a dictionary."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.Request.content_type:3
+msgid ""
+"A tuple with the parsed value and a dictionary containing any options send "
+"in it."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.request.Request.form:1
+msgid ""
+"Retrieve form data from the request. If the request is either a 'multipart/"
+"form-data' or an 'application/x-www-form- urlencoded', return a "
+"FormMultiDict instance populated with the values sent in the request, "
+"otherwise, an empty instance."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.request.Request.form:5
+msgid "A FormMultiDict instance"
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.request.Request.json:1
+msgid "Retrieve the json request body from the request."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.request.Request.json:3
+#: litestar.connection.request.Request.msgpack:3
+#: litestar.connection.websocket.WebSocket.receive_json:5
+#: litestar.connection.websocket.WebSocket.receive_msgpack:6
+msgid "An arbitrary value"
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.Request.method:1
+msgid "Return the request method."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.Request.method:3
+msgid "The request :class:`Method <litestar.types.Method>`"
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.request.Request.msgpack:1
+msgid "Retrieve the MessagePack request body from the request."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.request.Request.send_push_promise:1
+msgid "Send a push promise."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.request.Request.send_push_promise:3
+msgid ""
+"This method requires the `http.response.push` extension to be sent from the "
+"ASGI server."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.request.Request.send_push_promise:5
+msgid "Path to send the promise to."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.request.Request.send_push_promise:6
+msgid "Raise an exception if server push is not supported by the server"
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.request.Request.stream:1
+msgid "Return an async generator that streams chunks of bytes."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.request.Request.stream:3
+msgid "An async generator."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.request.Request.stream:5
+msgid "if the stream is already consumed"
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket:1
+msgid ""
+"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~litestar.connection.base."
+"UserT`, :py:obj:`~litestar.connection.base.AuthT`, :py:obj:`~litestar."
+"connection.base.StateT`], :py:class:`~litestar.connection.base."
+"ASGIConnection`\\ [:py:class:`WebsocketRouteHandler`, :py:obj:`~litestar."
+"connection.base.UserT`, :py:obj:`~litestar.connection.base.AuthT`, :py:obj:"
+"`~litestar.connection.base.StateT`]"
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket:1
+msgid "The Litestar WebSocket class."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket.__init__:1
+msgid "Initialize ``WebSocket``."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket.accept:1
+msgid ""
+"Accept the incoming connection. This method should be called before "
+"receiving data."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket.accept:3
+msgid "Websocket sub-protocol to use."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket.accept:4
+msgid "Headers to set on the data sent."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket.close:1
+msgid "Send an 'websocket.close' event."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket.close:3
+msgid "Status code."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket.close:4
+msgid "Reason for closing the connection"
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket.iter_data:1
+msgid "Continuously receive data and yield it"
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket.iter_data:3
+#: litestar.connection.websocket.WebSocket.iter_json:3
+msgid "Socket mode to use. Either ``text`` or ``binary``"
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket.iter_json:1
+msgid ""
+"Continuously receive data and yield it, decoding it as JSON in the process."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket.iter_msgpack:1
+msgid ""
+"Continuously receive data and yield it, decoding it as MessagePack in the "
+"process."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket.iter_msgpack:4
+#: litestar.connection.websocket.WebSocket.receive_msgpack:3
+msgid ""
+"Note that since MessagePack is a binary format, this method will always "
+"receive data in ``binary`` mode."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket.receive_bytes:1
+msgid "Receive data as bytes."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket.receive_bytes:3
+msgid "A byte-string."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket.receive_data:1
+msgid "Receive an 'websocket.receive' event and returns the data stored on it."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket.receive_data:3
+#: litestar.connection.websocket.WebSocket.send_data:4
+msgid "The respective event key to use."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket.receive_data:5
+msgid "The event's data."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket.receive_json:1
+msgid "Receive data and decode it as JSON."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket.receive_json:3
+#: litestar.connection.websocket.WebSocket.send_json:4
+msgid "Either ``text`` or ``binary``."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket.receive_msgpack:1
+msgid "Receive data and decode it as MessagePack."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket.receive_text:1
+msgid "Receive data as text."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket.receive_text:3
+msgid "A string."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket.receive_wrapper:1
+msgid "Wrap ``receive`` to set 'self.connection_state' and validate events."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket.receive_wrapper:5
+msgid "An ASGI receive function."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket.send_bytes:1
+msgid "Send data using the ``bytes`` key of the send event."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket.send_bytes:3
+#: litestar.connection.websocket.WebSocket.send_text:3
+msgid "Data to send"
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket.send_bytes:4
+#: litestar.connection.websocket.WebSocket.send_json:5
+#: litestar.connection.websocket.WebSocket.send_msgpack:7
+#: litestar.connection.websocket.WebSocket.send_text:4
+msgid "Encoding to use for binary data."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket.send_data:1
+msgid "Send a 'websocket.send' event."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket.send_data:3
+msgid "Data to send."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket.send_data:5
+msgid "Encoding to use when converting bytes / str."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket.send_json:1
+msgid "Send data as JSON."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket.send_json:3
+#: litestar.connection.websocket.WebSocket.send_msgpack:6
+msgid "A value to serialize."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket.send_json:6
+#: litestar.connection.websocket.WebSocket.send_msgpack:8
+msgid "A serializer function."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket.send_msgpack:1
+msgid "Send data as MessagePack."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket.send_msgpack:3
+msgid ""
+"Note that since MessagePack is a binary format, this method will always send "
+"data in ``binary`` mode."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket.send_text:1
+msgid "Send data using the ``text`` key of the send event."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket.send_wrapper:1
+msgid "Wrap ``send`` to ensure that state is not disconnected."
+msgstr ""
+
+#: ../../../../litestar/connection/__init__.py:docstring of
+#: litestar.connection.websocket.WebSocket.send_wrapper:5
+msgid "An ASGI send function."
+msgstr ""

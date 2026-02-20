@@ -1,0 +1,254 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/logging/config.rst:2
+msgid "config"
+msgstr ""
+
+#: ../../../../litestar/logging/config.py:docstring of
+#: litestar.logging.config.BaseLoggingConfig:1
+msgid "Bases: :py:class:`~abc.ABC`"
+msgstr ""
+
+#: ../../../../litestar/logging/config.py:docstring of
+#: litestar.logging.config.BaseLoggingConfig:1
+msgid "Abstract class that should be extended by logging configs."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.logging.config.BaseLoggingConfig.log_exceptions:1
+msgid ""
+"Should exceptions be logged, defaults to log exceptions when ``app.debug == "
+"True``'"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.logging.config.BaseLoggingConfig.traceback_line_limit:1
+#: litestar.logging.config.LoggingConfig.traceback_line_limit:1
+#: litestar.logging.config.StructLoggingConfig.traceback_line_limit:1
+msgid "Max number of lines to print for exception traceback."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.logging.config.BaseLoggingConfig.traceback_line_limit:3
+#: litestar.logging.config.LoggingConfig.traceback_line_limit:3
+#: litestar.logging.config.StructLoggingConfig.traceback_line_limit:3
+msgid ""
+"This parameter is deprecated and ignored. It will be removed in a future "
+"release."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.logging.config.BaseLoggingConfig.exception_logging_handler:1
+#: litestar.logging.config.LoggingConfig.exception_logging_handler:1
+#: litestar.logging.config.StructLoggingConfig.exception_logging_handler:1
+msgid "Handler function for logging exceptions."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.logging.config.BaseLoggingConfig.disable_stack_trace:1
+#: litestar.logging.config.LoggingConfig.disable_stack_trace:1
+#: litestar.logging.config.StructLoggingConfig.disable_stack_trace:1
+msgid ""
+"Set of http status codes and exceptions to disable stack trace logging for."
+msgstr ""
+
+#: ../../../../litestar/logging/config.py:docstring of
+#: litestar.logging.config.BaseLoggingConfig.configure:1
+#: litestar.logging.config.LoggingConfig.configure:1
+#: litestar.logging.config.StructLoggingConfig.configure:1
+msgid "Return logger with the given configuration."
+msgstr ""
+
+#: ../../../reference/logging/config.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/logging/config.py:docstring of
+#: litestar.logging.config.BaseLoggingConfig.configure:3
+#: litestar.logging.config.LoggingConfig.configure:3
+#: litestar.logging.config.StructLoggingConfig.configure:3
+msgid "A 'logging.getLogger' like function."
+msgstr ""
+
+#: ../../../../litestar/logging/config.py:docstring of
+#: litestar.logging.config.BaseLoggingConfig.set_level:1
+#: litestar.logging.config.LoggingConfig.set_level:1
+#: litestar.logging.config.StructLoggingConfig.set_level:1
+msgid "Provides a consistent interface to call `setLevel` for all loggers."
+msgstr ""
+
+#: ../../../../litestar/logging/config.py:docstring of
+#: litestar.logging.config.LoggingConfig:1
+#: litestar.logging.config.StructLoggingConfig:1
+msgid "Bases: :py:class:`~litestar.logging.config.BaseLoggingConfig`"
+msgstr ""
+
+#: ../../../../litestar/logging/config.py:docstring of
+#: litestar.logging.config.LoggingConfig:1
+msgid "Configuration class for standard logging."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.logging.config.LoggingConfig.logging_module:1
+msgid ""
+"Logging module. ``logging`` and ``picologging`` are supported. "
+"``picologging`` will be used by default if installed."
+msgstr ""
+
+#: ../../../../docstring of litestar.logging.config.LoggingConfig.version:1
+msgid "The only valid value at present is 1."
+msgstr ""
+
+#: ../../../../docstring of litestar.logging.config.LoggingConfig.incremental:1
+msgid ""
+"Whether the configuration is to be interpreted as incremental to the "
+"existing configuration."
+msgstr ""
+
+#: ../../../../litestar/logging/config.py:docstring of
+#: litestar.logging.config.StructLoggingConfig:3 ../../../../docstring
+#: litestar.logging.config.LoggingConfig.incremental:3
+msgid "Notes"
+msgstr ""
+
+#: ../../../../docstring of litestar.logging.config.LoggingConfig.incremental:5
+msgid "This option is ignored for 'picologging'"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.logging.config.LoggingConfig.disable_existing_loggers:1
+msgid "Whether any existing non-root loggers are to be disabled."
+msgstr ""
+
+#: ../../../../docstring of litestar.logging.config.LoggingConfig.filters:1
+msgid ""
+"A dict in which each key is a filter id and each value is a dict describing "
+"how to configure the corresponding Filter_ instance."
+msgstr ""
+
+#: ../../../../docstring of litestar.logging.config.LoggingConfig.propagate:1
+msgid ""
+"If messages must propagate to handlers higher up the logger hierarchy from "
+"this logger."
+msgstr ""
+
+#: ../../../../docstring of litestar.logging.config.LoggingConfig.propagate:3
+msgid ""
+"This parameter is deprecated. It will be removed in a future release. Use "
+"``propagate`` at the logger level."
+msgstr ""
+
+#: ../../../../docstring of litestar.logging.config.LoggingConfig.formatters:1
+msgid ""
+"A dict in which each key is a formatter and each value is a dict describing "
+"how to configure the corresponding Formatter_ instance. A ``standard`` "
+"formatter is provided."
+msgstr ""
+
+#: ../../../../docstring of litestar.logging.config.LoggingConfig.handlers:1
+msgid ""
+"A dict in which each key is a handler id and each value is a dict describing "
+"how to configure the corresponding Handler_ instance. Two handlers are "
+"provided, ``console`` and ``queue_listener``."
+msgstr ""
+
+#: ../../../../docstring of litestar.logging.config.LoggingConfig.loggers:1
+msgid ""
+"A dict in which each key is a logger name and each value is a dict "
+"describing how to configure the corresponding Logger_ instance. A "
+"``litestar`` logger is mandatory and will be configured as required."
+msgstr ""
+
+#: ../../../../docstring of litestar.logging.config.LoggingConfig.root:1
+msgid "This will be the configuration for the root logger."
+msgstr ""
+
+#: ../../../../docstring of litestar.logging.config.LoggingConfig.root:3
+msgid ""
+"Processing of the configuration will be as for any logger, except that the "
+"propagate setting will not be applicable."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.logging.config.LoggingConfig.configure_root_logger:1
+msgid ""
+"Should the root logger be configured, defaults to True for ease of "
+"configuration."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.logging.config.LoggingConfig.log_exceptions:1
+#: litestar.logging.config.StructLoggingConfig.log_exceptions:1
+msgid ""
+"Should exceptions be logged, defaults to log exceptions when 'app.debug == "
+"True'"
+msgstr ""
+
+#: ../../../../litestar/logging/config.py:docstring of
+#: litestar.logging.config.StructLoggingConfig:1
+msgid "Configuration class for structlog."
+msgstr ""
+
+#: ../../../../litestar/logging/config.py:docstring of
+#: litestar.logging.config.StructLoggingConfig:5
+msgid "requires ``structlog`` to be installed."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.logging.config.StructLoggingConfig.processors:1
+msgid "Iterable of structlog logging processors."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.logging.config.StructLoggingConfig.standard_lib_logging_config:1
+msgid "Optional customized standard logging configuration."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.logging.config.StructLoggingConfig.standard_lib_logging_config:3
+msgid ""
+"Use this when you need to modify the standard library outside of the "
+"Structlog pre-configured implementation."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.logging.config.StructLoggingConfig.wrapper_class:1
+msgid "Structlog bindable logger."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.logging.config.StructLoggingConfig.context_class:1
+msgid "Context class (a 'contextvar' context) for the logger."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.logging.config.StructLoggingConfig.logger_factory:1
+msgid "Logger factory to use."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.logging.config.StructLoggingConfig.cache_logger_on_first_use:1
+msgid "Whether to cache the logger configuration and reuse."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.logging.config.StructLoggingConfig.pretty_print_tty:1
+msgid "Pretty print log output when run from an interactive terminal."
+msgstr ""

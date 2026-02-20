@@ -1,0 +1,1945 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../release-notes/whats-new-2.rst:5
+msgid "What's changed in 2.0?"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:7
+msgid ""
+"This document is an overview of the changes between version **1.51** and "
+"**2.0**. For a detailed list of all changes, including changes between "
+"versions leading up to the 2.0 release, consult the :doc:`/release-notes/"
+"changelog`."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:12
+msgid "Starlite → Litestar"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:14
+msgid ""
+"We're thrilled to introduce some exciting changes in our latest release, "
+"version 2! The most noteworthy transformation you will notice is the "
+"rebranding of our project, previously known as Starlite, now stepping into "
+"the limelight as Litestar."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:18
+msgid ""
+"The name \"Starlite\" was chosen as an homage to `Starlette <https://www."
+"starlette.io/>`_, the ASGI framework and toolkit Starlite was initially "
+"based on. Over the course of its development, Starlite grew more independent "
+"and relied less on Starlette, up to the point were Starlette was officially "
+"removed as a dependency in November 2022, with the release of `v1.39.0 "
+"<https://github.com/starlite-api/starlite/releases/tag/v1.39.0>`_."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:24
+msgid ""
+"After careful consideration, it was decided that with the release of 2.0, "
+"Starlite would be renamed to Litestar. There were many factors contributing "
+"to this decision, but it was mainly driven by concerns from within and "
+"outside the community about the possible confusion of the names *Starlette* "
+"and *Starlite* which - not incidentally - bore a lot of resemblance, which "
+"now had outlived its purpose."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:32
+msgid ""
+"Aside from the name, Litestar 2.0 is a direct successor of Starlite 1.x, and "
+"the regular release cycle will continue. It was determined that making the "
+"first 2.0 release under the new name and continuing with the version scheme "
+"from Starlite would cause the least friction. Following that decision, the "
+"first release under the new name was `v2.0.0alpha3 <https://github.com/"
+"litestar-org/litestar/releases/tag/v2.0.0alpha3>`_, following the last alpha "
+"release of Starlite 2.0, `v2.0.0alpha2 <https://github.com/litestar-org/"
+"litestar/releases/tag/v2.0.0alpha2>`_."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:41
+msgid "The **1.51** release line is unaffected by this change"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:45
+msgid "Imports"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:48
+msgid "``1.51``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:48
+msgid "``2.x``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:50
+msgid "``starlite.ASGIConnection``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:50
+msgid ":class:`.connection.ASGIConnection`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:52
+msgid "``starlite.Partial``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:52
+msgid "replaced with DTOs"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:54
+msgid "**Enums**"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:56
+msgid "``starlite.RequestEncodingType``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:56
+msgid ":class:`.enums.RequestEncodingType`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:58
+msgid "``starlite.ScopeType``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:58
+msgid ":class:`.enums.ScopeType`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:60
+msgid "``starlite.OpenAPIMediaType``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:60
+msgid ":class:`.enums.OpenAPIMediaType`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:62
+msgid "**Datastructures**"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:64
+msgid "``starlite.BackgroundTask``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:64
+msgid ":class:`.background_tasks.BackgroundTask`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:66
+msgid "``starlite.BackgroundTasks``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:66
+msgid ":class:`.background_tasks.BackgroundTasks`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:68
+msgid "``starlite.State``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:68
+msgid ":class:`.datastructures.State`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:70
+msgid "``starlite.ImmutableState``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:70
+msgid ":class:`.datastructures.ImmutableState`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:72
+msgid "``starlite.Cookie``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:72
+msgid ":class:`.datastructures.Cookie`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:74
+msgid "``starlite.FormMultiDict``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:74
+msgid ":class:`.datastructures.FormMultiDict`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:76
+msgid "``starlite.ResponseHeader``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:76
+msgid ":class:`.datastructures.ResponseHeader`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:78
+msgid "``starlite.UploadFile``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:78
+msgid ":class:`.datastructures.UploadFile`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:80
+msgid "**Configuration**"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:82
+msgid "``starlite.AllowedHostsConfig``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:82
+msgid ":class:`.config.allowed_hosts.AllowedHostsConfig`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:84
+#: ../../../release-notes/whats-new-2.rst:198
+msgid "``starlite.AbstractSecurityConfig``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:84
+#: ../../../release-notes/whats-new-2.rst:198
+msgid ":class:`.security.AbstractSecurityConfig`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:86
+msgid "``starlite.CacheConfig``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:86
+msgid ":class:`.config.response_cache.ResponseCacheConfig`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:88
+msgid "``starlite.CompressionConfig``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:88
+msgid ":class:`.config.compression.CompressionConfig`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:90
+msgid "``starlite.CORSConfig``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:90
+msgid ":class:`.config.cors.CORSConfig`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:92
+msgid "``starlite.CSRFConfig``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:92
+msgid ":class:`.config.csrf.CSRFConfig`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:94
+msgid "``starlite.OpenAPIConfig``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:94
+msgid ":class:`.openapi.OpenAPIConfig`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:96
+msgid "``starlite.StaticFilesConfig``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:96
+msgid ":class:`.static_files.config.StaticFilesConfig`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:98
+msgid "``starlite.TemplateConfig``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:98
+msgid ":class:`.template.TemplateConfig`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:100
+msgid "``starlite.BaseLoggingConfig``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:100
+msgid ":class:`.logging.config.BaseLoggingConfig`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:102
+msgid "``starlite.LoggingConfig``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:102
+msgid ":class:`.logging.config.LoggingConfig`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:104
+msgid "``starlite.StructLoggingConfig``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:104
+msgid ":class:`.logging.config.StructLoggingConfig`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:106
+msgid "**Provide**"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:108
+msgid "``starlite.datastructures.Provide``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:108
+msgid ":class:`.di.Provide`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:110
+msgid "**Pagination**"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:112
+msgid "``starlite.AbstractAsyncClassicPaginator``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:112
+msgid ":class:`.pagination.AbstractAsyncClassicPaginator`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:114
+msgid "``starlite.AbstractAsyncCursorPaginator``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:114
+msgid ":class:`.pagination.AbstractAsyncCursorPaginator`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:116
+msgid "``starlite.AbstractAsyncOffsetPaginator``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:116
+msgid ":class:`.pagination.AbstractAsyncOffsetPaginator`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:118
+msgid "``starlite.AbstractSyncClassicPaginator``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:118
+msgid ":class:`.pagination.AbstractSyncClassicPaginator`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:120
+msgid "``starlite.AbstractSyncCursorPaginator``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:120
+msgid ":class:`.pagination.AbstractSyncCursorPaginator`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:122
+msgid "``starlite.AbstractSyncOffsetPaginator``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:122
+msgid ":class:`.pagination.AbstractSyncOffsetPaginator`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:124
+msgid "``starlite.ClassicPagination``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:124
+msgid ":class:`.pagination.ClassicPagination`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:126
+msgid "``starlite.CursorPagination``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:126
+msgid ":class:`.pagination.CursorPagination`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:128
+msgid "``starlite.OffsetPagination``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:128
+msgid ":class:`.pagination.OffsetPagination`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:130
+msgid "**Response Containers**"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:132
+msgid "``starlite.File``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:132
+msgid ":class:`.response.File`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:134
+msgid "``starlite.Redirect``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:134
+msgid ":class:`.response.Redirect`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:136
+msgid "``starlite.ResponseContainer``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:136
+msgid ":class:`.response.Response`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:138
+msgid "``starlite.Stream``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:138
+msgid ":class:`.response.Stream`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:140
+msgid "``starlite.Template``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:140
+msgid ":class:`.response.Template`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:142
+msgid "**Exceptions**"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:144
+msgid "``starlite.HTTPException``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:144
+msgid ":class:`.exceptions.HTTPException`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:146
+msgid "``starlite.ImproperlyConfiguredException``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:146
+msgid ":class:`.exceptions.ImproperlyConfiguredException`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:148
+msgid "``starlite.InternalServerException``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:148
+msgid ":class:`.exceptions.InternalServerException`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:150
+msgid "``starlite.MissingDependencyException``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:150
+msgid ":class:`.exceptions.MissingDependencyException`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:152
+msgid "``starlite.NoRouteMatchFoundException``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:152
+msgid ":class:`.exceptions.NoRouteMatchFoundException`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:154
+msgid "``starlite.NotAuthorizedException``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:154
+msgid ":class:`.exceptions.NotAuthorizedException`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:156
+msgid "``starlite.NotFoundException``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:156
+msgid ":class:`.exceptions.NotFoundException`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:158
+msgid "``starlite.PermissionDeniedException``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:158
+msgid ":class:`.exceptions.PermissionDeniedException`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:160
+msgid "``starlite.ServiceUnavailableException``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:160
+msgid ":class:`.exceptions.ServiceUnavailableException`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:162
+msgid "``starlite.StarliteException``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:162
+msgid ":class:`.exceptions.LitestarException`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:164
+msgid "``starlite.TooManyRequestsException``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:164
+msgid ":class:`.exceptions.TooManyRequestsException`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:166
+msgid "``starlite.ValidationException``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:166
+msgid ":class:`.exceptions.ValidationException`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:168
+msgid "``starlite.WebSocketException``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:168
+msgid ":class:`.exceptions.WebSocketException`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:170
+msgid "**Testing**"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:172
+msgid "``starlite.TestClient``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:172
+msgid ":class:`.testing.TestClient`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:174
+msgid "``starlite.AsyncTestClient``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:174
+msgid ":class:`.testing.AsyncTestClient`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:176
+msgid "``starlite.create_test_client``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:176
+msgid ":class:`.testing.create_test_client`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:178
+msgid "**OpenAPI**"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:180
+msgid "``starlite.OpenAPIController``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:180
+msgid ":class:`.openapi.controller.OpenAPIController`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:182
+msgid "``starlite.ResponseSpec``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:182
+msgid ":class:`.openapi.datastructures.ResponseSpec`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:184
+msgid "**Middleware**"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:186
+msgid "``starlite.AbstractAuthenticationMiddleware``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:186
+msgid ":class:`.middleware.authentication.AbstractAuthenticationMiddleware`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:188
+msgid "``starlite.AuthenticationResult``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:188
+msgid ":class:`.middleware.authentication.AuthenticationResult`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:190
+msgid "``starlite.AbstractMiddleware``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:190
+msgid ":class:`.middleware.AbstractMiddleware`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:192
+msgid "``starlite.DefineMiddleware``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:192
+msgid ":class:`.middleware.DefineMiddleware`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:194
+msgid "``starlite.MiddlewareProtocol``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:194
+msgid ":class:`.middleware.MiddlewareProtocol`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:196
+msgid "**Security**"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:200
+msgid "**Route Handlers**"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:202
+msgid "``starlite.handlers.asgi``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:202
+#: ../../../release-notes/whats-new-2.rst:204
+msgid ":mod:`.handlers`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:204
+msgid "``starlite.handlers.http``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:206
+msgid "``starlite.handlers.websocket``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:206
+msgid ":class:`.handlers`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:208
+msgid "``starlite.ASGIRouteHandler``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:208
+msgid ":class:`.handlers.ASGIRouteHandler`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:210
+msgid "``starlite.BaseRouteHandler``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:210
+msgid ":class:`.handlers.BaseRouteHandler`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:212
+msgid "``starlite.HTTPRouteHandler``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:212
+msgid ":class:`.handlers.HTTPRouteHandler`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:214
+msgid "``starlite.WebsocketRouteHandler``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:214
+msgid ":class:`.handlers.WebsocketRouteHandler`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:216
+msgid "**Routes**"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:218
+msgid "``starlite.ASGIRoute``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:218
+msgid ":class:`.routes.ASGIRoute`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:220
+msgid "``starlite.BaseRoute``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:220
+msgid ":class:`.routes.BaseRoute`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:222
+msgid "``starlite.HTTPRoute``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:222
+msgid ":class:`.routes.HTTPRoute`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:224
+msgid "``starlite.WebSocketRoute``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:224
+msgid ":class:`.routes.WebSocketRoute`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:226
+msgid "**Parameters**"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:228
+msgid "``starlite.Body``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:228
+msgid ":class:`.params.Body`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:230
+msgid "``starlite.Parameter``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:230
+msgid ":class:`.params.Parameter`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:235
+msgid "Response headers"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:237
+msgid ""
+"Response header can now be set using either a :class:`Sequence <typing."
+"Sequence>` of :class:`ResponseHeader <.datastructures.response_header."
+"ResponseHeader>`, or by using a plain :class:`Mapping[str, str] <typing."
+"Mapping>`. The typing of :class:`ResponseHeader <.datastructures."
+"response_header.ResponseHeader>` was also changed to be more strict and now "
+"only allows string values."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:244
+#: ../../../release-notes/whats-new-2.rst:340
+#: ../../../release-notes/whats-new-2.rst:367
+#: ../../../release-notes/whats-new-2.rst:507
+#: ../../../release-notes/whats-new-2.rst:559
+msgid "1.51"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:244
+msgid ""
+"from starlite import ResponseHeader, get\n"
+"\n"
+"\n"
+"@get(response_headers={\"my-header\": ResponseHeader(value=\"header-"
+"value\")})\n"
+"async def handler() -> str: ..."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:254
+#: ../../../release-notes/whats-new-2.rst:346
+#: ../../../release-notes/whats-new-2.rst:374
+#: ../../../release-notes/whats-new-2.rst:514
+#: ../../../release-notes/whats-new-2.rst:566
+#: ../../../release-notes/whats-new-2.rst:574
+msgid "2.x"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:254
+msgid ""
+"from litestar import ResponseHeader, get\n"
+"\n"
+"\n"
+"@get(response_headers=[ResponseHeader(name=\"my-header\", value=\"header-"
+"value\")])\n"
+"async def handler() -> str: ...\n"
+"\n"
+"\n"
+"# or\n"
+"\n"
+"\n"
+"@get(response_headers={\"my-header\": \"header-value\"})\n"
+"async def handler() -> str: ..."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:271
+msgid "Response cookies"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:273
+msgid ""
+"Response cookies might now also be set using a :class:`Mapping[str, str] "
+"<typing.Mapping>`, analogous to `Response headers`_."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:277
+msgid ""
+"@get(\"/\", response_cookies=[Cookie(key=\"foo\", value=\"bar\")])\n"
+"async def handler() -> None: ..."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:281
+#: ../../../release-notes/whats-new-2.rst:534
+msgid "is equivalent to"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:284
+msgid ""
+"@get(\"/\", response_cookies={\"foo\": \"bar\"})\n"
+"async def handler() -> None: ..."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:290
+msgid "SQLAlchemy Plugin"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:292
+msgid ""
+"Support for SQLAlchemy 1 has been dropped and the new plugin will now "
+"support SQLAlchemy 2 only."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:295
+msgid "TODO: Migration instructions"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:298
+msgid ""
+"The :doc:`/usage/databases/sqlalchemy/index` usage documentation and the :"
+"doc:`/reference/contrib/sqlalchemy/index` API reference"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:303
+msgid "Removal of Pydantic models"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:305
+msgid ""
+"Several Pydantic models used for configuration have been replaced with "
+"dataclasses or plain classes. If you relied on implicit data conversion from "
+"these models or subclassed them, you might need to adjust your code "
+"accordingly."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:309
+msgid ":ref:`change:2.0.0alpha1-replace pydantic models with dataclasses`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:313
+msgid "Plugin protocols"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:315
+msgid ""
+"The plugin protocol has been split into three distinct protocols, covering "
+"different use cases:"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:318
+msgid ":class:`litestar.plugins.InitPluginProtocol`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:319
+msgid "Hook into an application's initialization process"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:321
+msgid ":class:`litestar.plugins.SerializationPluginProtocol`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:322
+msgid ""
+"Extend the serialization and deserialization capabilities of an application"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:324
+msgid ":class:`litestar.plugins.OpenAPISchemaPluginProtocol`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:325
+msgid "Extend OpenAPI schema generation"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:328
+msgid ""
+"Plugins that made use of all features of the previous API should simply "
+"inherit from all three base classes."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:333
+msgid "Remove 2 argument ``before_send``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:335
+msgid ""
+"The 2 argument for of ``before_send`` hook handlers has been removed. "
+"Existing handlers should be changed to include an additional ``scope`` "
+"parameter."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:340
+msgid "async def before_send(message: Message, state: State) -> None: ..."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:346
+msgid ""
+"async def before_send(message: Message, state: State, scope: Scope) -> "
+"None: ..."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:353
+msgid ""
+":ref:`change:2.0.0alpha2-remove support for 2 argument form of` "
+"``before_send`` and the :ref:`before_send` API reference"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:358
+msgid "``initial_state`` application parameter"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:360
+msgid ""
+"The ``initial_state`` argument to :class:`~litestar.app.Litestar` has been "
+"replaced with a ``state`` keyword argument, accepting an optional :class:"
+"`~litestar.datastructures.state.State` instance."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:364
+msgid "Existing code using this keyword argument will need to be changed from"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:367
+msgid "app = Starlite(..., initial_state={\"some\": \"key\"})"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:371
+msgid "to"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:374
+msgid "app = Litestar(..., state=State({\"some\": \"key\"}))"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:380
+msgid "Stores"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:382
+msgid ""
+"A new module, ``litestar.stores`` has been introduced, which replaces the "
+"previously used ``starlite.cache.Cache`` and server-side session storage "
+"backends."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:385
+msgid ""
+"These stores provide a low-level, asynchronous interface for common key/"
+"value stores such as Redis and an in-memory implementation. They are "
+"currently used for server-side sessions, caching and rate limiting."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:389
+msgid ""
+"Stores are integrated into the :class:`~app.Litestar` application object via "
+"the :class:`~.stores.registry.StoreRegistry`, which can be used to register "
+"and access stores as well as provide defaults."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:394
+msgid ""
+"from litestar.stores.memory import MemoryStore\n"
+"\n"
+"store = MemoryStore()\n"
+"\n"
+"\n"
+"async def main() -> None:\n"
+"    value = await store.get(\"key\")\n"
+"    print(value)  # this will print 'None', as no store with this key has "
+"been defined yet\n"
+"\n"
+"    await store.set(\"key\", b\"value\")\n"
+"    value = await store.get(\"key\")\n"
+"    print(value)"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:397
+msgid "Using namespacing"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:397
+msgid ""
+"from litestar import Litestar\n"
+"from litestar.stores.redis import RedisStore\n"
+"\n"
+"root_store = RedisStore.with_client()\n"
+"cache_store = root_store.with_namespace(\"cache\")\n"
+"session_store = root_store.with_namespace(\"sessions\")\n"
+"\n"
+"\n"
+"async def before_shutdown() -> None:\n"
+"    await cache_store.delete_all()\n"
+"\n"
+"\n"
+"app = Litestar(before_shutdown=[before_shutdown])"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:401
+msgid "Using the registry"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:401
+msgid ""
+"from litestar import Litestar\n"
+"from litestar.stores.memory import MemoryStore\n"
+"\n"
+"app = Litestar([], stores={\"memory\": MemoryStore()})\n"
+"\n"
+"memory_store = app.stores.get(\"memory\")\n"
+"# this is the previously defined store\n"
+"\n"
+"some_other_store = app.stores.get(\"something_else\")\n"
+"# this will be a newly created instance\n"
+"\n"
+"assert app.stores.get(\"something_else\") is some_other_store\n"
+"# but subsequent requests will return the same instance"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:404
+msgid "The :doc:`/usage/stores` usage documentation"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:408
+msgid "Usage of the ``stores`` for caching and other integrations"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:410
+msgid ""
+"The newly introduced :doc:`stores </usage/stores>` have superseded the "
+"removed ``starlite.cache`` module in various places."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:413
+msgid "The following now make use of stores:"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:415
+msgid ":class:`~litestar.middleware.rate_limit.RateLimitMiddleware`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:416
+msgid ":class:`~litestar.config.response_cache.ResponseCacheConfig`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:417
+msgid ""
+":class:`~litestar.middleware.session.server_side.ServerSideSessionConfig`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:419
+msgid "The following attributes have been renamed to reduce ambiguity:"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:421
+msgid "``Starlite.cache_config`` > ``Litestar.response_cache_config``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:422
+msgid ""
+"``AppConfig.cache_config`` > :attr:`~litestar.config.app.AppConfig."
+"response_cache_config`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:424
+msgid ""
+"In addition, the ``ASGIConnection.cache`` property has been removed. It can "
+"be replaced by accessing the store directly as described in :doc:`stores </"
+"usage/stores>`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:429
+msgid "DTOs"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:431
+msgid ""
+"Data Transfer Objects are now defined using the ``dto`` and ``return_dto`` "
+"arguments to handlers/controllers/routers and the application."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:434
+msgid ""
+"A DTO is any type that inherits from :class:`litestar.dto.base_dto."
+"AbstractDTO`."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:436
+msgid ""
+"Litestar provides a suite of types that implement the ``AbstractDTO`` "
+"abstract class and can be used to define DTOs:"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:439
+msgid ":class:`litestar.dto.dataclass_dto.DataclassDTO`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:440
+msgid ":class:`litestar.dto.msgspec_dto.MsgspecDTO`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:441
+msgid ":class:`advanced_alchemy.extensions.litestar.dto.SQLAlchemyDTO`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:442
+msgid ":class:`litestar.contrib.pydantic.PydanticDTO`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:443
+msgid ":class:`litestar.contrib.piccolo.PiccoloDTO`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:445
+msgid "For example, to define a DTO from a dataclass:"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:448
+msgid ""
+"from dataclasses import dataclass\n"
+"\n"
+"from litestar import get\n"
+"from litestar.dto import DTOConfig, DataclassDTO\n"
+"\n"
+"\n"
+"@dataclass\n"
+"class MyType:\n"
+"    some_field: str\n"
+"    another_field: int\n"
+"\n"
+"\n"
+"class MyDTO(DataclassDTO[MyType]):\n"
+"    config = DTOConfig(exclude={\"another_field\"})\n"
+"\n"
+"\n"
+"@get(dto=MyDTO)\n"
+"async def handler() -> MyType:\n"
+"    return MyType(some_field=\"some value\", another_field=42)"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:471
+msgid ""
+"from litestar import post\n"
+"\n"
+"from .models import User, UserDTO, UserReturnDTO\n"
+"\n"
+"\n"
+"@post(dto=UserDTO, return_dto=UserReturnDTO)\n"
+"def create_user(data: User) -> User:\n"
+"    return data"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:0
+msgid "Python 3.8+"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:474
+msgid "Renaming fields"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:474
+msgid ""
+"from datetime import datetime\n"
+"\n"
+"from sqlalchemy.orm import Mapped, mapped_column\n"
+"from typing_extensions import Annotated\n"
+"\n"
+"from litestar import Litestar, post\n"
+"from litestar.dto import DTOConfig, dto_field\n"
+"from litestar.plugins.sqlalchemy import SQLAlchemyDTO\n"
+"\n"
+"from .my_lib import Base\n"
+"\n"
+"\n"
+"class User(Base):\n"
+"    name: Mapped[str]\n"
+"    password: Mapped[str] = mapped_column(info=dto_field(\"private\"))\n"
+"    created_at: Mapped[datetime] = mapped_column(info=dto_field(\"read-"
+"only\"))\n"
+"\n"
+"\n"
+"config = DTOConfig(rename_fields={\"name\": \"userName\"})\n"
+"UserDTO = SQLAlchemyDTO[Annotated[User, config]]\n"
+"\n"
+"\n"
+"@post(\"/users\", dto=UserDTO, sync_to_thread=False)\n"
+"def create_user(data: User) -> User:\n"
+"    assert data.name == \"Litestar User\"\n"
+"    data.created_at = datetime.min\n"
+"    return data\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[create_user])"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:0
+msgid "Python 3.9+"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:474
+msgid ""
+"from datetime import datetime\n"
+"\n"
+"from sqlalchemy.orm import Mapped, mapped_column\n"
+"from typing import Annotated\n"
+"\n"
+"from litestar import Litestar, post\n"
+"from litestar.dto import DTOConfig, dto_field\n"
+"from litestar.plugins.sqlalchemy import SQLAlchemyDTO\n"
+"\n"
+"from .my_lib import Base\n"
+"\n"
+"\n"
+"class User(Base):\n"
+"    name: Mapped[str]\n"
+"    password: Mapped[str] = mapped_column(info=dto_field(\"private\"))\n"
+"    created_at: Mapped[datetime] = mapped_column(info=dto_field(\"read-"
+"only\"))\n"
+"\n"
+"\n"
+"config = DTOConfig(rename_fields={\"name\": \"userName\"})\n"
+"UserDTO = SQLAlchemyDTO[Annotated[User, config]]\n"
+"\n"
+"\n"
+"@post(\"/users\", dto=UserDTO, sync_to_thread=False)\n"
+"def create_user(data: User) -> User:\n"
+"    assert data.name == \"Litestar User\"\n"
+"    data.created_at = datetime.min\n"
+"    return data\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[create_user])"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:-1
+msgid ""
+"> curl http://127.0.0.1:8000/users -H Content-Type: application/json -d "
+"{\"userName\":\"Litestar User\",\"password\":\"xyz\",\"created_at\":"
+"\"2023-04-24T00:00:00Z\"}\n"
+"{\"created_at\":\"0001-01-01T00:00:00\",\"id\":\"3dbd8fcc-e04a-4506-"
+"ac86-6c0f250f424d\",\"userName\":\"Litestar User\"}"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:478
+msgid "Excluding fields"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:478
+msgid ""
+"from datetime import datetime\n"
+"from typing import List\n"
+"from uuid import UUID\n"
+"\n"
+"from sqlalchemy import ForeignKey\n"
+"from sqlalchemy.orm import Mapped, mapped_column, relationship\n"
+"from typing_extensions import Annotated\n"
+"\n"
+"from litestar import Litestar, post\n"
+"from litestar.dto import DTOConfig, dto_field\n"
+"from litestar.plugins.sqlalchemy import SQLAlchemyDTO\n"
+"\n"
+"from .my_lib import Base\n"
+"\n"
+"\n"
+"class Address(Base):\n"
+"    street: Mapped[str]\n"
+"    city: Mapped[str]\n"
+"    state: Mapped[str]\n"
+"    zip: Mapped[str]\n"
+"\n"
+"\n"
+"class Pets(Base):\n"
+"    name: Mapped[str]\n"
+"    user_id: Mapped[UUID] = mapped_column(ForeignKey(\"user.id\"))\n"
+"\n"
+"\n"
+"class User(Base):\n"
+"    name: Mapped[str]\n"
+"    password: Mapped[str] = mapped_column(info=dto_field(\"private\"))\n"
+"    created_at: Mapped[datetime] = mapped_column(info=dto_field(\"read-"
+"only\"))\n"
+"    address_id: Mapped[UUID] = mapped_column(ForeignKey(\"address.id\"), "
+"info=dto_field(\"private\"))\n"
+"    address: Mapped[Address] = relationship(info=dto_field(\"read-only\"))\n"
+"    pets: Mapped[List[Pets]] = relationship(info=dto_field(\"read-only\"))\n"
+"\n"
+"\n"
+"UserDTO = SQLAlchemyDTO[User]\n"
+"config = DTOConfig(\n"
+"    exclude={\n"
+"        \"id\",\n"
+"        \"address.id\",\n"
+"        \"address.street\",\n"
+"        \"pets.0.id\",\n"
+"        \"pets.0.user_id\",\n"
+"    }\n"
+")\n"
+"ReadUserDTO = SQLAlchemyDTO[Annotated[User, config]]\n"
+"\n"
+"\n"
+"@post(\"/users\", dto=UserDTO, return_dto=ReadUserDTO, "
+"sync_to_thread=False)\n"
+"def create_user(data: User) -> User:\n"
+"    data.created_at = datetime.min\n"
+"    data.address = Address(street=\"123 Main St\", city=\"Anytown\", "
+"state=\"NY\", zip=\"12345\")\n"
+"    data.pets = [Pets(id=1, name=\"Fido\"), Pets(id=2, name=\"Spot\")]\n"
+"    return data\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[create_user])"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:478
+msgid ""
+"from datetime import datetime\n"
+"from uuid import UUID\n"
+"\n"
+"from sqlalchemy import ForeignKey\n"
+"from sqlalchemy.orm import Mapped, mapped_column, relationship\n"
+"from typing import Annotated\n"
+"\n"
+"from litestar import Litestar, post\n"
+"from litestar.dto import DTOConfig, dto_field\n"
+"from litestar.plugins.sqlalchemy import SQLAlchemyDTO\n"
+"\n"
+"from .my_lib import Base\n"
+"\n"
+"\n"
+"class Address(Base):\n"
+"    street: Mapped[str]\n"
+"    city: Mapped[str]\n"
+"    state: Mapped[str]\n"
+"    zip: Mapped[str]\n"
+"\n"
+"\n"
+"class Pets(Base):\n"
+"    name: Mapped[str]\n"
+"    user_id: Mapped[UUID] = mapped_column(ForeignKey(\"user.id\"))\n"
+"\n"
+"\n"
+"class User(Base):\n"
+"    name: Mapped[str]\n"
+"    password: Mapped[str] = mapped_column(info=dto_field(\"private\"))\n"
+"    created_at: Mapped[datetime] = mapped_column(info=dto_field(\"read-"
+"only\"))\n"
+"    address_id: Mapped[UUID] = mapped_column(ForeignKey(\"address.id\"), "
+"info=dto_field(\"private\"))\n"
+"    address: Mapped[Address] = relationship(info=dto_field(\"read-only\"))\n"
+"    pets: Mapped[list[Pets]] = relationship(info=dto_field(\"read-only\"))\n"
+"\n"
+"\n"
+"UserDTO = SQLAlchemyDTO[User]\n"
+"config = DTOConfig(\n"
+"    exclude={\n"
+"        \"id\",\n"
+"        \"address.id\",\n"
+"        \"address.street\",\n"
+"        \"pets.0.id\",\n"
+"        \"pets.0.user_id\",\n"
+"    }\n"
+")\n"
+"ReadUserDTO = SQLAlchemyDTO[Annotated[User, config]]\n"
+"\n"
+"\n"
+"@post(\"/users\", dto=UserDTO, return_dto=ReadUserDTO, "
+"sync_to_thread=False)\n"
+"def create_user(data: User) -> User:\n"
+"    data.created_at = datetime.min\n"
+"    data.address = Address(street=\"123 Main St\", city=\"Anytown\", "
+"state=\"NY\", zip=\"12345\")\n"
+"    data.pets = [Pets(id=1, name=\"Fido\"), Pets(id=2, name=\"Spot\")]\n"
+"    return data\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[create_user])"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:-1
+msgid ""
+"> curl http://127.0.0.1:8000/users -H Content-Type: application/json -d "
+"{\"name\":\"Litestar User\",\"password\":\"xyz\",\"created_at\":"
+"\"2023-04-24T00:00:00Z\"}\n"
+"{\"created_at\":\"0001-01-01T00:00:00\",\"address\":{\"city\":\"Anytown\","
+"\"state\":\"NY\",\"zip\":\"12345\"},\"pets\":[{\"name\":\"Fido\"},{\"name\":"
+"\"Spot\"}],\"name\":\"Litestar User\"}"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:482
+msgid "Marking fields"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:482
+msgid ""
+"from datetime import datetime\n"
+"\n"
+"from sqlalchemy.orm import Mapped, mapped_column\n"
+"\n"
+"from litestar import Litestar, post\n"
+"from litestar.dto import dto_field\n"
+"from litestar.plugins.sqlalchemy import SQLAlchemyDTO\n"
+"\n"
+"from .my_lib import Base\n"
+"\n"
+"\n"
+"class User(Base):\n"
+"    # `Base` defines `id` field as:\n"
+"    # id: Mapped[UUID] = mapped_column(default=uuid4, primary_key=True)\n"
+"    name: Mapped[str]\n"
+"    password: Mapped[str] = mapped_column(info=dto_field(\"private\"))\n"
+"    created_at: Mapped[datetime] = mapped_column(info=dto_field(\"read-"
+"only\"))\n"
+"\n"
+"\n"
+"UserDTO = SQLAlchemyDTO[User]\n"
+"\n"
+"\n"
+"@post(\"/users\", dto=UserDTO, sync_to_thread=False)\n"
+"def create_user(data: User) -> User:\n"
+"    # even though the client did not send the id field,\n"
+"    # since it is a primary key it is autogenerated\n"
+"    assert \"id\" in vars(data)\n"
+"    # even though the client sent the password and created_at field, it is "
+"not in the data object\n"
+"    assert \"password\" not in vars(data)\n"
+"    assert \"created_at\" not in vars(data)\n"
+"    # normally the database would set the created_at timestamp\n"
+"    data.created_at = datetime.min\n"
+"    return data  # the response includes the created_at field\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[create_user])"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:-1
+msgid ""
+"> curl http://127.0.0.1:8000/users -H Content-Type: application/json -d "
+"{\"name\":\"Litestar User\",\"password\":\"xyz\",\"created_at\":"
+"\"2023-04-24T00:00:00Z\"}\n"
+"{\"created_at\":\"0001-01-01T00:00:00\",\"id\":\"ad74f335-e550-4741-"
+"ac88-0e120d9f6436\",\"name\":\"Litestar User\"}"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:486
+msgid "The :doc:`/usage/dto/index` usage documentation"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:490
+msgid "Application lifespan hooks"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:492
+msgid ""
+"All application lifespan hooks have been merged into ``on_startup`` and "
+"``on_shutdown``. The following hooks have been removed:"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:495
+msgid "``before_startup``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:496
+msgid "``after_startup``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:497
+msgid "``before_shutdown``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:498
+msgid "``after_shutdown``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:501
+msgid ""
+"``on_startup`` and ``on_shutdown`` now optionally receive the application "
+"instance as their first parameter. If your ``on_startup`` and "
+"``on_shutdown`` hooks made use of the application state, they will now have "
+"to access it through the provided application instance."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:507
+msgid ""
+"def on_startup(state: State) -> None:\n"
+"    print(state.something)"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:514
+msgid ""
+"def on_startup(app: Litestar) -> None:\n"
+"    print(app.state.something)"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:521
+msgid "Dependencies without ``Provide``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:523
+msgid ""
+"Dependencies may now be declared without :class:`~litestar.di.Provide`, by "
+"passing the callable directly. This can be advantageous in places where the "
+"configuration options of :class:`~litestar.di.Provide` are not needed."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:528
+msgid ""
+"async def some_dependency() -> str: ...\n"
+"\n"
+"\n"
+"app = Litestar(dependencies={\"some\": Provide(some_dependency)})"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:537
+msgid ""
+"async def some_dependency() -> str: ...\n"
+"\n"
+"\n"
+"app = Litestar(dependencies={\"some\": some_dependency})"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:545
+msgid "``sync_to_thread``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:547
+msgid ""
+"The ``sync_to_thread`` option can be used to run a synchronous callable "
+"provided to a route handler or :class:`~litestar.di.Provide` inside a thread "
+"pool. Since synchronous functions may block the main thread when not used "
+"with ``sync_to_thread=True``, a warning will be raised in these cases. If "
+"the synchronous function should not be run in a thread pool, passing "
+"``sync_to_thread=False`` will also silence the warning."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:554
+msgid ""
+"The warning can be disabled entirely by setting the environment variable "
+"``LITESTAR_WARN_IMPLICIT_SYNC_TO_THREAD=0``"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:559
+msgid ""
+"@get()\n"
+"def handler() -> None: ..."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:566
+msgid ""
+"@get(sync_to_thread=False)\n"
+"def handler() -> None: ..."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:571
+msgid "or"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:574
+msgid ""
+"@get(sync_to_thread=True)\n"
+"def handler() -> None: ..."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:581
+msgid "The :doc:`/topics/sync-vs-async` topic guide"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:585
+msgid "HTMX"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:587
+msgid ""
+"Basic support for HTMX requests and responses was added with the ``litestar."
+"contrib.htmx`` module."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:591
+msgid "The :doc:`/usage/htmx` usage documentation"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:595
+msgid "Event bus"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:597
+msgid ""
+"A simple event bus system for Litestar, supporting synchronous and "
+"asynchronous listeners and emitters, providing a similar interface to "
+"handlers. It currently features a simple in-memory, process-local backend."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:603
+msgid ""
+"The :doc:`/usage/events` usage documentation and the :doc:`/reference/"
+"events` API reference"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:608
+msgid "Enhanced WebSocket support"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:610
+msgid ""
+"A new set of features for handling WebSockets, including automatic "
+"connection handling, (de)serialization of incoming and outgoing data "
+"analogous to route handlers, OOP based event dispatching, data iterators and "
+"more."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:615
+msgid "Using a class based listener"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:615
+msgid ""
+"from litestar import Litestar, WebSocket\n"
+"from litestar.handlers import WebsocketListener\n"
+"\n"
+"\n"
+"class Handler(WebsocketListener):\n"
+"    path = \"/\"\n"
+"\n"
+"    def on_accept(self, socket: WebSocket) -> None:\n"
+"        print(\"Connection accepted\")\n"
+"\n"
+"    def on_disconnect(self, socket: WebSocket) -> None:\n"
+"        print(\"Connection closed\")\n"
+"\n"
+"    def on_receive(self, data: str) -> str:\n"
+"        return data\n"
+"\n"
+"\n"
+"app = Litestar([Handler])"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:619
+msgid "Echo text"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:619
+msgid ""
+"from litestar import Litestar, websocket_listener\n"
+"\n"
+"\n"
+"@websocket_listener(\"/\", send_mode=\"text\")\n"
+"async def handler(data: str) -> str:\n"
+"    return data\n"
+"\n"
+"\n"
+"app = Litestar([handler])"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:623
+msgid "Wrapping data in a dataclass"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:623
+msgid ""
+"from dataclasses import dataclass\n"
+"from datetime import datetime\n"
+"\n"
+"from litestar import Litestar, websocket_listener\n"
+"\n"
+"\n"
+"@dataclass\n"
+"class Message:\n"
+"    content: str\n"
+"    timestamp: float\n"
+"\n"
+"\n"
+"@websocket_listener(\"/\")\n"
+"async def handler(data: str) -> Message:\n"
+"    return Message(content=data, timestamp=datetime.now().timestamp())\n"
+"\n"
+"\n"
+"app = Litestar([handler])"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:627
+msgid ""
+"from sqlalchemy.orm import Mapped\n"
+"\n"
+"from litestar import Litestar, websocket_listener\n"
+"from litestar.plugins.sqlalchemy import SQLAlchemyDTO, base\n"
+"\n"
+"\n"
+"class User(base.UUIDBase):\n"
+"    name: Mapped[str]\n"
+"\n"
+"\n"
+"UserDTO = SQLAlchemyDTO[User]\n"
+"\n"
+"\n"
+"@websocket_listener(\"/\", dto=UserDTO)\n"
+"async def handler(data: User) -> User:\n"
+"    return data\n"
+"\n"
+"\n"
+"app = Litestar([handler])"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:630
+msgid "Receiving JSON and sending it back as MessagePack"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:630
+msgid ""
+"from litestar import websocket, WebSocket\n"
+"\n"
+"\n"
+"@websocket(\"/\")\n"
+"async def handler(socket: WebSocket) -> None:\n"
+"    await socket.accept()\n"
+"    async for message in socket.iter_data(mode):\n"
+"        await socket.send_msgpack(message)"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:643
+msgid ":ref:`change:2.0.0alpha3-enhanced websockets support`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:644
+msgid ""
+":ref:`change:2.0.0alpha6-websockets: managing a socket's lifespan using a "
+"context manager in websocket listeners`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:645
+msgid ":ref:`change:2.0.0alpha6-websockets: messagepack support`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:646
+msgid ":ref:`change:2.0.0alpha6-websockets: data iterators`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:647
+msgid "The :doc:`/usage/websockets` usage documentation"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:651
+msgid "Attrs signature modelling"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:653
+msgid "TBD"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:657
+msgid ":class:`~typing.Annotated` support in route handlers"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:659
+msgid ""
+":class:`Annotated <typing.Annotated>` can now be used in route handler and "
+"dependencies to specify additional information about the fields"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:663
+msgid ""
+"@get(\"/\")\n"
+"def index(param: int = Parameter(gt=5)) -> dict[str, int]: ..."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:668
+msgid ""
+"@get(\"/\")\n"
+"def index(param: Annotated[int, Parameter(gt=5)]) -> dict[str, int]: ..."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:674
+msgid "Channels"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:676
+msgid ""
+":doc:`/usage/channels` are a general purpose event streaming module, which "
+"can for example be used to broadcast messages via WebSockets and includes "
+"functionalities such as automatically generating WebSocket route handlers to "
+"broadcast messages."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:682
+msgid ""
+"from litestar import Litestar, WebSocket, websocket\n"
+"from litestar.channels import ChannelsPlugin\n"
+"from litestar.channels.backends.memory import MemoryChannelsBackend\n"
+"\n"
+"\n"
+"@websocket(\"/ws\")\n"
+"async def handler(socket: WebSocket, channels: ChannelsPlugin) -> None:\n"
+"    await socket.accept()\n"
+"\n"
+"    async with channels.start_subscription([\"some_channel\"]) as "
+"subscriber, subscriber.run_in_background(\n"
+"        socket.send_text\n"
+"    ):\n"
+"        while True:\n"
+"            response = await socket.receive_text()\n"
+"            await socket.send_text(response)\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    [handler],\n"
+"    plugins=[ChannelsPlugin(backend=MemoryChannelsBackend(), "
+"channels=[\"some_channel\"])],\n"
+")"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:685
+msgid "The :doc:`channels </usage/channels>` usage documentation"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:689
+msgid "Application lifespan context managers"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:691
+msgid ""
+"A new ``lifespan`` argument has been added to :class:`~litestar.app."
+"Litestar`, accepting an asynchronous context manager, wrapping the lifespan "
+"of the application. It will be entered with the startup phase and exited on "
+"shutdown, providing functionality equal to the ``on_startup`` and "
+"``on_shutdown`` hooks."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:698
+msgid ""
+"from contextlib import asynccontextmanager\n"
+"from typing import AsyncGenerator\n"
+"\n"
+"from sqlalchemy.ext.asyncio import create_async_engine\n"
+"\n"
+"from litestar import Litestar\n"
+"\n"
+"\n"
+"@asynccontextmanager\n"
+"async def db_connection(app: Litestar) -> AsyncGenerator[None, None]:\n"
+"    engine = getattr(app.state, \"engine\", None)\n"
+"    if engine is None:\n"
+"        engine = create_async_engine(\"postgresql+asyncpg://postgres:"
+"mysecretpassword@pg.db:5432/db\")\n"
+"        app.state.engine = engine\n"
+"\n"
+"    try:\n"
+"        yield\n"
+"    finally:\n"
+"        await engine.dispose()\n"
+"\n"
+"\n"
+"app = Litestar(lifespan=[db_connection])"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:698
+msgid ""
+"from contextlib import asynccontextmanager\n"
+"from collections.abc import AsyncGenerator\n"
+"\n"
+"from sqlalchemy.ext.asyncio import create_async_engine\n"
+"\n"
+"from litestar import Litestar\n"
+"\n"
+"\n"
+"@asynccontextmanager\n"
+"async def db_connection(app: Litestar) -> AsyncGenerator[None, None]:\n"
+"    engine = getattr(app.state, \"engine\", None)\n"
+"    if engine is None:\n"
+"        engine = create_async_engine(\"postgresql+asyncpg://postgres:"
+"mysecretpassword@pg.db:5432/db\")\n"
+"        app.state.engine = engine\n"
+"\n"
+"    try:\n"
+"        yield\n"
+"    finally:\n"
+"        await engine.dispose()\n"
+"\n"
+"\n"
+"app = Litestar(lifespan=[db_connection])"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:702
+msgid "Response types"
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:704
+msgid ""
+"Starlite had the concept of Response Containers, which were datatypes used "
+"to indicate the type of response returned by a handler. These included "
+"``File``, ``Redirect``, ``Template`` and ``Stream`` types. These types "
+"abstracted the interface of responses from the underlying response itself."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:709
+msgid ""
+"In Litestar, these types still exist, however they are now subclasses of :"
+"class:`Response <.response.Response>` and are imported from the ``litestar."
+"response`` module. In contrast to Starlite's Response Containers, these "
+"types have more utility for interacting with the outgoing response, such as "
+"methods to add headers and cookies. Otherwise, their usage should remain "
+"very similar to Starlite."
+msgstr ""
+
+#: ../../../release-notes/whats-new-2.rst:715
+msgid ""
+"Litestar also introduces a new layer of ASGI response type, based on :class:"
+"`ASGIResponse <.response.base.ASGIResponse>`. These types represent the "
+"response as an immutable object and are used internally by Litestar to "
+"perform the I/O operations of the response. These can be created and "
+"returned from handlers, however they are low-level, and lack the utility of "
+"the higher-level response types."
+msgstr ""

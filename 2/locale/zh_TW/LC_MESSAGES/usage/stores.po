@@ -1,0 +1,666 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../usage/stores.rst:4
+msgid "Stores"
+msgstr ""
+
+#: ../../../usage/stores.rst:9
+msgid ""
+"When developing applications, oftentimes a simply storage mechanism is "
+"needed, for example when :doc:`caching response data</usage/caching>` or "
+"storing data for :ref:`server-side sessions <usage/middleware/builtin-"
+"middleware:Server-side sessions>`. In cases like these a traditional "
+"database is often not needed, and a simple key/value store suffices."
+msgstr ""
+
+#: ../../../usage/stores.rst:14
+msgid ""
+"Litestar provides several low level key value stores, offering an "
+"asynchronous interface to store data in a thread- and process-safe manner. "
+"These stores are centrally managed via a :class:`registry <litestar.stores."
+"registry.StoreRegistry>`, allowing easy access throughout the whole "
+"application and third party integration (for example plugins)."
+msgstr ""
+
+#: ../../../usage/stores.rst:21
+msgid "Built-in stores"
+msgstr ""
+
+#: ../../../usage/stores.rst:23
+msgid ":class:`MemoryStore <litestar.stores.memory.MemoryStore>`"
+msgstr ""
+
+#: ../../../usage/stores.rst:24
+msgid ""
+"A simple in-memory store, using a dictionary to hold data. This store offers "
+"no persistence and is not thread or multiprocess safe, but it is suitable "
+"for basic applications such as caching and has generally the lowest "
+"overhead. This is the default store used by Litestar internally. If you plan "
+"to enable :doc:`multiple web workers </reference/cli>` and you need inter-"
+"process communication across multiple worker processes, you should use one "
+"of the other non-memory stores instead."
+msgstr ""
+
+#: ../../../usage/stores.rst:29
+msgid ":class:`FileStore <litestar.stores.file.FileStore>`"
+msgstr ""
+
+#: ../../../usage/stores.rst:30
+msgid ""
+"A store that saves data as files on disk. Persistence is built in, and data "
+"is easy to extract and back up. It is slower compared to in-memory "
+"solutions, and primarily suitable for situations when larger amounts of data "
+"need to be stored, is particularly long-lived, or persistence has a very "
+"high importance. Offers `namespacing`_."
+msgstr ""
+
+#: ../../../usage/stores.rst:34
+msgid ":class:`RedisStore <litestar.stores.redis.RedisStore>`"
+msgstr ""
+
+#: ../../../usage/stores.rst:35
+msgid ""
+"A store backend by `redis <https://redis.io/>`_. It offers all the "
+"guarantees and features of Redis, making it suitable for almost all "
+"applications. Offers `namespacing`_."
+msgstr ""
+
+#: ../../../usage/stores.rst:38
+msgid ":class:`ValkeyStore <litestar.stores.valkey.ValkeyStore>`"
+msgstr ""
+
+#: ../../../usage/stores.rst:39
+msgid ""
+"A store backed by `valkey <https://valkey.io>`_, a fork of Redis created as "
+"the result of Redis' license changes. Similarly to the RedisStore, it is "
+"suitable for almost all applications and supports `namespacing`_. At the "
+"time of writing, :class:`Valkey <valkey.asyncio.Valkey>` is equivalent to :"
+"class:`redis.asyncio.Redis`, and all notes pertaining to Redis also apply to "
+"Valkey."
+msgstr ""
+
+#: ../../../usage/stores.rst:44
+msgid "Why not memcached?"
+msgstr ""
+
+#: ../../../usage/stores.rst:47
+msgid ""
+"Memcached is not a supported backend, and will likely also not be added in "
+"the future. The reason for this is simply that it's hard to support "
+"memcached properly, since it's missing a lot of basic functionality like "
+"checking a key's expiry time, or something like Redis' `SCAN <https://redis."
+"io/commands/scan/>`_ command, which allows to implement pattern-based "
+"deletion of keys."
+msgstr ""
+
+#: ../../../usage/stores.rst:54
+msgid "Interacting with a store"
+msgstr ""
+
+#: ../../../usage/stores.rst:56
+msgid "The most fundamental operations of a store are:"
+msgstr ""
+
+#: ../../../usage/stores.rst:58
+msgid ":meth:`get <.base.Store.get>`: To retrieve a stored value"
+msgstr ""
+
+#: ../../../usage/stores.rst:59
+msgid ":meth:`set <.base.Store.set>`: To set a value in the store"
+msgstr ""
+
+#: ../../../usage/stores.rst:60
+msgid ":meth:`delete <.base.Store.delete>`: To delete a stored value"
+msgstr ""
+
+#: ../../../usage/stores.rst:64
+msgid "Getting and setting values"
+msgstr ""
+
+#: ../../../usage/stores.rst:68
+msgid ""
+"from litestar.stores.memory import MemoryStore\n"
+"\n"
+"store = MemoryStore()\n"
+"\n"
+"\n"
+"async def main() -> None:\n"
+"    value = await store.get(\"key\")\n"
+"    print(value)  # this will print 'None', as no store with this key has "
+"been defined yet\n"
+"\n"
+"    await store.set(\"key\", b\"value\")\n"
+"    value = await store.get(\"key\")\n"
+"    print(value)"
+msgstr ""
+
+#: ../../../usage/stores.rst:72
+msgid "Setting an expiry time"
+msgstr ""
+
+#: ../../../usage/stores.rst:74
+msgid ""
+"The :meth:`set <.base.Store.set>` method has an optional parameter "
+"``expires_in``, allowing to specify a time after which a stored value should "
+"expire."
+msgstr ""
+
+#: ../../../usage/stores.rst:79
+msgid ""
+"from asyncio import sleep\n"
+"\n"
+"from litestar.stores.memory import MemoryStore\n"
+"\n"
+"store = MemoryStore()\n"
+"\n"
+"\n"
+"async def main() -> None:\n"
+"    await store.set(\"foo\", b\"bar\", expires_in=1)\n"
+"    value = await store.get(\"foo\")\n"
+"    print(value)\n"
+"\n"
+"    await sleep(1)\n"
+"    value = await store.get(\"foo\")  # this will return 'None', since the "
+"key has expired\n"
+"    print(value)"
+msgstr ""
+
+#: ../../../usage/stores.rst:83
+msgid ""
+"It is up to the individual store to decide how to handle expired values, and "
+"implementations may differ. The :class:`redis based store <.redis."
+"RedisStore>` for example uses Redis' native expiry mechanism to handle this, "
+"while the :class:`FileStore <.file.FileStore>` only deletes expired values "
+"when they're trying to be accessed, or explicitly deleted via the :meth:"
+"`delete_expired <.file.FileStore.delete_expired>` method."
+msgstr ""
+
+#: ../../../usage/stores.rst:89
+msgid ""
+"It is also possible to extend the expiry time on each access, which is "
+"useful for applications such as server side sessions or LRU caches:"
+msgstr ""
+
+#: ../../../usage/stores.rst:93
+msgid ""
+"from asyncio import sleep\n"
+"\n"
+"from litestar.stores.memory import MemoryStore\n"
+"\n"
+"store = MemoryStore()\n"
+"\n"
+"\n"
+"async def main() -> None:\n"
+"    await store.set(\"foo\", b\"bar\", expires_in=1)\n"
+"    await sleep(0.5)\n"
+"\n"
+"    await store.get(\"foo\", renew_for=1)  # this will reset the time to "
+"live to one second\n"
+"\n"
+"    await sleep(1)\n"
+"    # it has now been 1.5 seconds since the key was set with a life time of "
+"one second,\n"
+"    # so it should have expired however, since it was renewed for one "
+"second, it is still available\n"
+"    value = await store.get(\"foo\")\n"
+"    print(value)"
+msgstr ""
+
+#: ../../../usage/stores.rst:97
+msgid "Deleting expired values"
+msgstr ""
+
+#: ../../../usage/stores.rst:99
+msgid ""
+"When using a :class:`MemoryStore <.memory.MemoryStore>` or :class:`FileStore "
+"<.file.FileStore>`, expired data won't be deleted automatically. Instead, it "
+"will only happen when the data is being accessed, or if this process is "
+"invoked explicitly via :meth:`MemoryStore.delete_expired <.memory."
+"MemoryStore.delete_expired>` or :meth:`FileStore.delete_expired <.file."
+"FileStore.delete_expired>` respectively."
+msgstr ""
+
+#: ../../../usage/stores.rst:104
+msgid ""
+"It's a good practice to call ``delete_expired`` periodically, to ensure the "
+"size of the stored values does not grow indefinitely."
+msgstr ""
+
+#: ../../../usage/stores.rst:107
+msgid ""
+"In this example, an :ref:`after_response <after_response>` handler is used "
+"to delete expired items at most every 30 second:"
+msgstr ""
+
+#: ../../../usage/stores.rst:111
+msgid ""
+"from datetime import datetime, timedelta\n"
+"\n"
+"from litestar import Litestar, Request\n"
+"from litestar.stores.memory import MemoryStore\n"
+"\n"
+"memory_store = MemoryStore()\n"
+"\n"
+"\n"
+"async def after_response(request: Request) -> None:\n"
+"    now = datetime.utcnow()\n"
+"    last_cleared = request.app.state.get(\"store_last_cleared\", now)\n"
+"    if datetime.utcnow() - last_cleared > timedelta(seconds=30):\n"
+"        await memory_store.delete_expired()\n"
+"    app.state[\"store_last_cleared\"] = now\n"
+"\n"
+"\n"
+"app = Litestar(after_response=after_response)"
+msgstr ""
+
+#: ../../../usage/stores.rst:113
+msgid ""
+"When using the :class:`FileStore <.file.FileStore>`, expired items may also "
+"be deleted on startup:"
+msgstr ""
+
+#: ../../../usage/stores.rst:117
+msgid ""
+"from pathlib import Path\n"
+"\n"
+"from litestar import Litestar\n"
+"from litestar.stores.file import FileStore\n"
+"\n"
+"file_store = FileStore(Path(\"data\"))\n"
+"\n"
+"\n"
+"async def on_startup() -> None:\n"
+"    await file_store.delete_expired()\n"
+"\n"
+"\n"
+"app = Litestar(on_startup=[on_startup])"
+msgstr ""
+
+#: ../../../usage/stores.rst:121
+msgid ""
+"For the :class:`MemoryStore <.memory.MemoryStore>`, this is not needed as "
+"the data is simply stored in a dictionary. This means that every time a new "
+"instance of this store is created, it will start out empty."
+msgstr ""
+
+#: ../../../usage/stores.rst:126
+msgid "What can be stored"
+msgstr ""
+
+#: ../../../usage/stores.rst:128
+msgid ""
+"Stores generally operate on :class:`bytes`; They accept bytes to store, and "
+"will return bytes. For convenience, the :meth:`set <.base.Store.set>` method "
+"also allows to pass in strings, which will be UTF-8 encoded before being "
+"stored. This means that :meth:`get <.base.Store.get>` will return bytes even "
+"when a string has been passed to :meth:`set <.base.Store.set>`."
+msgstr ""
+
+#: ../../../usage/stores.rst:133
+msgid ""
+"The reason for this limitation is simple: Different backends used to store "
+"the data offer vastly different encoding, storage, and (de)serialization "
+"capacities. Since stores are designed to be interchangeable, this means "
+"settling for a common denominator, a type that all backends will support. :"
+"class:`bytes` meet these requirements and make it possible to store a very "
+"wide variety of data."
+msgstr ""
+
+#: ../../../usage/stores.rst:138
+msgid "Technical details"
+msgstr ""
+
+#: ../../../usage/stores.rst:140
+msgid ""
+":class:`MemoryStore <.memory.MemoryStore>` differs from this, because it "
+"does not do any encoding before storing the value. This means that it's "
+"technically possible to store arbitrary objects in this store, and get the "
+"same object back. However, this is not reflected in the store's typing, as "
+"the underlying :class:`Store <.base.Store>` interface does not guarantee "
+"this behaviour, and it is not guaranteed that :class:`MemoryStore <.memory."
+"MemoryStore>` will always behave in this case."
+msgstr ""
+
+#: ../../../usage/stores.rst:148
+msgid "Namespacing"
+msgstr ""
+
+#: ../../../usage/stores.rst:150
+msgid ""
+"When stores are being used for more than one purpose, some extra bookkeeping "
+"is required to safely perform bulk operations such as :class:`delete_all <."
+"base.Store.delete_all>`. If for example a :class:`RedisStore <.redis."
+"RedisStore>` was used, simply issuing a `FLUSHALL <https://redis.io/commands/"
+"flushall/>`_ command might have unforeseen consequences."
+msgstr ""
+
+#: ../../../usage/stores.rst:155
+msgid ""
+"To help with this, some stores offer namespacing capabilities, allowing to "
+"build a simple hierarchy of stores. These come with the additional :meth:"
+"`with_namespace <.base.NamespacedStore.with_namespace>` method, which "
+"returns a new :class:`NamespacedStore <.base.NamespacedStore>` instance. "
+"Once a namespaced store is created, operations on it will only affect itself "
+"and its child namespaces."
+msgstr ""
+
+#: ../../../usage/stores.rst:160
+msgid ""
+"When using the :class:`RedisStore <.redis.RedisStore>`, this allows to reuse "
+"the same underlying :class:`Redis <redis.asyncio.Redis>` instance and "
+"connection, while ensuring isolation."
+msgstr ""
+
+#: ../../../usage/stores.rst:164
+msgid ""
+":class:`RedisStore <.redis.RedisStore>` uses the ``LITESTAR`` namespace by "
+"default; all keys created by this store, will use the ``LITESTAR`` prefix "
+"when storing data in redis. :meth:`RedisStore.delete_all <.redis.RedisStore."
+"delete_all>` is implemented in such a way that it will only delete keys "
+"matching the current namespace, making it safe and side-effect free."
+msgstr ""
+
+#: ../../../usage/stores.rst:169
+msgid ""
+"This can be turned off by explicitly passing ``namespace=None`` to the store "
+"when creating a new instance."
+msgstr ""
+
+#: ../../../usage/stores.rst:173
+msgid ""
+"from litestar import Litestar\n"
+"from litestar.stores.redis import RedisStore\n"
+"\n"
+"root_store = RedisStore.with_client()\n"
+"cache_store = root_store.with_namespace(\"cache\")\n"
+"session_store = root_store.with_namespace(\"sessions\")\n"
+"\n"
+"\n"
+"async def before_shutdown() -> None:\n"
+"    await cache_store.delete_all()\n"
+"\n"
+"\n"
+"app = Litestar(before_shutdown=[before_shutdown])"
+msgstr ""
+
+#: ../../../usage/stores.rst:175
+msgid ""
+"Even though all three stores defined here use the same Redis instance, "
+"calling ``delete_all`` on the ``cache_store`` will not affect data within "
+"the ``session_store``."
+msgstr ""
+
+#: ../../../usage/stores.rst:178
+msgid ""
+"Defining stores hierarchically like this still allows to easily clear "
+"everything, by simply calling :meth:`delete_all <.base.Store.delete_all>` on "
+"the root store."
+msgstr ""
+
+#: ../../../usage/stores.rst:183
+msgid "Managing stores with the registry"
+msgstr ""
+
+#: ../../../usage/stores.rst:185
+msgid ""
+"The :class:`StoreRegistry <litestar.stores.registry.StoreRegistry>` is a "
+"central place through which stores can be configured and managed, and can "
+"help to easily access stores set up and used by other parts of the "
+"application, Litestar internals or third party integrations. It is available "
+"throughout the whole application context via the :class:`Litestar.stores "
+"<litestar.app.Litestar>` attribute."
+msgstr ""
+
+#: ../../../usage/stores.rst:190
+msgid "It operates on a few basic principles:"
+msgstr ""
+
+#: ../../../usage/stores.rst:192
+msgid "An initial mapping of stores can be provided to the registry"
+msgstr ""
+
+#: ../../../usage/stores.rst:193
+msgid ""
+"Registered stores can be requested with :meth:`get <.registry.StoreRegistry."
+"get>`"
+msgstr ""
+
+#: ../../../usage/stores.rst:194
+msgid ""
+"If a store has been requested that has not been registered yet, a store of "
+"that name will be created and registered using the `the default factory`_"
+msgstr ""
+
+#: ../../../usage/stores.rst:199
+msgid ""
+"from litestar import Litestar\n"
+"from litestar.stores.memory import MemoryStore\n"
+"\n"
+"app = Litestar([], stores={\"memory\": MemoryStore()})\n"
+"\n"
+"memory_store = app.stores.get(\"memory\")\n"
+"# this is the previously defined store\n"
+"\n"
+"some_other_store = app.stores.get(\"something_else\")\n"
+"# this will be a newly created instance\n"
+"\n"
+"assert app.stores.get(\"something_else\") is some_other_store\n"
+"# but subsequent requests will return the same instance"
+msgstr ""
+
+#: ../../../usage/stores.rst:202
+msgid ""
+"This pattern offers isolation of stores, and an easy way to configure stores "
+"used by middlewares and other Litestar features or third party integrations."
+msgstr ""
+
+#: ../../../usage/stores.rst:205
+msgid ""
+"In the following example, the store set up by the :class:"
+"`RateLimitMiddleware <litestar.middleware.rate_limit.RateLimitMiddleware>` "
+"is accessed via the registry:"
+msgstr ""
+
+#: ../../../usage/stores.rst:209
+msgid ""
+"from litestar import Litestar\n"
+"from litestar.middleware.rate_limit import RateLimitConfig\n"
+"\n"
+"app = Litestar(middleware=[RateLimitConfig((\"second\", 1)).middleware])\n"
+"rate_limit_store = app.stores.get(\"rate_limit\")"
+msgstr ""
+
+#: ../../../usage/stores.rst:212
+msgid ""
+"This works because :class:`RateLimitMiddleware <litestar.middleware."
+"rate_limit.RateLimitMiddleware>` will request its store internally via ``app."
+"stores.get`` as well."
+msgstr ""
+
+#: ../../../usage/stores.rst:217
+msgid "The default factory"
+msgstr ""
+
+#: ../../../usage/stores.rst:219
+msgid ""
+"The pattern above is made possible by using the registry's default factory; "
+"A callable that gets invoked every time a store is requested that hasn't "
+"been registered yet. It's similar to the ``default`` argument to :meth:`dict."
+"get`."
+msgstr ""
+
+#: ../../../usage/stores.rst:223
+msgid ""
+"By default, the default factory is a function that returns a new :class:"
+"`MemoryStore <litestar.stores.memory.MemoryStore>` instance. This behaviour "
+"can be changed by supplying a custom ``default_factory`` method to the "
+"registry."
+msgstr ""
+
+#: ../../../usage/stores.rst:227
+msgid ""
+"To make use of this, a registry instance can be passed directly to the "
+"application:"
+msgstr ""
+
+#: ../../../usage/stores.rst:230
+msgid ""
+"from litestar import Litestar\n"
+"from litestar.stores.memory import MemoryStore\n"
+"from litestar.stores.registry import StoreRegistry\n"
+"\n"
+"memory_store = MemoryStore()\n"
+"\n"
+"\n"
+"def default_factory(name: str) -> MemoryStore:\n"
+"    return memory_store\n"
+"\n"
+"\n"
+"app = Litestar([], stores=StoreRegistry(default_factory=default_factory))"
+msgstr ""
+
+#: ../../../usage/stores.rst:232
+msgid ""
+"The registry will now return the same :class:`MemoryStore <litestar.stores."
+"memory.MemoryStore>` every time an undefined store is being requested."
+msgstr ""
+
+#: ../../../usage/stores.rst:237
+msgid "Using the registry to configure integrations"
+msgstr ""
+
+#: ../../../usage/stores.rst:239
+msgid ""
+"This mechanism also allows to control the stores used by various "
+"integrations, such as middlewares:"
+msgstr ""
+
+#: ../../../usage/stores.rst:242
+msgid ""
+"from pathlib import Path\n"
+"\n"
+"from litestar import Litestar\n"
+"from litestar.middleware.session.server_side import ServerSideSessionConfig\n"
+"from litestar.stores.file import FileStore\n"
+"from litestar.stores.redis import RedisStore\n"
+"\n"
+"app = Litestar(\n"
+"    stores={\n"
+"        \"sessions\": RedisStore.with_client(),\n"
+"        \"response_cache\": FileStore(Path(\"response-cache\")),\n"
+"    },\n"
+"    middleware=[ServerSideSessionConfig().middleware],\n"
+")"
+msgstr ""
+
+#: ../../../usage/stores.rst:245
+msgid ""
+"In this example, the registry is being set up with stores using the "
+"``sessions`` and ``response_cache`` keys. These are not magic constants, but "
+"instead configuration values that can be changed. Those names just happen to "
+"be their default values. Adjusting those default values allows to easily "
+"reuse stores, without the need for a more complex setup:"
+msgstr ""
+
+#: ../../../usage/stores.rst:250
+msgid ""
+"from pathlib import Path\n"
+"\n"
+"from litestar import Litestar\n"
+"from litestar.config.response_cache import ResponseCacheConfig\n"
+"from litestar.middleware.rate_limit import RateLimitConfig\n"
+"from litestar.middleware.session.server_side import ServerSideSessionConfig\n"
+"from litestar.stores.file import FileStore\n"
+"from litestar.stores.redis import RedisStore\n"
+"\n"
+"app = Litestar(\n"
+"    stores={\"redis\": RedisStore.with_client(), \"file\": "
+"FileStore(Path(\"data\"))},\n"
+"    response_cache_config=ResponseCacheConfig(store=\"redis\"),\n"
+"    middleware=[\n"
+"        ServerSideSessionConfig(store=\"file\").middleware,\n"
+"        RateLimitConfig(rate_limit=(\"second\", 10), store=\"redis\")."
+"middleware,\n"
+"    ],\n"
+")"
+msgstr ""
+
+#: ../../../usage/stores.rst:252
+msgid ""
+"Now the rate limit middleware and response caching will use the ``redis`` "
+"store, while sessions will be store in the ``file`` store."
+msgstr ""
+
+#: ../../../usage/stores.rst:257
+msgid "Setting up the default factory with namespacing"
+msgstr ""
+
+#: ../../../usage/stores.rst:259
+msgid ""
+"The default factory can be used in conjunction with `namespacing`_ to create "
+"isolated, hierarchically organized stores, with minimal boilerplate:"
+msgstr ""
+
+#: ../../../usage/stores.rst:263
+msgid ""
+"from litestar import Litestar, get\n"
+"from litestar.middleware.rate_limit import RateLimitConfig\n"
+"from litestar.middleware.session.server_side import ServerSideSessionConfig\n"
+"from litestar.stores.redis import RedisStore\n"
+"from litestar.stores.registry import StoreRegistry\n"
+"\n"
+"root_store = RedisStore.with_client()\n"
+"\n"
+"\n"
+"@get(cache=True, sync_to_thread=False)\n"
+"def cached_handler() -> str:\n"
+"    # this will use app.stores.get(\"response_cache\")\n"
+"    return \"Hello, world!\"\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    [cached_handler],\n"
+"    stores=StoreRegistry(default_factory=root_store.with_namespace),\n"
+"    middleware=[\n"
+"        RateLimitConfig((\"second\", 1)).middleware,\n"
+"        ServerSideSessionConfig().middleware,\n"
+"    ],\n"
+")"
+msgstr ""
+
+#: ../../../usage/stores.rst:266
+msgid ""
+"Without any extra configuration, every call to ``app.stores.get`` with a "
+"unique name will return a namespace for this name only, while re-using the "
+"underlying Redis instance."
+msgstr ""
+
+#: ../../../usage/stores.rst:271
+msgid "Store lifetime"
+msgstr ""
+
+#: ../../../usage/stores.rst:273
+msgid ""
+"Stores may not be automatically closed when the application is shut down. "
+"This is the case in particular for the RedisStore if you are not using the "
+"class method :meth:`RedisStore.with_client <.redis.RedisStore.with_client>` "
+"and passing in your own Redis instance. In this case you're responsible to "
+"close the Redis instance yourself."
+msgstr ""

@@ -1,0 +1,140 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/stores/memory.rst:2
+msgid "memory"
+msgstr ""
+
+#: ../../../../litestar/stores/memory.py:docstring of
+#: litestar.stores.memory.MemoryStore:1
+msgid "Bases: :py:class:`~litestar.stores.base.Store`"
+msgstr ""
+
+#: ../../../../litestar/stores/memory.py:docstring of
+#: litestar.stores.memory.MemoryStore:1
+msgid "In memory, atomic, asynchronous key/value store."
+msgstr ""
+
+#: ../../../../litestar/stores/memory.py:docstring of
+#: litestar.stores.memory.MemoryStore.__init__:1
+msgid "Initialize :class:`MemoryStore`"
+msgstr ""
+
+#: ../../../../litestar/stores/memory.py:docstring of
+#: litestar.stores.memory.MemoryStore.set:1
+msgid "Set a value."
+msgstr ""
+
+#: ../../../reference/stores/memory.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../litestar/stores/memory.py:docstring of
+#: litestar.stores.memory.MemoryStore.set:3
+msgid "Key to associate the value with"
+msgstr ""
+
+#: ../../../../litestar/stores/memory.py:docstring of
+#: litestar.stores.memory.MemoryStore.set:4
+msgid "Value to store"
+msgstr ""
+
+#: ../../../../litestar/stores/memory.py:docstring of
+#: litestar.stores.memory.MemoryStore.set:5
+msgid "Time in seconds before the key is considered expired"
+msgstr ""
+
+#: ../../../reference/stores/memory.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/stores/memory.py:docstring of
+#: litestar.stores.memory.MemoryStore.set:7
+msgid "``None``"
+msgstr ""
+
+#: ../../../../litestar/stores/memory.py:docstring of
+#: litestar.stores.memory.MemoryStore.get:1
+msgid "Get a value."
+msgstr ""
+
+#: ../../../../litestar/stores/memory.py:docstring of
+#: litestar.stores.memory.MemoryStore.get:3
+msgid "Key associated with the value"
+msgstr ""
+
+#: ../../../../litestar/stores/memory.py:docstring of
+#: litestar.stores.memory.MemoryStore.get:4
+msgid ""
+"If given and the value had an initial expiry time set, renew the expiry time "
+"for ``renew_for`` seconds. If the value has not been set with an expiry time "
+"this is a no-op"
+msgstr ""
+
+#: ../../../../litestar/stores/memory.py:docstring of
+#: litestar.stores.memory.MemoryStore.get:8
+msgid ""
+"The value associated with ``key`` if it exists and is not expired, else "
+"``None``"
+msgstr ""
+
+#: ../../../../litestar/stores/memory.py:docstring of
+#: litestar.stores.memory.MemoryStore.delete:1
+msgid "Delete a value."
+msgstr ""
+
+#: ../../../../litestar/stores/memory.py:docstring of
+#: litestar.stores.memory.MemoryStore.delete:3
+msgid "If no such key exists, this is a no-op."
+msgstr ""
+
+#: ../../../../litestar/stores/memory.py:docstring of
+#: litestar.stores.memory.MemoryStore.delete:5
+msgid "Key of the value to delete"
+msgstr ""
+
+#: ../../../../litestar/stores/memory.py:docstring of
+#: litestar.stores.memory.MemoryStore.delete_all:1
+msgid "Delete all stored values."
+msgstr ""
+
+#: ../../../../litestar/stores/memory.py:docstring of
+#: litestar.stores.memory.MemoryStore.delete_expired:1
+msgid "Delete expired items."
+msgstr ""
+
+#: ../../../../litestar/stores/memory.py:docstring of
+#: litestar.stores.memory.MemoryStore.delete_expired:3
+msgid ""
+"Since expired items are normally only cleared on access (i.e. when calling :"
+"meth:`.get`), this method should be called in regular intervals to free "
+"memory."
+msgstr ""
+
+#: ../../../../litestar/stores/memory.py:docstring of
+#: litestar.stores.memory.MemoryStore.exists:1
+msgid "Check if a given ``key`` exists."
+msgstr ""
+
+#: ../../../../litestar/stores/memory.py:docstring of
+#: litestar.stores.memory.MemoryStore.expires_in:1
+msgid ""
+"Get the time in seconds ``key`` expires in. If no such ``key`` exists or no "
+"expiry time was set, return ``None``."
+msgstr ""

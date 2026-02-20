@@ -1,0 +1,293 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/controller.rst:2
+msgid "controller"
+msgstr ""
+
+#: ../../../../litestar/controller.py:docstring of
+#: litestar.controller.Controller:1
+msgid "Bases: :py:class:`object`"
+msgstr ""
+
+#: ../../../../litestar/controller.py:docstring of
+#: litestar.controller.Controller:1
+msgid "The Litestar Controller class."
+msgstr ""
+
+#: ../../../../litestar/controller.py:docstring of
+#: litestar.controller.Controller:3
+msgid "Subclass this class to create 'view' like components and utilize OOP."
+msgstr ""
+
+#: ../../../../docstring of litestar.controller.Controller.after_request:1
+msgid ""
+"A sync or async function executed before a :class:`Request <.connection."
+"Request>` is passed to any route handler."
+msgstr ""
+
+#: ../../../../docstring of litestar.controller.Controller.after_request:3
+msgid ""
+"If this function returns a value, the request will not reach the route "
+"handler, and instead this value will be used."
+msgstr ""
+
+#: ../../../../docstring of litestar.controller.Controller.after_response:1
+msgid "A sync or async function called after the response has been awaited."
+msgstr ""
+
+#: ../../../../docstring of litestar.controller.Controller.after_response:3
+msgid ""
+"It receives the :class:`Request <.connection.Request>` instance and should "
+"not return any values."
+msgstr ""
+
+#: ../../../../docstring of litestar.controller.Controller.before_request:1
+msgid ""
+"A sync or async function called immediately before calling the route handler."
+msgstr ""
+
+#: ../../../../docstring of litestar.controller.Controller.before_request:3
+msgid ""
+"It receives the :class:`Request <.connection.Request>` instance and any non-"
+"``None`` return value is used for the response, bypassing the route handler."
+msgstr ""
+
+#: ../../../../docstring of litestar.controller.Controller.cache_control:1
+msgid ""
+"A :class:`CacheControlHeader <.datastructures.CacheControlHeader>` header to "
+"add to route handlers of this controller."
+msgstr ""
+
+#: ../../../../docstring of litestar.controller.Controller.cache_control:4
+#: litestar.controller.Controller.etag:3
+msgid "Can be overridden by route handlers."
+msgstr ""
+
+#: ../../../../docstring of litestar.controller.Controller.dependencies:1
+msgid ""
+"A string keyed dictionary of dependency :class:`Provider <.di.Provide>` "
+"instances."
+msgstr ""
+
+#: ../../../../docstring of litestar.controller.Controller.etag:1
+msgid ""
+"An ``etag`` header of type :class:`ETag <.datastructures.ETag>` to add to "
+"route handlers of this controller."
+msgstr ""
+
+#: ../../../../docstring of litestar.controller.Controller.exception_handlers:1
+msgid "A map of handler functions to status codes and/or exception types."
+msgstr ""
+
+#: ../../../../docstring of litestar.controller.Controller.guards:1
+msgid "A sequence of :class:`Guard <.types.Guard>` callables."
+msgstr ""
+
+#: ../../../../docstring of litestar.controller.Controller.middleware:1
+msgid "A sequence of :class:`Middleware <.types.Middleware>`."
+msgstr ""
+
+#: ../../../../docstring of litestar.controller.Controller.opt:1
+msgid ""
+"A string key mapping of arbitrary values that can be accessed in :class:"
+"`Guards <.types.Guard>` or wherever you have access to :class:`Request <."
+"connection.Request>` or :class:`ASGI Scope <.types.Scope>`."
+msgstr ""
+
+#: ../../../../docstring of litestar.controller.Controller.parameters:1
+msgid ""
+"A mapping of :class:`Parameter <.params.Parameter>` definitions available to "
+"all application paths."
+msgstr ""
+
+#: ../../../../docstring of litestar.controller.Controller.request_class:1
+msgid ""
+"A custom subclass of :class:`Request <.connection.Request>` to be used as "
+"the default request for all route handlers under the controller."
+msgstr ""
+
+#: ../../../../docstring of litestar.controller.Controller.response_class:1
+msgid ""
+"A custom subclass of :class:`Response <.response.Response>` to be used as "
+"the default response for all route handlers under the controller."
+msgstr ""
+
+#: ../../../../docstring of litestar.controller.Controller.tags:1
+msgid ""
+"A sequence of string tags that will be appended to the schema of all route "
+"handlers under the controller."
+msgstr ""
+
+#: ../../../../docstring of litestar.controller.Controller.security:1
+msgid ""
+"A sequence of dictionaries that to the schema of all route handlers under "
+"the controller."
+msgstr ""
+
+#: ../../../../docstring of litestar.controller.Controller.signature_types:1
+msgid ""
+"A sequence of types for use in forward reference resolution during signature "
+"modelling."
+msgstr ""
+
+#: ../../../../docstring of litestar.controller.Controller.signature_types:3
+msgid ""
+"These types will be added to the signature namespace using their "
+"``__name__`` attribute."
+msgstr ""
+
+#: ../../../../docstring of litestar.controller.Controller.type_decoders:1
+msgid ""
+"A sequence of tuples, each composed of a predicate testing for type identity "
+"and a msgspec hook for deserialization."
+msgstr ""
+
+#: ../../../../docstring of litestar.controller.Controller.type_encoders:1
+msgid ""
+"A mapping of types to callables that transform them into types supported for "
+"serialization."
+msgstr ""
+
+#: ../../../../docstring of litestar.controller.Controller.websocket_class:1
+msgid ""
+"A custom subclass of :class:`WebSocket <.connection.WebSocket>` to be used "
+"as the default websocket for all route handlers under the controller."
+msgstr ""
+
+#: ../../../../litestar/controller.py:docstring of
+#: litestar.controller.Controller.__init__:1
+msgid "Initialize a controller."
+msgstr ""
+
+#: ../../../../litestar/controller.py:docstring of
+#: litestar.controller.Controller.__init__:3
+msgid "Should only be called by routers as part of controller registration."
+msgstr ""
+
+#: ../../../reference/controller.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../litestar/controller.py:docstring of
+#: litestar.controller.Controller.__init__:5
+msgid "An instance of :class:`Router <.router.Router>`"
+msgstr ""
+
+#: ../../../../docstring of litestar.controller.Controller.dto:1
+msgid ""
+":class:`AbstractDTO <.dto.base_dto.AbstractDTO>` to use for (de)serializing "
+"and validation of request data."
+msgstr ""
+
+#: ../../../../docstring of litestar.controller.Controller.return_dto:1
+msgid ""
+":class:`AbstractDTO <.dto.base_dto.AbstractDTO>` to use for serializing "
+"outbound response data."
+msgstr ""
+
+#: ../../../../docstring of litestar.controller.Controller.include_in_schema:1
+msgid ""
+"A boolean flag dictating whether  the route handler should be documented in "
+"the OpenAPI schema"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.controller.Controller.request_max_body_size:1
+msgid ""
+"Maximum allowed size of the request body in bytes. If this size is exceeded, "
+"a '413 - Request Entity Too Large' error response is returned."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.controller.Controller.signature_namespace:1
+msgid ""
+"A mapping of names to types for use in forward reference resolution during "
+"signature modelling."
+msgstr ""
+
+#: ../../../../docstring of litestar.controller.Controller.response_cookies:1
+msgid "A list of :class:`Cookie <.datastructures.Cookie>` instances."
+msgstr ""
+
+#: ../../../../docstring of litestar.controller.Controller.response_headers:1
+msgid ""
+"A string keyed dictionary mapping :class:`ResponseHeader <.datastructures."
+"ResponseHeader>` instances."
+msgstr ""
+
+#: ../../../../docstring of litestar.controller.Controller.path:1
+msgid "A path fragment for the controller."
+msgstr ""
+
+#: ../../../../docstring of litestar.controller.Controller.path:3
+msgid ""
+"All route handlers under the controller will have the fragment appended to "
+"them. If not set it defaults to ``/``."
+msgstr ""
+
+#: ../../../../docstring of litestar.controller.Controller.owner:1
+msgid ""
+"The :class:`Router <.router.Router>` or :class:`Litestar <litestar.app."
+"Litestar>` app that owns the controller."
+msgstr ""
+
+#: ../../../../docstring of litestar.controller.Controller.owner:3
+msgid ""
+"This value is set internally by Litestar and it should not be set when "
+"subclassing the controller."
+msgstr ""
+
+#: ../../../../litestar/controller.py:docstring of
+#: litestar.controller.Controller.get_route_handlers:1
+msgid ""
+"Get a controller's route handlers and set the controller as the handlers' "
+"owner."
+msgstr ""
+
+#: ../../../reference/controller.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/controller.py:docstring of
+#: litestar.controller.Controller.get_route_handlers:3
+msgid ""
+"A list containing a copy of the route handlers defined on the controller"
+msgstr ""
+
+#: ../../../../litestar/controller.py:docstring of
+#: litestar.controller.Controller.validate_route_handlers:1
+msgid ""
+"Validate that the combination of path and decorator method or type are "
+"unique on the controller."
+msgstr ""
+
+#: ../../../../litestar/controller.py:docstring of
+#: litestar.controller.Controller.validate_route_handlers:3
+msgid "The controller's route handlers."
+msgstr ""
+
+#: ../../../reference/controller.rst:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../litestar/controller.py:docstring of
+#: litestar.controller.Controller.validate_route_handlers:7
+msgid "None"
+msgstr ""

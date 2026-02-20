@@ -1,0 +1,89 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/logging/standard.rst:2
+msgid "standard"
+msgstr ""
+
+#: ../../../../litestar/logging/standard.py:docstring of
+#: litestar.logging.standard.LoggingQueueListener:1
+msgid "Bases: :py:class:`~logging.handlers.QueueListener`"
+msgstr ""
+
+#: ../../../../litestar/logging/standard.py:docstring of
+#: litestar.logging.standard.LoggingQueueListener:1
+msgid "Custom ``QueueListener`` which starts and stops the listening process."
+msgstr ""
+
+#: ../../../../litestar/logging/standard.py:docstring of
+#: litestar.logging.standard.LoggingQueueListener.__init__:1
+msgid "Initialize ``LoggingQueueListener``."
+msgstr ""
+
+#: ../../../reference/logging/standard.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../litestar/logging/standard.py:docstring of
+#: litestar.logging.standard.LoggingQueueListener.__init__:3
+msgid "The queue to send messages to"
+msgstr ""
+
+#: ../../../../litestar/logging/standard.py:docstring of
+#: litestar.logging.standard.LoggingQueueListener.__init__:4
+msgid "A list of handlers which will handle entries placed on the queue"
+msgstr ""
+
+#: ../../../../litestar/logging/standard.py:docstring of
+#: litestar.logging.standard.LoggingQueueListener.__init__:5
+msgid ""
+"If ``respect_handler_level`` is ``True``, a handler's level is respected "
+"(compared with the level for the message) when deciding whether to pass "
+"messages to that handler"
+msgstr ""
+
+#: ../../../../litestar/logging/standard.py:docstring of
+#: litestar.logging.standard.QueueListenerHandler:1
+msgid "Bases: :py:class:`~logging.handlers.QueueHandler`"
+msgstr ""
+
+#: ../../../../litestar/logging/standard.py:docstring of
+#: litestar.logging.standard.QueueListenerHandler:1
+msgid ""
+"Configure queue listener and handler to support non-blocking logging "
+"configuration."
+msgstr ""
+
+#: ../../../../litestar/logging/standard.py:docstring of
+#: litestar.logging.standard.QueueListenerHandler:5
+msgid ""
+"This handler doesn't work with Python >= 3.12 and ``logging.config."
+"dictConfig``. It might be deprecated in the future. Please use ``logging."
+"QueueHandler`` instead."
+msgstr ""
+
+#: ../../../../litestar/logging/standard.py:docstring of
+#: litestar.logging.standard.QueueListenerHandler.__init__:1
+msgid "Initialize ``QueueListenerHandler``."
+msgstr ""
+
+#: ../../../../litestar/logging/standard.py:docstring of
+#: litestar.logging.standard.QueueListenerHandler.__init__:3
+msgid "Optional 'ConvertingList'"
+msgstr ""

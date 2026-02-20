@@ -1,0 +1,141 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/middleware/compression.rst:2
+msgid "compression"
+msgstr ""
+
+#: ../../../../litestar/middleware/compression/__init__.py:docstring of
+#: litestar.middleware.compression.facade.CompressionFacade:1
+msgid "Bases: :py:class:`~typing.Protocol`"
+msgstr ""
+
+#: ../../../../litestar/middleware/compression/__init__.py:docstring of
+#: litestar.middleware.compression.facade.CompressionFacade:1
+msgid ""
+"A unified facade offering a uniform interface for different compression "
+"libraries."
+msgstr ""
+
+#: ../../../../litestar/middleware/compression/__init__.py:docstring of
+#: litestar.middleware.compression.facade.CompressionFacade.__init__:1
+msgid "Initialize ``CompressionFacade``."
+msgstr ""
+
+#: ../../../reference/middleware/compression.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../litestar/middleware/compression/__init__.py:docstring of
+#: litestar.middleware.compression.facade.CompressionFacade.__init__:3
+msgid "A bytes IO buffer to write the compressed data into."
+msgstr ""
+
+#: ../../../../litestar/middleware/compression/__init__.py:docstring of
+#: litestar.middleware.compression.facade.CompressionFacade.__init__:4
+#: litestar.middleware.compression.middleware.CompressionMiddleware.create_compression_send_wrapper:4
+msgid "The compression encoding used."
+msgstr ""
+
+#: ../../../../litestar/middleware/compression/__init__.py:docstring of
+#: litestar.middleware.compression.facade.CompressionFacade.__init__:5
+msgid "The app compression config."
+msgstr ""
+
+#: ../../../../litestar/middleware/compression/__init__.py:docstring of
+#: litestar.middleware.compression.facade.CompressionFacade.close:1
+msgid "Close the compression stream."
+msgstr ""
+
+#: ../../../reference/middleware/compression.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/middleware/compression/__init__.py:docstring of
+#: litestar.middleware.compression.facade.CompressionFacade.close:3
+#: litestar.middleware.compression.facade.CompressionFacade.write:5
+msgid "None"
+msgstr ""
+
+#: ../../../../litestar/middleware/compression/__init__.py:docstring of
+#: litestar.middleware.compression.facade.CompressionFacade.write:1
+msgid "Write compressed bytes."
+msgstr ""
+
+#: ../../../../litestar/middleware/compression/__init__.py:docstring of
+#: litestar.middleware.compression.facade.CompressionFacade.write:3
+msgid "Message body to process"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.compression.CompressionFacade.encoding:1
+msgid "The encoding of the compression."
+msgstr ""
+
+#: ../../../../litestar/middleware/compression/__init__.py:docstring of
+#: litestar.middleware.compression.middleware.CompressionMiddleware:1
+msgid "Bases: :py:class:`~litestar.middleware.base.AbstractMiddleware`"
+msgstr ""
+
+#: ../../../../litestar/middleware/compression/__init__.py:docstring of
+#: litestar.middleware.compression.middleware.CompressionMiddleware:1
+msgid "Compression Middleware Wrapper."
+msgstr ""
+
+#: ../../../../litestar/middleware/compression/__init__.py:docstring of
+#: litestar.middleware.compression.middleware.CompressionMiddleware:3
+msgid ""
+"This is a wrapper allowing for generic compression configuration / handler "
+"middleware"
+msgstr ""
+
+#: ../../../../litestar/middleware/compression/__init__.py:docstring of
+#: litestar.middleware.compression.middleware.CompressionMiddleware.__init__:1
+msgid "Initialize ``CompressionMiddleware``"
+msgstr ""
+
+#: ../../../../litestar/middleware/compression/__init__.py:docstring of
+#: litestar.middleware.compression.middleware.CompressionMiddleware.__init__:3
+msgid "The ``next`` ASGI app to call."
+msgstr ""
+
+#: ../../../../litestar/middleware/compression/__init__.py:docstring of
+#: litestar.middleware.compression.middleware.CompressionMiddleware.__init__:4
+msgid "An instance of CompressionConfig."
+msgstr ""
+
+#: ../../../../litestar/middleware/compression/__init__.py:docstring of
+#: litestar.middleware.compression.middleware.CompressionMiddleware.create_compression_send_wrapper:1
+msgid "Wrap ``send`` to handle brotli compression."
+msgstr ""
+
+#: ../../../../litestar/middleware/compression/__init__.py:docstring of
+#: litestar.middleware.compression.middleware.CompressionMiddleware.create_compression_send_wrapper:3
+msgid "The ASGI send function."
+msgstr ""
+
+#: ../../../../litestar/middleware/compression/__init__.py:docstring of
+#: litestar.middleware.compression.middleware.CompressionMiddleware.create_compression_send_wrapper:5
+msgid "The ASGI connection scope"
+msgstr ""
+
+#: ../../../../litestar/middleware/compression/__init__.py:docstring of
+#: litestar.middleware.compression.middleware.CompressionMiddleware.create_compression_send_wrapper:7
+msgid "An ASGI send function."
+msgstr ""
