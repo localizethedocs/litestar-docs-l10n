@@ -1,0 +1,669 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/app.rst:2
+msgid "app"
+msgstr ""
+
+#: ../../../../docstring of litestar.app.DEFAULT_OPENAPI_CONFIG:1
+msgid ""
+"The default OpenAPI config used if not configuration is explicitly passed to "
+"the :class:`Litestar <.app.Litestar>` instance constructor."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.HandlerIndex:1
+msgid "Bases: :py:class:`~typing.TypedDict`"
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.HandlerIndex:1
+msgid "Map route handler names to a mapping of paths + route handler."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.HandlerIndex:3
+msgid "It's returned from the 'get_handler_index_by_name' utility method."
+msgstr ""
+
+#: ../../../../docstring of litestar.app.HandlerIndex.paths:1
+msgid "Full route paths to the route handler."
+msgstr ""
+
+#: ../../../../docstring of litestar.app.HandlerIndex.handler:1
+msgid "Route handler instance."
+msgstr ""
+
+#: ../../../../docstring of litestar.app.HandlerIndex.identifier:1
+msgid "Unique identifier of the handler."
+msgstr ""
+
+#: ../../../../docstring of litestar.app.HandlerIndex.identifier:3
+msgid ""
+"Either equal to :attr`__name__ <obj.__name__>` attribute or ``__str__`` "
+"value of the handler."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar:1
+msgid "Bases: :py:class:`~litestar.router.Router`"
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar:1
+msgid "The Litestar application."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar:3
+msgid ""
+"``Litestar`` is the root level of the app - it has the base path of ``/`` "
+"and all root level Controllers, Routers and Route Handlers should be "
+"registered on it."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:1
+msgid "Initialize a ``Litestar`` application."
+msgstr ""
+
+#: ../../../reference/app.rst:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:3
+msgid ""
+"A sequence of :class:`exception hook handlers <.types."
+"AfterExceptionHookHandler>`. This hook is called after an exception occurs. "
+"In difference to exception handlers, it is not meant to return a response - "
+"only to process the exception (e.g. log it, send it to Sentry etc.)."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:6
+msgid ""
+"A sync or async function executed after the route handler function returned "
+"and the response object has been resolved. Receives the response object."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:8
+msgid ""
+"A sync or async function called after the response has been awaited. It "
+"receives the :class:`Request <.connection.Request>` object and should not "
+"return any values."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:10
+msgid ""
+"A sequence of allowed hosts, or an :class:`AllowedHostsConfig <.config."
+"allowed_hosts.AllowedHostsConfig>` instance. Enables the builtin allowed "
+"hosts middleware."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:13
+msgid ""
+"A sync or async function called immediately before calling the route "
+"handler. Receives the :class:`Request <.connection.Request>` instance and "
+"any non-``None`` return value is used for the response, bypassing the route "
+"handler."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:16
+msgid ""
+"A sequence of :class:`before send hook handlers <.types."
+"BeforeMessageSendHookHandler>`. Called when the ASGI send function is called."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:18
+msgid ""
+"A ``cache-control`` header of type :class:`CacheControlHeader <litestar."
+"datastructures.CacheControlHeader>` to add to route handlers of this app. "
+"Can be overridden by route handlers."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:21
+msgid ""
+"Configures compression behaviour of the application, this enabled a builtin "
+"or user defined Compression middleware."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:23
+msgid "If set, configures CORS handling for the application."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:24
+msgid ""
+"If set, configures :class:`CSRFMiddleware <.middleware.csrf.CSRFMiddleware>`."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:25
+msgid "If ``True``, app errors rendered as HTML with a stack trace."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:26
+msgid "A string keyed mapping of dependency :class:`Providers <.di.Provide>`."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:27
+msgid ""
+":class:`AbstractDTO <.dto.base_dto.AbstractDTO>` to use for (de)serializing "
+"and validation of request data."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:29
+msgid ""
+"An ``etag`` header of type :class:`ETag <.datastructures.ETag>` to add to "
+"route handlers of this app. Can be overridden by route handlers."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:31
+msgid ""
+"A subclass of :class:`BaseEventEmitterBackend <.events.emitter."
+"BaseEventEmitterBackend>`."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:33
+msgid "A mapping of status codes and/or exception types to handler functions."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:34
+msgid "A sequence of :class:`Guard <.types.Guard>` callables."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:35
+msgid ""
+"A boolean flag dictating whether  the route handler should be documented in "
+"the OpenAPI schema."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:36
+msgid ""
+"A list of callables returning async context managers, wrapping the lifespan "
+"of the ASGI application"
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:37
+msgid "A sequence of :class:`EventListener <.events.listener.EventListener>`."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:38
+msgid ""
+"A subclass of :class:`BaseLoggingConfig <.logging.config.BaseLoggingConfig>`."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:39
+msgid "A sequence of :class:`Middleware <.types.Middleware>`."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:40
+msgid ""
+"The maximal number of allowed parts in a multipart/formdata request. This "
+"limit is intended to protect from DoS attacks."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:42
+msgid ""
+"A sequence of :class:`OnAppInitHandler <.types.OnAppInitHandler>` instances. "
+"Handlers receive an instance of :class:`AppConfig <.config.app.AppConfig>` "
+"that will have been initially populated with the parameters passed to :class:"
+"`Litestar <litestar.app.Litestar>`, and must return an instance of same. If "
+"more than one handler is registered they are called in the order they are "
+"provided."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:46
+msgid ""
+"A sequence of :class:`LifespanHook <.types.LifespanHook>` called during "
+"application shutdown."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:48
+msgid ""
+"A sequence of :class:`LifespanHook <litestar.types.LifespanHook>` called "
+"during application startup."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:50
+msgid "Defaults to :attr:`DEFAULT_OPENAPI_CONFIG`"
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:51
+msgid ""
+"A string keyed mapping of arbitrary values that can be accessed in :class:"
+"`Guards <.types.Guard>` or wherever you have access to :class:`Request "
+"<litestar.connection.request.Request>` or :class:`ASGI Scope <.types.Scope>`."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:54
+msgid ""
+"A mapping of :class:`Parameter <.params.Parameter>` definitions available to "
+"all application paths."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:56
+msgid ""
+"A path fragment that is prefixed to all route handlers, controllers and "
+"routers associated with the application instance.  .. versionadded:: 2.8.0"
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:56
+msgid ""
+"A path fragment that is prefixed to all route handlers, controllers and "
+"routers associated with the application instance."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:60
+msgid "Drop into the PDB when an exception occurs."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:61
+msgid ""
+"A `pdb`-like debugger module that supports the `post_mortem()` protocol. "
+"This module will be used when `pdb_on_exception` is set to True."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:63
+msgid "Sequence of plugins."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:64
+msgid ""
+"An optional subclass of :class:`Request <.connection.Request>` to use for "
+"http connections."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:65
+msgid ""
+"Maximum allowed size of the request body in bytes. If this size is exceeded, "
+"a '413 - Request Entity Too Large' error response is returned."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:67
+msgid ""
+"A custom subclass of :class:`Response <.response.Response>` to be used as "
+"the app's default response."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:69
+msgid "A sequence of :class:`Cookie <.datastructures.Cookie>`."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:70
+msgid ""
+"A string keyed mapping of :class:`ResponseHeader <.datastructures."
+"ResponseHeader>`"
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:71
+msgid "Configures caching behavior of the application."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:72
+msgid ""
+":class:`AbstractDTO <.dto.base_dto.AbstractDTO>` to use for serializing "
+"outbound response data."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:74
+msgid ""
+"A sequence of route handlers, which can include instances of :class:`Router "
+"<.router.Router>`, subclasses of :class:`Controller <.controller."
+"Controller>` or any callable decorated by the route handler decorators."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:77
+msgid ""
+"A sequence of dicts that will be added to the schema of all route handlers "
+"in the application. See :data:`SecurityRequirement <.openapi.spec."
+"SecurityRequirement>` for details."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:80
+msgid ""
+"A mapping of names to types for use in forward reference resolution during "
+"signature modelling."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:81
+msgid ""
+"A sequence of types for use in forward reference resolution during signature "
+"modelling. These types will be added to the signature namespace using their "
+"``__name__`` attribute."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:83
+msgid ""
+"An optional :class:`State <.datastructures.State>` for application state."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:84
+msgid ""
+"A sequence of :class:`StaticFilesConfig <.static_files.StaticFilesConfig>`"
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:85
+msgid ""
+"Central registry of :class:`Store <.stores.base.Store>` that will be "
+"available throughout the application. If this is a dictionary to it will be "
+"passed to a :class:`StoreRegistry <.stores.registry.StoreRegistry>`. If it "
+"is a :class:`StoreRegistry <.stores.registry.StoreRegistry>`, this instance "
+"will be used directly."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:89
+msgid ""
+"A sequence of string tags that will be appended to the schema of all route "
+"handlers under the application."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:91
+msgid "An instance of :class:`TemplateConfig <.template.TemplateConfig>`"
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:92
+msgid ""
+"A sequence of tuples, each composed of a predicate testing for type identity "
+"and a msgspec hook for deserialization."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:94
+msgid ""
+"A mapping of types to callables that transform them into types supported for "
+"serialization."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:95
+msgid ""
+"An optional subclass of :class:`WebSocket <.connection.WebSocket>` to use "
+"for websocket connections."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:97
+msgid "An iterable of experimental features to enable"
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__call__:1
+msgid "Application entry point."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__call__:3
+msgid ""
+"Lifespan events (startup / shutdown) are sent to the lifespan handler, "
+"otherwise the ASGI handler is used"
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__call__:5
+msgid "The ASGI connection scope."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__call__:6
+msgid "The ASGI receive function."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__call__:7
+msgid "The ASGI send function."
+msgstr ""
+
+#: ../../../reference/app.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__call__:9
+#: litestar.app.Litestar.emit:7 litestar.app.Litestar.register:8
+#: litestar.app.Litestar.update_openapi_schema:3
+msgid "None"
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.from_scope:1
+msgid "Retrieve the Litestar application from the current ASGI scope"
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.lifespan:1
+msgid "Context manager handling the ASGI lifespan."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.lifespan:3
+msgid ""
+"It will be entered when the ``lifespan`` message has been received from the "
+"server, and exit after the ``asgi.shutdown`` message. During this period, it "
+"is responsible for calling the ``on_startup``, ``on_shutdown`` hooks, as "
+"well as custom lifespan managers."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of
+#: litestar.app.Litestar.openapi_schema:1
+msgid "Access  the OpenAPI schema of the application."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of
+#: litestar.app.Litestar.openapi_schema:3
+msgid ""
+"The :class:`OpenAPI` <pydantic_openapi_schema.open_api.OpenAPI> instance of "
+"the application."
+msgstr ""
+
+#: ../../../reference/app.rst:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of
+#: litestar.app.Litestar.openapi_schema:7
+msgid "If the application ``openapi_config`` attribute is ``None``."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.from_config:1
+msgid "Initialize a ``Litestar`` application from a configuration instance."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.from_config:3
+msgid "An instance of :class:`AppConfig` <.config.AppConfig>"
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.from_config:5
+msgid "An instance of ``Litestar`` application."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.register:1
+msgid "Register a route handler on the app."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.register:3
+msgid "This method can be used to dynamically add endpoints to an application."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.register:5
+msgid ""
+"An instance of :class:`Router <.router.Router>`, a subclass of :class:"
+"`Controller <.controller.Controller>` or any function decorated by the route "
+"handler decorators."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of
+#: litestar.app.Litestar.get_handler_index_by_name:1
+msgid ""
+"Receives a route handler name and returns an optional dictionary containing "
+"the route handler instance and list of paths sorted lexically."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of
+#: litestar.app.Litestar.get_handler_index_by_name:4
+#: litestar.app.Litestar.route_reverse:4
+#: litestar.app.Litestar.url_for_static_asset:3
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../litestar/app.py:docstring of
+#: litestar.app.Litestar.get_handler_index_by_name:7
+msgid ""
+"from litestar import Litestar, get\n"
+"\n"
+"\n"
+"@get(\"/\", name=\"my-handler\")\n"
+"def handler() -> None:\n"
+"    pass\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[handler])\n"
+"\n"
+"handler_index = app.get_handler_index_by_name(\"my-handler\")\n"
+"\n"
+"# { \"paths\": [\"/\"], \"handler\" ... }"
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of
+#: litestar.app.Litestar.get_handler_index_by_name:22
+msgid "A route handler unique name."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of
+#: litestar.app.Litestar.get_handler_index_by_name:24
+msgid "A :class:`HandlerIndex <.app.HandlerIndex>` instance or ``None``."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of
+#: litestar.app.Litestar.route_reverse:1
+msgid ""
+"Receives a route handler name and path parameter values and returns the url "
+"path to the handler with filled path parameters."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of
+#: litestar.app.Litestar.route_reverse:7
+msgid ""
+"from litestar import Litestar, get\n"
+"\n"
+"\n"
+"@get(\"/group/{group_id:int}\")\n"
+"def get_group_members(group_id: int) -> None:\n"
+"    pass\n"
+"\n"
+"\n"
+"@get(\"/group/{group_id:int}/user/{user_id:int}\", "
+"name=\"get_membership_details\")\n"
+"def get_membership_details(group_id: int, user_id: int) -> None:\n"
+"    pass\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[get_group_members, get_membership_details])\n"
+"\n"
+"group_members_path = app.route_reverse(get_group_members, group_id=10)\n"
+"\n"
+"# /group/10\n"
+"\n"
+"membership_details_path = app.route_reverse(\n"
+"    \"get_membership_details\", user_id=100, group_id=10\n"
+")\n"
+"\n"
+"# /group/10/user/100"
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of
+#: litestar.app.Litestar.route_reverse:33
+msgid "The ``name`` of the route handler, or the route handler itself."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of
+#: litestar.app.Litestar.route_reverse:34
+msgid ""
+"Actual values for path parameters in the route. Parameters of type "
+"`datetime`, `date`, `time`, `timedelta`, `float`, `Path`, and `UUID` may be "
+"passed in their string representations."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of
+#: litestar.app.Litestar.route_reverse:38
+msgid ""
+"If a route with 'name' does not exist, or any of the path parameters in     "
+"``**path_parameters`` are missing or are of the wrong type."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of
+#: litestar.app.Litestar.route_reverse:40
+msgid "A fully formatted url path."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of
+#: litestar.app.Litestar.url_for_static_asset:1
+msgid ""
+"Receives a static files handler name, an asset file path and returns "
+"resolved url path to the asset."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of
+#: litestar.app.Litestar.url_for_static_asset:6
+msgid ""
+"from litestar import Litestar\n"
+"from litestar.static_files.config import StaticFilesConfig\n"
+"\n"
+"app = Litestar(\n"
+"    static_files_config=[\n"
+"        StaticFilesConfig(directories=[\"css\"], path=\"/static/css\", "
+"name=\"css\")\n"
+"    ]\n"
+")\n"
+"\n"
+"path = app.url_for_static_asset(\"css\", \"main.css\")\n"
+"\n"
+"# /static/css/main.css"
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of
+#: litestar.app.Litestar.url_for_static_asset:20
+msgid "A static handler unique name."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of
+#: litestar.app.Litestar.url_for_static_asset:21
+msgid "a string containing path to an asset."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of
+#: litestar.app.Litestar.url_for_static_asset:23
+msgid "If static files handler with ``name`` does not exist."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of
+#: litestar.app.Litestar.url_for_static_asset:25
+msgid "A url path to the asset."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of
+#: litestar.app.Litestar.route_handler_method_view:1
+msgid "Map route handlers to paths."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of
+#: litestar.app.Litestar.route_handler_method_view:3
+msgid "A dictionary of router handlers and lists of paths as strings"
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of
+#: litestar.app.Litestar.update_openapi_schema:1
+msgid ""
+"Update the OpenAPI schema to reflect the route handlers registered on the "
+"app."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.emit:1
+msgid "Emit an event to all attached listeners."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.emit:3
+msgid "The ID of the event to emit, e.g ``my_event``."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.emit:4
+msgid "args to pass to the listener(s)."
+msgstr ""
+
+#: ../../../../litestar/app.py:docstring of litestar.app.Litestar.emit:5
+msgid "kwargs to pass to the listener(s)"
+msgstr ""

@@ -1,0 +1,243 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/dto/base_dto.rst:2
+msgid "base_dto"
+msgstr ""
+
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO:1
+msgid ""
+"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~litestar.dto.base_dto.T`]"
+msgstr ""
+
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO:1
+msgid "Base class for DTO types."
+msgstr ""
+
+#: ../../../../docstring of litestar.dto.base_dto.AbstractDTO.config:1
+msgid "Config objects to define properties of the DTO."
+msgstr ""
+
+#: ../../../../docstring of litestar.dto.base_dto.AbstractDTO.model_type:1
+msgid ""
+"If ``annotation`` is an iterable, this is the inner type, otherwise will be "
+"the same as ``annotation``."
+msgstr ""
+
+#: ../../../../litestar/dto/base_dto.py:docstring of builtins.getattr:1
+msgid ":func:`getattr` like callable to access attributes on the data source"
+msgstr ""
+
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO.__init__:1
+msgid "Create an AbstractDTOFactory type."
+msgstr ""
+
+#: ../../../reference/dto/base_dto.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO.__init__:3
+msgid ""
+"A :class:`ASGIConnection <litestar.connection.base.ASGIConnection>` instance."
+msgstr ""
+
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO.get_config_for_model_type:1
+msgid ""
+"Create a new configuration for this specific ``model_type``, during the "
+"creation of the factory."
+msgstr ""
+
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO.get_config_for_model_type:4
+msgid ""
+"The returned config object will be set as the ``config`` attribute on the "
+"newly defined factory class."
+msgstr ""
+
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO.decode_builtins:1
+msgid "Decode a dictionary of Python values into an the DTO's datatype."
+msgstr ""
+
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO.decode_bytes:1
+msgid "Decode a byte string into an the DTO's datatype."
+msgstr ""
+
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO.generate_field_definitions:1
+msgid "Generate ``FieldDefinition`` instances from ``model_type``."
+msgstr ""
+
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO.generate_field_definitions:0
+msgid "Yields"
+msgstr ""
+
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO.generate_field_definitions:3
+msgid "``FieldDefinition`` instances."
+msgstr ""
+
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO.detect_nested_field:1
+msgid ""
+"Return ``True`` if ``field_definition`` represents a nested model field."
+msgstr ""
+
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO.detect_nested_field:3
+msgid "inspect type to determine if field represents a nested model."
+msgstr ""
+
+#: ../../../reference/dto/base_dto.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO.detect_nested_field:5
+msgid "``True`` if ``field_definition`` represents a nested model field."
+msgstr ""
+
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO.is_supported_model_type_field:1
+msgid "Check support for the given type."
+msgstr ""
+
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO.create_for_field_definition:3
+#: litestar.dto.base_dto.AbstractDTO.is_supported_model_type_field:3
+msgid "A :class:`FieldDefinition <litestar.typing.FieldDefinition>` instance."
+msgstr ""
+
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO.is_supported_model_type_field:5
+msgid "Whether the type of the field definition is supported by the DTO."
+msgstr ""
+
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO.create_for_field_definition:1
+msgid "Creates a DTO subclass for a field definition."
+msgstr ""
+
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO.create_for_field_definition:4
+#: litestar.dto.base_dto.AbstractDTO.create_openapi_schema:4
+msgid "ID of the route handler for which to create a DTO instance."
+msgstr ""
+
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO.create_for_field_definition:5
+msgid "Alternative DTO backend class to use"
+msgstr ""
+
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO.create_for_field_definition:7
+msgid "None"
+msgstr ""
+
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO.create_openapi_schema:1
+msgid "Create an OpenAPI request body."
+msgstr ""
+
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO.create_openapi_schema:3
+msgid ""
+"A parsed type annotation that represents the annotation used on the handler."
+msgstr ""
+
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO.create_openapi_schema:5
+msgid ""
+"A factory for creating schemas. Has a ``for_field_definition()`` method that "
+"accepts a :class:`~litestar.typing.FieldDefinition` instance."
+msgstr ""
+
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO.create_openapi_schema:8
+msgid "OpenAPI request body."
+msgstr ""
+
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO.resolve_generic_wrapper_type:1
+msgid "Handle where DTO supported data is wrapped in a generic container type."
+msgstr ""
+
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO.get_dto_config_from_annotated_type:3
+#: litestar.dto.base_dto.AbstractDTO.resolve_generic_wrapper_type:3
+#: litestar.dto.base_dto.AbstractDTO.resolve_model_type:3
+msgid ""
+"A parsed type annotation that represents the annotation used to narrow the "
+"DTO type."
+msgstr ""
+
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO.resolve_generic_wrapper_type:5
+msgid "The data model type."
+msgstr ""
+
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO.get_model_type_hints:1
+msgid "Retrieve type annotations for ``model_type``."
+msgstr ""
+
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO.get_model_type_hints:3
+msgid "Any type-annotated class."
+msgstr ""
+
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO.get_model_type_hints:4
+msgid "Optional namespace to use for resolving type hints."
+msgstr ""
+
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO.get_model_type_hints:6
+msgid ""
+"Parsed type hints for ``model_type`` resolved within the scope of its module."
+msgstr ""
+
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO.get_dto_config_from_annotated_type:1
+msgid "Extract data type and config instances from ``Annotated`` annotation."
+msgstr ""
+
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO.get_dto_config_from_annotated_type:5
+msgid "The type and config object extracted from the annotation."
+msgstr ""
+
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO.resolve_model_type:1
+msgid "Resolve the data model type from a parsed type."
+msgstr ""
+
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO.resolve_model_type:5
+msgid ""
+"A :class:`FieldDefinition <.typing.FieldDefinition>` that represents the "
+"data model type."
+msgstr ""

@@ -1,0 +1,454 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/params.rst:2
+msgid "params"
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.Body:1
+msgid "Create an extended request body kwarg definition."
+msgstr ""
+
+#: ../../../reference/params.rst:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../litestar/params.py:docstring of litestar.params.Body:3
+#: litestar.params.Parameter:4
+msgid ""
+"A boolean flag dictating whether this parameter is a constant. If True, the "
+"value passed to the parameter must equal its default value. This also causes "
+"the OpenAPI const field to be populated with the default value."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.Body:6
+#: litestar.params.Parameter:7
+msgid ""
+"The content encoding of the value. Applicable on to string values. See "
+"OpenAPI 3.1 for details."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.Body:8
+#: litestar.params.Parameter:10
+msgid "A default value. If const is true, this value is required."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.Body:9
+#: litestar.params.Parameter:11 ../../../../docstring
+#: litestar.params.KwargDefinition.description:1
+msgid ""
+"String value used in the description section of the OpenAPI schema for the "
+"given parameter."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.Body:10
+#: litestar.params.Parameter:12 ../../../../docstring
+#: litestar.params.KwargDefinition.examples:1
+msgid "A list of Example models."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.Body:11
+#: litestar.params.Parameter:13 ../../../../docstring
+#: litestar.params.KwargDefinition.external_docs:1
+msgid "A url pointing at external documentation for the given parameter."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.Body:12
+#: litestar.params.Parameter:14
+msgid ""
+"Constrict value to be greater or equal to a given float or int. Equivalent "
+"to minimum in the OpenAPI specification."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.Body:14
+#: litestar.params.Parameter:16
+msgid ""
+"Constrict value to be greater than a given float or int. Equivalent to "
+"exclusiveMinimum in the OpenAPI specification."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.Body:16
+#: litestar.params.Parameter:19
+msgid ""
+"Constrict value to be less or equal to a given float or int. Equivalent to "
+"maximum in the OpenAPI specification."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.Body:18
+#: litestar.params.Parameter:21
+msgid ""
+"Constrict value to be less than a given float or int. Equivalent to "
+"exclusiveMaximum in the OpenAPI specification."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.Body:20
+#: litestar.params.Parameter:23
+msgid ""
+"Constrict a set or a list to have a maximum number of items. Equivalent to "
+"maxItems in the OpenAPI specification."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.Body:22
+#: litestar.params.Parameter:25
+msgid ""
+"Constrict a string or bytes value to have a maximum length. Equivalent to "
+"maxLength in the OpenAPI specification."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.Body:24
+msgid "Defaults to RequestEncodingType.JSON."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.Body:25
+msgid ""
+"Constrict a set or a list to have a minimum number of items. Equivalent to "
+"minItems in the OpenAPI specification."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.Body:27
+#: litestar.params.Parameter:29
+msgid ""
+"Constrict a string or bytes value to have a minimum length. Equivalent to "
+"minLength in the OpenAPI specification."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.Body:29
+#: ../../../../docstring litestar.params.BodyKwarg.multipart_form_part_limit:1
+msgid ""
+"The maximal number of allowed parts in a multipart/formdata request. This "
+"limit is intended to protect from DoS attacks."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.Body:31
+#: litestar.params.Parameter:31
+msgid ""
+"Constrict value to a multiple of a given float or int. Equivalent to "
+"multipleOf in the OpenAPI specification."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.Body:33
+#: litestar.params.Parameter:33
+msgid ""
+"A string representing a regex against which the given string will be "
+"matched. Equivalent to pattern in the OpenAPI specification."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.Body:35
+#: litestar.params.Parameter:38 ../../../../docstring
+#: litestar.params.KwargDefinition.title:1
+msgid ""
+"String value used in the title section of the OpenAPI schema for the given "
+"parameter."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.Body:36
+#: litestar.params.Parameter:39
+msgid ""
+"Extensions to the generated schema. If set, will overwrite the matching "
+"fields in the generated schema.  .. versionadded:: 2.8.0"
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.Body:36
+#: litestar.params.Parameter:39
+msgid ""
+"Extensions to the generated schema. If set, will overwrite the matching "
+"fields in the generated schema."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.Body:40
+#: litestar.params.Parameter:43
+msgid ""
+"Use this as the key for the reference when creating a component for this "
+"type .. versionadded:: 2.12.0"
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.BodyKwarg:1
+#: litestar.params.ParameterKwarg:1
+msgid "Bases: :py:class:`~litestar.params.KwargDefinition`"
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.BodyKwarg:1
+msgid "Data container representing a request body."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.BodyKwarg.media_type:1
+msgid "Media-Type of the body."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of
+#: litestar.params.BodyKwarg.__hash__:1
+#: litestar.params.DependencyKwarg.__hash__:1
+#: litestar.params.ParameterKwarg.__hash__:1
+msgid "Hash the dataclass in a safe way."
+msgstr ""
+
+#: ../../../reference/params.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of
+#: litestar.params.BodyKwarg.__hash__:3
+#: litestar.params.DependencyKwarg.__hash__:3
+#: litestar.params.ParameterKwarg.__hash__:3
+msgid "A hash"
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.Dependency:1
+msgid "Create a dependency kwarg definition."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.Dependency:3
+msgid "A default value to use in case a dependency is not provided."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.Dependency:4
+msgid ""
+"If `True` provided dependency values are not validated by signature model."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of
+#: litestar.params.DependencyKwarg:1 litestar.params.KwargDefinition:1
+msgid "Bases: :py:class:`object`"
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of
+#: litestar.params.DependencyKwarg:1
+msgid "Data container representing a dependency."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.DependencyKwarg.default:1
+#: litestar.params.KwargDefinition.default:1
+msgid "A default value."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.DependencyKwarg.skip_validation:1
+msgid "Flag dictating whether to skip validation."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of
+#: litestar.params.KwargDefinition:1
+msgid "Data container representing a constrained kwarg."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.KwargDefinition.content_encoding:1
+msgid "The content encoding of the value."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.KwargDefinition.content_encoding:3
+msgid "Applicable on to string values. See OpenAPI 3.1 for details."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.KwargDefinition.default:3
+msgid "If const is true, this value is required."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.KwargDefinition.const:1
+msgid "A boolean flag dictating whether this parameter is a constant."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.KwargDefinition.const:3
+msgid ""
+"If True, the value passed to the parameter must equal its default value. "
+"This also causes the OpenAPI const field to be populated with the default "
+"value."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.KwargDefinition.gt:1
+msgid "Constrict value to be greater than a given float or int."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.KwargDefinition.gt:3
+msgid "Equivalent to exclusiveMinimum in the OpenAPI specification."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.KwargDefinition.ge:1
+msgid "Constrict value to be greater or equal to a given float or int."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.KwargDefinition.ge:3
+msgid "Equivalent to minimum in the OpenAPI specification."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.KwargDefinition.lt:1
+msgid "Constrict value to be less than a given float or int."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.KwargDefinition.lt:3
+msgid "Equivalent to exclusiveMaximum in the OpenAPI specification."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.KwargDefinition.le:1
+msgid "Constrict value to be less or equal to a given float or int."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.KwargDefinition.le:3
+msgid "Equivalent to maximum in the OpenAPI specification."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.KwargDefinition.multiple_of:1
+msgid "Constrict value to a multiple of a given float or int."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.KwargDefinition.multiple_of:3
+msgid "Equivalent to multipleOf in the OpenAPI specification."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.KwargDefinition.min_items:1
+msgid "Constrict a set or a list to have a minimum number of items."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.KwargDefinition.min_items:3
+msgid "Equivalent to minItems in the OpenAPI specification."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.KwargDefinition.max_items:1
+msgid "Constrict a set or a list to have a maximum number of items."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.KwargDefinition.max_items:3
+msgid "Equivalent to maxItems in the OpenAPI specification."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.KwargDefinition.min_length:1
+msgid "Constrict a string or bytes value to have a minimum length."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.KwargDefinition.min_length:3
+msgid "Equivalent to minLength in the OpenAPI specification."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.KwargDefinition.max_length:1
+msgid "Constrict a string or bytes value to have a maximum length."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.KwargDefinition.max_length:3
+msgid "Equivalent to maxLength in the OpenAPI specification."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.KwargDefinition.pattern:1
+msgid ""
+"A string representing a regex against which the given string will be matched."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.KwargDefinition.pattern:3
+msgid "Equivalent to pattern in the OpenAPI specification."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.KwargDefinition.lower_case:1
+msgid "Constrict a string value to be lower case."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.KwargDefinition.upper_case:1
+msgid "Constrict a string value to be upper case."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.KwargDefinition.format:1
+msgid "Specify the format to which a string value should be converted."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.KwargDefinition.enum:1
+msgid "A sequence of valid values."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.KwargDefinition.read_only:1
+msgid "A boolean flag dictating whether this parameter is read only."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.KwargDefinition.schema_extra:1
+msgid "Extensions to the generated schema."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.KwargDefinition.schema_extra:3
+msgid "If set, will overwrite the matching fields in the generated schema."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.params.KwargDefinition.schema_component_key:1
+msgid ""
+"Use as the key for the reference when creating a component for this type .. "
+"versionadded:: 2.12.0"
+msgstr ""
+
+#: ../../../../docstring of litestar.params.KwargDefinition.include_in_schema:1
+msgid ""
+"A boolean flag dictating whether this parameter should be included in the "
+"schema. .. versionadded:: 2.17.0"
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of
+#: litestar.params.KwargDefinition.is_constrained:1
+msgid "Return True if any of the constraints are set."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.Parameter:1
+msgid "Create an extended parameter kwarg definition."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.Parameter:3
+msgid "`Empty` by default."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.Parameter:9
+#: ../../../../docstring litestar.params.ParameterKwarg.cookie:1
+msgid "The cookie parameter key - required for cookie parameters."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.Parameter:18
+#: ../../../../docstring litestar.params.ParameterKwarg.header:1
+msgid "The header parameter key - required for header parameters."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.Parameter:27
+msgid ""
+"Constrict a set or a list to have a minimum number of items. ֿ Equivalent to "
+"minItems in the OpenAPI specification."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.Parameter:35
+#: ../../../../docstring litestar.params.ParameterKwarg.query:1
+msgid "The query parameter key for this parameter."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.Parameter:36
+msgid ""
+"A boolean flag dictating whether this parameter is required. If set to "
+"False, None values will be allowed. Defaults to True."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.Parameter:45
+msgid ""
+"A boolean flag dictating whether this parameter should be included in the "
+"schema."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.ParameterKwarg:1
+msgid "Data container representing a parameter."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.ParameterKwarg.annotation:1
+msgid "The field value - `Empty` by default."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.ParameterKwarg.required:1
+msgid "A boolean flag dictating whether this parameter is required."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.ParameterKwarg.required:3
+msgid "If set to False, None values will be allowed. Defaults to True."
+msgstr ""

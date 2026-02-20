@@ -1,0 +1,227 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../usage/security/guards.rst:2
+msgid "Guards"
+msgstr ""
+
+#: ../../../usage/security/guards.rst:4
+msgid ""
+"Guards are :term:`callables <python:callable>` that receive two arguments - "
+"``connection``, which is the :class:`Request <.connection.Request>` or :"
+"class:`WebSocket <.connection.WebSocket>` instance (both sub-classes of :"
+"class:`~.connection.ASGIConnection`), and ``route_handler``, which is a copy "
+"of the :class:`~.handlers.BaseRouteHandler`. Their role is to *authorize* "
+"the request by verifying that the connection is allowed to reach the "
+"endpoint handler in question. If verification fails, the guard should raise "
+"an :exc:`HTTPException`, usually a :class:`~.exceptions."
+"NotAuthorizedException` with a ``status_code`` of ``401``."
+msgstr ""
+
+#: ../../../usage/security/guards.rst:10
+msgid ""
+"To illustrate this we will implement a rudimentary role based authorization "
+"system in our Litestar app. As we have done for ``authentication``, we will "
+"assume that we added some sort of persistence layer without actually "
+"specifying it in the example."
+msgstr ""
+
+#: ../../../usage/security/guards.rst:14
+msgid ""
+"We begin by creating an :class:`~enum.Enum` with two roles - ``consumer`` "
+"and ``admin``:"
+msgstr ""
+
+#: ../../../usage/security/guards.rst:17
+msgid "Defining the enum ``UserRole``"
+msgstr ""
+
+#: ../../../usage/security/guards.rst:17
+msgid ""
+"class UserRole(str, Enum):\n"
+"    CONSUMER = \"consumer\"\n"
+"    ADMIN = \"admin\""
+msgstr ""
+
+#: ../../../usage/security/guards.rst:21
+msgid "Our ``User`` model will now look like this:"
+msgstr ""
+
+#: ../../../usage/security/guards.rst:24
+msgid "User model for role based authorization"
+msgstr ""
+
+#: ../../../usage/security/guards.rst:24
+msgid ""
+"class User(BaseModel):\n"
+"    id: UUID4\n"
+"    role: UserRole\n"
+"\n"
+"    @property\n"
+"    def is_admin(self) -> bool:\n"
+"        \"\"\"Determines whether the user is an admin user\"\"\"\n"
+"        return self.role == UserRole.ADMIN"
+msgstr ""
+
+#: ../../../usage/security/guards.rst:28
+msgid ""
+"Given that the ``User`` model has a ``role`` property we can use it to "
+"authorize a request. Let us create a guard that only allows admin users to "
+"access certain route handlers and then add it to a route handler function:"
+msgstr ""
+
+#: ../../../usage/security/guards.rst:33
+msgid ""
+"Defining the guard ``admin_user_guard`` used to authorize certain route "
+"handlers"
+msgstr ""
+
+#: ../../../usage/security/guards.rst:33
+msgid ""
+"def admin_user_guard(connection: ASGIConnection, _: BaseRouteHandler) -> "
+"None:\n"
+"    if not connection.user.is_admin:\n"
+"        raise NotAuthorizedException()\n"
+"@post(path=\"/user\", guards=[admin_user_guard])\n"
+"def create_user(data: User) -> User: ..."
+msgstr ""
+
+#: ../../../usage/security/guards.rst:37
+msgid "Here, the ``admin_user_guard`` guard checks if the user is an admin."
+msgstr ""
+
+#: ../../../usage/security/guards.rst:39
+msgid ""
+"The connection has a `user` object attached to it thanks to the JWT "
+"middleware, see :doc:`authentication </usage/security/jwt>` and in "
+"particular the :meth:`JWTAuth.retrieve_user_handler` method."
+msgstr ""
+
+#: ../../../usage/security/guards.rst:42
+msgid ""
+"Thus, only an admin user would be able to send a post request to the "
+"``create_user`` handler."
+msgstr ""
+
+#: ../../../usage/security/guards.rst:45
+msgid "Guard scopes"
+msgstr ""
+
+#: ../../../usage/security/guards.rst:47
+msgid ""
+"Guards are part of Litestar's :ref:`layered architecture <usage/applications:"
+"layered architecture>` and can be declared on all layers of the app - the "
+"Litestar instance, routers, controllers, and individual route handlers:"
+msgstr ""
+
+#: ../../../usage/security/guards.rst:51
+msgid "Declaring guards on different layers of the app"
+msgstr ""
+
+#: ../../../usage/security/guards.rst:51
+msgid ""
+"def my_guard(connection: ASGIConnection, handler: BaseRouteHandler) -> "
+"None: ...\n"
+"\n"
+"\n"
+"# controller\n"
+"class UserController(Controller):\n"
+"    path = \"/user\"\n"
+"    guards = [my_guard]\n"
+"\n"
+"\n"
+"# router\n"
+"admin_router = Router(path=\"admin\", route_handlers=[UserController], "
+"guards=[my_guard])\n"
+"\n"
+"# app\n"
+"app = Litestar(route_handlers=[admin_router], guards=[my_guard])"
+msgstr ""
+
+#: ../../../usage/security/guards.rst:55
+msgid ""
+"The placement of guards within the Litestar application depends on the scope "
+"and level of access control needed:"
+msgstr ""
+
+#: ../../../usage/security/guards.rst:57
+msgid "Should restrictions apply to individual route handlers?"
+msgstr ""
+
+#: ../../../usage/security/guards.rst:58
+msgid "Is the access control intended for all actions within a controller?"
+msgstr ""
+
+#: ../../../usage/security/guards.rst:59
+msgid "Are you aiming to secure all routes managed by a specific router?"
+msgstr ""
+
+#: ../../../usage/security/guards.rst:60
+msgid "Or do you need to enforce access control across the entire application?"
+msgstr ""
+
+#: ../../../usage/security/guards.rst:62
+msgid ""
+"As you can see in the above examples - ``guards`` is a :class:`list`. This "
+"means you can add **multiple** guards at every layer. Unlike :doc:"
+"`dependencies </usage/dependency-injection>` , guards do not override each "
+"other but are rather *cumulative*. This means that you can define guards on "
+"different layers of your app, and they will combine."
+msgstr ""
+
+#: ../../../usage/security/guards.rst:68
+msgid ""
+"If guards are placed at the controller or the app level, they **will** be "
+"executed on all ``OPTIONS`` requests as well. For more details, including a "
+"workaround, refer https://github.com/litestar-org/litestar/issues/2314."
+msgstr ""
+
+#: ../../../usage/security/guards.rst:73
+msgid "The route handler \"opt\" key"
+msgstr ""
+
+#: ../../../usage/security/guards.rst:75
+msgid ""
+"Occasionally there might be a need to set some values on the route handler "
+"itself - these can be permissions, or some other flag. This can be achieved "
+"with :ref:`the opts kwarg <handler_opts>` of route handler"
+msgstr ""
+
+#: ../../../usage/security/guards.rst:78
+msgid ""
+"To illustrate this let us say we want to have an endpoint that is guarded by "
+"a \"secret\" token, to which end we create the following guard:"
+msgstr ""
+
+#: ../../../usage/security/guards.rst:82
+msgid ""
+"def secret_token_guard(connection: ASGIConnection, route_handler: "
+"BaseRouteHandler) -> None:\n"
+"    if (\n"
+"        route_handler.opt.get(\"secret\")\n"
+"        and not connection.headers.get(\"Secret-Header\", \"\") == "
+"route_handler.opt[\"secret\"]\n"
+"    ):\n"
+"        raise NotAuthorizedException()\n"
+"\n"
+"\n"
+"@get(path=\"/secret\", guards=[secret_token_guard], opt={\"secret\": environ."
+"get(\"SECRET\")})\n"
+"def secret_endpoint() -> None: ..."
+msgstr ""

@@ -1,0 +1,689 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/openapi/openapi.rst:2
+msgid "openapi"
+msgstr ""
+
+#: ../../../../litestar/openapi/__init__.py:docstring of
+#: litestar.openapi.config.OpenAPIConfig:1
+#: litestar.openapi.datastructures.ResponseSpec:1
+msgid "Bases: :py:class:`object`"
+msgstr ""
+
+#: ../../../../litestar/openapi/__init__.py:docstring of
+#: litestar.openapi.config.OpenAPIConfig:1
+msgid "Configuration for OpenAPI."
+msgstr ""
+
+#: ../../../../litestar/openapi/__init__.py:docstring of
+#: litestar.openapi.config.OpenAPIConfig:3
+msgid ""
+"To enable OpenAPI schema generation and serving, pass an instance of this "
+"class to the :class:`Litestar <.app.Litestar>` constructor using the "
+"``openapi_config`` kwargs."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIConfig.contact:1
+msgid ""
+"API contact information, should be an :class:`Contact <litestar.openapi.spec."
+"contact.Contact>` instance."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIConfig.create_examples:1
+msgid "Generate examples using the polyfactory library."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIConfig.description:1
+msgid "API description."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIConfig.enabled_endpoints:1
+msgid "A set of the enabled documentation sites and schema download endpoints."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIConfig.external_docs:1
+msgid "Links to external documentation."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIConfig.external_docs:3
+msgid ""
+"Should be an instance of :class:`ExternalDocumentation <litestar.openapi."
+"spec.external_documentation.ExternalDocumentation>`."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIConfig.license:1
+msgid "API Licensing information."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIConfig.license:3
+msgid ""
+"Should be an instance of :class:`License <litestar.openapi.spec.license."
+"License>`."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIConfig.openapi_controller:1
+msgid "Controller for generating OpenAPI routes."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIConfig.openapi_controller:3
+msgid ""
+"Must be subclass of :class:`OpenAPIController <litestar.openapi.controller."
+"OpenAPIController>`."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIConfig.openapi_router:1
+msgid "An optional router for serving OpenAPI documentation and schema files."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIConfig.openapi_router:3
+msgid "If provided, ``path`` is ignored."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIConfig.openapi_router:5
+msgid ""
+"This parameter is also ignored if the deprecated :attr:`openapi_router <."
+"openapi.OpenAPIConfig.openapi_controller>` kwarg is provided."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIConfig.openapi_router:8
+msgid ""
+":attr:`openapi_router` is not required, but it can be passed to customize "
+"the configuration of the router used to serve the documentation endpoints. "
+"For example, you can add middleware or guards to the router."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIConfig.openapi_router:11
+msgid ""
+"Handlers to serve the OpenAPI schema and documentation sites are added to "
+"this router according to :attr:`render_plugins`, so routes shouldn't be "
+"added that conflict with these."
+msgstr ""
+
+#: ../../../../litestar/openapi/__init__.py:docstring of
+#: litestar._openapi.utils.default_operation_id_creator:1
+msgid "Create a unique 'operationId' for an OpenAPI PathItem entry."
+msgstr ""
+
+#: ../../../reference/openapi/openapi.rst:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../litestar/openapi/__init__.py:docstring of
+#: litestar._openapi.utils.default_operation_id_creator:3
+msgid "The HTTP Route Handler instance."
+msgstr ""
+
+#: ../../../../litestar/openapi/__init__.py:docstring of
+#: litestar._openapi.utils.default_operation_id_creator:4
+msgid "The HTTP method for the given PathItem."
+msgstr ""
+
+#: ../../../../litestar/openapi/__init__.py:docstring of
+#: litestar._openapi.utils.default_operation_id_creator:5
+msgid "A list of path components."
+msgstr ""
+
+#: ../../../reference/openapi/openapi.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/openapi/__init__.py:docstring of
+#: litestar._openapi.utils.default_operation_id_creator:7
+msgid ""
+"A camelCased operationId created from the handler function name, http method "
+"and path components."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIConfig.path:1
+#: litestar.openapi.OpenAPIController.path:1
+msgid "Base path for the OpenAPI documentation endpoints."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIConfig.path:3
+msgid "If no path is provided the default is ``/schema``."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIConfig.path:5
+msgid "Ignored if :attr:`openapi_router` is provided."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIConfig.random_seed:1
+msgid ""
+"The random seed used when creating the examples to ensure deterministic "
+"generation of examples."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIConfig.render_plugins:1
+msgid "Plugins for rendering OpenAPI documentation UIs."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIConfig.root_schema_site:1
+msgid ""
+"The static schema generator to use for the \"root\" path of ``/schema/``."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIConfig.security:1
+msgid "API Security requirements information."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIConfig.security:3
+msgid "Should be an instance of"
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIConfig.security:4
+msgid ":data:`SecurityRequirement <.openapi.spec.SecurityRequirement>`."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIConfig.summary:1
+msgid "A summary text."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIConfig.tags:1
+msgid "A list of :class:`Tag <litestar.openapi.spec.tag.Tag>` instances."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIConfig.terms_of_service:1
+msgid "URL to page that contains terms of service."
+msgstr ""
+
+#: ../../../../litestar/openapi/__init__.py:docstring of
+#: litestar.openapi.config.OpenAPIConfig.to_openapi_schema:1
+msgid "Return an ``OpenAPI`` instance from the values stored in ``self``."
+msgstr ""
+
+#: ../../../../litestar/openapi/__init__.py:docstring of
+#: litestar.openapi.config.OpenAPIConfig.to_openapi_schema:3
+msgid ""
+"An instance of :class:`OpenAPI <litestar.openapi.spec.open_api.OpenAPI>`."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.OpenAPIConfig.use_handler_docstrings:1
+msgid ""
+"Draw operation description from route handler docstring if not otherwise "
+"provided."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIConfig.webhooks:1
+msgid ""
+"A mapping of key to either :class:`PathItem <litestar.openapi.spec.path_item."
+"PathItem>` or."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIConfig.webhooks:3
+msgid ":class:`Reference <litestar.openapi.spec.reference.Reference>` objects."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIConfig.title:1
+msgid "Title of API documentation."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIConfig.version:1
+msgid "API version, e.g. '1.0.0'."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIConfig.components:1
+msgid "API Components information."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIConfig.components:3
+msgid ""
+"Should be an instance of :class:`Components <litestar.openapi.spec."
+"components.Components>` or a list thereof."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIConfig.servers:1
+msgid ""
+"A list of :class:`Server <litestar.openapi.spec.server.Server>` instances."
+msgstr ""
+
+#: ../../../../litestar/openapi/__init__.py:docstring of
+#: litestar.openapi.controller.OpenAPIController:1
+msgid "Bases: :py:class:`~litestar.controller.Controller`"
+msgstr ""
+
+#: ../../../../litestar/openapi/__init__.py:docstring of
+#: litestar.openapi.controller.OpenAPIController:1
+msgid "Controller for OpenAPI endpoints."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIController.after_request:1
+msgid ""
+"A sync or async function executed before a :class:`Request <.connection."
+"Request>` is passed to any route handler."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIController.after_request:3
+msgid ""
+"If this function returns a value, the request will not reach the route "
+"handler, and instead this value will be used."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIController.after_response:1
+msgid "A sync or async function called after the response has been awaited."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIController.after_response:3
+msgid ""
+"It receives the :class:`Request <.connection.Request>` instance and should "
+"not return any values."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIController.before_request:1
+msgid ""
+"A sync or async function called immediately before calling the route handler."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIController.before_request:3
+msgid ""
+"It receives the :class:`Request <.connection.Request>` instance and any non-"
+"``None`` return value is used for the response, bypassing the route handler."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIController.cache_control:1
+msgid ""
+"A :class:`CacheControlHeader <.datastructures.CacheControlHeader>` header to "
+"add to route handlers of this controller."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIController.cache_control:4
+#: litestar.openapi.OpenAPIController.etag:3
+msgid "Can be overridden by route handlers."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIController.dependencies:1
+msgid ""
+"A string keyed dictionary of dependency :class:`Provider <.di.Provide>` "
+"instances."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIController.dto:1
+msgid ""
+":class:`AbstractDTO <.dto.base_dto.AbstractDTO>` to use for (de)serializing "
+"and validation of request data."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIController.etag:1
+msgid ""
+"An ``etag`` header of type :class:`ETag <.datastructures.ETag>` to add to "
+"route handlers of this controller."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.OpenAPIController.exception_handlers:1
+msgid "A map of handler functions to status codes and/or exception types."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIController.guards:1
+msgid "A sequence of :class:`Guard <.types.Guard>` callables."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.OpenAPIController.include_in_schema:1
+msgid ""
+"A boolean flag dictating whether  the route handler should be documented in "
+"the OpenAPI schema"
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIController.middleware:1
+msgid "A sequence of :class:`Middleware <.types.Middleware>`."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIController.opt:1
+msgid ""
+"A string key mapping of arbitrary values that can be accessed in :class:"
+"`Guards <.types.Guard>` or wherever you have access to :class:`Request <."
+"connection.Request>` or :class:`ASGI Scope <.types.Scope>`."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIController.owner:1
+msgid ""
+"The :class:`Router <.router.Router>` or :class:`Litestar <litestar.app."
+"Litestar>` app that owns the controller."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIController.owner:3
+msgid ""
+"This value is set internally by Litestar and it should not be set when "
+"subclassing the controller."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIController.parameters:1
+msgid ""
+"A mapping of :class:`Parameter <.params.Parameter>` definitions available to "
+"all application paths."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIController.request_class:1
+msgid ""
+"A custom subclass of :class:`Request <.connection.Request>` to be used as "
+"the default request for all route handlers under the controller."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.OpenAPIController.request_max_body_size:1
+msgid ""
+"Maximum allowed size of the request body in bytes. If this size is exceeded, "
+"a '413 - Request Entity Too Large' error response is returned."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIController.response_class:1
+msgid ""
+"A custom subclass of :class:`Response <.response.Response>` to be used as "
+"the default response for all route handlers under the controller."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.OpenAPIController.response_cookies:1
+msgid "A list of :class:`Cookie <.datastructures.Cookie>` instances."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.OpenAPIController.response_headers:1
+msgid ""
+"A string keyed dictionary mapping :class:`ResponseHeader <.datastructures."
+"ResponseHeader>` instances."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIController.return_dto:1
+msgid ""
+":class:`AbstractDTO <.dto.base_dto.AbstractDTO>` to use for serializing "
+"outbound response data."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIController.security:1
+msgid ""
+"A sequence of dictionaries that to the schema of all route handlers under "
+"the controller."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.OpenAPIController.signature_namespace:1
+msgid ""
+"A mapping of names to types for use in forward reference resolution during "
+"signature modelling."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.OpenAPIController.signature_types:1
+msgid ""
+"A sequence of types for use in forward reference resolution during signature "
+"modelling."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.OpenAPIController.signature_types:3
+msgid ""
+"These types will be added to the signature namespace using their "
+"``__name__`` attribute."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIController.tags:1
+msgid ""
+"A sequence of string tags that will be appended to the schema of all route "
+"handlers under the controller."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIController.type_decoders:1
+msgid ""
+"A sequence of tuples, each composed of a predicate testing for type identity "
+"and a msgspec hook for deserialization."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIController.type_encoders:1
+msgid ""
+"A mapping of types to callables that transform them into types supported for "
+"serialization."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.OpenAPIController.websocket_class:1
+msgid ""
+"A custom subclass of :class:`WebSocket <.connection.WebSocket>` to be used "
+"as the default websocket for all route handlers under the controller."
+msgstr ""
+
+#: ../../../../litestar/openapi/__init__.py:docstring of
+#: litestar.openapi.OpenAPIController.favicon:1
+msgid "Return favicon ``<link>`` tag, if applicable."
+msgstr ""
+
+#: ../../../../litestar/openapi/__init__.py:docstring of
+#: litestar.openapi.OpenAPIController.favicon:3
+msgid ""
+"A ``<link>`` tag if ``self.favicon_url`` is not empty, otherwise returns a "
+"placeholder meta tag."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIController.favicon_url:1
+msgid "URL to download a favicon from."
+msgstr ""
+
+#: ../../../../litestar/openapi/__init__.py:docstring of
+#: litestar.openapi.controller.OpenAPIController.get_schema_from_request:1
+msgid "Return the OpenAPI pydantic model from the request instance."
+msgstr ""
+
+#: ../../../../litestar/openapi/__init__.py:docstring of
+#: litestar.openapi.controller.OpenAPIController.get_schema_from_request:3
+msgid "A :class:`Litestar <.connection.Request>` instance."
+msgstr ""
+
+#: ../../../../litestar/openapi/__init__.py:docstring of
+#: litestar.openapi.controller.OpenAPIController.get_schema_from_request:5
+msgid "An :class:`OpenAPI <litestar.openapi.spec.open_api.OpenAPI>` instance."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIController.rapidoc_js_url:1
+msgid "Download url for the RapiDoc JS bundle."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.OpenAPIController.rapidoc_version:1
+msgid "RapiDoc version to download from the CDN."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.OpenAPIController.redoc_google_fonts:1
+msgid "Download google fonts via CDN."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.OpenAPIController.redoc_google_fonts:3
+msgid "Should be set to ``False`` when not using a CDN."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIController.redoc_js_url:1
+msgid "Download url for the Redoc JS bundle."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIController.redoc_version:1
+msgid "Redoc version to download from the CDN."
+msgstr ""
+
+#: ../../../../litestar/openapi/__init__.py:docstring of
+#: litestar.openapi.controller.OpenAPIController.render_404_page:1
+msgid "Render an HTML 404 page."
+msgstr ""
+
+#: ../../../../litestar/openapi/__init__.py:docstring of
+#: litestar.openapi.controller.OpenAPIController.render_404_page:3
+#: litestar.openapi.controller.OpenAPIController.render_redoc:9
+#: litestar.openapi.controller.OpenAPIController.render_stoplight_elements:9
+#: litestar.openapi.controller.OpenAPIController.render_swagger_ui:9
+#: litestar.openapi.controller.OpenAPIController.render_swagger_ui_oauth2_redirect:9
+msgid "A rendered html string."
+msgstr ""
+
+#: ../../../../litestar/openapi/__init__.py:docstring of
+#: litestar.openapi.OpenAPIController.render_methods_map:1
+msgid "Map render method names to render methods."
+msgstr ""
+
+#: ../../../../litestar/openapi/__init__.py:docstring of
+#: litestar.openapi.OpenAPIController.render_methods_map:3
+msgid "A mapping of string keys to render methods."
+msgstr ""
+
+#: ../../../../litestar/openapi/__init__.py:docstring of
+#: litestar.openapi.controller.OpenAPIController.render_redoc:1
+msgid "Render an HTML page for Redoc."
+msgstr ""
+
+#: ../../../../litestar/openapi/__init__.py:docstring of
+#: litestar.openapi.controller.OpenAPIController.render_redoc:3
+#: litestar.openapi.controller.OpenAPIController.render_stoplight_elements:3
+#: litestar.openapi.controller.OpenAPIController.render_swagger_ui:3
+#: litestar.openapi.controller.OpenAPIController.render_swagger_ui_oauth2_redirect:3
+msgid "Notes"
+msgstr ""
+
+#: ../../../../litestar/openapi/__init__.py:docstring of
+#: litestar.openapi.controller.OpenAPIController.render_redoc:5
+#: litestar.openapi.controller.OpenAPIController.render_stoplight_elements:5
+#: litestar.openapi.controller.OpenAPIController.render_swagger_ui:5
+#: litestar.openapi.controller.OpenAPIController.render_swagger_ui_oauth2_redirect:5
+msgid "override this method to customize the template."
+msgstr ""
+
+#: ../../../../litestar/openapi/__init__.py:docstring of
+#: litestar.openapi.controller.OpenAPIController.render_redoc:7
+#: litestar.openapi.controller.OpenAPIController.render_stoplight_elements:7
+#: litestar.openapi.controller.OpenAPIController.render_swagger_ui:7
+#: litestar.openapi.controller.OpenAPIController.render_swagger_ui_oauth2_redirect:7
+msgid "A :class:`Request <.connection.Request>` instance."
+msgstr ""
+
+#: ../../../../litestar/openapi/__init__.py:docstring of
+#: litestar.openapi.controller.OpenAPIController.render_stoplight_elements:1
+msgid "Render an HTML page for StopLight Elements."
+msgstr ""
+
+#: ../../../../litestar/openapi/__init__.py:docstring of
+#: litestar.openapi.controller.OpenAPIController.render_swagger_ui:1
+msgid "Render an HTML page for Swagger-UI."
+msgstr ""
+
+#: ../../../../litestar/openapi/__init__.py:docstring of
+#: litestar.openapi.controller.OpenAPIController.render_swagger_ui_oauth2_redirect:1
+msgid "Render an HTML oauth2-redirect.html page for Swagger-UI."
+msgstr ""
+
+#: ../../../../litestar/openapi/__init__.py:docstring of
+#: litestar.openapi.controller.OpenAPIController.should_serve_endpoint:1
+msgid ""
+"Verify that the requested path is within the enabled endpoints in the "
+"openapi_config."
+msgstr ""
+
+#: ../../../../litestar/openapi/__init__.py:docstring of
+#: litestar.openapi.controller.OpenAPIController.should_serve_endpoint:3
+msgid "To be tested if endpoint enabled."
+msgstr ""
+
+#: ../../../../litestar/openapi/__init__.py:docstring of
+#: litestar.openapi.controller.OpenAPIController.should_serve_endpoint:5
+msgid "A boolean."
+msgstr ""
+
+#: ../../../reference/openapi/openapi.rst:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../litestar/openapi/__init__.py:docstring of
+#: litestar.openapi.controller.OpenAPIController.should_serve_endpoint:7
+msgid "If the application ``openapi_config`` attribute is ``None``."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.OpenAPIController.stoplight_elements_css_url:1
+msgid "Download url for the Stoplight Elements CSS bundle."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.OpenAPIController.stoplight_elements_js_url:1
+msgid "Download url for the Stoplight Elements JS bundle."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.OpenAPIController.stoplight_elements_version:1
+msgid "StopLight Elements version to download from the CDN."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.OpenAPIController.style:1
+msgid "Base styling of the html body."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.OpenAPIController.swagger_css_url:1
+msgid "Download url for the Swagger UI CSS bundle."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.OpenAPIController.swagger_ui_bundle_js_url:1
+msgid "Download url for the Swagger UI JS bundle."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.OpenAPIController.swagger_ui_init_oauth:1
+msgid "JSON to initialize Swagger UI OAuth2 by calling the `initOAuth` method."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.OpenAPIController.swagger_ui_init_oauth:3
+msgid ""
+"Refer to the following URL for details: `Swagger-UI <https://swagger.io/docs/"
+"open-source-tools/swagger-ui/usage/oauth2/>`_."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.OpenAPIController.swagger_ui_standalone_preset_js_url:1
+msgid "Download url for the Swagger Standalone Preset JS bundle."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.OpenAPIController.swagger_ui_version:1
+msgid "SwaggerUI version to download from the CDN."
+msgstr ""
+
+#: ../../../../litestar/openapi/__init__.py:docstring of
+#: litestar.openapi.datastructures.ResponseSpec:1
+msgid "Container type of additional responses."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.ResponseSpec.description:1
+msgid "A description of the response."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.ResponseSpec.examples:1
+msgid "A list of Example models."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.ResponseSpec.generate_examples:1
+msgid "Generate examples for the response content."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.ResponseSpec.media_type:1
+msgid "Response media type."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.ResponseSpec.data_container:1
+msgid "A model that describes the content of the response."
+msgstr ""
