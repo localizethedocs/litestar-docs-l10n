@@ -1,0 +1,1058 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../usage/middleware/builtin-middleware.rst:2
+msgid "Built-in middleware"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:5
+msgid "CORS"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:7
+msgid ""
+"`CORS (Cross-Origin Resource Sharing) <https://developer.mozilla.org/en-US/"
+"docs/Web/HTTP/CORS>`_ is a common security mechanism that is often "
+"implemented using middleware. To enable CORS in a starlite application "
+"simply pass an instance of :class:`CORSConfig <starlite.config.CORSConfig>` "
+"to the :class:`Starlite constructor <starlite.app.Starlite>`:"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:12
+msgid ""
+"from starlite import CORSConfig, Starlite\n"
+"\n"
+"cors_config = CORSConfig(allow_origins=[\"https://www.example.com\"])\n"
+"\n"
+"app = Starlite(route_handlers=[...], cors_config=cors_config)"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:21
+msgid "CSRF"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:23
+msgid ""
+"CSRF (Cross-site request forgery) is a type of attack where unauthorized "
+"commands are submitted from a user that the web application trusts. This "
+"attack often uses social engineering that tricks the victim into clicking a "
+"URL that contains a maliciously crafted, unauthorized request for a "
+"particular Web application. The user’s browser then sends this maliciously "
+"crafted request to the targeted Web application. If the user is in an active "
+"session with the Web application, the application treats this new request as "
+"an authorized request submitted by the user. Thus, the attacker can force "
+"the user to perform an action the user didn't intend, for example:"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:31
+msgid ""
+"POST /send-money HTTP/1.1\n"
+"Host: target.web.app\n"
+"Content-Type: application/x-www-form-urlencoded\n"
+"\n"
+"amount=1000usd&to=attacker@evil.com"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:40
+msgid "This middleware prevents CSRF attacks by doing the following:"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:42
+msgid ""
+"On the first \"safe\" request (e.g GET) - set a cookie with a special token "
+"created by the server"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:45
+msgid ""
+"On each subsequent \"unsafe\" request (e.g POST) - make sure the request "
+"contains either a"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:44
+msgid "form field or an additional header that has this token"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:47
+msgid ""
+"To enable CSRF protection in a Starlite application simply pass an instance "
+"of :class:`CSRFConfig <.config.CSRFConfig>` to the Starlite constructor:"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:51
+msgid ""
+"from starlite import Starlite, CSRFConfig\n"
+"\n"
+"csrf_config = CSRFConfig(secret=\"my-secret\")\n"
+"\n"
+"app = Starlite(route_handlers=[...], csrf_config=csrf_config)"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:59
+msgid ""
+"Routes can be marked as being exempt from the protection offered by this "
+"middleware via :ref:`handler opts <handler_opts>`"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:63
+msgid ""
+"from starlite import post\n"
+"\n"
+"\n"
+"@post(\"/post\", exclude_from_csrf=True)\n"
+"def handler() -> None: ..."
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:71
+msgid ""
+"If you need to exempt many routes at once you might want to consider using "
+"the :attr:`exclude <.config.CSRFConfig.exclude>` kwarg which accepts list of "
+"path patterns to skip in the middleware."
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:77
+msgid "Allowed Hosts"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:79
+msgid ""
+"Another common security mechanism is to require that each incoming request "
+"has a \"Host\" or \"X-Forwarded-Host\" header, and then to restrict hosts to "
+"a specific set of domains - what's called \"allowed hosts\"."
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:82
+msgid ""
+"Starlite includes an :class:`AllowedHostsMiddleware <.middleware."
+"allowed_hosts.AllowedHostsMiddleware>` class that can be easily enabled by "
+"either passing an instance of :class:`AllowedHostsConfig <starlite.config."
+"AllowedHostsConfig>` or a list of domains to the :class:`Starlite "
+"constructor <starlite.app.Starlite>`:"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:87
+msgid ""
+"from starlite import Starlite, AllowedHostsConfig\n"
+"\n"
+"app = Starlite(\n"
+"    route_handlers=[...],\n"
+"    allowed_hosts=AllowedHostsConfig(\n"
+"        allowed_hosts=[\"*.example.com\", \"www.wikipedia.org\"]\n"
+"    ),\n"
+")"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:99
+msgid ""
+"You can use wildcard prefixes (``*.``) in the beginning of a domain to match "
+"any combination of subdomains. Thus, ``*.example.com`` will match ``www."
+"example.com`` but also ``x.y.z.example.com`` etc. You can also simply put "
+"``*`` in trusted hosts, which means allow all. This is akin to turning the "
+"middleware off, so in this case it may be better to not enable it in the "
+"first place. You should note that a wildcard can only be used only in the "
+"prefix of a domain name, not in the middle or end. Doing so will result in a "
+"validation exception being raised."
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:107
+msgid "Compression"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:109
+msgid ""
+"HTML responses can optionally be compressed. Starlite has built in support "
+"for gzip and brotli. Gzip support is provided through the built-in Starlette "
+"classes, and brotli support can be added by installing the ``brotli`` extras."
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:112
+msgid ""
+"You can enable either backend by passing an instance of :class:"
+"`CompressionConfig <starlite.config.CompressionConfig>` into the "
+"``compression_config`` the :class:`Starlite constructor <starlite.app."
+"Starlite>`."
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:116
+msgid "GZIP"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:118
+msgid ""
+"You can enable gzip compression of responses by passing an instance of :"
+"class:`starlite.config.CompressionConfig` with the ``backend`` parameter set "
+"to ``\"gzip\"``."
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:121
+msgid "You can configure the following additional gzip-specific values:"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:124
+#: ../../../usage/middleware/builtin-middleware.rst:150
+msgid ""
+"``minimum_size``: the minimum threshold for response size to enable "
+"compression. Smaller responses will not be"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:125
+#: ../../../usage/middleware/builtin-middleware.rst:151
+msgid "compressed. Defaults is ``500``, i.e. half a kilobyte."
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:127
+msgid ""
+"``gzip_compress_level``: a range between 0-9, see the `official python docs "
+"<https://docs.python.org/3/library/gzip.html>`_."
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:127
+msgid "Defaults to ``9`` , which is the maximum value."
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:130
+msgid ""
+"from starlite import Starlite, CompressionConfig\n"
+"\n"
+"app = Starlite(\n"
+"    route_handlers=[...],\n"
+"    compression_config=CompressionConfig(backend=\"gzip\", "
+"gzip_compress_level=9),\n"
+")"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:139
+msgid "Brotli"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:141
+msgid ""
+"The Brotli package is required to run this middleware. It is available as an "
+"extras to starlite with the ``brotli`` extra (``pip install "
+"starlite[brotli]``)."
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:144
+msgid ""
+"You can enable brotli compression of responses by passing an instance of :"
+"class:`starlite.config.CompressionConfig` with the ``backend`` parameter set "
+"to ``\"brotli\"``."
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:147
+msgid "You can configure the following additional brotli-specific values:"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:152
+msgid ""
+"``brotli_quality``: Range [0-11], Controls the compression-speed vs "
+"compression-density tradeoff. The higher the"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:153
+msgid "quality, the slower the compression."
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:154
+msgid ""
+"``brotli_mode``: The compression mode can be MODE_GENERIC (default), "
+"MODE_TEXT (for UTF-8 format text input) or"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:155
+msgid "MODE_FONT (for WOFF 2.0)."
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:156
+msgid ""
+"``brotli_lgwin``: Base 2 logarithm of size. Range is 10 to 24. Defaults to "
+"22."
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:157
+msgid ""
+"``brotli_lgblock``: Base 2 logarithm of the maximum input block size. Range "
+"is 16 to 24. If set to 0, the value will"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:158
+msgid "be set based on the quality. Defaults to 0."
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:159
+msgid ""
+"``brotli_gzip_fallback``: a boolean to indicate if gzip should be used if "
+"brotli is not supported."
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:162
+msgid ""
+"from starlite import Starlite\n"
+"from starlite.config import CompressionConfig\n"
+"\n"
+"app = Starlite(\n"
+"    route_handlers=[...],\n"
+"    compression_config=CompressionConfig(backend=\"brotli\", "
+"brotli_gzip_fallback=True),\n"
+")"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:172
+msgid "Rate-Limit Middleware"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:174
+msgid ""
+"Starlite includes an optional :class:`RateLimitMiddleware <starlite."
+"middleware.rate_limit.RateLimitMiddleware>` that follows the `IETF RateLimit "
+"draft specification <https://datatracker.ietf.org/doc/draft-ietf-httpapi-"
+"ratelimit-headers/>`_."
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:177
+msgid ""
+"To use the rate limit middleware, use the :class:`RateLimitConfig <starlite."
+"middleware.rate_limit.RateLimitConfig>`:"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:180
+msgid ""
+"from starlite import MediaType, Starlite, get\n"
+"from starlite.middleware import RateLimitConfig\n"
+"\n"
+"rate_limit_config = RateLimitConfig(rate_limit=(\"minute\", 1), exclude=[\"/"
+"schema\"])\n"
+"\n"
+"\n"
+"@get(\"/\", media_type=MediaType.TEXT)\n"
+"def handler() -> str:\n"
+"    \"\"\"Handler which should not be accessed more than once per minute."
+"\"\"\"\n"
+"    return \"ok\"\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[handler], middleware=[rate_limit_config."
+"middleware])"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:182
+msgid ""
+"The only required configuration kwarg is ``rate_limit``, which expects a "
+"tuple containing a time-unit (``second``, ``minute``, ``hour``, ``day``\\ ) "
+"and a value for the request quota (integer). For the other configuration "
+"options."
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:187
+msgid "Logging Middleware"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:189
+msgid ""
+"Starlite ships with a robust logging middleware that allows logging HTTP "
+"request and responses while building on the :ref:`app level logging "
+"configuration <usage/the-starlite-app:logging>`:"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:0
+msgid "Python 3.8+"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:193
+msgid ""
+"from typing import Dict\n"
+"\n"
+"from starlite import LoggingConfig, Starlite, get\n"
+"from starlite.middleware import LoggingMiddlewareConfig\n"
+"\n"
+"logging_middleware_config = LoggingMiddlewareConfig()\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"def my_handler() -> Dict[str, str]:\n"
+"    return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"app = Starlite(\n"
+"    route_handlers=[my_handler],\n"
+"    logging_config=LoggingConfig(),\n"
+"    middleware=[logging_middleware_config.middleware],\n"
+")"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:0
+msgid "Python 3.10+"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:193
+msgid ""
+"from starlite import LoggingConfig, Starlite, get\n"
+"from starlite.middleware import LoggingMiddlewareConfig\n"
+"\n"
+"logging_middleware_config = LoggingMiddlewareConfig()\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"def my_handler() -> dict[str, str]:\n"
+"    return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"app = Starlite(\n"
+"    route_handlers=[my_handler],\n"
+"    logging_config=LoggingConfig(),\n"
+"    middleware=[logging_middleware_config.middleware],\n"
+")"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:196
+msgid ""
+"The logging middleware uses the logger configuration defined on the "
+"application level, which allows for using both stdlib logging or `structlog "
+"<https://www.structlog.org/en/stable/index.html>`_ , depending on the "
+"configuration used (see :ref:`app level logging configuration <usage/the-"
+"starlite-app:logging>` for more details)."
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:201
+msgid "Obfuscating Logging Output"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:203
+msgid ""
+"Sometimes certain data, e.g. request or response headers, needs to be "
+"obfuscated. This is supported by the middleware configuration:"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:207
+msgid ""
+"from starlite.middleware import LoggingMiddlewareConfig\n"
+"\n"
+"logging_middleware_config = LoggingMiddlewareConfig(\n"
+"    request_cookies_to_obfuscate={\"my-custom-session-key\"},\n"
+"    response_cookies_to_obfuscate={\"my-custom-session-key\"},\n"
+"    request_headers_to_obfuscate={\"my-custom-header\"},\n"
+"    response_headers_to_obfuscate={\"my-custom-header\"},\n"
+")"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:217
+msgid ""
+"The middleware will obfuscate the headers ``Authorization`` and ``X-API-"
+"KEY`` , and the cookie ``session`` by default."
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:221
+msgid "Compression and Logging of Response Body"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:223
+msgid ""
+"If both :class:`CompressionConfig <starlite.config.compression."
+"CompressionConfig>` and :class:`LoggingMiddleware <starlite.middleware."
+"logging.LoggingMiddleware>` have been defined for the application, the "
+"response body will be omitted from response logging if it has been "
+"compressed, even if ``\"body\"`` has been included in :class:"
+"`response_log_fields <starlite.middleware.logging.LoggingMiddlewareConfig."
+"response_log_fields>`. To force the body of compressed responses to be "
+"logged, set :attr:`include_compressed_body <starlite.middleware.logging."
+"LoggingMiddlewareConfig.include_compressed_body>` to ``True`` , in addition "
+"to including ``\"body\"`` in ``response_log_fields``."
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:232
+msgid "Session Middleware"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:234
+msgid ""
+"Starlite includes a :class:`SessionMiddleware <starlite.middleware.session."
+"SessionMiddleware>`, offering client- and server-side sessions. Different "
+"storage mechanisms are available through :class:`SessionBackends <starlite."
+"middleware.session.base.BaseSessionBackend>`, and include support for "
+"storing data in:"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:239
+msgid "`Cookies <client side sessions>`_"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:240
+msgid "`Files <file storage>`_"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:241
+msgid "`Redis <redis storage>`_"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:242
+msgid "`Memcached <memcached storage>`_ (through ``aiomcache``)"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:243
+msgid "`Databases <database storage>`_ (through ``sqlalchemy``)"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:244
+msgid "`Memory <in memory storage>`_"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:249
+msgid "Setting up the middleware"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:251
+msgid ""
+"To start using sessions in your application all you have to do is create an "
+"instance of a :class:`configuration <starlite.middleware.session.base."
+"BaseBackendConfig>` object and add its middleware to your application's "
+"middleware stack:"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:256
+msgid "Hello World"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:256
+msgid ""
+"from os import urandom\n"
+"from typing import Dict\n"
+"\n"
+"from starlite import Request, Starlite, delete, get, post\n"
+"from starlite.middleware.session.cookie_backend import CookieBackendConfig\n"
+"\n"
+"# we initialize to config with a 16 byte key, i.e. 128 a bit key.\n"
+"# in real world usage we should inject the secret from the environment\n"
+"session_config = CookieBackendConfig(secret=urandom(16))  # type: ignore[arg-"
+"type]\n"
+"\n"
+"\n"
+"@get(\"/session\")\n"
+"def check_session_handler(request: Request) -> Dict[str, bool]:\n"
+"    \"\"\"Handler function that accesses request.session.\"\"\"\n"
+"    return {\"has_session\": request.session != {}}\n"
+"\n"
+"\n"
+"@post(\"/session\")\n"
+"def create_session_handler(request: Request) -> None:\n"
+"    \"\"\"Handler to set the session.\"\"\"\n"
+"    if not request.session:\n"
+"        # value can be a dictionary or pydantic model\n"
+"        request.set_session({\"username\": \"moishezuchmir\"})\n"
+"\n"
+"\n"
+"@delete(\"/session\")\n"
+"def delete_session_handler(request: Request) -> None:\n"
+"    \"\"\"Handler to clear the session.\"\"\"\n"
+"    if request.session:\n"
+"        request.clear_session()\n"
+"\n"
+"\n"
+"app = Starlite(\n"
+"    route_handlers=[check_session_handler, create_session_handler, "
+"delete_session_handler],\n"
+"    middleware=[session_config.middleware],\n"
+")"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:256
+msgid ""
+"from os import urandom\n"
+"\n"
+"from starlite import Request, Starlite, delete, get, post\n"
+"from starlite.middleware.session.cookie_backend import CookieBackendConfig\n"
+"\n"
+"# we initialize to config with a 16 byte key, i.e. 128 a bit key.\n"
+"# in real world usage we should inject the secret from the environment\n"
+"session_config = CookieBackendConfig(secret=urandom(16))  # type: ignore[arg-"
+"type]\n"
+"\n"
+"\n"
+"@get(\"/session\")\n"
+"def check_session_handler(request: Request) -> dict[str, bool]:\n"
+"    \"\"\"Handler function that accesses request.session.\"\"\"\n"
+"    return {\"has_session\": request.session != {}}\n"
+"\n"
+"\n"
+"@post(\"/session\")\n"
+"def create_session_handler(request: Request) -> None:\n"
+"    \"\"\"Handler to set the session.\"\"\"\n"
+"    if not request.session:\n"
+"        # value can be a dictionary or pydantic model\n"
+"        request.set_session({\"username\": \"moishezuchmir\"})\n"
+"\n"
+"\n"
+"@delete(\"/session\")\n"
+"def delete_session_handler(request: Request) -> None:\n"
+"    \"\"\"Handler to clear the session.\"\"\"\n"
+"    if request.session:\n"
+"        request.clear_session()\n"
+"\n"
+"\n"
+"app = Starlite(\n"
+"    route_handlers=[check_session_handler, create_session_handler, "
+"delete_session_handler],\n"
+"    middleware=[session_config.middleware],\n"
+")"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:262
+msgid ""
+"Since both client- and server-side sessions rely on cookies (one for storing "
+"the actual session data, the other for storing the session ID), they share "
+"most of the cookie configuration. A complete reference of the cookie "
+"configuration can be found at :class:`BaseBackendConfig <starlite.middleware."
+"session.base.BaseBackendConfig>`."
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:267
+msgid "Client-side sessions"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:269
+msgid ""
+"Client side sessions are available through the :class:`CookieBackend "
+"<starlite.middleware.session.cookie_backend.CookieBackend>`, which offers "
+"strong AES-CGM encryption security best practices while support cookie "
+"splitting."
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:274
+msgid ""
+"``CookieBackend`` requires the `cryptography <https://cryptography.io/en/"
+"latest/>`_ library, which can be installed together with starlite as an "
+"extra using ``pip install starlite[cryptography]``"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:278
+msgid "cookie_backend.py"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:278
+msgid ""
+"from os import urandom\n"
+"\n"
+"from starlite import Starlite\n"
+"from starlite.middleware.session.cookie_backend import CookieBackendConfig\n"
+"\n"
+"session_config = CookieBackendConfig(secret=urandom(16))  # type: ignore[arg-"
+"type]\n"
+"\n"
+"app = Starlite(route_handlers=[], middleware=[session_config.middleware])"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:284
+msgid ""
+":class:`CookieBackendConfig <starlite.middleware.session.cookie_backend."
+"CookieBackendConfig>`"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:288
+msgid "Server-side sessions"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:290
+msgid ""
+"Server side session store data - as the name suggests - on the server "
+"instead of the client. They use a cookie containing a session ID which is a "
+"randomly generated string to identify a client and load the appropriate data "
+"from the storage backend."
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:295
+msgid "File storage"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:297
+msgid ""
+"The :class:`FileBackend <starlite.middleware.session.file_backend."
+"FileBackend>` will store session data in files on disk, alongside some "
+"metadata. Files containing expired sessions will only be deleted when trying "
+"to access them. Expired session files can be manually deleted using the :"
+"meth:`delete_expired <starlite.middleware.session.file_backend.FileBackend."
+"delete_expired>` method."
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:303
+msgid "file_backend.py"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:303
+msgid ""
+"from pathlib import Path\n"
+"\n"
+"from starlite import Starlite\n"
+"from starlite.middleware.session.file_backend import FileBackendConfig\n"
+"\n"
+"session_config = FileBackendConfig(storage_path=Path(\"/path/to/session/"
+"storage\"))\n"
+"\n"
+"app = Starlite(route_handlers=[], middleware=[session_config.middleware])"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:309
+#: ../../../usage/middleware/builtin-middleware.rst:333
+#: ../../../usage/middleware/builtin-middleware.rst:356
+msgid "`Accessing the storage backend directly`_"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:310
+#: ../../../usage/middleware/builtin-middleware.rst:334
+#: ../../../usage/middleware/builtin-middleware.rst:357
+#: ../../../usage/middleware/builtin-middleware.rst:429
+msgid ""
+":class:`BaseBackendConfig <starlite.middleware.session.base."
+"BaseBackendConfig>`"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:311
+#: ../../../usage/middleware/builtin-middleware.rst:335
+#: ../../../usage/middleware/builtin-middleware.rst:358
+#: ../../../usage/middleware/builtin-middleware.rst:430
+msgid ""
+":class:`ServerSideSessionConfig <starlite.middleware.session.base."
+"ServerSideSessionConfig>`"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:312
+msgid ""
+":class:`FileBackendConfig <starlite.middleware.session.file_backend."
+"FileBackendConfig>`"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:315
+msgid "Redis storage"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:317
+msgid ""
+"The :class:`Redis backend <starlite.middleware.session.redis_backend."
+"RedisBackend>` can store session data in redis. Session data stored in redis "
+"will expire automatically after its :attr:`max_age <starlite.middleware."
+"session.base.BaseBackendConfig.max_age>` has been passed."
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:323
+msgid ""
+"This requires the ``redis`` package. To install it you can install starlite "
+"with ``pip install starlite[redis]``"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:327
+msgid "redis_backend.py"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:327
+msgid ""
+"from redis.asyncio import Redis\n"
+"\n"
+"from starlite import Starlite\n"
+"from starlite.middleware.session.redis_backend import RedisBackendConfig\n"
+"\n"
+"session_config = RedisBackendConfig(redis=Redis(host=\"localhost\", "
+"port=6379, db=0))\n"
+"\n"
+"app = Starlite(route_handlers=[], middleware=[session_config.middleware])"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:338
+msgid "Memcached storage"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:340
+msgid ""
+"The :class:`Memcached backend <starlite.middleware.session.memcached_backend."
+"MemcachedBackend>` can store session data in memcached. Session data stored "
+"in memcached will expire automatically after its :attr:`max_age <starlite."
+"middleware.session.base.BaseBackendConfig.max_age>` has been passed."
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:346
+msgid ""
+"This requires the ``aiomemcache`` package. To install it you can install "
+"starlite with ``pip install starlite[memcached]``"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:350
+msgid "memcached_backend.py"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:350
+msgid ""
+"from aiomcache import Client\n"
+"\n"
+"from starlite import Starlite\n"
+"from starlite.middleware.session.memcached_backend import "
+"MemcachedBackendConfig\n"
+"\n"
+"session_config = MemcachedBackendConfig(memcached=Client(\"127.0.0.1\"))\n"
+"\n"
+"app = Starlite(route_handlers=[], middleware=[session_config.middleware])"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:361
+msgid "In-memory storage"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:363
+msgid ""
+"The :class:`Memory backend <starlite.middleware.session.memory_backend."
+"MemoryBackend>` can store session data in memory."
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:368
+msgid ""
+"This should not be used in production. It primarily exists as a dummy "
+"backend for testing purposes. It is not process safe, and data will not be "
+"persisted."
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:372
+msgid "memory_backend.py"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:372
+msgid ""
+"from starlite import Starlite\n"
+"from starlite.middleware.session.memory_backend import MemoryBackendConfig\n"
+"\n"
+"session_config = MemoryBackendConfig()\n"
+"\n"
+"app = Starlite(route_handlers=[], middleware=[session_config.middleware])"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:377
+msgid "Database storage"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:379
+msgid ""
+"Database storage is currently offered through the :class:`SQLAlchemyBackend "
+"<starlite.middleware.session.sqlalchemy_backend.BaseSQLAlchemyBackend>`. It "
+"supports both sync and async-engines and integrates with the :doc:"
+"`SQLAlchemyPlugin </usage/plugins/sqlalchemy>`. Expired sessions will only "
+"be deleted when trying to access them. They can be manually deleted using "
+"the :meth:`delete_expired <starlite.middleware.session.sqlalchemy_backend."
+"BaseSQLAlchemyBackend.delete_expired>` method."
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:386
+msgid "There are two backends for SQLAlchemy:"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:388
+msgid ""
+":class:`SQLAlchemyBackend <starlite.middleware.session.sqlalchemy_backend."
+"SQLAlchemyBackend>` for synchronous engines"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:389
+msgid ""
+":class:`AsyncSQLAlchemyBackend <starlite.middleware.session."
+"sqlalchemy_backend.AsyncSQLAlchemyBackend>` for asynchronous engines"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:391
+msgid ""
+"When using the :class:`configuration <starlite.middleware.session."
+"sqlalchemy_backend.SQLAlchemyBackendConfig>` object, it will automatically "
+"pick the correct backend to use based on the engine configuration."
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:396
+msgid ""
+"This requires `sqlalchemy <https://sqlalchemy.org/>`_. You can install it "
+"via ``pip install sqlalchemy``."
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:0
+msgid "Synchronous engine"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:404
+#: ../../../usage/middleware/builtin-middleware.rst:412
+msgid "sqlalchemy_backend.py"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:404
+msgid ""
+"from sqlalchemy.orm import declarative_base\n"
+"\n"
+"from starlite import Starlite\n"
+"from starlite.middleware.session.sqlalchemy_backend import (\n"
+"    SQLAlchemyBackendConfig,\n"
+"    create_session_model,\n"
+")\n"
+"from starlite.plugins.sql_alchemy import SQLAlchemyConfig, SQLAlchemyPlugin\n"
+"\n"
+"Base = declarative_base()\n"
+"\n"
+"sqlalchemy_config = SQLAlchemyConfig(connection_string=\"sqlite+pysqlite://"
+"\", use_async_engine=False)\n"
+"sqlalchemy_plugin = SQLAlchemyPlugin(config=sqlalchemy_config)\n"
+"\n"
+"SessionModel = create_session_model(Base)\n"
+"\n"
+"session_config = SQLAlchemyBackendConfig(plugin=sqlalchemy_plugin, "
+"model=SessionModel)\n"
+"\n"
+"\n"
+"def on_startup() -> None:\n"
+"    \"\"\"Initialize the database.\"\"\"\n"
+"    Base.metadata.create_all(sqlalchemy_config.engine)  # type: ignore\n"
+"\n"
+"\n"
+"app = Starlite(\n"
+"    route_handlers=[],\n"
+"    middleware=[session_config.middleware],\n"
+"    plugins=[sqlalchemy_plugin],\n"
+"    on_startup=[on_startup],\n"
+")"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:0
+msgid "Asynchronous engine"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:412
+msgid ""
+"from sqlalchemy.orm import declarative_base\n"
+"\n"
+"from starlite import Starlite\n"
+"from starlite.middleware.session.sqlalchemy_backend import (\n"
+"    SQLAlchemyBackendConfig,\n"
+"    create_session_model,\n"
+")\n"
+"from starlite.plugins.sql_alchemy import SQLAlchemyConfig, SQLAlchemyPlugin\n"
+"\n"
+"Base = declarative_base()\n"
+"\n"
+"SessionModel = create_session_model(Base)\n"
+"\n"
+"sqlalchemy_config = SQLAlchemyConfig(connection_string=\"sqlite+aiosqlite://"
+"\")\n"
+"sqlalchemy_plugin = SQLAlchemyPlugin(config=sqlalchemy_config)\n"
+"session_config = SQLAlchemyBackendConfig(\n"
+"    plugin=sqlalchemy_plugin,\n"
+"    model=SessionModel,\n"
+")\n"
+"\n"
+"\n"
+"async def on_startup() -> None:\n"
+"    \"\"\"Initialize the database.\"\"\"\n"
+"    async with sqlalchemy_config.engine.begin() as conn:  # type: ignore\n"
+"        await conn.run_sync(Base.metadata.create_all)  # pyright: ignore\n"
+"\n"
+"\n"
+"app = Starlite(\n"
+"    route_handlers=[], middleware=[session_config.middleware], "
+"plugins=[sqlalchemy_plugin], on_startup=[on_startup]\n"
+")"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:417
+msgid "Supplying your own session model"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:419
+msgid ""
+"If you wish to extend the built-in session model, you can mixin the :class:"
+"`SessionModelMixin <starlite.middleware.session.sqlalchemy_backend."
+"SessionModelMixin>` into your own classes:"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:423
+msgid "sqlalchemy_backend_custom_model.py"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:423
+msgid ""
+"from sqlalchemy import Column, Integer, String\n"
+"from sqlalchemy.orm import declarative_base\n"
+"\n"
+"from starlite import Starlite\n"
+"from starlite.middleware.session.sqlalchemy_backend import (\n"
+"    SessionModelMixin,\n"
+"    SQLAlchemyBackendConfig,\n"
+")\n"
+"from starlite.plugins.sql_alchemy import SQLAlchemyConfig, SQLAlchemyPlugin\n"
+"\n"
+"Base = declarative_base()\n"
+"\n"
+"\n"
+"class SessionModel(Base, SessionModelMixin):  # pyright: ignore "
+"[reportGeneralTypeIssues]\n"
+"    __tablename__ = \"my-session-table\"\n"
+"    id = Column(Integer, primary_key=True)\n"
+"    additional_data = Column(String)\n"
+"\n"
+"\n"
+"sqlalchemy_config = SQLAlchemyConfig(connection_string=\"sqlite+aiosqlite://"
+"\")\n"
+"sqlalchemy_plugin = SQLAlchemyPlugin(config=sqlalchemy_config)\n"
+"session_config = SQLAlchemyBackendConfig(\n"
+"    plugin=sqlalchemy_plugin,\n"
+"    model=SessionModel,\n"
+")\n"
+"\n"
+"\n"
+"async def on_startup() -> None:\n"
+"    \"\"\"Initialize the database.\"\"\"\n"
+"    async with sqlalchemy_config.engine.begin() as conn:  # type: ignore\n"
+"        await conn.run_sync(Base.metadata.create_all)  # pyright: ignore\n"
+"\n"
+"\n"
+"app = Starlite(\n"
+"    route_handlers=[], middleware=[session_config.middleware], "
+"plugins=[sqlalchemy_plugin], on_startup=[on_startup]\n"
+")"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:434
+msgid "Accessing the storage backend directly"
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:436
+msgid ""
+"In some situations you might want to access the storage backend directly, "
+"outside a request. For example to delete a specific session's data, or "
+"delete expired sessions from the database when using the :class:"
+"`SQLAlchemyBackend <starlite.middleware.session.sqlalchemy_backend."
+"BaseSQLAlchemyBackend>`."
+msgstr ""
+
+#: ../../../usage/middleware/builtin-middleware.rst:441
+msgid ""
+"from pathlib import Path\n"
+"\n"
+"from starlite import Starlite\n"
+"from starlite.middleware.session.file_backend import FileBackend, "
+"FileBackendConfig\n"
+"\n"
+"session_config = FileBackendConfig(storage_path=Path(\"/path/to/session/"
+"storage\"))\n"
+"session_backend = FileBackend(config=session_config)\n"
+"\n"
+"\n"
+"async def clear_expired_sessions() -> None:\n"
+"    \"\"\"Delete all expired sessions.\"\"\"\n"
+"    await session_backend.delete_expired()\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[], middleware=[session_backend.config."
+"middleware])"
+msgstr ""

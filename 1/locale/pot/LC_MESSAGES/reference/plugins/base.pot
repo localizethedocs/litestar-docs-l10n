@@ -1,0 +1,244 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/plugins/base.rst:2
+msgid "base"
+msgstr ""
+
+#: ../../../../starlite/plugins/base.py:docstring of
+#: starlite.plugins.base.PluginProtocol:1
+msgid ""
+"Bases: :py:class:`~typing.Protocol`\\ [:py:obj:`~starlite.plugins.base."
+"ModelT`]"
+msgstr ""
+
+#: ../../../../starlite/plugins/base.py:docstring of
+#: starlite.plugins.base.PluginProtocol:1
+msgid "Base plugin protocol to be inherited when implementing plugins."
+msgstr ""
+
+#: ../../../../starlite/plugins/base.py:docstring of
+#: starlite.plugins.base.PluginProtocol.on_app_init:1
+msgid ""
+"Receive the Starlite application instance before ``init`` is finalized and "
+"allow the plugin to update various attributes."
+msgstr ""
+
+#: ../../../../starlite/plugins/base.py:docstring of
+#: starlite.plugins.base.PluginProtocol.on_app_init:4
+msgid "Examples"
+msgstr ""
+
+#: ../../../../starlite/plugins/base.py:docstring of
+#: starlite.plugins.base.PluginMapping.get_model_instance_for_value:0
+#: starlite.plugins.base.PluginProtocol.from_dict:0
+#: starlite.plugins.base.PluginProtocol.from_pydantic_model_instance:0
+#: starlite.plugins.base.PluginProtocol.is_plugin_supported_type:0
+#: starlite.plugins.base.PluginProtocol.on_app_init:0
+#: starlite.plugins.base.PluginProtocol.to_dict:0
+#: starlite.plugins.base.PluginProtocol.to_pydantic_model_class:0
+#: starlite.plugins.base.get_plugin_for_value:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../starlite/plugins/base.py:docstring of
+#: starlite.plugins.base.PluginProtocol.on_app_init:38
+msgid "The :class:`Starlite <starlite.app.Starlite>` instance."
+msgstr ""
+
+#: ../../../../starlite/plugins/base.py:docstring of
+#: starlite.plugins.base.PluginMapping.get_model_instance_for_value:0
+#: starlite.plugins.base.PluginProtocol.from_dict:0
+#: starlite.plugins.base.PluginProtocol.from_pydantic_model_instance:0
+#: starlite.plugins.base.PluginProtocol.is_plugin_supported_type:0
+#: starlite.plugins.base.PluginProtocol.on_app_init:0
+#: starlite.plugins.base.PluginProtocol.to_dict:0
+#: starlite.plugins.base.PluginProtocol.to_pydantic_model_class:0
+#: starlite.plugins.base.get_plugin_for_value:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/plugins/base.py:docstring of
+#: starlite.plugins.base.PluginProtocol.on_app_init:40
+msgid "None"
+msgstr ""
+
+#: ../../../../starlite/plugins/base.py:docstring of
+#: starlite.plugins.base.PluginProtocol.is_plugin_supported_type:1
+msgid ""
+"Given a value of indeterminate type, determine if this value is supported by "
+"the plugin."
+msgstr ""
+
+#: ../../../../starlite/plugins/base.py:docstring of
+#: starlite.plugins.base.PluginProtocol.is_plugin_supported_type:3
+#: starlite.plugins.base.get_plugin_for_value:3
+msgid "An arbitrary value."
+msgstr ""
+
+#: ../../../../starlite/plugins/base.py:docstring of
+#: starlite.plugins.base.PluginProtocol.is_plugin_supported_type:5
+msgid "A typeguard dictating whether the value is supported by the plugin."
+msgstr ""
+
+#: ../../../../starlite/plugins/base.py:docstring of
+#: starlite.plugins.base.PluginProtocol.to_pydantic_model_class:1
+msgid ""
+"Given a model_class supported by the plugin, convert it to a subclass of the "
+"pydantic BaseModel."
+msgstr ""
+
+#: ../../../../starlite/plugins/base.py:docstring of
+#: starlite.plugins.base.PluginProtocol.from_dict:3
+#: starlite.plugins.base.PluginProtocol.from_pydantic_model_instance:6
+#: starlite.plugins.base.PluginProtocol.to_pydantic_model_class:3
+msgid "A model class supported by the plugin."
+msgstr ""
+
+#: ../../../../starlite/plugins/base.py:docstring of
+#: starlite.plugins.base.PluginProtocol.to_pydantic_model_class:4
+msgid "Any additional kwargs."
+msgstr ""
+
+#: ../../../../starlite/plugins/base.py:docstring of
+#: starlite.plugins.base.PluginProtocol.to_pydantic_model_class:6
+msgid "A pydantic model class."
+msgstr ""
+
+#: ../../../../starlite/plugins/base.py:docstring of
+#: starlite.plugins.base.PluginProtocol.from_pydantic_model_instance:1
+msgid ""
+"Given an instance of a pydantic model created using a plugin's "
+"``to_pydantic_model_class``, return an instance of the class from which that "
+"pydantic model has been created."
+msgstr ""
+
+#: ../../../../starlite/plugins/base.py:docstring of
+#: starlite.plugins.base.PluginProtocol.from_pydantic_model_instance:4
+msgid "This class is passed in as the ``model_class`` kwarg."
+msgstr ""
+
+#: ../../../../starlite/plugins/base.py:docstring of
+#: starlite.plugins.base.PluginProtocol.from_pydantic_model_instance:7
+msgid "A pydantic model instance."
+msgstr ""
+
+#: ../../../../starlite/plugins/base.py:docstring of
+#: starlite.plugins.base.PluginProtocol.from_dict:6
+#: starlite.plugins.base.PluginProtocol.from_pydantic_model_instance:9
+msgid "A model instance."
+msgstr ""
+
+#: ../../../../starlite/plugins/base.py:docstring of
+#: starlite.plugins.base.PluginProtocol.to_dict:1
+msgid ""
+"Given an instance of a model supported by the plugin, return a dictionary of "
+"serializable values."
+msgstr ""
+
+#: ../../../../starlite/plugins/base.py:docstring of
+#: starlite.plugins.base.PluginProtocol.to_dict:3
+msgid "A model instance of the type supported by the plugin."
+msgstr ""
+
+#: ../../../../starlite/plugins/base.py:docstring of
+#: starlite.plugins.base.PluginProtocol.to_dict:5
+msgid "Notes"
+msgstr ""
+
+#: ../../../../starlite/plugins/base.py:docstring of
+#: starlite.plugins.base.PluginProtocol.to_dict:7
+msgid "This method can be async as well."
+msgstr ""
+
+#: ../../../../starlite/plugins/base.py:docstring of
+#: starlite.plugins.base.PluginProtocol.to_dict:9
+msgid "A string keyed dictionary of values."
+msgstr ""
+
+#: ../../../../starlite/plugins/base.py:docstring of
+#: starlite.plugins.base.PluginProtocol.from_dict:1
+msgid ""
+"Given a class supported by this plugin and a dict of values, create an "
+"instance of the class."
+msgstr ""
+
+#: ../../../../starlite/plugins/base.py:docstring of
+#: starlite.plugins.base.PluginProtocol.from_dict:4
+msgid "A string keyed mapping of values."
+msgstr ""
+
+#: ../../../../starlite/plugins/base.py:docstring of
+#: starlite.plugins.base.get_plugin_for_value:1
+msgid ""
+"Return a plugin for handling the given value, if any plugin supports it."
+msgstr ""
+
+#: ../../../../starlite/plugins/base.py:docstring of
+#: starlite.plugins.base.get_plugin_for_value:4
+msgid "A list of plugins"
+msgstr ""
+
+#: ../../../../starlite/plugins/base.py:docstring of
+#: starlite.plugins.base.get_plugin_for_value:6
+msgid "A plugin supporting the given value, or ``None``."
+msgstr ""
+
+#: ../../../../starlite/plugins/base.py:docstring of
+#: starlite.plugins.base.PluginMapping:1
+msgid "Bases: :py:class:`~typing.NamedTuple`"
+msgstr ""
+
+#: ../../../../starlite/plugins/base.py:docstring of
+#: starlite.plugins.base.PluginMapping:1
+msgid "Named tuple, mapping plugins > models."
+msgstr ""
+
+#: ../../../../docstring of starlite.plugins.base.PluginMapping.plugin:1
+msgid "Alias for field number 0"
+msgstr ""
+
+#: ../../../../docstring of starlite.plugins.base.PluginMapping.model_class:1
+msgid "Alias for field number 1"
+msgstr ""
+
+#: ../../../../starlite/plugins/base.py:docstring of
+#: starlite.plugins.base.PluginMapping.get_model_instance_for_value:1
+msgid ""
+"Given a value generated by plugin, return an instance of the original class."
+msgstr ""
+
+#: ../../../../starlite/plugins/base.py:docstring of
+#: starlite.plugins.base.PluginMapping.get_model_instance_for_value:3
+msgid "Can also accept a list or tuple of values."
+msgstr ""
+
+#: ../../../../starlite/plugins/base.py:docstring of
+#: starlite.plugins.base.PluginMapping.get_model_instance_for_value:5
+msgid "A pydantic model instance or sequence of instances."
+msgstr ""
+
+#: ../../../../starlite/plugins/base.py:docstring of
+#: starlite.plugins.base.PluginMapping.get_model_instance_for_value:7
+msgid "Any"
+msgstr ""
+
+#: ../../../../starlite/plugins/base.py:docstring of
+#: namedtuple_PluginMapping.PluginMapping.__new__:1
+msgid "Create new instance of PluginMapping(plugin, model_class)"
+msgstr ""

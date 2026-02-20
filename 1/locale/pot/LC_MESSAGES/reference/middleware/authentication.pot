@@ -1,0 +1,161 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/middleware/authentication.rst:2
+msgid "authentication"
+msgstr ""
+
+#: ../../../../starlite/middleware/authentication.py:docstring of
+#: starlite.middleware.authentication.AuthenticationResult:1
+msgid "Bases: :py:class:`~pydantic.main.BaseModel`"
+msgstr ""
+
+#: ../../../../starlite/middleware/authentication.py:docstring of
+#: starlite.middleware.authentication.AuthenticationResult:1
+msgid "Pydantic model for authentication data."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.middleware.authentication.AuthenticationResult.user:1
+msgid ""
+"The user model, this can be any value corresponding to a user of the API."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.middleware.authentication.AuthenticationResult.auth:1
+msgid "The auth value, this can for example be a JWT token."
+msgstr ""
+
+#: ../../../../starlite/middleware/authentication.py:docstring of
+#: starlite.middleware.authentication.AbstractAuthenticationMiddleware:1
+msgid "Bases: :py:class:`~abc.ABC`"
+msgstr ""
+
+#: ../../../../starlite/middleware/authentication.py:docstring of
+#: starlite.middleware.authentication.AbstractAuthenticationMiddleware:1
+msgid ""
+"Abstract AuthenticationMiddleware that allows users to create their own "
+"AuthenticationMiddleware by extending it and overriding :meth:"
+"`AbstractAuthenticationMiddleware.authenticate_request`."
+msgstr ""
+
+#: ../../../../starlite/middleware/authentication.py:docstring of
+#: starlite.middleware.authentication.AbstractAuthenticationMiddleware.__init__:1
+msgid "Initialize ``AbstractAuthenticationMiddleware``."
+msgstr ""
+
+#: ../../../../starlite/middleware/authentication.py:docstring of
+#: starlite.middleware.authentication.AbstractAuthenticationMiddleware.__call__:0
+#: starlite.middleware.authentication.AbstractAuthenticationMiddleware.__init__:0
+#: starlite.middleware.authentication.AbstractAuthenticationMiddleware.authenticate_request:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../starlite/middleware/authentication.py:docstring of
+#: starlite.middleware.authentication.AbstractAuthenticationMiddleware.__init__:3
+msgid ""
+"An ASGIApp, this value is the next ASGI handler to call in the middleware "
+"stack."
+msgstr ""
+
+#: ../../../../starlite/middleware/authentication.py:docstring of
+#: starlite.middleware.authentication.AbstractAuthenticationMiddleware.__init__:4
+msgid "A pattern or list of patterns to skip in the authentication middleware."
+msgstr ""
+
+#: ../../../../starlite/middleware/authentication.py:docstring of
+#: starlite.middleware.authentication.AbstractAuthenticationMiddleware.__init__:5
+msgid ""
+"An identifier to use on routes to disable authentication for a particular "
+"route."
+msgstr ""
+
+#: ../../../../starlite/middleware/authentication.py:docstring of
+#: starlite.middleware.authentication.AbstractAuthenticationMiddleware.__init__:6
+msgid "ASGI scopes processed by the authentication middleware."
+msgstr ""
+
+#: ../../../../starlite/middleware/authentication.py:docstring of
+#: starlite.middleware.authentication.AbstractAuthenticationMiddleware.__call__:1
+msgid "ASGI callable."
+msgstr ""
+
+#: ../../../../starlite/middleware/authentication.py:docstring of
+#: starlite.middleware.authentication.AbstractAuthenticationMiddleware.__call__:3
+msgid "The ASGI connection scope."
+msgstr ""
+
+#: ../../../../starlite/middleware/authentication.py:docstring of
+#: starlite.middleware.authentication.AbstractAuthenticationMiddleware.__call__:4
+msgid "The ASGI receive function."
+msgstr ""
+
+#: ../../../../starlite/middleware/authentication.py:docstring of
+#: starlite.middleware.authentication.AbstractAuthenticationMiddleware.__call__:5
+msgid "The ASGI send function."
+msgstr ""
+
+#: ../../../../starlite/middleware/authentication.py:docstring of
+#: starlite.middleware.authentication.AbstractAuthenticationMiddleware.__call__:0
+#: starlite.middleware.authentication.AbstractAuthenticationMiddleware.authenticate_request:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/middleware/authentication.py:docstring of
+#: starlite.middleware.authentication.AbstractAuthenticationMiddleware.__call__:7
+msgid "None"
+msgstr ""
+
+#: ../../../../starlite/middleware/authentication.py:docstring of
+#: starlite.middleware.authentication.AbstractAuthenticationMiddleware.authenticate_request:1
+msgid ""
+"Receive the http connection and return an :class:`AuthenticationResult`."
+msgstr ""
+
+#: ../../../../starlite/middleware/authentication.py:docstring of
+#: starlite.middleware.authentication.AbstractAuthenticationMiddleware.authenticate_request:3
+msgid "Notes"
+msgstr ""
+
+#: ../../../../starlite/middleware/authentication.py:docstring of
+#: starlite.middleware.authentication.AbstractAuthenticationMiddleware.authenticate_request:5
+msgid "This method must be overridden by subclasses."
+msgstr ""
+
+#: ../../../../starlite/middleware/authentication.py:docstring of
+#: starlite.middleware.authentication.AbstractAuthenticationMiddleware.authenticate_request:7
+msgid ""
+"An :class:`ASGIConnection <starlite.connection.ASGIConnection>` instance."
+msgstr ""
+
+#: ../../../../starlite/middleware/authentication.py:docstring of
+#: starlite.middleware.authentication.AbstractAuthenticationMiddleware.authenticate_request:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../starlite/middleware/authentication.py:docstring of
+#: starlite.middleware.authentication.AbstractAuthenticationMiddleware.authenticate_request:9
+msgid "if authentication fails."
+msgstr ""
+
+#: ../../../../starlite/middleware/authentication.py:docstring of
+#: starlite.middleware.authentication.AbstractAuthenticationMiddleware.authenticate_request:11
+msgid ""
+"An instance of :class:`AuthenticationResult <starlite.middleware."
+"authentication.AuthenticationResult>`."
+msgstr ""

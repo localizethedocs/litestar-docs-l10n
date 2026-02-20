@@ -1,0 +1,1036 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../usage/the-starlite-app.rst:2
+msgid "The Starlite App"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:6
+msgid "Application object"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:8
+msgid ""
+"At the root of every Starlite application is an instance of the :class:"
+"`Starlite <starlite.app.Starlite>` class. Typically, this code will be "
+"placed in a file called ``main.py`` at the project's root directory."
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:11
+msgid ""
+"Creating an app is straightforward – the only required arg is a list of :"
+"class:`Controllers <.controller.Controller>`, :class:`Routers <.router."
+"Router>` or :class:`Route handlers <.handlers.base.BaseRouteHandler>`:"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:0
+msgid "Python 3.8+"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:16
+msgid "Hello World"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:16
+msgid ""
+"from typing import Dict\n"
+"\n"
+"from starlite import Starlite, get\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"def hello_world() -> Dict[str, str]:\n"
+"    \"\"\"Handler function that returns a greeting dictionary.\"\"\"\n"
+"    return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[hello_world])\n"
+"\n"
+"# run: /"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:0
+msgid "Python 3.10+"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:16
+msgid ""
+"from starlite import Starlite, get\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"def hello_world() -> dict[str, str]:\n"
+"    \"\"\"Handler function that returns a greeting dictionary.\"\"\"\n"
+"    return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[hello_world])\n"
+"\n"
+"# run: /"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:20
+msgid ""
+"The app instance is the root level of the app - it has the base path of ``/"
+"`` and all root level Controllers, Routers and Route Handlers should be "
+"registered on it."
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:25
+msgid ""
+"To learn more about registering routes, check out this chapter in the "
+"documentation: :ref:`usage/routing:Registering Routes`"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:30
+#: ../../../usage/the-starlite-app.rst:50
+msgid "Startup and Shutdown"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:32
+msgid ""
+"You can pass a list of callables - either sync or async functions, methods "
+"or class instances - to the ``on_startup`` / ``on_shutdown`` kwargs of the :"
+"class:`Starlite <starlite.app.Starlite>` instance. Those will be called in "
+"order, once the ASGI server (uvicorn, daphne etc.) emits the respective "
+"event."
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:42
+msgid ""
+"A classic use case for this is database connectivity. Often, we want to "
+"establish a database connection on application startup, and then close it "
+"gracefully upon shutdown."
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:45
+msgid ""
+"For example, lets create a database connection using the async engine from "
+"`SQLAlchemy <https://docs.sqlalchemy.org/en/latest/orm/extensions/asyncio."
+"html>`_. We create two functions, one to get or establish the connection, "
+"and another to close it, and then pass them to the Starlite constructor:"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:50
+msgid ""
+"from typing import cast\n"
+"\n"
+"from pydantic import BaseSettings\n"
+"from sqlalchemy.ext.asyncio import AsyncEngine, create_async_engine\n"
+"\n"
+"from starlite import Starlite, State\n"
+"\n"
+"\n"
+"class AppSettings(BaseSettings):\n"
+"    DATABASE_URI: str = \"postgresql+asyncpg://postgres:mysecretpassword@pg."
+"db:5432/db\"\n"
+"\n"
+"\n"
+"settings = AppSettings()\n"
+"\n"
+"\n"
+"def get_db_connection(state: State) -> AsyncEngine:\n"
+"    \"\"\"Returns the db engine.\n"
+"\n"
+"    If it doesn't exist, creates it and saves it in on the application state "
+"object\n"
+"    \"\"\"\n"
+"    if not getattr(state, \"engine\", None):\n"
+"        state.engine = create_async_engine(settings.DATABASE_URI)\n"
+"    return cast(\"AsyncEngine\", state.engine)\n"
+"\n"
+"\n"
+"async def close_db_connection(state: State) -> None:\n"
+"    \"\"\"Closes the db connection stored in the application State object."
+"\"\"\"\n"
+"    if getattr(state, \"engine\", None):\n"
+"        await cast(\"AsyncEngine\", state.engine).dispose()\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[], on_startup=[get_db_connection], "
+"on_shutdown=[close_db_connection])"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:56
+#: ../../../usage/the-starlite-app.rst:76
+#: ../../../usage/the-starlite-app.rst:87
+msgid "Using Application State"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:58
+msgid ""
+"As seen in the examples for the `on_startup <#before-after-startup>`_ / "
+"`on_shutdown <#before-after-shutdown>`_\\ , callables passed to these hooks "
+"can receive an optional kwarg called ``state``\\ , which is the "
+"application's state object. The advantage of using application ``state``\\ , "
+"is that it can be accessed during multiple stages of the connection, and it "
+"can be injected into dependencies and route handlers."
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:63
+msgid ""
+"The Application State is an instance of the :class:`State <starlite."
+"datastructures.State>` datastructure, and it is accessible via the :class:"
+"`app.state <starlite.app.Starlite>` attribute. As such it can be accessed "
+"wherever the app instance is accessible."
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:67
+msgid ""
+"It's important to understand in this context that the application instance "
+"is injected into the ASGI ``scope`` mapping for each connection (i.e. "
+"request or websocket connection) as ``scope[\"app\"].state``. This makes the "
+"application accessible wherever the scope mapping is available, e.g. in "
+"middleware, on :class:`Request <starlite.connection.Request>` and :class:"
+"`Websocket <starlite.connection.WebSocket>` instances (accessible as "
+"``request.app`` / ``socket.app``\\ ) and many other places."
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:73
+msgid ""
+"Therefore, state offers an easy way to share contextual data between "
+"disparate parts of the application, as seen below:"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:76
+msgid ""
+"import logging\n"
+"from typing import TYPE_CHECKING, Any\n"
+"\n"
+"from starlite import Provide, Request, Starlite, State, get\n"
+"\n"
+"if TYPE_CHECKING:\n"
+"    from starlite.types import ASGIApp, Receive, Scope, Send\n"
+"\n"
+"logger = logging.getLogger(__name__)\n"
+"\n"
+"\n"
+"def set_state_on_startup(state: State) -> None:\n"
+"    \"\"\"Startup and shutdown hooks can receive `State` as a keyword arg."
+"\"\"\"\n"
+"    state.value = \"abc123\"\n"
+"\n"
+"\n"
+"def middleware_factory(*, app: \"ASGIApp\") -> \"ASGIApp\":\n"
+"    \"\"\"A middleware can access application state via `scope`.\"\"\"\n"
+"\n"
+"    async def my_middleware(scope: \"Scope\", receive: \"Receive\", send: "
+"\"Send\") -> None:\n"
+"        state = scope[\"app\"].state\n"
+"        logger.info(\"state value in middleware: %s\", state.value)\n"
+"        await app(scope, receive, send)\n"
+"\n"
+"    return my_middleware\n"
+"\n"
+"\n"
+"def my_dependency(state: State) -> Any:\n"
+"    \"\"\"Dependencies can receive state via injection.\"\"\"\n"
+"    logger.info(\"state value in dependency: %s\", state.value)\n"
+"\n"
+"\n"
+"@get(\"/\", dependencies={\"dep\": Provide(my_dependency)}, "
+"middleware=[middleware_factory])\n"
+"def get_handler(state: State, request: Request, dep: Any) -> None:  # "
+"pylint: disable=unused-argument\n"
+"    \"\"\"Handlers can receive state via injection.\"\"\"\n"
+"    logger.info(\"state value in handler from `State`: %s\", state.value)\n"
+"    logger.info(\"state value in handler from `Request`: %s\", request.app."
+"state.value)\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[get_handler], "
+"on_startup=[set_state_on_startup], debug=True)"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:81
+msgid "Initializing Application State"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:83
+msgid ""
+"You can pass an object from which the application state will be instantiated "
+"using the ``initial_state`` kwarg of the Starlite constructor:"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:87
+msgid ""
+"from starlite import Starlite, State, get\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"def handler(state: State) -> dict:\n"
+"    return state.dict()\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[handler], initial_state={\"count\": 100})"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:93
+msgid ""
+"The `initial_state` can be a dictionary, an instance of :class:"
+"`ImmutableState <starlite.datastructures.ImmutableState>` or :class:`State "
+"<starlite.datastructures.State>`, or a list of tuples containing key/value "
+"pairs."
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:98
+msgid ""
+"Any value passed to `initial_state` will be deep copied - to prevent "
+"mutation from outside the application context."
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:101
+msgid "Injecting Application State into Route Handlers and Dependencies"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:103
+msgid ""
+"As seen in the above example, Starlite offers an easy way to inject state "
+"into route handlers and dependencies - simply by specifying ``state`` as a "
+"kwarg to the handler function. I.e., you can simply do this in handler "
+"function or dependency to access the application state:"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:108
+msgid ""
+"from starlite import get, State\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"def handler(state: State) -> None: ..."
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:115
+msgid ""
+"When using this pattern you can specify the class to use for the state "
+"object. This type is not merely for type checkers, rather Starlite will "
+"instantiate a new state instance based on the type you set there. This "
+"allows users to use custom classes for State, e.g.:"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:119
+msgid ""
+"While this is very powerful, it might encourage users to follow anti-"
+"patterns: it's important to emphasize that using state can lead to code "
+"that's hard to reason about and bugs that are difficult to understand, due "
+"to changes in different ASGI contexts. As such, this pattern should be used "
+"only when it is the best choice and in a limited fashion. To discourage its "
+"use, Starlite also offers a builtin ``ImmutableState`` class. You can use "
+"this class to type state and ensure that no mutation of state is allowed:"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:126
+msgid "Using Custom State"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:126
+msgid ""
+"from starlite import ImmutableState, Starlite, get\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"def handler(state: ImmutableState) -> dict:\n"
+"    setattr(state, \"count\", 1)  # raises AttributeError\n"
+"    return state.dict()\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[handler])"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:132
+msgid "Static Files"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:134
+msgid ""
+"Static files are served by the app from predefined locations. To configure "
+"static file serving, either pass an instance of :class:`StaticFilesConfig "
+"<starlite.config.static_files.StaticFilesConfig>` or a list thereof to the :"
+"class:`Starlite constructor <starlite.app.Starlite>` using the "
+"``static_files_config`` kwarg."
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:138
+msgid ""
+"For example, lets say our Starlite app is going to serve **regular files** "
+"from the ``my_app/static`` folder and **html documents** from the ``my_app/"
+"html`` folder, and we would like to serve the **static files** on the ``/"
+"files`` path, and the **html files** on the ``/html`` path:"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:143
+msgid ""
+"from starlite import Starlite, StaticFilesConfig\n"
+"\n"
+"app = Starlite(\n"
+"    route_handlers=[...],\n"
+"    static_files_config=[\n"
+"        StaticFilesConfig(directories=[\"static\"], path=\"/files\"),\n"
+"        StaticFilesConfig(directories=[\"html\"], path=\"/html\", "
+"html_mode=True),\n"
+"    ],\n"
+")"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:154
+msgid ""
+"Matching is done based on filename, for example, assume we have a request "
+"that is trying to retrieve the path ``/files/file.txt``\\ , the **directory "
+"for the base path** ``/files`` **will be searched** for the file ``file."
+"txt``. If it is found, the file will be sent, otherwise a **404 response** "
+"will be sent."
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:158
+msgid ""
+"If ``html_mode`` is enabled and no specific file is requested, the "
+"application will fall back to serving ``index.html``. If no file is found "
+"the application will look for a ``404.html`` file in order to render a "
+"response, otherwise a 404 :class:`NotFoundException <starlite.exceptions."
+"NotFoundException>` will be returned."
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:162
+msgid ""
+"You can provide a ``name`` parameter to ``StaticFilesConfig`` to identify "
+"the given config and generate links to files in folders belonging to that "
+"config. ``name`` should be a unique string across all static configs and "
+"`route handlers <usage/route-handlers:Route Handler Indexing>`_."
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:167
+msgid ""
+"from starlite import Starlite, StaticFilesConfig\n"
+"\n"
+"app = Starlite(\n"
+"    route_handlers=[...],\n"
+"    static_files_config=[\n"
+"        StaticFilesConfig(\n"
+"            directories=[\"static\"], path=\"/some_folder/static/path\", "
+"name=\"static\"\n"
+"        ),\n"
+"    ],\n"
+")\n"
+"\n"
+"url_path = app.url_for_static_asset(\"static\", \"file.pdf\")\n"
+"# /some_folder/static/path/file.pdf"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:183
+msgid "Sending files as attachments"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:185
+msgid ""
+"By default, files are sent \"inline\", meaning they will have a ``Content-"
+"Disposition: inline`` header. To send them as attachments, use the "
+"``send_as_attachment=True`` flag, which will add a ``Content-Disposition: "
+"attachment`` header:"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:190
+msgid ""
+"from starlite import Starlite, StaticFilesConfig\n"
+"\n"
+"app = Starlite(\n"
+"    route_handlers=[...],\n"
+"    static_files_config=[\n"
+"        StaticFilesConfig(\n"
+"            directories=[\"static\"],\n"
+"            path=\"/some_folder/static/path\",\n"
+"            name=\"static\",\n"
+"            send_as_attachment=True,\n"
+"        ),\n"
+"    ],\n"
+")"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:206
+msgid "File System support and Cloud Files"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:208
+msgid ""
+"The :class:`StaticFilesConfig <starlite.config.static_files."
+"StaticFilesConfig>` class accepts a value called ``file_system``\\ , which "
+"can be any class adhering to the Starlite :class:`FileSystemProtocol "
+"<starlite.types.FileSystemProtocol>`."
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:211
+msgid ""
+"This protocol is similar to the file systems defined by `fsspec <https://"
+"filesystem-spec.readthedocs.io/en/latest/>`_\\ , which cover all major cloud "
+"providers and a wide range of other use cases (e.g. HTTP based file service, "
+"``ftp`` etc.)."
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:214
+msgid ""
+"In order to use any file system, simply use `fsspec <https://filesystem-spec."
+"readthedocs.io/en/latest/>`_ or one of the libraries based upon it, or "
+"provide a custom implementation adhering to the :class:`FileSystemProtocol "
+"<starlite.types.FileSystemProtocol>`."
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:219
+msgid "Logging"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:221
+msgid ""
+"Starlite has builtin pydantic based logging configuration that allows users "
+"to easily define logging:"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:224
+msgid ""
+"from starlite import Starlite, LoggingConfig, Request, get\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"def my_router_handler(request: Request) -> None:\n"
+"    request.logger.info(\"inside a request\")\n"
+"    return None\n"
+"\n"
+"\n"
+"logging_config = LoggingConfig(\n"
+"    loggers={\n"
+"        \"my_app\": {\n"
+"            \"level\": \"INFO\",\n"
+"            \"handlers\": [\"queue_listener\"],\n"
+"        }\n"
+"    }\n"
+")\n"
+"\n"
+"app = Starlite(route_handlers=[my_router_handler], "
+"logging_config=logging_config)"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:247
+msgid ""
+"Starlite configures a non-blocking `QueueListenerHandler` which is keyed as "
+"`queue_listener` in the logging configuration. The above example is using "
+"this handler, which is optimal for async applications. Make sure to use it "
+"in your own loggers as in the above example."
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:252
+msgid "Using Picologging"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:254
+msgid ""
+"`Picologging <https://github.com/microsoft/picologging>`_ is a high "
+"performance logging library that is developed by Microsoft. Starlite will "
+"default to using this library automatically if its installed - requiring "
+"zero configuration on the part of the user. That is, if ``picologging`` is "
+"present the previous example will work with it automatically."
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:259
+msgid "Using StructLog"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:261
+msgid ""
+"`StructLog <https://www.structlog.org/en/stable/>`_ is a powerful structured-"
+"logging library. Starlite ships with a dedicated logging config for using it:"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:265
+msgid ""
+"from starlite import Starlite, StructLoggingConfig, Request, get\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"def my_router_handler(request: Request) -> None:\n"
+"    request.logger.info(\"inside a request\")\n"
+"    return None\n"
+"\n"
+"\n"
+"logging_config = StructLoggingConfig()\n"
+"\n"
+"app = Starlite(route_handlers=[my_router_handler], "
+"logging_config=logging_config)"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:280
+msgid "Subclass Logging Configs"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:282
+msgid ""
+"You can easily create you own ``LoggingConfig`` class by subclassing :class:"
+"`BaseLoggingConfig <starlite.config.logging.BaseLoggingConfig>` and "
+"implementing the ``configure`` method."
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:287
+msgid "Application Hooks"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:289
+msgid ""
+"Starlite includes several application level hooks that allow users to run "
+"their own sync or async callables. While you are free to use these hooks as "
+"you see fit, the design intention behind them is to allow for easy "
+"instrumentation for observability (monitoring, tracing, logging etc.)."
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:295
+msgid ""
+"All application hook kwargs detailed below receive either a single callable "
+"or a list of callables. If a list is provided, it is called in the order it "
+"is given."
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:299
+msgid "Before / After Startup"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:301
+msgid ""
+"The ``before_startup`` and ``after_startup`` hooks take a :class:`sync or "
+"async callable <starlite.types.LifeSpanHookHandler>` that receives the "
+"Starlite application as an argument and run during the ASGI startup event. "
+"The callable is invoked respectively before or after the list of callables "
+"defined in the ``on_startup`` list of callables."
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:306
+msgid "Before and After Startup Hooks"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:306
+msgid ""
+"import logging\n"
+"from asyncio import sleep\n"
+"from datetime import datetime\n"
+"\n"
+"from starlite import Starlite\n"
+"\n"
+"logger = logging.getLogger()\n"
+"\n"
+"\n"
+"async def startup_callable() -> None:\n"
+"    \"\"\"Function called during 'on_startup'.\"\"\"\n"
+"    await sleep(0.5)\n"
+"\n"
+"\n"
+"def before_startup_handler(app_instance: Starlite) -> None:\n"
+"    \"\"\"Function called before 'on_startup'.\"\"\"\n"
+"    start_time = datetime.now()\n"
+"    app_instance.state.start_time = start_time.timestamp()\n"
+"    logger.info(\"startup sequence begin at %s\", start_time.isoformat())\n"
+"\n"
+"\n"
+"def after_startup_handler(app_instance: Starlite) -> None:\n"
+"    \"\"\"Function called after 'on_startup'.\"\"\"\n"
+"    logger.info(\n"
+"        \"startup sequence ended at: %s, time elapsed: %d\",\n"
+"        datetime.now().isoformat(),\n"
+"        datetime.now().timestamp() - app_instance.state.start_time,\n"
+"    )\n"
+"\n"
+"\n"
+"app = Starlite(\n"
+"    [],\n"
+"    on_startup=[startup_callable],\n"
+"    before_startup=before_startup_handler,\n"
+"    after_startup=after_startup_handler,\n"
+")"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:312
+msgid "Before / After Shutdown"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:314
+msgid ""
+"The ``before_shutdown`` and ``after_shutdown`` are basically identical, with "
+"the difference being that the :class:`callable they receive <starlite.types."
+"LifeSpanHookHandler>` in callable is invoked respectively before or after "
+"the list of callables defined in the ``on_shutdown`` list of callables."
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:319
+msgid "Before and After Shutdown Hooks"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:319
+msgid ""
+"import logging\n"
+"from asyncio import sleep\n"
+"from datetime import datetime\n"
+"\n"
+"from starlite import Starlite\n"
+"\n"
+"logger = logging.getLogger()\n"
+"\n"
+"\n"
+"async def shutdown_callable() -> None:\n"
+"    \"\"\"Function called during 'on_shutdown'.\"\"\"\n"
+"    await sleep(0.5)\n"
+"\n"
+"\n"
+"def before_shutdown_handler(app_instance: Starlite) -> None:\n"
+"    \"\"\"Function called before 'on_shutdown'.\"\"\"\n"
+"    start_time = datetime.now()\n"
+"    app_instance.state.start_time = start_time.timestamp()\n"
+"    logger.info(\"shutdown sequence begin at %s\", start_time.isoformat())\n"
+"\n"
+"\n"
+"def after_shutdown_handler(app_instance: Starlite) -> None:\n"
+"    \"\"\"Function called after 'on_shutdown'.\"\"\"\n"
+"    logger.info(\n"
+"        \"shutdown sequence ended at: %s, time elapsed: %d\",\n"
+"        datetime.now().isoformat(),\n"
+"        datetime.now().timestamp() - app_instance.state.start_time,\n"
+"    )\n"
+"\n"
+"\n"
+"app = Starlite(\n"
+"    [],\n"
+"    on_shutdown=[shutdown_callable],\n"
+"    before_shutdown=before_shutdown_handler,\n"
+"    after_shutdown=after_shutdown_handler,\n"
+")"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:324
+msgid "After Exception"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:326
+msgid ""
+"The ``after_exception`` hook takes a :class:`sync or async callable "
+"<starlite.types.AfterExceptionHookHandler>` that is called with three "
+"arguments: the ``exception`` that occurred, the ASGI ``scope`` of the "
+"request or websocket connection and the application ``state``."
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:331
+#: ../../../usage/the-starlite-app.rst:370
+msgid "After Exception Hook"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:331
+msgid ""
+"import logging\n"
+"from typing import TYPE_CHECKING\n"
+"\n"
+"from starlite import HTTPException, Starlite, get\n"
+"from starlite.status_codes import HTTP_400_BAD_REQUEST\n"
+"\n"
+"logger = logging.getLogger()\n"
+"\n"
+"if TYPE_CHECKING:\n"
+"    from starlite.datastructures import State\n"
+"    from starlite.types import Scope\n"
+"\n"
+"\n"
+"@get(\"/some-path\")\n"
+"def my_handler() -> None:\n"
+"    \"\"\"Route handler that raises an exception.\"\"\"\n"
+"    raise HTTPException(detail=\"bad request\", "
+"status_code=HTTP_400_BAD_REQUEST)\n"
+"\n"
+"\n"
+"async def after_exception_handler(exc: Exception, scope: \"Scope\", state: "
+"\"State\") -> None:\n"
+"    \"\"\"Hook function that will be invoked after each exception.\"\"\"\n"
+"    if not hasattr(state, \"error_count\"):\n"
+"        state.error_count = 1\n"
+"    else:\n"
+"        state.error_count += 1\n"
+"\n"
+"    logger.info(\n"
+"        \"an exception of type %s has occurred for requested path %s and the "
+"application error count is %d.\",\n"
+"        type(exc).__name__,\n"
+"        scope[\"path\"],\n"
+"        state.error_count,\n"
+"    )\n"
+"\n"
+"\n"
+"app = Starlite([my_handler], after_exception=after_exception_handler)"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:337
+msgid ""
+"This hook is not meant to handle exceptions - it just receives them to allow "
+"for side effects. To handle exceptions you should define :ref:`exception "
+"handlers <usage/exceptions:exception handling>`."
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:341
+msgid "Before Send"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:343
+msgid ""
+"The ``before_send`` hook takes a :class:`sync or async callable <starlite."
+"types.BeforeMessageSendHookHandler>` that is called when an ASGI message is "
+"sent. The hook receives the message instance and the application state."
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:347
+msgid "Before Send Hook"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:347
+msgid ""
+"from typing import TYPE_CHECKING, Dict\n"
+"\n"
+"from starlite import Starlite, get\n"
+"from starlite.datastructures import MutableScopeHeaders\n"
+"\n"
+"if TYPE_CHECKING:\n"
+"    from starlite.datastructures import State\n"
+"    from starlite.types import Message\n"
+"\n"
+"\n"
+"@get(\"/test\")\n"
+"def handler() -> Dict[str, str]:\n"
+"    \"\"\"Example Handler function.\"\"\"\n"
+"    return {\"key\": \"value\"}\n"
+"\n"
+"\n"
+"async def before_send_hook_handler(message: \"Message\", state: \"State\") -"
+"> None:\n"
+"    \"\"\"The function will be called on each ASGI message.\n"
+"\n"
+"    We therefore ensure it runs only on the message start event.\n"
+"    \"\"\"\n"
+"    if message[\"type\"] == \"http.response.start\":\n"
+"        headers = MutableScopeHeaders.from_message(message=message)\n"
+"        headers[\"My Header\"] = state.message\n"
+"\n"
+"\n"
+"def on_startup(state: \"State\") -> None:\n"
+"    \"\"\"A function that will populate the app state before any requests "
+"are received.\"\"\"\n"
+"    state.message = \"value injected during send\"\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[handler], on_startup=[on_startup], "
+"before_send=before_send_hook_handler)"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:347
+msgid ""
+"from typing import TYPE_CHECKING\n"
+"\n"
+"from starlite import Starlite, get\n"
+"from starlite.datastructures import MutableScopeHeaders\n"
+"\n"
+"if TYPE_CHECKING:\n"
+"    from starlite.datastructures import State\n"
+"    from starlite.types import Message\n"
+"\n"
+"\n"
+"@get(\"/test\")\n"
+"def handler() -> dict[str, str]:\n"
+"    \"\"\"Example Handler function.\"\"\"\n"
+"    return {\"key\": \"value\"}\n"
+"\n"
+"\n"
+"async def before_send_hook_handler(message: \"Message\", state: \"State\") -"
+"> None:\n"
+"    \"\"\"The function will be called on each ASGI message.\n"
+"\n"
+"    We therefore ensure it runs only on the message start event.\n"
+"    \"\"\"\n"
+"    if message[\"type\"] == \"http.response.start\":\n"
+"        headers = MutableScopeHeaders.from_message(message=message)\n"
+"        headers[\"My Header\"] = state.message\n"
+"\n"
+"\n"
+"def on_startup(state: \"State\") -> None:\n"
+"    \"\"\"A function that will populate the app state before any requests "
+"are received.\"\"\"\n"
+"    state.message = \"value injected during send\"\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[handler], on_startup=[on_startup], "
+"before_send=before_send_hook_handler)"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:353
+msgid "Application Init"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:355
+msgid ""
+"Starlite includes a hook for intercepting the arguments passed to the :class:"
+"`Starlite constructor <starlite.app.Starlite>`, before they are used to "
+"instantiate the application."
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:358
+msgid ""
+"Handlers can be passed to the ``on_app_init`` parameter on construction of "
+"the application, and in turn, each will receive an instance of :class:"
+"`AppConfig <starlite.config.app.AppConfig>` and must return an instance of "
+"same."
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:361
+msgid ""
+"This hook is useful for applying common configuration between applications, "
+"and for use by developers who may wish to develop third-party application "
+"configuration systems."
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:366
+msgid ""
+"`on_app_init` handlers cannot be `async def` functions, as they are called "
+"within `Starlite.__init__()`, outside of an async context."
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:370
+msgid ""
+"from typing import TYPE_CHECKING\n"
+"\n"
+"from starlite import Starlite\n"
+"\n"
+"if TYPE_CHECKING:\n"
+"    from starlite.config import AppConfig\n"
+"\n"
+"\n"
+"async def close_db_connection() -> None:\n"
+"    \"\"\"Closes the database connection on application shutdown.\"\"\"\n"
+"\n"
+"\n"
+"def receive_app_config(app_config: \"AppConfig\") -> \"AppConfig\":\n"
+"    \"\"\"Receives parameters from the application.\n"
+"\n"
+"    In reality, this would be a library of boilerplate that is carried from "
+"one application to another, or a third-party\n"
+"    developed application configuration tool.\n"
+"    \"\"\"\n"
+"    app_config.on_shutdown.append(close_db_connection)\n"
+"    return app_config\n"
+"\n"
+"\n"
+"app = Starlite([], on_app_init=[receive_app_config])"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:376
+msgid "Layered architecture"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:378
+msgid ""
+"Starlite has a layered architecture compromising of (generally speaking) 4 "
+"layers:"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:381
+msgid "The application object"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:382
+msgid "Routers"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:383
+msgid "Controllers"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:384
+msgid "Handlers"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:386
+msgid ""
+"There are many parameters that can be defined on every layer, in which case "
+"the parameter defined on the layer **closest to the handler** takes "
+"precedence. This allows for maximum flexibility and simplicity when "
+"configuring complex applications and enables transparent overriding of "
+"parameters."
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:391
+msgid "Parameters that support layering are:"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:394
+msgid ":ref:`after_request <after_request>`"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:395
+msgid ":ref:`after_response <after_response>`"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:396
+msgid ":ref:`before_request <before_request>`"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:397
+msgid ":ref:`cache_control <usage/responses:cache control>`"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:398
+msgid ":doc:`dependencies </usage/dependency-injection>`"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:399
+msgid ":ref:`etag <usage/responses:etag>`"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:400
+msgid ":doc:`exception_handlers </usage/exceptions>`"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:401
+msgid ":doc:`guards </usage/security/guards>`"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:402
+msgid ":doc:`middleware </usage/middleware/index>`"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:403
+msgid ":ref:`opt <handler_opts>`"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:404
+msgid ":ref:`response_class <usage/responses:custom responses>`"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:405
+msgid ":ref:`response_cookies <usage/responses:response cookies>`"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:406
+msgid ":ref:`response_headers <usage/responses:response headers>`"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:407
+msgid "``security``"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:408
+msgid "``tags``"
+msgstr ""
+
+#: ../../../usage/the-starlite-app.rst:409
+msgid "``type_encoders``"
+msgstr ""

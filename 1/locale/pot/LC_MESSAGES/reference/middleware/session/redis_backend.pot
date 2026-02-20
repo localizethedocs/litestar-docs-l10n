@@ -1,0 +1,138 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/middleware/session/redis_backend.rst:2
+msgid "redis_backend"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/redis_backend.py:docstring of
+#: starlite.middleware.session.redis_backend.RedisBackend:1
+msgid ""
+"Bases: :py:class:`~starlite.middleware.session.base.ServerSideBackend`\\ [:"
+"py:class:`RedisBackendConfig`]"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/redis_backend.py:docstring of
+#: starlite.middleware.session.redis_backend.RedisBackend:1
+msgid "Session backend to store data in redis."
+msgstr ""
+
+#: ../../../../starlite/middleware/session/redis_backend.py:docstring of
+#: starlite.middleware.session.redis_backend.RedisBackend.__init__:1
+msgid "Initialize ``RedisBackend``."
+msgstr ""
+
+#: ../../../../starlite/middleware/session/redis_backend.py:docstring of
+#: starlite.middleware.session.redis_backend.RedisBackend.__init__:3
+msgid "Notes"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/redis_backend.py:docstring of
+#: starlite.middleware.session.redis_backend.RedisBackend.__init__:5
+msgid "Requires ``redis``. Install with ``pip install starlite[redis]``"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/redis_backend.py:docstring of
+#: starlite.middleware.session.redis_backend.RedisBackend.get:1
+msgid "Load data associated with ``session_id`` from redis."
+msgstr ""
+
+#: ../../../../starlite/middleware/session/redis_backend.py:docstring of
+#: starlite.middleware.session.redis_backend.RedisBackend.delete:0
+#: starlite.middleware.session.redis_backend.RedisBackend.get:0
+#: starlite.middleware.session.redis_backend.RedisBackend.set:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/redis_backend.py:docstring of
+#: starlite.middleware.session.redis_backend.RedisBackend.delete:3
+#: starlite.middleware.session.redis_backend.RedisBackend.get:3
+#: starlite.middleware.session.redis_backend.RedisBackend.set:6
+msgid "The session-ID"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/redis_backend.py:docstring of
+#: starlite.middleware.session.redis_backend.RedisBackend.delete:0
+#: starlite.middleware.session.redis_backend.RedisBackend.delete_all:0
+#: starlite.middleware.session.redis_backend.RedisBackend.get:0
+#: starlite.middleware.session.redis_backend.RedisBackend.set:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/redis_backend.py:docstring of
+#: starlite.middleware.session.redis_backend.RedisBackend.get:5
+msgid "The session data, if existing, otherwise ``None``."
+msgstr ""
+
+#: ../../../../starlite/middleware/session/redis_backend.py:docstring of
+#: starlite.middleware.session.redis_backend.RedisBackend.set:1
+msgid "Store ``data`` in redis under ``<prefix>:<session_id>``"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/redis_backend.py:docstring of
+#: starlite.middleware.session.redis_backend.RedisBackend.set:3
+msgid ""
+"If there is already data associated with ``session_id``, replace it with "
+"``data`` and reset its expiry time"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/redis_backend.py:docstring of
+#: starlite.middleware.session.redis_backend.RedisBackend.set:7
+msgid "Serialized session data"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/redis_backend.py:docstring of
+#: starlite.middleware.session.redis_backend.RedisBackend.delete:5
+#: starlite.middleware.session.redis_backend.RedisBackend.delete_all:3
+#: starlite.middleware.session.redis_backend.RedisBackend.set:9
+msgid "None"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/redis_backend.py:docstring of
+#: starlite.middleware.session.redis_backend.RedisBackend.delete:1
+msgid ""
+"Delete the data associated with ``session_id`` from redis. Fail silently if "
+"no such session-ID exists."
+msgstr ""
+
+#: ../../../../starlite/middleware/session/redis_backend.py:docstring of
+#: starlite.middleware.session.redis_backend.RedisBackend.delete_all:1
+msgid "Delete all session data stored in redis."
+msgstr ""
+
+#: ../../../../starlite/middleware/session/redis_backend.py:docstring of
+#: starlite.middleware.session.redis_backend.RedisBackendConfig:1
+msgid ""
+"Bases: :py:class:`~starlite.middleware.session.base.ServerSideSessionConfig`"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/redis_backend.py:docstring of
+#: starlite.middleware.session.redis_backend.RedisBackendConfig:1
+msgid "Configuration for ``RedisBackend``"
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.middleware.session.redis_backend.RedisBackendConfig.redis:1
+msgid "``redis.asyncio.Redis`` instance."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.middleware.session.redis_backend.RedisBackendConfig.key_prefix:1
+msgid ""
+"Prefix to store data under after the schema of ``<prefix>:<session-ID>``"
+msgstr ""

@@ -1,0 +1,733 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../usage/testing.rst:2
+msgid "Testing"
+msgstr ""
+
+#: ../../../usage/testing.rst:4
+msgid ""
+"Testing is a first class citizen in Starlite, which offers several powerful "
+"testing utilities out of the box."
+msgstr ""
+
+#: ../../../usage/testing.rst:8
+msgid "Test Client"
+msgstr ""
+
+#: ../../../usage/testing.rst:10
+msgid ""
+"Starlite's test client is built on top of the `httpx <https://github.com/"
+"encode/httpx>`_ library. To use the test client you should pass to it an "
+"instance of Starlite as the ``app`` kwarg."
+msgstr ""
+
+#: ../../../usage/testing.rst:14
+msgid "Let's say we have a very simple app with a health check endpoint:"
+msgstr ""
+
+#: ../../../usage/testing.rst:17
+msgid "my_app/main.py"
+msgstr ""
+
+#: ../../../usage/testing.rst:17
+msgid ""
+"from starlite import Starlite, MediaType, get\n"
+"\n"
+"\n"
+"@get(path=\"/health-check\", media_type=MediaType.TEXT)\n"
+"def health_check() -> str:\n"
+"    return \"healthy\"\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[health_check])"
+msgstr ""
+
+#: ../../../usage/testing.rst:30
+msgid "We would then test it using the test client like so:"
+msgstr ""
+
+#: ../../../usage/testing.rst:0
+msgid "Sync"
+msgstr ""
+
+#: ../../../usage/testing.rst:38 ../../../usage/testing.rst:56
+#: ../../../usage/testing.rst:120 ../../../usage/testing.rst:136
+msgid "tests/test_health_check.py"
+msgstr ""
+
+#: ../../../usage/testing.rst:38
+msgid ""
+"from starlite.status_codes import HTTP_200_OK\n"
+"from starlite.testing import TestClient\n"
+"\n"
+"from my_app.main import app\n"
+"\n"
+"\n"
+"def test_health_check():\n"
+"    with TestClient(app=app) as client:\n"
+"        response = client.get(\"/health-check\")\n"
+"        assert response.status_code == HTTP_200_OK\n"
+"        assert response.text == \"healthy\""
+msgstr ""
+
+#: ../../../usage/testing.rst:0
+msgid "Async"
+msgstr ""
+
+#: ../../../usage/testing.rst:56
+msgid ""
+"from starlite.status_codes import HTTP_200_OK\n"
+"from starlite.testing import AsyncTestClient\n"
+"\n"
+"from my_app.main import app\n"
+"\n"
+"\n"
+"def test_health_check():\n"
+"    async with AsyncTestClient(app=app) as client:\n"
+"        response = await client.get(\"/health-check\")\n"
+"        assert response.status_code == HTTP_200_OK\n"
+"        assert response.text == \"healthy\""
+msgstr ""
+
+#: ../../../usage/testing.rst:71
+msgid ""
+"Since we would probably need to use the client in multiple places, it's "
+"better to make it into a pytest fixture:"
+msgstr ""
+
+#: ../../../usage/testing.rst:80 ../../../usage/testing.rst:98
+#: ../../../usage/testing.rst:358
+msgid "tests/conftest.py"
+msgstr ""
+
+#: ../../../usage/testing.rst:80
+msgid ""
+"import pytest\n"
+"\n"
+"from starlite.testing import TestClient\n"
+"\n"
+"from my_app.main import app\n"
+"\n"
+"\n"
+"@pytest.fixture(scope=\"function\")\n"
+"def test_client() -> TestClient:\n"
+"    return TestClient(app=app)"
+msgstr ""
+
+#: ../../../usage/testing.rst:98
+msgid ""
+"import pytest\n"
+"\n"
+"from starlite.testing import AsyncTestClient\n"
+"\n"
+"from my_app.main import app\n"
+"\n"
+"\n"
+"@pytest.fixture(scope=\"function\")\n"
+"def test_client() -> AsyncTestClient:\n"
+"    return AsyncTestClient(app=app)"
+msgstr ""
+
+#: ../../../usage/testing.rst:112
+msgid "We would then be able to rewrite our test like so:"
+msgstr ""
+
+#: ../../../usage/testing.rst:120
+msgid ""
+"from starlite.status_codes import HTTP_200_OK\n"
+"from starlite.testing import TestClient\n"
+"\n"
+"\n"
+"def test_health_check(test_client: TestClient):\n"
+"    with test_client as client:\n"
+"        response = client.get(\"/health-check\")\n"
+"        assert response.status_code == HTTP_200_OK\n"
+"        assert response.text == \"healthy\""
+msgstr ""
+
+#: ../../../usage/testing.rst:136
+msgid ""
+"from starlite.status_codes import HTTP_200_OK\n"
+"from starlite.testing import AsyncTestClient\n"
+"\n"
+"\n"
+"def test_health_check(test_client: AsyncTestClient):\n"
+"    async with test_client as client:\n"
+"        response = await client.get(\"/health-check\")\n"
+"        assert response.status_code == HTTP_200_OK\n"
+"        assert response.text == \"healthy\""
+msgstr ""
+
+#: ../../../usage/testing.rst:149
+msgid "Using sessions"
+msgstr ""
+
+#: ../../../usage/testing.rst:151
+msgid ""
+"If you are using :ref:`session middleware <usage/middleware/builtin-"
+"middleware:session middleware>` for session persistence across requests, "
+"then you might want to inject or inspect session data outside a request. For "
+"this, :class:`TestClient <.testing.TestClient>` provides two methods:"
+msgstr ""
+
+#: ../../../usage/testing.rst:155
+msgid ""
+":meth:`set_session_data <starlite.testing.test_client.TestClient."
+"set_session_data>`"
+msgstr ""
+
+#: ../../../usage/testing.rst:156
+msgid ""
+":meth:`get_session_data <starlite.testing.test_client.TestClient."
+"get_session_data>`"
+msgstr ""
+
+#: ../../../usage/testing.rst:160
+msgid ""
+"The Session Middleware must be enabled in Starlite app provided to the "
+"TestClient to use sessions."
+msgstr ""
+
+#: ../../../usage/testing.rst:161
+msgid ""
+"If you are using the :class:`CookieBackend <starlite.middleware.session."
+"cookie_backend.CookieBackend>` you need to install the ``cryptography`` "
+"package. You can do so by installing starlite with e.g. ``pip install "
+"starlite[cryptography]`` or ``poetry add starlite[cryptography]``"
+msgstr ""
+
+#: ../../../usage/testing.rst:0
+msgid "Python 3.8+"
+msgstr ""
+
+#: ../../../usage/testing.rst:171 ../../../usage/testing.rst:183
+msgid "Setting session data"
+msgstr ""
+
+#: ../../../usage/testing.rst:171
+msgid ""
+"from typing import Any, Dict\n"
+"\n"
+"from starlite import Request, Starlite, get\n"
+"from starlite.middleware.session.memory_backend import MemoryBackendConfig\n"
+"from starlite.testing import TestClient\n"
+"\n"
+"session_config = MemoryBackendConfig()\n"
+"\n"
+"\n"
+"@get(path=\"/test\")\n"
+"def get_session_data(request: Request) -> Dict[str, Any]:\n"
+"    return request.session\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[get_session_data], middleware=[session_config."
+"middleware])\n"
+"\n"
+"with TestClient(app=app, session_config=session_config) as client:\n"
+"    client.set_session_data({\"foo\": \"bar\"})\n"
+"    assert client.get(\"/test\").json() == {\"foo\": \"bar\"}"
+msgstr ""
+
+#: ../../../usage/testing.rst:0
+msgid "Python 3.10+"
+msgstr ""
+
+#: ../../../usage/testing.rst:171
+msgid ""
+"from typing import Any\n"
+"\n"
+"from starlite import Request, Starlite, get\n"
+"from starlite.middleware.session.memory_backend import MemoryBackendConfig\n"
+"from starlite.testing import TestClient\n"
+"\n"
+"session_config = MemoryBackendConfig()\n"
+"\n"
+"\n"
+"@get(path=\"/test\")\n"
+"def get_session_data(request: Request) -> dict[str, Any]:\n"
+"    return request.session\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[get_session_data], middleware=[session_config."
+"middleware])\n"
+"\n"
+"with TestClient(app=app, session_config=session_config) as client:\n"
+"    client.set_session_data({\"foo\": \"bar\"})\n"
+"    assert client.get(\"/test\").json() == {\"foo\": \"bar\"}"
+msgstr ""
+
+#: ../../../usage/testing.rst:176 ../../../usage/testing.rst:188
+msgid "Getting session data"
+msgstr ""
+
+#: ../../../usage/testing.rst:176
+msgid ""
+"from starlite import Request, Starlite, post\n"
+"from starlite.middleware.session.memory_backend import MemoryBackendConfig\n"
+"from starlite.testing import TestClient\n"
+"\n"
+"session_config = MemoryBackendConfig()\n"
+"\n"
+"\n"
+"@post(path=\"/test\")\n"
+"def set_session_data(request: Request) -> None:\n"
+"    request.session[\"foo\"] = \"bar\"\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[set_session_data], middleware=[session_config."
+"middleware])\n"
+"\n"
+"with TestClient(app=app, session_config=session_config) as client:\n"
+"    client.post(\"/test\").json()\n"
+"    assert client.get_session_data() == {\"foo\": \"bar\"}"
+msgstr ""
+
+#: ../../../usage/testing.rst:183
+msgid ""
+"from typing import Any, Dict\n"
+"\n"
+"from starlite import Request, Starlite, get\n"
+"from starlite.middleware.session.memory_backend import MemoryBackendConfig\n"
+"from starlite.testing import AsyncTestClient\n"
+"\n"
+"session_config = MemoryBackendConfig()\n"
+"\n"
+"\n"
+"@get(path=\"/test\")\n"
+"def get_session_data(request: Request) -> Dict[str, Any]:\n"
+"    return request.session\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[get_session_data], middleware=[session_config."
+"middleware])\n"
+"\n"
+"\n"
+"async def test_get_session_data() -> None:\n"
+"    async with AsyncTestClient(app=app, session_config=session_config) as "
+"client:\n"
+"        await client.set_session_data({\"foo\": \"bar\"})\n"
+"        res = await client.get(\"/test\")\n"
+"        assert res.json() == {\"foo\": \"bar\"}"
+msgstr ""
+
+#: ../../../usage/testing.rst:183
+msgid ""
+"from typing import Any\n"
+"\n"
+"from starlite import Request, Starlite, get\n"
+"from starlite.middleware.session.memory_backend import MemoryBackendConfig\n"
+"from starlite.testing import AsyncTestClient\n"
+"\n"
+"session_config = MemoryBackendConfig()\n"
+"\n"
+"\n"
+"@get(path=\"/test\")\n"
+"def get_session_data(request: Request) -> dict[str, Any]:\n"
+"    return request.session\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[get_session_data], middleware=[session_config."
+"middleware])\n"
+"\n"
+"\n"
+"async def test_get_session_data() -> None:\n"
+"    async with AsyncTestClient(app=app, session_config=session_config) as "
+"client:\n"
+"        await client.set_session_data({\"foo\": \"bar\"})\n"
+"        res = await client.get(\"/test\")\n"
+"        assert res.json() == {\"foo\": \"bar\"}"
+msgstr ""
+
+#: ../../../usage/testing.rst:188
+msgid ""
+"from starlite import Request, Starlite, post\n"
+"from starlite.middleware.session.memory_backend import MemoryBackendConfig\n"
+"from starlite.testing import AsyncTestClient\n"
+"\n"
+"session_config = MemoryBackendConfig()\n"
+"\n"
+"\n"
+"@post(path=\"/test\")\n"
+"def set_session_data(request: Request) -> None:\n"
+"    request.session[\"foo\"] = \"bar\"\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[set_session_data], middleware=[session_config."
+"middleware])\n"
+"\n"
+"\n"
+"async def test_set_session_data() -> None:\n"
+"    async with AsyncTestClient(app=app, session_config=session_config) as "
+"client:\n"
+"        await client.post(\"/test\")\n"
+"        assert await client.get_session_data() == {\"foo\": \"bar\"}"
+msgstr ""
+
+#: ../../../usage/testing.rst:193 ../../../usage/testing.rst:206
+msgid "Using a blocking portal"
+msgstr ""
+
+#: ../../../usage/testing.rst:195
+msgid ""
+"The :class:`TestClient <.testing.TestClient>` uses a feature of `anyio "
+"<https://anyio.readthedocs.io/en/stable/>`_ called a **Blocking Portal**."
+msgstr ""
+
+#: ../../../usage/testing.rst:198
+msgid ""
+"The :class:`anyio.BlockingPortal` allows :class:`TestClient <.testing."
+"TestClient>` to execute asynchronous functions using a synchronous call. "
+"``TestClient`` creates a blocking portal to manage ``Starlite``'s async "
+"logic, and it allows ``TestClient``'s API to remain fully synchronous."
+msgstr ""
+
+#: ../../../usage/testing.rst:202
+msgid ""
+"Any tests that are using an instance of ``TestClient`` can also make use of "
+"the blocking portal to execute asynchronous functions without the test "
+"itself being asynchronous."
+msgstr ""
+
+#: ../../../usage/testing.rst:206
+msgid ""
+"from concurrent.futures import Future, wait\n"
+"\n"
+"import anyio\n"
+"\n"
+"from starlite.testing import create_test_client\n"
+"\n"
+"\n"
+"def test_with_portal() -> None:\n"
+"    \"\"\"This example shows how to manage asynchronous tasks using a "
+"portal.\n"
+"\n"
+"    The test function itself is not async. Asynchronous functions are "
+"executed and awaited using the portal.\n"
+"    \"\"\"\n"
+"\n"
+"    async def get_float(value: float) -> float:\n"
+"        await anyio.sleep(value)\n"
+"        return value\n"
+"\n"
+"    with create_test_client(route_handlers=[]) as test_client, test_client."
+"portal() as portal:\n"
+"        # start a background task with the portal\n"
+"        future: Future[float] = portal.start_task_soon(get_float, 0.25)\n"
+"        # do other work\n"
+"        assert portal.call(get_float, 0.1) == 0.1\n"
+"        # wait for the background task to complete\n"
+"        wait([future])\n"
+"        assert future.done()\n"
+"        assert future.result() == 0.25"
+msgstr ""
+
+#: ../../../usage/testing.rst:211
+msgid "Creating a test app"
+msgstr ""
+
+#: ../../../usage/testing.rst:213
+msgid ""
+"Starlite also offers a helper function called :func:`create_test_client "
+"<starlite.testing.create_test_client>` which first creates an instance of "
+"Starlite and then a test client using it. There are multiple use cases for "
+"this helper - when you need to check generic logic that is decoupled from a "
+"specific Starlite app, or when you want to test endpoints in isolation."
+msgstr ""
+
+#: ../../../usage/testing.rst:217
+msgid ""
+"You can pass to this helper all the kwargs accepted by the starlite "
+"constructor, with the ``route_handlers`` kwarg being **required**. Yet "
+"unlike the Starlite app, which expects ``route_handlers`` to be a list, here "
+"you can also pass individual values."
+msgstr ""
+
+#: ../../../usage/testing.rst:221
+msgid "For example, you can do this:"
+msgstr ""
+
+#: ../../../usage/testing.rst:224 ../../../usage/testing.rst:241
+msgid "my_app/tests/test_health_check.py"
+msgstr ""
+
+#: ../../../usage/testing.rst:224
+msgid ""
+"from starlite.status_codes import HTTP_200_OK\n"
+"from starlite.testing import create_test_client\n"
+"\n"
+"from my_app.main import health_check\n"
+"\n"
+"\n"
+"def test_health_check():\n"
+"    with create_test_client(route_handlers=[health_check]) as client:\n"
+"        response = client.get(\"/health-check\")\n"
+"        assert response.status_code == HTTP_200_OK\n"
+"        assert response.text == \"healthy\""
+msgstr ""
+
+#: ../../../usage/testing.rst:238
+msgid "But also this:"
+msgstr ""
+
+#: ../../../usage/testing.rst:241
+msgid ""
+"from starlite.status_codes import HTTP_200_OK\n"
+"from starlite.testing import create_test_client\n"
+"\n"
+"from my_app.main import health_check\n"
+"\n"
+"\n"
+"def test_health_check():\n"
+"    with create_test_client(route_handlers=health_check) as client:\n"
+"        response = client.get(\"/health-check\")\n"
+"        assert response.status_code == HTTP_200_OK\n"
+"        assert response.text == \"healthy\""
+msgstr ""
+
+#: ../../../usage/testing.rst:257
+msgid "RequestFactory"
+msgstr ""
+
+#: ../../../usage/testing.rst:259
+msgid ""
+"Another helper is the :class:`RequestFactory <starlite.testing."
+"RequestFactory>` class, which creates instances of :class:`starlite."
+"connection.request.Request <starlite.connection.request.Request>`. The use "
+"case for this helper is when you need to test logic that expects to receive "
+"a request object."
+msgstr ""
+
+#: ../../../usage/testing.rst:263
+msgid ""
+"For example, lets say we wanted to unit test a *guard* function in "
+"isolation, to which end we'll reuse the examples from the :doc:`route guards "
+"</usage/security/guards>` documentation:"
+msgstr ""
+
+#: ../../../usage/testing.rst:268
+msgid "my_app/guards.py"
+msgstr ""
+
+#: ../../../usage/testing.rst:268
+msgid ""
+"from starlite import Request, RouteHandler, NotAuthorizedException\n"
+"\n"
+"\n"
+"def secret_token_guard(request: Request, route_handler: RouteHandler) -> "
+"None:\n"
+"    if (\n"
+"        route_handler.opt.get(\"secret\")\n"
+"        and not request.headers.get(\"Secret-Header\", \"\") == "
+"route_handler.opt[\"secret\"]\n"
+"    ):\n"
+"        raise NotAuthorizedException()"
+msgstr ""
+
+#: ../../../usage/testing.rst:280
+msgid "We already have our route handler in place:"
+msgstr ""
+
+#: ../../../usage/testing.rst:283
+msgid "my_app/secret.py"
+msgstr ""
+
+#: ../../../usage/testing.rst:283
+msgid ""
+"from os import environ\n"
+"\n"
+"from starlite import get\n"
+"\n"
+"from my_app.guards import secret_token_guard\n"
+"\n"
+"\n"
+"@get(path=\"/secret\", guards=[secret_token_guard], opt={\"secret\": environ."
+"get(\"SECRET\")})\n"
+"def secret_endpoint() -> None: ..."
+msgstr ""
+
+#: ../../../usage/testing.rst:295
+msgid "We could thus test the guard function like so:"
+msgstr ""
+
+#: ../../../usage/testing.rst:298
+msgid "tests/guards/test_secret_token_guard.py"
+msgstr ""
+
+#: ../../../usage/testing.rst:298
+msgid ""
+"import pytest\n"
+"\n"
+"from starlite import NotAuthorizedException\n"
+"from starlite.testing import RequestFactory\n"
+"\n"
+"from my_app.guards import secret_token_guard\n"
+"from my_app.secret import secret_endpoint\n"
+"\n"
+"request = RequestFactory().get(\"/\")\n"
+"\n"
+"\n"
+"def test_secret_token_guard_failure_scenario():\n"
+"    copied_endpoint_handler = secret_endpoint.copy()\n"
+"    copied_endpoint_handler.opt[\"secret\"] = None\n"
+"    with pytest.raises(NotAuthorizedException):\n"
+"        secret_token_guard(request=request, "
+"route_handler=copied_endpoint_handler)\n"
+"\n"
+"\n"
+"def test_secret_token_guard_success_scenario():\n"
+"    copied_endpoint_handler = secret_endpoint.copy()\n"
+"    copied_endpoint_handler.opt[\"secret\"] = \"super-secret\"\n"
+"    secret_token_guard(request=request, "
+"route_handler=copied_endpoint_handler)"
+msgstr ""
+
+#: ../../../usage/testing.rst:325
+msgid "Using pydantic-factories"
+msgstr ""
+
+#: ../../../usage/testing.rst:327
+msgid ""
+"`Pydantic-factories <https://github.com/starlite-api/pydantic-factories>`__ "
+"offers an easy and powerful way to generate mock data from pydantic models "
+"and dataclasses."
+msgstr ""
+
+#: ../../../usage/testing.rst:330
+msgid ""
+"Let's say we have an API that talks to an external service and retrieves "
+"some data:"
+msgstr ""
+
+#: ../../../usage/testing.rst:333 ../../../usage/testing.rst:391
+msgid "main.py"
+msgstr ""
+
+#: ../../../usage/testing.rst:333
+msgid ""
+"from typing import Protocol, runtime_checkable\n"
+"\n"
+"from pydantic import BaseModel\n"
+"from starlite import get\n"
+"\n"
+"\n"
+"class Item(BaseModel):\n"
+"    name: str\n"
+"\n"
+"\n"
+"@runtime_checkable\n"
+"class Service(Protocol):\n"
+"    def get(self) -> Item: ...\n"
+"\n"
+"\n"
+"@get(path=\"/item\")\n"
+"def get_item(service: Service) -> Item:\n"
+"    return service.get()"
+msgstr ""
+
+#: ../../../usage/testing.rst:355
+msgid "We could test the ``/item`` route like so:"
+msgstr ""
+
+#: ../../../usage/testing.rst:358
+msgid ""
+"import pytest\n"
+"\n"
+"from starlite.status_codes import HTTP_200_OK\n"
+"from starlite import Provide, create_test_client\n"
+"\n"
+"from my_app.main import Service, Item, get_item\n"
+"\n"
+"\n"
+"@pytest.fixture()\n"
+"def item():\n"
+"    return Item(name=\"Chair\")\n"
+"\n"
+"\n"
+"def test_get_item(item: Item):\n"
+"    class MyService(Service):\n"
+"        def get_one(self) -> Item:\n"
+"            return item\n"
+"\n"
+"    with create_test_client(\n"
+"        route_handlers=get_item, dependencies={\"service\": Provide(lambda: "
+"MyService())}\n"
+"    ) as client:\n"
+"        response = client.get(\"/item\")\n"
+"        assert response.status_code == HTTP_200_OK\n"
+"        assert response.json() == item.dict()"
+msgstr ""
+
+#: ../../../usage/testing.rst:385
+msgid ""
+"While we can define the test data manually, as is done in the above, this "
+"can be quite cumbersome. That's where `pydantic-factories <https://github."
+"com/Goldziher/pydantic-factories>`_ library comes in. It generates mock data "
+"for pydantic models and dataclasses based on type annotations. With it, we "
+"could rewrite the above example like so:"
+msgstr ""
+
+#: ../../../usage/testing.rst:391
+msgid ""
+"from typing import Protocol, runtime_checkable\n"
+"\n"
+"import pytest\n"
+"from pydantic import BaseModel\n"
+"from pydantic_factories import ModelFactory\n"
+"from starlite.status_codes import HTTP_200_OK\n"
+"from starlite import Provide, get\n"
+"from starlite.testing import create_test_client\n"
+"\n"
+"\n"
+"class Item(BaseModel):\n"
+"    name: str\n"
+"\n"
+"\n"
+"@runtime_checkable\n"
+"class Service(Protocol):\n"
+"    def get_one(self) -> Item: ...\n"
+"\n"
+"\n"
+"@get(path=\"/item\")\n"
+"def get_item(service: Service) -> Item:\n"
+"    return service.get_one()\n"
+"\n"
+"\n"
+"class ItemFactory(ModelFactory[Item]):\n"
+"    model = Item\n"
+"\n"
+"\n"
+"@pytest.fixture()\n"
+"def item():\n"
+"    return ItemFactory.build()\n"
+"\n"
+"\n"
+"def test_get_item(item: Item):\n"
+"    class MyService(Service):\n"
+"        def get_one(self) -> Item:\n"
+"            return item\n"
+"\n"
+"\n"
+"with create_test_client(\n"
+"    route_handlers=get_item, dependencies={\"service\": Provide(lambda: "
+"MyService())}\n"
+") as client:\n"
+"    response = client.get(\"/item\")\n"
+"    assert response.status_code == HTTP_200_OK\n"
+"    assert response.json() == item.dict()"
+msgstr ""

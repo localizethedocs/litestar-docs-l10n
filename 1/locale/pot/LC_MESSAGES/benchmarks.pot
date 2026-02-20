@@ -1,0 +1,196 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../benchmarks.rst:2
+msgid "Benchmarks"
+msgstr ""
+
+#: ../../../benchmarks.rst:5
+msgid "Methodology"
+msgstr ""
+
+#: ../../../benchmarks.rst:7
+msgid ""
+"Benchmarking is done using the `bombardier <https://github.com/codesenberg/"
+"bombardier>`__ benchmarking tool."
+msgstr ""
+
+#: ../../../benchmarks.rst:8
+msgid ""
+"Benchmarks are run on a dedicated machine, with a base Debian 11 "
+"installation."
+msgstr ""
+
+#: ../../../benchmarks.rst:9
+msgid ""
+"Each framework is contained within its own docker container, running on a "
+"dedicated CPU core (using the ``cset shield`` command and the ``--cpuset-"
+"cpus`` option for docker)"
+msgstr ""
+
+#: ../../../benchmarks.rst:10
+msgid ""
+"Tests for the frameworks are written to make them as comparable as possible "
+"while completing the same tasks (you can see them `here <https://github.com/"
+"starlite-api/api-performance-tests/tree/main/frameworks>`__)"
+msgstr ""
+
+#: ../../../benchmarks.rst:11
+msgid ""
+"Each application is run using `uvicorn <https://www.uvicorn.org/>`__ with "
+"**one worker** and `uvloop <https://uvloop.readthedocs.io/>`__"
+msgstr ""
+
+#: ../../../benchmarks.rst:12
+msgid ""
+"Test data has been randomly generated and is being imported from a shared "
+"module"
+msgstr ""
+
+#: ../../../benchmarks.rst:15
+msgid "Results"
+msgstr ""
+
+#: ../../../benchmarks.rst:18
+msgid "If a result is missing for a specific framework that means either"
+msgstr ""
+
+#: ../../../benchmarks.rst:20
+msgid ""
+"It does not support this functionality (this will be mentioned in the test "
+"description)"
+msgstr ""
+
+#: ../../../benchmarks.rst:21
+msgid "More than 0.1% of responses were dropped / erroneous"
+msgstr ""
+
+#: ../../../benchmarks.rst:24
+msgid "JSON"
+msgstr ""
+
+#: ../../../benchmarks.rst:26
+msgid "Serializing a dictionary into JSON"
+msgstr ""
+
+#: ../../../benchmarks.rst:31
+msgid "RPS JSON"
+msgstr ""
+
+#: ../../../benchmarks.rst:34
+msgid "Files"
+msgstr ""
+
+#: ../../../benchmarks.rst:39
+msgid "RPS files"
+msgstr ""
+
+#: ../../../benchmarks.rst:42
+msgid "Path and query parameter handling"
+msgstr ""
+
+#: ../../../benchmarks.rst:44 ../../../benchmarks.rst:73
+msgid "*All responses return “No Content”*"
+msgstr ""
+
+#: ../../../benchmarks.rst:46
+msgid "No params: No path parameters"
+msgstr ""
+
+#: ../../../benchmarks.rst:47
+msgid "Path params: Single path parameter, coerced into an integer"
+msgstr ""
+
+#: ../../../benchmarks.rst:48
+msgid "Query params: Single query parameter, coerced into an integer"
+msgstr ""
+
+#: ../../../benchmarks.rst:49
+msgid "Mixed params: A path and a query parameters, coerced into integers"
+msgstr ""
+
+#: ../../../benchmarks.rst:54
+msgid "RPS path and query parameters"
+msgstr ""
+
+#: ../../../benchmarks.rst:57
+msgid "Dependency injection"
+msgstr ""
+
+#: ../../../benchmarks.rst:59
+msgid "*(not supported by* ``Starlette`` *)*"
+msgstr ""
+
+#: ../../../benchmarks.rst:61
+msgid "Resolving 3 nested synchronous dependencies"
+msgstr ""
+
+#: ../../../benchmarks.rst:62
+msgid ""
+"Resolving 3 nested asynchronous dependencies (only supported by ``Starlite`` "
+"and ``FastAPI``)"
+msgstr ""
+
+#: ../../../benchmarks.rst:63
+msgid ""
+"Resolving 3 nested synchronous, and 3 nested asynchronous dependencies (only "
+"supported by ``Starlite`` and ``FastAPI``)"
+msgstr ""
+
+#: ../../../benchmarks.rst:68
+msgid "RPS Dependency injection"
+msgstr ""
+
+#: ../../../benchmarks.rst:71
+msgid "Modifying responses"
+msgstr ""
+
+#: ../../../benchmarks.rst:78
+msgid "RPS dynamic responses"
+msgstr ""
+
+#: ../../../benchmarks.rst:81
+msgid "Plaintext"
+msgstr ""
+
+#: ../../../benchmarks.rst:86
+msgid "RPS Plaintext"
+msgstr ""
+
+#: ../../../benchmarks.rst:89
+msgid "Interpreting the results"
+msgstr ""
+
+#: ../../../benchmarks.rst:91
+msgid ""
+"An interpretation of these results should be approached with caution, as is "
+"the case for nearly all benchmarks. A high score in a test does not "
+"necessarily translate to high performance of **your** application in "
+"**your** use case. For almost any test you can probably write an app that "
+"performs better or worse at a comparable task **in your scenario**."
+msgstr ""
+
+#: ../../../benchmarks.rst:95
+msgid ""
+"While trying to design the tests in a way that simulate somewhat realistic "
+"scenarios, they can never give an exact representation of how a real world "
+"application, where, aside from the workload, many other factors come into "
+"play. These tests were mainly written to be used internally for starlite "
+"development, to help us locate the source of some performance regression we "
+"were experiencing."
+msgstr ""

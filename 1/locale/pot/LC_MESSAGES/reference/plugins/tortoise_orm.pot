@@ -1,0 +1,90 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/plugins/tortoise_orm.rst:2
+msgid "tortoise_orm"
+msgstr ""
+
+#: ../../../../starlite/plugins/tortoise_orm.py:docstring of
+#: starlite.plugins.tortoise_orm.TortoiseORMPlugin:1
+msgid ""
+"Bases: :py:class:`~starlite.plugins.base.PluginProtocol`\\ [:py:class:"
+"`~tortoise.models.Model`]"
+msgstr ""
+
+#: ../../../../starlite/plugins/tortoise_orm.py:docstring of
+#: starlite.plugins.tortoise_orm.TortoiseORMPlugin:1
+msgid "Support (de)serialization and OpenAPI generation for Tortoise ORMtypes."
+msgstr ""
+
+#: ../../../../starlite/plugins/tortoise_orm.py:docstring of
+#: starlite.plugins.tortoise_orm.TortoiseORMPlugin.to_pydantic_model_class:1
+msgid ""
+"Given a tortoise model_class instance, convert it to a subclass of the "
+"tortoise PydanticModel."
+msgstr ""
+
+#: ../../../../starlite/plugins/tortoise_orm.py:docstring of
+#: starlite.plugins.tortoise_orm.TortoiseORMPlugin.to_pydantic_model_class:3
+msgid ""
+"Since incoming request body's cannot and should not include values for "
+"related fields, pk fields and read only fields in tortoise-orm, we generate "
+"two different kinds of pydantic models here: - the first is a regular "
+"pydantic model, and the other is for the \"data\" kwarg only, which is "
+"further sanitized."
+msgstr ""
+
+#: ../../../../starlite/plugins/tortoise_orm.py:docstring of
+#: starlite.plugins.tortoise_orm.TortoiseORMPlugin.to_pydantic_model_class:7
+msgid ""
+"This function uses memoization to ensure we don't recompute unnecessarily."
+msgstr ""
+
+#: ../../../../starlite/plugins/tortoise_orm.py:docstring of
+#: starlite.plugins.tortoise_orm.TortoiseORMPlugin.is_plugin_supported_type:1
+msgid ""
+"Given a value of indeterminate type, determine if this value is supported by "
+"the plugin."
+msgstr ""
+
+#: ../../../../starlite/plugins/tortoise_orm.py:docstring of
+#: starlite.plugins.tortoise_orm.TortoiseORMPlugin.from_pydantic_model_instance:1
+msgid ""
+"Given an instance of a pydantic model created using the plugin's "
+"``to_pydantic_model_class``, return an instance of the class from which that "
+"pydantic model has been created."
+msgstr ""
+
+#: ../../../../starlite/plugins/tortoise_orm.py:docstring of
+#: starlite.plugins.tortoise_orm.TortoiseORMPlugin.from_pydantic_model_instance:4
+msgid "This class is passed in as the ``model_class`` kwarg."
+msgstr ""
+
+#: ../../../../starlite/plugins/tortoise_orm.py:docstring of
+#: starlite.plugins.tortoise_orm.TortoiseORMPlugin.to_dict:1
+msgid ""
+"Given an instance of a model supported by the plugin, return a dictionary of "
+"serializable values."
+msgstr ""
+
+#: ../../../../starlite/plugins/tortoise_orm.py:docstring of
+#: starlite.plugins.tortoise_orm.TortoiseORMPlugin.from_dict:1
+msgid ""
+"Given a class supported by this plugin and a dict of values, create an "
+"instance of the class."
+msgstr ""

@@ -1,0 +1,496 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../index.rst:211
+msgid "Documentation"
+msgstr ""
+
+#: ../../../index.rst:2
+msgid "Starlite library documentation"
+msgstr ""
+
+#: ../../../index.rst:5
+msgid ""
+"Starlite is a powerful, flexible, highly performant and opinionated ASGI "
+"framework, offering first class typing support and a full `Pydantic <https://"
+"github.com/samuelcolvin/pydantic>`_ integration."
+msgstr ""
+
+#: ../../../index.rst:9
+msgid ""
+"The Starlite framework supports :doc:`/usage/plugins/index`, ships with :doc:"
+"`dependency injection </usage/dependency-injection>`, :doc:`security "
+"primitives </usage/security/index>`, :doc:`OpenAPI schema generation </usage/"
+"openapi>`, `MessagePack <https://msgpack.org/>`_, :doc:`middlewares </usage/"
+"middleware/index>` and much more."
+msgstr ""
+
+#: ../../../index.rst:15
+msgid "Installation"
+msgstr ""
+
+#: ../../../index.rst:17
+msgid "pip install starlite"
+msgstr ""
+
+#: ../../../index.rst:0
+msgid "Extras"
+msgstr ""
+
+#: ../../../index.rst:26
+msgid ""
+":ref:`Brotli Compression Middleware <usage/middleware/builtin-middleware:"
+"brotli>`:"
+msgstr ""
+
+#: ../../../index.rst:26
+msgid ":code:`pip install starlite[brotli]`"
+msgstr ""
+
+#: ../../../index.rst:29
+msgid ""
+":ref:`Client-side sessions <usage/middleware/builtin-middleware:client-side "
+"sessions>`"
+msgstr ""
+
+#: ../../../index.rst:29
+msgid ":code:`pip install starlite[cryptography]`"
+msgstr ""
+
+#: ../../../index.rst:32
+msgid ""
+":ref:`Server-side sessions <usage/middleware/builtin-middleware:redis "
+"storage>` / :ref:`redis caching <usage/caching:redis>`:"
+msgstr ""
+
+#: ../../../index.rst:32
+msgid ":code:`pip install starlite[redis]`"
+msgstr ""
+
+#: ../../../index.rst:35
+msgid ""
+":ref:`Server-side sessions <usage/middleware/builtin-middleware:memcached "
+"storage>` / :ref:`memcached caching <usage/caching:memcached>`:"
+msgstr ""
+
+#: ../../../index.rst:35
+msgid ":code:`pip install starlite[memcached]`"
+msgstr ""
+
+#: ../../../index.rst:38
+msgid ":ref:`Picologging <usage/the-starlite-app:using picologging>`"
+msgstr ""
+
+#: ../../../index.rst:38
+msgid ":code:`pip install starlite[picologging]`"
+msgstr ""
+
+#: ../../../index.rst:41
+msgid ":ref:`StructLog <usage/the-starlite-app:using structlog>`"
+msgstr ""
+
+#: ../../../index.rst:41
+msgid ":code:`pip install starlite[structlog]`"
+msgstr ""
+
+#: ../../../index.rst:44
+msgid ":doc:`/usage/contrib/open-telemetry`"
+msgstr ""
+
+#: ../../../index.rst:44
+msgid ":code:`pip install starlite[openetelemetry]`"
+msgstr ""
+
+#: ../../../index.rst:47
+msgid ":doc:`/usage/cli`"
+msgstr ""
+
+#: ../../../index.rst:47
+msgid ":code:`pip install starlite[cli]`"
+msgstr ""
+
+#: ../../../index.rst:50
+msgid ""
+"Standard installation (includes CLI, picologging and Jinja2 templating):"
+msgstr ""
+
+#: ../../../index.rst:50
+msgid ":code:`pip install starlite[standard]`"
+msgstr ""
+
+#: ../../../index.rst:52
+msgid "All extras:"
+msgstr ""
+
+#: ../../../index.rst:53
+msgid ":code:`pip install starlite[full]`"
+msgstr ""
+
+#: ../../../index.rst:58
+msgid "Minimal Example"
+msgstr ""
+
+#: ../../../index.rst:60
+msgid ""
+"**Define your data model** using pydantic or any library based on it (for "
+"example ormar, beanie, SQLModel):"
+msgstr ""
+
+#: ../../../index.rst:63
+msgid ""
+"from pydantic import BaseModel, UUID4\n"
+"\n"
+"\n"
+"class User(BaseModel):\n"
+"    first_name: str\n"
+"    last_name: str\n"
+"    id: UUID4"
+msgstr ""
+
+#: ../../../index.rst:75
+msgid ""
+"You can also use dataclasses (standard library and Pydantic), :class:`typing."
+"TypedDict` or :class:`msgspec.Struct`."
+msgstr ""
+
+#: ../../../index.rst:79
+msgid ""
+"from uuid import UUID\n"
+"\n"
+"# from pydantic.dataclasses import dataclass\n"
+"from dataclasses import dataclass\n"
+"\n"
+"\n"
+"@dataclass\n"
+"class User:\n"
+"    first_name: str\n"
+"    last_name: str\n"
+"    id: UUID"
+msgstr ""
+
+#: ../../../index.rst:92
+msgid "**Define a Controller for your data model:**"
+msgstr ""
+
+#: ../../../index.rst:0
+msgid "Python 3.8+"
+msgstr ""
+
+#: ../../../index.rst:95
+msgid ""
+"from typing import List\n"
+"\n"
+"from pydantic import UUID4\n"
+"from starlite import Controller, Partial, get, post, put, patch, delete\n"
+"\n"
+"from my_app.models import User\n"
+"\n"
+"\n"
+"class UserController(Controller):\n"
+"    path = \"/users\"\n"
+"\n"
+"    @post()\n"
+"    async def create_user(self, data: User) -> User: ...\n"
+"\n"
+"    @get()\n"
+"    async def list_users(self) -> List[User]: ...\n"
+"\n"
+"    @patch(path=\"/{user_id:uuid}\")\n"
+"    async def partial_update_user(\n"
+"        self, user_id: UUID4, data: Partial[User]\n"
+"    ) -> User: ...\n"
+"\n"
+"    @put(path=\"/{user_id:uuid}\")\n"
+"    async def update_user(self, user_id: UUID4, data: User) -> User: ...\n"
+"\n"
+"    @get(path=\"/{user_id:uuid}\")\n"
+"    async def get_user(self, user_id: UUID4) -> User: ...\n"
+"\n"
+"    @delete(path=\"/{user_id:uuid}\")\n"
+"    async def delete_user(self, user_id: UUID4) -> None: ..."
+msgstr ""
+
+#: ../../../index.rst:0
+msgid "Python 3.10+"
+msgstr ""
+
+#: ../../../index.rst:95
+msgid ""
+"from pydantic import UUID4\n"
+"from starlite import Controller, Partial, get, post, put, patch, delete\n"
+"\n"
+"from my_app.models import User\n"
+"\n"
+"\n"
+"class UserController(Controller):\n"
+"    path = \"/users\"\n"
+"\n"
+"    @post()\n"
+"    async def create_user(self, data: User) -> User: ...\n"
+"\n"
+"    @get()\n"
+"    async def list_users(self) -> list[User]: ...\n"
+"\n"
+"    @patch(path=\"/{user_id:uuid}\")\n"
+"    async def partial_update_user(\n"
+"        self, user_id: UUID4, data: Partial[User]\n"
+"    ) -> User: ...\n"
+"\n"
+"    @put(path=\"/{user_id:uuid}\")\n"
+"    async def update_user(self, user_id: UUID4, data: User) -> User: ...\n"
+"\n"
+"    @get(path=\"/{user_id:uuid}\")\n"
+"    async def get_user(self, user_id: UUID4) -> User: ...\n"
+"\n"
+"    @delete(path=\"/{user_id:uuid}\")\n"
+"    async def delete_user(self, user_id: UUID4) -> None: ..."
+msgstr ""
+
+#: ../../../index.rst:128
+msgid ""
+"When instantiating your app, import your *controller* into your "
+"application's entry-point and pass it to Starlite:"
+msgstr ""
+
+#: ../../../index.rst:132
+msgid ""
+"from starlite import Starlite\n"
+"\n"
+"from my_app.controllers.user import UserController\n"
+"\n"
+"app = Starlite(route_handlers=[UserController])"
+msgstr ""
+
+#: ../../../index.rst:139
+msgid ""
+"To **run your application**, use an ASGI server such as `uvicorn <https://"
+"www.uvicorn.org/>`_ :"
+msgstr ""
+
+#: ../../../index.rst:141
+msgid "uvicorn my_app.main:app --reload"
+msgstr ""
+
+#: ../../../index.rst:147
+msgid "Philosophy"
+msgstr ""
+
+#: ../../../index.rst:149
+msgid ""
+"Starlite is a community-driven project. This means not a single author, but "
+"rather a core team of maintainers is leading the project, supported by a "
+"community of contributors. Starlite currently has 5 maintainers and is being "
+"very actively developed."
+msgstr ""
+
+#: ../../../index.rst:152
+msgid ""
+"Starlite draws inspiration from `NestJS <https://nestjs.com/>`_ - a "
+"contemporary TypeScript framework - which places opinions and patterns at "
+"its core."
+msgstr ""
+
+#: ../../../index.rst:154
+msgid ""
+"While still allowing for **function-based endpoints**, Starlite seeks to "
+"build on Python's powerful and versatile OOP, by placing **class-based "
+"controllers** at its core."
+msgstr ""
+
+#: ../../../index.rst:156
+msgid ""
+"Starlite is **not** a microframework. Unlike frameworks such as FastAPI, "
+"Starlette or Flask, Starlite includes a lot of functionalities out of the "
+"box needed for a typical modern web application, such as ORM integration, "
+"client- and server-side sessions, caching, OpenTelemetry integration and "
+"many more. It's not aiming to be \"the next Django\" (for example, it will "
+"never feature its own ORM), but its scope is not micro either."
+msgstr ""
+
+#: ../../../index.rst:163
+msgid "Feature comparison with similar frameworks"
+msgstr ""
+
+#: ../../../index.rst:166
+msgid "Starlite"
+msgstr ""
+
+#: ../../../index.rst:166
+msgid "FastAPI"
+msgstr ""
+
+#: ../../../index.rst:166
+msgid "Starlette"
+msgstr ""
+
+#: ../../../index.rst:166
+msgid "Sanic"
+msgstr ""
+
+#: ../../../index.rst:166
+msgid "Quart"
+msgstr ""
+
+#: ../../../index.rst:168
+msgid "OpenAPI"
+msgstr ""
+
+#: ../../../index.rst:168 ../../../index.rst:172 ../../../index.rst:174
+#: ../../../index.rst:176 ../../../index.rst:182 ../../../index.rst:184
+#: ../../../index.rst:186 ../../../index.rst:188 ../../../index.rst:190
+#: ../../../index.rst:192 ../../../index.rst:196
+msgid ":octicon:`check`"
+msgstr ""
+
+#: ../../../index.rst:169 ../../../index.rst:173 ../../../index.rst:175
+#: ../../../index.rst:177 ../../../index.rst:183 ../../../index.rst:185
+#: ../../../index.rst:187 ../../../index.rst:189 ../../../index.rst:191
+#: ../../../index.rst:193 ../../../index.rst:197
+msgid ""
+"<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-"
+"octicon-check\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path fill-"
+"rule=\"evenodd\" d=\"M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 "
+"01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 "
+"0z\"></path></svg>"
+msgstr ""
+
+#: ../../../index.rst:168 ../../../index.rst:170 ../../../index.rst:172
+#: ../../../index.rst:174 ../../../index.rst:178 ../../../index.rst:182
+#: ../../../index.rst:186 ../../../index.rst:188 ../../../index.rst:190
+#: ../../../index.rst:192 ../../../index.rst:194 ../../../index.rst:196
+msgid ":octicon:`dash`"
+msgstr ""
+
+#: ../../../index.rst:169 ../../../index.rst:171 ../../../index.rst:173
+#: ../../../index.rst:175 ../../../index.rst:179 ../../../index.rst:183
+#: ../../../index.rst:187 ../../../index.rst:189 ../../../index.rst:191
+#: ../../../index.rst:193 ../../../index.rst:195 ../../../index.rst:197
+msgid ""
+"<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-"
+"octicon-dash\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path fill-"
+"rule=\"evenodd\" d=\"M2 7.75A.75.75 0 012.75 7h10a.75.75 0 010 "
+"1.5h-10A.75.75 0 012 7.75z\"></path></svg>"
+msgstr ""
+
+#: ../../../index.rst:170
+msgid "Automatic API documentation"
+msgstr ""
+
+#: ../../../index.rst:170
+msgid "Swagger, ReDoc, Stoplight Elements"
+msgstr ""
+
+#: ../../../index.rst:170
+msgid "Swagger, ReDoc"
+msgstr ""
+
+#: ../../../index.rst:172
+msgid "Data validation"
+msgstr ""
+
+#: ../../../index.rst:174
+msgid "Dependency Injection"
+msgstr ""
+
+#: ../../../index.rst:176
+msgid "Class based routing"
+msgstr ""
+
+#: ../../../index.rst:176 ../../../index.rst:178 ../../../index.rst:184
+#: ../../../index.rst:188
+msgid "(Through extension)"
+msgstr ""
+
+#: ../../../index.rst:178
+msgid "ORM integration"
+msgstr ""
+
+#: ../../../index.rst:178
+msgid "SQLAlchemy, Tortoise, Piccolo"
+msgstr ""
+
+#: ../../../index.rst:180
+msgid "Templating"
+msgstr ""
+
+#: ../../../index.rst:180
+msgid "Jinja, Mako"
+msgstr ""
+
+#: ../../../index.rst:180
+msgid "Jinja"
+msgstr ""
+
+#: ../../../index.rst:182
+msgid "MessagePack"
+msgstr ""
+
+#: ../../../index.rst:184
+msgid "CORS"
+msgstr ""
+
+#: ../../../index.rst:186
+msgid "CSRF"
+msgstr ""
+
+#: ../../../index.rst:188
+msgid "Rate-limiting"
+msgstr ""
+
+#: ../../../index.rst:190
+msgid "JWT"
+msgstr ""
+
+#: ../../../index.rst:192
+msgid "Sessions"
+msgstr ""
+
+#: ../../../index.rst:192
+msgid "Client-side"
+msgstr ""
+
+#: ../../../index.rst:194
+msgid "Authentication"
+msgstr ""
+
+#: ../../../index.rst:194
+msgid "JWT / Session based"
+msgstr ""
+
+#: ../../../index.rst:196
+msgid "Caching"
+msgstr ""
+
+#: ../../../index.rst:201
+msgid "Example Applications"
+msgstr ""
+
+#: ../../../index.rst:204
+msgid ""
+"`starlite-pg-redis-docker <https://github.com/starlite-api/starlite-pg-redis-"
+"docker>`_ : In addition to Starlite, this demonstrates a pattern of "
+"application modularity, SQLAlchemy 2.0 ORM, Redis cache connectivity, and "
+"more. Like all Starlite projects, this application is open to contributions, "
+"big and small."
+msgstr ""
+
+#: ../../../index.rst:207
+msgid ""
+"`starlite-hello-world <https://github.com/starlite-api/starlite-hello-"
+"world>`_: A bare-minimum application setup. Great for testing and POC work."
+msgstr ""

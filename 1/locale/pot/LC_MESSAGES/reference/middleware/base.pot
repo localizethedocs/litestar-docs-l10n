@@ -1,0 +1,200 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/middleware/base.rst:2
+msgid "base"
+msgstr ""
+
+#: ../../../../starlite/middleware/base.py:docstring of
+#: starlite.middleware.base.MiddlewareProtocol:1
+msgid "Bases: :py:class:`~typing.Protocol`"
+msgstr ""
+
+#: ../../../../starlite/middleware/base.py:docstring of
+#: starlite.middleware.base.MiddlewareProtocol:1
+msgid "Abstract middleware protocol."
+msgstr ""
+
+#: ../../../../starlite/middleware/base.py:docstring of
+#: starlite.middleware.base.AbstractMiddleware.__call__:1
+#: starlite.middleware.base.MiddlewareProtocol.__call__:1
+msgid "Execute the ASGI middleware."
+msgstr ""
+
+#: ../../../../starlite/middleware/base.py:docstring of
+#: starlite.middleware.base.AbstractMiddleware.__call__:3
+#: starlite.middleware.base.MiddlewareProtocol.__call__:3
+msgid ""
+"Called by the previous middleware in the stack if a response is not awaited "
+"prior."
+msgstr ""
+
+#: ../../../../starlite/middleware/base.py:docstring of
+#: starlite.middleware.base.AbstractMiddleware.__call__:5
+#: starlite.middleware.base.MiddlewareProtocol.__call__:5
+msgid ""
+"Upon completion, middleware should call the next ASGI handler and await it - "
+"or await a response created in its closure."
+msgstr ""
+
+#: ../../../../starlite/middleware/base.py:docstring of
+#: starlite.middleware.base.AbstractMiddleware.__call__:0
+#: starlite.middleware.base.AbstractMiddleware.__init__:0
+#: starlite.middleware.base.DefineMiddleware.__call__:0
+#: starlite.middleware.base.DefineMiddleware.__init__:0
+#: starlite.middleware.base.MiddlewareProtocol.__call__:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../starlite/middleware/base.py:docstring of
+#: starlite.middleware.base.AbstractMiddleware.__call__:8
+#: starlite.middleware.base.MiddlewareProtocol.__call__:8
+msgid "The ASGI connection scope."
+msgstr ""
+
+#: ../../../../starlite/middleware/base.py:docstring of
+#: starlite.middleware.base.AbstractMiddleware.__call__:9
+#: starlite.middleware.base.MiddlewareProtocol.__call__:9
+msgid "The ASGI receive function."
+msgstr ""
+
+#: ../../../../starlite/middleware/base.py:docstring of
+#: starlite.middleware.base.AbstractMiddleware.__call__:10
+#: starlite.middleware.base.MiddlewareProtocol.__call__:10
+msgid "The ASGI send function."
+msgstr ""
+
+#: ../../../../starlite/middleware/base.py:docstring of
+#: starlite.middleware.base.AbstractMiddleware.__call__:0
+#: starlite.middleware.base.DefineMiddleware.__call__:0
+#: starlite.middleware.base.MiddlewareProtocol.__call__:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/middleware/base.py:docstring of
+#: starlite.middleware.base.AbstractMiddleware.__call__:12
+#: starlite.middleware.base.MiddlewareProtocol.__call__:12
+msgid "None"
+msgstr ""
+
+#: ../../../../starlite/middleware/base.py:docstring of
+#: starlite.middleware.base.AbstractMiddleware:1
+#: starlite.middleware.base.DefineMiddleware:1
+msgid "Bases: :py:class:`object`"
+msgstr ""
+
+#: ../../../../starlite/middleware/base.py:docstring of
+#: starlite.middleware.base.DefineMiddleware:1
+msgid ""
+"Container enabling passing ``*args`` and ``**kwargs`` to Middleware class "
+"constructors and factory functions."
+msgstr ""
+
+#: ../../../../starlite/middleware/base.py:docstring of
+#: starlite.middleware.base.DefineMiddleware.__init__:1
+msgid "Initialize ``DefineMiddleware``."
+msgstr ""
+
+#: ../../../../starlite/middleware/base.py:docstring of
+#: starlite.middleware.base.DefineMiddleware.__init__:3
+msgid "A callable that returns an ASGIApp."
+msgstr ""
+
+#: ../../../../starlite/middleware/base.py:docstring of
+#: starlite.middleware.base.DefineMiddleware.__init__:4
+msgid "Positional arguments to pass to the callable."
+msgstr ""
+
+#: ../../../../starlite/middleware/base.py:docstring of
+#: starlite.middleware.base.DefineMiddleware.__init__:5
+msgid "Key word arguments to pass to the callable."
+msgstr ""
+
+#: ../../../../starlite/middleware/base.py:docstring of
+#: starlite.middleware.base.DefineMiddleware.__init__:7
+msgid "Notes"
+msgstr ""
+
+#: ../../../../starlite/middleware/base.py:docstring of
+#: starlite.middleware.base.DefineMiddleware.__init__:9
+msgid ""
+"The callable will be passed a kwarg ``app``, which is the next ASGI app to "
+"call in the middleware stack. It therefore must define such a kwarg."
+msgstr ""
+
+#: ../../../../starlite/middleware/base.py:docstring of
+#: starlite.middleware.base.DefineMiddleware.__call__:1
+msgid "Call the middleware constructor or factory."
+msgstr ""
+
+#: ../../../../starlite/middleware/base.py:docstring of
+#: starlite.middleware.base.DefineMiddleware.__call__:3
+msgid ""
+"An ASGIApp, this value is the next ASGI handler to call in the middleware "
+"stack."
+msgstr ""
+
+#: ../../../../starlite/middleware/base.py:docstring of
+#: starlite.middleware.base.DefineMiddleware.__call__:5
+msgid ""
+"Calls :attr:`DefineMiddleware.middleware` and returns the ASGIApp created."
+msgstr ""
+
+#: ../../../../starlite/middleware/base.py:docstring of
+#: starlite.middleware.base.AbstractMiddleware:1
+msgid ""
+"Abstract middleware providing base functionality common to all middlewares, "
+"for dynamically engaging/bypassing the middleware based on paths, ``opt``-"
+"keys and scope types."
+msgstr ""
+
+#: ../../../../starlite/middleware/base.py:docstring of
+#: starlite.middleware.base.AbstractMiddleware:4
+msgid "When implementing new middleware, this class should be used as a base."
+msgstr ""
+
+#: ../../../../starlite/middleware/base.py:docstring of
+#: starlite.middleware.base.AbstractMiddleware.__init__:1
+msgid "Initialize the middleware."
+msgstr ""
+
+#: ../../../../starlite/middleware/base.py:docstring of
+#: starlite.middleware.base.AbstractMiddleware.__init__:3
+msgid "The ``next`` ASGI app to call."
+msgstr ""
+
+#: ../../../../starlite/middleware/base.py:docstring of
+#: starlite.middleware.base.AbstractMiddleware.__init__:4
+msgid ""
+"A pattern or list of patterns to match against a request's path. If a match "
+"is found, the middleware will be skipped."
+msgstr ""
+
+#: ../../../../starlite/middleware/base.py:docstring of
+#: starlite.middleware.base.AbstractMiddleware.__init__:6
+msgid ""
+"An identifier that is set in the route handler ``opt`` key which allows "
+"skipping the middleware."
+msgstr ""
+
+#: ../../../../starlite/middleware/base.py:docstring of
+#: starlite.middleware.base.AbstractMiddleware.__init__:8
+msgid ""
+"ASGI scope types, should be a set including either or both 'ScopeType.HTTP' "
+"and 'ScopeType.WEBSOCKET'."
+msgstr ""

@@ -1,0 +1,82 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/middleware/cors.rst:2
+msgid "cors"
+msgstr ""
+
+#: ../../../../starlite/middleware/cors.py:docstring of
+#: starlite.middleware.cors.CORSMiddleware:1
+msgid "Bases: :py:class:`~starlite.middleware.base.AbstractMiddleware`"
+msgstr ""
+
+#: ../../../../starlite/middleware/cors.py:docstring of
+#: starlite.middleware.cors.CORSMiddleware:1
+msgid "CORS Middleware."
+msgstr ""
+
+#: ../../../../starlite/middleware/cors.py:docstring of
+#: starlite.middleware.cors.CORSMiddleware.__init__:1
+msgid "Middleware that adds CORS validation to the application."
+msgstr ""
+
+#: ../../../../starlite/middleware/cors.py:docstring of
+#: starlite.middleware.cors.CORSMiddleware.__init__:0
+#: starlite.middleware.cors.CORSMiddleware.send_wrapper:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../starlite/middleware/cors.py:docstring of
+#: starlite.middleware.cors.CORSMiddleware.__init__:3
+msgid "The ``next`` ASGI app to call."
+msgstr ""
+
+#: ../../../../starlite/middleware/cors.py:docstring of
+#: starlite.middleware.cors.CORSMiddleware.__init__:4
+msgid "An instance of :class:`CORSConfig <starlite.config.cors.CORSConfig>`"
+msgstr ""
+
+#: ../../../../starlite/middleware/cors.py:docstring of
+#: starlite.middleware.cors.CORSMiddleware.send_wrapper:1
+msgid "Wrap ``send`` to ensure that state is not disconnected."
+msgstr ""
+
+#: ../../../../starlite/middleware/cors.py:docstring of
+#: starlite.middleware.cors.CORSMiddleware.send_wrapper:3
+msgid "Boolean flag dictating if the connection has a cookie set."
+msgstr ""
+
+#: ../../../../starlite/middleware/cors.py:docstring of
+#: starlite.middleware.cors.CORSMiddleware.send_wrapper:4
+msgid "The value of the ``Origin`` header."
+msgstr ""
+
+#: ../../../../starlite/middleware/cors.py:docstring of
+#: starlite.middleware.cors.CORSMiddleware.send_wrapper:5
+msgid "The ASGI send function."
+msgstr ""
+
+#: ../../../../starlite/middleware/cors.py:docstring of
+#: starlite.middleware.cors.CORSMiddleware.send_wrapper:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/middleware/cors.py:docstring of
+#: starlite.middleware.cors.CORSMiddleware.send_wrapper:7
+msgid "An ASGI send function."
+msgstr ""

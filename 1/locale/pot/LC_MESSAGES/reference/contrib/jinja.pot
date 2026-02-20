@@ -1,0 +1,99 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/contrib/jinja.rst:2
+msgid "jinja"
+msgstr ""
+
+#: ../../../../starlite/contrib/jinja.py:docstring of
+#: starlite.contrib.jinja.JinjaTemplateEngine:1
+msgid ""
+"Bases: :py:class:`~starlite.template.base.TemplateEngineProtocol`\\ [:py:"
+"class:`JinjaTemplate`]"
+msgstr ""
+
+#: ../../../../starlite/contrib/jinja.py:docstring of
+#: starlite.contrib.jinja.JinjaTemplateEngine:1
+msgid "The engine instance."
+msgstr ""
+
+#: ../../../../starlite/contrib/jinja.py:docstring of
+#: starlite.contrib.jinja.JinjaTemplateEngine.__init__:1
+msgid "Jinja2 based TemplateEngine."
+msgstr ""
+
+#: ../../../../starlite/contrib/jinja.py:docstring of
+#: starlite.contrib.jinja.JinjaTemplateEngine.__init__:0
+#: starlite.contrib.jinja.JinjaTemplateEngine.register_template_callable:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../starlite/contrib/jinja.py:docstring of
+#: starlite.contrib.jinja.JinjaTemplateEngine.__init__:3
+msgid "Direct path or list of directory paths from which to serve templates."
+msgstr ""
+
+#: ../../../../starlite/contrib/jinja.py:docstring of
+#: starlite.contrib.jinja.JinjaTemplateEngine.get_template:1
+msgid ""
+"Retrieve a template by matching its name (dotted path) with files in the "
+"directory or directories provided. :param template_name: A dotted path"
+msgstr ""
+
+#: ../../../../starlite/contrib/jinja.py:docstring of
+#: starlite.contrib.jinja.JinjaTemplateEngine.get_template:0
+#: starlite.contrib.jinja.JinjaTemplateEngine.register_template_callable:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/contrib/jinja.py:docstring of
+#: starlite.contrib.jinja.JinjaTemplateEngine.get_template:4
+msgid "JinjaTemplate instance"
+msgstr ""
+
+#: ../../../../starlite/contrib/jinja.py:docstring of
+#: starlite.contrib.jinja.JinjaTemplateEngine.get_template:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../starlite/contrib/jinja.py:docstring of
+#: starlite.contrib.jinja.JinjaTemplateEngine.get_template:6
+msgid "if no template is found."
+msgstr ""
+
+#: ../../../../starlite/contrib/jinja.py:docstring of
+#: starlite.contrib.jinja.JinjaTemplateEngine.register_template_callable:1
+msgid "Register a callable on the template engine."
+msgstr ""
+
+#: ../../../../starlite/contrib/jinja.py:docstring of
+#: starlite.contrib.jinja.JinjaTemplateEngine.register_template_callable:3
+msgid ""
+"The callable key, i.e. the value to use inside the template to call the "
+"callable."
+msgstr ""
+
+#: ../../../../starlite/contrib/jinja.py:docstring of
+#: starlite.contrib.jinja.JinjaTemplateEngine.register_template_callable:4
+msgid "A callable to register."
+msgstr ""
+
+#: ../../../../starlite/contrib/jinja.py:docstring of
+#: starlite.contrib.jinja.JinjaTemplateEngine.register_template_callable:6
+msgid "None"
+msgstr ""

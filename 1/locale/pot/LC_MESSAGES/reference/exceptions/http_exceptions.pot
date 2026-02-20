@@ -1,0 +1,222 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/exceptions/http_exceptions.rst:2
+msgid "http_exceptions"
+msgstr ""
+
+#: ../../../../starlite/exceptions/http_exceptions.py:docstring of
+#: starlite.exceptions.http_exceptions.HTTPException:1
+msgid ""
+"Bases: :py:class:`~starlite.exceptions.base_exceptions.StarLiteException`"
+msgstr ""
+
+#: ../../../../starlite/exceptions/http_exceptions.py:docstring of
+#: starlite.exceptions.http_exceptions.HTTPException:1
+msgid "Base exception for HTTP error responses."
+msgstr ""
+
+#: ../../../../starlite/exceptions/http_exceptions.py:docstring of
+#: starlite.exceptions.http_exceptions.HTTPException:3
+msgid "These exceptions carry information to construct an HTTP response."
+msgstr ""
+
+#: ../../../../starlite/exceptions/http_exceptions.py:docstring of
+#: starlite.exceptions.http_exceptions.HTTPException.__init__:1
+msgid "Initialize ``HTTPException``."
+msgstr ""
+
+#: ../../../../starlite/exceptions/http_exceptions.py:docstring of
+#: starlite.exceptions.http_exceptions.HTTPException.__init__:3
+msgid "Set ``detail`` and ``args`` if not provided."
+msgstr ""
+
+#: ../../../../starlite/exceptions/http_exceptions.py:docstring of
+#: starlite.exceptions.http_exceptions.HTTPException.__init__:0
+#: starlite.exceptions.http_exceptions.TemplateNotFoundException.__init__:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../starlite/exceptions/http_exceptions.py:docstring of
+#: starlite.exceptions.http_exceptions.HTTPException.__init__:5
+msgid "if ``detail`` kwarg not provided, first arg should be error detail."
+msgstr ""
+
+#: ../../../../starlite/exceptions/http_exceptions.py:docstring of
+#: starlite.exceptions.http_exceptions.HTTPException.__init__:6
+msgid "Exception details or message. Will default to args[0] if not provided."
+msgstr ""
+
+#: ../../../../starlite/exceptions/http_exceptions.py:docstring of
+#: starlite.exceptions.http_exceptions.HTTPException.__init__:7
+msgid "Exception HTTP status code."
+msgstr ""
+
+#: ../../../../starlite/exceptions/http_exceptions.py:docstring of
+#: starlite.exceptions.http_exceptions.HTTPException.__init__:8
+msgid "Headers to set on the response."
+msgstr ""
+
+#: ../../../../starlite/exceptions/http_exceptions.py:docstring of
+#: starlite.exceptions.http_exceptions.HTTPException.__init__:9
+#: ../../../../docstring
+#: starlite.exceptions.http_exceptions.HTTPException.extra:1
+msgid "An extra mapping to attach to the exception."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.exceptions.http_exceptions.ClientException.status_code:1
+#: starlite.exceptions.http_exceptions.HTTPException.status_code:1
+#: starlite.exceptions.http_exceptions.InternalServerException.status_code:1
+#: starlite.exceptions.http_exceptions.MethodNotAllowedException.status_code:1
+#: starlite.exceptions.http_exceptions.NotAuthorizedException.status_code:1
+#: starlite.exceptions.http_exceptions.NotFoundException.status_code:1
+#: starlite.exceptions.http_exceptions.PermissionDeniedException.status_code:1
+#: starlite.exceptions.http_exceptions.ServiceUnavailableException.status_code:1
+#: starlite.exceptions.http_exceptions.TooManyRequestsException.status_code:1
+msgid "Exception status code."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.exceptions.http_exceptions.HTTPException.detail:1
+msgid "Exception details or message."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.exceptions.http_exceptions.HTTPException.headers:1
+msgid "Headers to attach to the response."
+msgstr ""
+
+#: ../../../../starlite/exceptions/http_exceptions.py:docstring of
+#: starlite.exceptions.http_exceptions.ImproperlyConfiguredException:1
+msgid ""
+"Bases: :py:class:`~starlite.exceptions.http_exceptions.HTTPException`, :py:"
+"class:`ValueError`"
+msgstr ""
+
+#: ../../../../starlite/exceptions/http_exceptions.py:docstring of
+#: starlite.exceptions.http_exceptions.ImproperlyConfiguredException:1
+msgid "Application has improper configuration."
+msgstr ""
+
+#: ../../../../starlite/exceptions/http_exceptions.py:docstring of
+#: starlite.exceptions.http_exceptions.ClientException:1
+#: starlite.exceptions.http_exceptions.InternalServerException:1
+msgid "Bases: :py:class:`~starlite.exceptions.http_exceptions.HTTPException`"
+msgstr ""
+
+#: ../../../../starlite/exceptions/http_exceptions.py:docstring of
+#: starlite.exceptions.http_exceptions.ClientException:1
+msgid "Client error."
+msgstr ""
+
+#: ../../../../starlite/exceptions/http_exceptions.py:docstring of
+#: starlite.exceptions.http_exceptions.NotFoundException:1
+#: starlite.exceptions.http_exceptions.ValidationException:1
+msgid ""
+"Bases: :py:class:`~starlite.exceptions.http_exceptions.ClientException`, :py:"
+"class:`ValueError`"
+msgstr ""
+
+#: ../../../../starlite/exceptions/http_exceptions.py:docstring of
+#: starlite.exceptions.http_exceptions.ValidationException:1
+msgid "Client data validation error."
+msgstr ""
+
+#: ../../../../starlite/exceptions/http_exceptions.py:docstring of
+#: starlite.exceptions.http_exceptions.MethodNotAllowedException:1
+#: starlite.exceptions.http_exceptions.NotAuthorizedException:1
+#: starlite.exceptions.http_exceptions.PermissionDeniedException:1
+#: starlite.exceptions.http_exceptions.TooManyRequestsException:1
+msgid "Bases: :py:class:`~starlite.exceptions.http_exceptions.ClientException`"
+msgstr ""
+
+#: ../../../../starlite/exceptions/http_exceptions.py:docstring of
+#: starlite.exceptions.http_exceptions.NotAuthorizedException:1
+msgid ""
+"Request lacks valid authentication credentials for the requested resource."
+msgstr ""
+
+#: ../../../../starlite/exceptions/http_exceptions.py:docstring of
+#: starlite.exceptions.http_exceptions.PermissionDeniedException:1
+msgid "Request understood, but not authorized."
+msgstr ""
+
+#: ../../../../starlite/exceptions/http_exceptions.py:docstring of
+#: starlite.exceptions.http_exceptions.NotFoundException:1
+msgid "Cannot find the requested resource."
+msgstr ""
+
+#: ../../../../starlite/exceptions/http_exceptions.py:docstring of
+#: starlite.exceptions.http_exceptions.MethodNotAllowedException:1
+msgid ""
+"Server knows the request method, but the target resource doesn't support "
+"this method."
+msgstr ""
+
+#: ../../../../starlite/exceptions/http_exceptions.py:docstring of
+#: starlite.exceptions.http_exceptions.TooManyRequestsException:1
+msgid "Request limits have been exceeded."
+msgstr ""
+
+#: ../../../../starlite/exceptions/http_exceptions.py:docstring of
+#: starlite.exceptions.http_exceptions.InternalServerException:1
+msgid ""
+"Server encountered an unexpected condition that prevented it from fulfilling "
+"the request."
+msgstr ""
+
+#: ../../../../starlite/exceptions/http_exceptions.py:docstring of
+#: starlite.exceptions.http_exceptions.NoRouteMatchFoundException:1
+#: starlite.exceptions.http_exceptions.ServiceUnavailableException:1
+#: starlite.exceptions.http_exceptions.TemplateNotFoundException:1
+msgid ""
+"Bases: :py:class:`~starlite.exceptions.http_exceptions."
+"InternalServerException`"
+msgstr ""
+
+#: ../../../../starlite/exceptions/http_exceptions.py:docstring of
+#: starlite.exceptions.http_exceptions.ServiceUnavailableException:1
+msgid "Server is not ready to handle the request."
+msgstr ""
+
+#: ../../../../starlite/exceptions/http_exceptions.py:docstring of
+#: starlite.exceptions.http_exceptions.NoRouteMatchFoundException:1
+msgid "A route with the given name could not be found."
+msgstr ""
+
+#: ../../../../starlite/exceptions/http_exceptions.py:docstring of
+#: starlite.exceptions.http_exceptions.TemplateNotFoundException:1
+msgid "Referenced template could not be found."
+msgstr ""
+
+#: ../../../../starlite/exceptions/http_exceptions.py:docstring of
+#: starlite.exceptions.http_exceptions.TemplateNotFoundException.__init__:1
+msgid "Initialize ``TemplateNotFoundException``."
+msgstr ""
+
+#: ../../../../starlite/exceptions/http_exceptions.py:docstring of
+#: starlite.exceptions.http_exceptions.TemplateNotFoundException.__init__:3
+msgid ""
+"Passed through to ``super().__init__()`` - should not include ``detail``."
+msgstr ""
+
+#: ../../../../starlite/exceptions/http_exceptions.py:docstring of
+#: starlite.exceptions.http_exceptions.TemplateNotFoundException.__init__:5
+msgid "Name of template that could not be found."
+msgstr ""
