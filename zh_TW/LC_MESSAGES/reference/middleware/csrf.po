@@ -1,0 +1,108 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/middleware/csrf.rst:2
+msgid "csrf"
+msgstr ""
+
+#: ../../../../litestar/middleware/csrf.py:docstring of
+#: litestar.middleware.csrf.CSRFMiddleware:1
+msgid "Bases: :py:class:`~litestar.middleware.base.MiddlewareProtocol`"
+msgstr ""
+
+#: ../../../../litestar/middleware/csrf.py:docstring of
+#: litestar.middleware.csrf.CSRFMiddleware:1
+msgid "CSRF Middleware class."
+msgstr ""
+
+#: ../../../../litestar/middleware/csrf.py:docstring of
+#: litestar.middleware.csrf.CSRFMiddleware:3
+msgid ""
+"This Middleware protects against attacks by setting a CSRF cookie with a "
+"token and verifying it in request headers."
+msgstr ""
+
+#: ../../../../litestar/middleware/csrf.py:docstring of
+#: litestar.middleware.csrf.CSRFMiddleware.__init__:1
+msgid "Initialize ``CSRFMiddleware``."
+msgstr ""
+
+#: ../../../reference/middleware/csrf.rst:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../litestar/middleware/csrf.py:docstring of
+#: litestar.middleware.csrf.CSRFMiddleware.__init__:3
+msgid "The ``next`` ASGI app to call."
+msgstr ""
+
+#: ../../../../litestar/middleware/csrf.py:docstring of
+#: litestar.middleware.csrf.CSRFMiddleware.__init__:4
+msgid "The CSRFConfig instance."
+msgstr ""
+
+#: ../../../../litestar/middleware/csrf.py:docstring of
+#: litestar.middleware.csrf.CSRFMiddleware.__call__:1
+msgid "ASGI callable."
+msgstr ""
+
+#: ../../../../litestar/middleware/csrf.py:docstring of
+#: litestar.middleware.csrf.CSRFMiddleware.__call__:3
+msgid "The ASGI connection scope."
+msgstr ""
+
+#: ../../../../litestar/middleware/csrf.py:docstring of
+#: litestar.middleware.csrf.CSRFMiddleware.__call__:4
+msgid "The ASGI receive function."
+msgstr ""
+
+#: ../../../../litestar/middleware/csrf.py:docstring of
+#: litestar.middleware.csrf.CSRFMiddleware.__call__:5
+#: litestar.middleware.csrf.CSRFMiddleware.create_send_wrapper:4
+msgid "The ASGI send function."
+msgstr ""
+
+#: ../../../reference/middleware/csrf.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/middleware/csrf.py:docstring of
+#: litestar.middleware.csrf.CSRFMiddleware.__call__:7
+msgid "None"
+msgstr ""
+
+#: ../../../../litestar/middleware/csrf.py:docstring of
+#: litestar.middleware.csrf.CSRFMiddleware.create_send_wrapper:1
+msgid "Wrap ``send`` to handle CSRF validation."
+msgstr ""
+
+#: ../../../../litestar/middleware/csrf.py:docstring of
+#: litestar.middleware.csrf.CSRFMiddleware.create_send_wrapper:3
+msgid "The CSRF token."
+msgstr ""
+
+#: ../../../../litestar/middleware/csrf.py:docstring of
+#: litestar.middleware.csrf.CSRFMiddleware.create_send_wrapper:5
+msgid "CSRF cookie."
+msgstr ""
+
+#: ../../../../litestar/middleware/csrf.py:docstring of
+#: litestar.middleware.csrf.CSRFMiddleware.create_send_wrapper:7
+msgid "An ASGI send function."
+msgstr ""

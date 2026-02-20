@@ -1,0 +1,322 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/cli.rst:2
+msgid "cli"
+msgstr ""
+
+#: ../../../../litestar/cli/__init__.py:docstring of litestar.cli:1
+#: ../../../../litestar:1
+msgid "Litestar CLI."
+msgstr ""
+
+#: ../../../../litestar:1
+msgid ""
+"The application to will be automatically discovered if it's in one of these "
+"canonical paths: 'app.py', 'asgi.py', 'application.py' or 'app/__init__.py'. "
+"When auto-discovering application factories, functions with the name "
+"'create_app' are considered, or functions that are annotated as returning a "
+"'Litestar' instance."
+msgstr ""
+
+#: ../../../../litestar:1
+msgid ""
+"Alternatively, the application can be specified explicitly via the '--app' "
+"option ('litestar --app=<module name>.<submodule>:<app instance or "
+"factory>') or the 'LITESTAR_APP' environment variable of the same name."
+msgstr ""
+
+#: ../../../reference/cli.rst:0
+msgid "Usage"
+msgstr ""
+
+#: ../../../../litestar:1
+msgid "litestar [OPTIONS] COMMAND [ARGS]..."
+msgstr ""
+
+#: ../../../reference/cli.rst:0
+msgid "Options"
+msgstr ""
+
+#: ../../../../litestar:1
+msgid "Module path to a Litestar application"
+msgstr ""
+
+#: ../../../../litestar:1
+msgid ""
+"Look for APP in the specified directory, by adding this to the PYTHONPATH. "
+"Defaults to the current working directory."
+msgstr ""
+
+#: ../../../../litestar info:1
+msgid "Show information about the detected Litestar app."
+msgstr ""
+
+#: ../../../../litestar info:1
+msgid "litestar info [OPTIONS]"
+msgstr ""
+
+#: ../../../../litestar routes:1
+msgid "Display information about the application's routes."
+msgstr ""
+
+#: ../../../../litestar routes:1
+msgid "litestar routes [OPTIONS]"
+msgstr ""
+
+#: ../../../../litestar routes:1
+msgid "Include schema routes"
+msgstr ""
+
+#: ../../../../litestar routes:1
+msgid "routes to exclude via regex"
+msgstr ""
+
+#: ../../../../litestar run:1
+msgid "Run a Litestar app. (requires 'uvicorn' to be installed)."
+msgstr ""
+
+#: ../../../../litestar run:1
+msgid ""
+"The application will be automatically discovered, or can be set as an option "
+"to the main 'litestar' command. Run 'litestar --help' for more information "
+"about app autodiscovery"
+msgstr ""
+
+#: ../../../../litestar run:1
+msgid "litestar run [OPTIONS]"
+msgstr ""
+
+#: ../../../../litestar run:1
+msgid "Reload server on changes"
+msgstr ""
+
+#: ../../../../litestar run:1
+msgid "Directories to watch for file changes"
+msgstr ""
+
+#: ../../../../litestar run:1
+msgid "Glob patterns for files to include when watching for file changes"
+msgstr ""
+
+#: ../../../../litestar run:1
+msgid "Glob patterns for files to exclude when watching for file changes"
+msgstr ""
+
+#: ../../../../litestar run:1
+msgid "Serve under this port"
+msgstr ""
+
+#: ../../../../litestar run:0 schema openapi:0 typescript:0
+msgid "default"
+msgstr ""
+
+#: ../../../../litestar run:1
+msgid "``8000``"
+msgstr ""
+
+#: ../../../../litestar run:1
+msgid "The number of HTTP workers to launch"
+msgstr ""
+
+#: ../../../../litestar run:1
+msgid "``1``"
+msgstr ""
+
+#: ../../../../litestar run:1
+msgid "Server under this host"
+msgstr ""
+
+#: ../../../../litestar run:1
+msgid "``'127.0.0.1'``"
+msgstr ""
+
+#: ../../../../litestar run:1
+msgid "Bind to a socket from this file descriptor."
+msgstr ""
+
+#: ../../../../litestar run:1
+msgid "Bind to a UNIX domain socket."
+msgstr ""
+
+#: ../../../../litestar run:1
+msgid "Run app in debug mode"
+msgstr ""
+
+#: ../../../../litestar run:1
+msgid "Drop into PDB on an exception"
+msgstr ""
+
+#: ../../../../litestar run:1
+msgid "Location of the SSL cert file"
+msgstr ""
+
+#: ../../../../litestar run:1
+msgid "Location of the SSL key file"
+msgstr ""
+
+#: ../../../../litestar run:1
+msgid ""
+"If certificate and key are not found at specified locations, create a self-"
+"signed certificate and a key"
+msgstr ""
+
+#: ../../../reference/cli.rst:0
+msgid "Environment variables"
+msgstr ""
+
+#: ../../../../litestar run:1
+msgid "Provide a default for :option:`-r`"
+msgstr ""
+
+#: ../../../../litestar run:1
+msgid "Provide a default for :option:`-R`"
+msgstr ""
+
+#: ../../../../litestar run:1
+msgid "Provide a default for :option:`-I`"
+msgstr ""
+
+#: ../../../../litestar run:1
+msgid "Provide a default for :option:`-E`"
+msgstr ""
+
+#: ../../../../litestar run:1
+msgid "Provide a default for :option:`-p`"
+msgstr ""
+
+#: ../../../../litestar run:1
+msgid "Provide a default for :option:`-W`"
+msgstr ""
+
+#: ../../../../litestar run:1
+msgid "Provide a default for :option:`-H`"
+msgstr ""
+
+#: ../../../../litestar run:1
+msgid "Provide a default for :option:`-F`"
+msgstr ""
+
+#: ../../../../litestar run:1
+msgid "Provide a default for :option:`-U`"
+msgstr ""
+
+#: ../../../../litestar run:1
+msgid "Provide a default for :option:`-d`"
+msgstr ""
+
+#: ../../../../litestar run:1
+msgid "Provide a default for :option:`-P`"
+msgstr ""
+
+#: ../../../../litestar run:1
+msgid "Provide a default for :option:`--ssl-certfile`"
+msgstr ""
+
+#: ../../../../litestar run:1
+msgid "Provide a default for :option:`--ssl-keyfile`"
+msgstr ""
+
+#: ../../../../litestar run:1
+msgid "Provide a default for :option:`--create-self-signed-cert`"
+msgstr ""
+
+#: ../../../../litestar schema:1
+msgid "Manage server-side OpenAPI schemas."
+msgstr ""
+
+#: ../../../../litestar schema:1
+msgid "litestar schema [OPTIONS] COMMAND [ARGS]..."
+msgstr ""
+
+#: ../../../../litestar schema openapi:1
+msgid "Generate an OpenAPI Schema."
+msgstr ""
+
+#: ../../../../litestar schema openapi:1
+msgid "litestar schema openapi [OPTIONS]"
+msgstr ""
+
+#: ../../../../litestar schema openapi:1 typescript:1
+msgid "output file path"
+msgstr ""
+
+#: ../../../../litestar schema openapi:1
+msgid "``PosixPath('openapi_schema.json')``"
+msgstr ""
+
+#: ../../../../litestar schema typescript:1
+msgid "Generate TypeScript specs from the OpenAPI schema."
+msgstr ""
+
+#: ../../../../litestar schema typescript:1
+msgid "litestar schema typescript [OPTIONS]"
+msgstr ""
+
+#: ../../../../litestar schema typescript:1
+msgid "``PosixPath('api-specs.ts')``"
+msgstr ""
+
+#: ../../../../litestar schema typescript:1
+msgid "namespace to use for the typescript specs"
+msgstr ""
+
+#: ../../../../litestar sessions:1
+msgid "Manage server-side sessions."
+msgstr ""
+
+#: ../../../../litestar sessions:1
+msgid "litestar sessions [OPTIONS] COMMAND [ARGS]..."
+msgstr ""
+
+#: ../../../../litestar sessions clear:1
+msgid "Delete all sessions."
+msgstr ""
+
+#: ../../../../litestar sessions clear:1
+msgid "litestar sessions clear [OPTIONS]"
+msgstr ""
+
+#: ../../../../litestar sessions delete:1
+msgid "Delete a specific session."
+msgstr ""
+
+#: ../../../../litestar sessions delete:1
+msgid "litestar sessions delete [OPTIONS] SESSION_ID"
+msgstr ""
+
+#: ../../../reference/cli.rst:0
+msgid "Arguments"
+msgstr ""
+
+#: ../../../../litestar sessions delete:1
+msgid "Required argument"
+msgstr ""
+
+#: ../../../../litestar version:1
+msgid "Show the currently installed Litestar version."
+msgstr ""
+
+#: ../../../../litestar version:1
+msgid "litestar version [OPTIONS]"
+msgstr ""
+
+#: ../../../../litestar version:1
+msgid "Exclude release level and serial information"
+msgstr ""

@@ -1,0 +1,40 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../tutorials/repository-tutorial/index.rst:2
+msgid "SQLAlchemy Repository Tutorial"
+msgstr ""
+
+#: ../../../tutorials/repository-tutorial/index.rst:5
+msgid ""
+"In this tutorial, we will walk through the process of modelling simple "
+"database relationships, and demonstrate how Litestar's repository modules "
+"can make working with databases a breeze. Lets get started!"
+msgstr ""
+
+#: ../../../tutorials/repository-tutorial/index.rst:10
+msgid "Who is this tutorial for?"
+msgstr ""
+
+#: ../../../tutorials/repository-tutorial/index.rst:13
+msgid ""
+"This tutorial covers Litestar's SQLAlchemy repository. It assumes an "
+"understanding of Litestar's key concepts, as well as a degree of familiarity "
+"with SQLAlchemy."
+msgstr ""

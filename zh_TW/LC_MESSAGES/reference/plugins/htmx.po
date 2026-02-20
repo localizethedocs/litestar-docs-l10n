@@ -1,0 +1,370 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/plugins/htmx.rst:3
+msgid "htmx"
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.response.ClientRedirect:1
+#: litestar_htmx.response.ClientRefresh:1 litestar_htmx.response.HXLocation:1
+#: litestar_htmx.response.HXStopPolling:1
+msgid "Bases: :py:class:`~litestar.response.base.Response`"
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.response.ClientRedirect:1
+msgid "HTMX Response class to support client side redirect."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.response.ClientRedirect.__init__:1
+msgid "Set status code to 200 (required by HTMX), and pass redirect url."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.response.ClientRefresh:1
+msgid "Response to support HTMX client page refresh"
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.response.ClientRefresh.__init__:1
+msgid "Set Status code to 200 and set headers."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.plugin.HTMXConfig:1 litestar_htmx.request.HTMXDetails:1
+msgid "Bases: :py:class:`object`"
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.plugin.HTMXConfig:1
+msgid "Configuration for HTMX Plugin."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.plugins.htmx.HTMXConfig.set_request_class_globally:1
+msgid ""
+"Sets the `app_config.request_class` to the `HTMXRequest` class at the "
+"application level.  Defaults to True"
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.request.HTMXDetails:1
+msgid ""
+"HTMXDetails holds all the values sent by HTMX client in headers and provide "
+"convenient properties."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.request.HTMXDetails.__bool__:1
+msgid "Check if request is sent by an HTMX client."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.request.HTMXDetails.__init__:1
+msgid "Initialize :class:`HTMXDetails`"
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar.plugins.htmx.HTMXDetails.boosted:1
+msgid "Check if request is boosted."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar.plugins.htmx.HTMXDetails.current_url:1
+msgid "Current url value sent by HTMX client."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar.plugins.htmx.HTMXDetails.current_url_abs_path:1
+msgid ""
+"Current url abs path value, to get query and path parameter sent by HTMX "
+"client."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar.plugins.htmx.HTMXDetails.history_restore_request:1
+msgid ""
+"If True then, request is for history restoration after a miss in the local "
+"history cache."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar.plugins.htmx.HTMXDetails.prompt:1
+msgid "User Response to prompt."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar.plugins.htmx.HTMXDetails.prompt:3
+msgid ""
+"<button hx-delete=\"/account\" hx-prompt=\"Enter your account name to "
+"confirm deletion\">Delete My Account</button>"
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar.plugins.htmx.HTMXDetails.target:1
+msgid "ID of the target element if provided on the element."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar.plugins.htmx.HTMXDetails.trigger:1
+msgid "ID of the triggered element if provided on the element."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar.plugins.htmx.HTMXDetails.trigger_name:1
+msgid "Name of the triggered element if provided on the element."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar.plugins.htmx.HTMXDetails.triggering_event:1
+msgid "Name of the triggered event."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar.plugins.htmx.HTMXDetails.triggering_event:3
+msgid ""
+"This value is added by ``event-header`` extension of HTMX to the "
+"``Triggering-Event`` header to requests."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx._utils.HTMXHeaders:1
+msgid "Bases: :py:class:`str`, :py:class:`~enum.Enum`"
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx._utils.HTMXHeaders:1
+msgid "Enum for HTMX Headers"
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.plugin.HTMXPlugin:1
+msgid "Bases: :py:class:`~litestar.plugins.base.InitPluginProtocol`"
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.plugin.HTMXPlugin:1
+msgid "HTMX Plugin."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.plugin.HTMXPlugin.__init__:1
+msgid "Initialize the plugin."
+msgstr ""
+
+#: ../../../reference/plugins/htmx.rst:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.plugin.HTMXPlugin.__init__:3
+msgid ""
+"Configuration for flash messages, including the template engine instance."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.plugin.HTMXPlugin.on_app_init:1
+msgid "Register the HTMX configuration."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.plugin.HTMXPlugin.on_app_init:3
+msgid "The application configuration."
+msgstr ""
+
+#: ../../../reference/plugins/htmx.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.plugin.HTMXPlugin.on_app_init:5
+msgid "The application configuration with the message callable registered."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.request.HTMXRequest:1
+msgid "Bases: :py:class:`~litestar.connection.request.Request`"
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.request.HTMXRequest:1
+msgid "HTMX Request class to work with HTMX client."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.request.HTMXRequest.__init__:1
+msgid "Initialize :class:`HTMXRequest`"
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.response.HTMXTemplate:1
+msgid "Bases: :py:class:`~litestar.response.template.Template`"
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.response.HTMXTemplate:1
+msgid "HTMX template wrapper"
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.response.HTMXTemplate.__init__:1
+msgid "Create HTMXTemplate response."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.response.HTMXTemplate.__init__:3
+msgid ""
+"Either a string value specifying a URL to push to browser history or "
+"``False`` to prevent HTMX client from pushing a url to browser history."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.response.HTMXTemplate.__init__:5
+msgid "Method value to instruct HTMX which swapping method to use."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.response.HTMXTemplate.__init__:6
+msgid "Value for 'id of target element' to apply changes to."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.response.HTMXTemplate.__init__:7
+msgid "Event name to trigger."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.response.HTMXTemplate.__init__:8
+msgid "Dictionary of parameters if any required with trigger event parameter."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.response.HTMXTemplate.__init__:9
+msgid "Changes to apply after ``receive``, ``settle`` or ``swap`` event."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.response.HTMXTemplate.__init__:10
+msgid "Additional arguments to pass to ``Template``."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.response.HXLocation:1
+msgid "Client side redirect without full page reload."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.response.HXLocation.__init__:1
+msgid ""
+"Initialize HXLocation, Set status code to 200 (required by HTMX), and pass "
+"redirect url."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.response.HXStopPolling:1
+msgid "Stop HTMX client from Polling."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.response.HXStopPolling.__init__:1
+msgid "Initialize"
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.types.HtmxHeaderType:1 litestar_htmx.types.LocationType:1
+#: litestar_htmx.types.TriggerEventType:1
+msgid "Bases: :py:class:`~typing.TypedDict`"
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.types.HtmxHeaderType:1
+msgid "Type for hx_headers parameter in get_headers()."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.types.LocationType:1
+msgid "Type for HX-Location header."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.response.PushUrl:1 litestar_htmx.response.ReplaceUrl:1
+#: litestar_htmx.response.Reswap:1 litestar_htmx.response.Retarget:1
+#: litestar_htmx.response.TriggerEvent:1
+msgid ""
+"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~litestar_htmx.response.T`], :"
+"py:class:`~litestar.response.base.Response`\\ [:py:obj:`~litestar_htmx."
+"response.T`]"
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.response.PushUrl:1
+msgid "Response to push new url into the history stack."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.response.PushUrl.__init__:1
+msgid "Initialize PushUrl."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.response.ReplaceUrl:1
+msgid "Response to replace url in the Browser Location bar."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.response.ReplaceUrl.__init__:1
+msgid "Initialize ReplaceUrl."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.response.Reswap:1
+msgid "Response to specify how the response will be swapped."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.response.Reswap.__init__:1
+msgid "Initialize Reswap."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.response.Retarget:1
+msgid "Response to target different element on the page."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.response.Retarget.__init__:1
+msgid "Initialize Retarget."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.response.TriggerEvent:1
+msgid "Trigger Client side event."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.response.TriggerEvent.__init__:1
+msgid "Initialize TriggerEvent."
+msgstr ""
+
+#: ../../../../litestar/plugins/htmx.py:docstring of
+#: litestar_htmx.types.TriggerEventType:1
+msgid "Type for HX-Trigger header."
+msgstr ""

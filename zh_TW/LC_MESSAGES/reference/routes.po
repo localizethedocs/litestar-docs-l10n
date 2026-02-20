@@ -1,0 +1,194 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/routes.rst:2
+msgid "routes"
+msgstr ""
+
+#: ../../../../litestar/routes/__init__.py:docstring of
+#: litestar.routes.asgi.ASGIRoute:1 litestar.routes.http.HTTPRoute:1
+#: litestar.routes.websocket.WebSocketRoute:1
+msgid "Bases: :py:class:`~litestar.routes.base.BaseRoute`"
+msgstr ""
+
+#: ../../../../litestar/routes/__init__.py:docstring of
+#: litestar.routes.asgi.ASGIRoute:1
+msgid "An ASGI route, handling a single ``ASGIRouteHandler``"
+msgstr ""
+
+#: ../../../../litestar/routes/__init__.py:docstring of
+#: litestar.routes.asgi.ASGIRoute.__init__:1
+#: litestar.routes.base.BaseRoute.__init__:1
+#: litestar.routes.websocket.WebSocketRoute.__init__:1
+msgid "Initialize the route."
+msgstr ""
+
+#: ../../../reference/routes.rst:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../litestar/routes/__init__.py:docstring of
+#: litestar.routes.asgi.ASGIRoute.__init__:3
+#: litestar.routes.http.HTTPRoute.__init__:3
+#: litestar.routes.websocket.WebSocketRoute.__init__:3
+msgid "The path for the route."
+msgstr ""
+
+#: ../../../../litestar/routes/__init__.py:docstring of
+#: litestar.routes.asgi.ASGIRoute.__init__:4
+msgid "An instance of :class:`~.handlers.ASGIRouteHandler`."
+msgstr ""
+
+#: ../../../../litestar/routes/__init__.py:docstring of
+#: litestar.routes.asgi.ASGIRoute.handle:1
+msgid ""
+"ASGI app that authorizes the connection and then awaits the handler function."
+msgstr ""
+
+#: ../../../../litestar/routes/__init__.py:docstring of
+#: litestar.routes.asgi.ASGIRoute.handle:3
+#: litestar.routes.base.BaseRoute.handle:3
+#: litestar.routes.http.HTTPRoute.handle:4
+#: litestar.routes.websocket.WebSocketRoute.handle:3
+msgid "The ASGI connection scope."
+msgstr ""
+
+#: ../../../../litestar/routes/__init__.py:docstring of
+#: litestar.routes.asgi.ASGIRoute.handle:4
+#: litestar.routes.base.BaseRoute.handle:4
+#: litestar.routes.http.HTTPRoute.handle:5
+#: litestar.routes.websocket.WebSocketRoute.handle:4
+msgid "The ASGI receive function."
+msgstr ""
+
+#: ../../../../litestar/routes/__init__.py:docstring of
+#: litestar.routes.asgi.ASGIRoute.handle:5
+#: litestar.routes.base.BaseRoute.handle:5
+#: litestar.routes.http.HTTPRoute.handle:6
+#: litestar.routes.websocket.WebSocketRoute.handle:5
+msgid "The ASGI send function."
+msgstr ""
+
+#: ../../../reference/routes.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/routes/__init__.py:docstring of
+#: litestar.routes.asgi.ASGIRoute.handle:7
+#: litestar.routes.base.BaseRoute.handle:7
+#: litestar.routes.http.HTTPRoute.handle:8
+#: litestar.routes.websocket.WebSocketRoute.handle:7
+msgid "None"
+msgstr ""
+
+#: ../../../../litestar/routes/__init__.py:docstring of
+#: litestar.routes.base.BaseRoute:1
+msgid "Bases: :py:class:`~abc.ABC`"
+msgstr ""
+
+#: ../../../../litestar/routes/__init__.py:docstring of
+#: litestar.routes.base.BaseRoute:1
+msgid "Base Route class used by Litestar."
+msgstr ""
+
+#: ../../../../litestar/routes/__init__.py:docstring of
+#: litestar.routes.base.BaseRoute:3
+msgid "It's an abstract class meant to be extended."
+msgstr ""
+
+#: ../../../../litestar/routes/__init__.py:docstring of
+#: litestar.routes.base.BaseRoute.__init__:3
+msgid "Names of the associated handler functions"
+msgstr ""
+
+#: ../../../../litestar/routes/__init__.py:docstring of
+#: litestar.routes.base.BaseRoute.__init__:4
+msgid "Base path of the route"
+msgstr ""
+
+#: ../../../../litestar/routes/__init__.py:docstring of
+#: litestar.routes.base.BaseRoute.__init__:5
+msgid "Type of the ASGI scope"
+msgstr ""
+
+#: ../../../../litestar/routes/__init__.py:docstring of
+#: litestar.routes.base.BaseRoute.__init__:6
+msgid "Supported methods"
+msgstr ""
+
+#: ../../../../litestar/routes/__init__.py:docstring of
+#: litestar.routes.base.BaseRoute.handle:1
+msgid "ASGI App of the route."
+msgstr ""
+
+#: ../../../../litestar/routes/__init__.py:docstring of
+#: litestar.routes.http.HTTPRoute:1
+msgid "An HTTP route, capable of handling multiple ``HTTPRouteHandler``\\ s."
+msgstr ""
+
+#: ../../../../litestar/routes/__init__.py:docstring of
+#: litestar.routes.http.HTTPRoute.__init__:1
+msgid "Initialize ``HTTPRoute``."
+msgstr ""
+
+#: ../../../../litestar/routes/__init__.py:docstring of
+#: litestar.routes.http.HTTPRoute.__init__:4
+msgid "A list of :class:`~.handlers.HTTPRouteHandler`."
+msgstr ""
+
+#: ../../../../litestar/routes/__init__.py:docstring of
+#: litestar.routes.http.HTTPRoute.create_handler_map:1
+msgid ""
+"Parse the ``router_handlers`` of this route and return a mapping of http- "
+"methods and route handlers."
+msgstr ""
+
+#: ../../../../litestar/routes/__init__.py:docstring of
+#: litestar.routes.http.HTTPRoute.create_options_handler:1
+msgid "The route path"
+msgstr ""
+
+#: ../../../../litestar/routes/__init__.py:docstring of
+#: litestar.routes.http.HTTPRoute.create_options_handler:3
+msgid "An HTTP route handler for OPTIONS requests."
+msgstr ""
+
+#: ../../../../litestar/routes/__init__.py:docstring of
+#: litestar.routes.http.HTTPRoute.handle:1
+msgid ""
+"ASGI app that creates a Request from the passed in args, determines which "
+"handler function to call and then handles the call."
+msgstr ""
+
+#: ../../../../litestar/routes/__init__.py:docstring of
+#: litestar.routes.websocket.WebSocketRoute:1
+msgid "A websocket route, handling a single ``WebsocketRouteHandler``"
+msgstr ""
+
+#: ../../../../litestar/routes/__init__.py:docstring of
+#: litestar.routes.websocket.WebSocketRoute.__init__:4
+msgid "An instance of :class:`~.handlers.WebsocketRouteHandler`."
+msgstr ""
+
+#: ../../../../litestar/routes/__init__.py:docstring of
+#: litestar.routes.websocket.WebSocketRoute.handle:1
+msgid ""
+"ASGI app that creates a WebSocket from the passed in args, and then awaits "
+"the handler function."
+msgstr ""

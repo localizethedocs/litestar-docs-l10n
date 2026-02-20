@@ -1,0 +1,956 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/security/jwt.rst:2
+msgid "jwt"
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.auth.BaseJWTAuth:1
+msgid ""
+"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~litestar.security.jwt.auth."
+"UserType`, :py:obj:`~litestar.security.jwt.auth.TokenT`], :py:class:"
+"`~litestar.security.base.AbstractSecurityConfig`\\ [:py:obj:`~litestar."
+"security.jwt.auth.UserType`, :py:obj:`~litestar.security.jwt.auth.TokenT`]"
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.auth.BaseJWTAuth:1
+msgid "Base class for JWT Auth backends"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.security.jwt.BaseJWTAuth.accepted_audiences:1
+#: litestar.security.jwt.JWTAuth.accepted_audiences:1
+#: litestar.security.jwt.JWTCookieAuth.accepted_audiences:1
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.accepted_audiences:1
+msgid ""
+"Audiences to accept when verifying the token. If given, and the audience in "
+"the token does not match, a 401 response is returned"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.security.jwt.BaseJWTAuth.accepted_issuers:1
+#: litestar.security.jwt.JWTAuth.accepted_issuers:1
+#: litestar.security.jwt.JWTCookieAuth.accepted_issuers:1
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.accepted_issuers:1
+msgid ""
+"Issuers to accept when verifying the token. If given, and the issuer in the "
+"token does not match, a 401 response is returned"
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.auth.BaseJWTAuth.create_token:1
+msgid ""
+"Create a Token instance from the passed in parameters, persists and returns "
+"it."
+msgstr ""
+
+#: ../../../reference/security/jwt.rst:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.auth.BaseJWTAuth.create_token:3
+#: litestar.security.jwt.auth.BaseJWTAuth.login:3
+#: litestar.security.jwt.auth.JWTCookieAuth.login:3
+#: litestar.security.jwt.auth.OAuth2PasswordBearerAuth.login:3
+msgid ""
+"Unique identifier of the token subject. Usually this is a user ID or "
+"equivalent kind of value."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.auth.BaseJWTAuth.create_token:4
+#: litestar.security.jwt.auth.BaseJWTAuth.login:7
+#: litestar.security.jwt.auth.JWTCookieAuth.login:7
+#: litestar.security.jwt.auth.OAuth2PasswordBearerAuth.login:7
+msgid "An optional timedelta for the token expiration."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.auth.BaseJWTAuth.create_token:5
+#: litestar.security.jwt.auth.BaseJWTAuth.login:8
+#: litestar.security.jwt.auth.JWTCookieAuth.login:8
+#: litestar.security.jwt.auth.OAuth2PasswordBearerAuth.login:8
+msgid "An optional value of the token ``iss`` field."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.auth.BaseJWTAuth.create_token:6
+#: litestar.security.jwt.auth.BaseJWTAuth.login:9
+#: litestar.security.jwt.auth.JWTCookieAuth.login:9
+#: litestar.security.jwt.auth.OAuth2PasswordBearerAuth.login:9
+msgid "An optional value for the token ``aud`` field."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.auth.BaseJWTAuth.create_token:7
+#: litestar.security.jwt.auth.BaseJWTAuth.login:10
+#: litestar.security.jwt.auth.JWTCookieAuth.login:10
+#: litestar.security.jwt.auth.OAuth2PasswordBearerAuth.login:10
+msgid "An optional value for the token ``jti`` field."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.auth.BaseJWTAuth.create_token:8
+#: litestar.security.jwt.auth.BaseJWTAuth.login:11
+#: litestar.security.jwt.auth.JWTCookieAuth.login:11
+#: litestar.security.jwt.auth.OAuth2PasswordBearerAuth.login:11
+msgid "An optional dictionary to include in the token ``extras`` field."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.auth.BaseJWTAuth.create_token:9
+msgid "Additional attributes to set on the token"
+msgstr ""
+
+#: ../../../reference/security/jwt.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.auth.BaseJWTAuth.create_token:11
+msgid "The created token."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.auth.BaseJWTAuth.format_auth_header:1
+msgid "Format a token according to the specified OpenAPI scheme."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.auth.BaseJWTAuth.format_auth_header:3
+msgid "An encoded JWT token"
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.auth.BaseJWTAuth.format_auth_header:5
+msgid "The encoded token formatted for the HTTP headers"
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.auth.BaseJWTAuth.login:1
+#: litestar.security.jwt.auth.JWTCookieAuth.login:1
+#: litestar.security.jwt.auth.OAuth2PasswordBearerAuth.login:1
+msgid "Create a response with a JWT header."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.auth.BaseJWTAuth.login:4
+#: litestar.security.jwt.auth.JWTCookieAuth.login:4
+#: litestar.security.jwt.auth.OAuth2PasswordBearerAuth.login:4
+msgid "An optional response body to send."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.auth.BaseJWTAuth.login:5
+#: litestar.security.jwt.auth.OAuth2PasswordBearerAuth.login:5
+msgid "An optional ``Content-Type``. Defaults to ``application/json``."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.auth.BaseJWTAuth.login:6
+#: litestar.security.jwt.auth.OAuth2PasswordBearerAuth.login:6
+msgid "An optional status code for the response. Defaults to ``201``."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.auth.BaseJWTAuth.login:12
+#: litestar.security.jwt.auth.JWTCookieAuth.login:12
+msgid ""
+"If ``True`` the response will be a dict including the token: ``{ \"token\": "
+"<token> }`` will be returned as the response body. Note: if a response body "
+"is passed this setting will be ignored."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.auth.BaseJWTAuth.login:15
+#: litestar.security.jwt.auth.JWTCookieAuth.login:15
+#: litestar.security.jwt.auth.OAuth2PasswordBearerAuth.login:15
+msgid "A :class:`Response <.response.Response>` instance."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.BaseJWTAuth.middleware:1
+msgid ""
+"Create :class:`JWTAuthenticationMiddleware` wrapped in :class:"
+"`DefineMiddleware <.middleware.base.DefineMiddleware>`."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.BaseJWTAuth.middleware:4
+#: litestar.security.jwt.JWTCookieAuth.middleware:8
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.middleware:8
+msgid ""
+"An instance of :class:`DefineMiddleware <.middleware.base.DefineMiddleware>`."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.BaseJWTAuth.openapi_components:1
+msgid "Create OpenAPI documentation for the JWT auth schema used."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.BaseJWTAuth.openapi_components:3
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.openapi_components:3
+msgid ""
+"An :class:`Components <litestar.openapi.spec.components.Components>` "
+"instance."
+msgstr ""
+
+#: ../../../../docstring of litestar.security.jwt.BaseJWTAuth.require_claims:1
+#: litestar.security.jwt.JWTAuth.require_claims:1
+#: litestar.security.jwt.JWTCookieAuth.require_claims:1
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.require_claims:1
+msgid ""
+"Require these claims to be present in the JWT payload. If any of those "
+"claims is missing, a 401 response is returned"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.security.jwt.BaseJWTAuth.revoked_token_handler:1
+#: litestar.security.jwt.JWTAuth.revoked_token_handler:1
+#: litestar.security.jwt.JWTCookieAuth.revoked_token_handler:1
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.revoked_token_handler:1
+msgid ""
+"Callable that receives the auth value from the authentication middleware and "
+"checks whether the token has been revoked, returning True if revoked, False "
+"otherwise."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.BaseJWTAuth.security_requirement:1
+msgid "Return OpenAPI 3.1."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.BaseJWTAuth.security_requirement:3
+msgid ":data:`SecurityRequirement <.openapi.spec.SecurityRequirement>`"
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.BaseJWTAuth.security_requirement:5
+msgid ""
+"An OpenAPI 3.1 :data:`SecurityRequirement <.openapi.spec."
+"SecurityRequirement>` dictionary."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.middleware.JWTAuthenticationMiddleware.__init__:25
+#: litestar.security.jwt.middleware.JWTCookieAuthenticationMiddleware.__init__:26
+#: ../../../../docstring litestar.security.jwt.BaseJWTAuth.strict_audience:1
+#: litestar.security.jwt.JWTAuth.strict_audience:1
+#: litestar.security.jwt.JWTCookieAuth.strict_audience:1
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.strict_audience:1
+msgid ""
+"Verify that the value of the ``aud`` (*audience*) claim is a single value, "
+"and not a list of values, and matches ``audience`` exactly. Requires that "
+"``accepted_audiences`` is a sequence of length 1"
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.middleware.JWTAuthenticationMiddleware.__init__:23
+#: litestar.security.jwt.middleware.JWTCookieAuthenticationMiddleware.__init__:24
+#: litestar.security.jwt.token.Token.decode:13 ../../../../docstring
+#: litestar.security.jwt.BaseJWTAuth.verify_expiry:1
+#: litestar.security.jwt.JWTAuth.verify_expiry:1
+#: litestar.security.jwt.JWTCookieAuth.verify_expiry:1
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.verify_expiry:1
+msgid ""
+"Verify that the value of the ``exp`` (*expiration*) claim is in the future"
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.middleware.JWTAuthenticationMiddleware.__init__:24
+#: litestar.security.jwt.middleware.JWTCookieAuthenticationMiddleware.__init__:25
+#: litestar.security.jwt.token.Token.decode:15 ../../../../docstring
+#: litestar.security.jwt.BaseJWTAuth.verify_not_before:1
+#: litestar.security.jwt.JWTAuth.verify_not_before:1
+#: litestar.security.jwt.JWTCookieAuth.verify_not_before:1
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.verify_not_before:1
+msgid ""
+"Verify that the value of the ``nbf`` (*not before*) claim is in the past"
+msgstr ""
+
+#: ../../../../docstring of litestar.security.jwt.BaseJWTAuth.token_secret:1
+#: litestar.security.jwt.JWTAuth.token_secret:1
+#: litestar.security.jwt.JWTCookieAuth.token_secret:1
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.token_secret:1
+msgid "Key with which to generate the token hash."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.security.jwt.BaseJWTAuth.retrieve_user_handler:3
+#: litestar.security.jwt.BaseJWTAuth.token_secret:3
+#: litestar.security.jwt.JWTAuth.retrieve_user_handler:3
+#: litestar.security.jwt.JWTAuth.token_secret:3
+#: litestar.security.jwt.JWTCookieAuth.retrieve_user_handler:3
+#: litestar.security.jwt.JWTCookieAuth.token_secret:3
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.retrieve_user_handler:3
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.token_secret:3
+msgid "Notes"
+msgstr ""
+
+#: ../../../../docstring of litestar.security.jwt.BaseJWTAuth.token_secret:5
+#: litestar.security.jwt.JWTAuth.token_secret:5
+#: litestar.security.jwt.JWTCookieAuth.token_secret:5
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.token_secret:5
+msgid ""
+"This value should be kept as a secret and the standard practice is to inject "
+"it into the environment."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.security.jwt.BaseJWTAuth.retrieve_user_handler:1
+#: litestar.security.jwt.JWTAuth.retrieve_user_handler:1
+#: litestar.security.jwt.JWTCookieAuth.retrieve_user_handler:1
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.retrieve_user_handler:1
+msgid ""
+"Callable that receives the ``auth`` value from the authentication middleware "
+"and returns a ``user`` value."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.security.jwt.BaseJWTAuth.retrieve_user_handler:5
+#: litestar.security.jwt.JWTAuth.retrieve_user_handler:5
+#: litestar.security.jwt.JWTCookieAuth.retrieve_user_handler:5
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.retrieve_user_handler:5
+msgid ""
+"User and Auth can be any arbitrary values specified by the security backend."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.security.jwt.BaseJWTAuth.retrieve_user_handler:6
+#: litestar.security.jwt.JWTAuth.retrieve_user_handler:6
+#: litestar.security.jwt.JWTCookieAuth.retrieve_user_handler:6
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.retrieve_user_handler:6
+msgid ""
+"The User and Auth values will be set by the middleware as "
+"``scope[\"user\"]`` and ``scope[\"auth\"]`` respectively. Once provided, "
+"they can access via the ``connection.user`` and ``connection.auth`` "
+"properties."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.security.jwt.BaseJWTAuth.retrieve_user_handler:8
+#: litestar.security.jwt.JWTAuth.retrieve_user_handler:8
+#: litestar.security.jwt.JWTCookieAuth.retrieve_user_handler:8
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.retrieve_user_handler:8
+msgid ""
+"The callable can be sync or async. If it is sync, it will be wrapped to "
+"support async."
+msgstr ""
+
+#: ../../../../docstring of litestar.security.jwt.BaseJWTAuth.algorithm:1
+#: litestar.security.jwt.JWTAuth.algorithm:1
+#: litestar.security.jwt.JWTCookieAuth.algorithm:1
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.algorithm:1
+msgid "Algorithm to use for JWT hashing."
+msgstr ""
+
+#: ../../../../docstring of litestar.security.jwt.BaseJWTAuth.auth_header:1
+#: litestar.security.jwt.JWTAuth.auth_header:1
+#: litestar.security.jwt.JWTCookieAuth.auth_header:1
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.auth_header:1
+msgid "Request header key from which to retrieve the token."
+msgstr ""
+
+#: ../../../../docstring of litestar.security.jwt.BaseJWTAuth.auth_header:3
+#: litestar.security.jwt.JWTAuth.auth_header:3
+#: litestar.security.jwt.JWTCookieAuth.auth_header:3
+msgid "E.g. ``Authorization`` or ``X-Api-Key``."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.security.jwt.BaseJWTAuth.default_token_expiration:1
+#: litestar.security.jwt.JWTAuth.default_token_expiration:1
+#: litestar.security.jwt.JWTCookieAuth.default_token_expiration:1
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.default_token_expiration:1
+msgid "The default value for token expiration."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.security.jwt.BaseJWTAuth.openapi_security_scheme_name:1
+#: litestar.security.jwt.JWTAuth.openapi_security_scheme_name:1
+#: litestar.security.jwt.JWTCookieAuth.openapi_security_scheme_name:1
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.openapi_security_scheme_name:1
+msgid ""
+"The value to use for the OpenAPI security scheme and security requirements."
+msgstr ""
+
+#: ../../../../docstring of litestar.security.jwt.BaseJWTAuth.description:1
+#: litestar.security.jwt.JWTAuth.description:1
+#: litestar.security.jwt.JWTCookieAuth.description:1
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.description:1
+msgid "Description for the OpenAPI security scheme."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.security.jwt.BaseJWTAuth.authentication_middleware_class:1
+msgid "The authentication middleware class to use."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.security.jwt.BaseJWTAuth.authentication_middleware_class:3
+msgid "Must inherit from :class:`JWTAuthenticationMiddleware`"
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.auth.JWTAuth:1
+#: litestar.security.jwt.auth.JWTCookieAuth:1
+#: litestar.security.jwt.auth.OAuth2PasswordBearerAuth:1
+msgid ""
+"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~litestar.security.jwt.auth."
+"UserType`, :py:obj:`~litestar.security.jwt.auth.TokenT`], :py:class:"
+"`~litestar.security.jwt.auth.BaseJWTAuth`\\ [:py:obj:`~litestar.security.jwt."
+"auth.UserType`, :py:obj:`~litestar.security.jwt.auth.TokenT`]"
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.auth.JWTAuth:1
+msgid "JWT Authentication Configuration."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.auth.JWTAuth:3
+msgid ""
+"This class is the main entry point to the library, and it includes methods "
+"to create the middleware, provide login functionality, and create OpenAPI "
+"documentation."
+msgstr ""
+
+#: ../../../../docstring of litestar.security.jwt.JWTAuth.dependencies:1
+#: litestar.security.jwt.JWTCookieAuth.dependencies:1
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.dependencies:1
+msgid "An optional dictionary of dependency providers."
+msgstr ""
+
+#: ../../../../docstring of litestar.security.jwt.JWTAuth.exclude:1
+#: litestar.security.jwt.JWTCookieAuth.exclude:1
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.exclude:1
+msgid "A pattern or list of patterns to skip in the authentication middleware."
+msgstr ""
+
+#: ../../../../docstring of litestar.security.jwt.JWTAuth.exclude_opt_key:1
+#: litestar.security.jwt.JWTCookieAuth.exclude_opt_key:1
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.exclude_opt_key:1
+msgid ""
+"An identifier to use on routes to disable authentication and authorization "
+"checks for a particular route."
+msgstr ""
+
+#: ../../../../docstring of litestar.security.jwt.JWTAuth.guards:1
+#: litestar.security.jwt.JWTCookieAuth.guards:1
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.guards:1
+msgid ""
+"An iterable of guards to call for requests, providing authorization "
+"functionalities."
+msgstr ""
+
+#: ../../../../docstring of litestar.security.jwt.JWTAuth.route_handlers:1
+#: litestar.security.jwt.JWTCookieAuth.route_handlers:1
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.route_handlers:1
+msgid "An optional iterable of route handlers to register."
+msgstr ""
+
+#: ../../../../docstring of litestar.security.jwt.JWTAuth.scopes:1
+#: litestar.security.jwt.JWTCookieAuth.scopes:1
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.scopes:1
+msgid ""
+"ASGI scopes processed by the authentication middleware, if ``None``, both "
+"``http`` and ``websocket`` will be processed."
+msgstr ""
+
+#: ../../../../docstring of litestar.security.jwt.JWTAuth.type_encoders:1
+#: litestar.security.jwt.JWTCookieAuth.type_encoders:1
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.type_encoders:1
+msgid ""
+"A mapping of types to callables that transform them into types supported for "
+"serialization."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.middleware.JWTAuthenticationMiddleware:1
+msgid ""
+"Bases: :py:class:`~litestar.middleware.authentication."
+"AbstractAuthenticationMiddleware`"
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.middleware.JWTAuthenticationMiddleware:1
+msgid "JWT Authentication middleware."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.middleware.JWTAuthenticationMiddleware:3
+msgid "This class provides JWT authentication functionalities."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.middleware.JWTAuthenticationMiddleware.__init__:1
+msgid ""
+"Check incoming requests for an encoded token in the auth header specified, "
+"and if present retrieve the user from persistence using the provided "
+"function."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.middleware.JWTAuthenticationMiddleware.__init__:4
+#: litestar.security.jwt.middleware.JWTCookieAuthenticationMiddleware.__init__:4
+msgid "JWT hashing algorithm to use."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.middleware.JWTAuthenticationMiddleware.__init__:5
+#: litestar.security.jwt.middleware.JWTCookieAuthenticationMiddleware.__init__:5
+msgid ""
+"An ASGIApp, this value is the next ASGI handler to call in the middleware "
+"stack."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.middleware.JWTAuthenticationMiddleware.__init__:6
+#: litestar.security.jwt.middleware.JWTCookieAuthenticationMiddleware.__init__:7
+msgid ""
+"Request header key from which to retrieve the token. E.g. ``Authorization`` "
+"or ``X-Api-Key``."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.middleware.JWTAuthenticationMiddleware.__init__:7
+#: litestar.security.jwt.middleware.JWTCookieAuthenticationMiddleware.__init__:8
+msgid "A pattern or list of patterns to skip."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.middleware.JWTAuthenticationMiddleware.__init__:8
+#: litestar.security.jwt.middleware.JWTCookieAuthenticationMiddleware.__init__:9
+msgid ""
+"An identifier to use on routes to disable authentication for a particular "
+"route."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.middleware.JWTAuthenticationMiddleware.__init__:9
+#: litestar.security.jwt.middleware.JWTCookieAuthenticationMiddleware.__init__:10
+msgid "A sequence of http methods that do not require authentication."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.middleware.JWTAuthenticationMiddleware.__init__:10
+#: litestar.security.jwt.middleware.JWTCookieAuthenticationMiddleware.__init__:11
+msgid ""
+"A function that receives a :class:`Token <.security.jwt.Token>` and returns "
+"a user, which can be any arbitrary value."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.middleware.JWTAuthenticationMiddleware.__init__:12
+#: litestar.security.jwt.middleware.JWTCookieAuthenticationMiddleware.__init__:13
+msgid "ASGI scopes processed by the authentication middleware."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.middleware.JWTAuthenticationMiddleware.__init__:13
+#: litestar.security.jwt.middleware.JWTCookieAuthenticationMiddleware.__init__:14
+msgid ""
+"Secret for decoding the JWT. This value should be equivalent to the secret "
+"used to encode it."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.middleware.JWTAuthenticationMiddleware.__init__:15
+#: litestar.security.jwt.middleware.JWTCookieAuthenticationMiddleware.__init__:16
+msgid "Token class used when encoding / decoding JWTs"
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.middleware.JWTAuthenticationMiddleware.__init__:16
+#: litestar.security.jwt.middleware.JWTCookieAuthenticationMiddleware.__init__:17
+#: litestar.security.jwt.token.Token.decode:6
+msgid ""
+"Verify the audience when decoding the token. If the audience in the token "
+"does not match any audience given, raise a :exc:`NotAuthorizedException`"
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.middleware.JWTAuthenticationMiddleware.__init__:19
+#: litestar.security.jwt.middleware.JWTCookieAuthenticationMiddleware.__init__:20
+#: litestar.security.jwt.token.Token.decode:9
+msgid ""
+"Verify the issuer when decoding the token. If the issuer in the token does "
+"not match any issuer given, raise a :exc:`NotAuthorizedException`"
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.middleware.JWTAuthenticationMiddleware.__init__:22
+#: litestar.security.jwt.middleware.JWTCookieAuthenticationMiddleware.__init__:23
+msgid "Require these claims to be present in the JWT payload"
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.middleware.JWTAuthenticationMiddleware.__init__:28
+#: litestar.security.jwt.middleware.JWTCookieAuthenticationMiddleware.__init__:29
+msgid ""
+"A function that receives a :class:`Token <.security.jwt.Token>` and returns "
+"a boolean indicating whether the token has been revoked."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.middleware.JWTAuthenticationMiddleware.authenticate_request:1
+#: litestar.security.jwt.middleware.JWTCookieAuthenticationMiddleware.authenticate_request:1
+msgid ""
+"Given an HTTP Connection, parse the JWT api key stored in the header and "
+"retrieve the user correlating to the token from the DB."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.middleware.JWTAuthenticationMiddleware.authenticate_request:4
+#: litestar.security.jwt.middleware.JWTCookieAuthenticationMiddleware.authenticate_request:4
+msgid "An Litestar HTTPConnection instance."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.middleware.JWTAuthenticationMiddleware.authenticate_request:6
+#: litestar.security.jwt.middleware.JWTAuthenticationMiddleware.authenticate_token:8
+#: litestar.security.jwt.middleware.JWTCookieAuthenticationMiddleware.authenticate_request:8
+msgid "AuthenticationResult"
+msgstr ""
+
+#: ../../../reference/security/jwt.rst:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.middleware.JWTAuthenticationMiddleware.authenticate_request:8
+#: litestar.security.jwt.middleware.JWTAuthenticationMiddleware.authenticate_token:6
+#: litestar.security.jwt.middleware.JWTCookieAuthenticationMiddleware.authenticate_request:6
+msgid "If token is invalid or user is not found."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.middleware.JWTAuthenticationMiddleware.authenticate_token:1
+msgid ""
+"Given an encoded JWT token, parse, validate and look up sub within token."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.middleware.JWTAuthenticationMiddleware.authenticate_token:3
+msgid "Encoded JWT token."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.middleware.JWTAuthenticationMiddleware.authenticate_token:4
+msgid "An ASGI connection instance."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.auth.JWTCookieAuth:1
+msgid "JWT Cookie Authentication Configuration."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.auth.JWTCookieAuth:3
+msgid ""
+"This class is an alternate entry point to the library, and it includes all "
+"the functionality of the :class:`JWTAuth` class and adds support for passing "
+"JWT tokens ``HttpOnly`` cookies."
+msgstr ""
+
+#: ../../../../docstring of litestar.security.jwt.JWTCookieAuth.domain:1
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.domain:1
+msgid "Domain for which the cookie is valid."
+msgstr ""
+
+#: ../../../../docstring of litestar.security.jwt.JWTCookieAuth.key:1
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.key:1
+msgid "Key for the cookie."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.auth.JWTCookieAuth.login:5
+msgid "An optional 'Content-Type'. Defaults to 'application/json'."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.auth.JWTCookieAuth.login:6
+msgid "An optional status code for the response. Defaults to '201 Created'."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.JWTCookieAuth.middleware:5
+msgid "Create :class:`JWTCookieAuthenticationMiddleware` wrapped in"
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.JWTCookieAuth.middleware:6
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.middleware:6
+msgid ":class:`DefineMiddleware <.middleware.base.DefineMiddleware>`."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.JWTCookieAuth.openapi_components:1
+msgid "Create OpenAPI documentation for the JWT Cookie auth scheme."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.JWTCookieAuth.openapi_components:3
+msgid ""
+"A :class:`Components <litestar.openapi.spec.components.Components>` instance."
+msgstr ""
+
+#: ../../../../docstring of litestar.security.jwt.JWTCookieAuth.path:1
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.path:1
+msgid ""
+"Path fragment that must exist in the request url for the cookie to be valid."
+msgstr ""
+
+#: ../../../../docstring of litestar.security.jwt.JWTCookieAuth.path:3
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.path:3
+msgid "Defaults to ``/``."
+msgstr ""
+
+#: ../../../../docstring of litestar.security.jwt.JWTCookieAuth.samesite:1
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.samesite:1
+msgid ""
+"Controls whether or not a cookie is sent with cross-site requests. Defaults "
+"to ``lax``."
+msgstr ""
+
+#: ../../../../docstring of litestar.security.jwt.JWTCookieAuth.secure:1
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.secure:1
+msgid "Https is required for the cookie."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.middleware.JWTCookieAuthenticationMiddleware:1
+msgid ""
+"Bases: :py:class:`~litestar.security.jwt.middleware."
+"JWTAuthenticationMiddleware`"
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.middleware.JWTCookieAuthenticationMiddleware:1
+msgid "Cookie based JWT authentication middleware."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.middleware.JWTCookieAuthenticationMiddleware.__init__:1
+msgid ""
+"Check incoming requests for an encoded token in the auth header or cookie "
+"name specified, and if present retrieves the user from persistence using the "
+"provided function."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.middleware.JWTCookieAuthenticationMiddleware.__init__:6
+msgid ""
+"Cookie name from which to retrieve the token. E.g. ``token`` or "
+"``accessToken``."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.auth.OAuth2Login:1 litestar.security.jwt.token.Token:1
+msgid "Bases: :py:class:`object`"
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.auth.OAuth2Login:1
+msgid "OAuth2 Login DTO"
+msgstr ""
+
+#: ../../../../docstring of litestar.security.jwt.OAuth2Login.expires_in:1
+msgid "Expiration time of the token in seconds."
+msgstr ""
+
+#: ../../../../docstring of litestar.security.jwt.OAuth2Login.refresh_token:1
+msgid "Optional valid refresh token JWT"
+msgstr ""
+
+#: ../../../../docstring of litestar.security.jwt.OAuth2Login.access_token:1
+msgid "Valid JWT access token"
+msgstr ""
+
+#: ../../../../docstring of litestar.security.jwt.OAuth2Login.token_type:1
+msgid "Type of the OAuth token used"
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.auth.OAuth2PasswordBearerAuth:1
+msgid "OAUTH2 Schema for Password Bearer Authentication."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.auth.OAuth2PasswordBearerAuth:3
+msgid ""
+"This class implements an OAUTH2 authentication flow entry point to the "
+"library, and it includes all the functionality of the :class:`JWTAuth` class "
+"and adds support for passing JWT tokens ``HttpOnly`` cookies."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.auth.OAuth2PasswordBearerAuth:6
+msgid ""
+"``token_url`` is the only additional argument that is required, and it "
+"should point at your login route"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.auth_header:3
+msgid "E.g. ``Authorization`` or 'X-Api-Key'."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.auth.OAuth2PasswordBearerAuth.login:12
+msgid ""
+"If ``True`` the response will be an oAuth2 token response dict. Note: if a "
+"response body is passed this setting will be ignored."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.middleware:5
+msgid "Create ``JWTCookieAuthenticationMiddleware`` wrapped in"
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.oauth_flow:1
+msgid ""
+"Create an OpenAPI OAuth2 flow for the password bearer authentication scheme."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.oauth_flow:3
+msgid ""
+"An :class:`OAuthFlow <litestar.openapi.spec.oauth_flow.OAuthFlow>` instance."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.oauth_scopes:1
+msgid "Oauth Scopes available for the token."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.openapi_components:1
+msgid ""
+"Create OpenAPI documentation for the OAUTH2 Password bearer auth scheme."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.security.jwt.OAuth2PasswordBearerAuth.token_url:1
+msgid "The URL for retrieving a new token."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.token.Token:1
+msgid "JWT Token DTO."
+msgstr ""
+
+#: ../../../../docstring of litestar.security.jwt.Token.aud:1
+msgid "Audience - intended audience."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.token.Token.decode:1
+msgid "Decode a passed in token string and return a Token instance."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.token.Token.decode:3
+msgid "A base64 string containing an encoded JWT."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.token.Token.decode:4
+#: litestar.security.jwt.token.Token.encode:3
+msgid "The secret with which the JWT is encoded."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.token.Token.decode:5
+#: litestar.security.jwt.token.Token.encode:4
+msgid "The algorithm used to encode the JWT."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.token.Token.decode:12
+msgid "Verify that the given claims are present in the token"
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.token.Token.decode:17
+msgid ""
+"Verify that the value of the ``aud`` (*audience*) claim is a single value, "
+"and not a list of values, and matches ``audience`` exactly. Requires the "
+"value passed to the ``audience`` to be a sequence of length 1"
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.token.Token.decode:22
+msgid "A decoded Token instance."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.token.Token.decode:24
+msgid "If the token is invalid."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.token.Token.decode_payload:1
+msgid "Decode and verify the JWT and return its payload"
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.token.Token.encode:1
+msgid "Encode the token instance into a string."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.token.Token.encode:6
+msgid "An encoded token string."
+msgstr ""
+
+#: ../../../../litestar/security/jwt/__init__.py:docstring of
+#: litestar.security.jwt.token.Token.encode:8
+msgid "If encoding fails."
+msgstr ""
+
+#: ../../../../docstring of litestar.security.jwt.Token.iss:1
+msgid "Issuer - optional unique identifier for the issuer."
+msgstr ""
+
+#: ../../../../docstring of litestar.security.jwt.Token.jti:1
+msgid "JWT ID - a unique identifier of the JWT between different issuers."
+msgstr ""
+
+#: ../../../../docstring of litestar.security.jwt.Token.exp:1
+msgid "Expiration - datetime for token expiration."
+msgstr ""
+
+#: ../../../../docstring of litestar.security.jwt.Token.sub:1
+msgid "Subject - usually a unique identifier of the user or equivalent entity."
+msgstr ""
+
+#: ../../../../docstring of litestar.security.jwt.Token.iat:1
+msgid "Issued at - should always be current now."
+msgstr ""
+
+#: ../../../../docstring of litestar.security.jwt.Token.extras:1
+msgid "Extra fields that were found on the JWT token."
+msgstr ""
