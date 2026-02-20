@@ -1,0 +1,340 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/middleware/session/base.rst:2
+msgid "base"
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.BaseBackendConfig:1
+msgid ""
+"Bases: :py:class:`~abc.ABC`, :py:class:`~typing.Generic`\\ [:py:obj:"
+"`~litestar.middleware.session.base.BaseSessionBackendT`]"
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.BaseBackendConfig:1
+msgid "Configuration for Session middleware backends."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.session.base.BaseBackendConfig.key:1
+msgid ""
+"Key to use for the cookie inside the header, e.g. ``session=<data>`` where "
+"``session`` is the cookie key and ``<data>`` is the session data."
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.BaseSessionBackend.load_from_connection:8
+#: litestar.middleware.session.base.BaseSessionBackend.serialize_data:6
+#: ../../../../docstring
+#: litestar.middleware.session.base.BaseBackendConfig.key:4
+msgid "Notes"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.session.base.BaseBackendConfig.key:6
+msgid ""
+"If a session cookie exceeds 4KB in size it is split. In this case the key "
+"will be of the format ``session-{segment number}``."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.session.base.BaseBackendConfig.max_age:1
+msgid "Maximal age of the cookie before its invalidated."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.session.base.BaseBackendConfig.scopes:1
+msgid ""
+"Scopes for the middleware - options are ``http`` and ``websocket`` with the "
+"default being both"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.session.base.BaseBackendConfig.path:1
+msgid ""
+"Path fragment that must exist in the request url for the cookie to be valid."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.session.base.BaseBackendConfig.path:3
+msgid "Defaults to ``'/'``."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.session.base.BaseBackendConfig.domain:1
+msgid "Domain for which the cookie is valid."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.session.base.BaseBackendConfig.secure:1
+msgid "Https is required for the cookie."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.session.base.BaseBackendConfig.httponly:1
+msgid "Forbids javascript to access the cookie via 'Document.cookie'."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.session.base.BaseBackendConfig.samesite:1
+msgid "Controls whether or not a cookie is sent with cross-site requests."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.session.base.BaseBackendConfig.samesite:3
+msgid "Defaults to ``lax``."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.session.base.BaseBackendConfig.exclude:1
+msgid "A pattern or list of patterns to skip in the session middleware."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.session.base.BaseBackendConfig.exclude_opt_key:1
+msgid ""
+"An identifier to use on routes to disable the session middleware for a "
+"particular route."
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.BaseBackendConfig.middleware:1
+msgid ""
+"Use this property to insert the config into a middleware list on one of the "
+"application layers."
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.BaseBackendConfig.middleware:3
+msgid "Examples"
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.BaseBackendConfig.middleware:6
+msgid ""
+"from os import urandom\n"
+"\n"
+"from litestar import Litestar, Request, get\n"
+"from litestar.middleware.sessions.cookie_backend import CookieBackendConfig\n"
+"\n"
+"session_config = CookieBackendConfig(secret=urandom(16))\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"def my_handler(request: Request) -> None: ...\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[my_handler], middleware=[session_config."
+"middleware])"
+msgstr ""
+
+#: ../../../reference/middleware/session/base.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.BaseBackendConfig.middleware:21
+msgid ""
+"An instance of DefineMiddleware including ``self`` as the config kwarg value."
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.BaseSessionBackend:1
+msgid ""
+"Bases: :py:class:`~abc.ABC`, :py:class:`~typing.Generic`\\ [:py:obj:"
+"`~litestar.middleware.session.base.ConfigT`]"
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.BaseSessionBackend:1
+msgid ""
+"Abstract session backend defining the interface between a storage mechanism "
+"and the application :class:`SessionMiddleware`."
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.BaseSessionBackend:4
+msgid "This serves as the base class for all client- and server-side backends"
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.BaseSessionBackend.__init__:1
+msgid "Initialize ``BaseSessionBackend``"
+msgstr ""
+
+#: ../../../reference/middleware/session/base.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.BaseSessionBackend.__init__:3
+msgid "A instance of a subclass of ``BaseBackendConfig``"
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.BaseSessionBackend.serialize_data:1
+msgid "Serialize data into bytes for storage in the backend."
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.BaseSessionBackend.serialize_data:3
+msgid "Session data of the current scope."
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.BaseSessionBackend.serialize_data:4
+msgid "A scope, if applicable, from which to extract a serializer."
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.BaseSessionBackend.serialize_data:8
+msgid "The serializer will be extracted from ``scope`` or fall back to"
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.BaseSessionBackend.serialize_data:9
+msgid ":func:`default_serializer <.serialization.default_serializer>`"
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.BaseSessionBackend.serialize_data:11
+msgid "``data`` serialized as bytes."
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.BaseSessionBackend.deserialize_data:1
+msgid "Deserialize data into a dictionary for use in the application scope."
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.BaseSessionBackend.deserialize_data:3
+msgid "Data to be deserialized"
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.BaseSessionBackend.deserialize_data:5
+msgid "Deserialized data as a dictionary"
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.BaseSessionBackend.get_session_id:1
+msgid ""
+"Try to fetch session id from connection ScopeState. If one does not exist, "
+"generate one."
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.BaseSessionBackend.get_session_id:3
+#: litestar.middleware.session.base.BaseSessionBackend.store_in_message:5
+msgid "Originating ASGIConnection containing the scope"
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.BaseSessionBackend.get_session_id:5
+msgid "Session id str or None if the concept of a session id does not apply."
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.BaseSessionBackend.store_in_message:1
+msgid "Store the necessary information in the outgoing ``Message``"
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.BaseSessionBackend.store_in_message:3
+msgid "Current session to store"
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.BaseSessionBackend.store_in_message:4
+msgid "Outgoing send-message"
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.BaseSessionBackend.store_in_message:7
+#: litestar.middleware.session.base.SessionMiddleware.create_send_wrapper:5
+msgid "None"
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.BaseSessionBackend.load_from_connection:1
+msgid ""
+"Load session data from a connection and return it as a dictionary to be used "
+"in the current application scope."
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.BaseSessionBackend.load_from_connection:4
+msgid "An ASGIConnection instance"
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.BaseSessionBackend.load_from_connection:6
+msgid "The session data"
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.BaseSessionBackend.load_from_connection:10
+msgid ""
+"This should not modify the connection's scope. The data returned by this "
+"method will be stored in the application scope by the middleware"
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.SessionMiddleware:1
+msgid ""
+"Bases: :py:class:`~litestar.middleware.base.AbstractMiddleware`, :py:class:"
+"`~typing.Generic`\\ [:py:obj:`~litestar.middleware.session.base."
+"BaseSessionBackendT`]"
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.SessionMiddleware:1
+msgid "Litestar session middleware for storing session data."
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.SessionMiddleware.__init__:1
+msgid "Initialize ``SessionMiddleware``"
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.SessionMiddleware.__init__:3
+msgid "An ASGI application"
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.SessionMiddleware.__init__:4
+msgid ""
+"A :class:`BaseSessionBackend` instance used to store and retrieve session "
+"data"
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.SessionMiddleware.create_send_wrapper:1
+msgid ""
+"Create a wrapper for the ASGI send function, which handles setting the "
+"cookies on the outgoing response."
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.SessionMiddleware.create_send_wrapper:3
+msgid "ASGIConnection"
+msgstr ""

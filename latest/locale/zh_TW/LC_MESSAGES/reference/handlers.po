@@ -1,0 +1,1673 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/handlers.rst:2
+msgid "handlers"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.asgi_handlers.ASGIRouteHandler:1
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler:1
+#: litestar.handlers.websocket_handlers.route_handler.WebsocketRouteHandler:1
+msgid "Bases: :py:class:`~litestar.handlers.base.BaseRouteHandler`"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.asgi_handlers.ASGIRouteHandler:1
+msgid "ASGI Route Handler decorator."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.asgi_handlers.ASGIRouteHandler:3
+msgid "Use this decorator to decorate ASGI applications."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.asgi_handlers.ASGIRouteHandler.__init__:1
+msgid "Initialize ``ASGIRouteHandler``."
+msgstr ""
+
+#: ../../../reference/handlers.rst:0
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler.default_connection_lifespan:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.asgi_handlers.ASGIRouteHandler.__init__:3
+#: litestar.handlers.base.BaseRouteHandler.__init__:8
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:26
+#: litestar.handlers.http_handlers.decorators.delete.__init__:26
+#: litestar.handlers.http_handlers.decorators.get.__init__:26
+#: litestar.handlers.http_handlers.decorators.head.__init__:31
+#: litestar.handlers.http_handlers.decorators.patch.__init__:26
+#: litestar.handlers.http_handlers.decorators.post.__init__:26
+#: litestar.handlers.http_handlers.decorators.put.__init__:26
+#: litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler.__init__:13
+#: litestar.handlers.websocket_handlers.route_handler.WebsocketRouteHandler.__init__:6
+#: litestar.handlers.websocket_handlers.stream.websocket_stream:19
+#: ../../../../docstring
+#: litestar.handlers.WebsocketListener.exception_handlers:1
+msgid "A mapping of status codes and/or exception types to handler functions."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.asgi_handlers.ASGIRouteHandler.__init__:4
+#: litestar.handlers.base.BaseRouteHandler.__init__:9
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:27
+#: litestar.handlers.http_handlers.decorators.delete.__init__:27
+#: litestar.handlers.http_handlers.decorators.get.__init__:27
+#: litestar.handlers.http_handlers.decorators.head.__init__:32
+#: litestar.handlers.http_handlers.decorators.patch.__init__:27
+#: litestar.handlers.http_handlers.decorators.post.__init__:27
+#: litestar.handlers.http_handlers.decorators.put.__init__:27
+#: litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler.__init__:14
+#: litestar.handlers.websocket_handlers.route_handler.WebsocketRouteHandler.__init__:7
+#: litestar.handlers.websocket_handlers.stream.websocket_stream:20
+#: ../../../../docstring litestar.handlers.WebsocketListener.guards:1
+msgid "A sequence of :class:`Guard <.types.Guard>` callables."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.asgi_handlers.ASGIRouteHandler.__init__:5
+#: litestar.handlers.base.BaseRouteHandler.__init__:11
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:34
+#: litestar.handlers.http_handlers.decorators.delete.__init__:34
+#: litestar.handlers.http_handlers.decorators.get.__init__:34
+#: litestar.handlers.http_handlers.decorators.head.__init__:39
+#: litestar.handlers.http_handlers.decorators.patch.__init__:34
+#: litestar.handlers.http_handlers.decorators.post.__init__:34
+#: litestar.handlers.http_handlers.decorators.put.__init__:34
+#: litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler.__init__:18
+#: litestar.handlers.websocket_handlers.route_handler.WebsocketRouteHandler.__init__:9
+#: litestar.handlers.websocket_handlers.stream.websocket_stream:22
+#: ../../../../docstring litestar.handlers.WebsocketListener.name:1
+msgid "A string identifying the route handler."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.asgi_handlers.ASGIRouteHandler.__init__:6
+msgid ""
+"A string key mapping of arbitrary values that can be accessed in :class:"
+"`Guards <.types.Guard>` or wherever you have access to :class:`Request <."
+"connection.Request>` or :class:`ASGI Scope <.types.Scope>`."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.asgi_handlers.ASGIRouteHandler.__init__:9
+msgid ""
+"A path fragment for the route handler function or a list of path fragments. "
+"If not given defaults to ``/``"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.asgi_handlers.ASGIRouteHandler.__init__:11
+msgid ""
+"A boolean dictating whether the handler's paths should be regarded as mount "
+"paths. Mount path accept any arbitrary paths that begin with the defined "
+"prefixed path. For example, a mount with the path ``/some-path/`` will "
+"accept requests for ``/some-path/`` and any sub path under this, e.g. ``/"
+"some-path/sub-path/`` etc."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.asgi_handlers.ASGIRouteHandler.__init__:15
+msgid ""
+"A boolean dictating whether the handler's paths should be regarded as static "
+"paths. Static paths are used to deliver static files."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.asgi_handlers.ASGIRouteHandler.__init__:17
+#: litestar.handlers.base.BaseRouteHandler.__init__:17
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:51
+#: litestar.handlers.http_handlers.decorators.delete.__init__:48
+#: litestar.handlers.http_handlers.decorators.get.__init__:48
+#: litestar.handlers.http_handlers.decorators.head.__init__:53
+#: litestar.handlers.http_handlers.decorators.patch.__init__:50
+#: litestar.handlers.http_handlers.decorators.post.__init__:50
+#: litestar.handlers.http_handlers.decorators.put.__init__:50
+#: litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler.__init__:28
+#: litestar.handlers.websocket_handlers.route_handler.WebsocketRouteHandler.__init__:13
+#: litestar.handlers.websocket_handlers.stream.websocket_stream:26
+#: ../../../../docstring
+#: litestar.handlers.WebsocketListener.signature_namespace:1
+msgid ""
+"A mapping of names to types for use in forward reference resolution during "
+"signature modelling."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.asgi_handlers.ASGIRouteHandler.__init__:18
+#: litestar.handlers.base.BaseRouteHandler.__init__:22
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:72
+#: litestar.handlers.http_handlers.decorators.delete.__init__:69
+#: litestar.handlers.http_handlers.decorators.get.__init__:69
+#: litestar.handlers.http_handlers.decorators.head.__init__:74
+#: litestar.handlers.http_handlers.decorators.patch.__init__:71
+#: litestar.handlers.http_handlers.decorators.post.__init__:71
+#: litestar.handlers.http_handlers.decorators.put.__init__:71
+#: litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler.__init__:32
+#: litestar.handlers.websocket_handlers.route_handler.WebsocketRouteHandler.__init__:14
+#: litestar.handlers.websocket_handlers.stream.websocket_stream:31
+#: ../../../../docstring litestar.handlers.WebsocketListener.type_encoders:1
+msgid ""
+"A mapping of types to callables that transform them into types supported for "
+"serialization."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.asgi_handlers.ASGIRouteHandler.__init__:19
+msgid ""
+"Copy the ASGI 'scope' before calling the mounted application. Should be set "
+"to 'True' unless side effects via scope mutations by the mounted ASGI "
+"application are intentional"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.asgi_handlers.ASGIRouteHandler.__init__:21
+#: litestar.handlers.base.BaseRouteHandler.__init__:23
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:73
+#: litestar.handlers.http_handlers.decorators.delete.__init__:70
+#: litestar.handlers.http_handlers.decorators.get.__init__:70
+#: litestar.handlers.http_handlers.decorators.head.__init__:75
+#: litestar.handlers.http_handlers.decorators.patch.__init__:72
+#: litestar.handlers.http_handlers.decorators.post.__init__:72
+#: litestar.handlers.http_handlers.decorators.put.__init__:72
+#: litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler.__init__:33
+#: litestar.handlers.websocket_handlers.route_handler.WebsocketRouteHandler.__init__:17
+#: litestar.handlers.websocket_handlers.stream.websocket_stream:38
+msgid "Any additional kwarg - will be set in the opt dictionary."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.asgi_handlers.ASGIRouteHandler.on_registration:1
+#: litestar.handlers.base.BaseRouteHandler.on_registration:1
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.on_registration:1
+msgid "Called once per handler when the app object is instantiated."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.asgi_handlers.ASGIRouteHandler.on_registration:3
+#: litestar.handlers.base.BaseRouteHandler.on_registration:3
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.on_registration:3
+msgid "The :class:`Litestar<.app.Litestar>` app object."
+msgstr ""
+
+#: ../../../reference/handlers.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.asgi_handlers.ASGIRouteHandler.on_registration:5
+#: litestar.handlers.base.BaseRouteHandler.on_registration:5
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.on_registration:5
+msgid "None"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.base.BaseRouteHandler:1
+msgid "Bases: :py:class:`object`"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.base.BaseRouteHandler:1
+msgid "Base route handler."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.base.BaseRouteHandler:3
+msgid "Serves as a subclass for all route handlers"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.base.BaseRouteHandler.__call__:1
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__call__:1
+msgid "Replace a function with itself."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.base.BaseRouteHandler.__init__:1
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:1
+msgid "Initialize ``HTTPRouteHandler``."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.base.BaseRouteHandler.__init__:3
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:3
+#: litestar.handlers.http_handlers.decorators.delete.__init__:3
+#: litestar.handlers.http_handlers.decorators.get.__init__:3
+#: litestar.handlers.http_handlers.decorators.head.__init__:8
+#: litestar.handlers.http_handlers.decorators.patch.__init__:3
+#: litestar.handlers.http_handlers.decorators.post.__init__:3
+#: litestar.handlers.http_handlers.decorators.put.__init__:3
+#: litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler.__init__:3
+#: litestar.handlers.websocket_handlers.route_handler.WebsocketRouteHandler.__init__:3
+#: litestar.handlers.websocket_handlers.stream.websocket_stream:16
+#: ../../../../docstring litestar.handlers.WebsocketListener.path:1
+msgid ""
+"A path fragment for the route handler function or a sequence of path "
+"fragments. If not given defaults to ``/``"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.base.BaseRouteHandler.__init__:5
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:22
+#: litestar.handlers.http_handlers.decorators.delete.__init__:24
+#: litestar.handlers.http_handlers.decorators.get.__init__:22
+#: litestar.handlers.http_handlers.decorators.head.__init__:27
+#: litestar.handlers.http_handlers.decorators.patch.__init__:22
+#: litestar.handlers.http_handlers.decorators.post.__init__:22
+#: litestar.handlers.http_handlers.decorators.put.__init__:22
+#: litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler.__init__:10
+#: litestar.handlers.websocket_handlers.route_handler.WebsocketRouteHandler.__init__:5
+#: litestar.handlers.websocket_handlers.stream.websocket_stream:18
+#: ../../../../docstring litestar.handlers.WebsocketListener.dependencies:1
+msgid ""
+"A string keyed mapping of dependency :class:`Provider <.di.Provide>` "
+"instances."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.base.BaseRouteHandler.__init__:6
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:23
+#: litestar.handlers.http_handlers.decorators.delete.__init__:22
+#: litestar.handlers.http_handlers.decorators.get.__init__:23
+#: litestar.handlers.http_handlers.decorators.head.__init__:28
+#: litestar.handlers.http_handlers.decorators.patch.__init__:23
+#: litestar.handlers.http_handlers.decorators.post.__init__:23
+#: litestar.handlers.http_handlers.decorators.put.__init__:23
+#: litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler.__init__:11
+msgid ""
+":class:`AbstractDTO <.dto.base_dto.AbstractDTO>` to use for (de)serializing "
+"and validation of request data."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.base.BaseRouteHandler.__init__:10
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:33
+#: litestar.handlers.http_handlers.decorators.delete.__init__:33
+#: litestar.handlers.http_handlers.decorators.get.__init__:33
+#: litestar.handlers.http_handlers.decorators.head.__init__:38
+#: litestar.handlers.http_handlers.decorators.patch.__init__:33
+#: litestar.handlers.http_handlers.decorators.post.__init__:33
+#: litestar.handlers.http_handlers.decorators.put.__init__:33
+#: litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler.__init__:15
+#: litestar.handlers.websocket_handlers.route_handler.WebsocketRouteHandler.__init__:8
+#: litestar.handlers.websocket_handlers.stream.websocket_stream:21
+#: ../../../../docstring litestar.handlers.WebsocketListener.middleware:1
+msgid "A sequence of :class:`Middleware <.types.Middleware>`."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.base.BaseRouteHandler.__init__:12
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:35
+#: litestar.handlers.http_handlers.decorators.delete.__init__:35
+#: litestar.handlers.http_handlers.decorators.get.__init__:35
+#: litestar.handlers.http_handlers.decorators.head.__init__:40
+#: litestar.handlers.http_handlers.decorators.patch.__init__:35
+#: litestar.handlers.http_handlers.decorators.post.__init__:35
+#: litestar.handlers.http_handlers.decorators.put.__init__:35
+#: litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler.__init__:23
+#: litestar.handlers.websocket_handlers.route_handler.WebsocketRouteHandler.__init__:10
+#: litestar.handlers.websocket_handlers.stream.websocket_stream:23
+#: ../../../../docstring litestar.handlers.WebsocketListener.opt:1
+msgid ""
+"A string keyed mapping of arbitrary values that can be accessed in :class:"
+"`Guards <.types.Guard>` or wherever you have access to :class:`Request <."
+"connection.Request>` or :class:`ASGI Scope <.types.Scope>`."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.base.BaseRouteHandler.__init__:15
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:49
+#: litestar.handlers.http_handlers.decorators.delete.__init__:46
+#: litestar.handlers.http_handlers.decorators.get.__init__:46
+#: litestar.handlers.http_handlers.decorators.head.__init__:51
+#: litestar.handlers.http_handlers.decorators.patch.__init__:48
+#: litestar.handlers.http_handlers.decorators.post.__init__:48
+#: litestar.handlers.http_handlers.decorators.put.__init__:48
+#: litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler.__init__:26
+#: litestar.handlers.websocket_handlers.stream.websocket_stream:30
+#: ../../../../docstring litestar.handlers.WebsocketListener.return_dto:1
+msgid ""
+":class:`AbstractDTO <.dto.base_dto.AbstractDTO>` to use for serializing "
+"outbound response data."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.base.BaseRouteHandler.__init__:19
+msgid ""
+"A sequence of types for use in forward reference resolution during signature "
+"modelling. These types will be added to the signature namespace using their "
+"``__name__`` attribute."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.base.BaseRouteHandler.__init__:21
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:71
+#: litestar.handlers.http_handlers.decorators.delete.__init__:67
+#: litestar.handlers.http_handlers.decorators.get.__init__:67
+#: litestar.handlers.http_handlers.decorators.head.__init__:72
+#: litestar.handlers.http_handlers.decorators.patch.__init__:69
+#: litestar.handlers.http_handlers.decorators.post.__init__:69
+#: litestar.handlers.http_handlers.decorators.put.__init__:69
+#: litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler.__init__:30
+#: ../../../../docstring litestar.handlers.WebsocketListener.type_decoders:1
+msgid ""
+"A sequence of tuples, each composed of a predicate testing for type identity "
+"and a msgspec hook for deserialization."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.base.BaseRouteHandler.__str__:1
+msgid "Return a unique identifier for the route handler."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.base.BaseRouteHandler.__str__:3
+msgid "A string"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.base.BaseRouteHandler.authorize_connection:1
+msgid ""
+"Ensure the connection is authorized by running all the route guards in scope."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.base.BaseRouteHandler.create_kwargs_model:1
+msgid "Create a `KwargsModel` for a given route handler."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.BaseRouteHandler.default_deserializer:1
+msgid "Get a default deserializer for the route handler."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.BaseRouteHandler.default_deserializer:3
+msgid "A default deserializer for the route handler."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.BaseRouteHandler.default_serializer:1
+msgid "Get a default serializer for the route handler."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.BaseRouteHandler.default_serializer:3
+msgid "A default serializer for the route handler."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.BaseRouteHandler.dependency_name_set:1
+msgid "Set of all dependency names provided in the handler's ownership layers."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.BaseRouteHandler.fn:1
+msgid "Get the handler function."
+msgstr ""
+
+#: ../../../reference/handlers.rst:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.BaseRouteHandler.fn:3
+#: litestar.handlers.BaseRouteHandler.handler_name:3
+msgid "if handler fn is not set."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.BaseRouteHandler.fn:5
+msgid "Handler function"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.BaseRouteHandler.handler_id:1
+msgid "A unique identifier used for generation of DTOs."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.BaseRouteHandler.handler_name:1
+msgid "Get the name of the handler function."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.BaseRouteHandler.handler_name:5
+msgid "Name of the handler function"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.BaseRouteHandler.ownership_layers:1
+msgid "Return the handler layers from the app down to the route handler."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.BaseRouteHandler.ownership_layers:3
+msgid "``app -> ... -> route handler``"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.BaseRouteHandler.parsed_fn_signature:1
+msgid "Return the parsed signature of the handler function."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.BaseRouteHandler.parsed_fn_signature:3
+#: litestar.handlers.base.BaseRouteHandler.resolve_exception_handlers:3
+#: litestar.handlers.base.BaseRouteHandler.resolve_type_decoders:3
+#: litestar.handlers.base.BaseRouteHandler.resolve_type_encoders:3
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.get_response_handler:3
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.resolve_request_class:3
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.resolve_response_class:3
+#: litestar.handlers.websocket_handlers.route_handler.WebsocketRouteHandler.resolve_websocket_class:3
+msgid "This method is memoized so the computation occurs only once."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.BaseRouteHandler.parsed_fn_signature:5
+msgid "A ParsedSignature instance"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.base.BaseRouteHandler.resolve_data_dto:1
+msgid ""
+"Resolve the data_dto by starting from the route handler and moving up. If a "
+"handler is found it is returned, otherwise None is set. This method is "
+"memoized so the computation occurs only once."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.base.BaseRouteHandler.resolve_data_dto:5
+#: litestar.handlers.base.BaseRouteHandler.resolve_return_dto:5
+msgid "An optional :class:`DTO type <.dto.base_dto.AbstractDTO>`"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.base.BaseRouteHandler.resolve_dependencies:1
+msgid ""
+"Return all dependencies correlating to handler function's kwargs that exist "
+"in the handler's scope."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.base.BaseRouteHandler.resolve_exception_handlers:1
+msgid ""
+"Resolve the exception_handlers by starting from the route handler and moving "
+"up."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.base.BaseRouteHandler.resolve_guards:1
+msgid ""
+"Return all guards in the handlers scope, starting from highest to current "
+"layer."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.base.BaseRouteHandler.resolve_layered_parameters:1
+msgid "Return all parameters declared above the handler."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.base.BaseRouteHandler.resolve_middleware:1
+msgid "Build the middleware stack for the RouteHandler and return it."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.base.BaseRouteHandler.resolve_middleware:3
+msgid ""
+"The middlewares are added from top to bottom (``app -> router -> controller -"
+"> route handler``) and then reversed."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.base.BaseRouteHandler.resolve_opts:1
+msgid "Build the route handler opt dictionary by going from top to bottom."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.base.BaseRouteHandler.resolve_opts:3
+#: litestar.handlers.base.BaseRouteHandler.resolve_signature_namespace:3
+msgid ""
+"When merging keys from multiple layers, if the same key is defined by "
+"multiple layers, the value from the layer closest to the response handler "
+"will take precedence."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.base.BaseRouteHandler.resolve_return_dto:1
+msgid ""
+"Resolve the return_dto by starting from the route handler and moving up. If "
+"a handler is found it is returned, otherwise None is set. This method is "
+"memoized so the computation occurs only once."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.base.BaseRouteHandler.resolve_signature_namespace:1
+msgid ""
+"Build the route handler signature namespace dictionary by going from top to "
+"bottom."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.base.BaseRouteHandler.resolve_type_decoders:1
+#: litestar.handlers.base.BaseRouteHandler.resolve_type_encoders:1
+msgid "Return a merged type_encoders mapping."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.base.BaseRouteHandler.resolve_type_decoders:5
+#: litestar.handlers.base.BaseRouteHandler.resolve_type_encoders:5
+msgid "A dict of type encoders"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.BaseRouteHandler.signature_model:1
+#: litestar.handlers.WebsocketListenerRouteHandler.signature_model:1
+msgid "Get the signature model for the route handler."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.BaseRouteHandler.signature_model:3
+#: litestar.handlers.WebsocketListenerRouteHandler.signature_model:3
+msgid "A signature model for the route handler."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler:1
+msgid "HTTP Route Decorator."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler:3
+msgid "Use this decorator to decorate an HTTP handler with multiple methods."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:5
+#: litestar.handlers.http_handlers.decorators.delete.__init__:5
+#: litestar.handlers.http_handlers.decorators.get.__init__:5
+#: litestar.handlers.http_handlers.decorators.head.__init__:10
+#: litestar.handlers.http_handlers.decorators.patch.__init__:5
+#: litestar.handlers.http_handlers.decorators.post.__init__:5
+#: litestar.handlers.http_handlers.decorators.put.__init__:5
+msgid ""
+"A sync or async function executed before a :class:`Request <.connection."
+"Request>` is passed to any route handler. If this function returns a value, "
+"the request will not reach the route handler, and instead this value will be "
+"used."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:8
+#: litestar.handlers.http_handlers.decorators.delete.__init__:8
+#: litestar.handlers.http_handlers.decorators.get.__init__:8
+#: litestar.handlers.http_handlers.decorators.head.__init__:13
+#: litestar.handlers.http_handlers.decorators.patch.__init__:8
+#: litestar.handlers.http_handlers.decorators.post.__init__:8
+#: litestar.handlers.http_handlers.decorators.put.__init__:8
+msgid ""
+"A sync or async function called after the response has been awaited. It "
+"receives the :class:`Request <.connection.Request>` object and should not "
+"return any values."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:10
+#: litestar.handlers.http_handlers.decorators.delete.__init__:10
+#: litestar.handlers.http_handlers.decorators.get.__init__:10
+#: litestar.handlers.http_handlers.decorators.head.__init__:15
+#: litestar.handlers.http_handlers.decorators.patch.__init__:10
+#: litestar.handlers.http_handlers.decorators.post.__init__:10
+#: litestar.handlers.http_handlers.decorators.put.__init__:10
+msgid ""
+"A :class:`BackgroundTask <.background_tasks.BackgroundTask>` instance or :"
+"class:`BackgroundTasks <.background_tasks.BackgroundTasks>` to execute after "
+"the response is finished. Defaults to ``None``."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:13
+msgid ""
+"A sync or async function called immediately before calling the route "
+"handler. Receives the :class:`Request <.connection.Request>` instance and "
+"any non-``None`` return value is used for the response, bypassing the route "
+"handler."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:16
+#: litestar.handlers.http_handlers.decorators.delete.__init__:16
+#: litestar.handlers.http_handlers.decorators.get.__init__:16
+#: litestar.handlers.http_handlers.decorators.head.__init__:21
+#: litestar.handlers.http_handlers.decorators.patch.__init__:16
+#: litestar.handlers.http_handlers.decorators.post.__init__:16
+#: litestar.handlers.http_handlers.decorators.put.__init__:16
+msgid ""
+"Enables response caching if configured on the application level. Valid "
+"values are ``True`` or a number of seconds (e.g. ``120``) to cache the "
+"response."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:18
+#: litestar.handlers.http_handlers.decorators.delete.__init__:18
+#: litestar.handlers.http_handlers.decorators.get.__init__:18
+#: litestar.handlers.http_handlers.decorators.head.__init__:23
+#: litestar.handlers.http_handlers.decorators.patch.__init__:18
+#: litestar.handlers.http_handlers.decorators.post.__init__:18
+#: litestar.handlers.http_handlers.decorators.put.__init__:18
+msgid ""
+"A ``cache-control`` header of type :class:`CacheControlHeader <."
+"datastructures.CacheControlHeader>` that will be added to the response."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:20
+#: litestar.handlers.http_handlers.decorators.delete.__init__:20
+#: litestar.handlers.http_handlers.decorators.get.__init__:20
+#: litestar.handlers.http_handlers.decorators.head.__init__:25
+#: litestar.handlers.http_handlers.decorators.patch.__init__:20
+#: litestar.handlers.http_handlers.decorators.post.__init__:20
+#: litestar.handlers.http_handlers.decorators.put.__init__:20
+msgid ""
+"A :class:`cache-key builder function <.types.CacheKeyBuilder>`. Allows for "
+"customization of the cache key if caching is configured on the application "
+"level."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:25
+#: litestar.handlers.http_handlers.decorators.delete.__init__:25
+#: litestar.handlers.http_handlers.decorators.get.__init__:25
+#: litestar.handlers.http_handlers.decorators.head.__init__:30
+#: litestar.handlers.http_handlers.decorators.patch.__init__:25
+#: litestar.handlers.http_handlers.decorators.post.__init__:25
+#: litestar.handlers.http_handlers.decorators.put.__init__:25
+msgid ""
+"An ``etag`` header of type :class:`ETag <.datastructures.ETag>` that will be "
+"added to the response."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:28
+msgid ""
+"An :class:`http method string <.types.Method>`, a member of the enum :class:"
+"`HttpMethod <.enums.HttpMethod>` or a list of these that correlates to the "
+"methods the route handler function should handle."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:31
+#: litestar.handlers.http_handlers.decorators.delete.__init__:31
+#: litestar.handlers.http_handlers.decorators.get.__init__:31
+#: litestar.handlers.http_handlers.decorators.head.__init__:36
+#: litestar.handlers.http_handlers.decorators.patch.__init__:31
+#: litestar.handlers.http_handlers.decorators.post.__init__:31
+#: litestar.handlers.http_handlers.decorators.put.__init__:31
+msgid ""
+"A member of the :class:`MediaType <.enums.MediaType>` enum or a string with "
+"a valid IANA Media-Type."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:38
+#: litestar.handlers.http_handlers.decorators.delete.__init__:37
+#: litestar.handlers.http_handlers.decorators.get.__init__:37
+#: litestar.handlers.http_handlers.decorators.head.__init__:42
+#: litestar.handlers.http_handlers.decorators.patch.__init__:37
+#: litestar.handlers.http_handlers.decorators.post.__init__:37
+#: litestar.handlers.http_handlers.decorators.put.__init__:37
+msgid ""
+"A custom subclass of :class:`Request <.connection.Request>` to be used as "
+"route handler's default request."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:40
+#: litestar.handlers.http_handlers.decorators.patch.__init__:39
+#: litestar.handlers.http_handlers.decorators.post.__init__:39
+#: litestar.handlers.http_handlers.decorators.put.__init__:39
+msgid ""
+"Maximum allowed size of the request body in bytes. If this size is exceeded, "
+"a '413 - Request Entity Too Large' error response is returned."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:42
+#: litestar.handlers.http_handlers.decorators.delete.__init__:39
+#: litestar.handlers.http_handlers.decorators.get.__init__:39
+#: litestar.handlers.http_handlers.decorators.head.__init__:44
+#: litestar.handlers.http_handlers.decorators.patch.__init__:41
+#: litestar.handlers.http_handlers.decorators.post.__init__:41
+#: litestar.handlers.http_handlers.decorators.put.__init__:41
+msgid ""
+"A custom subclass of :class:`Response <.response.Response>` to be used as "
+"route handler's default response."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:44
+#: litestar.handlers.http_handlers.decorators.delete.__init__:41
+#: litestar.handlers.http_handlers.decorators.get.__init__:41
+#: litestar.handlers.http_handlers.decorators.head.__init__:46
+#: litestar.handlers.http_handlers.decorators.patch.__init__:43
+#: litestar.handlers.http_handlers.decorators.post.__init__:43
+#: litestar.handlers.http_handlers.decorators.put.__init__:43
+msgid "A sequence of :class:`Cookie <.datastructures.Cookie>` instances."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:45
+#: litestar.handlers.http_handlers.decorators.delete.__init__:42
+#: litestar.handlers.http_handlers.decorators.get.__init__:42
+#: litestar.handlers.http_handlers.decorators.head.__init__:47
+#: litestar.handlers.http_handlers.decorators.patch.__init__:44
+#: litestar.handlers.http_handlers.decorators.post.__init__:44
+#: litestar.handlers.http_handlers.decorators.put.__init__:44
+msgid ""
+"A string keyed mapping of :class:`ResponseHeader <.datastructures."
+"ResponseHeader>` instances."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:47
+#: litestar.handlers.http_handlers.decorators.delete.__init__:44
+#: litestar.handlers.http_handlers.decorators.get.__init__:44
+#: litestar.handlers.http_handlers.decorators.head.__init__:49
+#: litestar.handlers.http_handlers.decorators.patch.__init__:46
+#: litestar.handlers.http_handlers.decorators.post.__init__:46
+#: litestar.handlers.http_handlers.decorators.put.__init__:46
+msgid ""
+"A mapping of additional status codes and a description of their expected "
+"content. This information will be included in the OpenAPI schema"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:52
+msgid ""
+"An http status code for the response. Defaults to ``200`` for ``GET``, "
+"``PUT`` and ``PATCH``, ``201`` for ``POST`` and ``204`` for ``DELETE``. For "
+"mixed method requests it will check for ``POST`` and ``DELETE`` first then "
+"defaults to ``200``."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:55
+#: litestar.handlers.http_handlers.decorators.delete.__init__:51
+#: litestar.handlers.http_handlers.decorators.get.__init__:51
+#: litestar.handlers.http_handlers.decorators.head.__init__:56
+#: litestar.handlers.http_handlers.decorators.patch.__init__:53
+#: litestar.handlers.http_handlers.decorators.post.__init__:53
+#: litestar.handlers.http_handlers.decorators.put.__init__:53
+msgid ""
+"A boolean dictating whether the handler function will be executed in a "
+"worker thread or the main event loop. This has an effect only for sync "
+"handler functions. See using sync handler functions."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:57
+msgid "A string describing the encoding of the content, e.g. ``\"base64\"``."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:58
+msgid ""
+"A string designating the media-type of the content, e.g. ``\"image/png\"``."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:59
+#: litestar.handlers.http_handlers.decorators.delete.__init__:55
+#: litestar.handlers.http_handlers.decorators.get.__init__:55
+#: litestar.handlers.http_handlers.decorators.head.__init__:60
+#: litestar.handlers.http_handlers.decorators.patch.__init__:57
+#: litestar.handlers.http_handlers.decorators.post.__init__:57
+#: litestar.handlers.http_handlers.decorators.put.__init__:57
+msgid ""
+"A boolean dictating whether this route should be marked as deprecated in the "
+"OpenAPI schema."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:60
+#: litestar.handlers.http_handlers.decorators.delete.__init__:56
+#: litestar.handlers.http_handlers.decorators.get.__init__:56
+#: litestar.handlers.http_handlers.decorators.head.__init__:61
+#: litestar.handlers.http_handlers.decorators.patch.__init__:58
+#: litestar.handlers.http_handlers.decorators.post.__init__:58
+#: litestar.handlers.http_handlers.decorators.put.__init__:58
+msgid "Text used for the route's schema description section."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:61
+#: litestar.handlers.http_handlers.decorators.delete.__init__:57
+#: litestar.handlers.http_handlers.decorators.get.__init__:57
+#: litestar.handlers.http_handlers.decorators.head.__init__:62
+#: litestar.handlers.http_handlers.decorators.patch.__init__:59
+#: litestar.handlers.http_handlers.decorators.post.__init__:59
+#: litestar.handlers.http_handlers.decorators.put.__init__:59
+msgid ""
+"A boolean flag dictating whether  the route handler should be documented in "
+"the OpenAPI schema."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:62
+#: litestar.handlers.http_handlers.decorators.delete.__init__:58
+#: litestar.handlers.http_handlers.decorators.get.__init__:58
+#: litestar.handlers.http_handlers.decorators.head.__init__:63
+#: litestar.handlers.http_handlers.decorators.patch.__init__:60
+#: litestar.handlers.http_handlers.decorators.post.__init__:60
+#: litestar.handlers.http_handlers.decorators.put.__init__:60
+msgid ""
+":class:`Operation <.openapi.spec.operation.Operation>` to be used with the "
+"route's OpenAPI schema."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:63
+#: litestar.handlers.http_handlers.decorators.delete.__init__:59
+#: litestar.handlers.http_handlers.decorators.get.__init__:59
+#: litestar.handlers.http_handlers.decorators.head.__init__:64
+#: litestar.handlers.http_handlers.decorators.patch.__init__:61
+#: litestar.handlers.http_handlers.decorators.post.__init__:61
+#: litestar.handlers.http_handlers.decorators.put.__init__:61
+msgid ""
+"Either a string or a callable returning a string. An identifier used for the "
+"route's schema operationId."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:64
+#: litestar.handlers.http_handlers.decorators.delete.__init__:60
+#: litestar.handlers.http_handlers.decorators.get.__init__:60
+#: litestar.handlers.http_handlers.decorators.head.__init__:65
+#: litestar.handlers.http_handlers.decorators.patch.__init__:62
+#: litestar.handlers.http_handlers.decorators.post.__init__:62
+#: litestar.handlers.http_handlers.decorators.put.__init__:62
+msgid ""
+"A list of exception classes extending from litestar.HttpException that is "
+"used for the OpenAPI documentation. This list should describe all exceptions "
+"raised within the route handler's function/method. The Litestar "
+"ValidationException will be added automatically for the schema if any "
+"validation is involved."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:67
+#: litestar.handlers.http_handlers.decorators.delete.__init__:63
+#: litestar.handlers.http_handlers.decorators.get.__init__:63
+#: litestar.handlers.http_handlers.decorators.head.__init__:68
+#: litestar.handlers.http_handlers.decorators.patch.__init__:65
+#: litestar.handlers.http_handlers.decorators.post.__init__:65
+#: litestar.handlers.http_handlers.decorators.put.__init__:65
+msgid "Text used for the route's response schema description section."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:68
+#: litestar.handlers.http_handlers.decorators.delete.__init__:64
+#: litestar.handlers.http_handlers.decorators.get.__init__:64
+#: litestar.handlers.http_handlers.decorators.head.__init__:69
+#: litestar.handlers.http_handlers.decorators.patch.__init__:66
+#: litestar.handlers.http_handlers.decorators.post.__init__:66
+#: litestar.handlers.http_handlers.decorators.put.__init__:66
+msgid ""
+"A sequence of dictionaries that contain information about which security "
+"scheme can be used on the endpoint."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:69
+#: litestar.handlers.http_handlers.decorators.delete.__init__:65
+#: litestar.handlers.http_handlers.decorators.get.__init__:65
+#: litestar.handlers.http_handlers.decorators.head.__init__:70
+#: litestar.handlers.http_handlers.decorators.patch.__init__:67
+#: litestar.handlers.http_handlers.decorators.post.__init__:67
+#: litestar.handlers.http_handlers.decorators.put.__init__:67
+msgid "Text used for the route's schema summary section."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:70
+#: litestar.handlers.http_handlers.decorators.delete.__init__:66
+#: litestar.handlers.http_handlers.decorators.get.__init__:66
+#: litestar.handlers.http_handlers.decorators.head.__init__:71
+#: litestar.handlers.http_handlers.decorators.patch.__init__:68
+#: litestar.handlers.http_handlers.decorators.post.__init__:68
+#: litestar.handlers.http_handlers.decorators.put.__init__:68
+msgid "A sequence of string tags that will be appended to the OpenAPI schema."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.get_response_handler:1
+msgid "Resolve the response_handler function for the route handler."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.get_response_handler:5
+msgid "Whether to return a handler for 'Response' instances."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.get_response_handler:7
+msgid "Async Callable to handle an HTTP Request"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.resolve_after_response:1
+msgid ""
+"Resolve the after_response handler by starting from the route handler and "
+"moving up."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.resolve_after_response:3
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.resolve_before_request:3
+msgid ""
+"If a handler is found it is returned, otherwise None is set. This method is "
+"memoized so the computation occurs only once."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.resolve_after_response:6
+msgid ""
+"An optional :class:`after response lifecycle hook handler <.types."
+"AfterResponseHookHandler>`"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.resolve_before_request:1
+msgid ""
+"Resolve the before_handler handler by starting from the route handler and "
+"moving up."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.resolve_before_request:6
+msgid ""
+"An optional :class:`before request lifecycle hook handler <.types."
+"BeforeRequestHookHandler>`"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.resolve_include_in_schema:1
+msgid ""
+"Resolve the 'include_in_schema' property by starting from the route handler "
+"and moving up."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.resolve_include_in_schema:3
+msgid ""
+"If 'include_in_schema' is found in any of the ownership layers, the last "
+"value found is returned. If not found in any layer, the default value "
+"``True`` is returned."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.resolve_include_in_schema:6
+msgid "The resolved 'include_in_schema' property."
+msgstr ""
+
+#: ../../../reference/handlers.rst:0
+msgid "Return type"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.resolve_request_class:1
+msgid ""
+"Return the closest custom Request class in the owner graph or the default "
+"Request class."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.resolve_request_class:5
+msgid ""
+"The default :class:`Request <.connection.Request>` class for the route "
+"handler."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.resolve_response_class:1
+msgid ""
+"Return the closest custom Response class in the owner graph or the default "
+"Response class."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.resolve_response_class:5
+msgid ""
+"The default :class:`Response <.response.Response>` class for the route "
+"handler."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.resolve_response_cookies:1
+msgid ""
+"Return a list of Cookie instances. Filters the list to ensure each cookie "
+"key is unique."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.resolve_response_cookies:3
+msgid "A list of :class:`Cookie <.datastructures.Cookie>` instances."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.resolve_response_headers:1
+msgid "Return all header parameters in the scope of the handler function."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.resolve_response_headers:3
+msgid ""
+"A dictionary mapping keys to :class:`ResponseHeader <.datastructures."
+"ResponseHeader>` instances."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.resolve_security:1
+msgid ""
+"Resolve the security property by starting from the route handler and moving "
+"up."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.resolve_security:3
+msgid ""
+"Security requirements are additive, so the security requirements of the "
+"route handler are the sum of all security requirements of the ownership "
+"layers."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.resolve_security:6
+msgid "The resolved security property."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.resolve_tags:1
+msgid ""
+"Resolve the tags property by starting from the route handler and moving up."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.resolve_tags:3
+msgid ""
+"Tags are additive, so the tags of the route handler are the sum of all tags "
+"of the ownership layers."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.resolve_tags:5
+msgid "A sorted list of unique tags."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.to_response:1
+msgid ""
+"Return a :class:`Response <.response.Response>` from the handler by "
+"resolving and calling it."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.to_response:3
+msgid "The :class:`Litestar <litestar.app.Litestar>` app instance"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.to_response:4
+msgid ""
+"Either an instance of a :class:`Response <.response.Response>`, a Response "
+"instance or an arbitrary value."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.to_response:6
+msgid "A :class:`Request <.connection.Request>` instance"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.base.HTTPRouteHandler.to_response:8
+msgid "A Response instance"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.listener.WebsocketListener:1
+msgid "Bases: :py:class:`~abc.ABC`"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.listener.WebsocketListener.__init__:1
+msgid "Initialize a WebsocketListener instance."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.listener.WebsocketListener.__init__:3
+msgid "The :class:`Router <.router.Router>` instance that owns this listener."
+msgstr ""
+
+#: ../../../../docstring of litestar.handlers.WebsocketListener.dto:1
+msgid ""
+":class:`AbstractDTO <.dto.base_dto.AbstractDTO>` to use for (de)serializing "
+"and validation of request data"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.listener.WebsocketListener.on_accept:1
+msgid ""
+"Called after a :class:`WebSocket <.connection.WebSocket>` connection has "
+"been accepted. Can receive any dependencies"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.listener.WebsocketListener.on_disconnect:1
+msgid ""
+"Called after a :class:`WebSocket <.connection.WebSocket>` connection has "
+"been disconnected. Can receive any dependencies"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.listener.WebsocketListener.on_receive:1
+msgid "Called after data has been received from the WebSocket."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.listener.WebsocketListener.on_receive:3
+msgid ""
+"This should take a ``data`` argument, receiving the processed WebSocket "
+"data, and can additionally include handler dependencies such as ``state``, "
+"or other regular dependencies."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.listener.WebsocketListener.on_receive:7
+msgid ""
+"Data returned from this function will be serialized and sent via the socket "
+"according to handler configuration."
+msgstr ""
+
+#: ../../../../docstring of litestar.handlers.WebsocketListener.receive_mode:1
+msgid ""
+":class:`WebSocket <.connection.WebSocket>` mode to receive data in, either "
+"``text`` or ``binary``."
+msgstr ""
+
+#: ../../../../docstring of litestar.handlers.WebsocketListener.send_mode:1
+msgid "Websocket mode to send data in, either `text` or `binary`."
+msgstr ""
+
+#: ../../../../docstring of litestar.handlers.WebsocketListener.type_decoders:0
+#: litestar.handlers.WebsocketListener.type_encoders:0
+#: litestar.handlers.WebsocketListener.websocket_class:0
+msgid "type"
+msgstr ""
+
+#: ../../../../docstring of litestar.handlers.WebsocketListener.type_decoders:4
+msgid "type_decoders"
+msgstr ""
+
+#: ../../../../docstring of litestar.handlers.WebsocketListener.type_encoders:3
+msgid "type_encoders"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler.__init__:34
+#: litestar.handlers.websocket_handlers.route_handler.WebsocketRouteHandler.__init__:15
+#: litestar.handlers.websocket_handlers.stream.websocket_stream:27
+#: ../../../../docstring litestar.handlers.WebsocketListener.websocket_class:1
+msgid ""
+"A custom subclass of :class:`WebSocket <.connection.WebSocket>` to be used "
+"as route handler's default websocket class."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.handlers.WebsocketListener.websocket_class:4
+msgid "websocket_class"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler:1
+msgid ""
+"Bases: :py:class:`~litestar.handlers.websocket_handlers.route_handler."
+"WebsocketRouteHandler`"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler:1
+msgid ""
+"A websocket listener that automatically accepts a connection, handles "
+"disconnects, invokes a callback function every time new data is received and "
+"sends any data returned"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.handlers.WebsocketListenerRouteHandler.connection_accept_handler:1
+msgid ""
+"Callback to accept a WebSocket connection. By default, calls WebSocket.accept"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.handlers.WebsocketListenerRouteHandler.on_accept:1
+msgid "Callback invoked after a WebSocket connection has been accepted"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.handlers.WebsocketListenerRouteHandler.on_disconnect:1
+msgid "Callback invoked after a WebSocket connection has been closed"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler.__init__:1
+#: litestar.handlers.websocket_handlers.route_handler.WebsocketRouteHandler.__init__:1
+msgid "Initialize ``WebsocketRouteHandler``"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler.__init__:5
+msgid ""
+"A callable that accepts a :class:`WebSocket <.connection.WebSocket>` "
+"instance and returns a coroutine that when awaited, will accept the "
+"connection. Defaults to ``WebSocket.accept``."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler.__init__:7
+msgid ""
+"An asynchronous context manager, handling the lifespan of the connection. By "
+"default, it calls the ``connection_accept_handler``, ``on_connect`` and "
+"``on_disconnect``. Can request any dependencies, for example the :class:"
+"`WebSocket <.connection.WebSocket>` connection"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler.__init__:16
+#: litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler.__init__:17
+msgid "Websocket mode to receive data in, either `text` or `binary`."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler.__init__:19
+msgid ""
+"Callback invoked after a connection has been accepted. Can request any "
+"dependencies, for example the :class:`WebSocket <.connection.WebSocket>` "
+"connection"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler.__init__:21
+msgid ""
+"Callback invoked after a connection has been closed. Can request any "
+"dependencies, for example the :class:`WebSocket <.connection.WebSocket>` "
+"connection"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler.default_connection_lifespan:1
+msgid ""
+"Handle the connection lifespan of a :class:`WebSocket <.connection."
+"WebSocket>`."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler.default_connection_lifespan:3
+msgid "The :class:`WebSocket <.connection.WebSocket>` connection"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler.default_connection_lifespan:4
+msgid "Dependencies requested by the :attr:`on_accept` hook"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler.default_connection_lifespan:5
+msgid "Dependencies requested by the :attr:`on_disconnect` hook"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler.default_connection_lifespan:7
+msgid "By, default this will"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler.default_connection_lifespan:9
+msgid "Call :attr:`connection_accept_handler` to accept a connection"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler.default_connection_lifespan:10
+msgid "Call :attr:`on_accept` if defined after a connection has been accepted"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler.default_connection_lifespan:11
+msgid "Call :attr:`on_disconnect` upon leaving the context"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.route_handler.WebsocketRouteHandler:1
+msgid "Websocket route handler decorator."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.route_handler.WebsocketRouteHandler:3
+msgid "Use this decorator to decorate websocket handler functions."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.route_handler.WebsocketRouteHandler.resolve_websocket_class:1
+msgid ""
+"Return the closest custom WebSocket class in the owner graph or the default "
+"Websocket class."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.route_handler.WebsocketRouteHandler.resolve_websocket_class:5
+msgid ""
+"The default :class:`WebSocket <.connection.WebSocket>` class for the route "
+"handler."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.decorators.delete:1
+#: litestar.handlers.http_handlers.decorators.get:1
+#: litestar.handlers.http_handlers.decorators.head:1
+#: litestar.handlers.http_handlers.decorators.patch:1
+#: litestar.handlers.http_handlers.decorators.post:1
+#: litestar.handlers.http_handlers.decorators.put:1
+msgid ""
+"Bases: :py:class:`~litestar.handlers.http_handlers.base.HTTPRouteHandler`"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.decorators.delete:1
+msgid "DELETE Route Decorator."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.decorators.delete:3
+msgid "Use this decorator to decorate an HTTP handler for DELETE requests."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.decorators.delete.__init__:1
+msgid "Initialize ``delete``"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.decorators.delete.__init__:13
+#: litestar.handlers.http_handlers.decorators.get.__init__:13
+#: litestar.handlers.http_handlers.decorators.head.__init__:18
+#: litestar.handlers.http_handlers.decorators.patch.__init__:13
+#: litestar.handlers.http_handlers.decorators.post.__init__:13
+#: litestar.handlers.http_handlers.decorators.put.__init__:13
+msgid ""
+"A sync or async function called immediately before calling the route "
+"handler. Receives the :class:`.connection.Request` instance and any non-"
+"``None`` return value is used for the response, bypassing the route handler."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.decorators.delete.__init__:28
+#: litestar.handlers.http_handlers.decorators.get.__init__:28
+#: litestar.handlers.http_handlers.decorators.head.__init__:33
+#: litestar.handlers.http_handlers.decorators.patch.__init__:28
+#: litestar.handlers.http_handlers.decorators.post.__init__:28
+#: litestar.handlers.http_handlers.decorators.put.__init__:28
+msgid ""
+"An :class:`http method string <.types.Method>`, a member of the enum :class:"
+"`HttpMethod <litestar.enums.HttpMethod>` or a list of these that correlates "
+"to the methods the route handler function should handle."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.decorators.delete.__init__:49
+#: litestar.handlers.http_handlers.decorators.get.__init__:49
+#: litestar.handlers.http_handlers.decorators.head.__init__:54
+#: litestar.handlers.http_handlers.decorators.patch.__init__:51
+#: litestar.handlers.http_handlers.decorators.post.__init__:51
+#: litestar.handlers.http_handlers.decorators.put.__init__:51
+msgid ""
+"An http status code for the response. Defaults to ``200`` for mixed method "
+"or ``GET``, ``PUT`` and ``PATCH``, ``201`` for ``POST`` and ``204`` for "
+"``DELETE``."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.decorators.delete.__init__:53
+#: litestar.handlers.http_handlers.decorators.get.__init__:53
+#: litestar.handlers.http_handlers.decorators.head.__init__:58
+#: litestar.handlers.http_handlers.decorators.patch.__init__:55
+#: litestar.handlers.http_handlers.decorators.post.__init__:55
+#: litestar.handlers.http_handlers.decorators.put.__init__:55
+msgid "A string describing the encoding of the content, e.g. ``base64``."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.decorators.delete.__init__:54
+#: litestar.handlers.http_handlers.decorators.get.__init__:54
+#: litestar.handlers.http_handlers.decorators.head.__init__:59
+#: litestar.handlers.http_handlers.decorators.patch.__init__:56
+#: litestar.handlers.http_handlers.decorators.post.__init__:56
+#: litestar.handlers.http_handlers.decorators.put.__init__:56
+msgid "A string designating the media-type of the content, e.g. ``image/png``."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.decorators.get:1
+msgid "GET Route Decorator."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.decorators.get:3
+msgid "Use this decorator to decorate an HTTP handler for GET requests."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.decorators.get.__init__:1
+msgid "Initialize ``get``."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.decorators.head:1
+msgid "HEAD Route Decorator."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.decorators.head:3
+msgid "Use this decorator to decorate an HTTP handler for HEAD requests."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.decorators.head.__init__:1
+msgid "Initialize ``head``."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.decorators.head.__init__:3
+msgid "Notes"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.decorators.head.__init__:5
+msgid "A response to a head request cannot include a body."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.decorators.head.__init__:6
+msgid ""
+"See: [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/HEAD)."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.decorators.patch:1
+msgid "PATCH Route Decorator."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.decorators.patch:3
+msgid "Use this decorator to decorate an HTTP handler for PATCH requests."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.decorators.patch.__init__:1
+msgid "Initialize ``patch``."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.decorators.post:1
+msgid "POST Route Decorator."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.decorators.post:3
+msgid "Use this decorator to decorate an HTTP handler for POST requests."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.decorators.post.__init__:1
+msgid "Initialize ``post``"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.decorators.put:1
+msgid "PUT Route Decorator."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.decorators.put:3
+msgid "Use this decorator to decorate an HTTP handler for PUT requests."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.http_handlers.decorators.put.__init__:1
+msgid "Initialize ``put``"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.stream.send_websocket_stream:1
+msgid "Stream data to the ``socket`` from an asynchronous generator."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.stream.send_websocket_stream:3
+#: litestar.handlers.websocket_handlers.stream.websocket_stream:4
+msgid "Example"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.stream.send_websocket_stream:5
+#: litestar.handlers.websocket_handlers.stream.websocket_stream:6
+msgid "Sending the current time to the connected client every 0.5 seconds:"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.stream.send_websocket_stream:8
+msgid ""
+"async def stream_current_time() -> AsyncGenerator[str, None]:\n"
+"    while True:\n"
+"        yield str(time.time())\n"
+"        await asyncio.sleep(0.5)\n"
+"\n"
+"\n"
+"@websocket(\"/time\")\n"
+"async def time_handler(socket: WebSocket) -> None:\n"
+"    await socket.accept()\n"
+"    await send_websocket_stream(\n"
+"        socket,\n"
+"        stream_current_time(),\n"
+"        listen_for_disconnect=True,\n"
+"    )"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.stream.send_websocket_stream:24
+msgid "The :class:`~litestar.connection.WebSocket` to send to"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.stream.send_websocket_stream:25
+msgid "An asynchronous generator yielding data to send"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.stream.send_websocket_stream:26
+msgid "If ``True``, close the socket after the generator is exhausted"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.stream.send_websocket_stream:27
+msgid "WebSocket mode to use for sending when no ``send_handler`` is specified"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.stream.send_websocket_stream:28
+msgid ""
+"Callable to handle the send process. If ``None``, defaults to ``type(socket)."
+"send_data``"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.stream.send_websocket_stream:29
+#: litestar.handlers.websocket_handlers.stream.websocket_stream:32
+msgid ""
+"If ``True``, listen for client disconnects in the background. If a client "
+"disconnects, stop the generator and cancel sending data. Should always be "
+"``True`` unless disconnects are handled elsewhere, for example by reading "
+"data from the socket concurrently. Should never be set to ``True`` when "
+"reading data from socket concurrently, as it can lead to data loss"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.stream.send_websocket_stream:33
+#: litestar.handlers.websocket_handlers.stream.websocket_stream:36
+msgid ""
+"If ``True`` and ``listen_for_disconnect=True``, warn if during listening for "
+"client disconnects, data is received from the socket"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.stream.websocket_stream:1
+msgid ""
+"Create a WebSocket handler that accepts a connection and sends data to it "
+"from an async generator."
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.stream.websocket_stream:9
+msgid ""
+"@websocket_stream(\"/time\")\n"
+"async def send_time() -> AsyncGenerator[str, None]:\n"
+"    while True:\n"
+"        yield str(time.time())\n"
+"        await asyncio.sleep(0.5)"
+msgstr ""
+
+#: ../../../../litestar/handlers/__init__.py:docstring of
+#: litestar.handlers.websocket_handlers.stream.websocket_stream:29
+msgid "WebSocket mode used for sending"
+msgstr ""

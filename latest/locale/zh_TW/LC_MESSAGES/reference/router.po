@@ -1,0 +1,285 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/router.rst:2
+msgid "router"
+msgstr ""
+
+#: ../../../../litestar/router.py:docstring of litestar.router.Router:1
+msgid "Bases: :py:class:`object`"
+msgstr ""
+
+#: ../../../../litestar/router.py:docstring of litestar.router.Router:1
+msgid "The Litestar Router class."
+msgstr ""
+
+#: ../../../../litestar/router.py:docstring of litestar.router.Router:3
+msgid ""
+"A Router instance is used to group controller, routers and route handler "
+"functions under a shared path fragment"
+msgstr ""
+
+#: ../../../../litestar/router.py:docstring of
+#: litestar.router.Router.__init__:1
+msgid "Initialize a ``Router``."
+msgstr ""
+
+#: ../../../reference/router.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../litestar/router.py:docstring of
+#: litestar.router.Router.__init__:3
+msgid ""
+"A sync or async function executed before a :class:`Request <.connection."
+"Request>` is passed to any route handler. If this function returns a value, "
+"the request will not reach the route handler, and instead this value will be "
+"used."
+msgstr ""
+
+#: ../../../../litestar/router.py:docstring of
+#: litestar.router.Router.__init__:6
+msgid ""
+"A sync or async function called after the response has been awaited. It "
+"receives the :class:`Request <.connection.Request>` object and should not "
+"return any values."
+msgstr ""
+
+#: ../../../../litestar/router.py:docstring of
+#: litestar.router.Router.__init__:8
+msgid ""
+"A sync or async function called immediately before calling the route "
+"handler. Receives the :class:`litestar.connection.Request` instance and any "
+"non-``None`` return value is used for the response, bypassing the route "
+"handler."
+msgstr ""
+
+#: ../../../../litestar/router.py:docstring of
+#: litestar.router.Router.__init__:11
+msgid ""
+"A ``cache-control`` header of type :class:`CacheControlHeader <."
+"datastructures.CacheControlHeader>` to add to route handlers of this router. "
+"Can be overridden by route handlers."
+msgstr ""
+
+#: ../../../../litestar/router.py:docstring of
+#: litestar.router.Router.__init__:14
+msgid ""
+"A string keyed mapping of dependency :class:`Provide <.di.Provide>` "
+"instances."
+msgstr ""
+
+#: ../../../../litestar/router.py:docstring of
+#: litestar.router.Router.__init__:15
+msgid ""
+":class:`AbstractDTO <.dto.base_dto.AbstractDTO>` to use for (de)serializing "
+"and validation of request data."
+msgstr ""
+
+#: ../../../../litestar/router.py:docstring of
+#: litestar.router.Router.__init__:17
+msgid ""
+"An ``etag`` header of type :class:`ETag <.datastructures.ETag>` to add to "
+"route handlers of this app."
+msgstr ""
+
+#: ../../../../litestar/router.py:docstring of
+#: litestar.router.Router.__init__:18
+msgid "A mapping of status codes and/or exception types to handler functions."
+msgstr ""
+
+#: ../../../../litestar/router.py:docstring of
+#: litestar.router.Router.__init__:19
+msgid "A sequence of :data:`Guard <.types.Guard>` callables."
+msgstr ""
+
+#: ../../../../litestar/router.py:docstring of
+#: litestar.router.Router.__init__:20
+msgid ""
+"A boolean flag dictating whether  the route handler should be documented in "
+"the OpenAPI schema."
+msgstr ""
+
+#: ../../../../litestar/router.py:docstring of
+#: litestar.router.Router.__init__:21
+msgid "A sequence of :data:`Middleware <.types.Middleware>`."
+msgstr ""
+
+#: ../../../../litestar/router.py:docstring of
+#: litestar.router.Router.__init__:22
+msgid ""
+"A string keyed mapping of arbitrary values that can be accessed in :data:"
+"`Guards <.types.Guard>` or wherever you have access to :class:`Request <."
+"connection.Request>` or :data:`ASGI Scope <.types.Scope>`."
+msgstr ""
+
+#: ../../../../litestar/router.py:docstring of
+#: litestar.router.Router.__init__:25
+msgid ""
+"A mapping of :func:`Parameter <.params.Parameter>` definitions available to "
+"all application paths."
+msgstr ""
+
+#: ../../../../litestar/router.py:docstring of
+#: litestar.router.Router.__init__:27
+msgid ""
+"A path fragment that is prefixed to all route handlers, controllers and "
+"other routers associated with the router instance."
+msgstr ""
+
+#: ../../../../litestar/router.py:docstring of
+#: litestar.router.Router.__init__:29
+msgid ""
+"A custom subclass of :class:`Request <.connection.Request>` to be used as "
+"the default for all route handlers, controllers and other routers associated "
+"with the router instance."
+msgstr ""
+
+#: ../../../../litestar/router.py:docstring of
+#: litestar.router.Router.__init__:31
+msgid ""
+"Maximum allowed size of the request body in bytes. If this size is exceeded, "
+"a '413 - Request Entity Too Large\" error response is returned."
+msgstr ""
+
+#: ../../../../litestar/router.py:docstring of
+#: litestar.router.Router.__init__:33
+msgid ""
+"A custom subclass of :class:`Response <.response.Response>` to be used as "
+"the default for all route handlers, controllers and other routers associated "
+"with the router instance."
+msgstr ""
+
+#: ../../../../litestar/router.py:docstring of
+#: litestar.router.Router.__init__:35
+msgid "A sequence of :class:`Cookie <.datastructures.Cookie>` instances."
+msgstr ""
+
+#: ../../../../litestar/router.py:docstring of
+#: litestar.router.Router.__init__:36
+msgid ""
+"A string keyed mapping of :class:`ResponseHeader <.datastructures."
+"ResponseHeader>` instances."
+msgstr ""
+
+#: ../../../../litestar/router.py:docstring of
+#: litestar.router.Router.__init__:38
+msgid ""
+":class:`AbstractDTO <.dto.base_dto.AbstractDTO>` to use for serializing "
+"outbound response data."
+msgstr ""
+
+#: ../../../../litestar/router.py:docstring of
+#: litestar.router.Router.__init__:40
+msgid ""
+"A required sequence of route handlers, which can include instances of :class:"
+"`Router <.router.Router>`, subclasses of :class:`Controller <.controller."
+"Controller>` or any function decorated by the route handler decorators."
+msgstr ""
+
+#: ../../../../litestar/router.py:docstring of
+#: litestar.router.Router.__init__:43
+msgid ""
+"A sequence of dicts that will be added to the schema of all route handlers "
+"in the application. See :data:`SecurityRequirement <.openapi.spec."
+"SecurityRequirement>` for details."
+msgstr ""
+
+#: ../../../../litestar/router.py:docstring of
+#: litestar.router.Router.__init__:46
+msgid ""
+"A mapping of names to types for use in forward reference resolution during "
+"signature modelling."
+msgstr ""
+
+#: ../../../../litestar/router.py:docstring of
+#: litestar.router.Router.__init__:47
+msgid ""
+"A sequence of types for use in forward reference resolution during signature "
+"modelling. These types will be added to the signature namespace using their "
+"``__name__`` attribute."
+msgstr ""
+
+#: ../../../../litestar/router.py:docstring of
+#: litestar.router.Router.__init__:49
+msgid ""
+"A sequence of string tags that will be appended to the schema of all route "
+"handlers under the application."
+msgstr ""
+
+#: ../../../../litestar/router.py:docstring of
+#: litestar.router.Router.__init__:51
+msgid ""
+"A sequence of tuples, each composed of a predicate testing for type identity "
+"and a msgspec hook for deserialization."
+msgstr ""
+
+#: ../../../../litestar/router.py:docstring of
+#: litestar.router.Router.__init__:52
+msgid ""
+"A mapping of types to callables that transform them into types supported for "
+"serialization."
+msgstr ""
+
+#: ../../../../litestar/router.py:docstring of
+#: litestar.router.Router.__init__:53
+msgid ""
+"A custom subclass of :class:`WebSocket <.connection.WebSocket>` to be used "
+"as the default for all route handlers, controllers and other routers "
+"associated with the router instance."
+msgstr ""
+
+#: ../../../../litestar/router.py:docstring of
+#: litestar.router.Router.register:1
+msgid "Register a Controller, Route instance or RouteHandler on the router."
+msgstr ""
+
+#: ../../../../litestar/router.py:docstring of
+#: litestar.router.Router.register:3
+msgid ""
+"a subclass or instance of Controller, an instance of :class:`Router` or a "
+"function/method that has been decorated by any of the routing decorators, e."
+"g. :class:`get <.handlers.get>`, :class:`post <.handlers.post>`."
+msgstr ""
+
+#: ../../../reference/router.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/router.py:docstring of
+#: litestar.router.Router.register:7
+msgid "Collection of handlers added to the router."
+msgstr ""
+
+#: ../../../../litestar/router.py:docstring of
+#: litestar.router.Router.route_handler_method_map:1
+msgid ""
+"Map route paths to :class:`RouteHandlerMapItem <litestar.types."
+"internal_types es.RouteHandlerMapItem>`"
+msgstr ""
+
+#: ../../../../litestar/router.py:docstring of
+#: litestar.router.Router.route_handler_method_map:3
+msgid "A dictionary mapping paths to route handlers"
+msgstr ""
+
+#: ../../../../litestar/router.py:docstring of
+#: litestar.router.Router.get_route_handler_map:1
+msgid "Map route handlers to HTTP methods."
+msgstr ""

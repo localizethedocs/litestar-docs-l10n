@@ -1,0 +1,132 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../tutorials/dto-tutorial/03-nested-collection-exclude.rst:2
+msgid "Excluding from collections of nested models"
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/03-nested-collection-exclude.rst:4
+msgid ""
+"In Python, generic types can accept one or more type parameters (types that "
+"are enclosed in square brackets). This pattern is often seen when "
+"representing a collection of some type, such as ``List[Person]``, where "
+"``List`` is a generic container type, and ``Person`` specializes the "
+"contents of the collection to contain only instances of the ``Person`` class."
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/03-nested-collection-exclude.rst:9
+msgid ""
+"Given a generic type, with an arbitrary number of type parameters (e.g., "
+"``GenericType[Type0, Type1, ..., TypeN]``), we use the index of the type "
+"parameter to indicate which type the exclusion should refer to. For example, "
+"``a.0.b``, excludes the ``b`` field from the first type parameter of ``a``, "
+"``a.1.b`` excludes the ``b`` field from the second type parameter of ``a``, "
+"and so on."
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/03-nested-collection-exclude.rst:14
+msgid ""
+"To demonstrate, lets add a self-referencing ``children`` relationship to our "
+"``Person`` model:"
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/03-nested-collection-exclude.rst:17
+msgid ""
+"from __future__ import annotations\n"
+"\n"
+"from dataclasses import dataclass\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.dto import DataclassDTO, DTOConfig\n"
+"\n"
+"\n"
+"@dataclass\n"
+"class Address:\n"
+"    street: str\n"
+"    city: str\n"
+"    country: str\n"
+"\n"
+"\n"
+"@dataclass\n"
+"class Person:\n"
+"    name: str\n"
+"    age: int\n"
+"    email: str\n"
+"    address: Address\n"
+"    children: list[Person]\n"
+"\n"
+"\n"
+"class ReadDTO(DataclassDTO[Person]):\n"
+"    config = DTOConfig(exclude={\"email\", \"address.street\", \"children.0."
+"email\", \"children.0.address\"})\n"
+"\n"
+"\n"
+"@get(\"/person/{name:str}\", return_dto=ReadDTO, sync_to_thread=False)\n"
+"def get_person(name: str) -> Person:\n"
+"    # Your logic to retrieve the person goes here\n"
+"    # For demonstration purposes, a placeholder Person instance is returned\n"
+"    address = Address(street=\"123 Main St\", city=\"Cityville\", "
+"country=\"Countryland\")\n"
+"    child1 = Person(name=\"Child1\", age=10, email=\"child1@example.com\", "
+"address=address, children=[])\n"
+"    child2 = Person(name=\"Child2\", age=8, email=\"child2@example.com\", "
+"address=address, children=[])\n"
+"    return Person(\n"
+"        name=name,\n"
+"        age=30,\n"
+"        email=f\"email_of_{name}@example.com\",\n"
+"        address=address,\n"
+"        children=[child1, child2],\n"
+"    )\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[get_person])"
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/03-nested-collection-exclude.rst:21
+msgid ""
+"Now, a ``Person`` can have one or many ``children``, and each ``child`` can "
+"have one or many ``children``, and so on."
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/03-nested-collection-exclude.rst:23
+msgid ""
+"We have explicitly excluded the ``email`` and ``address`` fields of all "
+"represented ``children`` (``\"children.0.email\", \"children.0.address\"``)."
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/03-nested-collection-exclude.rst:26
+msgid ""
+"In our handler we add ``children`` to the ``Person``, and each child has no "
+"``children`` of their own."
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/03-nested-collection-exclude.rst:28
+msgid "Here's the output:"
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/03-nested-collection-exclude.rst:33
+msgid ""
+"Fantastic! Our ``children`` are now represented in the output, and their "
+"emails and addresses are excluded. However, astute readers may have noticed "
+"that we didn't exclude the ``children`` field of ``Person.children`` (e.g., "
+"``children.0.children``), yet that field is not represented in the output. "
+"To understand why, we'll next look at the :attr:`max_nested_depth <litestar."
+"dto.config.DTOConfig.max_nested_depth>` configuration option."
+msgstr ""

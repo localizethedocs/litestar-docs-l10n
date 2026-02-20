@@ -1,0 +1,845 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/config.rst:2
+msgid "config"
+msgstr ""
+
+#: ../../../../litestar/config/allowed_hosts.py:docstring of
+#: litestar.config.allowed_hosts.AllowedHostsConfig:1
+#: ../../../../litestar/config/app.py:docstring litestar.config.app.AppConfig:1
+#: ../../../../litestar/config/compression.py:docstring
+#: litestar.config.compression.CompressionConfig:1
+#: ../../../../litestar/config/cors.py:docstring
+#: litestar.config.cors.CORSConfig:1
+#: ../../../../litestar/config/csrf.py:docstring
+#: litestar.config.csrf.CSRFConfig:1
+#: ../../../../litestar/config/response_cache.py:docstring
+#: litestar.config.response_cache.CACHE_FOREVER:1
+#: litestar.config.response_cache.ResponseCacheConfig:1
+msgid "Bases: :py:class:`object`"
+msgstr ""
+
+#: ../../../../litestar/config/allowed_hosts.py:docstring of
+#: litestar.config.allowed_hosts.AllowedHostsConfig:1
+msgid "Configuration for allowed hosts protection."
+msgstr ""
+
+#: ../../../../litestar/config/allowed_hosts.py:docstring of
+#: litestar.config.allowed_hosts.AllowedHostsConfig:3
+msgid ""
+"To enable allowed hosts protection, pass an instance of this class to the :"
+"class:`Litestar <litestar.app.Litestar>` constructor using the "
+"``allowed_hosts`` key."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.config.allowed_hosts.AllowedHostsConfig.allowed_hosts:1
+msgid "A list of trusted hosts."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.config.allowed_hosts.AllowedHostsConfig.allowed_hosts:3
+msgid ""
+"Use ``*.`` to allow all hosts, or prefix domains with ``*.`` to allow all "
+"sub domains."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.config.allowed_hosts.AllowedHostsConfig.exclude:1
+msgid "A pattern or list of patterns to skip in the Allowed Hosts middleware."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.config.allowed_hosts.AllowedHostsConfig.exclude_opt_key:1
+msgid ""
+"An identifier to use on routes to disable hosts check for a particular route."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.config.allowed_hosts.AllowedHostsConfig.scopes:1
+msgid ""
+"ASGI scopes processed by the middleware, if None both ``http`` and "
+"``websocket`` will be processed."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.config.allowed_hosts.AllowedHostsConfig.www_redirect:1
+msgid ""
+"A boolean dictating whether to redirect requests that start with ``www.`` "
+"and otherwise match a trusted host."
+msgstr ""
+
+#: ../../../../litestar/config/allowed_hosts.py:docstring of
+#: litestar.config.allowed_hosts.AllowedHostsConfig.__post_init__:1
+msgid "Ensure that the trusted hosts have correct domain wildcards."
+msgstr ""
+
+#: ../../../../litestar/config/app.py:docstring of
+#: litestar.config.app.AppConfig:1
+msgid ""
+"The parameters provided to the ``Litestar`` app are used to instantiate an "
+"instance, and then the instance is passed to any callbacks registered to "
+"``on_app_init`` in the order they are provided."
+msgstr ""
+
+#: ../../../../litestar/config/app.py:docstring of
+#: litestar.config.app.AppConfig:4
+msgid ""
+"The final attribute values are used to instantiate the application object."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.after_exception:1
+msgid ""
+"An application level :class:`exception hook handler <.types."
+"AfterExceptionHookHandler>` or list thereof."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.after_exception:3
+msgid ""
+"This hook is called after an exception occurs. In difference to exception "
+"handlers, it is not meant to return a response - only to process the "
+"exception (e.g. log it, send it to Sentry etc.)."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.after_request:1
+msgid ""
+"A sync or async function executed after the route handler function returned "
+"and the response object has been resolved."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.after_request:4
+msgid ""
+"Receives the response object which may be any subclass of :class:`Response <."
+"response.Response>`."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.after_response:1
+msgid ""
+"A sync or async function called after the response has been awaited. It "
+"receives the :class:`Request <.connection.Request>` object and should not "
+"return any values."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.allowed_hosts:1
+msgid "If set enables the builtin allowed hosts middleware."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.before_request:1
+msgid ""
+"A sync or async function called immediately before calling the route "
+"handler. Receives the :class:`Request <.connection.Request>` instance and "
+"any non-``None`` return value is used for the response, bypassing the route "
+"handler."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.before_send:1
+msgid ""
+"An application level :class:`before send hook handler <.types."
+"BeforeMessageSendHookHandler>` or list thereof."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.before_send:3
+msgid "This hook is called when the ASGI send function is called."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.cache_control:1
+msgid ""
+"A ``cache-control`` header of type :class:`CacheControlHeader <."
+"datastructures.CacheControlHeader>` to add to route handlers of this app."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.cache_control:4
+#: litestar.config.app.AppConfig.etag:3
+msgid "Can be overridden by route handlers."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.compression_config:1
+msgid ""
+"Configures compression behaviour of the application, this enabled a builtin "
+"or user defined Compression middleware."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.cors_config:1
+msgid "If set this enables the builtin CORS middleware."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.csrf_config:1
+msgid "If set this enables the builtin CSRF middleware."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.debug:1
+msgid "If ``True``, app errors rendered as HTML with a stack trace."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.dependencies:1
+msgid ""
+"A string keyed dictionary of dependency :class:`Provider <.di.Provide>` "
+"instances."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.dto:1
+msgid ""
+":class:`AbstractDTO <.dto.base_dto.AbstractDTO>` to use for (de)serializing "
+"and validation of request data."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.etag:1
+msgid ""
+"An ``etag`` header of type :class:`ETag <.datastructures.ETag>` to add to "
+"route handlers of this app."
+msgstr ""
+
+#: ../../../../litestar/config/app.py:docstring of
+#: litestar.events.emitter.SimpleEventEmitter:1
+msgid ""
+"A subclass of :class:`BaseEventEmitterBackend <.events.emitter."
+"BaseEventEmitterBackend>`."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.exception_handlers:1
+msgid ""
+"A dictionary that maps handler functions to status codes and/or exception "
+"types."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.guards:1
+msgid "A list of :class:`Guard <.types.Guard>` callables."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.include_in_schema:1
+msgid ""
+"A boolean flag dictating whether  the route handler should be documented in "
+"the OpenAPI schema"
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.lifespan:1
+msgid ""
+"A list of callables returning async context managers, wrapping the lifespan "
+"of the ASGI application"
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.listeners:1
+msgid "A list of :class:`EventListener <.events.listener.EventListener>`."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.logging_config:1
+msgid ""
+"An instance of :class:`BaseLoggingConfig <.logging.config."
+"BaseLoggingConfig>` subclass."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.middleware:1
+msgid "A list of :class:`Middleware <.types.Middleware>`."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.on_shutdown:1
+msgid ""
+"A list of :class:`LifespanHook <.types.LifespanHook>` called during "
+"application shutdown."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.on_startup:1
+msgid ""
+"A list of :class:`LifespanHook <.types.LifespanHook>` called during "
+"application startup."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.openapi_config:1
+msgid ""
+"Defaults to :data:`DEFAULT_OPENAPI_CONFIG <litestar.app."
+"DEFAULT_OPENAPI_CONFIG>`"
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.opt:1
+msgid ""
+"A string keyed dictionary of arbitrary values that can be accessed in :class:"
+"`Guards <.types.Guard>` or wherever you have access to :class:`Request <."
+"connection.Request>` or :class:`ASGI Scope <litestar.types.Scope>`."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.opt:4
+msgid "Can be overridden by routers and router handlers."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.parameters:1
+msgid ""
+"A mapping of :class:`Parameter <.params.Parameter>` definitions available to "
+"all application paths."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.path:1
+msgid ""
+"A base path that prefixed to all route handlers, controllers and routers "
+"associated with the application instance."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.pdb_on_exception:1
+msgid "Drop into the PDB on an exception"
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.debugger_module:1
+msgid ""
+"A `pdb`-like debugger module that supports the `post_mortem()` protocol. "
+"This module will be used when `pdb_on_exception` is set to True."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.plugins:1
+msgid ""
+"List of :class:`SerializationPluginProtocol <.plugins."
+"SerializationPluginProtocol>`."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.request_class:1
+msgid ""
+"An optional subclass of :class:`Request <.connection.Request>` to use for "
+"http connections."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.config.app.AppConfig.request_max_body_size:1
+msgid ""
+"Maximum allowed size of the request body in bytes. If this size is exceeded, "
+"a '413 - Request Entity Too Large' error response is returned."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.response_class:1
+msgid ""
+"A custom subclass of :class:`Response <.response.Response>` to be used as "
+"the app's default response."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.response_cookies:1
+msgid "A list of :class:`Cookie <.datastructures.Cookie>`."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.response_headers:1
+msgid ""
+"A string keyed dictionary mapping :class:`ResponseHeader <.datastructures."
+"ResponseHeader>`."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.config.app.AppConfig.response_cache_config:1
+msgid "Configures caching behavior of the application."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.return_dto:1
+msgid ""
+":class:`AbstractDTO <.dto.base_dto.AbstractDTO>` to use for serializing "
+"outbound response data."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.route_handlers:1
+msgid ""
+"A required list of route handlers, which can include instances of :class:"
+"`Router <.router.Router>`, subclasses of :class:`Controller <.controller."
+"Controller>` or any function decorated by the route handler decorators."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.security:1
+msgid ""
+"A list of dictionaries that will be added to the schema of all route "
+"handlers in the application. See :data:`SecurityRequirement <.openapi.spec."
+"SecurityRequirement>` for details."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.signature_namespace:1
+msgid ""
+"A mapping of names to types for use in forward reference resolution during "
+"signature modelling."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.signature_types:1
+msgid ""
+"A sequence of types for use in forward reference resolution during signature "
+"modelling."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.signature_types:3
+msgid ""
+"These types will be added to the signature namespace using their "
+"``__name__`` attribute."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.state:1
+msgid ""
+"A :class:`State` <.datastructures.State>` instance holding application state."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.static_files_config:1
+msgid ""
+"An instance or list of :class:`StaticFilesConfig <.static_files."
+"StaticFilesConfig>`."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.stores:1
+msgid ""
+"Central registry of :class:`Store <.stores.base.Store>` to be made available "
+"and be used throughout the application. Can be either a dictionary mapping "
+"strings to :class:`Store <.stores.base.Store>` instances, or an instance of :"
+"class:`StoreRegistry <.stores.registry.StoreRegistry>`."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.tags:1
+msgid ""
+"A list of string tags that will be appended to the schema of all route "
+"handlers under the application."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.template_config:1
+msgid "An instance of :class:`TemplateConfig <.template.TemplateConfig>`."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.type_decoders:1
+msgid ""
+"A sequence of tuples, each composed of a predicate testing for type identity "
+"and a msgspec hook for deserialization."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.type_encoders:1
+msgid ""
+"A mapping of types to callables that transform them into types supported for "
+"serialization."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.AppConfig.websocket_class:1
+msgid ""
+"An optional subclass of :class:`WebSocket <.connection.WebSocket>` to use "
+"for websocket connections."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.config.app.AppConfig.multipart_form_part_limit:1
+msgid ""
+"The maximal number of allowed parts in a multipart/formdata request. This "
+"limit is intended to protect from DoS attacks."
+msgstr ""
+
+#: ../../../../litestar/config/app.py:docstring of
+#: litestar.config.app.AppConfig.__post_init__:1
+msgid "Normalize the allowed hosts to be a config or None."
+msgstr ""
+
+#: ../../../reference/config.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/config/app.py:docstring of
+#: litestar.config.app.AppConfig.__post_init__:3
+msgid "Optional config."
+msgstr ""
+
+#: ../../../../litestar/config/app.py:docstring of
+#: litestar.config.app.ExperimentalFeatures:1
+msgid "Bases: :py:class:`str`, :py:class:`~enum.Enum`"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.config.app.ExperimentalFeatures.DTO_CODEGEN:1
+msgid "Enable DTO codegen."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.app.ExperimentalFeatures.FUTURE:1
+msgid "Enable future features that may be considered breaking or changing."
+msgstr ""
+
+#: ../../../../litestar/config/compression.py:docstring of
+#: litestar.config.compression.CompressionConfig:1
+msgid "Configuration for response compression."
+msgstr ""
+
+#: ../../../../litestar/config/compression.py:docstring of
+#: litestar.config.compression.CompressionConfig:3
+msgid ""
+"To enable response compression, pass an instance of this class to the :class:"
+"`Litestar <.app.Litestar>` constructor using the ``compression_config`` key."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.config.compression.CompressionConfig.backend:1
+msgid "The backend to use."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.config.compression.CompressionConfig.backend:3
+msgid ""
+"If the value given is `gzip` or `brotli`, then the builtin gzip and brotli "
+"compression is used."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.config.compression.CompressionConfig.minimum_size:1
+msgid ""
+"Minimum response size (bytes) to enable compression, affects all backends."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.config.compression.CompressionConfig.gzip_compress_level:1
+msgid "Range ``[0-9]``, see :doc:`python:library/gzip`."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.config.compression.CompressionConfig.brotli_quality:1
+msgid ""
+"Range ``[0-11]``, Controls the compression-speed vs compression-density "
+"tradeoff."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.config.compression.CompressionConfig.brotli_quality:3
+msgid "The higher the quality, the slower the compression."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.config.compression.CompressionConfig.brotli_mode:1
+msgid ""
+"``MODE_GENERIC``, ``MODE_TEXT`` (for UTF-8 format text input, default) or "
+"``MODE_FONT`` (for WOFF 2.0)."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.config.compression.CompressionConfig.brotli_lgwin:1
+msgid "Base 2 logarithm of size."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.config.compression.CompressionConfig.brotli_lgwin:3
+msgid "Range is 10 to 24. Defaults to 22."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.config.compression.CompressionConfig.brotli_lgblock:1
+msgid "Base 2 logarithm of the maximum input block size."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.config.compression.CompressionConfig.brotli_lgblock:3
+msgid ""
+"Range is ``16`` to ``24``. If set to ``0``, the value will be set based on "
+"the quality. Defaults to ``0``."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.config.compression.CompressionConfig.brotli_gzip_fallback:1
+msgid "Use GZIP if Brotli is not supported."
+msgstr ""
+
+#: ../../../../litestar/config/compression.py:docstring of
+#: litestar.middleware.compression.middleware.CompressionMiddleware:1
+msgid ""
+"Middleware class to use, should be a subclass of :class:"
+"`CompressionMiddleware`."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.config.compression.CompressionConfig.exclude:1
+msgid "A pattern or list of patterns to skip in the compression middleware."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.config.compression.CompressionConfig.exclude_opt_key:1
+msgid ""
+"An identifier to use on routes to disable compression for a particular route."
+msgstr ""
+
+#: ../../../../litestar/config/compression.py:docstring of
+#: litestar.middleware.compression.gzip_facade.GzipCompression:1
+msgid "The compression facade to use for the actual compression."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.config.compression.CompressionConfig.backend_config:1
+msgid "Configuration specific to the backend."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.config.compression.CompressionConfig.gzip_fallback:1
+msgid ""
+"Use GZIP as a fallback if the provided backend is not supported by the "
+"client."
+msgstr ""
+
+#: ../../../../litestar/config/cors.py:docstring of
+#: litestar.config.cors.CORSConfig:1
+msgid "Configuration for CORS (Cross-Origin Resource Sharing)."
+msgstr ""
+
+#: ../../../../litestar/config/cors.py:docstring of
+#: litestar.config.cors.CORSConfig:3
+msgid ""
+"To enable CORS, pass an instance of this class to the :class:`Litestar "
+"<litestar.app.Litestar>` constructor using the 'cors_config' key."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.cors.CORSConfig.allow_origins:1
+msgid "List of origins that are allowed."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.cors.CORSConfig.allow_origins:3
+msgid ""
+"Can use '*' in any component of the path, e.g. 'domain.*'. Sets the 'Access-"
+"Control-Allow-Origin' header."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.cors.CORSConfig.allow_methods:1
+msgid "List of allowed HTTP methods."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.cors.CORSConfig.allow_methods:3
+msgid "Sets the 'Access-Control-Allow-Methods' header."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.cors.CORSConfig.allow_headers:1
+msgid "List of allowed headers."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.cors.CORSConfig.allow_headers:3
+msgid "Sets the 'Access-Control-Allow-Headers' header."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.cors.CORSConfig.allow_credentials:1
+msgid ""
+"Boolean dictating whether or not to set the 'Access-Control-Allow-"
+"Credentials' header."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.config.cors.CORSConfig.allow_origin_regex:1
+msgid "Regex to match origins against."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.cors.CORSConfig.expose_headers:1
+msgid ""
+"List of headers that are exposed via the 'Access-Control-Expose-Headers' "
+"header."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.cors.CORSConfig.max_age:1
+msgid "Response caching TTL in seconds, defaults to 600."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.cors.CORSConfig.max_age:3
+msgid "Sets the 'Access-Control-Max-Age' header."
+msgstr ""
+
+#: ../../../../litestar/config/cors.py:docstring of
+#: litestar.config.cors.CORSConfig.allowed_origins_regex:1
+msgid "Get or create a compiled regex for allowed origins."
+msgstr ""
+
+#: ../../../../litestar/config/cors.py:docstring of
+#: litestar.config.cors.CORSConfig.allowed_origins_regex:3
+msgid "A compiled regex of the allowed path."
+msgstr ""
+
+#: ../../../../litestar/config/cors.py:docstring of
+#: litestar.config.cors.CORSConfig.is_allow_all_origins:1
+msgid "Get a cached boolean flag dictating whether all origins are allowed."
+msgstr ""
+
+#: ../../../../litestar/config/cors.py:docstring of
+#: litestar.config.cors.CORSConfig.is_allow_all_origins:3
+msgid "Boolean dictating whether all origins are allowed."
+msgstr ""
+
+#: ../../../../litestar/config/cors.py:docstring of
+#: litestar.config.cors.CORSConfig.is_allow_all_methods:1
+msgid "Get a cached boolean flag dictating whether all methods are allowed."
+msgstr ""
+
+#: ../../../../litestar/config/cors.py:docstring of
+#: litestar.config.cors.CORSConfig.is_allow_all_methods:3
+msgid "Boolean dictating whether all methods are allowed."
+msgstr ""
+
+#: ../../../../litestar/config/cors.py:docstring of
+#: litestar.config.cors.CORSConfig.is_allow_all_headers:1
+msgid "Get a cached boolean flag dictating whether all headers are allowed."
+msgstr ""
+
+#: ../../../../litestar/config/cors.py:docstring of
+#: litestar.config.cors.CORSConfig.is_allow_all_headers:3
+msgid "Boolean dictating whether all headers are allowed."
+msgstr ""
+
+#: ../../../../litestar/config/cors.py:docstring of
+#: litestar.config.cors.CORSConfig.preflight_headers:1
+msgid "Get cached pre-flight headers."
+msgstr ""
+
+#: ../../../../litestar/config/cors.py:docstring of
+#: litestar.config.cors.CORSConfig.preflight_headers:3
+#: litestar.config.cors.CORSConfig.simple_headers:3
+msgid "A dictionary of headers to set on the response object."
+msgstr ""
+
+#: ../../../../litestar/config/cors.py:docstring of
+#: litestar.config.cors.CORSConfig.simple_headers:1
+msgid "Get cached simple headers."
+msgstr ""
+
+#: ../../../../litestar/config/cors.py:docstring of
+#: litestar.config.cors.CORSConfig.is_origin_allowed:1
+msgid "Check whether a given origin is allowed."
+msgstr ""
+
+#: ../../../reference/config.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../litestar/config/cors.py:docstring of
+#: litestar.config.cors.CORSConfig.is_origin_allowed:3
+msgid "An origin header value."
+msgstr ""
+
+#: ../../../../litestar/config/cors.py:docstring of
+#: litestar.config.cors.CORSConfig.is_origin_allowed:5
+msgid "Boolean determining whether an origin is allowed."
+msgstr ""
+
+#: ../../../../litestar/config/csrf.py:docstring of
+#: litestar.config.csrf.CSRFConfig:1
+msgid "Configuration for CSRF (Cross Site Request Forgery) protection."
+msgstr ""
+
+#: ../../../../litestar/config/csrf.py:docstring of
+#: litestar.config.csrf.CSRFConfig:3
+msgid ""
+"To enable CSRF protection, pass an instance of this class to the :class:"
+"`Litestar <litestar.app.Litestar>` constructor using the 'csrf_config' key."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.csrf.CSRFConfig.secret:1
+msgid "A string that is used to create an HMAC to sign the CSRF token."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.csrf.CSRFConfig.cookie_name:1
+msgid "The CSRF cookie name."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.csrf.CSRFConfig.cookie_path:1
+msgid "The CSRF cookie path."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.csrf.CSRFConfig.header_name:1
+msgid "The header that will be expected in each request."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.csrf.CSRFConfig.cookie_secure:1
+msgid ""
+"A boolean value indicating whether to set the ``Secure`` attribute on the "
+"cookie."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.csrf.CSRFConfig.cookie_httponly:1
+msgid ""
+"A boolean value indicating whether to set the ``HttpOnly`` attribute on the "
+"cookie."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.csrf.CSRFConfig.cookie_samesite:1
+msgid "The value to set in the ``SameSite`` attribute of the cookie."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.csrf.CSRFConfig.cookie_domain:1
+msgid "Specifies which hosts can receive the cookie."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.csrf.CSRFConfig.safe_methods:1
+msgid "A set of \"safe methods\" that can set the cookie."
+msgstr ""
+
+#: ../../../../docstring of litestar.config.csrf.CSRFConfig.exclude:1
+msgid "A pattern or list of patterns to skip in the CSRF middleware."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.config.csrf.CSRFConfig.exclude_from_csrf_key:1
+msgid "An identifier to use on routes to disable CSRF for a particular route."
+msgstr ""
+
+#: ../../../../litestar/config/response_cache.py:docstring of
+#: litestar.config.response_cache.CACHE_FOREVER:1
+msgid ""
+"Sentinel value indicating that a cached response should be stored without an "
+"expiration, explicitly skipping the default expiration"
+msgstr ""
+
+#: ../../../../litestar/config/response_cache.py:docstring of
+#: litestar.config.response_cache.ResponseCacheConfig:1
+msgid "Configuration for response caching."
+msgstr ""
+
+#: ../../../../litestar/config/response_cache.py:docstring of
+#: litestar.config.response_cache.ResponseCacheConfig:3
+msgid ""
+"To enable response caching, pass an instance of this class to :class:"
+"`Litestar <.app.Litestar>` using the ``response_cache_config`` key."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.config.response_cache.ResponseCacheConfig.default_expiration:1
+msgid ""
+"Default cache expiration in seconds used when a route handler is configured "
+"with ``cache=True``."
+msgstr ""
+
+#: ../../../../litestar/config/response_cache.py:docstring of
+#: litestar.config.response_cache.default_cache_key_builder:1
+msgid ""
+":class:`CacheKeyBuilder <.types.CacheKeyBuilder>`. Defaults to :func:"
+"`default_cache_key_builder`."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.config.response_cache.ResponseCacheConfig.store:1
+msgid "Name of the :class:`Store <.stores.base.Store>` to use."
+msgstr ""
+
+#: ../../../../litestar/config/response_cache.py:docstring of
+#: litestar.config.response_cache.default_do_cache_predicate:1
+msgid ""
+"A callable that receives connection scope and a status code, and returns a "
+"boolean indicating whether the response should be cached."
+msgstr ""
+
+#: ../../../../litestar/config/response_cache.py:docstring of
+#: litestar.config.response_cache.ResponseCacheConfig.get_store_from_app:1
+msgid ""
+"Get the store defined in :attr:`store` from an :class:`Litestar <.app."
+"Litestar>` instance."
+msgstr ""
+
+#: ../../../../litestar/config/response_cache.py:docstring of
+#: litestar.config.response_cache.default_cache_key_builder:1
+msgid ""
+"Given a request object, returns a cache key by combining the request method "
+"and path with the sorted query params."
+msgstr ""
+
+#: ../../../../litestar/config/response_cache.py:docstring of
+#: litestar.config.response_cache.default_cache_key_builder:4
+msgid "request used to generate cache key."
+msgstr ""
+
+#: ../../../../litestar/config/response_cache.py:docstring of
+#: litestar.config.response_cache.default_cache_key_builder:6
+msgid "A combination of url path and query parameters"
+msgstr ""

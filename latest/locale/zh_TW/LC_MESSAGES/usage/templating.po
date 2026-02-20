@@ -1,0 +1,919 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../usage/templating.rst:2
+msgid "Templating"
+msgstr ""
+
+#: ../../../usage/templating.rst:4
+msgid ""
+"Litestar has built-in support for `Jinja2 <https://jinja.palletsprojects.com/"
+"en/3.0.x/>`_ , `Mako <https://www.makotemplates.org/>`_ and `Minijinja "
+"<https://github.com/mitsuhiko/minijinja/tree/main/minijinja-py>`_ template "
+"engines, as well as abstractions to make use of any template engine you wish."
+msgstr ""
+
+#: ../../../usage/templating.rst:9
+msgid "Template engines"
+msgstr ""
+
+#: ../../../usage/templating.rst:11
+msgid ""
+"To stay lightweight, a Litestar installation does not include the *Jinja*, "
+"*Mako* or *Minijinja* libraries themselves. Before you can start using them, "
+"you have to install it via the respective extra:"
+msgstr ""
+
+#: ../../../usage/templating.rst:0
+msgid "Jinja"
+msgstr ""
+
+#: ../../../usage/templating.rst:20
+msgid "pip install 'litestar[jinja]'"
+msgstr ""
+
+#: ../../../usage/templating.rst:0
+msgid "Mako"
+msgstr ""
+
+#: ../../../usage/templating.rst:27
+msgid "pip install 'litestar[mako]'"
+msgstr ""
+
+#: ../../../usage/templating.rst:0
+msgid "MiniJinja"
+msgstr ""
+
+#: ../../../usage/templating.rst:34
+msgid "pip install 'litestar[minijinja]'"
+msgstr ""
+
+#: ../../../usage/templating.rst:40
+msgid ""
+"*Jinja* is included in the ``standard`` extra. If you installed Litestar "
+"using ``litestar[standard]``, you do not need to explicitly add the "
+"``jinja`` extra."
+msgstr ""
+
+#: ../../../usage/templating.rst:45
+msgid "Registering a template engine"
+msgstr ""
+
+#: ../../../usage/templating.rst:47
+msgid ""
+"To register one of the built-in template engines you simply need to pass it "
+"to the Litestar constructor:"
+msgstr ""
+
+#: ../../../usage/templating.rst:55
+msgid ""
+"from pathlib import Path\n"
+"\n"
+"from litestar import Litestar\n"
+"from litestar.contrib.jinja import JinjaTemplateEngine\n"
+"from litestar.template.config import TemplateConfig\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[],\n"
+"    template_config=TemplateConfig(\n"
+"        directory=Path(\"templates\"),\n"
+"        engine=JinjaTemplateEngine,\n"
+"    ),\n"
+")"
+msgstr ""
+
+#: ../../../usage/templating.rst:61
+msgid ""
+"from pathlib import Path\n"
+"\n"
+"from litestar import Litestar\n"
+"from litestar.contrib.mako import MakoTemplateEngine\n"
+"from litestar.template.config import TemplateConfig\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[],\n"
+"    template_config=TemplateConfig(\n"
+"        directory=Path(\"templates\"),\n"
+"        engine=MakoTemplateEngine,\n"
+"    ),\n"
+")"
+msgstr ""
+
+#: ../../../usage/templating.rst:67
+msgid ""
+"from pathlib import Path\n"
+"\n"
+"from litestar import Litestar\n"
+"from litestar.contrib.minijinja import MiniJinjaTemplateEngine\n"
+"from litestar.template.config import TemplateConfig\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[],\n"
+"    template_config=TemplateConfig(\n"
+"        directory=Path(\"templates\"),\n"
+"        engine=MiniJinjaTemplateEngine,\n"
+"    ),\n"
+")"
+msgstr ""
+
+#: ../../../usage/templating.rst:71
+msgid ""
+"The ``directory`` parameter passed to :class:`TemplateConfig <litestar."
+"template.TemplateConfig>` can be either a directory or list of directories "
+"to use for loading templates."
+msgstr ""
+
+#: ../../../usage/templating.rst:75
+msgid "Registering a Custom Template Engine"
+msgstr ""
+
+#: ../../../usage/templating.rst:77
+msgid ""
+"The above example will create a jinja Environment instance, but you can also "
+"pass in your own instance."
+msgstr ""
+
+#: ../../../usage/templating.rst:80
+msgid ""
+"from litestar import Litestar\n"
+"from litestar.contrib.jinja import JinjaTemplateEngine\n"
+"from litestar.template import TemplateConfig\n"
+"from jinja2 import Environment, DictLoader\n"
+"\n"
+"my_custom_env = Environment(loader=DictLoader({\"index.html\": \"Hello "
+"{{name}}!\"}))\n"
+"app = Litestar(\n"
+"    template_config=TemplateConfig(\n"
+"        instance=JinjaTemplateEngine.from_environment(my_custom_env)\n"
+"    )\n"
+")"
+msgstr ""
+
+#: ../../../usage/templating.rst:96
+msgid ""
+"The ``instance`` parameter passed to :class:`TemplateConfig <litestar."
+"template.TemplateConfig>` can not be used in conjunction with the "
+"``directory`` parameter, if you choose to use instance you're fully "
+"responsible on the engine creation."
+msgstr ""
+
+#: ../../../usage/templating.rst:100
+msgid "Defining a custom template engine"
+msgstr ""
+
+#: ../../../usage/templating.rst:102
+msgid ""
+"If you wish to use another templating engine, you can easily do so by "
+"implementing :class:`TemplateEngineProtocol <litestar.template."
+"TemplateEngineProtocol>`. This class accepts a generic argument which should "
+"be the template class, and it specifies two methods:"
+msgstr ""
+
+#: ../../../usage/templating.rst:0
+msgid "Python 3.8+"
+msgstr ""
+
+#: ../../../usage/templating.rst:107
+msgid ""
+"from typing import Protocol, Union, List\n"
+"from pydantic import DirectoryPath\n"
+"\n"
+"# the template class of the respective library\n"
+"from some_lib import SomeTemplate\n"
+"\n"
+"\n"
+"class TemplateEngineProtocol(Protocol[SomeTemplate]):\n"
+"    def __init__(self, directory: Union[DirectoryPath, List[DirectoryPath]]) "
+"-> None:\n"
+"        \"\"\"Builds a template engine.\"\"\"\n"
+"        ...\n"
+"\n"
+"    def get_template(self, template_name: str) -> SomeTemplate:\n"
+"        \"\"\"Loads the template with template_name and returns it.\"\"\"\n"
+"        ..."
+msgstr ""
+
+#: ../../../usage/templating.rst:0
+msgid "Python 3.9+"
+msgstr ""
+
+#: ../../../usage/templating.rst:107
+msgid ""
+"from typing import Protocol, Union\n"
+"from pydantic import DirectoryPath\n"
+"\n"
+"# the template class of the respective library\n"
+"from some_lib import SomeTemplate\n"
+"\n"
+"\n"
+"class TemplateEngineProtocol(Protocol[SomeTemplate]):\n"
+"    def __init__(self, directory: Union[DirectoryPath, list[DirectoryPath]]) "
+"-> None:\n"
+"        \"\"\"Builds a template engine.\"\"\"\n"
+"        ...\n"
+"\n"
+"    def get_template(self, template_name: str) -> SomeTemplate:\n"
+"        \"\"\"Loads the template with template_name and returns it.\"\"\"\n"
+"        ..."
+msgstr ""
+
+#: ../../../usage/templating.rst:0
+msgid "Python 3.10+"
+msgstr ""
+
+#: ../../../usage/templating.rst:107
+msgid ""
+"from typing import Protocol\n"
+"from pydantic import DirectoryPath\n"
+"\n"
+"# the template class of the respective library\n"
+"from some_lib import SomeTemplate\n"
+"\n"
+"\n"
+"class TemplateEngineProtocol(Protocol[SomeTemplate]):\n"
+"    def __init__(self, directory: DirectoryPath | list[DirectoryPath]) -> "
+"None:\n"
+"        \"\"\"Builds a template engine.\"\"\"\n"
+"        ...\n"
+"\n"
+"    def get_template(self, template_name: str) -> SomeTemplate:\n"
+"        \"\"\"Loads the template with template_name and returns it.\"\"\"\n"
+"        ..."
+msgstr ""
+
+#: ../../../usage/templating.rst:124
+msgid ""
+"Once you have your custom engine you can register it as you would the built-"
+"in engines."
+msgstr ""
+
+#: ../../../usage/templating.rst:127
+msgid "Accessing the template engine instance"
+msgstr ""
+
+#: ../../../usage/templating.rst:129
+msgid ""
+"If you need to access the template engine instance, you can do so via the :"
+"class:`TemplateConfig.engine <litestar.template.TemplateConfig>` attribute:"
+msgstr ""
+
+#: ../../../usage/templating.rst:138
+msgid ""
+"from litestar.contrib.jinja import JinjaTemplateEngine\n"
+"from litestar.template.config import TemplateConfig\n"
+"\n"
+"template_config = TemplateConfig(engine=JinjaTemplateEngine, "
+"directory=\"templates\")"
+msgstr ""
+
+#: ../../../usage/templating.rst:144
+msgid ""
+"from litestar.contrib.mako import MakoTemplateEngine\n"
+"from litestar.template.config import TemplateConfig\n"
+"\n"
+"template_config = TemplateConfig(engine=MakoTemplateEngine, "
+"directory=\"templates\")"
+msgstr ""
+
+#: ../../../usage/templating.rst:150
+msgid ""
+"from litestar.contrib.minijinja import MiniJinjaTemplateEngine\n"
+"from litestar.template.config import TemplateConfig\n"
+"\n"
+"template_config = TemplateConfig(engine=MiniJinjaTemplateEngine, "
+"directory=\"templates\")"
+msgstr ""
+
+#: ../../../usage/templating.rst:153
+msgid "Template responses"
+msgstr ""
+
+#: ../../../usage/templating.rst:155
+msgid ""
+"Once you have a template engine registered you can return :class:`templates "
+"responses <.response.Template>` from your route handlers:"
+msgstr ""
+
+#: ../../../usage/templating.rst:164
+msgid ""
+"from pathlib import Path\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.contrib.jinja import JinjaTemplateEngine\n"
+"from litestar.response import Template\n"
+"from litestar.template.config import TemplateConfig\n"
+"\n"
+"\n"
+"@get(path=\"/{template_type: str}\", sync_to_thread=False)\n"
+"def index(name: str, template_type: str) -> Template:\n"
+"    if template_type == \"file\":\n"
+"        return Template(template_name=\"hello.html.jinja2\", "
+"context={\"name\": name})\n"
+"    elif template_type == \"string\":\n"
+"        return Template(template_str=\"Hello <strong>Jinja</strong> using "
+"strings\", context={\"name\": name})\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[index],\n"
+"    template_config=TemplateConfig(\n"
+"        directory=Path(__file__).parent / \"templates\",\n"
+"        engine=JinjaTemplateEngine,\n"
+"    ),\n"
+")"
+msgstr ""
+
+#: ../../../usage/templating.rst:170
+msgid ""
+"from __future__ import annotations\n"
+"\n"
+"from pathlib import Path\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.contrib.mako import MakoTemplateEngine\n"
+"from litestar.response import Template\n"
+"from litestar.template.config import TemplateConfig\n"
+"\n"
+"\n"
+"@get(path=\"/{template_type: str}\", sync_to_thread=False)\n"
+"def index(name: str, template_type: str) -> Template:\n"
+"    if template_type == \"file\":\n"
+"        return Template(template_name=\"hello.html.mako\", "
+"context={\"name\": name})\n"
+"    elif template_type == \"string\":\n"
+"        return Template(template_str=\"Hello <strong>Mako</strong> using "
+"strings\", context={\"name\": name})\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[index],\n"
+"    template_config=TemplateConfig(\n"
+"        directory=Path(__file__).parent / \"templates\",\n"
+"        engine=MakoTemplateEngine,\n"
+"    ),\n"
+")"
+msgstr ""
+
+#: ../../../usage/templating.rst:176
+msgid ""
+"from __future__ import annotations\n"
+"\n"
+"from pathlib import Path\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.contrib.minijinja import MiniJinjaTemplateEngine\n"
+"from litestar.response import Template\n"
+"from litestar.template.config import TemplateConfig\n"
+"\n"
+"\n"
+"@get(path=\"/{template_type: str}\", sync_to_thread=False)\n"
+"def index(name: str, template_type: str) -> Template:\n"
+"    if template_type == \"file\":\n"
+"        return Template(template_name=\"hello.html.minijinja\", "
+"context={\"name\": name})\n"
+"    elif template_type == \"string\":\n"
+"        return Template(template_str=\"Hello <strong>Minijinja</strong> "
+"using strings\", context={\"name\": name})\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[index],\n"
+"    template_config=TemplateConfig(\n"
+"        directory=Path(__file__).parent / \"templates\",\n"
+"        engine=MiniJinjaTemplateEngine,\n"
+"    ),\n"
+")"
+msgstr ""
+
+#: ../../../usage/templating.rst:178
+msgid ""
+"``name`` is the name of the template file within on of the specified "
+"directories. If no file with that name is found, a :class:"
+"`TemplateNotFoundException <.exceptions.TemplateNotFoundException>` "
+"exception will be raised."
+msgstr ""
+
+#: ../../../usage/templating.rst:181
+msgid ""
+"``context`` is a dictionary containing arbitrary data that will be passed to "
+"the template engine's ``render`` method. For Jinja and Mako, this data will "
+"be available in the `template context <#template-context>`_"
+msgstr ""
+
+#: ../../../usage/templating.rst:185
+msgid "Template Files vs. Strings"
+msgstr ""
+
+#: ../../../usage/templating.rst:187
+msgid ""
+"When you define a template response, you can either pass a template file "
+"name or a string containing the template. The latter is useful if you want "
+"to define the template inline for small templates or :doc:`HTMX </usage/"
+"htmx>` responses for example."
+msgstr ""
+
+#: ../../../usage/templating.rst:0
+msgid "File name"
+msgstr ""
+
+#: ../../../usage/templating.rst:196
+msgid "Template via file"
+msgstr ""
+
+#: ../../../usage/templating.rst:196
+msgid ""
+"@get()\n"
+"async def example() -> Template:\n"
+"    return Template(template_name=\"test.html\", context={\"hello\": "
+"\"world\"})"
+msgstr ""
+
+#: ../../../usage/templating.rst:0
+msgid "String"
+msgstr ""
+
+#: ../../../usage/templating.rst:205
+msgid "Template via string"
+msgstr ""
+
+#: ../../../usage/templating.rst:205
+msgid ""
+"@get()\n"
+"async def example() -> Template:\n"
+"    template_string = \"{{ hello }}\"\n"
+"    return Template(template_str=template_string, context={\"hello\": "
+"\"world\"})"
+msgstr ""
+
+#: ../../../usage/templating.rst:213
+msgid "Template context"
+msgstr ""
+
+#: ../../../usage/templating.rst:215
+msgid ""
+"Both `Jinja2 <https://jinja.palletsprojects.com/en/3.0.x/>`_ and `Mako "
+"<https://www.makotemplates.org/>`_ support passing a context object to the "
+"template as well as defining callables that will be available inside the "
+"template."
+msgstr ""
+
+#: ../../../usage/templating.rst:219
+msgid "Accessing the request instance"
+msgstr ""
+
+#: ../../../usage/templating.rst:221
+msgid ""
+"The current :class:`Request <litestar.connection.request.Request>` is "
+"available within the template context under ``request``, which also provides "
+"access to the :doc:`app instance </usage/applications>`."
+msgstr ""
+
+#: ../../../usage/templating.rst:224
+msgid ""
+"Accessing ``app.state.key`` for example would look like this: "
+"<strong>check_context_key: </strong>{{ check_context_key() }}"
+msgstr ""
+
+#: ../../../usage/templating.rst:232 ../../../usage/templating.rst:261
+msgid ""
+"<html>\n"
+"    <body>\n"
+"        <div>\n"
+"            <span>My state value: {{request.app.state.some_key}}</span>\n"
+"        </div>\n"
+"    </body>\n"
+"</html>"
+msgstr ""
+
+#: ../../../usage/templating.rst:246
+msgid ""
+"html\n"
+"<html>\n"
+"    <body>\n"
+"        <div>\n"
+"            <span>My state value: ${request.app.state.some_key}</span>\n"
+"        </div>\n"
+"    </body>\n"
+"</html>"
+msgstr ""
+
+#: ../../../usage/templating.rst:273
+msgid "Adding CSRF inputs"
+msgstr ""
+
+#: ../../../usage/templating.rst:275
+msgid ""
+"If you want to add a hidden ``<input>`` tag containing a `CSRF token "
+"<https://developer.mozilla.org/en-US/docs/Web/Security/"
+"Types_of_attacks#cross-site_request_forgery_csrf>`_, you first need to "
+"configure :ref:`CSRF protection <usage/middleware/builtin-middleware:csrf>`. "
+"With that in place, you can now insert the CSRF input field inside an HTML "
+"form:"
+msgstr ""
+
+#: ../../../usage/templating.rst:285
+msgid ""
+"<html>\n"
+"    <body>\n"
+"        <div>\n"
+"            <form action=\"https://myserverurl.com/some-endpoint\" "
+"method=\"post\">\n"
+"                {{ csrf_input | safe }}\n"
+"                <label for=\"fname\">First name:</label><br>\n"
+"                <input type=\"text\" id=\"fname\" name=\"fname\">\n"
+"                <label for=\"lname\">Last name:</label><br>\n"
+"                <input type=\"text\" id=\"lname\" name=\"lname\">\n"
+"            </form>\n"
+"        </div>\n"
+"    </body>\n"
+"</html>"
+msgstr ""
+
+#: ../../../usage/templating.rst:304
+msgid ""
+"<html>\n"
+"    <body>\n"
+"        <div>\n"
+"            <form action=\"https://myserverurl.com/some-endpoint\" "
+"method=\"post\">\n"
+"                ${csrf_input | n}\n"
+"                <label for=\"fname\">First name:</label><br>\n"
+"                <input type=\"text\" id=\"fname\" name=\"fname\">\n"
+"                <label for=\"lname\">Last name:</label><br>\n"
+"                <input type=\"text\" id=\"lname\" name=\"lname\">\n"
+"            </form>\n"
+"        </div>\n"
+"    </body>\n"
+"</html>"
+msgstr ""
+
+#: ../../../usage/templating.rst:323
+msgid ""
+"<html>\n"
+"    <body>\n"
+"        <div>\n"
+"            <form action=\"https://myserverurl.com/some-endpoint\" "
+"method=\"post\">\n"
+"                {{ csrf_input | safe}}\n"
+"                <label for=\"fname\">First name:</label><br>\n"
+"                <input type=\"text\" id=\"fname\" name=\"fname\">\n"
+"                <label for=\"lname\">Last name:</label><br>\n"
+"                <input type=\"text\" id=\"lname\" name=\"lname\">\n"
+"            </form>\n"
+"        </div>\n"
+"    </body>\n"
+"</html>"
+msgstr ""
+
+#: ../../../usage/templating.rst:340
+msgid ""
+"The input holds a CSRF token as its value and is hidden so users cannot see "
+"or interact with it. The token is sent back to the server when the form is "
+"submitted, and is checked by the CSRF middleware."
+msgstr ""
+
+#: ../../../usage/templating.rst:345
+msgid ""
+"The `csrf_input` must be marked as safe in order to ensure that it does not "
+"get escaped."
+msgstr ""
+
+#: ../../../usage/templating.rst:348
+msgid "Passing template context"
+msgstr ""
+
+#: ../../../usage/templating.rst:350
+msgid ""
+"Passing context to the template is very simple - its one of the kwargs "
+"expected by the :class:`Template <litestar.response.Template>` container, so "
+"simply pass a string keyed dictionary of values:"
+msgstr ""
+
+#: ../../../usage/templating.rst:354
+msgid ""
+"from litestar import get\n"
+"from litestar.response import Template\n"
+"\n"
+"\n"
+"@get(path=\"/info\")\n"
+"def info() -> Template:\n"
+"    return Template(template_name=\"info.html\", context={\"numbers\": "
+"\"1234567890\"})"
+msgstr ""
+
+#: ../../../usage/templating.rst:365
+msgid "Template callables"
+msgstr ""
+
+#: ../../../usage/templating.rst:367
+msgid ""
+"Both `Jinja2 <https://jinja.palletsprojects.com/en/3.0.x/>`_ and `Mako "
+"<https://www.makotemplates.org/>`_ allow users to define custom callables "
+"that are ran inside the template. Litestar builds on this and offers some "
+"functions out of the box."
+msgstr ""
+
+#: ../../../usage/templating.rst:371
+msgid "Built-in callables"
+msgstr ""
+
+#: ../../../usage/templating.rst:373
+msgid "``url_for``"
+msgstr ""
+
+#: ../../../usage/templating.rst:374
+msgid ""
+"To access urls for route handlers, you can use the ``url_for`` function. Its "
+"signature and behaviour match those of :meth:`route_reverse <litestar.app."
+"Litestar.route_reverse>`. More details about route handler indexing can be "
+"found :ref:`here <usage/routing/handlers:route handler indexing>`."
+msgstr ""
+
+#: ../../../usage/templating.rst:378
+msgid "``csrf_token``"
+msgstr ""
+
+#: ../../../usage/templating.rst:379
+msgid ""
+"This function returns the request's unique :ref:`CSRF token <usage/"
+"middleware/builtin-middleware:csrf>` You can use this if you wish to insert "
+"the ``csrf_token`` into non-HTML based templates, or insert it into HTML "
+"templates not using a hidden input field but by some other means, for "
+"example inside a special ``<meta>`` tag."
+msgstr ""
+
+#: ../../../usage/templating.rst:383
+msgid "``url_for_static_asset``"
+msgstr ""
+
+#: ../../../usage/templating.rst:384
+msgid ""
+"URLs for static files can be created using the ``url_for_static_asset`` "
+"function. It's signature and behaviour are identical to :meth:`app."
+"url_for_static_asset <litestar.app.Litestar.url_for_static_asset>`."
+msgstr ""
+
+#: ../../../usage/templating.rst:389
+msgid "Registering template callables"
+msgstr ""
+
+#: ../../../usage/templating.rst:391
+msgid ""
+"The  :class:`TemplateEngineProtocol <litestar.template.base."
+"TemplateEngineProtocol>` specifies the method ``register_template_callable`` "
+"that allows defining a custom callable on a template engine. This method is "
+"implemented for the two built in engines, and it can be used to register "
+"callables that will be injected into the template. The callable should "
+"expect one argument - the context dictionary. It can be any callable - a "
+"function, method, or class that defines the call method. For example:"
+msgstr ""
+
+#: ../../../usage/templating.rst:403 ../../../usage/templating.rst:414
+#: ../../../usage/templating.rst:425
+msgid "``template_functions.py``"
+msgstr ""
+
+#: ../../../usage/templating.rst:403
+msgid ""
+"from pathlib import Path\n"
+"from typing import Any, Dict\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.contrib.jinja import JinjaTemplateEngine\n"
+"from litestar.response import Template\n"
+"from litestar.template.config import TemplateConfig\n"
+"\n"
+"\n"
+"def my_template_function(ctx: Dict[str, Any]) -> str:\n"
+"    return ctx.get(\"my_context_key\", \"nope\")\n"
+"\n"
+"\n"
+"def register_template_callables(engine: JinjaTemplateEngine) -> None:\n"
+"    engine.register_template_callable(\n"
+"        key=\"check_context_key\",\n"
+"        template_callable=my_template_function,\n"
+"    )\n"
+"\n"
+"\n"
+"template_config = TemplateConfig(\n"
+"    directory=Path(__file__).parent / \"templates\",\n"
+"    engine=JinjaTemplateEngine,\n"
+"    engine_callback=register_template_callables,\n"
+")\n"
+"\n"
+"\n"
+"@get(\"/\", sync_to_thread=False)\n"
+"def index() -> Template:\n"
+"    return Template(template_name=\"index.html.jinja2\")\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[index],\n"
+"    template_config=template_config,\n"
+")"
+msgstr ""
+
+#: ../../../usage/templating.rst:403
+msgid ""
+"from pathlib import Path\n"
+"from typing import Any\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.contrib.jinja import JinjaTemplateEngine\n"
+"from litestar.response import Template\n"
+"from litestar.template.config import TemplateConfig\n"
+"\n"
+"\n"
+"def my_template_function(ctx: dict[str, Any]) -> str:\n"
+"    return ctx.get(\"my_context_key\", \"nope\")\n"
+"\n"
+"\n"
+"def register_template_callables(engine: JinjaTemplateEngine) -> None:\n"
+"    engine.register_template_callable(\n"
+"        key=\"check_context_key\",\n"
+"        template_callable=my_template_function,\n"
+"    )\n"
+"\n"
+"\n"
+"template_config = TemplateConfig(\n"
+"    directory=Path(__file__).parent / \"templates\",\n"
+"    engine=JinjaTemplateEngine,\n"
+"    engine_callback=register_template_callables,\n"
+")\n"
+"\n"
+"\n"
+"@get(\"/\", sync_to_thread=False)\n"
+"def index() -> Template:\n"
+"    return Template(template_name=\"index.html.jinja2\")\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[index],\n"
+"    template_config=template_config,\n"
+")"
+msgstr ""
+
+#: ../../../usage/templating.rst:406
+msgid "``templates/index.html.jinja2``"
+msgstr ""
+
+#: ../../../usage/templating.rst:406 ../../../usage/templating.rst:428
+msgid "<strong>check_context_key: </strong>{{ check_context_key() }}\n"
+msgstr ""
+
+#: ../../../usage/templating.rst:414
+msgid ""
+"from pathlib import Path\n"
+"from typing import Any, Dict\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.contrib.mako import MakoTemplateEngine\n"
+"from litestar.response import Template\n"
+"from litestar.template.config import TemplateConfig\n"
+"\n"
+"\n"
+"def my_template_function(ctx: Dict[str, Any]) -> str:\n"
+"    return ctx.get(\"my_context_key\", \"nope\")\n"
+"\n"
+"\n"
+"def register_template_callables(engine: MakoTemplateEngine) -> None:\n"
+"    engine.register_template_callable(\n"
+"        key=\"check_context_key\",\n"
+"        template_callable=my_template_function,\n"
+"    )\n"
+"\n"
+"\n"
+"template_config = TemplateConfig(\n"
+"    directory=Path(__file__).parent / \"templates\",\n"
+"    engine=MakoTemplateEngine,\n"
+"    engine_callback=register_template_callables,\n"
+")\n"
+"\n"
+"\n"
+"@get(\"/\", sync_to_thread=False)\n"
+"def index() -> Template:\n"
+"    return Template(template_name=\"index.html.mako\")\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[index],\n"
+"    template_config=template_config,\n"
+")"
+msgstr ""
+
+#: ../../../usage/templating.rst:414
+msgid ""
+"from pathlib import Path\n"
+"from typing import Any\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.contrib.mako import MakoTemplateEngine\n"
+"from litestar.response import Template\n"
+"from litestar.template.config import TemplateConfig\n"
+"\n"
+"\n"
+"def my_template_function(ctx: dict[str, Any]) -> str:\n"
+"    return ctx.get(\"my_context_key\", \"nope\")\n"
+"\n"
+"\n"
+"def register_template_callables(engine: MakoTemplateEngine) -> None:\n"
+"    engine.register_template_callable(\n"
+"        key=\"check_context_key\",\n"
+"        template_callable=my_template_function,\n"
+"    )\n"
+"\n"
+"\n"
+"template_config = TemplateConfig(\n"
+"    directory=Path(__file__).parent / \"templates\",\n"
+"    engine=MakoTemplateEngine,\n"
+"    engine_callback=register_template_callables,\n"
+")\n"
+"\n"
+"\n"
+"@get(\"/\", sync_to_thread=False)\n"
+"def index() -> Template:\n"
+"    return Template(template_name=\"index.html.mako\")\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[index],\n"
+"    template_config=template_config,\n"
+")"
+msgstr ""
+
+#: ../../../usage/templating.rst:417
+msgid "``templates/index.html.mako``"
+msgstr ""
+
+#: ../../../usage/templating.rst:417
+msgid "<strong>check_context_key: </strong>${ check_context_key() }\n"
+msgstr ""
+
+#: ../../../usage/templating.rst:0
+msgid "Minijinja"
+msgstr ""
+
+#: ../../../usage/templating.rst:425
+msgid ""
+"from pathlib import Path\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.contrib.minijinja import MiniJinjaTemplateEngine, "
+"StateProtocol\n"
+"from litestar.response import Template\n"
+"from litestar.template.config import TemplateConfig\n"
+"\n"
+"\n"
+"def my_template_function(ctx: StateProtocol) -> str:\n"
+"    return ctx.lookup(\"my_context_key\") or \"nope\"\n"
+"\n"
+"\n"
+"def register_template_callables(engine: MiniJinjaTemplateEngine) -> None:\n"
+"    engine.register_template_callable(key=\"check_context_key\", "
+"template_callable=my_template_function)\n"
+"\n"
+"\n"
+"template_config = TemplateConfig(\n"
+"    directory=Path(__file__).parent / \"templates\",\n"
+"    engine=MiniJinjaTemplateEngine,\n"
+"    engine_callback=register_template_callables,\n"
+")\n"
+"\n"
+"\n"
+"@get(\"/\", sync_to_thread=False)\n"
+"def index() -> Template:\n"
+"    return Template(template_name=\"index.html.minijinja\")\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[index], template_config=template_config)"
+msgstr ""
+
+#: ../../../usage/templating.rst:428
+msgid "``templates/index.html.minijinja``"
+msgstr ""
+
+#: ../../../usage/templating.rst:432
+msgid ""
+"Run the example with ``uvicorn template_functions:app`` , visit  "
+"http://127.0.0.1:8000, and you'll see"
+msgstr ""
+
+#: ../../../usage/templating.rst:435
+msgid "Template engine callable example"
+msgstr ""

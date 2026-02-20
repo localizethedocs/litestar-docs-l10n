@@ -1,0 +1,433 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/exceptions.rst:2
+msgid "exceptions"
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.http_exceptions.ClientException:1
+#: litestar.exceptions.http_exceptions.InternalServerException:1
+msgid "Bases: :py:class:`~litestar.exceptions.http_exceptions.HTTPException`"
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.http_exceptions.ClientException:1
+msgid "Client error."
+msgstr ""
+
+#: ../../../../docstring of litestar.exceptions.ClientException.status_code:1
+#: litestar.exceptions.HTTPException.status_code:1
+#: litestar.exceptions.InternalServerException.status_code:1
+#: litestar.exceptions.MethodNotAllowedException.status_code:1
+#: litestar.exceptions.NotAuthorizedException.status_code:1
+#: litestar.exceptions.NotFoundException.status_code:1
+#: litestar.exceptions.PermissionDeniedException.status_code:1
+#: litestar.exceptions.ServiceUnavailableException.status_code:1
+#: litestar.exceptions.TooManyRequestsException.status_code:1
+#: litestar.exceptions.responses.ExceptionResponseContent.status_code:1
+msgid "Exception status code."
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.base_exceptions.SerializationException:1
+#: litestar.exceptions.dto_exceptions.DTOFactoryException:1
+#: litestar.exceptions.http_exceptions.HTTPException:1
+#: litestar.exceptions.websocket_exceptions.WebSocketException:1
+msgid ""
+"Bases: :py:class:`~litestar.exceptions.base_exceptions.LitestarException`"
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.dto_exceptions.DTOFactoryException:1
+msgid "Base DTO exception type."
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.http_exceptions.HTTPException:1
+msgid "Base exception for HTTP error responses."
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.http_exceptions.HTTPException:3
+msgid "These exceptions carry information to construct an HTTP response."
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.http_exceptions.HTTPException.__init__:1
+msgid "Initialize ``HTTPException``."
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.http_exceptions.HTTPException.__init__:3
+msgid "Set ``detail`` and ``args`` if not provided."
+msgstr ""
+
+#: ../../../reference/exceptions.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.http_exceptions.HTTPException.__init__:5
+msgid "if ``detail`` kwarg not provided, first arg should be error detail."
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.http_exceptions.HTTPException.__init__:6
+msgid "Exception details or message. Will default to args[0] if not provided."
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.http_exceptions.HTTPException.__init__:7
+msgid "Exception HTTP status code."
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.http_exceptions.HTTPException.__init__:8
+msgid "Headers to set on the response."
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.http_exceptions.HTTPException.__init__:9
+#: ../../../../docstring litestar.exceptions.HTTPException.extra:1
+#: litestar.exceptions.responses.ExceptionResponseContent.extra:1
+msgid "An extra mapping to attach to the exception."
+msgstr ""
+
+#: ../../../../docstring of litestar.exceptions.HTTPException.detail:1
+#: litestar.exceptions.responses.ExceptionResponseContent.detail:1
+msgid "Exception details or message."
+msgstr ""
+
+#: ../../../../docstring of litestar.exceptions.HTTPException.headers:1
+#: litestar.exceptions.responses.ExceptionResponseContent.headers:1
+msgid "Headers to attach to the response."
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.http_exceptions.ImproperlyConfiguredException:1
+msgid ""
+"Bases: :py:class:`~litestar.exceptions.http_exceptions.HTTPException`, :py:"
+"class:`ValueError`"
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.http_exceptions.ImproperlyConfiguredException:1
+msgid "Application has improper configuration."
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.http_exceptions.InternalServerException:1
+msgid ""
+"Server encountered an unexpected condition that prevented it from fulfilling "
+"the request."
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.dto_exceptions.InvalidAnnotationException:1
+msgid ""
+"Bases: :py:class:`~litestar.exceptions.dto_exceptions.DTOFactoryException`"
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.dto_exceptions.InvalidAnnotationException:1
+msgid "Unexpected DTO type argument."
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.base_exceptions.LitestarException:1
+msgid "Bases: :py:class:`Exception`"
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.base_exceptions.LitestarException:1
+msgid "Base exception class from which all Litestar exceptions inherit."
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.base_exceptions.LitestarException.__init__:1
+#: litestar.exceptions.base_exceptions.MissingDependencyException.__init__:1
+msgid "Initialize ``LitestarException``."
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.base_exceptions.LitestarException.__init__:3
+#: litestar.exceptions.base_exceptions.MissingDependencyException.__init__:3
+msgid "args are converted to :class:`str` before passing to :class:`Exception`"
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.base_exceptions.LitestarException.__init__:4
+#: litestar.exceptions.base_exceptions.MissingDependencyException.__init__:4
+msgid "detail of the exception."
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.base_exceptions.LitestarWarning:1
+msgid "Bases: :py:class:`UserWarning`"
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.base_exceptions.LitestarWarning:1
+msgid "Base class for Litestar warnings"
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.http_exceptions.MethodNotAllowedException:1
+#: litestar.exceptions.http_exceptions.NotAuthorizedException:1
+#: litestar.exceptions.http_exceptions.PermissionDeniedException:1
+#: litestar.exceptions.http_exceptions.TooManyRequestsException:1
+msgid "Bases: :py:class:`~litestar.exceptions.http_exceptions.ClientException`"
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.http_exceptions.MethodNotAllowedException:1
+msgid ""
+"Server knows the request method, but the target resource doesn't support "
+"this method."
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.base_exceptions.MissingDependencyException:1
+msgid ""
+"Bases: :py:class:`~litestar.exceptions.base_exceptions.LitestarException`, :"
+"py:class:`ImportError`"
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.base_exceptions.MissingDependencyException:1
+msgid "Missing optional dependency."
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.base_exceptions.MissingDependencyException:3
+msgid ""
+"This exception is raised only when a module depends on a dependency that has "
+"not been installed."
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.http_exceptions.NoRouteMatchFoundException:1
+#: litestar.exceptions.http_exceptions.ServiceUnavailableException:1
+#: litestar.exceptions.http_exceptions.TemplateNotFoundException:1
+msgid ""
+"Bases: :py:class:`~litestar.exceptions.http_exceptions."
+"InternalServerException`"
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.http_exceptions.NoRouteMatchFoundException:1
+msgid "A route with the given name could not be found."
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.http_exceptions.NotAuthorizedException:1
+msgid ""
+"Request lacks valid authentication credentials for the requested resource."
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.http_exceptions.NotFoundException:1
+#: litestar.exceptions.http_exceptions.ValidationException:1
+msgid ""
+"Bases: :py:class:`~litestar.exceptions.http_exceptions.ClientException`, :py:"
+"class:`ValueError`"
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.http_exceptions.NotFoundException:1
+msgid "Cannot find the requested resource."
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.http_exceptions.PermissionDeniedException:1
+msgid "Request understood, but not authorized."
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.base_exceptions.SerializationException:1
+msgid "Encoding or decoding of an object failed."
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.http_exceptions.ServiceUnavailableException:1
+msgid "Server is not ready to handle the request."
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.http_exceptions.TemplateNotFoundException:1
+msgid "Referenced template could not be found."
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.http_exceptions.TemplateNotFoundException.__init__:1
+msgid "Initialize ``TemplateNotFoundException``."
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.http_exceptions.TemplateNotFoundException.__init__:3
+msgid ""
+"Passed through to ``super().__init__()`` - should not include ``detail``."
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.http_exceptions.TemplateNotFoundException.__init__:5
+msgid "Name of template that could not be found."
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.http_exceptions.TooManyRequestsException:1
+msgid "Request limits have been exceeded."
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.http_exceptions.ValidationException:1
+msgid "Client data validation error."
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.websocket_exceptions.WebSocketDisconnect:1
+msgid ""
+"Bases: :py:class:`~litestar.exceptions.websocket_exceptions."
+"WebSocketException`"
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.websocket_exceptions.WebSocketDisconnect:1
+msgid "Exception class for websocket disconnect events."
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.websocket_exceptions.WebSocketDisconnect.__init__:1
+msgid "Initialize ``WebSocketDisconnect``."
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.websocket_exceptions.WebSocketDisconnect.__init__:3
+#: litestar.exceptions.websocket_exceptions.WebSocketException.__init__:3
+msgid "Any exception args."
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.websocket_exceptions.WebSocketDisconnect.__init__:4
+#: litestar.exceptions.websocket_exceptions.WebSocketException.__init__:4
+msgid "Exception details."
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.websocket_exceptions.WebSocketDisconnect.__init__:5
+#: litestar.exceptions.websocket_exceptions.WebSocketException.__init__:5
+msgid "Exception code. Should be a number in the >= 1000."
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.websocket_exceptions.WebSocketException:1
+msgid "Exception class for websocket related events."
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.websocket_exceptions.WebSocketException.__init__:1
+msgid "Initialize ``WebSocketException``."
+msgstr ""
+
+#: ../../../../docstring of litestar.exceptions.WebSocketException.code:1
+msgid ""
+"Exception code. For custom exceptions, this should be a number in the 4000+ "
+"range. Other codes can be found in ``litestar.status_code`` with the ``WS_`` "
+"prefix."
+msgstr ""
+
+#: ../../../../litestar/exceptions/responses/__init__.py:docstring of
+#: litestar.exceptions.responses.ExceptionResponseContent:1
+msgid "Bases: :py:class:`object`"
+msgstr ""
+
+#: ../../../../litestar/exceptions/responses/__init__.py:docstring of
+#: litestar.exceptions.responses.ExceptionResponseContent:1
+msgid "Represent the contents of an exception-response."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.exceptions.responses.ExceptionResponseContent.media_type:1
+msgid "Media type of the response."
+msgstr ""
+
+#: ../../../../litestar/exceptions/responses/__init__.py:docstring of
+#: litestar.exceptions.responses.ExceptionResponseContent.to_response:1
+msgid "Create a response from the model attributes."
+msgstr ""
+
+#: ../../../reference/exceptions.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/exceptions/responses/__init__.py:docstring of
+#: litestar.exceptions.responses.ExceptionResponseContent.to_response:3
+msgid "A response instance."
+msgstr ""
+
+#: ../../../../litestar/exceptions/responses/__init__.py:docstring of
+#: litestar.exceptions.responses.create_debug_response:1
+msgid "Create a debug response from an exception."
+msgstr ""
+
+#: ../../../../litestar/exceptions/responses/__init__.py:docstring of
+#: litestar.exceptions.responses.create_debug_response:3
+#: litestar.exceptions.responses.create_exception_response:9
+msgid "The request that triggered the exception."
+msgstr ""
+
+#: ../../../../litestar/exceptions/responses/__init__.py:docstring of
+#: litestar.exceptions.responses.create_debug_response:4
+#: litestar.exceptions.responses.create_exception_response:10
+msgid "An exception."
+msgstr ""
+
+#: ../../../../litestar/exceptions/responses/__init__.py:docstring of
+#: litestar.exceptions.responses.create_debug_response:6
+msgid "Debug response constructed from exception details."
+msgstr ""
+
+#: ../../../reference/exceptions.rst:0
+msgid "Return type"
+msgstr ""
+
+#: ../../../../litestar/exceptions/responses/__init__.py:docstring of
+#: litestar.exceptions.responses.create_exception_response:1
+msgid "Construct a response from an exception."
+msgstr ""
+
+#: ../../../../litestar/exceptions/responses/__init__.py:docstring of
+#: litestar.exceptions.responses.create_exception_response:3
+msgid "Notes"
+msgstr ""
+
+#: ../../../../litestar/exceptions/responses/__init__.py:docstring of
+#: litestar.exceptions.responses.create_exception_response:5
+msgid ""
+"For instances of :class:`HTTPException <litestar.exceptions.HTTPException>` "
+"or other exception classes that have a ``status_code`` attribute (e.g. "
+"Starlette exceptions), the status code is drawn from the exception, "
+"otherwise response status is ``HTTP_500_INTERNAL_SERVER_ERROR``."
+msgstr ""
+
+#: ../../../../litestar/exceptions/responses/__init__.py:docstring of
+#: litestar.exceptions.responses.create_exception_response:12
+msgid "HTTP response constructed from exception details."
+msgstr ""

@@ -1,0 +1,241 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/channels/plugin.rst:2
+msgid "plugin"
+msgstr ""
+
+#: ../../../../litestar/channels/plugin.py:docstring of
+#: litestar.channels.plugin.ChannelsPlugin:1
+msgid ""
+"Bases: :py:class:`~litestar.plugins.base.InitPlugin`, :py:class:`~contextlib."
+"AbstractAsyncContextManager`"
+msgstr ""
+
+#: ../../../../litestar/channels/plugin.py:docstring of
+#: litestar.channels.plugin.ChannelsPlugin.__init__:1
+msgid "Plugin to handle broadcasting to WebSockets with support for channels."
+msgstr ""
+
+#: ../../../../litestar/channels/plugin.py:docstring of
+#: litestar.channels.plugin.ChannelsPlugin.__init__:3
+msgid ""
+"This plugin is available as an injected dependency using the ``channels`` "
+"key."
+msgstr ""
+
+#: ../../../reference/channels/plugin.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../litestar/channels/plugin.py:docstring of
+#: litestar.channels.plugin.ChannelsPlugin.__init__:5
+msgid "Backend to store data in"
+msgstr ""
+
+#: ../../../../litestar/channels/plugin.py:docstring of
+#: litestar.channels.plugin.ChannelsPlugin.__init__:6
+msgid ""
+"Channels to serve. If ``arbitrary_channels_allowed`` is ``False`` (the "
+"default), trying to subscribe to a channel not in ``channels`` will raise an "
+"exception"
+msgstr ""
+
+#: ../../../../litestar/channels/plugin.py:docstring of
+#: litestar.channels.plugin.ChannelsPlugin.__init__:8
+msgid "Allow the creation of channels on the fly"
+msgstr ""
+
+#: ../../../../litestar/channels/plugin.py:docstring of
+#: litestar.channels.plugin.ChannelsPlugin.__init__:9
+msgid ""
+"If ``True``, websocket route handlers will be created for all channels "
+"defined in ``channels``. If ``arbitrary_channels_allowed`` is ``True``, a "
+"single handler will be created instead, handling all channels. The handlers "
+"created will accept WebSocket connections and start sending received events "
+"for their respective channels."
+msgstr ""
+
+#: ../../../../litestar/channels/plugin.py:docstring of
+#: litestar.channels.plugin.ChannelsPlugin.__init__:13
+msgid ""
+"Amount of history entries to send from the generated websocket route "
+"handlers after a client has connected. A value of ``0`` indicates to not "
+"send a history"
+msgstr ""
+
+#: ../../../../litestar/channels/plugin.py:docstring of
+#: litestar.channels.plugin.ChannelsPlugin.__init__:15
+msgid "Path prefix used for the generated route handlers"
+msgstr ""
+
+#: ../../../../litestar/channels/plugin.py:docstring of
+#: litestar.channels.plugin.ChannelsPlugin.__init__:16
+msgid ""
+"Send mode to use for sending data through a :class:`WebSocket <.connection."
+"WebSocket>`. This will be used when sending within generated route handlers "
+"or :meth:`Subscriber.run_in_background`"
+msgstr ""
+
+#: ../../../../litestar/channels/plugin.py:docstring of
+#: litestar.channels.plugin.ChannelsPlugin.__init__:18
+msgid ""
+"Maximum amount of unsent messages to be held in memory for a given "
+"subscriber. If that limit is reached, new messages will be treated "
+"accordingly to ``backlog_strategy``"
+msgstr ""
+
+#: ../../../../litestar/channels/plugin.py:docstring of
+#: litestar.channels.plugin.ChannelsPlugin.__init__:20
+msgid ""
+"Define the behaviour if ``max_backlog`` is reached for a subscriber. ` "
+"`backoff`` will result in new messages being dropped until older ones have "
+"been processed. ``dropleft`` will drop older messages in favour of new ones."
+msgstr ""
+
+#: ../../../../litestar/channels/plugin.py:docstring of
+#: litestar.channels.plugin.ChannelsPlugin.__init__:23
+msgid "A :class:`Subscriber` subclass to return from :meth:`subscribe`"
+msgstr ""
+
+#: ../../../../litestar/channels/plugin.py:docstring of
+#: litestar.channels.plugin.ChannelsPlugin.__init__:24
+msgid ""
+"An additional mapping of type encoders used to encode data before sending"
+msgstr ""
+
+#: ../../../../litestar/channels/plugin.py:docstring of
+#: litestar.channels.plugin.ChannelsPlugin.encode_data:1
+msgid "Encode data before storing it in the backend"
+msgstr ""
+
+#: ../../../../litestar/channels/plugin.py:docstring of
+#: litestar.channels.plugin.ChannelsPlugin.on_app_init:1
+msgid ""
+"Plugin hook. Set up a ``channels`` dependency, add route handlers and "
+"register application hooks"
+msgstr ""
+
+#: ../../../../litestar/channels/plugin.py:docstring of
+#: litestar.channels.plugin.ChannelsPlugin.publish:1
+msgid "Schedule ``data`` to be published to ``channels``."
+msgstr ""
+
+#: ../../../../litestar/channels/plugin.py:docstring of
+#: litestar.channels.plugin.ChannelsPlugin.publish:4
+msgid ""
+"This is a synchronous method that returns immediately. There are no "
+"guarantees that when this method returns the data will have been published "
+"to the backend. For that, use :meth:`wait_published`"
+msgstr ""
+
+#: ../../../../litestar/channels/plugin.py:docstring of
+#: litestar.channels.plugin.ChannelsPlugin.wait_published:1
+msgid "Publish ``data`` to ``channels``"
+msgstr ""
+
+#: ../../../../litestar/channels/plugin.py:docstring of
+#: litestar.channels.plugin.ChannelsPlugin.subscribe:1
+msgid ""
+"Create a :class:`Subscriber`, providing a stream of all events in "
+"``channels``."
+msgstr ""
+
+#: ../../../../litestar/channels/plugin.py:docstring of
+#: litestar.channels.plugin.ChannelsPlugin.subscribe:3
+msgid ""
+"The created subscriber will be passive by default and has to be consumed "
+"manually, either by using :meth:`Subscriber.run_in_background` or iterating "
+"over events using :meth:`Subscriber.iter_events`."
+msgstr ""
+
+#: ../../../../litestar/channels/plugin.py:docstring of
+#: litestar.channels.plugin.ChannelsPlugin.start_subscription:4
+#: litestar.channels.plugin.ChannelsPlugin.subscribe:7
+msgid "Channel(s) to subscribe to"
+msgstr ""
+
+#: ../../../../litestar/channels/plugin.py:docstring of
+#: litestar.channels.plugin.ChannelsPlugin.start_subscription:5
+#: litestar.channels.plugin.ChannelsPlugin.subscribe:8
+msgid ""
+"If a non-negative integer, add this amount of history entries from each "
+"channel to the subscriber's event stream. Note that this will wait until all "
+"history entries are fetched and pushed to the subscriber's stream. For more "
+"control use :meth:`put_subscriber_history`."
+msgstr ""
+
+#: ../../../reference/channels/plugin.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/channels/plugin.py:docstring of
+#: litestar.channels.plugin.ChannelsPlugin.start_subscription:10
+#: litestar.channels.plugin.ChannelsPlugin.subscribe:13
+msgid "A :class:`Subscriber`"
+msgstr ""
+
+#: ../../../reference/channels/plugin.rst:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../litestar/channels/plugin.py:docstring of
+#: litestar.channels.plugin.ChannelsPlugin.subscribe:15
+msgid ""
+"If a channel in ``channels`` has not been declared on this backend and     "
+"``arbitrary_channels_allowed`` has not been set to ``True``"
+msgstr ""
+
+#: ../../../../litestar/channels/plugin.py:docstring of
+#: litestar.channels.plugin.ChannelsPlugin.unsubscribe:1
+msgid ""
+"Unsubscribe a :class:`Subscriber` from ``channels``. If the subscriber has a "
+"running sending task, it will be stopped."
+msgstr ""
+
+#: ../../../../litestar/channels/plugin.py:docstring of
+#: litestar.channels.plugin.ChannelsPlugin.unsubscribe:4
+msgid ""
+"Channels to unsubscribe from. If ``None``, unsubscribe from all channels"
+msgstr ""
+
+#: ../../../../litestar/channels/plugin.py:docstring of
+#: litestar.channels.plugin.ChannelsPlugin.unsubscribe:5
+msgid ":class:`Subscriber` to unsubscribe"
+msgstr ""
+
+#: ../../../../litestar/channels/plugin.py:docstring of
+#: litestar.channels.plugin.ChannelsPlugin.start_subscription:1
+msgid ""
+"Create a :class:`Subscriber` and tie its subscriptions to a context manager; "
+"Upon exiting the context, :meth:`unsubscribe` will be called."
+msgstr ""
+
+#: ../../../../litestar/channels/plugin.py:docstring of
+#: litestar.channels.plugin.ChannelsPlugin.put_subscriber_history:1
+msgid ""
+"Fetch the history of ``channels`` from the backend and put them in the "
+"subscriber's stream"
+msgstr ""
+
+#: ../../../../litestar/channels/plugin.py:docstring of
+#: litestar.channels.plugin.ChannelsException:1
+msgid ""
+"Bases: :py:class:`~litestar.exceptions.base_exceptions.LitestarException`"
+msgstr ""
