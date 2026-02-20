@@ -1,0 +1,187 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/stores/file.rst:2
+msgid "file"
+msgstr ""
+
+#: ../../../../litestar/stores/file.py:docstring of
+#: litestar.stores.file.FileStore:1
+msgid "Bases: :py:class:`~litestar.stores.base.NamespacedStore`"
+msgstr ""
+
+#: ../../../../litestar/stores/file.py:docstring of
+#: litestar.stores.file.FileStore:1
+msgid "File based, thread and process safe, asynchronous key/value store."
+msgstr ""
+
+#: ../../../../litestar/stores/file.py:docstring of
+#: litestar.stores.file.FileStore:5
+msgid ""
+"To ensure arbitrary keys can safely be stored on any file system without "
+"potentially causing issues due to path separators or collisions, they are "
+"hashed with BLAKE2 before being interpreted as a file path. This means that "
+"the cache key becomes opaque inside the store, and a key does not translate "
+"to a file with that name on the file system."
+msgstr ""
+
+#: ../../../../litestar/stores/file.py:docstring of
+#: litestar.stores.file.FileStore.__init__:1
+msgid "Initialize ``FileStorage``."
+msgstr ""
+
+#: ../../../reference/stores/file.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../litestar/stores/file.py:docstring of
+#: litestar.stores.file.FileStore.__init__:3
+msgid "Path to store data under"
+msgstr ""
+
+#: ../../../../litestar/stores/file.py:docstring of
+#: litestar.stores.file.FileStore.__init__:4
+msgid ""
+"Create the directories in ``path`` if they don't exist Default: "
+"``False``  .. versionadded:: 2.9.0"
+msgstr ""
+
+#: ../../../../litestar/stores/file.py:docstring of
+#: litestar.stores.file.FileStore.__init__:4
+msgid ""
+"Create the directories in ``path`` if they don't exist Default: ``False``"
+msgstr ""
+
+#: ../../../../docstring of litestar.stores.file.FileStore.path:1
+msgid "file path"
+msgstr ""
+
+#: ../../../../docstring of litestar.stores.file.FileStore.create_directories:1
+msgid "flag to create directories in path"
+msgstr ""
+
+#: ../../../../litestar/stores/file.py:docstring of
+#: litestar.stores.file.FileStore.with_namespace:1
+msgid ""
+"Return a new instance of :class:`FileStore`, using  a sub-path of the "
+"current store's path."
+msgstr ""
+
+#: ../../../../litestar/stores/file.py:docstring of
+#: litestar.stores.file.FileStore.set:1
+msgid "Set a value."
+msgstr ""
+
+#: ../../../../litestar/stores/file.py:docstring of
+#: litestar.stores.file.FileStore.set:3
+msgid "Key to associate the value with"
+msgstr ""
+
+#: ../../../../litestar/stores/file.py:docstring of
+#: litestar.stores.file.FileStore.set:4
+msgid "Value to store"
+msgstr ""
+
+#: ../../../../litestar/stores/file.py:docstring of
+#: litestar.stores.file.FileStore.set:5
+msgid "Time in seconds before the key is considered expired"
+msgstr ""
+
+#: ../../../reference/stores/file.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/stores/file.py:docstring of
+#: litestar.stores.file.FileStore.set:7
+msgid "``None``"
+msgstr ""
+
+#: ../../../../litestar/stores/file.py:docstring of
+#: litestar.stores.file.FileStore.get:1
+msgid "Get a value."
+msgstr ""
+
+#: ../../../../litestar/stores/file.py:docstring of
+#: litestar.stores.file.FileStore.get:3
+msgid "Key associated with the value"
+msgstr ""
+
+#: ../../../../litestar/stores/file.py:docstring of
+#: litestar.stores.file.FileStore.get:4
+msgid ""
+"If given and the value had an initial expiry time set, renew the expiry time "
+"for ``renew_for`` seconds. If the value has not been set with an expiry time "
+"this is a no-op"
+msgstr ""
+
+#: ../../../../litestar/stores/file.py:docstring of
+#: litestar.stores.file.FileStore.get:8
+msgid ""
+"The value associated with ``key`` if it exists and is not expired, else "
+"``None``"
+msgstr ""
+
+#: ../../../../litestar/stores/file.py:docstring of
+#: litestar.stores.file.FileStore.delete:1
+msgid "Delete a value."
+msgstr ""
+
+#: ../../../../litestar/stores/file.py:docstring of
+#: litestar.stores.file.FileStore.delete:3
+msgid "If no such key exists, this is a no-op."
+msgstr ""
+
+#: ../../../../litestar/stores/file.py:docstring of
+#: litestar.stores.file.FileStore.delete:5
+msgid "Key of the value to delete"
+msgstr ""
+
+#: ../../../../litestar/stores/file.py:docstring of
+#: litestar.stores.file.FileStore.delete_all:1
+msgid "Delete all stored values."
+msgstr ""
+
+#: ../../../../litestar/stores/file.py:docstring of
+#: litestar.stores.file.FileStore.delete_all:3
+msgid "This deletes and recreates :attr:`FileStore.path`"
+msgstr ""
+
+#: ../../../../litestar/stores/file.py:docstring of
+#: litestar.stores.file.FileStore.delete_expired:1
+msgid "Delete expired items."
+msgstr ""
+
+#: ../../../../litestar/stores/file.py:docstring of
+#: litestar.stores.file.FileStore.delete_expired:3
+msgid ""
+"Since expired items are normally only cleared on access (i.e. when calling :"
+"meth:`.get`), this method should be called in regular intervals to free disk "
+"space."
+msgstr ""
+
+#: ../../../../litestar/stores/file.py:docstring of
+#: litestar.stores.file.FileStore.exists:1
+msgid "Check if a given ``key`` exists."
+msgstr ""
+
+#: ../../../../litestar/stores/file.py:docstring of
+#: litestar.stores.file.FileStore.expires_in:1
+msgid ""
+"Get the time in seconds ``key`` expires in. If no such ``key`` exists or no "
+"expiry time was set, return ``None``."
+msgstr ""

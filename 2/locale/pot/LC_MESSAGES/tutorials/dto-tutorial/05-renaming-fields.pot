@@ -1,0 +1,209 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../tutorials/dto-tutorial/05-renaming-fields.rst:2
+msgid "Renaming fields"
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/05-renaming-fields.rst:4
+msgid ""
+"The name of a field that is used for serialization can be changed by either "
+"explicitly declaring the new name or by declaring a renaming strategy."
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/05-renaming-fields.rst:8
+msgid "Explicitly renaming fields"
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/05-renaming-fields.rst:10
+msgid ""
+"We can rename fields explicitly using the :attr:`rename_fields <litestar.dto."
+"config.DTOConfig.rename_fields>` attribute. This attribute is a dictionary "
+"that maps the original field name to the new field name."
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/05-renaming-fields.rst:13
+msgid "In this example, we rename the ``address`` field to ``location``:"
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/05-renaming-fields.rst:16
+msgid ""
+"from __future__ import annotations\n"
+"\n"
+"from dataclasses import dataclass\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.dto import DataclassDTO, DTOConfig\n"
+"\n"
+"\n"
+"@dataclass\n"
+"class Address:\n"
+"    street: str\n"
+"    city: str\n"
+"    country: str\n"
+"\n"
+"\n"
+"@dataclass\n"
+"class Person:\n"
+"    name: str\n"
+"    age: int\n"
+"    email: str\n"
+"    address: Address\n"
+"    children: list[Person]\n"
+"\n"
+"\n"
+"class ReadDTO(DataclassDTO[Person]):\n"
+"    config = DTOConfig(\n"
+"        exclude={\"email\", \"address.street\", \"children.0.email\", "
+"\"children.0.address\"},\n"
+"        rename_fields={\"address\": \"location\"},\n"
+"    )\n"
+"\n"
+"\n"
+"@get(\"/person/{name:str}\", return_dto=ReadDTO, sync_to_thread=False)\n"
+"def get_person(name: str) -> Person:\n"
+"    # Your logic to retrieve the person goes here\n"
+"    # For demonstration purposes, a placeholder Person instance is returned\n"
+"    address = Address(street=\"123 Main St\", city=\"Cityville\", "
+"country=\"Countryland\")\n"
+"    child1 = Person(name=\"Child1\", age=10, email=\"child1@example.com\", "
+"address=address, children=[])\n"
+"    child2 = Person(name=\"Child2\", age=8, email=\"child2@example.com\", "
+"address=address, children=[])\n"
+"    return Person(\n"
+"        name=name,\n"
+"        age=30,\n"
+"        email=f\"email_of_{name}@example.com\",\n"
+"        address=address,\n"
+"        children=[child1, child2],\n"
+"    )\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[get_person])"
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/05-renaming-fields.rst:20
+msgid "Notice how the ``address`` field is renamed to ``location``."
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/05-renaming-fields.rst:26
+msgid "Field renaming strategies"
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/05-renaming-fields.rst:28
+msgid ""
+"Instead of explicitly renaming fields, we can also use a field renaming "
+"strategy."
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/05-renaming-fields.rst:30
+msgid ""
+"The field renaming strategy is specified using the :attr:`rename_strategy "
+"<litestar.dto.config.DTOConfig.rename_strategy>` config."
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/05-renaming-fields.rst:33
+msgid "Litestar supports the following strategies:"
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/05-renaming-fields.rst:35
+msgid "``lower``: Converts the field name to lowercase"
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/05-renaming-fields.rst:36
+msgid "``upper``: Converts the field name to uppercase"
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/05-renaming-fields.rst:37
+msgid "``camel``: Converts the field name to camel case"
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/05-renaming-fields.rst:38
+msgid "``pascal``: Converts the field name to pascal case"
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/05-renaming-fields.rst:42
+msgid ""
+"You can also define your own strategies by passing a callable that receives "
+"the field name, and returns the new field name to the ``rename_strategy`` "
+"config."
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/05-renaming-fields.rst:45
+msgid "Let's modify our example to use the ``upper`` strategy:"
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/05-renaming-fields.rst:48
+msgid ""
+"from __future__ import annotations\n"
+"\n"
+"from dataclasses import dataclass\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.dto import DataclassDTO, DTOConfig\n"
+"\n"
+"\n"
+"@dataclass\n"
+"class Address:\n"
+"    street: str\n"
+"    city: str\n"
+"    country: str\n"
+"\n"
+"\n"
+"@dataclass\n"
+"class Person:\n"
+"    name: str\n"
+"    age: int\n"
+"    email: str\n"
+"    address: Address\n"
+"    children: list[Person]\n"
+"\n"
+"\n"
+"class ReadDTO(DataclassDTO[Person]):\n"
+"    config = DTOConfig(\n"
+"        exclude={\"email\", \"address.street\", \"children.0.email\", "
+"\"children.0.address\"},\n"
+"        rename_strategy=\"upper\",\n"
+"    )\n"
+"\n"
+"\n"
+"@get(\"/person/{name:str}\", return_dto=ReadDTO, sync_to_thread=False)\n"
+"def get_person(name: str) -> Person:\n"
+"    # Your logic to retrieve the person goes here\n"
+"    # For demonstration purposes, a placeholder Person instance is returned\n"
+"    address = Address(street=\"123 Main St\", city=\"Cityville\", "
+"country=\"Countryland\")\n"
+"    child1 = Person(name=\"Child1\", age=10, email=\"child1@example.com\", "
+"address=address, children=[])\n"
+"    child2 = Person(name=\"Child2\", age=8, email=\"child2@example.com\", "
+"address=address, children=[])\n"
+"    return Person(\n"
+"        name=name,\n"
+"        age=30,\n"
+"        email=f\"email_of_{name}@example.com\",\n"
+"        address=address,\n"
+"        children=[child1, child2],\n"
+"    )\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[get_person])"
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/05-renaming-fields.rst:52
+msgid "And the result:"
+msgstr ""
