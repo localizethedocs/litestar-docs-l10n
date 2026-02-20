@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../../../usage/security/index.rst:2
 msgid "Security"
-msgstr ""
+msgstr "安全性"
 
 #: ../../../usage/security/index.rst:4
 msgid ""

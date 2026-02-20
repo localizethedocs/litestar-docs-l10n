@@ -19,11 +19,11 @@ msgstr ""
 
 #: conf.py:318
 msgid "Home"
-msgstr ""
+msgstr "主頁"
 
 #: conf.py:320
 msgid "Community"
-msgstr ""
+msgstr "社群"
 
 #: conf.py:323
 msgid "Contributing"
@@ -31,7 +31,7 @@ msgstr "參與貢獻"
 
 #: conf.py:324
 msgid "Learn how to contribute to the Litestar project"
-msgstr ""
+msgstr "了解參與貢獻 Litestar 專案的方式"
 
 #: conf.py:329
 msgid "Code of Conduct"
@@ -43,27 +43,27 @@ msgstr ""
 
 #: conf.py:335
 msgid "Security"
-msgstr ""
+msgstr "安全性"
 
 #: conf.py:336
 msgid "Overview of Litestar's security protocols"
-msgstr ""
+msgstr "Litestar 安全協定概覽"
 
 #: conf.py:343
 msgid "About"
-msgstr ""
+msgstr "關於"
 
 #: conf.py:346
 msgid "Litestar Organization"
-msgstr ""
+msgstr "Litestar 組織"
 
 #: conf.py:347
 msgid "Details about the Litestar organization"
-msgstr ""
+msgstr "關於 Litestar 組織的詳細資訊"
 
 #: conf.py:352
 msgid "Releases"
-msgstr ""
+msgstr "發行版"
 
 #: conf.py:353
 msgid ""

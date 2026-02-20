@@ -67,7 +67,7 @@ msgstr "PyPI 版本"
 
 #: ../../../index.rst:36
 msgid "Contributor Count"
-msgstr ""
+msgstr "貢獻者人數"
 
 #: ../../../index.rst:39
 msgid "PyPI Downloads"
@@ -86,12 +86,19 @@ msgid ""
 "usage/middleware/index>`, a great :doc:`CLI </usage/cli>` experience, and "
 "much more."
 msgstr ""
+"Litestar 框架支援 :doc:`/usage/plugins/index`，並內建了\\ :doc:`依賴注入 </"
+"usage/dependency-injection>`、:doc:`安全性原語 </usage/security/index>`、:"
+"doc:`OpenAPI 結構生成 </usage/openapi/index>`、`MessagePack <https://msgpack."
+"org/>`_、:doc:`中介體 </usage/middleware/index>`、優異的 :doc:`CLI </usage/"
+"cli>` 體驗以及更多功能。"
 
 #: ../../../index.rst:54
 msgid ""
 ":doc:`Get Started <getting-started>` `Usage Docs <usage>`_ `API Docs "
 "<reference>`_ `Blog <https://blog.litestar.dev>`_"
 msgstr ""
+":doc:`開始使用 <getting-started>` `使用文件 <usage>`_ `API 文件 "
+"<reference>`_ `網誌 <https://blog.litestar.dev>`_"
 
 #: ../../../index.rst:63
 msgid ""
@@ -120,7 +127,7 @@ msgstr ""
 #: ../../../index.rst:67
 msgid ""
 "Step-by-step guides addressing common use cases and scenarios for Litestar"
-msgstr ""
+msgstr "針對 Litestar 常見使用案例與情境的逐步指南"
 
 #: ../../../index.rst:69
 msgid ""
@@ -160,7 +167,7 @@ msgstr ""
 msgid ""
 "Articles discussing technical concepts, design philosophy, and strategic "
 "decisions."
-msgstr ""
+msgstr "討論技術概念、設計理念與策略決策的文章。"
 
 #: ../../../index.rst:75
 msgid ""
@@ -196,7 +203,7 @@ msgstr ""
 
 #: ../../../index.rst:79
 msgid "The latest updates and enhancements to the Litestar framework."
-msgstr ""
+msgstr "Litestar 框架最新的更新內容與增強功能。"
 
 #: ../../../index.rst:81
 msgid ""
@@ -232,7 +239,7 @@ msgstr ""
 
 #: ../../../index.rst:84
 msgid "Join discussions, pose questions, or share insights."
-msgstr ""
+msgstr "參與討論、提出問題或分享見解。"
 
 #: ../../../index.rst:86
 msgid ""
@@ -254,7 +261,7 @@ msgstr ""
 
 #: ../../../index.rst:89
 msgid "Report issues or suggest new features."
-msgstr ""
+msgstr "回報議題或建議新功能。"
 
 #: ../../../index.rst:91
 msgid ""
@@ -280,7 +287,7 @@ msgstr ""
 
 #: ../../../index.rst:95
 msgid "Contribute to Litestar's growth with code, docs, and more."
-msgstr ""
+msgstr "透過程式碼、文件及其他方式參與貢獻 Litestar 的成長。"
 
 #: ../../../index.rst:98
 msgid "Sponsors"
@@ -296,31 +303,31 @@ msgstr ""
 
 #: ../../../index.rst:107
 msgid "A huge thank you to our current sponsors:"
-msgstr ""
+msgstr "非常感謝我們目前的贊助者："
 
 #: ../../../index.rst:120
 msgid "Scalar.com"
-msgstr ""
+msgstr "Scalar.com"
 
 #: ../../../index.rst:124
 msgid "`Scalar.com <https://github.com/scalar/scalar>`_"
-msgstr ""
+msgstr "`Scalar.com <https://github.com/scalar/scalar>`_"
 
 #: ../../../index.rst:129
 msgid "Telemetry Sports"
-msgstr ""
+msgstr "Telemetry Sports"
 
 #: ../../../index.rst:133
 msgid "`Telemetry Sports <https://telemetrysports.com/>`_"
-msgstr ""
+msgstr "`Telemetry Sports <https://telemetrysports.com/>`_"
 
 #: ../../../index.rst:138
 msgid "Stok"
-msgstr ""
+msgstr "Stok"
 
 #: ../../../index.rst:142
 msgid "`Stok <https://www.stok.kr/>`_"
-msgstr ""
+msgstr "`Stok <https://www.stok.kr/>`_"
 
 #: ../../../index.rst:144
 msgid ""
@@ -329,6 +336,9 @@ msgid ""
 "<sponsor-github_>`_ and `Open Collective <sponsor-oc_>`_, you can play a "
 "pivotal role in our project's growth."
 msgstr ""
+"我們邀請組織與個人加入我們的贊助計畫。您可以透過成為  `Polar <sponsor-"
+"polar_>`_\\ 、\\ `GitHub <sponsor-github_>`_ 或 `Open Collective <sponsor-"
+"oc_>`_ 等平臺的贊助者，在專案成長中扮演關鍵角色。"
 
 #: ../../../index.rst:148
 msgid ""
