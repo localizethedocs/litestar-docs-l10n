@@ -91,7 +91,7 @@ msgstr ""
 
 #: ../../../admonitions/sync-to-thread-info.rst:21
 msgid ":doc:`/topics/sync-vs-async`"
-msgstr ""
+msgstr ":doc:`/topics/sync-vs-async`"
 
 #: ../../../usage/routing/handlers.rst:26
 msgid "Declaring paths"
@@ -268,7 +268,7 @@ msgstr ""
 
 #: ../../../usage/routing/handlers.rst:0
 msgid "Python 3.8+"
-msgstr ""
+msgstr "Python 3.8+"
 
 #: ../../../usage/routing/handlers.rst:111
 msgid "Providing an alternative name for a reserved keyword argument"
@@ -293,7 +293,7 @@ msgstr ""
 
 #: ../../../usage/routing/handlers.rst:0
 msgid "Python 3.9+"
-msgstr ""
+msgstr "Python 3.9+"
 
 #: ../../../usage/routing/handlers.rst:111
 msgid ""

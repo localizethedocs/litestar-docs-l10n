@@ -28,7 +28,7 @@ msgstr ""
 
 #: ../../../reference/static_files.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/static_files.py:docstring of
 #: litestar.static_files.create_static_files_router:3

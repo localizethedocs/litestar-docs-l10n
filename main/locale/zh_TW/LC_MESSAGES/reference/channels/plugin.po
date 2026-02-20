@@ -42,7 +42,7 @@ msgstr ""
 
 #: ../../../reference/channels/plugin.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/channels/plugin.py:docstring of
 #: litestar.channels.plugin.ChannelsPlugin.__init__:5

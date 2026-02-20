@@ -40,7 +40,7 @@ msgstr ""
 
 #: ../../../reference/file_system.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/file_system.py:docstring of
 #: litestar.file_system.BaseFileSystem.read_bytes:3

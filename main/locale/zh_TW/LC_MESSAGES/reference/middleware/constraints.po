@@ -112,7 +112,7 @@ msgstr ""
 
 #: ../../../reference/middleware/constraints.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/middleware/constraints.py:docstring of
 #: litestar.middleware.constraints.MiddlewareConstraints.apply_after:4

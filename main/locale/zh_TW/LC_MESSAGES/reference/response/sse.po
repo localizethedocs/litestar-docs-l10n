@@ -46,7 +46,7 @@ msgstr ""
 
 #: ../../../reference/response/sse.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/response/sse.py:docstring of
 #: litestar.response.sse.ServerSentEvent.__init__:3

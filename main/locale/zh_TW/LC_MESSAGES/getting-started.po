@@ -19,15 +19,15 @@ msgstr ""
 
 #: ../../../getting-started.rst:3
 msgid "Getting Started"
-msgstr ""
+msgstr "開始使用"
 
 #: ../../../getting-started.rst:6
 msgid "Installation"
-msgstr ""
+msgstr "安裝"
 
 #: ../../../getting-started.rst:8
 msgid "pip install litestar"
-msgstr ""
+msgstr "pip install litestar"
 
 #: ../../../getting-started.rst:12
 msgid ""
@@ -53,7 +53,7 @@ msgstr ""
 
 #: ../../../getting-started.rst:21
 msgid ":code:`pip install 'litestar[attrs]'`"
-msgstr ""
+msgstr ":code:`pip install 'litestar[attrs]'`"
 
 #: ../../../getting-started.rst:23
 msgid ""
@@ -63,7 +63,7 @@ msgstr ""
 
 #: ../../../getting-started.rst:24
 msgid ":code:`pip install 'litestar[brotli]'`"
-msgstr ""
+msgstr ":code:`pip install 'litestar[brotli]'`"
 
 #: ../../../getting-started.rst:26
 msgid ""
@@ -72,7 +72,7 @@ msgstr ""
 
 #: ../../../getting-started.rst:27
 msgid ":code:`pip install 'litestar[zstd]'`"
-msgstr ""
+msgstr ":code:`pip install 'litestar[zstd]'`"
 
 #: ../../../getting-started.rst:29
 msgid ""
@@ -82,23 +82,23 @@ msgstr ""
 
 #: ../../../getting-started.rst:30
 msgid ":code:`pip install 'litestar[cryptography]'`"
-msgstr ""
+msgstr ":code:`pip install 'litestar[cryptography]'`"
 
 #: ../../../getting-started.rst:32
 msgid ":doc:`JWT </usage/security/jwt>`"
-msgstr ""
+msgstr ":doc:`JWT </usage/security/jwt>`"
 
 #: ../../../getting-started.rst:33
 msgid ":code:`pip install 'litestar[jwt]'`"
-msgstr ""
+msgstr ":code:`pip install 'litestar[jwt]'`"
 
 #: ../../../getting-started.rst:35
 msgid ":doc:`RedisStore </usage/stores>`"
-msgstr ""
+msgstr ":doc:`RedisStore </usage/stores>`"
 
 #: ../../../getting-started.rst:36
 msgid ":code:`pip install 'litestar[redis]'`"
-msgstr ""
+msgstr ":code:`pip install 'litestar[redis]'`"
 
 #: ../../../getting-started.rst:38
 msgid ":ref:`Picologging <usage/logging:using picologging>`"
@@ -140,7 +140,7 @@ msgstr ""
 
 #: ../../../getting-started.rst:51
 msgid ":code:`pip install 'litestar[sqlalchemy]'`"
-msgstr ""
+msgstr ":code:`pip install 'litestar[sqlalchemy]'`"
 
 #: ../../../getting-started.rst:53
 msgid ":doc:`Jinja Templating </usage/templating>`"
@@ -148,7 +148,7 @@ msgstr ""
 
 #: ../../../getting-started.rst:54
 msgid ":code:`pip install 'litestar[jinja]'`"
-msgstr ""
+msgstr ":code:`pip install 'litestar[jinja]'`"
 
 #: ../../../getting-started.rst:56
 msgid ":doc:`Mako Templating </usage/templating>`"
@@ -156,7 +156,7 @@ msgstr ""
 
 #: ../../../getting-started.rst:57
 msgid ":code:`pip install 'litestar[mako]'`"
-msgstr ""
+msgstr ":code:`pip install 'litestar[mako]'`"
 
 #: ../../../getting-started.rst:59
 msgid ""
@@ -175,7 +175,7 @@ msgstr ""
 
 #: ../../../getting-started.rst:63
 msgid ":code:`pip install 'litestar[htmx]'`"
-msgstr ""
+msgstr ":code:`pip install 'litestar[htmx]'`"
 
 #: ../../../getting-started.rst:65
 msgid ""
@@ -201,7 +201,7 @@ msgstr ""
 
 #: ../../../getting-started.rst:72
 msgid ":code:`pip install 'litestar[full]'`"
-msgstr ""
+msgstr ":code:`pip install 'litestar[full]'`"
 
 #: ../../../getting-started.rst:74
 msgid ""
@@ -362,7 +362,7 @@ msgstr ""
 
 #: ../../../getting-started.rst:0
 msgid "Python 3.8+"
-msgstr ""
+msgstr "Python 3.8+"
 
 #: ../../../getting-started.rst:175
 msgid ""
@@ -398,10 +398,41 @@ msgid ""
 "    @delete(path=\"/{user_id:uuid}\")\n"
 "    async def delete_user(self, user_id: UUID4) -> None: ..."
 msgstr ""
+"from typing import List\n"
+"\n"
+"from litestar import Controller, get, post, put, patch, delete\n"
+"from litestar.dto import DTOData\n"
+"from pydantic import UUID4\n"
+"\n"
+"from my_app.models import User, PartialUserDTO\n"
+"\n"
+"\n"
+"class UserController(Controller):\n"
+"    path = \"/users\"\n"
+"\n"
+"    @post()\n"
+"    async def create_user(self, data: User) -> User: ...\n"
+"\n"
+"    @get()\n"
+"    async def list_users(self) -> List[User]: ...\n"
+"\n"
+"    @patch(path=\"/{user_id:uuid}\", dto=PartialUserDTO)\n"
+"    async def partial_update_user(\n"
+"        self, user_id: UUID4, data: DTOData[User]\n"
+"    ) -> User: ...\n"
+"\n"
+"    @put(path=\"/{user_id:uuid}\")\n"
+"    async def update_user(self, user_id: UUID4, data: User) -> User: ...\n"
+"\n"
+"    @get(path=\"/{user_id:uuid}\")\n"
+"    async def get_user(self, user_id: UUID4) -> User: ...\n"
+"\n"
+"    @delete(path=\"/{user_id:uuid}\")\n"
+"    async def delete_user(self, user_id: UUID4) -> None: ..."
 
 #: ../../../getting-started.rst:0
 msgid "Python 3.9+"
-msgstr ""
+msgstr "Python 3.9+"
 
 #: ../../../getting-started.rst:175
 msgid ""
@@ -435,6 +466,35 @@ msgid ""
 "    @delete(path=\"/{user_id:uuid}\")\n"
 "    async def delete_user(self, user_id: UUID4) -> None: ..."
 msgstr ""
+"from litestar import Controller, get, post, put, patch, delete\n"
+"from litestar.dto import DTOData\n"
+"from pydantic import UUID4\n"
+"\n"
+"from my_app.models import User, PartialUserDTO\n"
+"\n"
+"\n"
+"class UserController(Controller):\n"
+"    path = \"/users\"\n"
+"\n"
+"    @post()\n"
+"    async def create_user(self, data: User) -> User: ...\n"
+"\n"
+"    @get()\n"
+"    async def list_users(self) -> list[User]: ...\n"
+"\n"
+"    @patch(path=\"/{user_id:uuid}\", dto=PartialUserDTO)\n"
+"    async def partial_update_user(\n"
+"        self, user_id: UUID4, data: DTOData[User]\n"
+"    ) -> User: ...\n"
+"\n"
+"    @put(path=\"/{user_id:uuid}\")\n"
+"    async def update_user(self, user_id: UUID4, data: User) -> User: ...\n"
+"\n"
+"    @get(path=\"/{user_id:uuid}\")\n"
+"    async def get_user(self, user_id: UUID4) -> User: ...\n"
+"\n"
+"    @delete(path=\"/{user_id:uuid}\")\n"
+"    async def delete_user(self, user_id: UUID4) -> None: ..."
 
 #: ../../../getting-started.rst:209
 msgid ""
@@ -503,39 +563,39 @@ msgstr ""
 
 #: ../../../getting-started.rst:246
 msgid "Litestar vs. other frameworks"
-msgstr ""
+msgstr "Litestar 與其他框架"
 
 #: ../../../_static/tables/framework-comparison.csv:1
 msgid "Feature"
-msgstr ""
+msgstr "功能"
 
 #: ../../../_static/tables/framework-comparison.csv:1
 msgid "Litestar"
-msgstr ""
+msgstr "Litestar"
 
 #: ../../../_static/tables/framework-comparison.csv:1
 msgid "FastAPI"
-msgstr ""
+msgstr "FastAPI"
 
 #: ../../../_static/tables/framework-comparison.csv:1
 msgid "Starlette"
-msgstr ""
+msgstr "Starlette"
 
 #: ../../../_static/tables/framework-comparison.csv:1
 msgid "Sanic"
-msgstr ""
+msgstr "Sanic"
 
 #: ../../../_static/tables/framework-comparison.csv:1
 msgid "Quart"
-msgstr ""
+msgstr "Quart"
 
 #: ../../../_static/tables/framework-comparison.csv:1
 msgid "OpenAPI"
-msgstr ""
+msgstr "OpenAPI"
 
 #: ../../../_static/tables/framework-comparison.csv:1
 msgid ":octicon:`check`"
-msgstr ""
+msgstr ":octicon:`check`"
 
 #: ../../../getting-started.rst:251
 msgid ""
@@ -545,10 +605,15 @@ msgid ""
 "0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 "
 "0Z\"></path></svg>"
 msgstr ""
+"<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-"
+"octicon-check\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M13.78 "
+"4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 "
+"0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 "
+"0Z\"></path></svg>"
 
 #: ../../../_static/tables/framework-comparison.csv:1
 msgid "Automatic API documentation"
-msgstr ""
+msgstr "自動化 API 文件"
 
 #: ../../../_static/tables/framework-comparison.csv:1
 msgid "Swagger, ReDoc, Stoplight Elements"
@@ -576,7 +641,7 @@ msgstr ""
 
 #: ../../../_static/tables/framework-comparison.csv:1
 msgid "ORM integration"
-msgstr ""
+msgstr "ORM 整合"
 
 #: ../../../_static/tables/framework-comparison.csv:1
 msgid "SQLAlchemy, Tortoise, Piccolo"

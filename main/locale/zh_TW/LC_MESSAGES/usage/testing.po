@@ -133,7 +133,7 @@ msgstr ""
 
 #: ../../../usage/testing.rst:0
 msgid "Python 3.8+"
-msgstr ""
+msgstr "Python 3.8+"
 
 #: ../../../usage/testing.rst:92 ../../../usage/testing.rst:118
 msgid "``tests/conftest.py``"
@@ -163,7 +163,7 @@ msgstr ""
 
 #: ../../../usage/testing.rst:0
 msgid "Python 3.9+"
-msgstr ""
+msgstr "Python 3.9+"
 
 #: ../../../usage/testing.rst:92
 msgid ""

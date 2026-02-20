@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../usage/routing/parameters.rst:2
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../usage/routing/parameters.rst:5
 msgid "Path Parameters"
@@ -144,7 +144,7 @@ msgstr ""
 
 #: ../../../usage/routing/parameters.rst:0
 msgid "Python 3.8+"
-msgstr ""
+msgstr "Python 3.8+"
 
 #: ../../../usage/routing/parameters.rst:45
 msgid "Coercing path parameters into different types"
@@ -481,7 +481,7 @@ msgstr ""
 
 #: ../../../usage/routing/parameters.rst:0
 msgid "Python 3.10+"
-msgstr ""
+msgstr "Python 3.10+"
 
 #: ../../../usage/routing/parameters.rst:132
 msgid ""

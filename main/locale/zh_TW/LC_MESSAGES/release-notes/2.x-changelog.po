@@ -73,6 +73,9 @@ msgid ""
 "   \"the real beef\"\n"
 "]"
 msgstr ""
+" \"examples\": [\n"
+"   \"the real beef\"\n"
+"]"
 
 #: ../../../release-notes/2.x-changelog.rst:58
 msgid ""
@@ -524,6 +527,10 @@ msgid ""
 "directories=[\"some_dir\"])]\n"
 ")"
 msgstr ""
+"app = Litestar(\n"
+"    static_files_config=[StaticFilesConfig(path=\"/static\", "
+"directories=[\"some_dir\"])]\n"
+")"
 
 #: ../../../release-notes/2.x-changelog.rst:456
 msgid "You can now simply use"
@@ -541,7 +548,7 @@ msgstr ""
 
 #: ../../../release-notes/2.x-changelog.rst:467
 msgid ":doc:`/usage/static-files`"
-msgstr ""
+msgstr ":doc:`/usage/static-files`"
 
 #: ../../../release-notes/2.x-changelog.rst:474
 msgid ""
@@ -796,6 +803,15 @@ msgid ""
 "\n"
 "    return ServerSentEvent(gen(), event_type=\"my_event\")"
 msgstr ""
+"@get(\"/stream\")\n"
+"async def stream(self) -> ServerSentEvent:\n"
+"    async def gen() -> AsyncGenerator[str, None]:\n"
+"        c = 0\n"
+"        while True:\n"
+"            yield f\"<div>{c}</div>\\n\"\n"
+"            c += 1\n"
+"\n"
+"    return ServerSentEvent(gen(), event_type=\"my_event\")"
 
 #: ../../../release-notes/2.x-changelog.rst:707
 msgid ""
@@ -884,11 +900,11 @@ msgstr ""
 
 #: ../../../release-notes/2.x-changelog.rst:801
 msgid "Synchronous SSE generators"
-msgstr ""
+msgstr "同步 SSE 生成器"
 
 #: ../../../release-notes/2.x-changelog.rst:802
 msgid ":class:`~litestar.stores.file.FileStore`"
-msgstr ""
+msgstr ":class:`~litestar.stores.file.FileStore`"
 
 #: ../../../release-notes/2.x-changelog.rst:803
 msgid ""
@@ -912,10 +928,13 @@ msgid ""
 "def test(data: str = \"abc\") -> dict:\n"
 "    return {\"foo\": data}"
 msgstr ""
+"@post(path=\"/\", sync_to_thread=False)\n"
+"def test(data: str = \"abc\") -> dict:\n"
+"    return {\"foo\": data}"
 
 #: ../../../release-notes/2.x-changelog.rst:825
 msgid "``$ curl localhost:8000 -X POST``"
-msgstr ""
+msgstr "``$ curl localhost:8000 -X POST``"
 
 #: ../../../release-notes/2.x-changelog.rst:827
 msgid "would return a client error like:"
@@ -927,6 +946,9 @@ msgid ""
 "localhost:8000/\",\"extra\":[{\"message\":\"Expected `str`, got `null`\","
 "\"key\":\"data\",\"source\":\"body\"}]}"
 msgstr ""
+"{\"status_code\":400,\"detail\":\"Validation failed for POST http://"
+"localhost:8000/\",\"extra\":[{\"message\":\"Expected `str`, got `null`\","
+"\"key\":\"data\",\"source\":\"body\"}]}"
 
 #: ../../../release-notes/2.x-changelog.rst:838
 msgid ""
@@ -1014,6 +1036,14 @@ msgid ""
 "  }\n"
 "}"
 msgstr ""
+"{\n"
+"  \"name\": \"type\",\n"
+"  \"in\": \"query\",\n"
+"  \"schema\": {\n"
+"    \"type\": \"string\",\n"
+"    \"enum\": [ \"sink\", \"source\", null ]\n"
+"  }\n"
+"}"
 
 #: ../../../release-notes/2.x-changelog.rst:939
 msgid ""
@@ -1136,6 +1166,9 @@ msgid ""
 "class Foo:\n"
 "    foo: int"
 msgstr ""
+"@dataclass\n"
+"class Foo:\n"
+"    foo: int"
 
 #: ../../../release-notes/2.x-changelog.rst:1034
 msgid "The following example would be generated:"
@@ -1150,6 +1183,12 @@ msgid ""
 "    }\n"
 "}"
 msgstr ""
+"{\n"
+"    \"description\": \"Example value\",\n"
+"    \"value\": {\n"
+"        \"foo\": 7906\n"
+"    }\n"
+"}"
 
 #: ../../../release-notes/2.x-changelog.rst:1045
 msgid "After the fix, this is now:"
@@ -1362,15 +1401,15 @@ msgstr ""
 
 #: ../../../release-notes/2.x-changelog.rst:1324
 msgid "``--ssl-certfile``"
-msgstr ""
+msgstr "``--ssl-certfile``"
 
 #: ../../../release-notes/2.x-changelog.rst:1325
 msgid "``--ssl-keyfile``"
-msgstr ""
+msgstr "``--ssl-keyfile``"
 
 #: ../../../release-notes/2.x-changelog.rst:1326
 msgid "``--create-self-signed-cert``"
-msgstr ""
+msgstr "``--create-self-signed-cert``"
 
 #: ../../../release-notes/2.x-changelog.rst:1328
 msgid ""
@@ -1424,7 +1463,7 @@ msgstr ""
 
 #: ../../../release-notes/2.x-changelog.rst:0
 msgid "Python 3.8+"
-msgstr ""
+msgstr "Python 3.8+"
 
 #: ../../../release-notes/2.x-changelog.rst:1363
 msgid ""
@@ -1449,7 +1488,7 @@ msgstr ""
 
 #: ../../../release-notes/2.x-changelog.rst:0
 msgid "Python 3.10+"
-msgstr ""
+msgstr "Python 3.10+"
 
 #: ../../../release-notes/2.x-changelog.rst:1363
 msgid ""
@@ -1519,6 +1558,21 @@ msgid ""
 "  ]\n"
 "}"
 msgstr ""
+"{\n"
+"  \"parameters\": [\n"
+"    {\n"
+"      \"schema\": {\n"
+"        \"type\": \"string\",\n"
+"        \"examples\": [\n"
+"          {\n"
+"            \"summary\": \"example summary\",\n"
+"            \"value\": \"example value\"\n"
+"          }\n"
+"        ]\n"
+"      }\n"
+"    }\n"
+"  ]\n"
+"}"
 
 #: ../../../release-notes/2.x-changelog.rst:1407
 msgid "instead of"
@@ -1542,6 +1596,21 @@ msgid ""
 "  ]\n"
 "}"
 msgstr ""
+"{\n"
+"  \"parameters\": [\n"
+"    {\n"
+"      \"schema\": {\n"
+"        \"type\": \"string\"\n"
+"      },\n"
+"      \"examples\": {\n"
+"        \"example1\": {\n"
+"          \"summary\": \"example summary\"\n"
+"          \"value\": \"example value\"\n"
+"        }\n"
+"      }\n"
+"    }\n"
+"  ]\n"
+"}"
 
 #: ../../../release-notes/2.x-changelog.rst:1432
 msgid ""
@@ -1567,6 +1636,13 @@ msgid ""
 "\n"
 "def handle_exc(req: Request, exc: CustomException) -> Response: ..."
 msgstr ""
+"from litestar import Request, Response\n"
+"\n"
+"\n"
+"class CustomException(Exception): ...\n"
+"\n"
+"\n"
+"def handle_exc(req: Request, exc: CustomException) -> Response: ..."
 
 #: ../../../release-notes/2.x-changelog.rst:1460
 msgid ""
@@ -1925,6 +2001,11 @@ msgid ""
 "    account_id=str(account_id),\n"
 ")"
 msgstr ""
+"locations, total_count = await model_service.list_and_count(\n"
+"    statement=select(Model).where(ST_DWithin(UniqueLocation.location, geog, "
+"1000)),\n"
+"    account_id=str(account_id),\n"
+")"
 
 #: ../../../release-notes/2.x-changelog.rst:1788
 msgid ""
@@ -2182,6 +2263,7 @@ msgstr ""
 msgid ""
 "``~litestar.contrib.sqlalchemy.repository.SQLAlchemyAsyncRepository.delete``"
 msgstr ""
+"``~litestar.contrib.sqlalchemy.repository.SQLAlchemyAsyncRepository.delete``"
 
 #: ../../../release-notes/2.x-changelog.rst:2054
 #: ../../../release-notes/2.x-changelog.rst:2112
@@ -2189,24 +2271,29 @@ msgid ""
 "``~litestar.contrib.sqlalchemy.repository.SQLAlchemyAsyncRepository."
 "delete_many``"
 msgstr ""
+"``~litestar.contrib.sqlalchemy.repository.SQLAlchemyAsyncRepository."
+"delete_many``"
 
 #: ../../../release-notes/2.x-changelog.rst:2055
 #: ../../../release-notes/2.x-changelog.rst:2113
 msgid ""
 "``~litestar.contrib.sqlalchemy.repository.SQLAlchemyAsyncRepository.get``"
 msgstr ""
+"``~litestar.contrib.sqlalchemy.repository.SQLAlchemyAsyncRepository.get``"
 
 #: ../../../release-notes/2.x-changelog.rst:2056
 #: ../../../release-notes/2.x-changelog.rst:2114
 msgid ""
 "``~litestar.contrib.sqlalchemy.repository.SQLAlchemyAsyncRepository.update``"
 msgstr ""
+"``~litestar.contrib.sqlalchemy.repository.SQLAlchemyAsyncRepository.update``"
 
 #: ../../../release-notes/2.x-changelog.rst:2058
 #: ../../../release-notes/2.x-changelog.rst:2116
 msgid ""
 "``~litestar.contrib.sqlalchemy.repository.SQLAlchemySyncRepository.delete``"
 msgstr ""
+"``~litestar.contrib.sqlalchemy.repository.SQLAlchemySyncRepository.delete``"
 
 #: ../../../release-notes/2.x-changelog.rst:2059
 #: ../../../release-notes/2.x-changelog.rst:2117
@@ -2214,18 +2301,22 @@ msgid ""
 "``~litestar.contrib.sqlalchemy.repository.SQLAlchemySyncRepository."
 "delete_many``"
 msgstr ""
+"``~litestar.contrib.sqlalchemy.repository.SQLAlchemySyncRepository."
+"delete_many``"
 
 #: ../../../release-notes/2.x-changelog.rst:2060
 #: ../../../release-notes/2.x-changelog.rst:2118
 msgid ""
 "``~litestar.contrib.sqlalchemy.repository.SQLAlchemySyncRepository.get``"
 msgstr ""
+"``~litestar.contrib.sqlalchemy.repository.SQLAlchemySyncRepository.get``"
 
 #: ../../../release-notes/2.x-changelog.rst:2061
 #: ../../../release-notes/2.x-changelog.rst:2119
 msgid ""
 "``~litestar.contrib.sqlalchemy.repository.SQLAlchemySyncRepository.update``"
 msgstr ""
+"``~litestar.contrib.sqlalchemy.repository.SQLAlchemySyncRepository.update``"
 
 #: ../../../release-notes/2.x-changelog.rst:2067
 msgid ""
@@ -2240,6 +2331,9 @@ msgid ""
 "upsert_many`` ``~litestar.contrib.sqlalchemy.repository."
 "SQLAlchemySyncRepository.upsert_many``"
 msgstr ""
+"``~litestar.contrib.sqlalchemy.repository.SQLAlchemyAsyncRepository."
+"upsert_many`` ``~litestar.contrib.sqlalchemy.repository."
+"SQLAlchemySyncRepository.upsert_many``"
 
 #: ../../../release-notes/2.x-changelog.rst:2079
 msgid "The following filters have been added to the SQLAlchemy repositories:"
@@ -2247,7 +2341,7 @@ msgstr ""
 
 #: ../../../release-notes/2.x-changelog.rst:2081
 msgid "``litestar.contrib.repository.filters.OnBeforeAfter``"
-msgstr ""
+msgstr "``litestar.contrib.repository.filters.OnBeforeAfter``"
 
 #: ../../../release-notes/2.x-changelog.rst:2083
 msgid "Allowing to filter :class:`datetime.datetime` columns"
@@ -2255,7 +2349,7 @@ msgstr ""
 
 #: ../../../release-notes/2.x-changelog.rst:2085
 msgid "``litestar.contrib.repository.filters.NotInCollectionFilter``"
-msgstr ""
+msgstr "``litestar.contrib.repository.filters.NotInCollectionFilter``"
 
 #: ../../../release-notes/2.x-changelog.rst:2087
 msgid "Allowing to filter using a ``WHERE ... NOT IN (...)`` clause"
@@ -2263,7 +2357,7 @@ msgstr ""
 
 #: ../../../release-notes/2.x-changelog.rst:2089
 msgid "``litestar.contrib.repository.filters.NotInSearchFilter``"
-msgstr ""
+msgstr "``litestar.contrib.repository.filters.NotInSearchFilter``"
 
 #: ../../../release-notes/2.x-changelog.rst:2091
 msgid ""
@@ -2429,45 +2523,45 @@ msgstr ""
 #: ../../../release-notes/2.x-changelog.rst:2285
 #: ../../../release-notes/2.x-changelog.rst:2299
 msgid "``~SQLAlchemyAsyncRepository.add``"
-msgstr ""
+msgstr "``~SQLAlchemyAsyncRepository.add``"
 
 #: ../../../release-notes/2.x-changelog.rst:2269
 #: ../../../release-notes/2.x-changelog.rst:2300
 msgid "``~SQLAlchemyAsyncRepository.add_many``"
-msgstr ""
+msgstr "``~SQLAlchemyAsyncRepository.add_many``"
 
 #: ../../../release-notes/2.x-changelog.rst:2270
 #: ../../../release-notes/2.x-changelog.rst:2301
 msgid "``~SQLAlchemyAsyncRepository.delete``"
-msgstr ""
+msgstr "``~SQLAlchemyAsyncRepository.delete``"
 
 #: ../../../release-notes/2.x-changelog.rst:2271
 #: ../../../release-notes/2.x-changelog.rst:2302
 msgid "``~SQLAlchemyAsyncRepository.delete_many``"
-msgstr ""
+msgstr "``~SQLAlchemyAsyncRepository.delete_many``"
 
 #: ../../../release-notes/2.x-changelog.rst:2272
 #: ../../../release-notes/2.x-changelog.rst:2286
 #: ../../../release-notes/2.x-changelog.rst:2306
 msgid "``~SQLAlchemyAsyncRepository.get_or_create``"
-msgstr ""
+msgstr "``~SQLAlchemyAsyncRepository.get_or_create``"
 
 #: ../../../release-notes/2.x-changelog.rst:2273
 #: ../../../release-notes/2.x-changelog.rst:2287
 #: ../../../release-notes/2.x-changelog.rst:2307
 msgid "``~SQLAlchemyAsyncRepository.update``"
-msgstr ""
+msgstr "``~SQLAlchemyAsyncRepository.update``"
 
 #: ../../../release-notes/2.x-changelog.rst:2274
 #: ../../../release-notes/2.x-changelog.rst:2308
 msgid "``~SQLAlchemyAsyncRepository.update_many``"
-msgstr ""
+msgstr "``~SQLAlchemyAsyncRepository.update_many``"
 
 #: ../../../release-notes/2.x-changelog.rst:2275
 #: ../../../release-notes/2.x-changelog.rst:2288
 #: ../../../release-notes/2.x-changelog.rst:2310
 msgid "``~SQLAlchemyAsyncRepository.upsert``"
-msgstr ""
+msgstr "``~SQLAlchemyAsyncRepository.upsert``"
 
 #: ../../../release-notes/2.x-changelog.rst:2277
 #: ../../../release-notes/2.x-changelog.rst:2290
@@ -2497,19 +2591,19 @@ msgstr ""
 
 #: ../../../release-notes/2.x-changelog.rst:2303
 msgid "``~SQLAlchemyAsyncRepository.get``"
-msgstr ""
+msgstr "``~SQLAlchemyAsyncRepository.get``"
 
 #: ../../../release-notes/2.x-changelog.rst:2304
 msgid "``~SQLAlchemyAsyncRepository.get_one``"
-msgstr ""
+msgstr "``~SQLAlchemyAsyncRepository.get_one``"
 
 #: ../../../release-notes/2.x-changelog.rst:2305
 msgid "``~SQLAlchemyAsyncRepository.get_one_or_none``"
-msgstr ""
+msgstr "``~SQLAlchemyAsyncRepository.get_one_or_none``"
 
 #: ../../../release-notes/2.x-changelog.rst:2309
 msgid "``~SQLAlchemyAsyncRepository.list``"
-msgstr ""
+msgstr "``~SQLAlchemyAsyncRepository.list``"
 
 #: ../../../release-notes/2.x-changelog.rst:2318
 msgid ""
@@ -2650,6 +2744,20 @@ msgid ""
 "  ]\n"
 "}"
 msgstr ""
+"{\n"
+"  \"status_code\": 400,\n"
+"  \"detail\": \"Validation failed for POST http://localhost:8000/some-"
+"route\",\n"
+"  \"extra\": [\n"
+"    {\"key\": \"int_param\", \"message\": \"value is not a valid "
+"integer\"},\n"
+"    {\"key\": \"int_header\", \"message\": \"value is not a valid "
+"integer\"},\n"
+"    {\"key\": \"int_cookie\", \"message\": \"value is not a valid "
+"integer\"},\n"
+"    {\"key\": \"my_value\", \"message\": \"value is not a valid integer\"}\n"
+"  ]\n"
+"}"
 
 #: ../../../release-notes/2.x-changelog.rst:2466
 msgid "after"
@@ -2680,19 +2788,19 @@ msgstr ""
 
 #: ../../../release-notes/2.x-changelog.rst:2487
 msgid ":class:`~litestar.testing.TestClient`"
-msgstr ""
+msgstr ":class:`~litestar.testing.TestClient`"
 
 #: ../../../release-notes/2.x-changelog.rst:2488
 msgid ":class:`~litestar.testing.AsyncTestClient`"
-msgstr ""
+msgstr ":class:`~litestar.testing.AsyncTestClient`"
 
 #: ../../../release-notes/2.x-changelog.rst:2489
 msgid ":class:`~litestar.testing.create_test_client`"
-msgstr ""
+msgstr ":class:`~litestar.testing.create_test_client`"
 
 #: ../../../release-notes/2.x-changelog.rst:2490
 msgid ":class:`~litestar.testing.create_async_test_client`"
-msgstr ""
+msgstr ":class:`~litestar.testing.create_async_test_client`"
 
 #: ../../../release-notes/2.x-changelog.rst:2492
 msgid ""
@@ -3069,7 +3177,7 @@ msgstr ""
 
 #: ../../../release-notes/2.x-changelog.rst:0
 msgid "Python 3.9+"
-msgstr ""
+msgstr "Python 3.9+"
 
 #: ../../../release-notes/2.x-changelog.rst:2730
 msgid ""
@@ -3347,7 +3455,7 @@ msgstr ""
 
 #: ../../../release-notes/2.x-changelog.rst:3037
 msgid ":doc:`/topics/sync-vs-async`"
-msgstr ""
+msgstr ":doc:`/topics/sync-vs-async`"
 
 #: ../../../release-notes/2.x-changelog.rst:3044
 msgid ""
@@ -3434,19 +3542,19 @@ msgstr ""
 
 #: ../../../release-notes/2.x-changelog.rst:3131
 msgid "``before_startup``"
-msgstr ""
+msgstr "``before_startup``"
 
 #: ../../../release-notes/2.x-changelog.rst:3132
 msgid "``after_startup``"
-msgstr ""
+msgstr "``after_startup``"
 
 #: ../../../release-notes/2.x-changelog.rst:3133
 msgid "``before_shutdown``"
-msgstr ""
+msgstr "``before_shutdown``"
 
 #: ../../../release-notes/2.x-changelog.rst:3134
 msgid "``after_shutdown``"
-msgstr ""
+msgstr "``after_shutdown``"
 
 #: ../../../release-notes/2.x-changelog.rst:3136
 msgid ""
@@ -3509,22 +3617,25 @@ msgstr ""
 
 #: ../../../release-notes/2.x-changelog.rst:3227
 msgid ":meth:`receive <litestar.testing.WebSocketTestSession.receive>`"
-msgstr ""
+msgstr ":meth:`receive <litestar.testing.WebSocketTestSession.receive>`"
 
 #: ../../../release-notes/2.x-changelog.rst:3228
 msgid ""
 ":meth:`receive_text <litestar.testing.WebSocketTestSession.receive_text>`"
 msgstr ""
+":meth:`receive_text <litestar.testing.WebSocketTestSession.receive_text>`"
 
 #: ../../../release-notes/2.x-changelog.rst:3229
 msgid ""
 ":meth:`receive_bytes <litestar.testing.WebSocketTestSession.receive_bytes>`"
 msgstr ""
+":meth:`receive_bytes <litestar.testing.WebSocketTestSession.receive_bytes>`"
 
 #: ../../../release-notes/2.x-changelog.rst:3230
 msgid ""
 ":meth:`receive_json <litestar.testing.WebSocketTestSession.receive_json>`"
 msgstr ""
+":meth:`receive_json <litestar.testing.WebSocketTestSession.receive_json>`"
 
 #: ../../../release-notes/2.x-changelog.rst:3236
 msgid ""
@@ -3894,12 +4005,16 @@ msgid ""
 "@get(\"/\")\n"
 "def index(param: int = Parameter(gt=5)) -> dict[str, int]: ..."
 msgstr ""
+"@get(\"/\")\n"
+"def index(param: int = Parameter(gt=5)) -> dict[str, int]: ..."
 
 #: ../../../release-notes/2.x-changelog.rst:3565
 msgid ""
 "@get(\"/\")\n"
 "def index(param: Annotated[int, Parameter(gt=5)]) -> dict[str, int]: ..."
 msgstr ""
+"@get(\"/\")\n"
+"def index(param: Annotated[int, Parameter(gt=5)]) -> dict[str, int]: ..."
 
 #: ../../../release-notes/2.x-changelog.rst:3574
 msgid ""
@@ -4492,35 +4607,35 @@ msgstr ""
 
 #: ../../../release-notes/2.x-changelog.rst:4029
 msgid "``openapi.request_body``"
-msgstr ""
+msgstr "``openapi.request_body``"
 
 #: ../../../release-notes/2.x-changelog.rst:4030
 msgid "``openapi.responses``"
-msgstr ""
+msgstr "``openapi.responses``"
 
 #: ../../../release-notes/2.x-changelog.rst:4031
 msgid "``openapi.schema``"
-msgstr ""
+msgstr "``openapi.schema``"
 
 #: ../../../release-notes/2.x-changelog.rst:4032
 msgid "``openapi.typescript_converter``"
-msgstr ""
+msgstr "``openapi.typescript_converter``"
 
 #: ../../../release-notes/2.x-changelog.rst:4033
 msgid "``openapi.utils``"
-msgstr ""
+msgstr "``openapi.utils``"
 
 #: ../../../release-notes/2.x-changelog.rst:4034
 msgid "``multipart``"
-msgstr ""
+msgstr "``multipart``"
 
 #: ../../../release-notes/2.x-changelog.rst:4035
 msgid "``parsers``"
-msgstr ""
+msgstr "``parsers``"
 
 #: ../../../release-notes/2.x-changelog.rst:4036
 msgid "``signature``"
-msgstr ""
+msgstr "``signature``"
 
 #: ../../../release-notes/2.x-changelog.rst:4045
 msgid ""
@@ -4612,6 +4727,10 @@ msgid ""
 "  { \"oneOf\": [] }\n"
 " ]}"
 msgstr ""
+"{ \"oneOf\": [\n"
+"  { \"type\": null\" },\n"
+"  { \"oneOf\": [] }\n"
+" ]}"
 
 #: ../../../release-notes/2.x-changelog.rst:4260
 msgid ""
@@ -4660,16 +4779,17 @@ msgstr ""
 
 #: ../../../release-notes/2.x-changelog.rst:4135
 msgid "``starlite.handlers.asgi`` > ``starlite.handlers.asgi_handlers``"
-msgstr ""
+msgstr "``starlite.handlers.asgi`` > ``starlite.handlers.asgi_handlers``"
 
 #: ../../../release-notes/2.x-changelog.rst:4136
 msgid "``starlite.handlers.http`` > ``starlite.handlers.http_handlers``"
-msgstr ""
+msgstr "``starlite.handlers.http`` > ``starlite.handlers.http_handlers``"
 
 #: ../../../release-notes/2.x-changelog.rst:4137
 msgid ""
 "``starlite.handlers.websocket`` > ``starlite.handlers.websocket_handlers``"
 msgstr ""
+"``starlite.handlers.websocket`` > ``starlite.handlers.websocket_handlers``"
 
 #: ../../../release-notes/2.x-changelog.rst:4145
 msgid ""
@@ -4727,35 +4847,35 @@ msgstr ""
 
 #: ../../../release-notes/2.x-changelog.rst:4181
 msgid "``starlite.config.app.AppConfig``"
-msgstr ""
+msgstr "``starlite.config.app.AppConfig``"
 
 #: ../../../release-notes/2.x-changelog.rst:4182
 msgid "``starlite.config.response_cache.ResponseCacheConfig``"
-msgstr ""
+msgstr "``starlite.config.response_cache.ResponseCacheConfig``"
 
 #: ../../../release-notes/2.x-changelog.rst:4183
 msgid "``starlite.config.compression.CompressionConfig``"
-msgstr ""
+msgstr "``starlite.config.compression.CompressionConfig``"
 
 #: ../../../release-notes/2.x-changelog.rst:4184
 msgid "``starlite.config.cors.CORSConfig``"
-msgstr ""
+msgstr "``starlite.config.cors.CORSConfig``"
 
 #: ../../../release-notes/2.x-changelog.rst:4185
 msgid "``starlite.config.csrf.CSRFConfig``"
-msgstr ""
+msgstr "``starlite.config.csrf.CSRFConfig``"
 
 #: ../../../release-notes/2.x-changelog.rst:4187
 msgid "``starlite.openapi.OpenAPIConfig``"
-msgstr ""
+msgstr "``starlite.openapi.OpenAPIConfig``"
 
 #: ../../../release-notes/2.x-changelog.rst:4188
 msgid "``starlite.static_files.StaticFilesConfig``"
-msgstr ""
+msgstr "``starlite.static_files.StaticFilesConfig``"
 
 #: ../../../release-notes/2.x-changelog.rst:4189
 msgid "``starlite.template.TemplateConfig``"
-msgstr ""
+msgstr "``starlite.template.TemplateConfig``"
 
 #: ../../../release-notes/2.x-changelog.rst:4190
 msgid "``starlite.contrib.jwt.jwt_token.Token``"

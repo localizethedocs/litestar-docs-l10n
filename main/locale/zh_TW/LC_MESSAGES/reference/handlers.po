@@ -37,7 +37,7 @@ msgstr ""
 #: ../../../../litestar/handlers/__init__.py:docstring of
 #: litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler.default_connection_lifespan:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/handlers/__init__.py:docstring of
 #: litestar.handlers.asgi_handlers.ASGIRouteHandler.__init__:3

@@ -28,7 +28,7 @@ msgstr ""
 
 #: ../../../reference/serialization.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/serialization/__init__.py:docstring of
 #: litestar.serialization.msgspec_hooks.decode_json:3

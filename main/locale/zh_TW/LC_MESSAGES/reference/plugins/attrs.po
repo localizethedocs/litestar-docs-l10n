@@ -43,7 +43,7 @@ msgstr ""
 
 #: ../../../reference/plugins/attrs.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/plugins/attrs.py:docstring of
 #: litestar.plugins.attrs.AttrsSchemaPlugin.is_plugin_supported_type:6

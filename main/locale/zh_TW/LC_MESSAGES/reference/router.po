@@ -42,7 +42,7 @@ msgstr ""
 
 #: ../../../reference/router.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/router.py:docstring of
 #: litestar.router.Router.__init__:3

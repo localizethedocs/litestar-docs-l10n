@@ -37,7 +37,7 @@ msgstr ""
 
 #: ../../../reference/testing.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.client.async_client.AsyncTestClient.__init__:3
@@ -115,7 +115,7 @@ msgstr ""
 #: litestar.testing.helpers.create_test_client:10
 #: litestar.testing.request_factory.RequestFactory.__init__:10
 msgid "Examples"
-msgstr ""
+msgstr "範例"
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.client.async_client.AsyncTestClient.get_session_data:8

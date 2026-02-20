@@ -40,7 +40,7 @@ msgstr ""
 
 #: ../../../reference/middleware/compression.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/middleware/compression/__init__.py:docstring of
 #: litestar.middleware.compression.facade.CompressionFacade.__init__:3

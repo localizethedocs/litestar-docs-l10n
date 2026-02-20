@@ -52,7 +52,7 @@ msgstr ""
 
 #: ../../../reference/plugins/flash_messages.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/plugins/flash.py:docstring of
 #: litestar.plugins.flash.FlashPlugin.__init__:3

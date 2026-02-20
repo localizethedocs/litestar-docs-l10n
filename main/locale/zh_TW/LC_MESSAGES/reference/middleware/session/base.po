@@ -125,7 +125,7 @@ msgstr ""
 #: ../../../../litestar/middleware/session/base.py:docstring of
 #: litestar.middleware.session.base.BaseBackendConfig.middleware:3
 msgid "Examples"
-msgstr ""
+msgstr "範例"
 
 #: ../../../../litestar/middleware/session/base.py:docstring of
 #: litestar.middleware.session.base.BaseBackendConfig.middleware:6
@@ -182,7 +182,7 @@ msgstr ""
 
 #: ../../../reference/middleware/session/base.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/middleware/session/base.py:docstring of
 #: litestar.middleware.session.base.BaseSessionBackend.__init__:3

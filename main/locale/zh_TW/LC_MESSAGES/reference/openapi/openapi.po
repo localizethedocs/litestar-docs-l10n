@@ -103,7 +103,7 @@ msgstr ""
 
 #: ../../../reference/openapi/openapi.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/openapi/__init__.py:docstring of
 #: litestar._openapi.utils.default_operation_id_creator:3

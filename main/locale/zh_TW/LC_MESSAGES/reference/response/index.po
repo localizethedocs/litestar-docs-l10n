@@ -38,7 +38,7 @@ msgstr ""
 
 #: ../../../reference/response/index.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/response/__init__.py:docstring of
 #: litestar.response.file.File.__init__:3

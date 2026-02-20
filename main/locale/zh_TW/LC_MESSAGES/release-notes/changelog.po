@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:4
 msgid "3.x Changelog"
-msgstr ""
+msgstr "3.x 變更日誌"
 
 #: ../../../release-notes/changelog.rst:15
 msgid ""
@@ -89,27 +89,27 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:65
 msgid "``Litestar.openapi_schema_plugins``"
-msgstr ""
+msgstr "``Litestar.openapi_schema_plugins``"
 
 #: ../../../release-notes/changelog.rst:65
 msgid "``Litestar.plugins.openapi_schema``"
-msgstr ""
+msgstr "``Litestar.plugins.openapi_schema``"
 
 #: ../../../release-notes/changelog.rst:66
 msgid "``Litestar.cli_plugins``"
-msgstr ""
+msgstr "``Litestar.cli_plugins``"
 
 #: ../../../release-notes/changelog.rst:66
 msgid "``Litestar.plugins.cli``"
-msgstr ""
+msgstr "``Litestar.plugins.cli``"
 
 #: ../../../release-notes/changelog.rst:67
 msgid "``Litestar.serialization_plugins``"
-msgstr ""
+msgstr "``Litestar.serialization_plugins``"
 
 #: ../../../release-notes/changelog.rst:67
 msgid "``Litestar.serialization.cli``"
-msgstr ""
+msgstr "``Litestar.serialization.cli``"
 
 #: ../../../release-notes/changelog.rst:75
 msgid ""
@@ -141,39 +141,39 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:102
 msgid ":class:`~litestar.response.base.ASGIResponse`"
-msgstr ""
+msgstr ":class:`~litestar.response.base.ASGIResponse`"
 
 #: ../../../release-notes/changelog.rst:103
 msgid ":meth:`~litestar.response.Response.to_asgi_response`"
-msgstr ""
+msgstr ":meth:`~litestar.response.Response.to_asgi_response`"
 
 #: ../../../release-notes/changelog.rst:104
 msgid ":class:`~litestar.response.file.ASGIFileResponse`"
-msgstr ""
+msgstr ":class:`~litestar.response.file.ASGIFileResponse`"
 
 #: ../../../release-notes/changelog.rst:105
 msgid ":meth:`~litestar.response.File.to_asgi_response`"
-msgstr ""
+msgstr ":meth:`~litestar.response.File.to_asgi_response`"
 
 #: ../../../release-notes/changelog.rst:106
 msgid ":class:`~litestar.response.redirect.ASGIRedirectResponse`"
-msgstr ""
+msgstr ":class:`~litestar.response.redirect.ASGIRedirectResponse`"
 
 #: ../../../release-notes/changelog.rst:107
 msgid ":meth:`~litestar.response.Redirect.to_asgi_response`"
-msgstr ""
+msgstr ":meth:`~litestar.response.Redirect.to_asgi_response`"
 
 #: ../../../release-notes/changelog.rst:108
 msgid ":class:`~litestar.response.streaming.ASGIStreamingResponse`"
-msgstr ""
+msgstr ":class:`~litestar.response.streaming.ASGIStreamingResponse`"
 
 #: ../../../release-notes/changelog.rst:109
 msgid ":meth:`~litestar.response.Stream.to_asgi_response`"
-msgstr ""
+msgstr ":meth:`~litestar.response.Stream.to_asgi_response`"
 
 #: ../../../release-notes/changelog.rst:110
 msgid ":meth:`~litestar.response.Template.to_asgi_response`"
-msgstr ""
+msgstr ":meth:`~litestar.response.Template.to_asgi_response`"
 
 #: ../../../release-notes/changelog.rst:112
 msgid ""

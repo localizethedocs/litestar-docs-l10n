@@ -257,7 +257,7 @@ msgstr ""
 
 #: ../../../reference/controller.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/controller.py:docstring of
 #: litestar.controller.Controller.validate_route_handlers:3

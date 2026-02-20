@@ -111,7 +111,7 @@ msgstr ""
 
 #: ../../../reference/stores/base.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/stores/base.py:docstring of
 #: litestar.stores.base.Store.set:3

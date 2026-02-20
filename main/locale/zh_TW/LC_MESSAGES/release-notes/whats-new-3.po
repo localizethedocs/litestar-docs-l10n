@@ -71,11 +71,11 @@ msgstr ""
 
 #: ../../../release-notes/whats-new-3.rst:32
 msgid "``Litestar.url_for_static_asset``"
-msgstr ""
+msgstr "``Litestar.url_for_static_asset``"
 
 #: ../../../release-notes/whats-new-3.rst:33
 msgid "``Request.url_for_static_asset``"
-msgstr ""
+msgstr "``Request.url_for_static_asset``"
 
 #: ../../../release-notes/whats-new-3.rst:35
 msgid ""
@@ -108,6 +108,9 @@ msgid ""
 "def my_handler(param: int | None) -> ...:\n"
 "    ..."
 msgstr ""
+"@get(\"/\")\n"
+"def my_handler(param: int | None) -> ...:\n"
+"    ..."
 
 #: ../../../release-notes/whats-new-3.rst:55
 msgid ""
@@ -123,6 +126,9 @@ msgid ""
 "def my_handler(param: int | None = None) -> ...:\n"
 "    ..."
 msgstr ""
+"@get(\"/\")\n"
+"def my_handler(param: int | None = None) -> ...:\n"
+"    ..."
 
 #: ../../../release-notes/whats-new-3.rst:67
 msgid "OpenAPI Controller Replaced by Plugins"
@@ -445,10 +451,12 @@ msgid ""
 "def middleware(app: ASGIApp) -> ASGIApp:\n"
 "    ..."
 msgstr ""
+"def middleware(app: ASGIApp) -> ASGIApp:\n"
+"    ..."
 
 #: ../../../release-notes/whats-new-3.rst:264
 msgid ":doc:`/usage/middleware/index`"
-msgstr ""
+msgstr ":doc:`/usage/middleware/index`"
 
 #: ../../../release-notes/whats-new-3.rst:268
 msgid "Removal of ``SerializationPluginProtocol``"

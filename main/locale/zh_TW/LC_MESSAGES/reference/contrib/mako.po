@@ -38,7 +38,7 @@ msgstr ""
 
 #: ../../../reference/contrib/mako.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/contrib/mako.py:docstring of
 #: litestar.contrib.mako.MakoTemplate.__init__:3

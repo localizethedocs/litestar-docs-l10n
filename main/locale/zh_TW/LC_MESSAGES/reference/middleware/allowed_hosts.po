@@ -38,7 +38,7 @@ msgstr ""
 
 #: ../../../reference/middleware/allowed_hosts.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/middleware/allowed_hosts.py:docstring of
 #: litestar.middleware.allowed_hosts.AllowedHostsMiddleware.__init__:3

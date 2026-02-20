@@ -141,7 +141,7 @@ msgstr ""
 
 #: ../../../topics/deployment/docker.rst:0
 msgid "Python 3.8+"
-msgstr ""
+msgstr "Python 3.8+"
 
 #: ../../../topics/deployment/docker.rst:45
 msgid "``app.py``"
@@ -175,7 +175,7 @@ msgstr ""
 
 #: ../../../topics/deployment/docker.rst:0
 msgid "Python 3.9+"
-msgstr ""
+msgstr "Python 3.9+"
 
 #: ../../../topics/deployment/docker.rst:45
 msgid ""
@@ -254,11 +254,11 @@ msgstr ""
 
 #: ../../../topics/deployment/docker.rst:0
 msgid "Useful Dockerfile Commands"
-msgstr ""
+msgstr "有用的 Dockerfile 命令"
 
 #: ../../../topics/deployment/docker.rst:104
 msgid "Useful Docker commands"
-msgstr ""
+msgstr "有用的 Docker 命令"
 
 #: ../../../topics/deployment/docker.rst:104
 msgid ""
@@ -277,10 +277,24 @@ msgid ""
 "# Remove the container\n"
 "docker rm exampleapp"
 msgstr ""
+"# 建置容器\n"
+"docker build -t exampleapp .\n"
+"\n"
+"# 執行容器\n"
+"docker run -d -p 80:80 --name exampleapp exampleapp\n"
+"\n"
+"# 停止容器\n"
+"docker stop exampleapp\n"
+"\n"
+"# 啟動容器\n"
+"docker start exampleapp\n"
+"\n"
+"# 移除容器\n"
+"docker rm exampleapp"
 
 #: ../../../topics/deployment/docker.rst:123
 msgid "Docker Compose"
-msgstr ""
+msgstr "Docker Compose"
 
 #: ../../../topics/deployment/docker.rst:125
 msgid ""
@@ -356,11 +370,11 @@ msgstr ""
 
 #: ../../../topics/deployment/docker.rst:0
 msgid "Useful Compose Commands"
-msgstr ""
+msgstr "有用的 Compose 命令"
 
 #: ../../../topics/deployment/docker.rst:178
 msgid "Useful Docker Compose commands"
-msgstr ""
+msgstr "有用的 Docker Compose 命令"
 
 #: ../../../topics/deployment/docker.rst:178
 msgid ""

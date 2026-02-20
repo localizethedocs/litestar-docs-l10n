@@ -186,7 +186,7 @@ msgstr ""
 
 #: ../../../reference/middleware/index.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/middleware/__init__.py:docstring of
 #: litestar.middleware.authentication.AbstractAuthenticationMiddleware.__call__:3

@@ -45,7 +45,7 @@ msgstr ""
 
 #: ../../../reference/background_tasks.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/background_tasks.py:docstring of
 #: litestar.background_tasks.BackgroundTask.__init__:3

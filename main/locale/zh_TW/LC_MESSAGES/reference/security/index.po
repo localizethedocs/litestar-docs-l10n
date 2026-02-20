@@ -49,7 +49,7 @@ msgstr ""
 
 #: ../../../reference/security/index.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/security/__init__.py:docstring of
 #: litestar.security.base.AbstractSecurityConfig.create_response:5

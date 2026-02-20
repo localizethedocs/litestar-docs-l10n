@@ -27,7 +27,7 @@ msgstr ""
 
 #: conf.py:323
 msgid "Contributing"
-msgstr ""
+msgstr "參與貢獻"
 
 #: conf.py:324
 msgid "Learn how to contribute to the Litestar project"
@@ -35,7 +35,7 @@ msgstr ""
 
 #: conf.py:329
 msgid "Code of Conduct"
-msgstr ""
+msgstr "行為守則"
 
 #: conf.py:330
 msgid "Review the etiquette for interacting with the Litestar community"
@@ -84,7 +84,7 @@ msgstr ""
 
 #: conf.py:368
 msgid "3.x Changelog"
-msgstr ""
+msgstr "3.x 變更日誌"
 
 #: conf.py:369
 msgid "All changes in the 3.x series"
@@ -3073,7 +3073,7 @@ msgstr ""
 #: domains/c/__init__.py:326 domains/cpp/__init__.py:483
 #: domains/python/_object.py:190 ext/napoleon/docstring.py:974
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: domains/python/_object.py:206
 msgid "Variables"
@@ -3737,7 +3737,7 @@ msgstr ""
 
 #: ext/napoleon/docstring.py:896
 msgid "Examples"
-msgstr ""
+msgstr "範例"
 
 #: ext/napoleon/docstring.py:956
 msgid "Notes"

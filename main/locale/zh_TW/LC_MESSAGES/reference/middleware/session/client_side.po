@@ -44,7 +44,7 @@ msgstr ""
 
 #: ../../../reference/middleware/session/client_side.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/middleware/session/client_side.py:docstring of
 #: litestar.middleware.session.client_side.ClientSideSessionBackend.__init__:3
