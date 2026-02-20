@@ -43,7 +43,7 @@ msgstr ""
 #: ../../../../starlite/router.py:docstring of
 #: starlite.router.Router.__init__:0 starlite.router.Router.register:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/router.py:docstring of
 #: starlite.router.Router.__init__:3

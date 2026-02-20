@@ -119,7 +119,7 @@ msgstr ""
 #: starlite.datastructures.cookie.Cookie.__eq__:0
 #: starlite.datastructures.cookie.Cookie.to_header:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/datastructures/cookie.py:docstring of
 #: starlite.datastructures.cookie.Cookie.to_header:3

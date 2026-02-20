@@ -138,7 +138,7 @@ msgstr ""
 #: starlite.security.base.AbstractSecurityConfig.on_app_init:0
 #: starlite.security.base.AbstractSecurityConfig.validate_retrieve_user_handler:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/security/base.py:docstring of
 #: starlite.security.base.AbstractSecurityConfig.on_app_init:4

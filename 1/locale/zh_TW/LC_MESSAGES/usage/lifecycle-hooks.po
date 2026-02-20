@@ -61,7 +61,7 @@ msgstr ""
 
 #: ../../../usage/lifecycle-hooks.rst:20
 msgid "Before Request"
-msgstr ""
+msgstr "請求之前"
 
 #: ../../../usage/lifecycle-hooks.rst:22
 msgid ""
@@ -74,7 +74,7 @@ msgstr ""
 
 #: ../../../usage/lifecycle-hooks.rst:0
 msgid "Python 3.8+"
-msgstr ""
+msgstr "Python 3.8+"
 
 #: ../../../usage/lifecycle-hooks.rst:28
 msgid ""
@@ -108,7 +108,7 @@ msgstr ""
 
 #: ../../../usage/lifecycle-hooks.rst:0
 msgid "Python 3.10+"
-msgstr ""
+msgstr "Python 3.10+"
 
 #: ../../../usage/lifecycle-hooks.rst:28
 msgid ""
@@ -140,7 +140,7 @@ msgstr ""
 
 #: ../../../usage/lifecycle-hooks.rst:34
 msgid "After Request"
-msgstr ""
+msgstr "請求之後"
 
 #: ../../../usage/lifecycle-hooks.rst:36
 msgid ""

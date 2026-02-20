@@ -52,7 +52,7 @@ msgstr ""
 #: starlite.utils.exception.create_exception_response:0
 #: starlite.utils.exception.get_exception_handler:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/utils/exception.py:docstring of
 #: starlite.utils.exception.get_exception_handler:12

@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../usage/parameters.rst:2
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../usage/parameters.rst:5
 msgid "Path Parameters"
@@ -137,7 +137,7 @@ msgstr ""
 
 #: ../../../usage/parameters.rst:0
 msgid "Python 3.8+"
-msgstr ""
+msgstr "Python 3.8+"
 
 #: ../../../usage/parameters.rst:45
 msgid ""
@@ -172,7 +172,7 @@ msgstr ""
 
 #: ../../../usage/parameters.rst:0
 msgid "Python 3.10+"
-msgstr ""
+msgstr "Python 3.10+"
 
 #: ../../../usage/parameters.rst:45
 msgid ""

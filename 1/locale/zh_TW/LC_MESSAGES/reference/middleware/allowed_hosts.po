@@ -39,7 +39,7 @@ msgstr ""
 #: ../../../../starlite/middleware/allowed_hosts.py:docstring of
 #: starlite.middleware.allowed_hosts.AllowedHostsMiddleware.__init__:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/middleware/allowed_hosts.py:docstring of
 #: starlite.middleware.allowed_hosts.AllowedHostsMiddleware.__init__:3

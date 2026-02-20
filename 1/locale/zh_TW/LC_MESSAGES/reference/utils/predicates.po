@@ -40,7 +40,7 @@ msgstr ""
 #: starlite.utils.predicates.is_typed_dict:0
 #: starlite.utils.predicates.is_union:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/utils/predicates.py:docstring of
 #: starlite.utils.predicates.is_class_and_subclass:5

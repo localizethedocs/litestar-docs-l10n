@@ -45,7 +45,7 @@ msgstr ""
 #: ../../../../starlite/handlers/base.py:docstring of
 #: starlite.handlers.base.BaseRouteHandler.__init__:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/handlers/base.py:docstring of
 #: starlite.handlers.base.BaseRouteHandler.__init__:3

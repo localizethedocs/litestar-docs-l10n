@@ -71,7 +71,7 @@ msgstr ""
 #: starlite.template.base.TemplateEngineProtocol.register_template_callable:0
 #: starlite.template.base.TemplateProtocol.render:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/template/base.py:docstring of
 #: starlite.template.base.TemplateEngineProtocol.register_template_callable:3

@@ -128,7 +128,7 @@ msgstr ""
 
 #: ../../../usage/dto.rst:55
 msgid "Excluding fields"
-msgstr ""
+msgstr "排除欄位"
 
 #: ../../../usage/dto.rst:55
 msgid ""
@@ -431,7 +431,7 @@ msgstr ""
 
 #: ../../../usage/dto.rst:0
 msgid "Python 3.8+"
-msgstr ""
+msgstr "Python 3.8+"
 
 #: ../../../usage/dto.rst:186
 msgid "DTO automatic conversion"
@@ -495,7 +495,7 @@ msgstr ""
 
 #: ../../../usage/dto.rst:0
 msgid "Python 3.10+"
-msgstr ""
+msgstr "Python 3.10+"
 
 #: ../../../usage/dto.rst:186
 msgid ""

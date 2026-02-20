@@ -43,7 +43,7 @@ msgstr ""
 #: starlite.datastructures.upload_file.UploadFile.seek:0
 #: starlite.datastructures.upload_file.UploadFile.write:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/datastructures/upload_file.py:docstring of
 #: starlite.datastructures.upload_file.UploadFile.__init__:3

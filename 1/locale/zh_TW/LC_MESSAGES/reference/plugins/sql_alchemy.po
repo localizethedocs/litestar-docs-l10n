@@ -67,7 +67,7 @@ msgstr ""
 #: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.to_dict:0
 #: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.to_pydantic_model_class:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
 #: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.__init__:6

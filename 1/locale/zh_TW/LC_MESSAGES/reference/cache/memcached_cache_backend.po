@@ -86,7 +86,7 @@ msgstr ""
 #: starlite.cache.memcached_cache_backend.MemcachedCacheBackend.get:0
 #: starlite.cache.memcached_cache_backend.MemcachedCacheBackend.set:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/cache/memcached_cache_backend.py:docstring of
 #: starlite.cache.memcached_cache_backend.MemcachedCacheBackend.__init__:3

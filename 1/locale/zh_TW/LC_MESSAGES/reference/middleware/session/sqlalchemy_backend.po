@@ -66,7 +66,7 @@ msgstr ""
 #: starlite.middleware.session.sqlalchemy_backend.create_session_model:0
 #: starlite.middleware.session.sqlalchemy_backend.register_session_model:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/middleware/session/sqlalchemy_backend.py:docstring of
 #: starlite.middleware.session.sqlalchemy_backend.create_session_model:3

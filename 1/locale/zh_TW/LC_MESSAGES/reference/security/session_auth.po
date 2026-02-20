@@ -62,7 +62,7 @@ msgstr ""
 #: ../../../../starlite/security/session_auth/auth.py:docstring of
 #: starlite.security.session_auth.SessionAuth.middleware:3
 msgid "Examples"
-msgstr ""
+msgstr "範例"
 
 #: ../../../../starlite/security/session_auth/auth.py:docstring of
 #: starlite.security.session_auth.SessionAuth.middleware:0
@@ -145,7 +145,7 @@ msgstr ""
 #: starlite.security.session_auth.middleware.SessionAuthMiddleware.__init__:0
 #: starlite.security.session_auth.middleware.SessionAuthMiddleware.authenticate_request:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/security/session_auth/middleware.py:docstring of
 #: starlite.security.session_auth.middleware.SessionAuthMiddleware.__init__:3

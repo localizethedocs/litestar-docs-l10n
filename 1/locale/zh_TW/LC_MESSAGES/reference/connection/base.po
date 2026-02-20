@@ -45,7 +45,7 @@ msgstr ""
 #: starlite.connection.base.ASGIConnection.url_for:0
 #: starlite.connection.base.ASGIConnection.url_for_static_asset:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/connection/base.py:docstring of
 #: starlite.connection.base.ASGIConnection.__init__:3

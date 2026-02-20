@@ -47,7 +47,7 @@ msgstr ""
 #: starlite.datastructures.background_tasks.BackgroundTask.__init__:0
 #: starlite.datastructures.background_tasks.BackgroundTasks.__init__:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/datastructures/background_tasks.py:docstring of
 #: starlite.datastructures.background_tasks.BackgroundTask.__init__:3

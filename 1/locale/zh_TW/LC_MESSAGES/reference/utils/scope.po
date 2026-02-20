@@ -31,7 +31,7 @@ msgstr ""
 #: starlite.utils.scope.get_starlite_scope_state:0
 #: starlite.utils.scope.set_starlite_scope_state:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/utils/scope.py:docstring of
 #: starlite.utils.scope.get_serializer_from_scope:3

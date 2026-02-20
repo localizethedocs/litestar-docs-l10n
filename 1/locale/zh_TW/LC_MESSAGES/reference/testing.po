@@ -58,7 +58,7 @@ msgstr ""
 #: starlite.testing.request_factory.RequestFactory.post:0
 #: starlite.testing.request_factory.RequestFactory.put:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/testing/client/sync_client.py:docstring of
 #: starlite.testing.client.sync_client.TestClient.__init__:3
@@ -387,7 +387,7 @@ msgstr ""
 #: ../../../../starlite/testing/request_factory.py:docstring
 #: starlite.testing.request_factory.RequestFactory.__init__:9
 msgid "Examples"
-msgstr ""
+msgstr "範例"
 
 #: ../../../../starlite/testing/client/sync_client.py:docstring of
 #: starlite.testing.client.sync_client.TestClient.get_session_from_cookies:1

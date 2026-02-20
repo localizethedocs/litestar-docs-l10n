@@ -47,7 +47,7 @@ msgstr ""
 #: starlite.middleware.session.cookie_backend.CookieBackend.store_in_message:0
 #: starlite.middleware.session.cookie_backend.CookieBackendConfig.validate_secret:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/middleware/session/cookie_backend.py:docstring of
 #: starlite.middleware.session.cookie_backend.CookieBackend.__init__:3

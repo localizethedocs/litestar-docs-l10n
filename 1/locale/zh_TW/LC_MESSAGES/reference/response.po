@@ -65,7 +65,7 @@ msgstr ""
 #: ../../../../starlite/response/template.py:docstring
 #: starlite.response.template.TemplateResponse.__init__:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/response/base.py:docstring of
 #: starlite.response.base.Response.__init__:3

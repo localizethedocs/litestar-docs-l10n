@@ -44,7 +44,7 @@ msgstr ""
 #: starlite.middleware.session.memory_backend.MemoryBackend.get:0
 #: starlite.middleware.session.memory_backend.MemoryBackend.set:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/middleware/session/memory_backend.py:docstring of
 #: starlite.middleware.session.memory_backend.MemoryBackend.__init__:3

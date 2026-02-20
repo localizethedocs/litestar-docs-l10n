@@ -41,7 +41,7 @@ msgstr ""
 #: starlite.exceptions.websocket_exceptions.WebSocketDisconnect.__init__:0
 #: starlite.exceptions.websocket_exceptions.WebSocketException.__init__:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/exceptions/websocket_exceptions.py:docstring of
 #: starlite.exceptions.websocket_exceptions.WebSocketDisconnect.__init__:3

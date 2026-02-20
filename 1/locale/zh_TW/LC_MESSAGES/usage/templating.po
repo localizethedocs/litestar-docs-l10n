@@ -126,7 +126,7 @@ msgstr ""
 
 #: ../../../usage/templating.rst:0
 msgid "Python 3.8+"
-msgstr ""
+msgstr "Python 3.8+"
 
 #: ../../../usage/templating.rst:58
 msgid ""
@@ -150,7 +150,7 @@ msgstr ""
 
 #: ../../../usage/templating.rst:0
 msgid "Python 3.10+"
-msgstr ""
+msgstr "Python 3.10+"
 
 #: ../../../usage/templating.rst:58
 msgid ""

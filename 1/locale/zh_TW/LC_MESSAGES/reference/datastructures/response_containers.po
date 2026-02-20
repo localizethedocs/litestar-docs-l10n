@@ -96,7 +96,7 @@ msgstr ""
 #: starlite.datastructures.response_containers.Template.create_template_context:0
 #: starlite.datastructures.response_containers.Template.to_response:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/datastructures/response_containers.py:docstring of
 #: starlite.datastructures.response_containers.File.to_response:3

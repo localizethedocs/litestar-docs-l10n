@@ -45,7 +45,7 @@ msgstr ""
 #: starlite.middleware.logging.LoggingMiddleware.log_request:0
 #: starlite.middleware.logging.LoggingMiddleware.log_response:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/middleware/logging.py:docstring of
 #: starlite.middleware.logging.LoggingMiddleware.__init__:3
@@ -279,7 +279,7 @@ msgstr ""
 #: ../../../../starlite/middleware/logging.py:docstring of
 #: starlite.middleware.logging.LoggingMiddlewareConfig.middleware:3
 msgid "Examples"
-msgstr ""
+msgstr "範例"
 
 #: ../../../../starlite/middleware/logging.py:docstring of
 #: starlite.middleware.logging.LoggingMiddlewareConfig.middleware:26

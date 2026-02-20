@@ -113,7 +113,7 @@ msgstr ""
 #: starlite.openapi.controller.OpenAPIController.render_swagger_ui:0
 #: starlite.openapi.controller.OpenAPIController.should_serve_endpoint:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/openapi/controller.py:docstring of
 #: starlite.openapi.controller.OpenAPIController.get_schema_from_request:3

@@ -54,7 +54,7 @@ msgstr ""
 #: starlite.connection.websocket.WebSocket.send_text:0
 #: starlite.connection.websocket.WebSocket.send_wrapper:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/connection/websocket.py:docstring of
 #: starlite.connection.websocket.WebSocket.__init__:3

@@ -77,7 +77,7 @@ msgstr ""
 #: starlite.cache.redis_cache_backend.RedisCacheBackend.get:0
 #: starlite.cache.redis_cache_backend.RedisCacheBackend.set:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/cache/redis_cache_backend.py:docstring of
 #: starlite.cache.redis_cache_backend.RedisCacheBackend.__init__:3

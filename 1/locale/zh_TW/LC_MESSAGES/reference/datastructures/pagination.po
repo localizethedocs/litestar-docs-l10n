@@ -147,7 +147,7 @@ msgstr ""
 #: starlite.datastructures.pagination.AbstractSyncOffsetPaginator.__call__:0
 #: starlite.datastructures.pagination.AbstractSyncOffsetPaginator.get_items:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/datastructures/pagination.py:docstring of
 #: starlite.datastructures.pagination.AbstractAsyncClassicPaginator.__call__:3

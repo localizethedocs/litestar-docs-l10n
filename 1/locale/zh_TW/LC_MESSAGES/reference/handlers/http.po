@@ -51,7 +51,7 @@ msgstr ""
 #: starlite.handlers.http.patch.__init__:0
 #: starlite.handlers.http.post.__init__:0 starlite.handlers.http.put.__init__:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/handlers/http.py:docstring of
 #: starlite.handlers.http.HTTPRouteHandler.__init__:3

@@ -46,7 +46,7 @@ msgstr ""
 #: ../../../../starlite/handlers/websocket.py:docstring of
 #: starlite.handlers.websocket.WebsocketRouteHandler.__init__:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/handlers/websocket.py:docstring of
 #: starlite.handlers.websocket.WebsocketRouteHandler.__init__:3

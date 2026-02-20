@@ -43,7 +43,7 @@ msgstr ""
 #: ../../../../starlite/plugins/base.py:docstring of
 #: starlite.plugins.base.PluginProtocol.on_app_init:4
 msgid "Examples"
-msgstr ""
+msgstr "範例"
 
 #: ../../../../starlite/plugins/base.py:docstring of
 #: starlite.plugins.base.PluginMapping.get_model_instance_for_value:0
@@ -55,7 +55,7 @@ msgstr ""
 #: starlite.plugins.base.PluginProtocol.to_pydantic_model_class:0
 #: starlite.plugins.base.get_plugin_for_value:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/plugins/base.py:docstring of
 #: starlite.plugins.base.PluginProtocol.on_app_init:38

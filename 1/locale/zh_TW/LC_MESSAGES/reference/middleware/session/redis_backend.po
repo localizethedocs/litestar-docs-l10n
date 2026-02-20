@@ -58,7 +58,7 @@ msgstr ""
 #: starlite.middleware.session.redis_backend.RedisBackend.get:0
 #: starlite.middleware.session.redis_backend.RedisBackend.set:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/middleware/session/redis_backend.py:docstring of
 #: starlite.middleware.session.redis_backend.RedisBackend.delete:3

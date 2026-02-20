@@ -362,7 +362,7 @@ msgstr ""
 #: ../../../../starlite/config/template.py:docstring
 #: starlite.config.template.TemplateConfig.validate_config:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/config/app.py:docstring of
 #: starlite.config.app.AppConfig.validate_allowed_hosts:3

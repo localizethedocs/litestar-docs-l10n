@@ -215,7 +215,7 @@ msgstr ""
 
 #: ../../../usage/testing.rst:0
 msgid "Python 3.8+"
-msgstr ""
+msgstr "Python 3.8+"
 
 #: ../../../usage/testing.rst:171 ../../../usage/testing.rst:183
 msgid "Setting session data"

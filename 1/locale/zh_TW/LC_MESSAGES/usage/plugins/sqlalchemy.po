@@ -89,7 +89,7 @@ msgstr ""
 
 #: ../../../usage/plugins/sqlalchemy.rst:0
 msgid "Python 3.8+"
-msgstr ""
+msgstr "Python 3.8+"
 
 #: ../../../usage/plugins/sqlalchemy.rst:43
 #: ../../../usage/plugins/sqlalchemy.rst:51
@@ -173,7 +173,7 @@ msgstr ""
 
 #: ../../../usage/plugins/sqlalchemy.rst:0
 msgid "Python 3.10+"
-msgstr ""
+msgstr "Python 3.10+"
 
 #: ../../../usage/plugins/sqlalchemy.rst:43
 msgid ""

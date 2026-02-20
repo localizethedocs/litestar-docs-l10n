@@ -262,7 +262,7 @@ msgstr ""
 #: ../../../../starlite/types/partial.py:docstring
 #: starlite.types.partial.Partial.__class_getitem__:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/types/partial.py:docstring of
 #: starlite.types.partial.Partial.__class_getitem__:4

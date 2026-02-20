@@ -57,7 +57,7 @@ msgstr ""
 #: starlite.datastructures.state.State.__setattr__:0
 #: starlite.datastructures.state.State.__setitem__:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/datastructures/state.py:docstring of
 #: starlite.datastructures.state.ImmutableState.__init__:3
@@ -76,7 +76,7 @@ msgstr ""
 #: ../../../../starlite/datastructures/state.py:docstring of
 #: starlite.datastructures.state.ImmutableState.__init__:6
 msgid "Examples"
-msgstr ""
+msgstr "範例"
 
 #: ../../../../starlite/datastructures/state.py:docstring of
 #: starlite.datastructures.state.ImmutableState.__bool__:1

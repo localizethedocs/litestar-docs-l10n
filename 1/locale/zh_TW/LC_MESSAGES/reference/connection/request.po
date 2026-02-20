@@ -44,7 +44,7 @@ msgstr ""
 #: starlite.connection.request.Request.__init__:0
 #: starlite.connection.request.Request.send_push_promise:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/connection/request.py:docstring of
 #: starlite.connection.request.Request.__init__:3

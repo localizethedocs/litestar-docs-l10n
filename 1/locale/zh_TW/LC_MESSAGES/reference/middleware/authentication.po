@@ -65,7 +65,7 @@ msgstr ""
 #: starlite.middleware.authentication.AbstractAuthenticationMiddleware.__init__:0
 #: starlite.middleware.authentication.AbstractAuthenticationMiddleware.authenticate_request:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/middleware/authentication.py:docstring of
 #: starlite.middleware.authentication.AbstractAuthenticationMiddleware.__init__:3

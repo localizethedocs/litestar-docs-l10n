@@ -50,7 +50,7 @@ msgstr ""
 #: starlite.datastructures.headers.MutableScopeHeaders.from_message:0
 #: starlite.datastructures.headers.MutableScopeHeaders.getall:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/datastructures/headers.py:docstring of
 #: starlite.datastructures.headers.Headers.__init__:3

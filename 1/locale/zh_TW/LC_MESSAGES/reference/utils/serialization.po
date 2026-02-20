@@ -33,7 +33,7 @@ msgstr ""
 #: starlite.utils.serialization.encode_json:0
 #: starlite.utils.serialization.encode_msgpack:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/utils/serialization.py:docstring of
 #: starlite.utils.serialization.default_serializer:3

@@ -51,7 +51,7 @@ msgstr ""
 #: starlite.exceptions.http_exceptions.HTTPException.__init__:0
 #: starlite.exceptions.http_exceptions.TemplateNotFoundException.__init__:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/exceptions/http_exceptions.py:docstring of
 #: starlite.exceptions.http_exceptions.HTTPException.__init__:5

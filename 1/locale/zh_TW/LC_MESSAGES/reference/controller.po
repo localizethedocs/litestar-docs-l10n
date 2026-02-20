@@ -176,7 +176,7 @@ msgstr ""
 #: ../../../../starlite/controller.py:docstring of
 #: starlite.controller.Controller.__init__:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/controller.py:docstring of
 #: starlite.controller.Controller.__init__:5

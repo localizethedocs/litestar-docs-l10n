@@ -31,7 +31,7 @@ msgstr ""
 #: starlite.dto.DTOFactory.__call__:0 starlite.dto.DTOFactory.__init__:0
 #: starlite.dto.get_field_type:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/dto.py:docstring of starlite.dto.get_field_type:3
 msgid "`pydantic.fields.ModelField`"

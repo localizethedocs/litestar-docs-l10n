@@ -48,7 +48,7 @@ msgstr ""
 #: starlite.middleware.csrf.CSRFMiddleware.__init__:0
 #: starlite.middleware.csrf.CSRFMiddleware.create_send_wrapper:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/middleware/csrf.py:docstring of
 #: starlite.middleware.csrf.CSRFMiddleware.__init__:3

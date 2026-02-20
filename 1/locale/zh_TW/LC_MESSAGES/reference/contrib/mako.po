@@ -42,7 +42,7 @@ msgstr ""
 #: starlite.contrib.mako.MakoTemplateEngine.__init__:0
 #: starlite.contrib.mako.MakoTemplateEngine.register_template_callable:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/contrib/mako.py:docstring of
 #: starlite.contrib.mako.MakoTemplate.__init__:3

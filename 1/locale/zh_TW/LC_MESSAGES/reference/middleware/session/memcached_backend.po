@@ -44,7 +44,7 @@ msgstr ""
 #: starlite.middleware.session.memcached_backend.MemcachedBackend.get:0
 #: starlite.middleware.session.memcached_backend.MemcachedBackend.set:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/middleware/session/memcached_backend.py:docstring of
 #: starlite.middleware.session.memcached_backend.MemcachedBackend.__init__:3

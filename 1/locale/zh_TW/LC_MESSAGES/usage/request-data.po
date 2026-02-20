@@ -33,7 +33,7 @@ msgstr ""
 
 #: ../../../usage/request-data.rst:0
 msgid "Python 3.8+"
-msgstr ""
+msgstr "Python 3.8+"
 
 #: ../../../usage/request-data.rst:10
 msgid ""
@@ -52,7 +52,7 @@ msgstr ""
 
 #: ../../../usage/request-data.rst:0
 msgid "Python 3.10+"
-msgstr ""
+msgstr "Python 3.10+"
 
 #: ../../../usage/request-data.rst:10
 msgid ""

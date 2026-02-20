@@ -56,7 +56,7 @@ msgstr ""
 #: starlite.middleware.rate_limit.RateLimitMiddleware.set_cached_history:0
 #: starlite.middleware.rate_limit.RateLimitMiddleware.should_check_request:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/middleware/rate_limit.py:docstring of
 #: starlite.middleware.rate_limit.RateLimitMiddleware.__init__:3
@@ -276,7 +276,7 @@ msgstr ""
 #: ../../../../starlite/middleware/rate_limit.py:docstring of
 #: starlite.middleware.rate_limit.RateLimitConfig.middleware:3
 msgid "Examples"
-msgstr ""
+msgstr "範例"
 
 #: ../../../../starlite/middleware/rate_limit.py:docstring of
 #: starlite.middleware.rate_limit.RateLimitConfig.middleware:21

@@ -235,7 +235,7 @@ msgstr ""
 
 #: ../../../usage/openapi.rst:0
 msgid "Python 3.8+"
-msgstr ""
+msgstr "Python 3.8+"
 
 #: ../../../usage/openapi.rst:118
 msgid ""
@@ -269,7 +269,7 @@ msgstr ""
 
 #: ../../../usage/openapi.rst:0
 msgid "Python 3.10+"
-msgstr ""
+msgstr "Python 3.10+"
 
 #: ../../../usage/openapi.rst:118
 msgid ""

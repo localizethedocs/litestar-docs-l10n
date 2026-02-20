@@ -197,7 +197,7 @@ msgstr ""
 #: starlite.contrib.jwt.middleware.JWTCookieAuthenticationMiddleware.__init__:0
 #: starlite.contrib.jwt.middleware.JWTCookieAuthenticationMiddleware.authenticate_request:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
 #: starlite.contrib.jwt.jwt_auth.JWTAuth.create_token:3

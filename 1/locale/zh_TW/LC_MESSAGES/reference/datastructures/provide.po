@@ -43,7 +43,7 @@ msgstr ""
 #: starlite.datastructures.provide.DependencyCleanupGroup.throw:0
 #: starlite.datastructures.provide.Provide.__init__:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/datastructures/provide.py:docstring of
 #: starlite.datastructures.provide.Provide.__init__:3

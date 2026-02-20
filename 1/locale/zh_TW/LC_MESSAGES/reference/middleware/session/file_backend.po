@@ -69,7 +69,7 @@ msgstr ""
 #: starlite.middleware.session.file_backend.FileBackend.get:0
 #: starlite.middleware.session.file_backend.FileBackend.set:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/middleware/session/file_backend.py:docstring of
 #: starlite.middleware.session.file_backend.FileBackend.__init__:3

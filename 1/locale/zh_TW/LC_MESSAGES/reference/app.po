@@ -50,7 +50,7 @@ msgstr ""
 #: starlite.app.Starlite.register:0 starlite.app.Starlite.route_reverse:0
 #: starlite.app.Starlite.url_for_static_asset:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:3
 msgid ""
@@ -373,7 +373,7 @@ msgstr ""
 #: starlite.app.Starlite.route_reverse:4
 #: starlite.app.Starlite.url_for_static_asset:3
 msgid "Examples"
-msgstr ""
+msgstr "範例"
 
 #: ../../../../starlite/app.py:docstring of
 #: starlite.app.Starlite.get_handler_index_by_name:22

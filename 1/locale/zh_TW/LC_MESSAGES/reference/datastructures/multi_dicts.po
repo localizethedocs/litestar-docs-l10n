@@ -82,7 +82,7 @@ msgstr ""
 #: starlite.datastructures.multi_dicts.MultiDict.__init__:0
 #: starlite.datastructures.multi_dicts.MultiMixin.getlist:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/datastructures/multi_dicts.py:docstring of
 #: starlite.datastructures.multi_dicts.MultiMixin.getlist:3

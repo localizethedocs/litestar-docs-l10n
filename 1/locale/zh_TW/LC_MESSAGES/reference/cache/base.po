@@ -45,7 +45,7 @@ msgstr ""
 #: starlite.cache.base.CacheBackendProtocol.get:0
 #: starlite.cache.base.CacheBackendProtocol.set:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/cache/base.py:docstring of
 #: starlite.cache.base.Cache.get:3

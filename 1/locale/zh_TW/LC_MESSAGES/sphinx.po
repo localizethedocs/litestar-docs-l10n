@@ -27,7 +27,7 @@ msgstr ""
 
 #: conf.py:85
 msgid "Contributing"
-msgstr ""
+msgstr "參與貢獻"
 
 #: conf.py:86
 msgid "Learn how to contribute to the Litestar project"
@@ -35,7 +35,7 @@ msgstr ""
 
 #: conf.py:90
 msgid "Code of Conduct"
-msgstr ""
+msgstr "行為守則"
 
 #: conf.py:91
 msgid "Review the etiquette for interacting with the Litestar community"
@@ -1962,7 +1962,7 @@ msgstr ""
 #: sphinx/domains/c.py:3348 sphinx/domains/cpp.py:7423
 #: sphinx/domains/python.py:436 sphinx/ext/napoleon/docstring.py:751
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: sphinx/domains/c.py:3351 sphinx/domains/cpp.py:7429
 msgid "Return values"
@@ -3196,7 +3196,7 @@ msgstr ""
 
 #: sphinx/ext/napoleon/docstring.py:673
 msgid "Examples"
-msgstr ""
+msgstr "範例"
 
 #: sphinx/ext/napoleon/docstring.py:733
 msgid "Notes"

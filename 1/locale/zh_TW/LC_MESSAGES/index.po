@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../index.rst:211
 msgid "Documentation"
-msgstr ""
+msgstr "文件"
 
 #: ../../../index.rst:2
 msgid "Starlite library documentation"

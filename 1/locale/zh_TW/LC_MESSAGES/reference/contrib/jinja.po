@@ -42,7 +42,7 @@ msgstr ""
 #: starlite.contrib.jinja.JinjaTemplateEngine.__init__:0
 #: starlite.contrib.jinja.JinjaTemplateEngine.register_template_callable:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/contrib/jinja.py:docstring of
 #: starlite.contrib.jinja.JinjaTemplateEngine.__init__:3

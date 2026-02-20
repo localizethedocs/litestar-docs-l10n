@@ -46,7 +46,7 @@ msgstr ""
 
 #: ../../../usage/security/security-backends.rst:0
 msgid "Python 3.8+"
-msgstr ""
+msgstr "Python 3.8+"
 
 #: ../../../usage/security/security-backends.rst:19
 msgid "Using Session Auth"
@@ -200,7 +200,7 @@ msgstr ""
 
 #: ../../../usage/security/security-backends.rst:0
 msgid "Python 3.10+"
-msgstr ""
+msgstr "Python 3.10+"
 
 #: ../../../usage/security/security-backends.rst:19
 msgid ""

@@ -60,7 +60,7 @@ msgstr ""
 #: starlite.middleware.base.DefineMiddleware.__init__:0
 #: starlite.middleware.base.MiddlewareProtocol.__call__:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/middleware/base.py:docstring of
 #: starlite.middleware.base.AbstractMiddleware.__call__:8

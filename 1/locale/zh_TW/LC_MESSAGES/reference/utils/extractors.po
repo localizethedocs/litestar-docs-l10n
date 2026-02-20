@@ -47,7 +47,7 @@ msgstr ""
 #: starlite.utils.extractors.ResponseDataExtractor.extract_status_code:0
 #: starlite.utils.extractors.obfuscate:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/utils/extractors.py:docstring of
 #: starlite.utils.extractors.obfuscate:3

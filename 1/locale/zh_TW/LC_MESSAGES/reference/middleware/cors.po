@@ -40,7 +40,7 @@ msgstr ""
 #: starlite.middleware.cors.CORSMiddleware.__init__:0
 #: starlite.middleware.cors.CORSMiddleware.send_wrapper:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/middleware/cors.py:docstring of
 #: starlite.middleware.cors.CORSMiddleware.__init__:3

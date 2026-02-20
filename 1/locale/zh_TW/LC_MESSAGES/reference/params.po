@@ -248,7 +248,7 @@ msgstr ""
 #: ../../../../starlite/params.py:docstring of starlite.params.Body:0
 #: starlite.params.Dependency:0 starlite.params.Parameter:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../starlite/params.py:docstring of starlite.params.Parameter:3
 msgid "`Empty` by default."
