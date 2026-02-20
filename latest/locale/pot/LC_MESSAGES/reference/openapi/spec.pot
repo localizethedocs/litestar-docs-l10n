@@ -1,0 +1,2638 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/openapi/spec.rst:2
+msgid "spec"
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.components.Components:1
+#: litestar.openapi.spec.contact.Contact:1
+#: litestar.openapi.spec.discriminator.Discriminator:1
+#: litestar.openapi.spec.encoding.Encoding:1
+#: litestar.openapi.spec.example.Example:1
+#: litestar.openapi.spec.external_documentation.ExternalDocumentation:1
+#: litestar.openapi.spec.header.OpenAPIHeader:1
+#: litestar.openapi.spec.info.Info:1 litestar.openapi.spec.license.License:1
+#: litestar.openapi.spec.link.Link:1
+#: litestar.openapi.spec.media_type.OpenAPIMediaType:1
+#: litestar.openapi.spec.oauth_flow.OAuthFlow:1
+#: litestar.openapi.spec.oauth_flows.OAuthFlows:1
+#: litestar.openapi.spec.open_api.OpenAPI:1
+#: litestar.openapi.spec.operation.Operation:1
+#: litestar.openapi.spec.parameter.Parameter:1
+#: litestar.openapi.spec.path_item.PathItem:1
+#: litestar.openapi.spec.reference.Reference:1
+#: litestar.openapi.spec.request_body.RequestBody:1
+#: litestar.openapi.spec.response.OpenAPIResponse:1
+#: litestar.openapi.spec.schema.Schema:1
+#: litestar.openapi.spec.security_scheme.SecurityScheme:1
+#: litestar.openapi.spec.server.Server:1
+#: litestar.openapi.spec.server_variable.ServerVariable:1
+#: litestar.openapi.spec.tag.Tag:1 litestar.openapi.spec.xml.XML:1
+msgid "Bases: :py:class:`~litestar.openapi.spec.base.BaseSchemaObject`"
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.xml.XML:1
+msgid ""
+"A metadata object that allows for more fine-tuned XML model definitions."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.xml.XML:3
+msgid ""
+"When using arrays, XML element names are *not* inferred (for singular/plural "
+"forms) and the ``name`` property SHOULD be used to add that information. See "
+"examples for expected behavior."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.XML.attribute:1
+msgid ""
+"Declares whether the property definition translates to an attribute instead "
+"of an element. Default value is ``False``."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.XML.name:1
+msgid ""
+"Replaces the name of the element/attribute used for the described schema "
+"property. When defined within ``items``, it will affect the name of the "
+"individual XML elements within the list. When defined alongside ``type`` "
+"being ``array`` (outside the ``items``), it will affect the wrapping element "
+"and only if ``wrapped`` is ``True``. If ``wrapped`` is ``False``, it will be "
+"ignored."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.XML.namespace:1
+msgid ""
+"The URI of the namespace definition. Value MUST be in the form of an "
+"absolute URI."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.XML.prefix:1
+msgid ""
+"The prefix to be used for the `xmlName <https://spec.openapis.org/oas/"
+"v3.1.0#xmlName>`_"
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.XML.wrapped:1
+msgid ""
+"MAY be used only for an array definition. Signifies whether the array is "
+"wrapped (for example, ``<books><book/><book/></books>``) or unwrapped "
+"(``<book/><book/>``). Default value is ``False``. The definition takes "
+"effect only when defined alongside ``type`` being ``array`` (outside the "
+"``items``)."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.base.BaseSchemaObject:1
+msgid "Bases: :py:class:`object`"
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.base.BaseSchemaObject:1
+msgid "Base class for schema spec objects"
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.base.BaseSchemaObject.to_schema:1
+msgid ""
+"Transform the spec dataclass object into a string keyed dictionary. This "
+"method traverses all nested values recursively."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.components.Components:1
+msgid "Holds a set of reusable objects for different aspects of the OAS."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.components.Components:3
+msgid ""
+"All objects defined within the components object will have no effect on the "
+"API unless they are explicitly referenced from properties outside the "
+"components object."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Components.callbacks:1
+msgid ""
+"An object to hold reusable `Callback Objects <https://spec.openapis.org/oas/"
+"v3.1.0#callbackObject>`_"
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Components.examples:1
+msgid ""
+"An object to hold reusable `Example Objects <https://spec.openapis.org/oas/"
+"v3.1.0#exampleObject>`_"
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Components.headers:1
+msgid ""
+"An object to hold reusable `Header  Objects <https://spec.openapis.org/oas/"
+"v3.1.0#headerObject>`_"
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Components.links:1
+msgid ""
+"An object to hold reusable `Link Objects <https://spec.openapis.org/oas/"
+"v3.1.0#linkObject>`_"
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Components.parameters:1
+msgid ""
+"An object to hold reusable `Parameter Objects <https://spec.openapis.org/oas/"
+"v3.1.0#parameterObject>`_"
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Components.path_items:1
+msgid ""
+"An object to hold reusable `Path Item Object <https://spec.openapis.org/oas/"
+"v3.1.0#pathItemObject>`_"
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Components.request_bodies:1
+msgid ""
+"An object to hold reusable `Request Body Objects <https://spec.openapis.org/"
+"oas/v3.1.0#requestBodyObject>`_"
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Components.responses:1
+msgid ""
+"An object to hold reusable `Response Objects <https://spec.openapis.org/oas/"
+"v3.1.0#responseObject>`_"
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Components.security_schemes:1
+msgid ""
+"An object to hold reusable `Security Scheme  Objects <https://spec.openapis."
+"org/oas/v3.1.0#securitySchemeObject>`_"
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Components.schemas:1
+msgid ""
+"An object to hold reusable `Schema Objects <https://spec.openapis.org/oas/"
+"v3.1.0#schemaObject>`_"
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.contact.Contact:1
+msgid "Contact information for the exposed API."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Contact.email:1
+msgid ""
+"The email address of the contact person/organization. MUST be in the form of "
+"an email address."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Contact.name:1
+msgid "The identifying name of the contact person/organization."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Contact.url:1
+msgid ""
+"The URL pointing to the contact information. MUST be in the form of a URL."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.discriminator.Discriminator:1
+msgid ""
+"When request bodies or response payloads may be one of a number of different "
+"schemas, a ``discriminator`` object can be used to aid in serialization, "
+"deserialization, and validation."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.discriminator.Discriminator:4
+msgid ""
+"The discriminator is a specific object in a schema which is used to inform "
+"the consumer of the specification of an alternative schema based on the "
+"value associated with it."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.discriminator.Discriminator:7
+msgid "When using the discriminator, _inline_ schemas will not be considered."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Discriminator.mapping:1
+msgid ""
+"An object to hold mappings between payload values and schema names or "
+"references."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Discriminator.property_name:1
+msgid ""
+"**REQUIRED**. The name of the property in the payload that will hold the "
+"discriminator value."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.encoding.Encoding:1
+msgid "A single encoding definition applied to a single schema property."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Encoding.allow_reserved:1
+msgid ""
+"Determines whether the parameter value SHOULD allow reserved characters, as "
+"defined by :rfc:`3986` (``:/?#[]@!$&'()*+,;=``) to be included without "
+"percent-encoding."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Encoding.allow_reserved:4
+msgid ""
+"This property SHALL be ignored if the request body media type s not "
+"``application/x-www-form-urlencoded`` or ``multipart/form-data``. If a value "
+"is explicitly defined, then the value of `contentType <https://spec.openapis."
+"org/oas/v3.1.0#encodingContentType>`_ (implicit or explicit) SHALL be "
+"ignored."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Encoding.content_type:1
+msgid ""
+"The Content-Type for encoding a specific property. Default value depends n "
+"the property type:"
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Encoding.content_type:3
+msgid "for ``object``: ``application/json``"
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Encoding.content_type:4
+msgid "for ``array``: the default is defined based on the inner type"
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Encoding.content_type:5
+msgid "for all other cases the default is ``application/octet-stream``."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Encoding.content_type:7
+msgid ""
+"The value can be a specific media type (e.g. ``application/json``), a "
+"wildcard media type (e.g. ``image/*``), or a comma-separated list of the two "
+"types."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Encoding.explode:1
+msgid ""
+"When this is true, property values of type ``array`` or ``object`` generate "
+"separate parameters for each value of the array, or key-value-pair of the "
+"map."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Encoding.explode:4
+msgid ""
+"For other types of properties this property has no effect. When `style "
+"<https://spec.openapis.org/oas/v3.1.0#encodingStyle>`_ is ``form``, the "
+"default value is ``True``. For all other styles, the default value is "
+"``False``. This property SHALL be ignored if the request body media type is "
+"not ``application/x-www-form-urlencoded`` or ``multipart/form-data``. If a "
+"value is explicitly defined, then the value of `contentType <https://spec."
+"openapis.org/oas/v3.1.0#encodingContentType>`_ (implicit or explicit) SHALL "
+"be ignored."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Encoding.headers:1
+msgid ""
+"A map allowing additional information to be provided as headers, for example "
+"``Content-Disposition``."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Encoding.headers:3
+msgid ""
+"``Content-Type`` is described separately and SHALL be ignored in this "
+"section. This property SHALL be ignored if the request body media type is "
+"not a ``multipart``."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Encoding.style:1
+msgid ""
+"Describes how a specific property value will be serialized depending on its "
+"type."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Encoding.style:3
+msgid ""
+"See `Parameter Object <https://spec.openapis.org/oas/"
+"v3.1.0#parameterObject>`_ for details on the `style <https://spec.openapis."
+"org/oas/v3.1.0#parameterStyle>`__ property. The behavior follows the same "
+"values as ``query`` parameters, including default values. This property "
+"SHALL be ignored if the request body media type is not ``application/x-www-"
+"form-urlencoded`` or ``multipart/form-data``. If a value is explicitly "
+"defined, then the value of `contentType <https://spec.openapis.org/oas/"
+"v3.1.0#encodingContentType>`_ (implicit or explicit) SHALL be ignored."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.example.Example:1
+msgid ""
+"Example(id: 'str | None' = None, summary: 'str | None' = None, description: "
+"'str | None' = None, value: 'Any | None' = None, external_value: 'str | "
+"None' = None)"
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Example.description:1
+msgid "Long description for the example."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Example.description:3
+#: litestar.openapi.spec.ExternalDocumentation.description:3
+#: litestar.openapi.spec.Info.description:3
+#: litestar.openapi.spec.Link.description:3
+#: litestar.openapi.spec.OpenAPIHeader.description:4
+#: litestar.openapi.spec.Operation.description:3
+#: litestar.openapi.spec.Parameter.description:4
+#: litestar.openapi.spec.PathItem.description:3
+#: litestar.openapi.spec.RequestBody.description:3
+#: litestar.openapi.spec.Schema.description:3
+#: litestar.openapi.spec.SecurityScheme.description:3
+#: litestar.openapi.spec.Server.description:3
+#: litestar.openapi.spec.ServerVariable.description:3
+#: litestar.openapi.spec.Tag.description:3
+msgid ""
+"`CommonMark syntax <https://spec.commonmark.org/>`_ MAY be used for rich "
+"text representation."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Example.external_value:1
+msgid ""
+"A URL that points to the literal example. This provides the capability to "
+"reference examples that cannot easily be included in JSON or YAML documents."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Example.external_value:4
+msgid ""
+"The ``value`` field and ``externalValue`` field are mutually exclusive. See "
+"the rules for resolving `Relative References <https://spec.openapis.org/oas/"
+"v3.1.0#relativeReferencesURI>`_."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Example.id:1
+msgid ""
+"Optional ID for the example. When provided, this will be used as the key in "
+"the OpenAPI specification."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Example.summary:1
+msgid "Short description for the example."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Example.value:1
+msgid "Embedded literal example."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Example.value:3
+msgid ""
+"The ``value`` field and ``externalValue`` field are mutually exclusive. To "
+"represent examples of media types that cannot naturally represented in JSON "
+"or YAML, use a string value to contain the example, escaping where necessary."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.external_documentation.ExternalDocumentation:1
+msgid "Allows referencing an external resource for extended documentation."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.spec.ExternalDocumentation.description:1
+msgid "A short description of the target documentation."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.ExternalDocumentation.url:1
+msgid ""
+"**REQUIRED**. The URL for the target documentation. Value MUST be in the "
+"form of a URL."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.info.Info:1
+msgid "The object provides metadata about the API."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.info.Info:3
+msgid ""
+"The metadata MAY be used by the clients if needed, and MAY be presented in "
+"editing or documentation generation tools for convenience."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Info.contact:1
+msgid "The contact information for the exposed API."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Info.description:1
+msgid "A description of the API."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Info.license:1
+msgid "The license information for the exposed API."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Info.summary:1
+msgid "A short summary of the API."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Info.terms_of_service:1
+msgid ""
+"A URL to the Terms of Service for the API. MUST be in the form of a URL."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Info.title:1
+msgid "**REQUIRED**. The title of the API."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Info.version:1
+msgid ""
+"**REQUIRED**. The version of the OpenAPI document which is distinct from the "
+"`OpenAPI Specification version <https://spec.openapis.org/oas/"
+"v3.1.0#oasVersion>`_ or the API implementation version"
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.license.License:1
+msgid "License information for the exposed API."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.License.identifier:1
+msgid ""
+"An `SPDX <https://spdx.github.io/spdx-spec/v2.3/SPDX-license-list/#a1-"
+"licenses-with-short-identifiers>`_ license expression for the API."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.License.identifier:4
+msgid "The ``identifier`` field is mutually exclusive of the ``url`` field."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.License.url:1
+msgid "A URL to the license used for the API."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.License.url:3
+msgid ""
+"This MUST be in the form of a URL. The ``url`` field is mutually exclusive "
+"of the ``identifier`` field."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.License.name:1
+msgid "**REQUIRED**. The license name used for the API."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.link.Link:1
+msgid ""
+"The ``Link object`` represents a possible design-time link for a response. "
+"The presence of a link does not guarantee the caller's ability to "
+"successfully invoke it, rather it provides a known relationship and "
+"traversal mechanism between responses and other operations."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.link.Link:5
+msgid ""
+"Unlike _dynamic_ links (i.e. links provided **in** the response payload), "
+"the OAS linking mechanism does not require link information in the runtime "
+"response."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.link.Link:8
+msgid ""
+"For computing links, and providing instructions to execute them, a `runtime "
+"expression <https://spec.openapis.org/oas/v3.1.0#runtimeExpression>`_ is "
+"used for accessing values in an operation and using them as parameters while "
+"invoking the linked operation."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Link.description:1
+msgid "A description of the link."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Link.operation_id:1
+msgid ""
+"The name of an _existing_, resolvable OAS operation, as defined with a "
+"unique ``operationId``."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Link.operation_id:3
+msgid "This field is mutually exclusive of the ``operationRef`` field."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Link.operation_ref:1
+msgid "A relative or absolute URI reference to an OAS operation."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Link.operation_ref:3
+msgid ""
+"This field is mutually exclusive of the ``operationId`` field, and MUST "
+"point to an `Operation Object <https://spec.openapis.org/oas/"
+"v3.1.0#operationObject>`_. Relative ``operationRef`` values MAY be used to "
+"locate an existing `Operation Object <https://spec.openapis.org/oas/"
+"v3.1.0#operationObject>`_ in the OpenAPI definition. See the rules for "
+"resolving `Relative References <https://spec.openapis.org/oas/"
+"v3.1.0#relativeReferencesURI>`_"
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Link.parameters:1
+msgid ""
+"A map representing parameters to pass to an operation as specified with "
+"``operationId`` or identified via ``operationRef``. The key is the parameter "
+"name to be used, whereas the value can be a constant or an expression to be "
+"evaluated and passed to the linked operation."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Link.parameters:5
+msgid ""
+"The parameter name can be qualified using the `parameter location <https://"
+"spec.openapis.org/oas/v3.1.0#parameterIn>`_ ``[{in}.]{name}`` for operations "
+"that use the same parameter name in different locations (e.g. path.id)."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Link.request_body:1
+msgid ""
+"A literal value or `{expression} <https://spec.openapis.org/oas/"
+"v3.1.0#runtimeExpression>`_ to use as a request body when calling the target "
+"operation."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Link.server:1
+msgid "A server object to be used by the target operation."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.oauth_flow.OAuthFlow:1
+msgid "Configuration details for a supported OAuth Flow."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OAuthFlow.authorization_url:1
+msgid ""
+"**REQUIRED** for ``oauth2`` (\"implicit\", \"authorizationCode\"). The "
+"authorization URL to be used for this flow. This MUST be in the form of a "
+"URL. The OAuth2 standard requires the use of TLS."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OAuthFlow.refresh_url:1
+msgid "The URL to be used for obtaining refresh tokens."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OAuthFlow.refresh_url:3
+msgid ""
+"This MUST be in the form of a URL. The OAuth2 standard requires the use of "
+"TLS."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OAuthFlow.scopes:1
+msgid ""
+"**REQUIRED** for ``oauth2``. The available scopes for the OAuth2 security "
+"scheme. A map between the scope name and a short description for it the map "
+"MAY be empty."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OAuthFlow.token_url:1
+msgid ""
+"**REQUIRED** for ``oauth2`` (\"password\", \"clientCredentials\", "
+"\"authorizationCode\"). The token URL to be used for this flow. This MUST be "
+"in the form of a URL. The OAuth2 standard requires the use of TLS."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.oauth_flows.OAuthFlows:1
+msgid "Allows configuration of the supported OAuth Flows."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.spec.OAuthFlows.authorization_code:1
+msgid ""
+"Configuration for the OAuth Authorization Code flow. Previously called "
+"``accessCode`` in OpenAPI 2.0."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.spec.OAuthFlows.client_credentials:1
+msgid ""
+"Configuration for the OAuth Client Credentials flow. Previously called "
+"``application`` in OpenAPI 2.0."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OAuthFlows.implicit:1
+msgid "Configuration for the OAuth Implicit flow."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OAuthFlows.password:1
+msgid "Configuration for the OAuth Resource Owner Password flow."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.open_api.OpenAPI:1
+msgid "Root OpenAPI document."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPI.external_docs:1
+msgid "Additional external documentation."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPI.json_schema_dialect:1
+msgid ""
+"The default value for the ``$schema`` keyword within `Schema Objects "
+"<https://spec.openapis.org/oas/v3.1.0#schemaObject>`_ contained within this "
+"OAS document."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPI.json_schema_dialect:4
+msgid "This MUST be in the form of a URI."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPI.openapi:1
+msgid ""
+"**REQUIRED**. This string MUST be the `version number <https://spec.openapis."
+"org/oas/v3.1.0#versions>`_ of the OpenAPI Specification that the OpenAPI "
+"document uses. The ``openapi`` field SHOULD be used by tooling to interpret "
+"the OpenAPI document. This is *not* related to the API `info.version "
+"<https://spec.openapis.org/oas/v3.1.0#infoVersion>`_ string."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPI.paths:1
+msgid "The available paths and operations for the API."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPI.security:1
+msgid "A declaration of which security mechanisms can be used across the API."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPI.security:3
+msgid ""
+"The list of values includes alternative security requirement objects that "
+"can be used. Only one of the security requirement objects need to be "
+"satisfied to authorize a request. Individual operations can override this "
+"definition. To make security optional, an empty security requirement ( ``{}"
+"`` ) can be included in the array."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPI.tags:1
+msgid "A list of tags used by the document with additional metadata."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPI.tags:3
+msgid ""
+"The order of the tags can be used to reflect on their order by the parsing "
+"tools. Not all tags that are used by the `Operation Object <https://spec."
+"openapis.org/oas/v3.1.0#operationObject>`_ must be declared. The tags that "
+"are not declared MAY be organized randomly or based on the tools' logic. "
+"Each tag name in the list MUST be unique."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPI.webhooks:1
+msgid ""
+"The incoming webhooks that MAY be received as part of this API and that the "
+"API consumer MAY choose to implement."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPI.webhooks:3
+msgid ""
+"Closely related to the ``callbacks`` feature, this section describes "
+"requests initiated other than by an API call, for example by an out of band "
+"registration. The key name is a unique string to refer to each webhook, "
+"while the (optionally referenced) Path Item Object describes a request that "
+"may be initiated by the API provider and the expected responses. An `example "
+"<https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.1/"
+"webhook-example.yaml>`_ is available."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPI.info:1
+msgid ""
+"**REQUIRED**. Provides metadata about the API. The metadata MAY be used by "
+"tooling as required."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPI.servers:1
+msgid ""
+"An array of Server Objects, which provide connectivity information to a "
+"target server."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPI.servers:3
+msgid ""
+"If the ``servers`` property is not provided, or is an empty array, the "
+"default value would be a `Server Object <https://spec.openapis.org/oas/"
+"v3.1.0#serverObject>`_ with a `url <https://spec.openapis.org/oas/"
+"v3.1.0#serverUrl>`_ value of ``/``."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPI.components:1
+msgid "An element to hold various schemas for the document."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.enums.OpenAPIFormat:1
+#: litestar.openapi.spec.enums.OpenAPIType:1
+msgid "Bases: :py:class:`str`, :py:class:`~enum.Enum`"
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.enums.OpenAPIFormat:1
+msgid ""
+"Formats extracted from: https://datatracker.ietf.org/doc/html/draft-bhutton-"
+"json-schema-validation-00#page-13"
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.header.OpenAPIHeader:1
+msgid ""
+"The Header Object follows the structure of the [Parameter Object](https://"
+"spec.openapis.org/oas/v3.1.0#parameterObject) with the following changes:"
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.header.OpenAPIHeader:5
+msgid ""
+"``name`` MUST NOT be specified, it is given in the corresponding ``headers`` "
+"map."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.header.OpenAPIHeader:6
+msgid "``in`` MUST NOT be specified, it is implicitly in ``header``."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.header.OpenAPIHeader:7
+msgid ""
+"All traits that are affected by the location MUST be applicable to a "
+"location of ``header`` (for example, `style <https://spec.openapis.org/oas/"
+"v3.1.0#parameterStyle>`__)."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.spec.OpenAPIHeader.allow_empty_value:1
+#: litestar.openapi.spec.Parameter.allow_empty_value:1
+msgid ""
+"Sets the ability to pass empty-valued parameters. This is valid only for "
+"``query`` parameters and allows sending a parameter with an empty value. "
+"Default value is ``False``. If `style <https://spec.openapis.org/oas/"
+"v3.1.0#parameterStyle>`__ is used, and if behavior is ``n/a`` (cannot be "
+"serialized), the value of ``allowEmptyValue`` SHALL be ignored. Use of this "
+"property is NOT RECOMMENDED, as it is likely to be removed in a later "
+"revision."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.spec.OpenAPIHeader.allow_empty_value:7
+msgid ""
+"The rules for serialization of the parameter are specified in one of two "
+"ways.For simpler scenarios, a `schema <https://spec.openapis.org/oas/"
+"v3.1.0#parameterSchema>`_ and `style <https://spec.openapis.org/oas/"
+"v3.1.0#parameterStyle>`__ can describe the structure and syntax of the "
+"parameter."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.spec.OpenAPIHeader.allow_reserved:1
+msgid ""
+"Determines whether the parameter value SHOULD allow reserved characters, as "
+"defined by. :rfc:`3986` (``:/?#[]@!$&'()*+,;=``) to be included without "
+"percent-encoding."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.spec.OpenAPIHeader.allow_reserved:4
+#: litestar.openapi.spec.Parameter.allow_reserved:5
+msgid ""
+"This property only applies to parameters with an ``in`` value of ``query``. "
+"The default value is ``False``."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPIHeader.content:1
+#: litestar.openapi.spec.Parameter.content:1
+msgid "A map containing the representations for the parameter."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPIHeader.content:3
+#: litestar.openapi.spec.Parameter.content:3
+msgid ""
+"The key is the media type and the value describes it. The map MUST only "
+"contain one entry."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPIHeader.deprecated:1
+msgid ""
+"Specifies that a parameter is deprecated and SHOULD be transitioned out of "
+"usage. Default value is ``False``."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPIHeader.description:1
+#: litestar.openapi.spec.Parameter.description:1
+msgid ""
+"A brief description of the parameter. This could contain examples of use."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPIHeader.example:1
+#: litestar.openapi.spec.Parameter.example:1
+msgid "Example of the parameter's potential value."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPIHeader.example:3
+#: litestar.openapi.spec.Parameter.example:3
+msgid ""
+"The example SHOULD match the specified schema and encoding properties if "
+"present. The ``example`` field is mutually exclusive of the ``examples`` "
+"field. Furthermore, if referencing a ``schema`` that contains an example, "
+"the ``example`` value SHALL _override_ the example provided by the schema. "
+"To represent examples of media types that cannot naturally be represented in "
+"JSON or YAML, a string value can contain the example with escaping where "
+"necessary."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPIHeader.examples:1
+#: litestar.openapi.spec.Parameter.examples:1
+msgid ""
+"Examples of the parameter's potential value. Each example SHOULD contain a "
+"value in the correct format as specified in the parameter encoding. The "
+"``examples`` field is mutually exclusive of the ``example`` field. "
+"Furthermore, if referencing a ``schema`` that contains an example, the "
+"``examples`` value SHALL _override_ the example provided by the schema."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPIHeader.examples:6
+#: litestar.openapi.spec.Parameter.examples:6
+msgid ""
+"For more complex scenarios, the `content <https://spec.openapis.org/oas/"
+"v3.1.0#parameterContent>`_ property can define the media type and schema of "
+"the parameter. A parameter MUST contain either a ``schema`` property, or a "
+"``content`` property, but not both. When ``example`` or ``examples`` are "
+"provided in conjunction with the ``schema`` object, the example MUST follow "
+"the prescribed serialization strategy for the parameter."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPIHeader.explode:1
+#: litestar.openapi.spec.Parameter.explode:1
+msgid ""
+"When this is true, parameter values of type ``array`` or ``object`` generate "
+"separate parameters for each value of the array or key-value pair of the map."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPIHeader.explode:4
+#: litestar.openapi.spec.Parameter.explode:4
+msgid ""
+"For other types of parameters this property has no effect. When `style "
+"<https://spec.openapis.org/oas/v3.1.0#parameterStyle>`__ is ``form``, the "
+"default value is ``True``. For all other styles, the default value is "
+"``False``."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPIHeader.name:1
+msgid ""
+"MUST NOT be specified, it is given in the corresponding ``headers`` map."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPIHeader.param_in:1
+msgid "MUST NOT be specified, it is implicitly in ``header``."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPIHeader.required:1
+#: litestar.openapi.spec.Parameter.required:1
+msgid "Determines whether this parameter is mandatory."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPIHeader.required:3
+#: litestar.openapi.spec.Parameter.required:3
+msgid ""
+"If the `parameter location <https://spec.openapis.org/oas/"
+"v3.1.0#parameterIn>`_ is ``\"path\"``, this property is **REQUIRED** and its "
+"value MUST be ``True``. Otherwise, the property MAY be included and its "
+"default value is ``False``."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPIHeader.schema:1
+#: litestar.openapi.spec.Parameter.schema:1
+msgid "The schema defining the type used for the parameter."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPIHeader.style:1
+msgid ""
+"Describes how the parameter value will be serialized depending on the type "
+"of the parameter value. Default values (based on value of ``in``):"
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPIHeader.style:4
+msgid "for ``query`` - ``form``;"
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPIHeader.style:5
+msgid "for ``path`` - ``simple``;"
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPIHeader.style:6
+msgid "for ``header`` - ``simple``;"
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPIHeader.style:7
+msgid "for ``cookie`` - ``form``."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.media_type.OpenAPIMediaType:1
+msgid ""
+"Each Media Type Object provides schema and examples for the media type "
+"identified by its key."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPIMediaType.encoding:1
+msgid "A map between a property name and its encoding information."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPIMediaType.encoding:3
+msgid ""
+"The key, being the property name, MUST exist in the schema as a property. "
+"The encoding object SHALL only apply to ``requestBody`` objects when the "
+"media type is ``multipart`` or ``application/x-www-form-urlencoded``."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPIMediaType.example:1
+msgid "Example of the media type."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPIMediaType.example:3
+msgid ""
+"The example object SHOULD be in the correct format as specified by the media "
+"type."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPIMediaType.example:5
+msgid "The ``example`` field is mutually exclusive of the ``examples`` field."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPIMediaType.example:7
+msgid ""
+"Furthermore, if referencing a ``schema`` which contains an example, the "
+"``example`` value SHALL _override_ the example provided by the schema."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPIMediaType.examples:1
+msgid "Examples of the media type."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPIMediaType.examples:3
+msgid ""
+"Each example object SHOULD match the media type and specified schema if "
+"present."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPIMediaType.examples:5
+msgid "The ``examples`` field is mutually exclusive of the ``example`` field."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPIMediaType.examples:7
+msgid ""
+"Furthermore, if referencing a ``schema`` which contains an example, the "
+"``examples`` value SHALL _override_ the example provided by the schema."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPIMediaType.schema:1
+msgid "The schema defining the content of the request, response, or parameter."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.response.OpenAPIResponse:1
+msgid ""
+"Describes a single response from an API Operation, including design-time, "
+"static ``links`` to operations based on the response."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPIResponse.content:1
+msgid ""
+"A map containing descriptions of potential response payloads. The key is a "
+"media type or `media type range <https://tools.ietf.org/html/"
+"rfc7231#appendix-D>`_ and the value describes it."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPIResponse.content:4
+msgid ""
+"For responses that match multiple keys, only the most specific key is "
+"applicable. e.g. ``text/plain`` overrides ``text/*``"
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPIResponse.headers:1
+msgid ""
+"Maps a header name to its definition. `RFC7230 <https://tools.ietf.org/html/"
+"rfc7230#page-22>`_ states header names are case insensitive. If a response "
+"header is defined with the name ``Content-Type``, it SHALL be ignored."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPIResponse.links:1
+msgid "A map of operations links that can be followed from the response."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPIResponse.links:3
+msgid ""
+"The key of the map is a short name for the link, following the naming "
+"constraints of the names for `Component Objects <https://spec.openapis.org/"
+"oas/v3.1.0#componentsObject>`_."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.OpenAPIResponse.description:1
+msgid ""
+"**REQUIRED**. A short description of the response. `CommonMark syntax "
+"<https://spec.commonmark.org/>`_ MAY be used for rich text representation."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.enums.OpenAPIType:1
+msgid "An OopenAPI type."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.operation.Operation:1
+msgid "Describes a single API operation on a path."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Operation.callbacks:1
+msgid ""
+"A map of possible out-of band callbacks related to the parent operation."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Operation.callbacks:3
+msgid ""
+"The key is a unique identifier for the Callback Object. Each value in the "
+"map is a `Callback Object <https://spec.openapis.org/oas/"
+"v3.1.0#callbackObject>`_ that describes a request that may be initiated by "
+"the API provider and the expected responses."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Operation.deprecated:1
+msgid "Declares this operation to be deprecated."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Operation.deprecated:3
+msgid ""
+"Consumers SHOULD refrain from usage of the declared operation. Default value "
+"is ``False``."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Operation.description:1
+msgid "A verbose explanation of the operation behavior."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Operation.external_docs:1
+msgid "Additional external documentation for this operation."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Operation.operation_id:1
+msgid "Unique string used to identify the operation."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Operation.operation_id:3
+msgid ""
+"The id MUST be unique among all operations described in the API. The "
+"operationId value is **case-sensitive**. Tools and libraries MAY use the "
+"operationId to uniquely identify an operation, therefore, it is RECOMMENDED "
+"to follow common programming naming conventions."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Operation.parameters:1
+msgid "A list of parameters that are applicable for this operation."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Operation.parameters:3
+msgid ""
+"If a parameter is already defined at the `Path Item <https://spec.openapis."
+"org/oas/v3.1.0#pathItemParameters>`_, the new definition will override it "
+"but can never remove it. The list MUST NOT include duplicated parameters. A "
+"unique parameter is defined by a combination of a `name <https://spec."
+"openapis.org/oas/v3.1.0#parameterName>`_ and `location <https://spec."
+"openapis.org/oas/v3.1.0#parameterIn>`_. The list can use the `Reference "
+"Object <https://spec.openapis.org/oas/v3.1.0#referenceObject>`_ to link to "
+"parameters that are defined at the `OpenAPI Object's components/parameters "
+"<https://spec.openapis.org/oas/v3.1.0#componentsParameters>`_."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Operation.request_body:1
+msgid "The request body applicable for this operation."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Operation.request_body:3
+msgid ""
+"The ``requestBody`` is fully supported in HTTP methods where the HTTP 1.1 "
+"specification :rfc:`7231` has explicitly defined semantics for request "
+"bodies. In other cases where the HTTP spec is vague (such as `GET <https://"
+"tools.ietf.org/html/rfc7231#section-4.3.1>`_, `HEAD <https://tools.ietf.org/"
+"html/rfc7231#section-4.3.2>`_ and `DELETE <https://tools.ietf.org/html/"
+"rfc7231#section-4.3.5>`_, ``requestBody`` is permitted but does not have "
+"well-defined semantics and SHOULD be avoided if possible."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Operation.responses:1
+msgid ""
+"The list of possible responses as they are returned from executing this "
+"operation."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Operation.security:1
+msgid ""
+"A declaration of which security mechanisms can be used for this operation."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Operation.security:3
+msgid ""
+"The list of values includes alternative security requirement objects that "
+"can be used. Only one of the security requirement objects need to be "
+"satisfied to authorize a request. To make security optional, an empty "
+"security requirement (``{}``) can be included in the array. This definition "
+"overrides any declared top-level `security <https://spec.openapis.org/oas/"
+"v3.1.0#oasSecurity>`_. To remove a top-level security declaration, an empty "
+"array can be used."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Operation.servers:1
+msgid "An alternative ``server`` array to service this operation."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Operation.servers:3
+msgid ""
+"If an alternative ``server`` object is specified at the Path Item Object or "
+"Root level, it will be overridden by this value."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Operation.summary:1
+msgid "A short summary of what the operation does."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Operation.tags:1
+msgid "A list of tags for API documentation control."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Operation.tags:3
+msgid ""
+"Tags can be used for logical grouping of operations by resources or any "
+"other qualifier."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.parameter.Parameter:1
+msgid "Describes a single operation parameter."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.parameter.Parameter:3
+msgid ""
+"A unique parameter is defined by a combination of a `name <https://spec."
+"openapis.org/oas/v3.1.0#parameterName>`_ and `location <https://spec."
+"openapis.org/oas/v3.1.0#parameterIn>`_."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Parameter.allow_empty_value:7
+msgid ""
+"The rules for serialization of the parameter are specified in one of two "
+"ways. For simpler scenarios, a `schema <https://spec.openapis.org/oas/"
+"v3.1.0#parameterSchema>`_ and `style <https://spec.openapis.org/oas/"
+"v3.1.0#parameterStyle>`__ can describe the structure and syntax of the "
+"parameter."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Parameter.allow_reserved:1
+msgid ""
+"Determines whether the parameter value SHOULD allow reserved characters, as "
+"defined by."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Parameter.allow_reserved:3
+msgid ""
+":rfc:`3986` ``:/?#[]@!$&'()*+,;=`` to be included without percent-encoding."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Parameter.deprecated:1
+msgid ""
+"Specifies that a parameter is deprecated and SHOULD be transitioned out of "
+"usage."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Parameter.deprecated:3
+msgid "Default value is ``False``."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Parameter.style:1
+msgid ""
+"Describes how the parameter value will be serialized depending on the ype of "
+"the parameter value. Default values (based on value of ``in``):"
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Parameter.style:4
+msgid "for ``query`` - ``form``"
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Parameter.style:5
+msgid "for ``path`` - ``simple``"
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Parameter.style:6
+msgid "for ``header`` - ``simple``"
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Parameter.style:7
+msgid "for ``cookie`` - ``form``"
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Parameter.name:1
+msgid ""
+"**REQUIRED**. The name of the parameter. Parameter names are *case "
+"sensitive*."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Parameter.name:4
+msgid ""
+"If `in <https://spec.openapis.org/oas/v3.1.0#parameterIn>`_ is ``\"path\"``, "
+"the ``name`` field MUST correspond to a template expression occurring within "
+"the `path <https://spec.openapis.org/oas/v3.1.0#pathsPath>`_ field in the "
+"`Paths Object <https://spec.openapis.org/oas/v3.1.0#pathsObject>`_. See "
+"`Path Templating <https://spec.openapis.org/oas/v3.1.0#pathTemplating>`_ for "
+"further information."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Parameter.name:8
+msgid ""
+"If `in <https://spec.openapis.org/oas/v3.1.0#parameterIn>`_ is "
+"``\"header\"`` and the ``name`` field is ``\"Accept\"``, ``\"Content-"
+"Type\"`` or ``\"Authorization\"``, the parameter definition SHALL be ignored."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Parameter.name:10
+msgid ""
+"For all other cases, the ``name`` corresponds to the parameter name used by "
+"the `in <https://spec.openapis.org/oas/v3.1.0#parameterIn>`_ property."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Parameter.param_in:1
+msgid ""
+"**REQUIRED**. The location of the parameter. Possible values are "
+"``\"query\"``, ``\"header\"``, ``\"path\"`` or ``\"cookie\"``."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.path_item.PathItem:1
+msgid "Describes the operations available on a single path."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.path_item.PathItem:3
+msgid ""
+"A Path Item MAY be empty, due to `ACL constraints <https://spec.openapis.org/"
+"oas/v3.1.0#securityFiltering>`_. The path itself is still exposed to the "
+"documentation viewer, but they will not know which operations and parameters "
+"are available."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.PathItem.delete:1
+msgid "A definition of a DELETE operation on this path."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.PathItem.description:1
+msgid ""
+"An optional, string description, intended to apply to all operations in this "
+"path."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.PathItem.get:1
+msgid "A definition of a GET operation on this path."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.PathItem.head:1
+msgid "A definition of a HEAD operation on this path."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.PathItem.options:1
+msgid "A definition of a OPTIONS operation on this path."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.PathItem.parameters:1
+msgid ""
+"A list of parameters that are applicable for all the operations described "
+"under this path. These parameters can be overridden at the operation level, "
+"but cannot be removed there. The list MUST NOT include duplicated "
+"parameters. A unique parameter is defined by a combination of a `name "
+"<https://spec.openapis.org/oas/v3.1.0#parameterName>`_ and `location "
+"<https://spec.openapis.org/oas/v3.1.0#parameterIn>`_. The list can use the "
+"`Reference Object <https://spec.openapis.org/oas/v3.1.0#referenceObject>`_ "
+"to link to parameters that are defined at the `OpenAPI Object's components/"
+"parameters <https://spec.openapis.org/oas/v3.1.0#componentsParameters>`_."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.PathItem.patch:1
+msgid "A definition of a PATCH operation on this path."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.PathItem.post:1
+msgid "A definition of a POST operation on this path."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.PathItem.put:1
+msgid "A definition of a PUT operation on this path."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.PathItem.ref:1
+msgid ""
+"Allows for an external definition of this path item. The referenced "
+"structure MUST be in the format of a `Path Item Object <https://spec."
+"openapis.org/oas/v3.1.0#pathItemObject>`."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.PathItem.ref:4
+msgid ""
+"In case a Path Item Object field appears both in the defined object and the "
+"referenced object, the behavior is undefined. See the rules for resolving "
+"`Relative References <https://spec.openapis.org/oas/"
+"v3.1.0#relativeReferencesURI>`_."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.PathItem.servers:1
+msgid "An alternative ``server`` array to service all operations in this path."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.PathItem.summary:1
+msgid ""
+"An optional, string summary, intended to apply to all operations in this "
+"path."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.PathItem.trace:1
+msgid "A definition of a TRACE operation on this path."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.reference.Reference:1
+msgid ""
+"A simple object to allow referencing other components in the OpenAPI "
+"document, internally and externally."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.reference.Reference:3
+msgid ""
+"The ``$ref`` string value contains a URI `RFC3986 <https://tools.ietf.org/"
+"html/rfc3986>`_ , which identifies the location of the value being "
+"referenced."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.reference.Reference:6
+msgid ""
+"See the rules for resolving `Relative References <https://spec.openapis.org/"
+"oas/v3.1.0#relativeReferencesURI>`_."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Reference.description:1
+msgid ""
+"A description which by default SHOULD override that of the referenced "
+"component."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Reference.description:3
+msgid ""
+"`CommonMark syntax <https://spec.commonmark.org/>`_ MAY be used for rich "
+"text representation. If the referenced object-type does not allow a "
+"``description`` field, then this field has no effect."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Reference.summary:1
+msgid ""
+"A short summary which by default SHOULD override that of the referenced "
+"component."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Reference.summary:3
+msgid ""
+"If the referenced object-type does not allow a ``summary`` field, then this "
+"field has no effect."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Reference.ref:1
+msgid ""
+"**REQUIRED**. The reference identifier. This MUST be in the form of a URI."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.request_body.RequestBody:1
+msgid "Describes a single request body."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.RequestBody.description:1
+msgid ""
+"A brief description of the request body. This could contain examples of use."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.RequestBody.required:1
+msgid "Determines if the request body is required in the request."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.RequestBody.required:3
+msgid "Defaults to ``False``."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.RequestBody.content:1
+msgid ""
+"**REQUIRED**. The content of the request body. The key is a media type or "
+"`media type range <https://tools.ietf.org/html/rfc7231#appendix-D>`_ and the "
+"value describes it."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.RequestBody.content:5
+msgid ""
+"For requests that match multiple keys, only the most specific key is "
+"applicable. e.g. ``text/plain`` overrides ``text/*``"
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.schema.Schema:1
+msgid ""
+"The Schema Object allows the definition of input and output data types. "
+"These types can be objects, but also primitives and arrays. This object is a "
+"superset of the `JSON Schema Specification Draft 2020-12 <https://tools.ietf."
+"org/html/draft-bhutton-json-schema-00>`_."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.schema.Schema:5
+msgid ""
+"For more information about the properties, see `JSON Schema Core <https://"
+"tools.ietf.org/html/draft-wright-json-schema-00>`_ and `JSON Schema "
+"Validation <https://tools.ietf.org/html/draft-wright-json-schema-"
+"validation-00>`_."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.schema.Schema:9
+msgid ""
+"Unless stated otherwise, the property definitions follow those of JSON "
+"Schema and do not add any additional semantics. Where JSON Schema indicates "
+"that behavior is defined by the application (e.g. for annotations), OAS also "
+"defers the definition of semantics to the application consuming the OpenAPI "
+"document."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.schema.Schema:13
+msgid ""
+"The following properties are taken directly from the `JSON Schema Core "
+"<https://tools.ietf.org/html/draft-wright-json-schema-00>`_ and follow the "
+"same specifications."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.spec.Schema.additional_properties:1
+msgid "The value of \"additionalProperties\" MUST be a valid JSON Schema."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.spec.Schema.additional_properties:3
+msgid ""
+"The behavior of this keyword depends on the presence and annotation results "
+"of \"properties\" and \"patternProperties\" within the same schema object.  "
+"Validation with \"additionalProperties\" applies only to the child values of "
+"instance names that do not appear in the annotation results of either "
+"\"properties\" or \"patternProperties\"."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.spec.Schema.additional_properties:7
+msgid ""
+"For all such properties, validation succeeds if the child instance validates "
+"against the \"additionalProperties\" schema."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.spec.Schema.additional_properties:10
+#: litestar.openapi.spec.Schema.unevaluated_properties:21
+msgid ""
+"The annotation result of this keyword is the set of instance property names "
+"validated by this keyword's subschema."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.spec.Schema.additional_properties:12
+#: litestar.openapi.spec.Schema.items:12
+#: litestar.openapi.spec.Schema.unevaluated_items:22
+#: litestar.openapi.spec.Schema.unevaluated_properties:23
+msgid ""
+"Omitting this keyword has the same assertion behavior as an empty schema."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.spec.Schema.additional_properties:14
+msgid ""
+"Implementations MAY choose to implement or optimize this keyword in another "
+"way that produces the same effect, such as by directly checking the names in "
+"\"properties\" and the patterns in \"patternProperties\" against the "
+"instance property set. Implementations that do not support annotation "
+"collection MUST do so."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.all_of:1
+#: litestar.openapi.spec.Schema.one_of:1
+msgid ""
+"This keyword's value MUST be a non-empty array.  Each item of the array MUST "
+"be a valid JSON Schema."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.all_of:3
+msgid ""
+"An instance validates successfully against this keyword if it validates "
+"successfully against all schemas defined by this keyword's value."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.any_of:1
+msgid ""
+"This keyword's value MUST be a non-empty array. Each item of the array MUST "
+"be a valid JSON Schema."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.any_of:3
+msgid ""
+"An instance validates successfully against this keyword if it validates "
+"successfully against at least one schema defined by this keyword's value.  "
+"Note that when annotations are being collected, all subschemas MUST be "
+"examined so that annotations are collected from each subschema that "
+"validates successfully."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.const:1
+msgid "The value of this keyword MAY be of any type, including null."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.const:3
+msgid ""
+"Use of this keyword is functionally equivalent to an \"enum\" (Section "
+"6.1.2) with a single value."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.const:5
+msgid ""
+"An instance validates successfully against this keyword if its value is "
+"equal to the value of the keyword."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.contains:1
+msgid "The value of this keyword MUST be a valid JSON Schema."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.contains:3
+msgid ""
+"An array instance is valid against \"contains\" if at least one of its "
+"elements is valid against the given schema. The subschema MUST be applied to "
+"every array element even after the first match has been found, in order to "
+"collect annotations for use by other keywords. This is to ensure that all "
+"possible annotations are collected."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.contains:7
+msgid ""
+"Logically, the validation result of applying the value subschema to each "
+"item in the array MUST be ORed with \"false\", resulting in an overall "
+"validation result."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.contains:10
+msgid ""
+"This keyword produces an annotation value which is an array of the indexes "
+"to which this keyword validates successfully when applying its subschema, in "
+"ascending order.  The value MAY be a boolean \"true\" if the subschema "
+"validates successfully when applied to every index of the instance.  The "
+"annotation MUST be present if the instance array to which this keyword's "
+"schema applies is empty."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.content_encoding:1
+msgid ""
+"If the instance value is a string, this property defines that the string "
+"SHOULD be interpreted as binary data and decoded using the encoding named by "
+"this property."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.content_encoding:4
+msgid ""
+"Possible values indicating base 16, 32, and 64 encodings with several "
+"variations are listed in :rfc:`4648`. Additionally, sections 6.7 and 6.8 of :"
+"rfc:`2045` provide encodings used in MIME.  As \"base64\" is defined in both "
+"RFCs, the definition from :rfc:`4648` SHOULD be assumed unless the string is "
+"specifically intended for use in a MIME context.  Note that all of these "
+"encodings result in strings consisting only of 7-bit ASCII characters. "
+"therefore, this keyword has no meaning for strings containing characters "
+"outside of that range."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.content_encoding:10
+msgid ""
+"If this keyword is absent, but \"contentMediaType\" is present, this "
+"indicates that the encoding is the identity encoding, meaning that no "
+"transformation was needed in order to represent the content in a UTF-8 "
+"string."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.content_media_type:1
+msgid ""
+"If the instance is a string, this property indicates the media type of the "
+"contents of the string. If \"contentEncoding\" is present, this property "
+"describes the decoded string."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.content_media_type:4
+msgid ""
+"The value of this property MUST be a string, which MUST be a media type, as "
+"defined by :rfc:`2046`"
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.content_schema:1
+msgid ""
+"If the instance is a string, and if \"contentMediaType\" is present, this "
+"property contains a schema which describes the structure of the string."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.content_schema:4
+msgid ""
+"This keyword MAY be used with any media type that can be mapped into JSON "
+"Schema's data model."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.content_schema:6
+msgid ""
+"The value of this property MUST be a valid JSON schema. It SHOULD be ignored "
+"if \"contentMediaType\" is not present."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.default:1
+msgid ""
+"There are no restrictions placed on the value of this keyword.  When "
+"multiple occurrences of this keyword are applicable to a single sub-"
+"instance, implementations SHOULD remove duplicates."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.default:4
+msgid ""
+"This keyword can be used to supply a default JSON value associated with a "
+"particular schema.  It is RECOMMENDED that a default value be valid against "
+"the associated schema."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.dependent_required:1
+msgid ""
+"The value of this keyword MUST be an object.  Properties in this object, f "
+"any, MUST be arrays.  Elements in each array, if any, MUST be strings, and "
+"MUST be unique."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.dependent_required:4
+msgid ""
+"This keyword specifies properties that are required if a specific other "
+"property is present.  Their requirement is dependent on the presence of the "
+"other property."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.dependent_required:7
+msgid ""
+"Validation succeeds if, for each name that appears in both the instance and "
+"as a name within this keyword's value, every item in the corresponding array "
+"is also the name of a property in the instance."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.dependent_required:10
+#: litestar.openapi.spec.Schema.dependent_schemas:9
+msgid "Omitting this keyword has the same behavior as an empty object."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.dependent_schemas:1
+msgid ""
+"This keyword specifies subschemas that are evaluated if the instance is an "
+"object and contains a certain property."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.dependent_schemas:4
+msgid ""
+"This keyword's value MUST be an object.  Each value in the object MUST be a "
+"valid JSON Schema."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.dependent_schemas:6
+msgid ""
+"If the object key is a property in the instance, the entire instance must "
+"validate against the subschema. Its use is dependent on the presence of the "
+"property."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.deprecated:1
+msgid ""
+"The value of this keyword MUST be a boolean.  When multiple occurrences of "
+"this keyword are applicable to a single sub-instance, applications SHOULD "
+"consider the instance location to be deprecated if any occurrence specifies "
+"a true value."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.deprecated:5
+msgid ""
+"If \"deprecated\" has a value of boolean true, it indicates that "
+"applications SHOULD refrain from usage of the declared property.  It  MAY "
+"mean the property is going to be removed in the future."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.deprecated:8
+msgid ""
+"A root schema containing \"deprecated\" with a value of true indicates that "
+"the entire resource being described MAY be removed in the future."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.deprecated:11
+msgid ""
+"The \"deprecated\" keyword applies to each instance location to which the "
+"schema object containing the keyword successfully applies. This  can result "
+"in scenarios where every array item or object property is deprecated even "
+"though the containing array or object is not."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.deprecated:15
+#: litestar.openapi.spec.Schema.unique_items:6
+msgid "Omitting this keyword has the same behavior as a value of false."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.description:1
+#: litestar.openapi.spec.Schema.format:1
+msgid "From OpenAPI:"
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.description:5
+msgid "From JSON Schema: The value \"description\" MUST be a string."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.description:8
+msgid ""
+"The description can be used to decorate a user interface with information "
+"about the data produced by this user interface. A description will provide "
+"explanation about the purpose of the instance described by this schema."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.discriminator:1
+msgid "Adds support for polymorphism."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.discriminator:3
+msgid ""
+"The discriminator is an object name that is used to differentiate between "
+"other schemas which may satisfy the payload description. See `Composition "
+"and Inheritance <https://spec.openapis.org/oas/v3.1.0#schemaComposition>`_ "
+"for more details."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.enum:1
+msgid ""
+"The value of this keyword MUST be an array.  This array SHOULD have at least "
+"one element.  Elements in the array SHOULD be unique."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.enum:4
+msgid ""
+"An instance validates successfully against this keyword if its value is "
+"equal to one of the elements in this keyword's array value."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.enum:7
+msgid "Elements in the array might be of any type, including null."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.example:1
+msgid ""
+"A free-form property to include an example of an instance for this schema. "
+"To represent examples that cannot be naturally represented in JSON or YAML, "
+"a string value can be used to contain the example with escaping where "
+"necessary."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.example:5
+msgid ""
+"Deprecated: The example property has been deprecated in favor of the JSON "
+"Schema examples keyword. Use of example is discouraged, and later versions "
+"of this specification may remove it."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.examples:1
+msgid "The value of this must be an array containing the example values."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.exclusive_maximum:1
+msgid ""
+"The value of \"exclusiveMaximum\" MUST be a number, representing an "
+"exclusive upper limit for a numeric instance."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.exclusive_maximum:3
+msgid ""
+"If the instance is a number, then the instance is valid only if it has a "
+"value strictly less than (not equal to) \"exclusiveMaximum\"."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.exclusive_minimum:1
+msgid ""
+"The value of \"exclusiveMinimum\" MUST be a number, representing an "
+"exclusive lower limit for a numeric instance."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.exclusive_minimum:3
+msgid ""
+"If the instance is a number, then the instance is valid only if it has a "
+"value strictly greater than (not equal to) \"exclusiveMinimum\"."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.external_docs:1
+msgid "Additional external documentation for this schema."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.format:3
+msgid ""
+"See `Data Type Formats <https://spec.openapis.org/oas/"
+"v3.1.0#dataTypeFormat>`_ for further details. While relying on JSON Schema's "
+"defined formats, the OAS offers a few additional predefined formats."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.format:6
+msgid "From JSON Schema:"
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.format:8
+msgid ""
+"Structural validation alone may be insufficient to allow an application to "
+"correctly utilize certain values. The \"format\" annotation keyword is "
+"defined to allow schema authors to convey semantic information for a fixed "
+"subset of values which are accurately described by authoritative resources, "
+"be they RFCs or other external specifications."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.format:12
+msgid ""
+"The value of this keyword is called a format attribute.  It MUST be a "
+"string.  A format attribute can generally only validate a given set of "
+"instance types.  If the type of the instance to validate is not in this set, "
+"validation for this format attribute and instance SHOULD succeed.  All "
+"format attributes defined in this section apply to strings, but a format "
+"attribute can be specified to apply to any instance types defined in the "
+"data model defined in the core JSON Schema. [json-schema] [[CREF1: Note that "
+"the \"type\" keyword in this specification defines an \"integer\" type which "
+"is not part of the data model. Therefore a format attribute can be limited "
+"to numbers, but not specifically to integers.  However, a numeric format can "
+"be used alongside the \"type\" keyword with a value of \"integer\", or could "
+"be explicitly defined to always pass if the number is not an integer, which "
+"produces essentially the same behavior as only applying to integers.  ]]"
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.items:1
+msgid "The value of \"items\" MUST be a valid JSON Schema."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.items:3
+msgid ""
+"This keyword applies its subschema to all instance elements at indexes "
+"greater than the length of the \"prefixItems\" array in the same schema "
+"object, as reported by the annotation result of that \"prefixItems\" "
+"keyword.  If no such annotation result exists, \"items\" applies its "
+"subschema to all instance array elements.  [[CREF11: Note that the behavior "
+"of \"items\" without \"prefixItems\" is identical to that of the schema form "
+"of \"items\" in prior drafts. When \"prefixItems\" is present, the behavior "
+"of \"items\" is identical to the former \"additionalItems\" keyword.  ]]"
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.items:9
+msgid ""
+"If the \"items\" subschema is applied to any positions within the instance "
+"array, it produces an annotation result of boolean true, indicating that all "
+"remaining array elements have been evaluated against this keyword's "
+"subschema."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.items:14
+msgid ""
+"Implementations MAY choose to implement or optimize this keyword in another "
+"way that produces the same effect, such as by directly checking for the "
+"presence and size of a \"prefixItems\" array. Implementations that do not "
+"support annotation collection MUST do so."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.max_contains:1
+#: litestar.openapi.spec.Schema.max_items:1
+#: litestar.openapi.spec.Schema.max_length:1
+#: litestar.openapi.spec.Schema.max_properties:1
+#: litestar.openapi.spec.Schema.min_contains:1
+#: litestar.openapi.spec.Schema.min_items:1
+#: litestar.openapi.spec.Schema.min_length:1
+#: litestar.openapi.spec.Schema.min_properties:1
+msgid "The value of this keyword MUST be a non-negative integer."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.max_contains:3
+#: litestar.openapi.spec.Schema.min_contains:3
+msgid ""
+"If \"contains\" is not present within the same schema object, then this "
+"keyword has no effect."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.max_contains:5
+msgid ""
+"An instance array is valid against \"maxContains\" in two ways, depending on "
+"the form of the annotation result of an adjacent \"contains\" [json-schema] "
+"keyword.  The first way is if the annotation result is an array and the "
+"length of that array is less than or equal to the \"maxContains\" value.  "
+"The second way is if the annotation result is a boolean \"true\" and the "
+"instance array length is less than r equal to the \"maxContains\" value."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.max_items:3
+msgid ""
+"An array instance is valid against \"maxItems\" if its size is less than, or "
+"equal to, the value of this keyword."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.max_length:3
+msgid ""
+"A string instance is valid against this keyword if its length is less than, "
+"or equal to, the value of this keyword."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.max_length:5
+#: litestar.openapi.spec.Schema.min_length:6
+msgid ""
+"The length of a string instance is defined as the number of its characters "
+"as defined by :rfc:`8259`."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.max_properties:3
+msgid ""
+"An object instance is valid against \"maxProperties\" if its number of "
+"properties is less than, or equal to, the value of this keyword."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.maximum:1
+msgid ""
+"The value of \"maximum\" MUST be a number, representing an inclusive upper "
+"limit for a numeric instance."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.maximum:3
+msgid ""
+"If the instance is a number, then this keyword validates only if the "
+"instance is less than or exactly equal to \"maximum\"."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.min_contains:5
+msgid ""
+"An instance array is valid against \"minContains\" in two ways, depending on "
+"the form of the annotation result of an adjacent \"contains\" [json-schema] "
+"keyword.  The first way is if the annotation result is an array and the "
+"length of that array is greater than or equal to the \"minContains\" value.  "
+"The second way is if the annotation result is a boolean \"true\" and the "
+"instance array length is greater than or equal to the \"minContains\" value."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.min_contains:10
+msgid ""
+"A value of 0 is allowed, but is only useful for setting a range of "
+"occurrences from 0 to the value of \"maxContains\". A value of 0 with no "
+"\"maxContains\" causes \"contains\" to always pass validation."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.min_contains:13
+msgid "Omitting this keyword has the same behavior as a value of 1."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.min_items:3
+msgid ""
+"An array instance is valid against \"minItems\" if its size is greater than, "
+"or equal to, the value of this keyword."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.min_items:5
+#: litestar.openapi.spec.Schema.min_length:8
+#: litestar.openapi.spec.Schema.min_properties:6
+msgid "Omitting this keyword has the same behavior as a value of 0."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.min_length:3
+msgid ""
+"A string instance is valid against this keyword if its length is greater "
+"than, or equal to, the value of this keyword."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.min_properties:3
+msgid ""
+"An object instance is valid against \"minProperties\" if its number of "
+"properties is greater than, or equal to, the value of this keyword."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.minimum:1
+msgid ""
+"The value of \"minimum\" MUST be a number, representing an inclusive lower "
+"limit for a numeric instance."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.minimum:3
+msgid ""
+"If the instance is a number, then this keyword validates only if the "
+"instance is greater than or exactly equal to \"minimum\"."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.multiple_of:1
+msgid "The value of \"multipleOf\" MUST be a number, strictly greater than 0."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.multiple_of:3
+msgid ""
+"A numeric instance is only valid if division by this keyword's value results "
+"in an integer."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.one_of:3
+msgid ""
+"An instance validates successfully against this keyword if it validates "
+"successfully against exactly one schema defined by this keyword's value."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.pattern:1
+msgid ""
+"The value of this keyword MUST be a string.  This string SHOULD be a valid "
+"regular expression, according to the ECMA-262 regular expression dialect."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.pattern:4
+msgid ""
+"A string instance is considered valid if the regular expression matches the "
+"instance successfully.  Recall: regular expressions are not implicitly "
+"anchored."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.pattern_properties:1
+msgid ""
+"The value of \"patternProperties\" MUST be an object.  Each property name of "
+"this object SHOULD be a valid regular expression, according to the ECMA-262 "
+"regular expression dialect.  Each property value of this object MUST be a "
+"valid JSON Schema."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.pattern_properties:5
+msgid ""
+"Validation succeeds if, for each instance name that matches any regular "
+"expressions that appear as a property name in this keyword's value, the "
+"child instance for that name successfully validates against each schema that "
+"corresponds to a matching regular expression."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.pattern_properties:9
+#: litestar.openapi.spec.Schema.properties:6
+msgid ""
+"The annotation result of this keyword is the set of instance property names "
+"matched by this keyword."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.pattern_properties:11
+#: litestar.openapi.spec.Schema.properties:8
+msgid ""
+"Omitting this keyword has the same assertion behavior as an empty object."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.prefix_items:1
+msgid ""
+"The value of \"prefixItems\" MUST be a non-empty array of valid JSON Schemas."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.prefix_items:3
+msgid ""
+"Validation succeeds if each element of the instance validates against the "
+"schema at the same position, if any. This keyword does not constrain the "
+"length of the array.  If the array is longer than this keyword's value, this "
+"keyword validates only the prefix of matching length."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.prefix_items:7
+msgid ""
+"This keyword produces an annotation value which is the largest index to "
+"which this keyword applied a subschema. he value MAY be a boolean true if a "
+"subschema was applied to every index of the instance, such as is produced by "
+"the \"items\" keyword.  This annotation affects the behavior of \"items\" "
+"and \"unevaluatedItems\"."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.prefix_items:11
+msgid ""
+"Omitting this keyword has the same assertion behavior as an empty array."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.properties:1
+msgid ""
+"The value of \"properties\" MUST be an object.  Each value of this object "
+"MUST be a valid JSON Schema."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.properties:3
+msgid ""
+"Validation succeeds if, for each name that appears in both the instance and "
+"as a name within this keyword's value, the child instance for that name "
+"successfully validates against the corresponding schema."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.property_names:1
+msgid "The value of \"propertyNames\" MUST be a valid JSON Schema."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.property_names:3
+msgid ""
+"If the instance is an object, this keyword validates if every property name "
+"in the instance validates against the provided schema. Note the property "
+"name that the schema is testing will always be a string."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.property_names:6
+msgid "Omitting this keyword has the same behavior as an empty schema."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.read_only:1
+msgid ""
+"The value of \"readOnly\" MUST be a boolean.  When multiple occurrences of "
+"this keyword are applicable to a single sub-instance, the resulting behavior "
+"SHOULD be as for a true value if any occurrence specifies a true value, and "
+"SHOULD be as for a false value otherwise."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.read_only:5
+msgid ""
+"If \"readOnly\" has a value of boolean true, it indicates that the value of "
+"the instance is managed exclusively by the owning authority, and attempts by "
+"an application to modify the value of this property are expected to be "
+"ignored or rejected by that owning authority."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.read_only:9
+msgid ""
+"An instance document that is marked as \"readOnly\" for the entire document "
+"MAY be ignored if sent to the owning authority, or MAY result in an error, "
+"at the authority's discretion."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.read_only:12
+msgid ""
+"For example, \"readOnly\" would be used to mark a database-generated serial "
+"number as read-only, while \"writeOnly\" would be used to mark a password "
+"input field."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.read_only:15
+msgid ""
+"This keyword can be used to assist in user interface instance generation.  "
+"In particular, an application MAY choose to use a widget that hides input "
+"values as they are typed for write-only fields."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.read_only:18
+#: litestar.openapi.spec.Schema.write_only:20
+msgid "Omitting these keywords has the same behavior as values of false."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.required:1
+msgid ""
+"The value of this keyword MUST be an array.  Elements of this array, if any, "
+"MUST be strings, and MUST be unique."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.required:3
+msgid ""
+"An object instance is valid against this keyword if every item in the rray "
+"is the name of a property in the instance."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.required:5
+msgid "Omitting this keyword has the same behavior as an empty array."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.schema_else:1
+#: litestar.openapi.spec.Schema.schema_if:1
+#: litestar.openapi.spec.Schema.schema_not:1
+#: litestar.openapi.spec.Schema.then:1
+msgid "This keyword's value MUST be a valid JSON Schema."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.schema_else:3
+msgid ""
+"When \"if\" is present, and the instance fails to validate against its "
+"subschema, then validation succeeds against this keyword if the instance "
+"successfully validates against this keyword's subschema."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.schema_else:6
+msgid ""
+"This keyword has no effect when \"if\" is absent, or when the instance "
+"successfully validates against its subschema. Implementations MUST NOT "
+"evaluate the instance against this keyword, for either validation or "
+"annotation collection purposes, in such cases."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.schema_if:3
+msgid ""
+"This validation outcome of this keyword's subschema has no direct effect on "
+"the overall validation result. Rather, it controls which of the \"then\" or "
+"\"else\" keywords are evaluated."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.schema_if:6
+msgid ""
+"Instances that successfully validate against this keyword's subschema MUST "
+"also be valid against the subschema value of the \"then\" keyword, if "
+"present."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.schema_if:9
+msgid ""
+"Instances that fail to validate against this keyword's subschema MUST also "
+"be valid against the subschema value of the \"else\" keyword, if present."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.schema_if:12
+msgid ""
+"If annotations (Section 7.7) are being collected, they are collected rom "
+"this keyword's subschema in the usual way, including when the keyword is "
+"present without either \"then\" or \"else\"."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.schema_not:3
+msgid ""
+"An instance is valid against this keyword if it fails to validate "
+"successfully against the schema defined by this keyword."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.then:3
+msgid ""
+"When \"if\" is present, and the instance successfully validates against its "
+"subschema, then validation succeeds against this keyword if the instance "
+"also successfully validates against this keyword's subschema."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.then:6
+msgid ""
+"This keyword has no effect when \"if\" is absent, or when the instance fails "
+"to validate against its subschema. Implementations MUST NOT evaluate the "
+"instance against this keyword, for either validation or annotation "
+"collection purposes, in such cases."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.title:1
+msgid "The value of \"title\" MUST be a string."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.title:3
+msgid ""
+"The title can be used to decorate a user interface with information about "
+"the data produced by this user interface. A title will preferably be short."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.type:1
+msgid ""
+"The value of this keyword MUST be either a string or an array.  If it is an "
+"array, elements of the array MUST be strings and MUST be unique."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.type:4
+msgid ""
+"String values MUST be one of the six primitive types (``\"null\"``, "
+"``\"boolean\"``, ``\"object\"``, ``\"array\"``, ``\"number\"``, and "
+"``\"string\"``), or ``\"integer\"`` which matches any number with a zero "
+"fractional part."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.type:7
+msgid ""
+"An instance validates if and only if the instance is in any of the sets "
+"listed for this keyword."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.unevaluated_items:1
+msgid "The value of \"unevaluatedItems\" MUST be a valid JSON Schema."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.unevaluated_items:3
+msgid ""
+"The behavior of this keyword depends on the annotation results of adjacent "
+"keywords that apply to the instance location being validated.  Specifically, "
+"the annotations from \"prefixItems\" items\", and \"contains\", which can "
+"come from those keywords when they are adjacent to the \"unevaluatedItems\" "
+"keyword.  Those three annotations, as well as \"unevaluatedItems\", can also "
+"result from any and all adjacent in-place applicator (Section 10.2) "
+"keywords.  This includes but is not limited to the in-place applicators "
+"defined in this document."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.unevaluated_items:9
+msgid ""
+"If no relevant annotations are present, the \"unevaluatedItems\" subschema "
+"MUST be applied to all locations in the array. If a boolean true value is "
+"present from any of the relevant annotations, unevaluatedItems\" MUST be "
+"ignored. Otherwise, the subschema MUST be applied to any index greater than "
+"the largest annotation value for \"prefixItems\", which does not appear in "
+"any annotation value for \"contains\"."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.unevaluated_items:15
+msgid ""
+"This means that \"prefixItems\", \"items\", \"contains\", and all in-place "
+"applicators MUST be evaluated before this keyword can be evaluated. Authors "
+"of extension keywords MUST NOT define an in-place applicator that would need "
+"to be evaluated after this keyword."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.unevaluated_items:19
+msgid ""
+"If the \"unevaluatedItems\" subschema is applied to any positions within the "
+"instance array, it produces an annotation result of boolean true, analogous "
+"to the behavior of \"items\"."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.spec.Schema.unevaluated_properties:1
+msgid "The value of \"unevaluatedProperties\" MUST be a valid JSON Schema."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.spec.Schema.unevaluated_properties:3
+msgid ""
+"The behavior of this keyword depends on the annotation results of adjacent "
+"keywords that apply to the instance location being validated.  Specifically, "
+"the annotations from \"properties\", \"patternProperties\", and "
+"\"additionalProperties\", which can come from those keywords when they are "
+"adjacent to the \"unevaluatedProperties\" keyword. Those three annotations, "
+"as well as \"unevaluatedProperties\", can also result from any and all "
+"adjacent in-place applicator (Section 10.2) keywords.  This includes but is "
+"not limited to the in-place applicators defined in this document."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.spec.Schema.unevaluated_properties:10
+msgid ""
+"Validation with \"unevaluatedProperties\" applies only to the child values "
+"of instance names that do not appear in the \"properties\", "
+"\"patternProperties\", \"additionalProperties\", or "
+"\"unevaluatedProperties\" annotation results that apply to the instance "
+"location being validated."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.spec.Schema.unevaluated_properties:14
+msgid ""
+"For all such properties, validation succeeds if the child instance validates "
+"against the \"unevaluatedProperties\" schema."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.spec.Schema.unevaluated_properties:17
+msgid ""
+"This means that \"properties\", \"patternProperties\", "
+"\"additionalProperties\", and all in-place applicators MUST be evaluated "
+"before this keyword can be evaluated.  Authors of extension keywords MUST "
+"NOT define an in-place applicator that would need to be evaluated after this "
+"keyword."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.spec.Schema.unevaluated_properties:25
+msgid ""
+"The following properties are taken directly from the `JSON Schema Validation "
+"<https://tools.ietf.org/html/draft-wright-json-schema-validation-00>`_ and "
+"follow the same specifications:"
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.unique_items:1
+msgid "The value of this keyword MUST be a boolean."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.unique_items:3
+msgid ""
+"If this keyword has boolean value false, the instance validates "
+"successfully.  If it has boolean value true, the instance validates "
+"successfully if all of its elements are unique."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.write_only:1
+msgid ""
+"The value of \"writeOnly\" MUST be a boolean.  When multiple occurrences of "
+"this keyword are applicable to a single sub-instance, the resulting behavior "
+"SHOULD be as for a true value if any occurrence specifies a true value, and "
+"SHOULD be as for a false value otherwise."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.write_only:5
+msgid ""
+"If \"writeOnly\" has a value of boolean true, it indicates that the value is "
+"never present when the instance is retrieved from the owning authority.  It "
+"can be present when sent to the owning authority to update or create the "
+"document (or the resource it represents), but it will not be included in any "
+"updated or newly created version of the instance."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.write_only:10
+msgid ""
+"An instance document that is marked as \"writeOnly\" for the entire document "
+"MAY be returned as a blank document of some sort, or MAY produce an error "
+"upon retrieval, or have the retrieval request ignored, at the authority's "
+"discretion."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.write_only:14
+msgid ""
+"For example, \"readOnly\" would be used to mark a database-generated serial "
+"number as read-only, while \"writeOnly\" would be used to mark a  password "
+"input field."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.write_only:17
+msgid ""
+"This keyword can be used to assist in user interface instance generation. In "
+"particular, an application MAY choose to use a widget that hides input "
+"values as they are typed for write-only fields."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.xml:1
+msgid "This MAY be used only on properties schemas."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Schema.xml:3
+msgid ""
+"It has no effect on root schemas. Adds additional metadata to describe the "
+"XML representation of this property."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.security_scheme.SecurityScheme:1
+msgid "Defines a security scheme that can be used by the operations."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.security_scheme.SecurityScheme:3
+msgid ""
+"Supported schemes are HTTP authentication, an API key (either as a header, a "
+"cookie parameter or as a query parameter), mutual TLS (use of a client "
+"certificate), OAuth2's common flows (implicit, password, client credentials "
+"and authorization code) as defined in :rfc`6749`, and `OpenID Connect "
+"Discovery <https://tools.ietf.org/html/draft-ietf-oauth-discovery-06>`_."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.security_scheme.SecurityScheme:8
+msgid ""
+"Please note that as of 2020, the implicit flow is about to be deprecated by "
+"`OAuth 2.0 Security Best Current Practice <https://tools.ietf.org/html/draft-"
+"ietf-oauth-security-topics>`_. Recommended for most use case is "
+"Authorization Code Grant flow with PKCE."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.spec.SecurityScheme.bearer_format:1
+msgid "A hint to the client to identify how the bearer token is formatted."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.spec.SecurityScheme.bearer_format:3
+msgid ""
+"Bearer tokens are usually generated by an authorization server, so this "
+"information is primarily for documentation purposes."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.SecurityScheme.description:1
+msgid "A description for security scheme."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.SecurityScheme.flows:1
+msgid ""
+"**REQUIRED** for ``oauth2``. An object containing configuration information "
+"for the flow types supported."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.SecurityScheme.name:1
+msgid ""
+"**REQUIRED** for ``apiKey``. The name of the header, query or cookie "
+"parameter to be used."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.spec.SecurityScheme.open_id_connect_url:1
+msgid ""
+"**REQUIRED** for ``openIdConnect``. OpenId Connect URL to discover OAuth2 "
+"configuration values. This MUST be in the form of a URL. The OpenID Connect "
+"standard requires the use of TLS."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.SecurityScheme.scheme:1
+msgid ""
+"**REQUIRED** for ``http``. The name of the HTTP Authorization scheme to be "
+"used in the authorization header as defined in :rfc:`7235`."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.SecurityScheme.scheme:4
+msgid ""
+"The values used SHOULD be registered in the `IANA Authentication Scheme "
+"registry <https://www.iana.org/assignments/http-authschemes/http-authschemes."
+"xhtml>`_"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.openapi.spec.SecurityScheme.security_scheme_in:1
+msgid "**REQUIRED** for ``apiKey``. The location of the API key."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.SecurityScheme.type:1
+msgid "**REQUIRED**. The type of the security scheme."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.server.Server:1
+msgid "An object representing a Server."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Server.description:1
+msgid "An optional string describing the host designated by the URL."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Server.variables:1
+msgid ""
+"A map between a variable name and its value. The value is used for "
+"substitution in the server's URL template."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Server.url:1
+msgid "**REQUIRED**. A URL to the target host."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Server.url:3
+msgid ""
+"This URL supports Server Variables and MAY be relative, to indicate that the "
+"host location is relative to the location where the OpenAPI document is "
+"being served. Variable substitutions will be made when a variable is named "
+"in ``{brackets}``."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.server_variable.ServerVariable:1
+msgid ""
+"An object representing a Server Variable for server URL template "
+"substitution."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.ServerVariable.description:1
+msgid "An optional description for the server variable."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.ServerVariable.enum:1
+msgid ""
+"An enumeration of string values to be used if the substitution options are "
+"from a limited set."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.ServerVariable.enum:3
+msgid "The array SHOULD NOT be empty."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.ServerVariable.default:1
+msgid ""
+"**REQUIRED**. The default value to use for substitution, which SHALL be sent "
+"if an alternate value is _not_ supplied. Note this behavior is different "
+"than the `Schema Object's <https://spec.openapis.org/oas/"
+"v3.1.0#schemaObject>`_ treatment of default values, because in those cases "
+"parameter values are optional.  If the `enum <https://spec.openapis.org/oas/"
+"v3.1.0#serverVariableEnum>`_ is defined, the value MUST exist in the enum's "
+"values."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.tag.Tag:1
+msgid ""
+"Adds metadata to a single tag that is used by the `Operation Object <https://"
+"spec.openapis.org/oas/v3.1.0#operationObject>`_."
+msgstr ""
+
+#: ../../../../litestar/openapi/spec/__init__.py:docstring of
+#: litestar.openapi.spec.tag.Tag:4
+msgid ""
+"It is not mandatory to have a Tag Object per tag defined in the Operation "
+"Object instances."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Tag.description:1
+msgid "A short description for the tag."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Tag.external_docs:1
+msgid "Additional external documentation for this tag."
+msgstr ""
+
+#: ../../../../docstring of litestar.openapi.spec.Tag.name:1
+msgid "**REQUIRED**. The name of the tag."
+msgstr ""

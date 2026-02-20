@@ -1,0 +1,170 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/serialization.rst:2
+msgid "serialization"
+msgstr ""
+
+#: ../../../../litestar/serialization/__init__.py:docstring of
+#: litestar.serialization.msgspec_hooks.decode_json:1
+msgid "Decode a JSON string/bytes into an object."
+msgstr ""
+
+#: ../../../reference/serialization.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../litestar/serialization/__init__.py:docstring of
+#: litestar.serialization.msgspec_hooks.decode_json:3
+#: litestar.serialization.msgspec_hooks.decode_msgpack:3
+msgid "Value to decode"
+msgstr ""
+
+#: ../../../../litestar/serialization/__init__.py:docstring of
+#: litestar.serialization.msgspec_hooks.decode_json:4
+#: litestar.serialization.msgspec_hooks.decode_msgpack:4
+msgid "An optional type to decode the data into"
+msgstr ""
+
+#: ../../../../litestar/serialization/__init__.py:docstring of
+#: litestar.serialization.msgspec_hooks.decode_json:5
+#: litestar.serialization.msgspec_hooks.decode_msgpack:5
+#: litestar.serialization.msgspec_hooks.default_deserializer:5
+msgid "Optional sequence of type decoders"
+msgstr ""
+
+#: ../../../../litestar/serialization/__init__.py:docstring of
+#: litestar.serialization.msgspec_hooks.decode_json:6
+#: litestar.serialization.msgspec_hooks.decode_msgpack:6
+msgid ""
+"Whether type coercion rules should be strict. Setting to False enables a "
+"wider set of coercion rules from string to non-string types for all values"
+msgstr ""
+
+#: ../../../reference/serialization.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/serialization/__init__.py:docstring of
+#: litestar.serialization.msgspec_hooks.decode_json:9
+#: litestar.serialization.msgspec_hooks.decode_msgpack:9
+msgid "An object"
+msgstr ""
+
+#: ../../../reference/serialization.rst:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../litestar/serialization/__init__.py:docstring of
+#: litestar.serialization.msgspec_hooks.decode_json:11
+#: litestar.serialization.msgspec_hooks.decode_msgpack:11
+msgid "If error decoding ``value``."
+msgstr ""
+
+#: ../../../../litestar/serialization/__init__.py:docstring of
+#: litestar.serialization.msgspec_hooks.decode_msgpack:1
+msgid "Decode a MessagePack string/bytes into an object."
+msgstr ""
+
+#: ../../../../litestar/serialization/__init__.py:docstring of
+#: litestar.serialization.msgspec_hooks.default_deserializer:1
+#: litestar.serialization.msgspec_hooks.default_serializer:1
+msgid "Transform values non-natively supported by ``msgspec``"
+msgstr ""
+
+#: ../../../../litestar/serialization/__init__.py:docstring of
+#: litestar.serialization.msgspec_hooks.default_deserializer:3
+msgid "Encountered type"
+msgstr ""
+
+#: ../../../../litestar/serialization/__init__.py:docstring of
+#: litestar.serialization.msgspec_hooks.default_deserializer:4
+msgid "Value to coerce"
+msgstr ""
+
+#: ../../../../litestar/serialization/__init__.py:docstring of
+#: litestar.serialization.msgspec_hooks.default_deserializer:7
+msgid "A ``msgspec``-supported type"
+msgstr ""
+
+#: ../../../../litestar/serialization/__init__.py:docstring of
+#: litestar.serialization.msgspec_hooks.default_serializer:3
+msgid "A value to serialized"
+msgstr ""
+
+#: ../../../../litestar/serialization/__init__.py:docstring of
+#: litestar.serialization.msgspec_hooks.default_serializer:4
+msgid "Mapping of types to callables to transforming types"
+msgstr ""
+
+#: ../../../../litestar/serialization/__init__.py:docstring of
+#: litestar.serialization.msgspec_hooks.default_serializer:6
+msgid "A serialized value"
+msgstr ""
+
+#: ../../../../litestar/serialization/__init__.py:docstring of
+#: litestar.serialization.msgspec_hooks.default_serializer:8
+msgid "if value is not supported"
+msgstr ""
+
+#: ../../../../litestar/serialization/__init__.py:docstring of
+#: litestar.serialization.msgspec_hooks.encode_json:1
+msgid "Encode a value into JSON."
+msgstr ""
+
+#: ../../../../litestar/serialization/__init__.py:docstring of
+#: litestar.serialization.msgspec_hooks.encode_json:3
+#: litestar.serialization.msgspec_hooks.encode_msgpack:3
+msgid "Value to encode"
+msgstr ""
+
+#: ../../../../litestar/serialization/__init__.py:docstring of
+#: litestar.serialization.msgspec_hooks.encode_json:4
+msgid "Optional callable to support non-natively supported types."
+msgstr ""
+
+#: ../../../../litestar/serialization/__init__.py:docstring of
+#: litestar.serialization.msgspec_hooks.encode_json:6
+msgid "JSON as bytes"
+msgstr ""
+
+#: ../../../../litestar/serialization/__init__.py:docstring of
+#: litestar.serialization.msgspec_hooks.encode_json:8
+#: litestar.serialization.msgspec_hooks.encode_msgpack:8
+msgid "If error encoding ``obj``."
+msgstr ""
+
+#: ../../../../litestar/serialization/__init__.py:docstring of
+#: litestar.serialization.msgspec_hooks.encode_msgpack:1
+msgid "Encode a value into MessagePack."
+msgstr ""
+
+#: ../../../../litestar/serialization/__init__.py:docstring of
+#: litestar.serialization.msgspec_hooks.encode_msgpack:4
+msgid "Optional callable to support non-natively supported types"
+msgstr ""
+
+#: ../../../../litestar/serialization/__init__.py:docstring of
+#: litestar.serialization.msgspec_hooks.encode_msgpack:6
+msgid "MessagePack as bytes"
+msgstr ""
+
+#: ../../../../litestar/serialization/__init__.py:docstring of
+#: litestar.serialization.msgspec_hooks.get_serializer:1
+msgid "Get the serializer for the given type encoders."
+msgstr ""

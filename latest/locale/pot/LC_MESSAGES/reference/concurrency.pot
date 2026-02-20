@@ -1,0 +1,73 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/concurrency.rst:2
+msgid "concurrency"
+msgstr ""
+
+#: ../../../../litestar/concurrency.py:docstring of
+#: litestar.concurrency.get_asyncio_executor:1
+msgid ""
+"Get the executor in which synchronous callables will be run within an "
+"asyncio context"
+msgstr ""
+
+#: ../../../../litestar/concurrency.py:docstring of
+#: litestar.concurrency.get_trio_capacity_limiter:1
+msgid ""
+"Get the capacity limiter used when running synchronous callable within a "
+"trio context"
+msgstr ""
+
+#: ../../../../litestar/concurrency.py:docstring of
+#: litestar.concurrency.set_asyncio_executor:1
+msgid ""
+"Set the executor in which synchronous callables will be run within an "
+"asyncio context"
+msgstr ""
+
+#: ../../../../litestar/concurrency.py:docstring of
+#: litestar.concurrency.set_trio_capacity_limiter:1
+msgid ""
+"Set the capacity limiter used when running synchronous callable within a "
+"trio context"
+msgstr ""
+
+#: ../../../../litestar/concurrency.py:docstring of
+#: litestar.concurrency.sync_to_thread:1
+msgid "Run the synchronous callable ``fn`` asynchronously in a worker thread."
+msgstr ""
+
+#: ../../../../litestar/concurrency.py:docstring of
+#: litestar.concurrency.sync_to_thread:3
+msgid ""
+"When called from asyncio, uses :meth:`asyncio.loop.run_in_executor` to run "
+"the callable. No executor is specified by default so the current loop's "
+"executor is used. A specific executor can be set using :func:`~litestar."
+"concurrency.set_asyncio_executor`. This does not affect the loop's default "
+"executor."
+msgstr ""
+
+#: ../../../../litestar/concurrency.py:docstring of
+#: litestar.concurrency.sync_to_thread:9
+msgid ""
+"When called from trio, uses :func:`trio.to_thread.run_sync` to run the "
+"callable. No capacity limiter is specified by default, but one can be set "
+"using :func:`~litestar.concurrency.set_trio_capacity_limiter`. This does not "
+"affect trio's default capacity limiter."
+msgstr ""

@@ -1,0 +1,38 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../usage/routing/index.rst:11
+msgid "Articles"
+msgstr ""
+
+#: ../../../usage/routing/index.rst:3
+msgid "Routing"
+msgstr ""
+
+#: ../../../usage/routing/index.rst:5
+msgid ""
+"Routing is a fundamental aspect of building web applications with Litestar. "
+"It involves mapping URLs to the appropriate request handlers that process "
+"and respond to client requests."
+msgstr ""
+
+#: ../../../usage/routing/index.rst:8
+msgid ""
+"Litestar provides a flexible and intuitive routing system that allows you to "
+"define routes at various layers of your application."
+msgstr ""
