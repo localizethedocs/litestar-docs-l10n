@@ -1,0 +1,209 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/handlers/base.rst:2
+msgid "base"
+msgstr ""
+
+#: ../../../../starlite/handlers/base.py:docstring of
+#: starlite.handlers.base.BaseRouteHandler:1
+msgid ""
+"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~starlite.handlers.base.T`]"
+msgstr ""
+
+#: ../../../../starlite/handlers/base.py:docstring of
+#: starlite.handlers.base.BaseRouteHandler:1
+msgid "Base route handler."
+msgstr ""
+
+#: ../../../../starlite/handlers/base.py:docstring of
+#: starlite.handlers.base.BaseRouteHandler:3
+msgid "Serves as a subclass for all route handlers"
+msgstr ""
+
+#: ../../../../starlite/handlers/base.py:docstring of
+#: starlite.handlers.base.BaseRouteHandler.__init__:1
+msgid "Initialize ``HTTPRouteHandler``."
+msgstr ""
+
+#: ../../../../starlite/handlers/base.py:docstring of
+#: starlite.handlers.base.BaseRouteHandler.__init__:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../starlite/handlers/base.py:docstring of
+#: starlite.handlers.base.BaseRouteHandler.__init__:3
+msgid ""
+"A path fragment for the route handler function or a list of path fragments. "
+"If not given defaults to '/'"
+msgstr ""
+
+#: ../../../../starlite/handlers/base.py:docstring of
+#: starlite.handlers.base.BaseRouteHandler.__init__:4
+msgid ""
+"A string keyed dictionary of dependency :class:`Provider <starlite."
+"datastructures.Provide>` instances."
+msgstr ""
+
+#: ../../../../starlite/handlers/base.py:docstring of
+#: starlite.handlers.base.BaseRouteHandler.__init__:5
+msgid ""
+"A dictionary that maps handler functions to status codes and/or exception "
+"types."
+msgstr ""
+
+#: ../../../../starlite/handlers/base.py:docstring of
+#: starlite.handlers.base.BaseRouteHandler.__init__:6
+msgid "A list of :class:`Guard <starlite.types.Guard>` callables."
+msgstr ""
+
+#: ../../../../starlite/handlers/base.py:docstring of
+#: starlite.handlers.base.BaseRouteHandler.__init__:7
+msgid "A list of :class:`Middleware <starlite.types.Middleware>`."
+msgstr ""
+
+#: ../../../../starlite/handlers/base.py:docstring of
+#: starlite.handlers.base.BaseRouteHandler.__init__:8
+msgid "A string identifying the route handler."
+msgstr ""
+
+#: ../../../../starlite/handlers/base.py:docstring of
+#: starlite.handlers.base.BaseRouteHandler.__init__:9
+msgid ""
+"A string keyed dictionary of arbitrary values that can be accessed in :class:"
+"`Guards <starlite.types.Guard>` or wherever you have access to :class:"
+"`Request <starlite.connection.request.Request>` or :class:`ASGI Scope "
+"<starlite.types.Scope>`."
+msgstr ""
+
+#: ../../../../starlite/handlers/base.py:docstring of
+#: starlite.handlers.base.BaseRouteHandler.__init__:11
+msgid "Any additional kwarg - will be set in the opt dictionary."
+msgstr ""
+
+#: ../../../../starlite/handlers/base.py:docstring of
+#: starlite.handlers.base.BaseRouteHandler.handler_name:1
+msgid "Get the name of the handler function."
+msgstr ""
+
+#: ../../../../starlite/handlers/base.py:docstring of
+#: starlite.handlers.base.BaseRouteHandler.handler_name:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../starlite/handlers/base.py:docstring of
+#: starlite.handlers.base.BaseRouteHandler.handler_name:3
+msgid "if handler fn is not set."
+msgstr ""
+
+#: ../../../../starlite/handlers/base.py:docstring of
+#: starlite.handlers.base.BaseRouteHandler.__str__:0
+#: starlite.handlers.base.BaseRouteHandler.handler_name:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/handlers/base.py:docstring of
+#: starlite.handlers.base.BaseRouteHandler.handler_name:5
+msgid "Name of the handler function"
+msgstr ""
+
+#: ../../../../starlite/handlers/base.py:docstring of
+#: starlite.handlers.base.BaseRouteHandler.dependency_name_set:1
+msgid "Set of all dependency names provided in the handler's ownership layers."
+msgstr ""
+
+#: ../../../../starlite/handlers/base.py:docstring of
+#: starlite.handlers.base.BaseRouteHandler.ownership_layers:1
+msgid "Return the handler layers from the app down to the route handler."
+msgstr ""
+
+#: ../../../../starlite/handlers/base.py:docstring of
+#: starlite.handlers.base.BaseRouteHandler.ownership_layers:3
+msgid "app -> ... -> route handler"
+msgstr ""
+
+#: ../../../../starlite/handlers/base.py:docstring of
+#: starlite.handlers.base.BaseRouteHandler.resolve_layered_parameters:1
+msgid "Return all parameters declared above the handler."
+msgstr ""
+
+#: ../../../../starlite/handlers/base.py:docstring of
+#: starlite.handlers.base.BaseRouteHandler.resolve_guards:1
+msgid ""
+"Return all guards in the handlers scope, starting from highest to current "
+"layer."
+msgstr ""
+
+#: ../../../../starlite/handlers/base.py:docstring of
+#: starlite.handlers.base.BaseRouteHandler.resolve_dependencies:1
+msgid ""
+"Return all dependencies correlating to handler function's kwargs that exist "
+"in the handler's scope."
+msgstr ""
+
+#: ../../../../starlite/handlers/base.py:docstring of
+#: starlite.handlers.base.BaseRouteHandler.resolve_middleware:1
+msgid "Build the middleware stack for the RouteHandler and return it."
+msgstr ""
+
+#: ../../../../starlite/handlers/base.py:docstring of
+#: starlite.handlers.base.BaseRouteHandler.resolve_middleware:3
+msgid ""
+"The middlewares are added from top to bottom (app -> router -> controller -> "
+"route handler) and then reversed."
+msgstr ""
+
+#: ../../../../starlite/handlers/base.py:docstring of
+#: starlite.handlers.base.BaseRouteHandler.resolve_exception_handlers:1
+msgid ""
+"Resolve the exception_handlers by starting from the route handler and moving "
+"up."
+msgstr ""
+
+#: ../../../../starlite/handlers/base.py:docstring of
+#: starlite.handlers.base.BaseRouteHandler.resolve_exception_handlers:3
+msgid "This method is memoized so the computation occurs only once."
+msgstr ""
+
+#: ../../../../starlite/handlers/base.py:docstring of
+#: starlite.handlers.base.BaseRouteHandler.resolve_opts:1
+msgid "Build the route handler opt dictionary by going from top to bottom."
+msgstr ""
+
+#: ../../../../starlite/handlers/base.py:docstring of
+#: starlite.handlers.base.BaseRouteHandler.resolve_opts:3
+msgid ""
+"If multiple layers define the same key, the value from the closest layer to "
+"the response handler will take precedence."
+msgstr ""
+
+#: ../../../../starlite/handlers/base.py:docstring of
+#: starlite.handlers.base.BaseRouteHandler.authorize_connection:1
+msgid ""
+"Ensure the connection is authorized by running all the route guards in scope."
+msgstr ""
+
+#: ../../../../starlite/handlers/base.py:docstring of
+#: starlite.handlers.base.BaseRouteHandler.__str__:1
+msgid "Return a unique identifier for the route handler."
+msgstr ""
+
+#: ../../../../starlite/handlers/base.py:docstring of
+#: starlite.handlers.base.BaseRouteHandler.__str__:3
+msgid "A string"
+msgstr ""

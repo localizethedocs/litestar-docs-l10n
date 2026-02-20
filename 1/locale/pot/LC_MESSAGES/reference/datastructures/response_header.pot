@@ -1,0 +1,49 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/datastructures/response_header.rst:2
+msgid "response_header"
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_header.py:docstring of
+#: starlite.datastructures.response_header.ResponseHeader:1
+msgid "Bases: :py:class:`~pydantic_openapi_schema.v3_1_0.header.Header`"
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_header.py:docstring of
+#: starlite.datastructures.response_header.ResponseHeader:1
+msgid "Container type for a response header."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.response_header.ResponseHeader.documentation_only:1
+msgid ""
+"Defines the ResponseHeader instance as for OpenAPI documentation purpose "
+"only."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.response_header.ResponseHeader.value:1
+msgid "Value to set for the response header."
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_header.py:docstring of
+#: starlite.datastructures.response_header.ResponseHeader.validate_value:1
+msgid ""
+"Ensure that either value is set or the instance is for documentation_only."
+msgstr ""

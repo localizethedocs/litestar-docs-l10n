@@ -1,0 +1,658 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../usage/templating.rst:2
+msgid "Templates"
+msgstr ""
+
+#: ../../../usage/templating.rst:4
+msgid ""
+"Starlite has built-in support for both the `Jinja2 <https://jinja."
+"palletsprojects.com/en/3.0.x/>`_ and `Mako <https://www.makotemplates.org/"
+">`_ template engines, as well as abstractions to make use of any template "
+"engine you wish."
+msgstr ""
+
+#: ../../../usage/templating.rst:9
+msgid "Template engines"
+msgstr ""
+
+#: ../../../usage/templating.rst:11
+msgid ""
+"To stay lightweight, a Starlite installation does not include the *Jinja* or "
+"*Mako* libraries themselves. Before you can start using them, you have to "
+"install it via the respective extra:"
+msgstr ""
+
+#: ../../../usage/templating.rst:16
+msgid "``pip install starlite[jinja]`` for Jinja2"
+msgstr ""
+
+#: ../../../usage/templating.rst:17
+msgid "``pip install starlite[mako]`` for Mako"
+msgstr ""
+
+#: ../../../usage/templating.rst:21
+msgid ""
+"*Jinja* is included in the ``standard`` extra. If you installed Starlite "
+"using ``starlite[standard]``, you do not need to explicitly add the "
+"``jinja`` extra."
+msgstr ""
+
+#: ../../../usage/templating.rst:26
+msgid "Registering a template engine"
+msgstr ""
+
+#: ../../../usage/templating.rst:28
+msgid ""
+"To register one of the built-in template engines you simply need to pass it "
+"to the Starlite constructor:"
+msgstr ""
+
+#: ../../../usage/templating.rst:0
+msgid "Jinja"
+msgstr ""
+
+#: ../../../usage/templating.rst:36
+msgid ""
+"from pathlib import Path\n"
+"\n"
+"from starlite import Starlite, TemplateConfig\n"
+"from starlite.contrib.jinja import JinjaTemplateEngine\n"
+"\n"
+"app = Starlite(\n"
+"    route_handlers=[],\n"
+"    template_config=TemplateConfig(\n"
+"        directory=Path(\"templates\"),\n"
+"        engine=JinjaTemplateEngine,\n"
+"    ),\n"
+")"
+msgstr ""
+
+#: ../../../usage/templating.rst:0
+msgid "Mako"
+msgstr ""
+
+#: ../../../usage/templating.rst:42
+msgid ""
+"from pathlib import Path\n"
+"\n"
+"from starlite import Starlite, TemplateConfig\n"
+"from starlite.contrib.mako import MakoTemplateEngine\n"
+"\n"
+"app = Starlite(\n"
+"    route_handlers=[],\n"
+"    template_config=TemplateConfig(\n"
+"        directory=Path(\"templates\"),\n"
+"        engine=MakoTemplateEngine,\n"
+"    ),\n"
+")"
+msgstr ""
+
+#: ../../../usage/templating.rst:46
+msgid ""
+"The ``directory`` parameter passed to :class:`TemplateConfig <starlite."
+"config.template.TemplateConfig>` can be either a directory or list of "
+"directories to use for loading templates."
+msgstr ""
+
+#: ../../../usage/templating.rst:51
+msgid "Defining a custom template engine"
+msgstr ""
+
+#: ../../../usage/templating.rst:53
+msgid ""
+"If you wish to use another templating engine, you can easily do so by "
+"implementing :class:`TemplateEngineProtocol <starlite.template."
+"TemplateEngineProtocol>`. This class accepts a generic argument which should "
+"be the template class, and it specifies two methods:"
+msgstr ""
+
+#: ../../../usage/templating.rst:0
+msgid "Python 3.8+"
+msgstr ""
+
+#: ../../../usage/templating.rst:58
+msgid ""
+"from typing import Protocol, Union, List\n"
+"from pydantic import DirectoryPath\n"
+"\n"
+"# the template class of the respective library\n"
+"from some_lib import SomeTemplate\n"
+"\n"
+"\n"
+"class TemplateEngineProtocol(Protocol[SomeTemplate]):\n"
+"    def __init__(self, directory: Union[DirectoryPath, List[DirectoryPath]]) "
+"-> None:\n"
+"        \"\"\"Builds a template engine.\"\"\"\n"
+"        ...\n"
+"\n"
+"    def get_template(self, template_name: str) -> SomeTemplate:\n"
+"        \"\"\"Loads the template with template_name and returns it.\"\"\"\n"
+"        ..."
+msgstr ""
+
+#: ../../../usage/templating.rst:0
+msgid "Python 3.10+"
+msgstr ""
+
+#: ../../../usage/templating.rst:58
+msgid ""
+"from typing import Protocol\n"
+"from pydantic import DirectoryPath\n"
+"\n"
+"# the template class of the respective library\n"
+"from some_lib import SomeTemplate\n"
+"\n"
+"\n"
+"class TemplateEngineProtocol(Protocol[SomeTemplate]):\n"
+"    def __init__(self, directory: DirectoryPath | list[DirectoryPath]) -> "
+"None:\n"
+"        \"\"\"Builds a template engine.\"\"\"\n"
+"        ...\n"
+"\n"
+"    def get_template(self, template_name: str) -> SomeTemplate:\n"
+"        \"\"\"Loads the template with template_name and returns it.\"\"\"\n"
+"        ..."
+msgstr ""
+
+#: ../../../usage/templating.rst:75
+msgid ""
+"Once you have your custom engine you can register it as you would the built-"
+"in engines."
+msgstr ""
+
+#: ../../../usage/templating.rst:78
+msgid "Accessing the template engine instance"
+msgstr ""
+
+#: ../../../usage/templating.rst:80
+msgid ""
+"If you need to access the template engine instance, you can do so via the :"
+"class:`TemplateConfig.engine <starlite.config.template.TemplateConfig>` "
+"attribute:"
+msgstr ""
+
+#: ../../../usage/templating.rst:89
+msgid ""
+"from starlite import TemplateConfig\n"
+"from starlite.contrib.jinja import JinjaTemplateEngine\n"
+"\n"
+"template_config = TemplateConfig(engine=JinjaTemplateEngine)\n"
+"template_config.engine_instance.engine.globals[\"foo\"] = \"bar\""
+msgstr ""
+
+#: ../../../usage/templating.rst:0
+msgid "mako"
+msgstr ""
+
+#: ../../../usage/templating.rst:95
+msgid ""
+"from starlite import TemplateConfig\n"
+"from starlite.contrib.mako import MakoTemplateEngine\n"
+"\n"
+"template_config = TemplateConfig(engine=MakoTemplateEngine)\n"
+"template_config.engine_instance.engine.has_template(\"foo\")"
+msgstr ""
+
+#: ../../../usage/templating.rst:98
+msgid "Template responses"
+msgstr ""
+
+#: ../../../usage/templating.rst:100
+msgid ""
+"Once you have a template engine registered you can return :class:`Templates "
+"<starlite.Template>` from your route handlers:"
+msgstr ""
+
+#: ../../../usage/templating.rst:109
+msgid ""
+"from pathlib import Path\n"
+"\n"
+"from starlite import Starlite, Template, TemplateConfig, get\n"
+"from starlite.contrib.jinja import JinjaTemplateEngine\n"
+"\n"
+"\n"
+"@get(path=\"/\")\n"
+"def index(name: str) -> Template:\n"
+"    return Template(name=\"hello.html.jinja2\", context={\"name\": name})\n"
+"\n"
+"\n"
+"app = Starlite(\n"
+"    route_handlers=[index],\n"
+"    template_config=TemplateConfig(\n"
+"        directory=Path(\"templates\"),\n"
+"        engine=JinjaTemplateEngine,\n"
+"    ),\n"
+")"
+msgstr ""
+
+#: ../../../usage/templating.rst:115
+msgid ""
+"from pathlib import Path\n"
+"\n"
+"from starlite import Starlite, Template, TemplateConfig, get\n"
+"from starlite.contrib.mako import MakoTemplateEngine\n"
+"\n"
+"\n"
+"@get(path=\"/\")\n"
+"def index(name: str) -> Template:\n"
+"    return Template(name=\"hello.html.mako\", context={\"name\": name})\n"
+"\n"
+"\n"
+"app = Starlite(\n"
+"    route_handlers=[index],\n"
+"    template_config=TemplateConfig(\n"
+"        directory=Path(\"templates\"),\n"
+"        engine=MakoTemplateEngine,\n"
+"    ),\n"
+")"
+msgstr ""
+
+#: ../../../usage/templating.rst:118
+msgid ""
+"``name`` is the name of the template file within on of the specified "
+"directories. If no file with that name is found, a :class:"
+"`TemplateNotFoundException <starlite.exceptions.TemplateNotFoundException>` "
+"exception will be raised."
+msgstr ""
+
+#: ../../../usage/templating.rst:121
+msgid ""
+"``context`` is a dictionary containing arbitrary data that will be passed to "
+"the template engine's ``render`` method. For Jinja and Mako, this data will "
+"be available in the `template context <#template-context>`_"
+msgstr ""
+
+#: ../../../usage/templating.rst:125
+msgid "Template context"
+msgstr ""
+
+#: ../../../usage/templating.rst:127
+msgid ""
+"Both `Jinja2 <https://jinja.palletsprojects.com/en/3.0.x/>`_ and `Mako "
+"<https://www.makotemplates.org/>`_ support passing a context object to the "
+"template as well as defining callables that will be available inside the "
+"template."
+msgstr ""
+
+#: ../../../usage/templating.rst:131
+msgid "Accessing the request instance"
+msgstr ""
+
+#: ../../../usage/templating.rst:133
+msgid ""
+"The current :class:`Request <starlite.connection.request.Request>` is "
+"available within the template context under ``request``, which also provides "
+"access to the :doc:`app instance </usage/the-starlite-app>`."
+msgstr ""
+
+#: ../../../usage/templating.rst:136
+msgid ""
+"Accessing ``app.state.key`` for example would look like this: "
+"<strong>check_context_key: </strong>{{ check_context_key() }}"
+msgstr ""
+
+#: ../../../usage/templating.rst:144
+msgid ""
+"<html>\n"
+"    <body>\n"
+"        <div>\n"
+"            <span>My state value: {{request.app.state.some_key}}</span>\n"
+"        </div>\n"
+"    </body>\n"
+"</html>"
+msgstr ""
+
+#: ../../../usage/templating.rst:158
+msgid ""
+"html\n"
+"<html>\n"
+"    <body>\n"
+"        <div>\n"
+"            <span>My state value: ${request.app.state.some_key}</span>\n"
+"        </div>\n"
+"    </body>\n"
+"</html>"
+msgstr ""
+
+#: ../../../usage/templating.rst:172
+msgid "Adding CSRF inputs"
+msgstr ""
+
+#: ../../../usage/templating.rst:174
+msgid ""
+"If you want to add a hidden ``<input>`` tag containing a `CSRF token "
+"<https://developer.mozilla.org/en-US/docs/Web/Security/"
+"Types_of_attacks#cross-site_request_forgery_csrf>`_, you first need to "
+"configure :ref:`CSRF protection <usage/middleware/builtin-middleware:csrf>`. "
+"With that in place, you can now insert the CSRF input field inside an HTML "
+"form:"
+msgstr ""
+
+#: ../../../usage/templating.rst:184
+msgid ""
+"<html>\n"
+"    <body>\n"
+"        <div>\n"
+"            <form action=\"https://myserverurl.com/some-endpoint\" "
+"method=\"post\">\n"
+"                {{ csrf_input }}\n"
+"                <label for=\"fname\">First name:</label><br>\n"
+"                <input type=\"text\" id=\"fname\" name=\"fname\">\n"
+"                <label for=\"lname\">Last name:</label><br>\n"
+"                <input type=\"text\" id=\"lname\" name=\"lname\">\n"
+"            </form>\n"
+"        </div>\n"
+"    </body>\n"
+"</html>"
+msgstr ""
+
+#: ../../../usage/templating.rst:203
+msgid ""
+"<html>\n"
+"    <body>\n"
+"        <div>\n"
+"            <form action=\"https://myserverurl.com/some-endpoint\" "
+"method=\"post\">\n"
+"                ${csrf_input}\n"
+"                <label for=\"fname\">First name:</label><br>\n"
+"                <input type=\"text\" id=\"fname\" name=\"fname\">\n"
+"                <label for=\"lname\">Last name:</label><br>\n"
+"                <input type=\"text\" id=\"lname\" name=\"lname\">\n"
+"            </form>\n"
+"        </div>\n"
+"    </body>\n"
+"</html>"
+msgstr ""
+
+#: ../../../usage/templating.rst:221
+msgid ""
+"The input holds a CSRF token as its value and is hidden so users cannot see "
+"or interact with it. The token is sent back to the server when the form is "
+"submitted, and is checked by the CSRF middleware."
+msgstr ""
+
+#: ../../../usage/templating.rst:225
+msgid "Passing template context"
+msgstr ""
+
+#: ../../../usage/templating.rst:227
+msgid ""
+"Passing context to the template is very simple - its one of the kwargs "
+"expected by the :class:`Template <starlite.response.TemplateResponse>` "
+"container, so simply pass a string keyed dictionary of values:"
+msgstr ""
+
+#: ../../../usage/templating.rst:231
+msgid ""
+"from starlite import Template, get\n"
+"\n"
+"\n"
+"@get(path=\"/info\")\n"
+"def info() -> Template:\n"
+"    return Template(name=\"info.html\", context={\"numbers\": "
+"\"1234567890\"})"
+msgstr ""
+
+#: ../../../usage/templating.rst:241
+msgid "Template callables"
+msgstr ""
+
+#: ../../../usage/templating.rst:243
+msgid ""
+"Both `Jinja2 <https://jinja.palletsprojects.com/en/3.0.x/>`_ and `Mako "
+"<https://www.makotemplates.org/>`_ allow users to define custom callables "
+"that are ran inside the template. Starlite builds on this and offers some "
+"functions out of the box."
+msgstr ""
+
+#: ../../../usage/templating.rst:247
+msgid "Built-in callables"
+msgstr ""
+
+#: ../../../usage/templating.rst:252
+msgid "``url_for``"
+msgstr ""
+
+#: ../../../usage/templating.rst:250
+msgid ""
+"To access urls for route handlers you can use the ``url_for`` function. Its "
+"signature and behaviour matches :meth:`route_reverse <starlite.app.Starlite."
+"route_reverse>` behaviour. More details about route handler indexing can be "
+"found :ref:`here <usage/route-handlers:route handler indexing>`."
+msgstr ""
+
+#: ../../../usage/templating.rst:257
+msgid "``csrf_token``"
+msgstr ""
+
+#: ../../../usage/templating.rst:255
+msgid ""
+"This function returns the request's unique :ref:`CSRF token <usage/"
+"middleware/builtin-middleware:csrf>` You can use this if you wish to insert "
+"the ``csrf_token`` into non-HTML based templates, or insert it into HTML "
+"templates not using a hidden input field but by some other means, for "
+"example inside a special ``<meta>`` tag."
+msgstr ""
+
+#: ../../../usage/templating.rst:262
+msgid "``url_for_static_asset``"
+msgstr ""
+
+#: ../../../usage/templating.rst:260
+msgid ""
+"URLs for static files can be created using the ``url_for_static_asset`` "
+"function. It's signature and behaviour are identical to :meth:`app."
+"url_for_static_asset <starlite.app.Starlite.url_for_static_asset>`."
+msgstr ""
+
+#: ../../../usage/templating.rst:265
+msgid "Registering template callables"
+msgstr ""
+
+#: ../../../usage/templating.rst:267
+msgid ""
+"The  :class:`TemplateEngineProtocol <starlite.template.base."
+"TemplateEngineProtocol>` specifies the method ``register_template_callable`` "
+"that allows defining a custom callable on a template engine. This method is "
+"implemented for the two built in engines, and it can be used to register "
+"callables that will be injected into the template. The callable should "
+"expect one argument - the context dictionary. It can be any callable - a "
+"function, method or class that defines the call method. For example:"
+msgstr ""
+
+#: ../../../usage/templating.rst:279 ../../../usage/templating.rst:290
+msgid "template_functions.py"
+msgstr ""
+
+#: ../../../usage/templating.rst:279
+msgid ""
+"from pathlib import Path\n"
+"from typing import Dict\n"
+"\n"
+"from starlite import Starlite, Template, TemplateConfig, get\n"
+"from starlite.contrib.jinja import JinjaTemplateEngine\n"
+"\n"
+"\n"
+"def my_template_function(ctx: Dict) -> str:\n"
+"    return ctx.get(\"my_context_key\", \"nope\")\n"
+"\n"
+"\n"
+"def register_template_callables(engine: JinjaTemplateEngine) -> None:\n"
+"    engine.register_template_callable(\n"
+"        key=\"check_context_key\",\n"
+"        template_callable=my_template_function,\n"
+"    )\n"
+"\n"
+"\n"
+"template_config = TemplateConfig(\n"
+"    directory=Path(\"templates\"),\n"
+"    engine=JinjaTemplateEngine,\n"
+"    engine_callback=register_template_callables,\n"
+")\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"def index() -> Template:\n"
+"    return Template(name=\"index.html.jinja2\")\n"
+"\n"
+"\n"
+"app = Starlite(\n"
+"    route_handlers=[index],\n"
+"    template_config=template_config,\n"
+")"
+msgstr ""
+
+#: ../../../usage/templating.rst:279
+msgid ""
+"from pathlib import Path\n"
+"\n"
+"from starlite import Starlite, Template, TemplateConfig, get\n"
+"from starlite.contrib.jinja import JinjaTemplateEngine\n"
+"\n"
+"\n"
+"def my_template_function(ctx: dict) -> str:\n"
+"    return ctx.get(\"my_context_key\", \"nope\")\n"
+"\n"
+"\n"
+"def register_template_callables(engine: JinjaTemplateEngine) -> None:\n"
+"    engine.register_template_callable(\n"
+"        key=\"check_context_key\",\n"
+"        template_callable=my_template_function,\n"
+"    )\n"
+"\n"
+"\n"
+"template_config = TemplateConfig(\n"
+"    directory=Path(\"templates\"),\n"
+"    engine=JinjaTemplateEngine,\n"
+"    engine_callback=register_template_callables,\n"
+")\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"def index() -> Template:\n"
+"    return Template(name=\"index.html.jinja2\")\n"
+"\n"
+"\n"
+"app = Starlite(\n"
+"    route_handlers=[index],\n"
+"    template_config=template_config,\n"
+")"
+msgstr ""
+
+#: ../../../usage/templating.rst:282
+msgid "templates/index.html.jinja2"
+msgstr ""
+
+#: ../../../usage/templating.rst:282
+msgid "<strong>check_context_key: </strong>{{ check_context_key() }}\n"
+msgstr ""
+
+#: ../../../usage/templating.rst:290
+msgid ""
+"from pathlib import Path\n"
+"from typing import Dict\n"
+"\n"
+"from starlite import Starlite, Template, TemplateConfig, get\n"
+"from starlite.contrib.mako import MakoTemplateEngine\n"
+"\n"
+"\n"
+"def my_template_function(ctx: Dict) -> str:\n"
+"    return ctx.get(\"my_context_key\", \"nope\")\n"
+"\n"
+"\n"
+"def register_template_callables(engine: MakoTemplateEngine) -> None:\n"
+"    engine.register_template_callable(\n"
+"        key=\"check_context_key\",\n"
+"        template_callable=my_template_function,\n"
+"    )\n"
+"\n"
+"\n"
+"template_config = TemplateConfig(\n"
+"    directory=Path(\"templates\"),\n"
+"    engine=MakoTemplateEngine,\n"
+"    engine_callback=register_template_callables,\n"
+")\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"def index() -> Template:\n"
+"    return Template(name=\"index.html.mako\")\n"
+"\n"
+"\n"
+"app = Starlite(\n"
+"    route_handlers=[index],\n"
+"    template_config=template_config,\n"
+")"
+msgstr ""
+
+#: ../../../usage/templating.rst:290
+msgid ""
+"from pathlib import Path\n"
+"\n"
+"from starlite import Starlite, Template, TemplateConfig, get\n"
+"from starlite.contrib.mako import MakoTemplateEngine\n"
+"\n"
+"\n"
+"def my_template_function(ctx: dict) -> str:\n"
+"    return ctx.get(\"my_context_key\", \"nope\")\n"
+"\n"
+"\n"
+"def register_template_callables(engine: MakoTemplateEngine) -> None:\n"
+"    engine.register_template_callable(\n"
+"        key=\"check_context_key\",\n"
+"        template_callable=my_template_function,\n"
+"    )\n"
+"\n"
+"\n"
+"template_config = TemplateConfig(\n"
+"    directory=Path(\"templates\"),\n"
+"    engine=MakoTemplateEngine,\n"
+"    engine_callback=register_template_callables,\n"
+")\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"def index() -> Template:\n"
+"    return Template(name=\"index.html.mako\")\n"
+"\n"
+"\n"
+"app = Starlite(\n"
+"    route_handlers=[index],\n"
+"    template_config=template_config,\n"
+")"
+msgstr ""
+
+#: ../../../usage/templating.rst:293
+msgid "templates/index.html.mako"
+msgstr ""
+
+#: ../../../usage/templating.rst:293
+msgid "<strong>check_context_key: </strong>${ check_context_key() }\n"
+msgstr ""
+
+#: ../../../usage/templating.rst:298
+msgid ""
+"Run the example with ``uvicorn template_functions:app`` , visit  "
+"http://127.0.0.1:8000, and you'll see"
+msgstr ""
+
+#: ../../../usage/templating.rst:-1
+msgid "Template engine callable example"
+msgstr ""

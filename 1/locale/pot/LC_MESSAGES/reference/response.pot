@@ -1,0 +1,650 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/response.rst:2
+msgid "starlite.response"
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response:1
+msgid ""
+"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~starlite.response.base.T`]"
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response:1
+msgid ""
+"Base Starlite HTTP response class, used as the basis for all other response "
+"classes."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.__init__:1
+#: ../../../../starlite/response/redirect.py:docstring
+#: starlite.response.redirect.RedirectResponse.__init__:1
+#: ../../../../starlite/response/streaming.py:docstring
+#: starlite.response.streaming.StreamingResponse.__init__:1
+msgid "Initialize the response."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.__call__:0
+#: starlite.response.base.Response.__init__:0
+#: starlite.response.base.Response.delete_cookie:0
+#: starlite.response.base.Response.render:0
+#: starlite.response.base.Response.send_body:0
+#: starlite.response.base.Response.set_cookie:0
+#: starlite.response.base.Response.set_etag:0
+#: starlite.response.base.Response.set_header:0
+#: starlite.response.base.Response.start_response:0
+#: ../../../../starlite/response/file.py:docstring
+#: starlite.response.file.FileResponse.__init__:0
+#: starlite.response.file.FileResponse.send_body:0
+#: starlite.response.file.FileResponse.start_response:0
+#: ../../../../starlite/response/redirect.py:docstring
+#: starlite.response.redirect.RedirectResponse.__init__:0
+#: ../../../../starlite/response/streaming.py:docstring
+#: starlite.response.streaming.StreamingResponse.__init__:0
+#: starlite.response.streaming.StreamingResponse.send_body:0
+#: ../../../../starlite/response/template.py:docstring
+#: starlite.response.template.TemplateResponse.__init__:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.__init__:3
+#: starlite.response.base.Response.render:3
+msgid "A value for the response body that will be rendered into bytes string."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.__init__:4
+#: ../../../../starlite/response/file.py:docstring
+#: starlite.response.file.FileResponse.__init__:8
+#: ../../../../starlite/response/streaming.py:docstring
+#: starlite.response.streaming.StreamingResponse.__init__:4
+msgid "An HTTP status code."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.__init__:5
+#: ../../../../starlite/response/streaming.py:docstring
+#: starlite.response.streaming.StreamingResponse.__init__:5
+msgid "A value for the response 'Content-Type' header."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.__init__:6
+#: ../../../../starlite/response/file.py:docstring
+#: starlite.response.file.FileResponse.__init__:12
+#: ../../../../starlite/response/streaming.py:docstring
+#: starlite.response.streaming.StreamingResponse.__init__:6
+#: ../../../../starlite/response/template.py:docstring
+#: starlite.response.template.TemplateResponse.__init__:7
+msgid ""
+"A :class:`BackgroundTask <starlite.datastructures.BackgroundTask>` instance "
+"or :class:`BackgroundTasks <starlite.datastructures.BackgroundTasks>` to "
+"execute after the response is finished. Defaults to None."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.__init__:9
+#: ../../../../starlite/response/file.py:docstring
+#: starlite.response.file.FileResponse.__init__:15
+#: ../../../../starlite/response/redirect.py:docstring
+#: starlite.response.redirect.RedirectResponse.__init__:6
+#: ../../../../starlite/response/streaming.py:docstring
+#: starlite.response.streaming.StreamingResponse.__init__:9
+#: ../../../../starlite/response/template.py:docstring
+#: starlite.response.template.TemplateResponse.__init__:10
+msgid ""
+"A string keyed dictionary of response headers. Header keys are insensitive."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.__init__:10
+#: ../../../../starlite/response/file.py:docstring
+#: starlite.response.file.FileResponse.__init__:16
+#: ../../../../starlite/response/redirect.py:docstring
+#: starlite.response.redirect.RedirectResponse.__init__:7
+#: ../../../../starlite/response/streaming.py:docstring
+#: starlite.response.streaming.StreamingResponse.__init__:10
+#: ../../../../starlite/response/template.py:docstring
+#: starlite.response.template.TemplateResponse.__init__:11
+msgid ""
+"A list of :class:`Cookie <starlite.datastructures.Cookie>` instances to be "
+"set under the response 'Set-Cookie' header."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.__init__:12
+#: ../../../../starlite/response/file.py:docstring
+#: starlite.response.file.FileResponse.__init__:17
+#: ../../../../starlite/response/redirect.py:docstring
+#: starlite.response.redirect.RedirectResponse.__init__:8
+#: ../../../../starlite/response/streaming.py:docstring
+#: starlite.response.streaming.StreamingResponse.__init__:11
+msgid "The encoding to be used for the response headers."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.__init__:13
+#: ../../../../starlite/response/file.py:docstring
+#: starlite.response.file.FileResponse.__init__:18
+#: ../../../../starlite/response/streaming.py:docstring
+#: starlite.response.streaming.StreamingResponse.__init__:12
+msgid ""
+"Whether the response should send only the headers (\"head\" request) or also "
+"the content."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.__init__:14
+msgid ""
+"A mapping of types to callables that transform them into types supported for "
+"serialization."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.serializer:1
+msgid "Transform non-natively supported types into supported types."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.serializer:3
+msgid ""
+"Should raise ``TypeError`` if a type cannot be transformed into a supported "
+"type"
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.get_serializer:1
+msgid "Get the serializer for this response class."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.get_serializer:3
+msgid ""
+"If `Response.serializer` is not overridden in a subclass, use "
+"``default_serializer`` and pass ``type_encoders`` to it."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.set_cookie:1
+msgid ""
+"Set a cookie on the response. If passed a :class:`Cookie <starlite.Cookie>` "
+"instance, keyword arguments will be ignored."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.set_cookie:4
+msgid "Key for the cookie or a :class:`Cookie <starlite.Cookie>` instance."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.set_cookie:5
+msgid "Value for the cookie, if none given defaults to empty string."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.set_cookie:6
+msgid "Maximal age of the cookie before its invalidated."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.set_cookie:7
+msgid "Expiration date as unix MS timestamp."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.set_cookie:8
+msgid ""
+"Path fragment that must exist in the request url for the cookie to be valid. "
+"Defaults to '/'."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.set_cookie:9
+msgid "Domain for which the cookie is valid."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.set_cookie:10
+msgid "Https is required for the cookie."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.set_cookie:11
+msgid "Forbids javascript to access the cookie via 'Document.cookie'."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.set_cookie:12
+msgid ""
+"Controls whether a cookie is sent with cross-site requests. Defaults to "
+"``lax``."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.Response.content_length:0
+#: starlite.response.base.Response.__call__:0
+#: starlite.response.base.Response.after_response:0
+#: starlite.response.base.Response.delete_cookie:0
+#: starlite.response.base.Response.encode_headers:0
+#: starlite.response.base.Response.render:0
+#: starlite.response.base.Response.send_body:0
+#: starlite.response.base.Response.set_cookie:0
+#: starlite.response.base.Response.set_etag:0
+#: starlite.response.base.Response.set_header:0
+#: starlite.response.base.Response.start_response:0
+#: ../../../../starlite/response/file.py:docstring
+#: starlite.response.FileResponse.content_disposition:0
+#: starlite.response.FileResponse.content_length:0
+#: starlite.response.file.FileResponse.send_body:0
+#: starlite.response.file.FileResponse.start_response:0
+#: ../../../../starlite/response/streaming.py:docstring
+#: starlite.response.streaming.StreamingResponse.send_body:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.delete_cookie:7
+#: starlite.response.base.Response.set_cookie:14
+#: starlite.response.base.Response.set_header:6
+msgid "None."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.set_header:1
+msgid "Set a header on the response."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.set_header:3
+msgid "Header key."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.set_header:4
+msgid "Header value."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.set_etag:1
+msgid "Set an etag header."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.set_etag:3
+msgid "An etag value."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.__call__:7
+#: starlite.response.base.Response.after_response:3
+#: starlite.response.base.Response.send_body:10
+#: starlite.response.base.Response.set_etag:5
+#: starlite.response.base.Response.start_response:5
+#: ../../../../starlite/response/file.py:docstring
+#: starlite.response.file.FileResponse.send_body:6
+#: starlite.response.file.FileResponse.start_response:5
+#: ../../../../starlite/response/streaming.py:docstring
+#: starlite.response.streaming.StreamingResponse.send_body:6
+msgid "None"
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.delete_cookie:1
+msgid "Delete a cookie."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.delete_cookie:3
+msgid "Key of the cookie."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.delete_cookie:4
+msgid "Path of the cookie."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.delete_cookie:5
+msgid "Domain of the cookie."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.render:1
+msgid "Handle the rendering of content T into a bytes string."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.render:5
+msgid "An encoded bytes string"
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.Response.content_length:1
+#: ../../../../starlite/response/file.py:docstring
+#: starlite.response.FileResponse.content_length:1
+msgid "Content length of the response if applicable."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.Response.content_length:3
+msgid ""
+"The content length of the body (e.g. for use in a \"Content-Length\" "
+"header). If the response does not have a body, this value is ``None``"
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.encode_headers:1
+msgid "Encode the response headers as a list of byte tuples."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.encode_headers:3
+#: starlite.response.base.Response.send_body:6
+#: ../../../../starlite/response/file.py:docstring
+#: starlite.response.file.FileResponse.__init__:3
+msgid "Notes"
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.encode_headers:5
+msgid ""
+"A 'Content-Length' header will be added if appropriate and not provided by "
+"the user."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.encode_headers:7
+msgid ""
+"A list of tuples containing the headers and cookies of the request in a "
+"format ready for ASGI transmission."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.after_response:1
+msgid "Execute after the response is sent."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.start_response:1
+#: ../../../../starlite/response/file.py:docstring
+#: starlite.response.file.FileResponse.start_response:1
+msgid ""
+"Emit the start event of the response. This event includes the headers and "
+"status codes."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.__call__:5
+#: starlite.response.base.Response.send_body:3
+#: starlite.response.base.Response.start_response:3
+#: ../../../../starlite/response/file.py:docstring
+#: starlite.response.file.FileResponse.send_body:3
+#: starlite.response.file.FileResponse.start_response:3
+#: ../../../../starlite/response/streaming.py:docstring
+#: starlite.response.streaming.StreamingResponse.send_body:3
+msgid "The ASGI send function."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.send_body:1
+msgid "Emit the response body."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.__call__:4
+#: starlite.response.base.Response.send_body:4
+#: ../../../../starlite/response/file.py:docstring
+#: starlite.response.file.FileResponse.send_body:4
+#: ../../../../starlite/response/streaming.py:docstring
+#: starlite.response.streaming.StreamingResponse.send_body:4
+msgid "The ASGI receive function."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.send_body:8
+msgid ""
+"Response subclasses should customize this method if there is a need to "
+"customize sending data."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.__call__:1
+msgid "ASGI callable of the ``Response``."
+msgstr ""
+
+#: ../../../../starlite/response/base.py:docstring of
+#: starlite.response.base.Response.__call__:3
+msgid "The ASGI connection scope."
+msgstr ""
+
+#: ../../../../starlite/response/redirect.py:docstring of
+#: starlite.response.redirect.RedirectResponse:1
+msgid ""
+"Bases: :py:class:`~starlite.response.base.Response`\\ [:py:obj:`~typing.Any`]"
+msgstr ""
+
+#: ../../../../starlite/response/redirect.py:docstring of
+#: starlite.response.redirect.RedirectResponse:1
+msgid "A redirect response."
+msgstr ""
+
+#: ../../../../starlite/response/redirect.py:docstring of
+#: starlite.response.redirect.RedirectResponse.__init__:3
+msgid "A url to redirect to."
+msgstr ""
+
+#: ../../../../starlite/response/redirect.py:docstring of
+#: starlite.response.redirect.RedirectResponse.__init__:4
+msgid ""
+"An HTTP status code. The status code should be one of 301, 302, 303, 307 or "
+"308, otherwise an exception will be raised. ."
+msgstr ""
+
+#: ../../../../starlite/response/redirect.py:docstring of
+#: starlite.response.redirect.RedirectResponse.__init__:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../starlite/response/redirect.py:docstring of
+#: starlite.response.redirect.RedirectResponse.__init__:10
+msgid "If status code is not a redirect status code."
+msgstr ""
+
+#: ../../../../starlite/response/streaming.py:docstring of
+#: starlite.response.streaming.StreamingResponse:1
+msgid ""
+"Bases: :py:class:`~starlite.response.base.Response`\\ [:py:obj:`~typing."
+"Union`\\ [:py:class:`~typing.Iterable`\\ [:py:obj:`~typing.Union`\\ [:py:"
+"class:`str`, :py:class:`bytes`]], :py:class:`~typing.Iterator`\\ [:py:obj:"
+"`~typing.Union`\\ [:py:class:`str`, :py:class:`bytes`]], :py:class:`~typing."
+"AsyncIterable`\\ [:py:obj:`~typing.Union`\\ [:py:class:`str`, :py:class:"
+"`bytes`]], :py:class:`~typing.AsyncIterator`\\ [:py:obj:`~typing.Union`\\ [:"
+"py:class:`str`, :py:class:`bytes`]]]]"
+msgstr ""
+
+#: ../../../../starlite/response/streaming.py:docstring of
+#: starlite.response.streaming.StreamingResponse:1
+msgid ""
+"An HTTP response that streams the response data as a series of ASGI 'http."
+"response.body' events."
+msgstr ""
+
+#: ../../../../starlite/response/streaming.py:docstring of
+#: starlite.response.streaming.StreamingResponse.__init__:3
+msgid "A sync or async iterator or iterable."
+msgstr ""
+
+#: ../../../../starlite/response/file.py:docstring of
+#: starlite.response.file.FileResponse.send_body:1
+#: ../../../../starlite/response/streaming.py:docstring
+#: starlite.response.streaming.StreamingResponse.send_body:1
+msgid "Emit a stream of events correlating with the response body."
+msgstr ""
+
+#: ../../../../starlite/response/template.py:docstring of
+#: starlite.response.template.TemplateResponse:1
+msgid ""
+"Bases: :py:class:`~starlite.response.base.Response`\\ [:py:class:`bytes`]"
+msgstr ""
+
+#: ../../../../starlite/response/template.py:docstring of
+#: starlite.response.template.TemplateResponse:1
+msgid ""
+"Template-based response, rendering a given template into a bytes string."
+msgstr ""
+
+#: ../../../../starlite/response/template.py:docstring of
+#: starlite.response.template.TemplateResponse.__init__:1
+msgid "Handle the rendering of a given template into a bytes string."
+msgstr ""
+
+#: ../../../../starlite/response/template.py:docstring of
+#: starlite.response.template.TemplateResponse.__init__:3
+msgid "Path-like name for the template to be rendered, e.g. \"index.html\"."
+msgstr ""
+
+#: ../../../../starlite/response/template.py:docstring of
+#: starlite.response.template.TemplateResponse.__init__:4
+msgid "The template engine class to use to render the response."
+msgstr ""
+
+#: ../../../../starlite/response/template.py:docstring of
+#: starlite.response.template.TemplateResponse.__init__:5
+msgid "A value for the response HTTP status code."
+msgstr ""
+
+#: ../../../../starlite/response/template.py:docstring of
+#: starlite.response.template.TemplateResponse.__init__:6
+msgid ""
+"A dictionary of key/value pairs to be passed to the temple engine's render "
+"method."
+msgstr ""
+
+#: ../../../../starlite/response/template.py:docstring of
+#: starlite.response.template.TemplateResponse.__init__:13
+msgid "Content encoding"
+msgstr ""
+
+#: ../../../../starlite/response/template.py:docstring of
+#: starlite.response.template.TemplateResponse.__init__:14
+msgid ""
+"A string or member of the :class:`MediaType <starlite.enums.MediaType>` "
+"enum. If not set, try to infer the media type based on the template name. If "
+"this fails, fall back to `text/plain`."
+msgstr ""
+
+#: ../../../../starlite/response/file.py:docstring of
+#: starlite.response.file.FileResponse:1
+msgid "Bases: :py:class:`~starlite.response.streaming.StreamingResponse`"
+msgstr ""
+
+#: ../../../../starlite/response/file.py:docstring of
+#: starlite.response.file.FileResponse:1
+msgid "A response, streaming a file as response body."
+msgstr ""
+
+#: ../../../../starlite/response/file.py:docstring of
+#: starlite.response.file.FileResponse.__init__:1
+msgid "Initialize ``FileResponse``"
+msgstr ""
+
+#: ../../../../starlite/response/file.py:docstring of
+#: starlite.response.file.FileResponse.__init__:5
+msgid ""
+"This class extends the :class:`StreamingResponse <starlite.response."
+"StreamingResponse>` class."
+msgstr ""
+
+#: ../../../../starlite/response/file.py:docstring of
+#: starlite.response.file.FileResponse.__init__:7
+msgid "A file path in one of the supported formats."
+msgstr ""
+
+#: ../../../../starlite/response/file.py:docstring of
+#: starlite.response.file.FileResponse.__init__:9
+msgid ""
+"A value for the response 'Content-Type' header. If not provided, the value "
+"will be either derived from the filename if provided and supported by the "
+"stdlib, or will default to 'application/octet-stream'."
+msgstr ""
+
+#: ../../../../starlite/response/file.py:docstring of
+#: starlite.response.file.FileResponse.__init__:19
+msgid "An optional filename to set in the header."
+msgstr ""
+
+#: ../../../../starlite/response/file.py:docstring of
+#: starlite.response.file.FileResponse.__init__:20
+msgid ""
+"An optional result of calling 'os.stat'. If not provided, this will be done "
+"by the response constructor."
+msgstr ""
+
+#: ../../../../starlite/response/file.py:docstring of
+#: starlite.response.file.FileResponse.__init__:22
+msgid "The chunk sizes to use when streaming the file. Defaults to 1MB."
+msgstr ""
+
+#: ../../../../starlite/response/file.py:docstring of
+#: starlite.response.file.FileResponse.__init__:23
+msgid ""
+"The type of the 'Content-Disposition'. Either ``inline`` or ``attachment``."
+msgstr ""
+
+#: ../../../../starlite/response/file.py:docstring of
+#: starlite.response.file.FileResponse.__init__:24
+msgid ""
+"An optional :class:`ETag <starlite.datastructures.ETag>` instance. If not "
+"provided, an etag will be automatically generated."
+msgstr ""
+
+#: ../../../../starlite/response/file.py:docstring of
+#: starlite.response.file.FileResponse.__init__:26
+msgid ""
+"An implementation of the :class:`FileSystemProtocol <starlite.types."
+"FileSystemProtocol>`. If provided it will be used to load the file."
+msgstr ""
+
+#: ../../../../starlite/response/file.py:docstring of
+#: starlite.response.file.FileResponse.__init__:28
+msgid ""
+"The output of calling ``file_system.info(..)``, equivalent to providing a "
+"``stat_result``."
+msgstr ""
+
+#: ../../../../starlite/response/file.py:docstring of
+#: starlite.response.FileResponse.content_disposition:1
+msgid "Content disposition."
+msgstr ""
+
+#: ../../../../starlite/response/file.py:docstring of
+#: starlite.response.FileResponse.content_disposition:3
+msgid "A value for the 'Content-Disposition' header."
+msgstr ""
+
+#: ../../../../starlite/response/file.py:docstring of
+#: starlite.response.FileResponse.content_length:3
+msgid ""
+"Returns the value of 'self.stat_result.st_size' to populate the 'Content-"
+"Length' header."
+msgstr ""

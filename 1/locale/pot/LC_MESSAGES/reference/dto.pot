@@ -1,0 +1,203 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/dto.rst:2
+msgid "starlite.dto"
+msgstr ""
+
+#: ../../../../starlite/dto.py:docstring of starlite.dto.get_field_type:1
+msgid "Given a model field instance, return the correct type."
+msgstr ""
+
+#: ../../../../starlite/dto.py:docstring of
+#: starlite.dto.DTO.from_model_instance:0
+#: starlite.dto.DTO.from_model_instance_async:0
+#: starlite.dto.DTOFactory.__call__:0 starlite.dto.DTOFactory.__init__:0
+#: starlite.dto.get_field_type:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../starlite/dto.py:docstring of starlite.dto.get_field_type:3
+msgid "`pydantic.fields.ModelField`"
+msgstr ""
+
+#: ../../../../starlite/dto.py:docstring of
+#: starlite.dto.DTO.from_model_instance:0
+#: starlite.dto.DTO.from_model_instance_async:0
+#: starlite.dto.DTO.to_model_instance:0 starlite.dto.DTOFactory.__call__:0
+#: starlite.dto.get_field_type:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/dto.py:docstring of starlite.dto.get_field_type:6
+msgid "Type of field."
+msgstr ""
+
+#: ../../../../starlite/dto.py:docstring of starlite.dto.DTO:1
+msgid ""
+"Bases: :py:class:`~pydantic.generics.GenericModel`, :py:class:`~typing."
+"Generic`\\ [:py:obj:`~starlite.dto.T`]"
+msgstr ""
+
+#: ../../../../starlite/dto.py:docstring of starlite.dto.DTO:1
+msgid "Data Transfer Object."
+msgstr ""
+
+#: ../../../../starlite/dto.py:docstring of
+#: starlite.dto.DTO.from_model_instance:1
+msgid ""
+"Given an instance of the source model, create an instance of the given DTO "
+"subclass."
+msgstr ""
+
+#: ../../../../starlite/dto.py:docstring of
+#: starlite.dto.DTO.from_model_instance:3
+#: starlite.dto.DTO.from_model_instance_async:3
+msgid "instance of source model."
+msgstr ""
+
+#: ../../../../starlite/dto.py:docstring of
+#: starlite.dto.DTO.from_model_instance:6
+#: starlite.dto.DTO.from_model_instance_async:6
+msgid "Instance of the :class:`DTO` subclass."
+msgstr ""
+
+#: ../../../../starlite/dto.py:docstring of
+#: starlite.dto.DTO.from_model_instance_async:1
+msgid ""
+"Given an instance of the source model, create an instance of the given DTO "
+"subclass asynchronously."
+msgstr ""
+
+#: ../../../../starlite/dto.py:docstring of
+#: starlite.dto.DTO.to_model_instance:1
+msgid ""
+"Convert the DTO instance into an instance of the original class from which "
+"the DTO was created."
+msgstr ""
+
+#: ../../../../starlite/dto.py:docstring of
+#: starlite.dto.DTO.to_model_instance:3
+msgid "Instance of source model type."
+msgstr ""
+
+#: ../../../../starlite/dto.py:docstring of starlite.dto.DTOFactory:1
+msgid "Bases: :py:class:`object`"
+msgstr ""
+
+#: ../../../../starlite/dto.py:docstring of starlite.dto.DTOFactory:1
+msgid "Create :class:`DTO` type."
+msgstr ""
+
+#: ../../../../starlite/dto.py:docstring of starlite.dto.DTOFactory:3
+msgid ""
+"Pydantic models, :class:`TypedDict <typing.TypedDict>` and dataclasses are "
+"natively supported. Other types supported via plugins."
+msgstr ""
+
+#: ../../../../starlite/dto.py:docstring of starlite.dto.DTOFactory.__init__:1
+msgid "Initialize ``DTOFactory``"
+msgstr ""
+
+#: ../../../../starlite/dto.py:docstring of starlite.dto.DTOFactory.__init__:3
+msgid "Plugins used to support ``DTO`` construction from arbitrary types."
+msgstr ""
+
+#: ../../../../starlite/dto.py:docstring of starlite.dto.DTOFactory.__call__:1
+msgid ""
+"Given a supported model class - either pydantic, :class:`TypedDict <typing."
+"TypedDict>`, dataclass or a class supported via plugins, create a DTO "
+"pydantic model class."
+msgstr ""
+
+#: ../../../../starlite/dto.py:docstring of starlite.dto.DTOFactory.__call__:4
+msgid ""
+"An instance of the factory must first be created, passing any plugins to it. "
+"It can then be used to create a DTO by calling the instance like a function. "
+"Additionally, it can exclude (drop) attributes specifies in the 'exclude' "
+"list and remap field names and/or field types."
+msgstr ""
+
+#: ../../../../starlite/dto.py:docstring of starlite.dto.DTOFactory.__call__:8
+msgid "For example, given a pydantic model"
+msgstr ""
+
+#: ../../../../starlite/dto.py:docstring of starlite.dto.DTOFactory.__call__:22
+msgid "``MyClassDTO`` is now equal to this:"
+msgstr ""
+
+#: ../../../../starlite/dto.py:docstring of starlite.dto.DTOFactory.__call__:30
+msgid "It can be used as a regular pydantic model:"
+msgstr ""
+
+#: ../../../../starlite/dto.py:docstring of starlite.dto.DTOFactory.__call__:39
+msgid ""
+"This will affect parsing, validation and how OpenAPI schema is generated "
+"exactly like when using a pydantic model."
+msgstr ""
+
+#: ../../../../starlite/dto.py:docstring of starlite.dto.DTOFactory.__call__:41
+msgid ""
+"Note: Although the value generated is a pydantic factory, because it is "
+"being generated programmatically, it's currently not possible to extend "
+"editor auto-complete for the DTO properties - it will be typed as a Pydantic "
+"BaseModel, but no attributes will be inferred in the editor."
+msgstr ""
+
+#: ../../../../starlite/dto.py:docstring of starlite.dto.DTOFactory.__call__:45
+msgid "This becomes the name of the generated pydantic model."
+msgstr ""
+
+#: ../../../../starlite/dto.py:docstring of starlite.dto.DTOFactory.__call__:47
+msgid ""
+"A type that is either a subclass of ``BaseModel``, :class:`TypedDict <typing."
+"TypedDict>`, a ``dataclass`` or any other type with a plugin registered."
+msgstr ""
+
+#: ../../../../starlite/dto.py:docstring of starlite.dto.DTOFactory.__call__:50
+msgid ""
+"Names of attributes on ``source``. Named Attributes will not have a field "
+"generated on the resultant pydantic model."
+msgstr ""
+
+#: ../../../../starlite/dto.py:docstring of starlite.dto.DTOFactory.__call__:53
+msgid ""
+"Keys are names of attributes on ``source``. Values are either a ``str`` to "
+"rename an attribute, or tuple `(str, Any)` to remap both name and type of "
+"the attribute."
+msgstr ""
+
+#: ../../../../starlite/dto.py:docstring of starlite.dto.DTOFactory.__call__:57
+msgid ""
+"Add fields to the model that don't exist on ``source``. These are passed as "
+"kwargs to `pydantic.create_model()`."
+msgstr ""
+
+#: ../../../../starlite/dto.py:docstring of starlite.dto.DTOFactory.__call__:61
+msgid "Type[DTO[T]]"
+msgstr ""
+
+#: ../../../../starlite/dto.py:docstring of starlite.dto.DTOFactory.__call__:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../starlite/dto.py:docstring of starlite.dto.DTOFactory.__call__:63
+msgid ""
+"If ``source`` is not a pydantic model, :class:`TypedDict <typing."
+"TypedDict>`     or dataclass, and there is no plugin registered for its type."
+msgstr ""
