@@ -1,0 +1,72 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/dto/msgspec_dto.rst:2
+msgid "msgspec_dto"
+msgstr ""
+
+#: ../../../../litestar/dto/msgspec_dto.py:docstring of
+#: litestar.dto.msgspec_dto.MsgspecDTO:1
+msgid ""
+"Bases: :py:class:`~litestar.dto.base_dto.AbstractDTO`, :py:class:`~typing."
+"Generic`\\ [:py:obj:`~litestar.dto.msgspec_dto.T`]"
+msgstr ""
+
+#: ../../../../litestar/dto/msgspec_dto.py:docstring of
+#: litestar.dto.msgspec_dto.MsgspecDTO:1
+msgid "Support for domain modelling with Msgspec."
+msgstr ""
+
+#: ../../../../litestar/dto/msgspec_dto.py:docstring of
+#: litestar.dto.msgspec_dto.MsgspecDTO.generate_field_definitions:1
+msgid "Generate ``FieldDefinition`` instances from ``model_type``."
+msgstr ""
+
+#: ../../../../litestar/dto/msgspec_dto.py:docstring of
+#: litestar.dto.msgspec_dto.MsgspecDTO.generate_field_definitions:0
+msgid "Yields"
+msgstr ""
+
+#: ../../../../litestar/dto/msgspec_dto.py:docstring of
+#: litestar.dto.msgspec_dto.MsgspecDTO.generate_field_definitions:3
+msgid "``FieldDefinition`` instances."
+msgstr ""
+
+#: ../../../../litestar/dto/msgspec_dto.py:docstring of
+#: litestar.dto.msgspec_dto.MsgspecDTO.detect_nested_field:1
+msgid ""
+"Return ``True`` if ``field_definition`` represents a nested model field."
+msgstr ""
+
+#: ../../../reference/dto/msgspec_dto.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../litestar/dto/msgspec_dto.py:docstring of
+#: litestar.dto.msgspec_dto.MsgspecDTO.detect_nested_field:3
+msgid "inspect type to determine if field represents a nested model."
+msgstr ""
+
+#: ../../../reference/dto/msgspec_dto.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/dto/msgspec_dto.py:docstring of
+#: litestar.dto.msgspec_dto.MsgspecDTO.detect_nested_field:5
+msgid "``True`` if ``field_definition`` represents a nested model field."
+msgstr ""

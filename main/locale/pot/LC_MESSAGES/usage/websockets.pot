@@ -1,0 +1,939 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../usage/websockets.rst:2
+msgid "WebSockets"
+msgstr ""
+
+#: ../../../usage/websockets.rst:4
+msgid "There are three ways to handle WebSockets in Litestar:"
+msgstr ""
+
+#: ../../../usage/websockets.rst:6
+msgid ""
+"The low-level :func:`~litestar.handlers.websocket` route handler, providing "
+"basic abstractions over the ASGI WebSocket interface"
+msgstr ""
+
+#: ../../../usage/websockets.rst:8
+msgid ""
+":func:`~litestar.handlers.websocket_listener` and :class:`~litestar.handlers."
+"WebsocketListener`\\  : Reactive, event-driven WebSockets with full "
+"serialization and DTO support and support for a synchronous interface"
+msgstr ""
+
+#: ../../../usage/websockets.rst:11
+msgid ""
+":func:`~litestar.handlers.websocket_stream`: Proactive, stream oriented "
+"WebSockets with full serialization and DTO support"
+msgstr ""
+
+#: ../../../usage/websockets.rst:13
+msgid ""
+":func:`~litestar.handlers.send_websocket_stream`: Proactive, stream oriented "
+"WebSockets"
+msgstr ""
+
+#: ../../../usage/websockets.rst:17
+msgid ""
+"The main difference between the low and high level interfaces is that, "
+"dealing with low level interface requires, setting up a loop and listening "
+"for incoming data, handling exceptions, client disconnects, and parsing "
+"incoming and serializing outgoing data."
+msgstr ""
+
+#: ../../../usage/websockets.rst:24
+msgid "WebSocket Listeners"
+msgstr ""
+
+#: ../../../usage/websockets.rst:26
+msgid ""
+"WebSocket Listeners can be used to interact with a WebSocket in an event-"
+"driven manner, using a callback style interface. They treat a WebSocket "
+"handler like any other route handler: A callable that takes in incoming data "
+"in an already pre-processed form and returns data to be serialized and sent "
+"over the connection. The low level details will be handled behind the "
+"curtains."
+msgstr ""
+
+#: ../../../usage/websockets.rst:34
+msgid ""
+"from litestar import Litestar\n"
+"from litestar.handlers.websocket_handlers import websocket_listener\n"
+"\n"
+"\n"
+"@websocket_listener(\"/\")\n"
+"async def handler(data: str) -> str:\n"
+"    return data\n"
+"\n"
+"\n"
+"app = Litestar([handler])"
+msgstr ""
+
+#: ../../../usage/websockets.rst:47
+msgid ""
+"This handler will accept connections on ``/``, and wait to receive data. "
+"Once a message has been received, it will be passed into the handler "
+"function defined, via the ``data`` parameter. This works like a regular "
+"route handler, so it's possible to specify the type of data which should be "
+"received, and it will be converted accordingly."
+msgstr ""
+
+#: ../../../usage/websockets.rst:53
+msgid ""
+"Contrary to WebSocket route handlers, functions decorated with :func:"
+"`websocket_listener <.handlers.websocket_listener>` don't have to be "
+"asynchronous."
+msgstr ""
+
+#: ../../../usage/websockets.rst:60
+msgid "Receiving data"
+msgstr ""
+
+#: ../../../usage/websockets.rst:62
+msgid ""
+"Data can be received in the listener via the ``data`` parameter. The data "
+"passed to this will be converted / parsed according to the given type "
+"annotation and supports :class:`str`, :class:`bytes`, or arbitrary :class:"
+"`dict` / or :class:`list` in the form of JSON. .. important::"
+msgstr ""
+
+#: ../../../usage/websockets.rst:68
+msgid ""
+"The listeners will default to JSON unless `data` is annotated with `str` or "
+"`bytes`"
+msgstr ""
+
+#: ../../../usage/websockets.rst:0
+msgid "JSON"
+msgstr ""
+
+#: ../../../usage/websockets.rst:76
+msgid ""
+"from litestar import Litestar, websocket_listener\n"
+"\n"
+"\n"
+"@websocket_listener(\"/\")\n"
+"async def handler(data: dict[str, str]) -> dict[str, str]:\n"
+"    return data\n"
+"\n"
+"\n"
+"app = Litestar([handler])"
+msgstr ""
+
+#: ../../../usage/websockets.rst:0
+msgid "Text"
+msgstr ""
+
+#: ../../../usage/websockets.rst:82 ../../../usage/websockets.rst:115
+msgid ""
+"from litestar import Litestar, websocket_listener\n"
+"\n"
+"\n"
+"@websocket_listener(\"/\")\n"
+"async def handler(data: str) -> str:\n"
+"    return data\n"
+"\n"
+"\n"
+"app = Litestar([handler])"
+msgstr ""
+
+#: ../../../usage/websockets.rst:0
+msgid "Bytes"
+msgstr ""
+
+#: ../../../usage/websockets.rst:88
+msgid ""
+"from litestar import Litestar, websocket_listener\n"
+"\n"
+"\n"
+"@websocket_listener(\"/\")\n"
+"async def handler(data: bytes) -> str:\n"
+"    return data.decode(\"utf-8\")\n"
+"\n"
+"\n"
+"app = Litestar([handler])"
+msgstr ""
+
+#: ../../../usage/websockets.rst:93
+msgid ""
+"Contrary to route handlers, JSON data will only be parsed but not validated. "
+"This is a limitation of the current implementation and will change in future "
+"versions."
+msgstr ""
+
+#: ../../../usage/websockets.rst:98
+msgid "Sending data"
+msgstr ""
+
+#: ../../../usage/websockets.rst:100
+msgid ""
+"Sending data is done by simply returning the value to be sent from the "
+"handler function. Similar to receiving data, type annotations configure how "
+"the data is being handled. Values that are not :class:`str` or :class:"
+"`bytes` are assumed to be JSON encodable and will be serialized accordingly "
+"before being sent. This serialization is available for all data types "
+"currently supported by Litestar ( :doc:`dataclasses <python:library/"
+"dataclasses>`\\ , :class:`TypedDict <typing.TypedDict>`, :class:`NamedTuple "
+"<typing.NamedTuple>`,  :class:`msgspec.Struct`, etc.), including DTOs."
+msgstr ""
+
+#: ../../../usage/websockets.rst:120
+msgid ""
+"from litestar import Litestar, websocket_listener\n"
+"\n"
+"\n"
+"@websocket_listener(\"/\")\n"
+"async def handler(data: str) -> bytes:\n"
+"    return data.encode(\"utf-8\")\n"
+"\n"
+"\n"
+"app = Litestar([handler])"
+msgstr ""
+
+#: ../../../usage/websockets.rst:0
+msgid "Dict as JSON"
+msgstr ""
+
+#: ../../../usage/websockets.rst:125
+msgid ""
+"from litestar import Litestar, websocket_listener\n"
+"\n"
+"\n"
+"@websocket_listener(\"/\")\n"
+"async def handler(data: str) -> dict[str, str]:\n"
+"    return {\"message\": data}\n"
+"\n"
+"\n"
+"app = Litestar([handler])"
+msgstr ""
+
+#: ../../../usage/websockets.rst:0
+msgid "Dataclass as JSON"
+msgstr ""
+
+#: ../../../usage/websockets.rst:131
+msgid ""
+"from dataclasses import dataclass\n"
+"from datetime import datetime\n"
+"\n"
+"from litestar import Litestar, websocket_listener\n"
+"\n"
+"\n"
+"@dataclass\n"
+"class Message:\n"
+"    content: str\n"
+"    timestamp: float\n"
+"\n"
+"\n"
+"@websocket_listener(\"/\")\n"
+"async def handler(data: str) -> Message:\n"
+"    return Message(content=data, timestamp=datetime.now().timestamp())\n"
+"\n"
+"\n"
+"app = Litestar([handler])"
+msgstr ""
+
+#: ../../../usage/websockets.rst:135
+msgid "Setting transport modes"
+msgstr ""
+
+#: ../../../usage/websockets.rst:139
+msgid "Receive mode"
+msgstr ""
+
+#: ../../../usage/websockets.rst:0
+msgid "Text mode"
+msgstr ""
+
+#: ../../../usage/websockets.rst:145 ../../../usage/websockets.rst:171
+msgid ""
+"``text`` is the default mode and is appropriate for most messages, including "
+"structured data such as JSON."
+msgstr ""
+
+#: ../../../usage/websockets.rst:149
+msgid ""
+"from litestar import Litestar, websocket_listener\n"
+"\n"
+"\n"
+"@websocket_listener(\"/\", receive_mode=\"text\")\n"
+"async def handler(data: str) -> str:\n"
+"    return data\n"
+"\n"
+"\n"
+"app = Litestar([handler])"
+msgstr ""
+
+#: ../../../usage/websockets.rst:0
+msgid "Binary mode"
+msgstr ""
+
+#: ../../../usage/websockets.rst:155
+msgid ""
+"from litestar import Litestar, websocket_listener\n"
+"\n"
+"\n"
+"@websocket_listener(\"/\", receive_mode=\"binary\")\n"
+"async def handler(data: str) -> str:\n"
+"    return data\n"
+"\n"
+"\n"
+"app = Litestar([handler])"
+msgstr ""
+
+#: ../../../usage/websockets.rst:159
+msgid ""
+"Once configured with a mode, a listener will only listen to socket events of "
+"the appropriate type. This means if a listener is configured to use "
+"``binary`` mode, it will not respond to WebSocket events sending data in the "
+"text channel."
+msgstr ""
+
+#: ../../../usage/websockets.rst:165
+msgid "Send mode"
+msgstr ""
+
+#: ../../../usage/websockets.rst:175
+msgid ""
+"from litestar import Litestar, websocket_listener\n"
+"\n"
+"\n"
+"@websocket_listener(\"/\", send_mode=\"text\")\n"
+"async def handler(data: str) -> str:\n"
+"    return data\n"
+"\n"
+"\n"
+"app = Litestar([handler])"
+msgstr ""
+
+#: ../../../usage/websockets.rst:181
+msgid ""
+"from litestar import Litestar, websocket_listener\n"
+"\n"
+"\n"
+"@websocket_listener(\"/\", send_mode=\"binary\")\n"
+"async def handler(data: str) -> str:\n"
+"    return data\n"
+"\n"
+"\n"
+"app = Litestar([handler])"
+msgstr ""
+
+#: ../../../usage/websockets.rst:187
+msgid "Dependency injection"
+msgstr ""
+
+#: ../../../usage/websockets.rst:189
+msgid ""
+":doc:`dependency-injection` is available and generally works the same as in "
+"regular route handlers:"
+msgstr ""
+
+#: ../../../usage/websockets.rst:193
+msgid ""
+"from litestar import Litestar, websocket_listener\n"
+"from litestar.di import Provide\n"
+"\n"
+"\n"
+"def some_dependency() -> str:\n"
+"    return \"hello\"\n"
+"\n"
+"\n"
+"@websocket_listener(\"/\", dependencies={\"some\": "
+"Provide(some_dependency)})\n"
+"async def handler(data: str, some: str) -> str:\n"
+"    return data + some\n"
+"\n"
+"\n"
+"app = Litestar([handler])"
+msgstr ""
+
+#: ../../../usage/websockets.rst:197
+msgid ""
+"Injected dependencies work on the level of the underlying **route handler**. "
+"This means they won't be re-evaluated every time the listener function is "
+"called."
+msgstr ""
+
+#: ../../../usage/websockets.rst:200
+msgid ""
+"The following example makes use of :ref:`yield dependencies "
+"<yield_dependencies>` and the fact that dependencies are only evaluated once "
+"for every connection; The step after the ``yield`` will only be executed "
+"after the connection has been closed."
+msgstr ""
+
+#: ../../../usage/websockets.rst:206
+msgid ""
+"from typing import TypedDict\n"
+"\n"
+"from litestar import Litestar, websocket_listener\n"
+"from litestar.datastructures import State\n"
+"from litestar.di import Provide\n"
+"\n"
+"\n"
+"class Message(TypedDict):\n"
+"    message: str\n"
+"    client_count: int\n"
+"\n"
+"\n"
+"def socket_client_count(state: State) -> int:\n"
+"    if not hasattr(state, \"count\"):\n"
+"        state.count = 0\n"
+"\n"
+"    state.count += 1\n"
+"    yield state.count\n"
+"    state.count -= 1\n"
+"\n"
+"\n"
+"@websocket_listener(\"/\", dependencies={\"client_count\": "
+"Provide(socket_client_count)})\n"
+"async def handler(data: str, client_count: int) -> Message:\n"
+"    return Message(message=data, client_count=client_count)\n"
+"\n"
+"\n"
+"app = Litestar([handler])"
+msgstr ""
+
+#: ../../../usage/websockets.rst:211 ../../../usage/websockets.rst:329
+msgid "Interacting with the WebSocket directly"
+msgstr ""
+
+#: ../../../usage/websockets.rst:213
+msgid ""
+"Sometimes access to the socket instance is needed, in which case the :class:"
+"`WebSocket <.connection.WebSocket>` instance can be injected into the "
+"handler function via the ``socket`` argument:"
+msgstr ""
+
+#: ../../../usage/websockets.rst:218
+msgid ""
+"from litestar import Litestar, WebSocket, websocket_listener\n"
+"\n"
+"\n"
+"@websocket_listener(\"/\")\n"
+"async def handler(data: str, socket: WebSocket) -> str:\n"
+"    if data == \"goodbye\":\n"
+"        await socket.close()\n"
+"\n"
+"    return data\n"
+"\n"
+"\n"
+"app = Litestar([handler])"
+msgstr ""
+
+#: ../../../usage/websockets.rst:222
+msgid ""
+"Since WebSockets are inherently asynchronous, to interact with the "
+"asynchronous methods on :class:`WebSocket <.connection.WebSocket>`, the "
+"handler function needs to be asynchronous."
+msgstr ""
+
+#: ../../../usage/websockets.rst:228
+msgid "Customising connection acceptance"
+msgstr ""
+
+#: ../../../usage/websockets.rst:230
+msgid ""
+"By default, Litestar will accept all incoming connections by awaiting "
+"``WebSocket.accept()`` without arguments. This behavior can be customized by "
+"passing a custom ``connection_accept_handler`` function. Litestar will await "
+"this function to accept the connection."
+msgstr ""
+
+#: ../../../usage/websockets.rst:235
+msgid ""
+"from litestar import Litestar, WebSocket, websocket_listener\n"
+"\n"
+"\n"
+"async def accept_connection(socket: WebSocket) -> None:\n"
+"    await socket.accept(headers={\"Cookie\": \"custom-cookie\"})\n"
+"\n"
+"\n"
+"@websocket_listener(\"/\", connection_accept_handler=accept_connection)\n"
+"def handler(data: str) -> str:\n"
+"    return data\n"
+"\n"
+"\n"
+"app = Litestar([handler])"
+msgstr ""
+
+#: ../../../usage/websockets.rst:239
+msgid "Class based WebSocket handling"
+msgstr ""
+
+#: ../../../usage/websockets.rst:241
+msgid ""
+"In addition to using a simple function as in the examples above, a class "
+"based approach is made possible by extending the :class:`WebSocketListener <."
+"handlers.WebsocketListener>`. This provides convenient access to socket "
+"events such as connect and disconnect, and can be used to encapsulate more "
+"complex logic."
+msgstr ""
+
+#: ../../../usage/websockets.rst:0
+msgid "Sync"
+msgstr ""
+
+#: ../../../usage/websockets.rst:253
+msgid ""
+"from litestar import Litestar, WebSocket\n"
+"from litestar.handlers import WebsocketListener\n"
+"\n"
+"\n"
+"class Handler(WebsocketListener):\n"
+"    path = \"/\"\n"
+"\n"
+"    def on_accept(self, socket: WebSocket) -> None:\n"
+"        print(\"Connection accepted\")\n"
+"\n"
+"    def on_disconnect(self, socket: WebSocket) -> None:\n"
+"        print(\"Connection closed\")\n"
+"\n"
+"    def on_receive(self, data: str) -> str:\n"
+"        return data\n"
+"\n"
+"\n"
+"app = Litestar([Handler])"
+msgstr ""
+
+#: ../../../usage/websockets.rst:0
+msgid "Async"
+msgstr ""
+
+#: ../../../usage/websockets.rst:258
+msgid ""
+"from litestar import Litestar, WebSocket\n"
+"from litestar.handlers import WebsocketListener\n"
+"\n"
+"\n"
+"class Handler(WebsocketListener):\n"
+"    path = \"/\"\n"
+"\n"
+"    async def on_accept(self, socket: WebSocket) -> None:\n"
+"        print(\"Connection accepted\")\n"
+"\n"
+"    async def on_disconnect(self, socket: WebSocket) -> None:\n"
+"        print(\"Connection closed\")\n"
+"\n"
+"    async def on_receive(self, data: str) -> str:\n"
+"        return data\n"
+"\n"
+"\n"
+"app = Litestar([Handler])"
+msgstr ""
+
+#: ../../../usage/websockets.rst:262
+msgid "Custom WebSocket"
+msgstr ""
+
+#: ../../../usage/websockets.rst:266
+msgid ""
+"Litestar supports custom ``websocket_class`` instances, which can be used to "
+"further configure the default :class:`WebSocket`. The example below "
+"illustrates how to implement a custom WebSocket class for the whole "
+"application."
+msgstr ""
+
+#: ../../../usage/websockets.rst:0
+msgid "Example of a custom websocket at the application level"
+msgstr ""
+
+#: ../../../usage/websockets.rst:272
+msgid ""
+"from __future__ import annotations\n"
+"\n"
+"from litestar import Litestar, WebSocket, websocket_listener\n"
+"from litestar.types.asgi_types import WebSocketMode\n"
+"\n"
+"\n"
+"class CustomWebSocket(WebSocket):\n"
+"    async def receive_data(self, mode: WebSocketMode) -> str | bytes:\n"
+"        \"\"\"Return fixed response for every websocket message.\"\"\"\n"
+"        await super().receive_data(mode=mode)\n"
+"        return \"Fixed response\"\n"
+"\n"
+"\n"
+"@websocket_listener(\"/\")\n"
+"async def handler(data: str) -> str:\n"
+"    return data\n"
+"\n"
+"\n"
+"app = Litestar([handler], websocket_class=CustomWebSocket)"
+msgstr ""
+
+#: ../../../usage/websockets.rst:274
+msgid "Layered architecture"
+msgstr ""
+
+#: ../../../usage/websockets.rst:276
+msgid ""
+"WebSocket classes are part of Litestar's layered architecture, which means "
+"you can set a WebSocket class on every layer of the application. If you have "
+"set a WebSocket class on multiple layers, the layer closest to the route "
+"handler will take precedence."
+msgstr ""
+
+#: ../../../usage/websockets.rst:280
+msgid ""
+"You can read more about this in the :ref:`usage/applications:layered "
+"architecture` section"
+msgstr ""
+
+#: ../../../usage/websockets.rst:284
+msgid "WebSocket Streams"
+msgstr ""
+
+#: ../../../usage/websockets.rst:286
+msgid ""
+"WebSocket streams can be used to proactively push data to a client, using an "
+"asynchronous generator function. Data will be sent via the socket every time "
+"the generator ``yield``\\ s, until it is either exhausted or the client "
+"disconnects."
+msgstr ""
+
+#: ../../../usage/websockets.rst:291
+msgid "Streaming the current time in 0.5 second intervals"
+msgstr ""
+
+#: ../../../usage/websockets.rst:291
+msgid ""
+"import asyncio\n"
+"import time\n"
+"from collections.abc import AsyncGenerator\n"
+"\n"
+"from litestar import Litestar, websocket_stream\n"
+"\n"
+"\n"
+"@websocket_stream(\"/\")\n"
+"async def ping() -> AsyncGenerator[float, None]:\n"
+"    while True:\n"
+"        yield time.time()\n"
+"        await asyncio.sleep(0.5)\n"
+"\n"
+"\n"
+"app = Litestar([ping])"
+msgstr ""
+
+#: ../../../usage/websockets.rst:296
+msgid "Serialization"
+msgstr ""
+
+#: ../../../usage/websockets.rst:298
+msgid ""
+"Just like with route handlers, type annotations configure how the data is "
+"being handled. :class:`str` or :class:`bytes` will be sent as-is, while "
+"everything else will be encoded as JSON before being sent. This "
+"serialization is available for all data types currently supported by "
+"Litestar (:doc:`dataclasses <python:library/dataclasses>`, :class:`TypedDict "
+"<typing.TypedDict>`, :class:`NamedTuple <typing.NamedTuple>`, :class:"
+"`msgspec.Struct`, etc.), including DTOs."
+msgstr ""
+
+#: ../../../usage/websockets.rst:307
+msgid "Dependency Injection"
+msgstr ""
+
+#: ../../../usage/websockets.rst:309
+msgid ""
+"Dependency injection is available and works analogous to regular route "
+"handlers."
+msgstr ""
+
+#: ../../../usage/websockets.rst:312
+msgid ""
+"One thing to keep in mind, especially for long-lived streams, is that "
+"dependencies are scoped to the lifetime of the handler. This means that if "
+"for example a database connection is acquired in a dependency, it will be "
+"held until the generator stops. This may not be desirable in all cases, and "
+"acquiring resources ad-hoc inside the generator itself preferable"
+msgstr ""
+
+#: ../../../usage/websockets.rst:319
+msgid "Bad: The lock will be held until the client disconnects"
+msgstr ""
+
+#: ../../../usage/websockets.rst:319
+msgid ""
+"import asyncio\n"
+"from collections.abc import AsyncGenerator\n"
+"\n"
+"from app.lib import ping_external_resource\n"
+"from litestar import Litestar, websocket_stream\n"
+"\n"
+"RESOURCE_LOCK = asyncio.Lock()\n"
+"\n"
+"\n"
+"async def acquire_lock() -> AsyncGenerator[None, None]:\n"
+"    async with RESOURCE_LOCK:\n"
+"        yield\n"
+"\n"
+"\n"
+"@websocket_stream(\"/\")\n"
+"async def ping(lock: asyncio.Lock) -> AsyncGenerator[float, None]:\n"
+"    while True:\n"
+"        alive = await ping_external_resource()\n"
+"        yield alive\n"
+"        await asyncio.sleep(1)\n"
+"\n"
+"\n"
+"app = Litestar([ping], dependencies={\"lock\": acquire_lock})"
+msgstr ""
+
+#: ../../../usage/websockets.rst:324
+msgid "Good: The lock will only be acquired when it's needed"
+msgstr ""
+
+#: ../../../usage/websockets.rst:324
+msgid ""
+"import asyncio\n"
+"from collections.abc import AsyncGenerator\n"
+"\n"
+"from app.lib import ping_external_resource\n"
+"from litestar import Litestar, websocket_stream\n"
+"\n"
+"RESOURCE_LOCK = asyncio.Lock()\n"
+"\n"
+"\n"
+"@websocket_stream(\"/\")\n"
+"async def ping() -> AsyncGenerator[float, None]:\n"
+"    while True:\n"
+"        async with RESOURCE_LOCK:\n"
+"            alive = await ping_external_resource()\n"
+"        yield alive\n"
+"        await asyncio.sleep(1)\n"
+"\n"
+"\n"
+"app = Litestar([ping])"
+msgstr ""
+
+#: ../../../usage/websockets.rst:331
+msgid ""
+"To interact with the :class:`WebSocket <.connection.WebSocket>` directly, it "
+"can be injected into the generator function via the ``socket`` argument:"
+msgstr ""
+
+#: ../../../usage/websockets.rst:335
+msgid ""
+"import asyncio\n"
+"import time\n"
+"from collections.abc import AsyncGenerator\n"
+"from typing import Any\n"
+"\n"
+"from litestar import Litestar, WebSocket, websocket_stream\n"
+"\n"
+"\n"
+"@websocket_stream(\"/\")\n"
+"async def ping(socket: WebSocket) -> AsyncGenerator[dict[str, Any], None]:\n"
+"    while True:\n"
+"        yield {\"time\": time.time(), \"client\": socket.client}\n"
+"        await asyncio.sleep(0.5)\n"
+"\n"
+"\n"
+"app = Litestar([ping])"
+msgstr ""
+
+#: ../../../usage/websockets.rst:339
+msgid "Receiving data while streaming"
+msgstr ""
+
+#: ../../../usage/websockets.rst:341
+msgid ""
+"By default, a stream will listen for a client disconnect in the background, "
+"and stop the generator once received. Since this requires receiving data "
+"from the socket, it can lead to data loss if the application is attempting "
+"to read from the same socket simultaneously."
+msgstr ""
+
+#: ../../../usage/websockets.rst:347
+msgid ""
+"To prevent data loss, by default, ``websocket_stream`` will raise an "
+"exception if it receives any data while listening for client disconnects. If "
+"incoming data should be ignored, ``allow_data_discard`` should be set to "
+"``True``"
+msgstr ""
+
+#: ../../../usage/websockets.rst:351
+msgid ""
+"If receiving data while streaming is desired, :func:`~litestar.handlers."
+"send_websocket_stream` can be configured to not listen for disconnects by "
+"setting ``listen_for_disconnect=False``."
+msgstr ""
+
+#: ../../../usage/websockets.rst:356
+msgid ""
+"When using ``listen_for_disconnect=False``, the application needs to ensure "
+"the disconnect event is received elsewhere, otherwise the stream will only "
+"terminate when the generator is exhausted"
+msgstr ""
+
+#: ../../../usage/websockets.rst:362
+msgid "Combining streaming and receiving data"
+msgstr ""
+
+#: ../../../usage/websockets.rst:364
+msgid ""
+"To stream and receive data concurrently, the stream can be set up manually "
+"using :func:`~litestar.handlers.send_websocket_stream` in combination with "
+"either a regular :class:`~litestar.handlers.websocket` handler or a "
+"WebSocket listener."
+msgstr ""
+
+#: ../../../usage/websockets.rst:0
+msgid "websocket_listener"
+msgstr ""
+
+#: ../../../usage/websockets.rst:0
+msgid "example"
+msgstr ""
+
+#: ../../../usage/websockets.rst:377
+msgid ""
+"from collections.abc import AsyncGenerator\n"
+"from contextlib import asynccontextmanager\n"
+"from typing import Any\n"
+"\n"
+"import anyio\n"
+"\n"
+"from litestar import Litestar, WebSocket, websocket_listener\n"
+"from litestar.exceptions import WebSocketDisconnect\n"
+"from litestar.handlers import send_websocket_stream\n"
+"\n"
+"\n"
+"@asynccontextmanager\n"
+"async def listener_lifespan(socket: WebSocket) -> AsyncGenerator[None, "
+"Any]:\n"
+"    is_closed = anyio.Event()\n"
+"\n"
+"    async def handle_stream() -> AsyncGenerator[str, None]:\n"
+"        while not is_closed.is_set():\n"
+"            await anyio.sleep(0.1)\n"
+"            yield \"ping\"\n"
+"\n"
+"    async with anyio.create_task_group() as tg:\n"
+"        tg.start_soon(send_websocket_stream, socket, handle_stream())\n"
+"\n"
+"        try:\n"
+"            yield\n"
+"        except WebSocketDisconnect:\n"
+"            pass\n"
+"        finally:\n"
+"            is_closed.set()\n"
+"\n"
+"\n"
+"@websocket_listener(\"/\", connection_lifespan=listener_lifespan)\n"
+"def handler(data: str) -> str:\n"
+"    return data\n"
+"\n"
+"\n"
+"app = Litestar([handler])"
+msgstr ""
+
+#: ../../../usage/websockets.rst:0
+msgid "how to test"
+msgstr ""
+
+#: ../../../usage/websockets.rst:382
+msgid ""
+"async def test_websocket_listener() -> None:\n"
+"    \"\"\"Test the websocket listener.\"\"\"\n"
+"    async with AsyncTestClient(app_stream_and_receive_listener) as client:\n"
+"        async with await client.websocket_connect(\"/\") as ws:\n"
+"            await ws.send_text(\"Hello\")\n"
+"            data_1 = await ws.receive_text()\n"
+"            data_2 = await ws.receive_text()\n"
+"            assert sorted([data_1, data_2]) == sorted([\"Hello\", \"ping\"])"
+msgstr ""
+
+#: ../../../usage/websockets.rst:0
+msgid "websocket handler"
+msgstr ""
+
+#: ../../../usage/websockets.rst:393
+msgid ""
+"from collections.abc import AsyncGenerator\n"
+"from typing import Any\n"
+"\n"
+"import anyio\n"
+"\n"
+"from litestar import Litestar, WebSocket, websocket\n"
+"from litestar.exceptions import WebSocketDisconnect\n"
+"from litestar.handlers import send_websocket_stream\n"
+"\n"
+"\n"
+"@websocket(\"/\")\n"
+"async def handler(socket: WebSocket) -> None:\n"
+"    await socket.accept()\n"
+"    should_stop = anyio.Event()\n"
+"\n"
+"    async def handle_stream() -> AsyncGenerator[str, None]:\n"
+"        while not should_stop.is_set():\n"
+"            await anyio.sleep(0.1)\n"
+"            yield \"ping\"\n"
+"\n"
+"    async def handle_receive() -> Any:\n"
+"        await socket.send_json({\"handle_receive\": \"start\"})\n"
+"        async for event in socket.iter_json():\n"
+"            await socket.send_json(event)\n"
+"\n"
+"    try:\n"
+"        async with anyio.create_task_group() as tg:\n"
+"            tg.start_soon(send_websocket_stream, socket, handle_stream())\n"
+"            tg.start_soon(handle_receive)\n"
+"    except WebSocketDisconnect:\n"
+"        should_stop.set()\n"
+"\n"
+"\n"
+"app = Litestar([handler])"
+msgstr ""
+
+#: ../../../usage/websockets.rst:398
+msgid ""
+"async def test_websocket_handler():\n"
+"    async with AsyncTestClient(app_stream_and_receive_raw) as client:\n"
+"        async with await client.websocket_connect(\"/\") as ws:\n"
+"            echo_data = {\"data\": \"I should be in response\"}\n"
+"            await ws.send_json(echo_data)\n"
+"            assert await ws.receive_json(timeout=0.5) == "
+"{\"handle_receive\": \"start\"}\n"
+"            assert await ws.receive_json(timeout=0.5) == echo_data\n"
+"            assert await ws.receive_text(timeout=0.5) == \"ping\""
+msgstr ""
+
+#: ../../../usage/websockets.rst:402
+msgid "Transport modes"
+msgstr ""
+
+#: ../../../usage/websockets.rst:404
+msgid ""
+"WebSockets have two transport modes: ``text`` and ``binary``. They dictate "
+"how bytes are transferred over the wire and can be set independently from "
+"another, i.e. a socket can send ``binary`` and receive ``text``"
+msgstr ""
+
+#: ../../../usage/websockets.rst:409
+msgid ""
+"It may seem intuitive that ``text`` and ``binary`` should map to :class:"
+"`str` and :class:`bytes` respectively, but this is not the case. WebSockets "
+"can receive and send data in any format, independently of the mode. The mode "
+"only affects how the bytes are handled during transport (i.e. on the "
+"protocol level). In most cases the default mode - ``text`` - is all that's "
+"needed. Binary transport is usually employed when sending binary blobs that "
+"don't have a meaningful string representation, such as images."
+msgstr ""

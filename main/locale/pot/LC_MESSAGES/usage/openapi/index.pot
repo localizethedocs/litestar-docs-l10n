@@ -1,0 +1,60 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../usage/openapi/index.rst:2
+msgid "OpenAPI"
+msgstr ""
+
+#: ../../../usage/openapi/index.rst:4
+msgid ""
+"Litestar has first class OpenAPI support offering the following features:"
+msgstr ""
+
+#: ../../../usage/openapi/index.rst:6
+msgid ""
+"Automatic `OpenAPI 3.1.0 Schema <https://spec.openapis.org/oas/v3.1.0>`_ "
+"generation, which is available as both YAML and JSON."
+msgstr ""
+
+#: ../../../usage/openapi/index.rst:8
+msgid ""
+"Builtin support for static documentation site generation using several "
+"different libraries."
+msgstr ""
+
+#: ../../../usage/openapi/index.rst:9
+msgid "Full configuration using pre-defined type-safe dataclasses."
+msgstr ""
+
+#: ../../../usage/openapi/index.rst:12
+msgid ""
+"Litestar includes a complete implementation of the `latest version of the "
+"OpenAPI specification <https://spec.openapis.org/oas/latest.html>`_ using "
+"Python dataclasses. This implementation is used as a basis for generating "
+"OpenAPI specs, supporting :func:`~dataclasses.dataclass`, :class:`~typing."
+"TypedDict`, as well as Pydantic and msgspec models, and any 3rd party "
+"entities for which a :ref:`plugin <plugins>` is implemented."
+msgstr ""
+
+#: ../../../usage/openapi/index.rst:18
+msgid ""
+"This is also highly configurable - and users can customize the OpenAPI spec "
+"in a variety of ways - ranging from passing configuration globally to "
+"setting :ref:`specific kwargs on route <usage/openapi/schema_generation:"
+"Configuring schema generation on a route handler>` handler decorators."
+msgstr ""

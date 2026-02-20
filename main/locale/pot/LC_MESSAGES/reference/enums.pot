@@ -1,0 +1,70 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/enums.rst:2
+msgid "enums"
+msgstr ""
+
+#: ../../../../litestar/enums.py:docstring of
+#: litestar.enums.CompressionEncoding:1 litestar.enums.HttpMethod:1
+#: litestar.enums.MediaType:1 litestar.enums.OpenAPIMediaType:1
+#: litestar.enums.ParamType:1 litestar.enums.RequestEncodingType:1
+#: litestar.enums.ScopeType:1
+msgid "Bases: :py:class:`str`, :py:class:`~enum.Enum`"
+msgstr ""
+
+#: ../../../../litestar/enums.py:docstring of
+#: litestar.enums.CompressionEncoding:1
+msgid "An Enum for supported compression encodings."
+msgstr ""
+
+#: ../../../../litestar/enums.py:docstring of litestar.enums.HttpMethod:1
+msgid "An Enum for HTTP methods."
+msgstr ""
+
+#: ../../../../litestar/enums.py:docstring of litestar.enums.MediaType:1
+msgid "An Enum for ``Content-Type`` header values."
+msgstr ""
+
+#: ../../../../litestar/enums.py:docstring of litestar.enums.OpenAPIMediaType:1
+msgid "An Enum for OpenAPI specific response ``Content-Type`` header values."
+msgstr ""
+
+#: ../../../../litestar/enums.py:docstring of litestar.enums.ParamType:1
+msgid "An Enum for the types of parameters a request can receive."
+msgstr ""
+
+#: ../../../../litestar/enums.py:docstring of
+#: litestar.enums.RequestEncodingType:1
+msgid ""
+"An Enum for request ``Content-Type`` header values designating encoding "
+"formats."
+msgstr ""
+
+#: ../../../../litestar/enums.py:docstring of litestar.enums.ScopeType:1
+msgid "An Enum for the 'http' key stored under Scope."
+msgstr ""
+
+#: ../../../../litestar/enums.py:docstring of litestar.enums.ScopeType:3
+msgid "Notes"
+msgstr ""
+
+#: ../../../../litestar/enums.py:docstring of litestar.enums.ScopeType:5
+msgid ""
+"``asgi`` is used by Litestar internally and is not part of the specification."
+msgstr ""

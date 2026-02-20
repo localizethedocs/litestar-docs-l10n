@@ -1,0 +1,321 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/response/file.rst:2
+msgid "file"
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.ASGIFileResponse:1
+msgid "Bases: :py:class:`~litestar.response.streaming.ASGIStreamingResponse`"
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.ASGIFileResponse:1
+#: litestar.response.file.ASGIFileResponse.__init__:1
+msgid "A low-level ASGI response, streaming a file as response body."
+msgstr ""
+
+#: ../../../reference/response/file.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.ASGIFileResponse.__init__:3
+msgid ""
+"A background task or a list of background tasks to be executed after the "
+"response is sent."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.ASGIFileResponse.__init__:4
+msgid "The chunk size to use."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.ASGIFileResponse.__init__:5
+#: litestar.response.file.File.__init__:8
+msgid ""
+"The type of the ``Content-Disposition``. Either ``inline`` or ``attachment``."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.ASGIFileResponse.__init__:6
+msgid "The response content length."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.ASGIFileResponse.__init__:7
+msgid "The response cookies."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.ASGIFileResponse.__init__:8
+msgid "The response encoding."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.ASGIFileResponse.__init__:9
+#: litestar.response.file.create_etag_for_file:7
+msgid "An etag."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.ASGIFileResponse.__init__:10
+msgid "A file info."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.ASGIFileResponse.__init__:11
+msgid "A path to a file."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.ASGIFileResponse.__init__:12
+msgid "A file system adapter."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.ASGIFileResponse.__init__:13
+msgid "The name of the file."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.ASGIFileResponse.__init__:14
+msgid "A dictionary of headers."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.ASGIFileResponse.__init__:15
+msgid "The response headers."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.ASGIFileResponse.__init__:16
+msgid "A boolean indicating if the response is a HEAD response."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.ASGIFileResponse.__init__:17
+msgid "The media type of the file."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.ASGIFileResponse.__init__:18
+msgid "The response status code."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.ASGIFileResponse.send_body:1
+msgid "Emit a stream of events correlating with the response body."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.ASGIFileResponse.send_body:3
+#: litestar.response.file.ASGIFileResponse.start_response:3
+msgid "The ASGI send function."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.ASGIFileResponse.send_body:4
+msgid "The ASGI receive function."
+msgstr ""
+
+#: ../../../reference/response/file.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.ASGIFileResponse.send_body:6
+#: litestar.response.file.ASGIFileResponse.start_response:5
+msgid "None"
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.ASGIFileResponse.start_response:1
+msgid ""
+"Emit the start event of the response. This event includes the headers and "
+"status codes."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.File:1
+msgid "Bases: :py:class:`~litestar.response.base.Response`"
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.File:1
+msgid "A response, streaming a file as response body."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.File.__init__:1
+msgid "Send a file from a file system."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.File.__init__:3
+msgid "A file path in one of the supported formats."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.File.__init__:4
+msgid ""
+"A :class:`BackgroundTask <.background_tasks.BackgroundTask>` instance or :"
+"class:`BackgroundTasks <.background_tasks.BackgroundTasks>` to execute after "
+"the response is finished. Defaults to None."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.File.__init__:7
+msgid "The chunk sizes to use when streaming the file. Defaults to 1MB."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.File.__init__:9
+msgid ""
+"A list of :class:`Cookie <.datastructures.Cookie>` instances to be set under "
+"the response ``Set-Cookie`` header."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.File.__init__:11
+msgid "The encoding to be used for the response headers."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.File.__init__:12
+msgid ""
+"An optional :class:`ETag <.datastructures.ETag>` instance. If not provided, "
+"an etag will be generated."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.File.__init__:14
+msgid ""
+"The output of calling :meth:`file_system.info <litestar.file_system."
+"BaseFileSystem.info>`"
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.File.__init__:15
+msgid ""
+"The file system to load the file from. Instances of :class:`~litestar."
+"file_system.BaseFileSystem`, :class:`fsspec.spec.AbstractFileSystem`, :class:"
+"`fsspec.asyn.AsyncFileSystem` will be used directly. If passed string, use "
+"it to look up the corresponding file system from the :class:`~litestar."
+"file_system.FileSystemRegistry`. If not given, the file will be loaded from :"
+"attr:`~litestar.file_system.FileSystemRegistry.default`"
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.File.__init__:20
+msgid "An optional filename to set in the header."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.File.__init__:21
+msgid ""
+"A string keyed dictionary of response headers. Header keys are insensitive."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.File.__init__:22
+msgid ""
+"A value for the response ``Content-Type`` header. If not provided, the value "
+"will be either derived from the filename if provided and supported by the "
+"stdlib, or will default to ``application/octet-stream``."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.File.__init__:25
+msgid "An HTTP status code."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.File.to_asgi_response:1
+msgid ""
+"Create an :class:`ASGIFileResponse <litestar.response.file."
+"ASGIFileResponse>` instance."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.File.to_asgi_response:3
+msgid "Background task(s) to be executed after the response is sent."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.File.to_asgi_response:4
+msgid "A list of cookies to be set on the response."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.File.to_asgi_response:5
+msgid ""
+"Additional headers to be merged with the response headers. Response headers "
+"take precedence."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.File.to_asgi_response:6
+msgid "Whether the response is a HEAD response."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.File.to_asgi_response:7
+msgid ""
+"Media type for the response. If ``media_type`` is already set on the "
+"response, this is ignored."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.File.to_asgi_response:8
+msgid "The :class:`Request <.connection.Request>` instance."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.File.to_asgi_response:9
+msgid ""
+"Status code for the response. If ``status_code`` is already set on the "
+"response, this is"
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.File.to_asgi_response:10
+msgid "A dictionary of type encoders to use for encoding the response content."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.File.to_asgi_response:12
+msgid "A low-level ASGI file response."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.create_etag_for_file:1
+msgid "Create an etag."
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.create_etag_for_file:3
+msgid "Notes"
+msgstr ""
+
+#: ../../../../litestar/response/file.py:docstring of
+#: litestar.response.file.create_etag_for_file:5
+msgid "Function is derived from flask."
+msgstr ""

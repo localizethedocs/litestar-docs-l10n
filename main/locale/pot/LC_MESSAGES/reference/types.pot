@@ -1,0 +1,359 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/types.rst:2
+msgid "types"
+msgstr ""
+
+#: ../../../reference/types.rst:9
+msgid "Callable types"
+msgstr ""
+
+#: ../../../../docstring of litestar.types.AfterExceptionHookHandler:1
+#: litestar.types.AfterRequestHookHandler:1
+#: litestar.types.AfterResponseHookHandler:1
+#: litestar.types.BeforeMessageSendHookHandler:1
+#: litestar.types.BeforeRequestHookHandler:1 litestar.types.CacheKeyBuilder:1
+#: litestar.types.ExceptionHandler:1 litestar.types.Guard:1
+#: litestar.types.LifespanHook:1 litestar.types.OnAppInitHandler:1
+#: litestar.types.Scopes:1
+msgid "str(object='') -> str str(bytes_or_buffer[, encoding[, errors]]) -> str"
+msgstr ""
+
+#: ../../../../docstring of litestar.types.AfterExceptionHookHandler:4
+#: litestar.types.AfterRequestHookHandler:4
+#: litestar.types.AfterResponseHookHandler:4
+#: litestar.types.BeforeMessageSendHookHandler:4
+#: litestar.types.BeforeRequestHookHandler:4 litestar.types.CacheKeyBuilder:4
+#: litestar.types.ExceptionHandler:4 litestar.types.Guard:4
+#: litestar.types.LifespanHook:4 litestar.types.OnAppInitHandler:4
+#: litestar.types.Scopes:4
+msgid ""
+"Create a new string object from the given object. If encoding or errors is "
+"specified, then the object must expose a data buffer that will be decoded "
+"using the given encoding and error handler. Otherwise, returns the result of "
+"object.__str__() (if defined) or repr(object). encoding defaults to sys."
+"getdefaultencoding(). errors defaults to 'strict'."
+msgstr ""
+
+#: ../../../reference/types.rst:40
+msgid "ASGI Types"
+msgstr ""
+
+#: ../../../reference/types.rst:45
+msgid "ASGI Application"
+msgstr ""
+
+#: ../../../reference/types.rst:50
+msgid "ASGI Application Parameters"
+msgstr ""
+
+#: ../../../reference/types.rst:59
+msgid "ASGI Scopes"
+msgstr ""
+
+#: ../../../../litestar/types/asgi_types.py:docstring of
+#: litestar.types.asgi_types.ASGIVersion:1
+#: litestar.types.asgi_types.HTTPDisconnectEvent:1
+#: litestar.types.asgi_types.HTTPRequestEvent:1
+#: litestar.types.asgi_types.HTTPResponseBodyEvent:1
+#: litestar.types.asgi_types.LifeSpanScope:1
+#: litestar.types.asgi_types.LifeSpanShutdownCompleteEvent:1
+#: litestar.types.asgi_types.LifeSpanShutdownEvent:1
+#: litestar.types.asgi_types.LifeSpanShutdownFailedEvent:1
+#: litestar.types.asgi_types.LifeSpanStartupCompleteEvent:1
+#: litestar.types.asgi_types.LifeSpanStartupEvent:1
+#: litestar.types.asgi_types.LifeSpanStartupFailedEvent:1
+#: litestar.types.asgi_types.WebSocketCloseEvent:1
+#: litestar.types.asgi_types.WebSocketConnectEvent:1
+#: litestar.types.asgi_types.WebSocketDisconnectEvent:1
+#: litestar.types.asgi_types.WebSocketReceiveEvent:1
+#: litestar.types.asgi_types.WebSocketResponseBodyEvent:1
+#: litestar.types.asgi_types.WebSocketSendEvent:1
+msgid "Bases: :py:class:`~typing.TypedDict`"
+msgstr ""
+
+#: ../../../../litestar/types/asgi_types.py:docstring of
+#: litestar.types.asgi_types.ASGIVersion:1
+msgid "ASGI spec version."
+msgstr ""
+
+#: ../../../../litestar/types/asgi_types.py:docstring of
+#: litestar.types.asgi_types.BaseScope:1
+#: litestar.types.asgi_types.HTTPResponseStartEvent:1
+#: litestar.types.asgi_types.HTTPServerPushEvent:1
+#: litestar.types.asgi_types.WebSocketAcceptEvent:1
+#: litestar.types.asgi_types.WebSocketResponseStartEvent:1
+msgid "Bases: :py:class:`~litestar.types.asgi_types.HeaderScope`"
+msgstr ""
+
+#: ../../../../litestar/types/asgi_types.py:docstring of
+#: litestar.types.asgi_types.BaseScope:1
+msgid "Base ASGI-scope."
+msgstr ""
+
+#: ../../../../litestar/types/asgi_types.py:docstring of
+#: litestar.types.asgi_types.HTTPScope:1
+#: litestar.types.asgi_types.WebSocketScope:1
+msgid "Bases: :py:class:`~litestar.types.asgi_types.BaseScope`"
+msgstr ""
+
+#: ../../../../litestar/types/asgi_types.py:docstring of
+#: litestar.types.asgi_types.HTTPScope:1
+msgid "HTTP-ASGI-scope."
+msgstr ""
+
+#: ../../../../litestar/types/asgi_types.py:docstring of
+#: litestar.types.asgi_types.LifeSpanScope:1
+msgid "Lifespan-ASGI-scope."
+msgstr ""
+
+#: ../../../../litestar/types/asgi_types.py:docstring of
+#: litestar.types.asgi_types.WebSocketScope:1
+msgid "WebSocket-ASGI-scope."
+msgstr ""
+
+#: ../../../reference/types.rst:73
+msgid "ASGI Events"
+msgstr ""
+
+#: ../../../../litestar/types/asgi_types.py:docstring of
+#: litestar.types.asgi_types.HTTPRequestEvent:1
+msgid "ASGI `http.request` event."
+msgstr ""
+
+#: ../../../../litestar/types/asgi_types.py:docstring of
+#: litestar.types.asgi_types.HTTPResponseStartEvent:1
+msgid "ASGI `http.response.start` event."
+msgstr ""
+
+#: ../../../../litestar/types/asgi_types.py:docstring of
+#: litestar.types.asgi_types.HTTPResponseBodyEvent:1
+msgid "ASGI `http.response.body` event."
+msgstr ""
+
+#: ../../../../litestar/types/asgi_types.py:docstring of
+#: litestar.types.asgi_types.HTTPServerPushEvent:1
+msgid "ASGI `http.response.push` event."
+msgstr ""
+
+#: ../../../../litestar/types/asgi_types.py:docstring of
+#: litestar.types.asgi_types.HTTPDisconnectEvent:1
+msgid "ASGI `http.disconnect` event."
+msgstr ""
+
+#: ../../../../litestar/types/asgi_types.py:docstring of
+#: litestar.types.asgi_types.WebSocketConnectEvent:1
+msgid "ASGI `websocket.connect` event."
+msgstr ""
+
+#: ../../../../litestar/types/asgi_types.py:docstring of
+#: litestar.types.asgi_types.WebSocketAcceptEvent:1
+msgid "ASGI `websocket.accept` event."
+msgstr ""
+
+#: ../../../../litestar/types/asgi_types.py:docstring of
+#: litestar.types.asgi_types.WebSocketReceiveEvent:1
+msgid "ASGI `websocket.receive` event."
+msgstr ""
+
+#: ../../../../litestar/types/asgi_types.py:docstring of
+#: litestar.types.asgi_types.WebSocketSendEvent:1
+msgid "ASGI `websocket.send` event."
+msgstr ""
+
+#: ../../../../litestar/types/asgi_types.py:docstring of
+#: litestar.types.asgi_types.WebSocketResponseStartEvent:1
+msgid "ASGI `websocket.http.response.start` event."
+msgstr ""
+
+#: ../../../../litestar/types/asgi_types.py:docstring of
+#: litestar.types.asgi_types.WebSocketResponseBodyEvent:1
+msgid "ASGI `websocket.http.response.body` event."
+msgstr ""
+
+#: ../../../../litestar/types/asgi_types.py:docstring of
+#: litestar.types.asgi_types.WebSocketDisconnectEvent:1
+msgid "ASGI `websocket.disconnect` event."
+msgstr ""
+
+#: ../../../../litestar/types/asgi_types.py:docstring of
+#: litestar.types.asgi_types.WebSocketCloseEvent:1
+msgid "ASGI `websocket.close` event."
+msgstr ""
+
+#: ../../../../litestar/types/asgi_types.py:docstring of
+#: litestar.types.asgi_types.LifeSpanStartupEvent:1
+msgid "ASGI `lifespan.startup` event."
+msgstr ""
+
+#: ../../../../litestar/types/asgi_types.py:docstring of
+#: litestar.types.asgi_types.LifeSpanShutdownEvent:1
+msgid "ASGI `lifespan.shutdown` event."
+msgstr ""
+
+#: ../../../../litestar/types/asgi_types.py:docstring of
+#: litestar.types.asgi_types.LifeSpanStartupCompleteEvent:1
+msgid "ASGI `lifespan.startup.complete` event."
+msgstr ""
+
+#: ../../../../litestar/types/asgi_types.py:docstring of
+#: litestar.types.asgi_types.LifeSpanStartupFailedEvent:1
+msgid "ASGI `lifespan.startup.failed` event."
+msgstr ""
+
+#: ../../../../litestar/types/asgi_types.py:docstring of
+#: litestar.types.asgi_types.LifeSpanShutdownCompleteEvent:1
+msgid "ASGI `lifespan.shutdown.complete` event."
+msgstr ""
+
+#: ../../../../litestar/types/asgi_types.py:docstring of
+#: litestar.types.asgi_types.LifeSpanShutdownFailedEvent:1
+msgid "ASGI `lifespan.shutdown.failed` event."
+msgstr ""
+
+#: ../../../reference/types.rst:115
+msgid "Event Groupings"
+msgstr ""
+
+#: ../../../reference/types.rst:134
+msgid "Send / Receive Parameter Types"
+msgstr ""
+
+#: ../../../reference/types.rst:142
+msgid "Helper Types"
+msgstr ""
+
+#: ../../../reference/types.rst:144
+msgid "Helper types are useful generic types that can be used."
+msgstr ""
+
+#: ../../../reference/types.rst:154
+msgid "Protocols"
+msgstr ""
+
+#: ../../../../litestar/types/protocols.py:docstring of
+#: litestar.types.protocols.Logger:1
+msgid "Bases: :py:class:`~typing.Protocol`"
+msgstr ""
+
+#: ../../../../litestar/types/protocols.py:docstring of
+#: litestar.types.protocols.Logger:1
+msgid "Logger protocol."
+msgstr ""
+
+#: ../../../../litestar/types/protocols.py:docstring of
+#: litestar.types.protocols.Logger.debug:1
+msgid "Output a log message at 'DEBUG' level."
+msgstr ""
+
+#: ../../../reference/types.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../litestar/types/protocols.py:docstring of
+#: litestar.types.protocols.Logger.critical:3
+#: litestar.types.protocols.Logger.debug:3
+#: litestar.types.protocols.Logger.error:3
+#: litestar.types.protocols.Logger.exception:4
+#: litestar.types.protocols.Logger.fatal:3
+#: litestar.types.protocols.Logger.info:3
+#: litestar.types.protocols.Logger.warn:3
+#: litestar.types.protocols.Logger.warning:3
+msgid "Log message."
+msgstr ""
+
+#: ../../../../litestar/types/protocols.py:docstring of
+#: litestar.types.protocols.Logger.critical:4
+#: litestar.types.protocols.Logger.debug:4
+#: litestar.types.protocols.Logger.error:4
+#: litestar.types.protocols.Logger.exception:5
+#: litestar.types.protocols.Logger.fatal:4
+#: litestar.types.protocols.Logger.info:4
+#: litestar.types.protocols.Logger.warn:4
+#: litestar.types.protocols.Logger.warning:4
+msgid "Any args."
+msgstr ""
+
+#: ../../../../litestar/types/protocols.py:docstring of
+#: litestar.types.protocols.Logger.critical:5
+#: litestar.types.protocols.Logger.debug:5
+#: litestar.types.protocols.Logger.error:5
+#: litestar.types.protocols.Logger.exception:6
+#: litestar.types.protocols.Logger.fatal:5
+#: litestar.types.protocols.Logger.info:5
+#: litestar.types.protocols.Logger.warn:5
+#: litestar.types.protocols.Logger.warning:5
+msgid "Any kwargs."
+msgstr ""
+
+#: ../../../../litestar/types/protocols.py:docstring of
+#: litestar.types.protocols.Logger.critical:1
+#: litestar.types.protocols.Logger.info:1
+msgid "Output a log message at 'INFO' level."
+msgstr ""
+
+#: ../../../../litestar/types/protocols.py:docstring of
+#: litestar.types.protocols.Logger.warning:1
+msgid "Output a log message at 'WARNING' level."
+msgstr ""
+
+#: ../../../../litestar/types/protocols.py:docstring of
+#: litestar.types.protocols.Logger.warn:1
+msgid "Output a log message at 'WARN' level."
+msgstr ""
+
+#: ../../../../litestar/types/protocols.py:docstring of
+#: litestar.types.protocols.Logger.error:1
+msgid "Output a log message at 'ERROR' level."
+msgstr ""
+
+#: ../../../../litestar/types/protocols.py:docstring of
+#: litestar.types.protocols.Logger.fatal:1
+msgid "Output a log message at 'FATAL' level."
+msgstr ""
+
+#: ../../../../litestar/types/protocols.py:docstring of
+#: litestar.types.protocols.Logger.exception:1
+msgid ""
+"Log a message with level 'ERROR' on this logger. The arguments are "
+"interpreted as for debug(). Exception info is added to the logging message."
+msgstr ""
+
+#: ../../../../litestar/types/protocols.py:docstring of
+#: litestar.types.protocols.Logger.setLevel:1
+msgid "Set the log level"
+msgstr ""
+
+#: ../../../../litestar/types/protocols.py:docstring of
+#: litestar.types.protocols.Logger.setLevel:3
+msgid "Log level to set as an integer"
+msgstr ""
+
+#: ../../../reference/types.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/types/protocols.py:docstring of
+#: litestar.types.protocols.Logger.setLevel:5
+msgid "None"
+msgstr ""
+
+#: ../../../reference/types.rst:160
+msgid "Composite Types"
+msgstr ""

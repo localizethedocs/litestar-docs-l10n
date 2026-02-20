@@ -1,0 +1,239 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../usage/logging.rst:4
+msgid "Logging"
+msgstr ""
+
+#: ../../../usage/logging.rst:6
+msgid ""
+"Application and request level loggers can be configured using the :class:"
+"`~litestar.logging.config.LoggingConfig`:"
+msgstr ""
+
+#: ../../../usage/logging.rst:9
+msgid ""
+"from litestar import Litestar, Request, get\n"
+"from litestar.logging import LoggingConfig\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"def my_router_handler(request: Request) -> None:\n"
+"    request.logger.info(\"inside a request\")\n"
+"    return None\n"
+"\n"
+"\n"
+"logging_config = LoggingConfig(\n"
+"    root={\"level\": \"INFO\", \"handlers\": [\"queue_listener\"]},\n"
+"    formatters={\n"
+"        \"standard\": {\"format\": \"%(asctime)s - %(name)s - %(levelname)s "
+"- %(message)s\"}\n"
+"    },\n"
+"    log_exceptions=\"always\",\n"
+")\n"
+"\n"
+"app = Litestar(route_handlers=[my_router_handler], "
+"logging_config=logging_config)"
+msgstr ""
+
+#: ../../../usage/logging.rst:34
+msgid ""
+"Litestar configures a non-blocking ``QueueListenerHandler`` which is keyed "
+"as ``queue_listener`` in the logging configuration. The above example is "
+"using this handler, which is optimal for async applications. Make sure to "
+"use it in your own loggers as in the above example."
+msgstr ""
+
+#: ../../../usage/logging.rst:40
+msgid ""
+"Exceptions won't be logged by default, except in debug mode. Make sure to "
+"use ``log_exceptions=\"always\"`` as in the example above to log exceptions "
+"if you need it."
+msgstr ""
+
+#: ../../../usage/logging.rst:44
+msgid "Controlling Exception Logging"
+msgstr ""
+
+#: ../../../usage/logging.rst:46
+msgid ""
+"While ``log_exceptions`` controls when exceptions are logged, sometimes you "
+"may want to suppress stack traces for specific exception types or HTTP "
+"status codes. The ``disable_stack_trace`` parameter allows you to specify a "
+"set of exception types or status codes that should not generate stack traces "
+"in logs:"
+msgstr ""
+
+#: ../../../usage/logging.rst:51
+msgid ""
+"from litestar import Litestar\n"
+"from litestar.logging import LoggingConfig\n"
+"\n"
+"# Don't log stack traces for 404 errors and ValueError exceptions\n"
+"logging_config = LoggingConfig(\n"
+"    debug=True,\n"
+"    disable_stack_trace={404, ValueError},\n"
+")\n"
+"\n"
+"app = Litestar(logging_config=logging_config)"
+msgstr ""
+
+#: ../../../usage/logging.rst:63
+msgid ""
+"This is particularly useful for common exceptions that you expect in normal "
+"operation and don't need detailed stack traces for."
+msgstr ""
+
+#: ../../../usage/logging.rst:66
+msgid "Using Python standard library"
+msgstr ""
+
+#: ../../../usage/logging.rst:68
+msgid ""
+"`logging <https://docs.python.org/3/howto/logging.html>`_ is Python's "
+"builtin standard logging library and can be configured through "
+"``LoggingConfig``."
+msgstr ""
+
+#: ../../../usage/logging.rst:71
+msgid ""
+"The ``LoggingConfig.configure()`` method returns a reference to ``logging."
+"getLogger`` which can be used to access a logger instance. Thus, the root "
+"logger can retrieved with ``logging_config.configure()()`` as shown in the "
+"example below:"
+msgstr ""
+
+#: ../../../usage/logging.rst:76
+msgid ""
+"from litestar import Litestar, Request, get\n"
+"from litestar.logging import LoggingConfig\n"
+"\n"
+"logging_config = LoggingConfig(\n"
+"    root={\"level\": \"INFO\", \"handlers\": [\"queue_listener\"]},\n"
+"    formatters={\n"
+"        \"standard\": {\"format\": \"%(asctime)s - %(name)s - %(levelname)s "
+"- %(message)s\"}\n"
+"    },\n"
+"    log_exceptions=\"always\",\n"
+")\n"
+"\n"
+"logger = logging_config.configure()()\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"def my_router_handler(request: Request) -> None:\n"
+"    request.logger.info(\"inside a request\")\n"
+"    logger.info(\"here too\")\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[my_router_handler],\n"
+"    logging_config=logging_config,\n"
+")"
+msgstr ""
+
+#: ../../../usage/logging.rst:104
+msgid ""
+"The above example is the same as using logging without the litestar "
+"``LoggingConfig``."
+msgstr ""
+
+#: ../../../usage/logging.rst:107
+msgid ""
+"import logging\n"
+"\n"
+"from litestar import Litestar, Request, get\n"
+"\n"
+"\n"
+"def get_logger(mod_name: str) -> logging.Logger:\n"
+"    \"\"\"Return logger object.\"\"\"\n"
+"    format = \"%(asctime)s: %(name)s: %(levelname)s: %(message)s\"\n"
+"    logger = logging.getLogger(mod_name)\n"
+"    # Writes to stdout\n"
+"    ch = logging.StreamHandler()\n"
+"    ch.setLevel(logging.INFO)\n"
+"    ch.setFormatter(logging.Formatter(format))\n"
+"    logger.addHandler(ch)\n"
+"    return logger\n"
+"\n"
+"\n"
+"logger = get_logger(__name__)\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"def my_router_handler(request: Request) -> None:\n"
+"    logger.info(\"logger inside a request\")\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[my_router_handler],\n"
+")"
+msgstr ""
+
+#: ../../../usage/logging.rst:140
+msgid "Using Picologging"
+msgstr ""
+
+#: ../../../usage/logging.rst:142
+msgid ""
+"`Picologging <https://github.com/microsoft/picologging>`_ is a high "
+"performance logging library that is developed by Microsoft. Litestar will "
+"default to using this library automatically if its installed - requiring "
+"zero configuration on the part of the user. That is, if ``picologging`` is "
+"present the previous example will work with it automatically."
+msgstr ""
+
+#: ../../../usage/logging.rst:147
+msgid "Using StructLog"
+msgstr ""
+
+#: ../../../usage/logging.rst:149
+msgid ""
+"`StructLog <https://www.structlog.org/en/stable/>`_ is a powerful structured-"
+"logging library. Litestar ships with a dedicated logging plugin and config "
+"for using it:"
+msgstr ""
+
+#: ../../../usage/logging.rst:153
+msgid ""
+"from litestar import Litestar, Request, get\n"
+"from litestar.plugins.structlog import StructlogPlugin\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"def my_router_handler(request: Request) -> None:\n"
+"    request.logger.info(\"inside a request\")\n"
+"    return None\n"
+"\n"
+"\n"
+"structlog_plugin = StructlogPlugin()\n"
+"\n"
+"app = Litestar(route_handlers=[my_router_handler], "
+"plugins=[StructlogPlugin()])"
+msgstr ""
+
+#: ../../../usage/logging.rst:169
+msgid "Subclass Logging Configs"
+msgstr ""
+
+#: ../../../usage/logging.rst:171
+msgid ""
+"You can easily create you own ``LoggingConfig`` class by subclassing :class:"
+"`BaseLoggingConfig <.logging.config.BaseLoggingConfig>` and implementing the "
+"``configure`` method."
+msgstr ""
