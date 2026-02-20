@@ -1,0 +1,306 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/pagination.rst:2
+msgid "pagination"
+msgstr ""
+
+#: ../../../../litestar/pagination.py:docstring of
+#: litestar.pagination.AbstractAsyncClassicPaginator:1
+#: litestar.pagination.AbstractAsyncOffsetPaginator:1
+#: litestar.pagination.AbstractSyncClassicPaginator:1
+#: litestar.pagination.AbstractSyncOffsetPaginator:1
+msgid ""
+"Bases: :py:class:`~abc.ABC`, :py:class:`~typing.Generic`\\ [:py:obj:"
+"`~litestar.pagination.T`]"
+msgstr ""
+
+#: ../../../../litestar/pagination.py:docstring of
+#: litestar.pagination.AbstractAsyncClassicPaginator:1
+msgid "Base paginator class for async classic pagination."
+msgstr ""
+
+#: ../../../../litestar/pagination.py:docstring of
+#: litestar.pagination.AbstractAsyncClassicPaginator:3
+#: litestar.pagination.AbstractSyncClassicPaginator:3
+msgid ""
+"Implement this class to return paginated result sets using the classic "
+"pagination scheme."
+msgstr ""
+
+#: ../../../../litestar/pagination.py:docstring of
+#: litestar.pagination.AbstractAsyncClassicPaginator.get_total:1
+#: litestar.pagination.AbstractAsyncOffsetPaginator.get_total:1
+#: litestar.pagination.AbstractSyncClassicPaginator.get_total:1
+#: litestar.pagination.AbstractSyncOffsetPaginator.get_total:1
+msgid "Return the total number of records."
+msgstr ""
+
+#: ../../../reference/pagination.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../litestar/pagination.py:docstring of
+#: litestar.pagination.AbstractAsyncClassicPaginator.__call__:3
+#: litestar.pagination.AbstractAsyncClassicPaginator.get_items:3
+#: litestar.pagination.AbstractAsyncClassicPaginator.get_total:3
+#: litestar.pagination.AbstractAsyncOffsetPaginator.__call__:3
+#: litestar.pagination.AbstractAsyncOffsetPaginator.get_items:3
+#: litestar.pagination.AbstractSyncClassicPaginator.__call__:3
+#: litestar.pagination.AbstractSyncClassicPaginator.get_items:3
+#: litestar.pagination.AbstractSyncClassicPaginator.get_total:3
+#: litestar.pagination.AbstractSyncOffsetPaginator.__call__:3
+#: litestar.pagination.AbstractSyncOffsetPaginator.get_items:3
+msgid "Maximal number of records to return."
+msgstr ""
+
+#: ../../../reference/pagination.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/pagination.py:docstring of
+#: litestar.pagination.AbstractAsyncClassicPaginator.get_total:5
+#: litestar.pagination.AbstractAsyncOffsetPaginator.get_total:3
+#: litestar.pagination.AbstractSyncClassicPaginator.get_total:5
+#: litestar.pagination.AbstractSyncOffsetPaginator.get_total:3
+msgid "An integer."
+msgstr ""
+
+#: ../../../../litestar/pagination.py:docstring of
+#: litestar.pagination.AbstractAsyncClassicPaginator.get_items:1
+#: litestar.pagination.AbstractSyncClassicPaginator.get_items:1
+msgid ""
+"Return a list of items of the given size 'page_size' correlating with "
+"'current_page'."
+msgstr ""
+
+#: ../../../../litestar/pagination.py:docstring of
+#: litestar.pagination.AbstractAsyncClassicPaginator.__call__:4
+#: litestar.pagination.AbstractAsyncClassicPaginator.get_items:4
+#: litestar.pagination.AbstractSyncClassicPaginator.__call__:4
+#: litestar.pagination.AbstractSyncClassicPaginator.get_items:4
+msgid "The current page of results to return."
+msgstr ""
+
+#: ../../../../litestar/pagination.py:docstring of
+#: litestar.pagination.AbstractAsyncClassicPaginator.get_items:6
+#: litestar.pagination.AbstractAsyncOffsetPaginator.get_items:6
+#: litestar.pagination.AbstractSyncClassicPaginator.get_items:6
+#: litestar.pagination.AbstractSyncOffsetPaginator.get_items:6
+msgid "A list of items."
+msgstr ""
+
+#: ../../../../litestar/pagination.py:docstring of
+#: litestar.pagination.AbstractAsyncClassicPaginator.__call__:1
+#: litestar.pagination.AbstractAsyncOffsetPaginator.__call__:1
+#: litestar.pagination.AbstractSyncClassicPaginator.__call__:1
+#: litestar.pagination.AbstractSyncOffsetPaginator.__call__:1
+msgid "Return a paginated result set."
+msgstr ""
+
+#: ../../../../litestar/pagination.py:docstring of
+#: litestar.pagination.AbstractAsyncClassicPaginator.__call__:6
+#: litestar.pagination.AbstractAsyncCursorPaginator.__call__:6
+#: litestar.pagination.AbstractAsyncOffsetPaginator.__call__:6
+#: litestar.pagination.AbstractSyncClassicPaginator.__call__:6
+#: litestar.pagination.AbstractSyncCursorPaginator.__call__:6
+#: litestar.pagination.AbstractSyncOffsetPaginator.__call__:6
+msgid "A paginated result set."
+msgstr ""
+
+#: ../../../../litestar/pagination.py:docstring of
+#: litestar.pagination.AbstractAsyncCursorPaginator:1
+#: litestar.pagination.AbstractSyncCursorPaginator:1
+msgid ""
+"Bases: :py:class:`~abc.ABC`, :py:class:`~typing.Generic`\\ [:py:obj:"
+"`~litestar.pagination.C`, :py:obj:`~litestar.pagination.T`]"
+msgstr ""
+
+#: ../../../../litestar/pagination.py:docstring of
+#: litestar.pagination.AbstractAsyncCursorPaginator:1
+msgid "Base paginator class for async cursor pagination."
+msgstr ""
+
+#: ../../../../litestar/pagination.py:docstring of
+#: litestar.pagination.AbstractAsyncCursorPaginator:3
+#: litestar.pagination.AbstractSyncCursorPaginator:3
+msgid ""
+"Implement this class to return paginated result sets using the cursor "
+"pagination scheme."
+msgstr ""
+
+#: ../../../../litestar/pagination.py:docstring of
+#: litestar.pagination.AbstractAsyncCursorPaginator.get_items:1
+#: litestar.pagination.AbstractSyncCursorPaginator.get_items:1
+msgid ""
+"Return a list of items of the size 'results_per_page' following the given "
+"cursor, if any,"
+msgstr ""
+
+#: ../../../../litestar/pagination.py:docstring of
+#: litestar.pagination.AbstractAsyncCursorPaginator.__call__:3
+#: litestar.pagination.AbstractAsyncCursorPaginator.get_items:3
+#: litestar.pagination.AbstractSyncCursorPaginator.__call__:3
+#: litestar.pagination.AbstractSyncCursorPaginator.get_items:3
+msgid ""
+"A unique identifier that acts as the 'cursor' after which results should be "
+"given."
+msgstr ""
+
+#: ../../../../litestar/pagination.py:docstring of
+#: litestar.pagination.AbstractAsyncCursorPaginator.__call__:4
+#: litestar.pagination.AbstractAsyncCursorPaginator.get_items:4
+#: litestar.pagination.AbstractSyncCursorPaginator.__call__:4
+#: litestar.pagination.AbstractSyncCursorPaginator.get_items:4
+msgid "A maximal number of results to return."
+msgstr ""
+
+#: ../../../../litestar/pagination.py:docstring of
+#: litestar.pagination.AbstractAsyncCursorPaginator.get_items:6
+#: litestar.pagination.AbstractSyncCursorPaginator.get_items:6
+msgid ""
+"A tuple containing the result set and a new cursor that marks the last "
+"record retrieved. The new cursor can be used to ask for the 'next_cursor' "
+"batch of results."
+msgstr ""
+
+#: ../../../../litestar/pagination.py:docstring of
+#: litestar.pagination.AbstractAsyncCursorPaginator.__call__:1
+#: litestar.pagination.AbstractSyncCursorPaginator.__call__:1
+msgid ""
+"Return a paginated result set given an optional cursor (unique ID) and a "
+"maximal number of results to return."
+msgstr ""
+
+#: ../../../../litestar/pagination.py:docstring of
+#: litestar.pagination.AbstractAsyncOffsetPaginator:1
+#: litestar.pagination.AbstractSyncOffsetPaginator:1
+msgid "Base paginator class for limit / offset pagination."
+msgstr ""
+
+#: ../../../../litestar/pagination.py:docstring of
+#: litestar.pagination.AbstractAsyncOffsetPaginator:3
+#: litestar.pagination.AbstractSyncOffsetPaginator:3
+msgid ""
+"Implement this class to return paginated result sets using the limit / "
+"offset pagination scheme."
+msgstr ""
+
+#: ../../../../litestar/pagination.py:docstring of
+#: litestar.pagination.AbstractAsyncOffsetPaginator.get_items:1
+#: litestar.pagination.AbstractSyncOffsetPaginator.get_items:1
+msgid ""
+"Return a list of items of the given size 'limit' starting from position "
+"'offset'."
+msgstr ""
+
+#: ../../../../litestar/pagination.py:docstring of
+#: litestar.pagination.AbstractAsyncOffsetPaginator.__call__:4
+#: litestar.pagination.AbstractAsyncOffsetPaginator.get_items:4
+#: litestar.pagination.AbstractSyncOffsetPaginator.__call__:4
+#: litestar.pagination.AbstractSyncOffsetPaginator.get_items:4
+msgid ""
+"Starting position within the result set (assume index 0 as starting "
+"position)."
+msgstr ""
+
+#: ../../../../litestar/pagination.py:docstring of
+#: litestar.pagination.AbstractSyncClassicPaginator:1
+msgid "Base paginator class for sync classic pagination."
+msgstr ""
+
+#: ../../../../litestar/pagination.py:docstring of
+#: litestar.pagination.AbstractSyncCursorPaginator:1
+msgid "Base paginator class for sync cursor pagination."
+msgstr ""
+
+#: ../../../../litestar/pagination.py:docstring of
+#: litestar.pagination.ClassicPagination:1
+msgid "Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~litestar.pagination.T`]"
+msgstr ""
+
+#: ../../../../litestar/pagination.py:docstring of
+#: advanced_alchemy.service.pagination.OffsetPagination:1
+#: litestar.pagination.ClassicPagination:1
+msgid "Container for data returned using limit/offset pagination."
+msgstr ""
+
+#: ../../../../docstring of litestar.pagination.ClassicPagination.items:1
+#: litestar.pagination.CursorPagination.items:1
+#: litestar.pagination.OffsetPagination.items:1
+msgid "List of data being sent as part of the response."
+msgstr ""
+
+#: ../../../../docstring of litestar.pagination.ClassicPagination.page_size:1
+msgid "Number of items per page."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.pagination.ClassicPagination.current_page:1
+msgid "Current page number."
+msgstr ""
+
+#: ../../../../docstring of litestar.pagination.ClassicPagination.total_pages:1
+msgid "Total number of pages."
+msgstr ""
+
+#: ../../../../litestar/pagination.py:docstring of
+#: litestar.pagination.CursorPagination:1
+msgid ""
+"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~litestar.pagination.C`, :py:"
+"obj:`~litestar.pagination.T`]"
+msgstr ""
+
+#: ../../../../litestar/pagination.py:docstring of
+#: litestar.pagination.CursorPagination:1
+msgid "Container for data returned using cursor pagination."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.pagination.CursorPagination.results_per_page:1
+#: litestar.pagination.OffsetPagination.limit:1
+msgid "Maximal number of items to send."
+msgstr ""
+
+#: ../../../../docstring of litestar.pagination.CursorPagination.cursor:1
+msgid "Unique ID, designating the last identifier in the given data set."
+msgstr ""
+
+#: ../../../../docstring of litestar.pagination.CursorPagination.cursor:3
+msgid "This value can be used to request the \"next\" batch of records."
+msgstr ""
+
+#: ../../../../litestar/pagination.py:docstring of
+#: advanced_alchemy.service.pagination.OffsetPagination:1
+msgid ""
+"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~advanced_alchemy.service."
+"pagination.T`]"
+msgstr ""
+
+#: ../../../../docstring of litestar.pagination.OffsetPagination.offset:1
+msgid "Offset from the beginning of the query."
+msgstr ""
+
+#: ../../../../docstring of litestar.pagination.OffsetPagination.offset:3
+msgid "Identical to an index."
+msgstr ""
+
+#: ../../../../docstring of litestar.pagination.OffsetPagination.total:1
+msgid "Total number of items."
+msgstr ""

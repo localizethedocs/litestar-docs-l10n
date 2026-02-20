@@ -1,0 +1,281 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/contrib/opentelemetry.rst:2
+msgid "opentelemetry"
+msgstr ""
+
+#: ../../../../litestar/contrib/opentelemetry/__init__.py:docstring of
+#: litestar.contrib.opentelemetry.config.OpenTelemetryConfig:1
+msgid "Bases: :py:class:`object`"
+msgstr ""
+
+#: ../../../../litestar/contrib/opentelemetry/__init__.py:docstring of
+#: litestar.contrib.opentelemetry.config.OpenTelemetryConfig:1
+msgid "Configuration class for the OpenTelemetry middleware."
+msgstr ""
+
+#: ../../../../litestar/contrib/opentelemetry/__init__.py:docstring of
+#: litestar.contrib.opentelemetry.config.OpenTelemetryConfig:3
+msgid ""
+"Consult the [OpenTelemetry ASGI documentation](https://opentelemetry-python-"
+"contrib.readthedocs.io/en/latest/instrumentation/asgi/asgi.html) for more "
+"info about the configuration options."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.contrib.opentelemetry.OpenTelemetryConfig.after_exception_hook_handler:1
+msgid ""
+"Callback which is called with the exception and the scope object for every "
+"exception raised."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.contrib.opentelemetry.OpenTelemetryConfig.client_request_hook_handler:1
+msgid ""
+"Optional callback which is called with the internal span and an ASGI scope "
+"which is sent as a dictionary for when the method receive is called."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.contrib.opentelemetry.OpenTelemetryConfig.client_response_hook_handler:1
+msgid ""
+"Optional callback which is called with the internal span and an ASGI event "
+"which is sent as a dictionary for when the method send is called."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.contrib.opentelemetry.OpenTelemetryConfig.exclude:1
+msgid "A pattern or list of patterns to skip in the Allowed Hosts middleware."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.contrib.opentelemetry.OpenTelemetryConfig.exclude_opt_key:1
+msgid ""
+"An identifier to use on routes to disable hosts check for a particular route."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.contrib.opentelemetry.OpenTelemetryConfig.exclude_spans:1
+msgid "Optionally exclude HTTP send and/or receive spans from the trace."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.contrib.opentelemetry.OpenTelemetryConfig.exclude_urls_env_key:1
+msgid ""
+"Key to use when checking whether a list of excluded urls is passed via ENV."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.contrib.opentelemetry.OpenTelemetryConfig.exclude_urls_env_key:3
+msgid ""
+"OpenTelemetry supports excluding urls by passing an env in the format "
+"'{exclude_urls_env_key}_EXCLUDED_URLS'. With the default being "
+"``LITESTAR_EXCLUDED_URLS``."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.contrib.opentelemetry.OpenTelemetryConfig.meter:1
+msgid "Optional meter to use."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.contrib.opentelemetry.OpenTelemetryConfig.meter:3
+msgid "If omitted the provided meter provider or the global one will be used."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.contrib.opentelemetry.OpenTelemetryConfig.meter_provider:1
+msgid "Optional meter provider to use."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.contrib.opentelemetry.OpenTelemetryConfig.meter_provider:3
+#: litestar.contrib.opentelemetry.OpenTelemetryConfig.tracer_provider:3
+msgid "If omitted the current globally configured one is used."
+msgstr ""
+
+#: ../../../../litestar/contrib/opentelemetry/__init__.py:docstring of
+#: litestar.contrib.opentelemetry.OpenTelemetryConfig.middleware:1
+msgid ""
+"Create an instance of :class:`DefineMiddleware <litestar.middleware.base."
+"DefineMiddleware>` that wraps with."
+msgstr ""
+
+#: ../../../../litestar/contrib/opentelemetry/__init__.py:docstring of
+#: litestar.contrib.opentelemetry.OpenTelemetryConfig.middleware:3
+msgid ""
+"[OpenTelemetry InstrumentationMiddleware][litestar.contrib.opentelemetry."
+"OpenTelemetryInstrumentationMiddleware] or a subclass of this middleware."
+msgstr ""
+
+#: ../../../reference/contrib/opentelemetry.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/contrib/opentelemetry/__init__.py:docstring of
+#: litestar.contrib.opentelemetry.OpenTelemetryConfig.middleware:7
+msgid "An instance of ``DefineMiddleware``."
+msgstr ""
+
+#: ../../../../litestar/contrib/opentelemetry/__init__.py:docstring of
+#: litestar.contrib.opentelemetry._utils.get_route_details_from_scope:1
+msgid "Retrieve the span name and attributes from the ASGI scope."
+msgstr ""
+
+#: ../../../reference/contrib/opentelemetry.rst:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../litestar/contrib/opentelemetry/__init__.py:docstring of
+#: litestar.contrib.opentelemetry._utils.get_route_details_from_scope:3
+msgid "The ASGI scope instance."
+msgstr ""
+
+#: ../../../../litestar/contrib/opentelemetry/__init__.py:docstring of
+#: litestar.contrib.opentelemetry._utils.get_route_details_from_scope:5
+msgid "A tuple of the span name and a dict of attrs."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.contrib.opentelemetry.OpenTelemetryConfig.scopes:1
+msgid ""
+"ASGI scopes processed by the middleware, if None both ``http`` and "
+"``websocket`` will be processed."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.contrib.opentelemetry.OpenTelemetryConfig.server_request_hook_handler:1
+msgid ""
+"Optional callback which is called with the server span and ASGI scope object "
+"for every incoming request."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.contrib.opentelemetry.OpenTelemetryConfig.tracer_provider:1
+msgid "Optional tracer provider to use."
+msgstr ""
+
+#: ../../../../litestar/contrib/opentelemetry/__init__.py:docstring of
+#: litestar.contrib.opentelemetry.middleware.OpenTelemetryInstrumentationMiddleware:1
+msgid "Bases: :py:class:`~litestar.middleware.base.AbstractMiddleware`"
+msgstr ""
+
+#: ../../../../litestar/contrib/opentelemetry/__init__.py:docstring of
+#: litestar.contrib.opentelemetry.middleware.OpenTelemetryInstrumentationMiddleware:1
+msgid "OpenTelemetry Middleware."
+msgstr ""
+
+#: ../../../../litestar/contrib/opentelemetry/__init__.py:docstring of
+#: litestar.contrib.opentelemetry.middleware.OpenTelemetryInstrumentationMiddleware.__init__:1
+msgid "Middleware that adds OpenTelemetry instrumentation to the application."
+msgstr ""
+
+#: ../../../../litestar/contrib/opentelemetry/__init__.py:docstring of
+#: litestar.contrib.opentelemetry.middleware.OpenTelemetryInstrumentationMiddleware.__init__:3
+msgid "The ``next`` ASGI app to call."
+msgstr ""
+
+#: ../../../../litestar/contrib/opentelemetry/__init__.py:docstring of
+#: litestar.contrib.opentelemetry.middleware.OpenTelemetryInstrumentationMiddleware.__init__:4
+msgid ""
+"An instance of :class:`OpenTelemetryConfig <.contrib.opentelemetry."
+"OpenTelemetryConfig>`"
+msgstr ""
+
+#: ../../../../litestar/contrib/opentelemetry/__init__.py:docstring of
+#: litestar.contrib.opentelemetry.plugin.OpenTelemetryPlugin:1
+msgid "Bases: :py:class:`~litestar.plugins.base.InitPlugin`"
+msgstr ""
+
+#: ../../../../litestar/contrib/opentelemetry/__init__.py:docstring of
+#: litestar.contrib.opentelemetry.plugin.OpenTelemetryPlugin:1
+msgid "OpenTelemetry Plugin."
+msgstr ""
+
+#: ../../../../litestar/contrib/opentelemetry/__init__.py:docstring of
+#: litestar.contrib.opentelemetry.plugin.OpenTelemetryPlugin.on_app_init:1
+msgid ""
+"Receive the :class:`AppConfig<.config.app.AppConfig>` instance after "
+"`on_app_init` hooks have been called."
+msgstr ""
+
+#: ../../../../litestar/contrib/opentelemetry/__init__.py:docstring of
+#: litestar.contrib.opentelemetry.plugin.OpenTelemetryPlugin.on_app_init:3
+msgid "Examples"
+msgstr "範例"
+
+#: ../../../../litestar/contrib/opentelemetry/__init__.py:docstring of
+#: litestar.contrib.opentelemetry.plugin.OpenTelemetryPlugin.on_app_init:6
+msgid ""
+"from litestar import Litestar, get\n"
+"from litestar.di import Provide\n"
+"from litestar.plugins import InitPluginProtocol\n"
+"\n"
+"\n"
+"def get_name() -> str:\n"
+"    return \"world\"\n"
+"\n"
+"\n"
+"@get(\"/my-path\")\n"
+"def my_route_handler(name: str) -> dict[str, str]:\n"
+"    return {\"hello\": name}\n"
+"\n"
+"\n"
+"class MyPlugin(InitPluginProtocol):\n"
+"    def on_app_init(self, app_config: AppConfig) -> AppConfig:\n"
+"        app_config.dependencies[\"name\"] = Provide(get_name)\n"
+"        app_config.route_handlers.append(my_route_handler)\n"
+"        return app_config\n"
+"\n"
+"\n"
+"app = Litestar(plugins=[MyPlugin()])"
+msgstr ""
+"from litestar import Litestar, get\n"
+"from litestar.di import Provide\n"
+"from litestar.plugins import InitPluginProtocol\n"
+"\n"
+"\n"
+"def get_name() -> str:\n"
+"    return \"world\"\n"
+"\n"
+"\n"
+"@get(\"/my-path\")\n"
+"def my_route_handler(name: str) -> dict[str, str]:\n"
+"    return {\"hello\": name}\n"
+"\n"
+"\n"
+"class MyPlugin(InitPluginProtocol):\n"
+"    def on_app_init(self, app_config: AppConfig) -> AppConfig:\n"
+"        app_config.dependencies[\"name\"] = Provide(get_name)\n"
+"        app_config.route_handlers.append(my_route_handler)\n"
+"        return app_config\n"
+"\n"
+"\n"
+"app = Litestar(plugins=[MyPlugin()])"
+
+#: ../../../../litestar/contrib/opentelemetry/__init__.py:docstring of
+#: litestar.contrib.opentelemetry.plugin.OpenTelemetryPlugin.on_app_init:30
+msgid "The :class:`AppConfig <litestar.config.app.AppConfig>` instance."
+msgstr ""
+
+#: ../../../../litestar/contrib/opentelemetry/__init__.py:docstring of
+#: litestar.contrib.opentelemetry.plugin.OpenTelemetryPlugin.on_app_init:32
+msgid "The app config object."
+msgstr ""

@@ -1,0 +1,625 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/response/index.rst:2
+msgid "response"
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.file.File:1
+msgid "Bases: :py:class:`~litestar.response.base.Response`"
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.file.File:1
+msgid "A response, streaming a file as response body."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.file.File.__init__:1
+msgid "Send a file from a file system."
+msgstr ""
+
+#: ../../../reference/response/index.rst:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.file.File.__init__:3
+msgid "A file path in one of the supported formats."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.file.File.__init__:4
+#: litestar.response.sse.ServerSentEvent.__init__:4
+#: litestar.response.streaming.Stream.__init__:4
+msgid ""
+"A :class:`BackgroundTask <.background_tasks.BackgroundTask>` instance or :"
+"class:`BackgroundTasks <.background_tasks.BackgroundTasks>` to execute after "
+"the response is finished. Defaults to None."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.file.File.__init__:7
+msgid "The chunk sizes to use when streaming the file. Defaults to 1MB."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.file.File.__init__:8
+msgid ""
+"The type of the ``Content-Disposition``. Either ``inline`` or ``attachment``."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.__init__:10
+#: litestar.response.file.File.__init__:9
+#: litestar.response.redirect.Redirect.__init__:5
+#: litestar.response.sse.ServerSentEvent.__init__:7
+#: litestar.response.streaming.Stream.__init__:7
+#: litestar.response.template.Template.__init__:9
+msgid ""
+"A list of :class:`Cookie <.datastructures.Cookie>` instances to be set under "
+"the response ``Set-Cookie`` header."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.__init__:12
+#: litestar.response.file.File.__init__:11
+#: litestar.response.redirect.Redirect.__init__:7
+#: litestar.response.sse.ServerSentEvent.__init__:9
+#: litestar.response.streaming.Stream.__init__:9
+msgid "The encoding to be used for the response headers."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.file.File.__init__:12
+msgid ""
+"An optional :class:`ETag <.datastructures.ETag>` instance. If not provided, "
+"an etag will be generated."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.file.File.__init__:14
+msgid ""
+"The output of calling :meth:`file_system.info <litestar.file_system."
+"BaseFileSystem.info>`"
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.file.File.__init__:15
+msgid ""
+"The file system to load the file from. Instances of :class:`~litestar."
+"file_system.BaseFileSystem`, :class:`fsspec.spec.AbstractFileSystem`, :class:"
+"`fsspec.asyn.AsyncFileSystem` will be used directly. If passed string, use "
+"it to look up the corresponding file system from the :class:`~litestar."
+"file_system.FileSystemRegistry`. If not given, the file will be loaded from :"
+"attr:`~litestar.file_system.FileSystemRegistry.default`"
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.file.File.__init__:20
+msgid "An optional filename to set in the header."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.__init__:9
+#: litestar.response.file.File.__init__:21
+#: litestar.response.redirect.Redirect.__init__:8
+#: litestar.response.sse.ServerSentEvent.__init__:10
+#: litestar.response.streaming.Stream.__init__:10
+#: litestar.response.template.Template.__init__:12
+msgid ""
+"A string keyed dictionary of response headers. Header keys are insensitive."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.file.File.__init__:22
+msgid ""
+"A value for the response ``Content-Type`` header. If not provided, the value "
+"will be either derived from the filename if provided and supported by the "
+"stdlib, or will default to ``application/octet-stream``."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.__init__:4
+#: litestar.response.file.File.__init__:25
+#: litestar.response.streaming.Stream.__init__:12
+msgid "An HTTP status code."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.file.File.to_asgi_response:1
+msgid ""
+"Create an :class:`ASGIFileResponse <litestar.response.file."
+"ASGIFileResponse>` instance."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.to_asgi_response:3
+#: litestar.response.file.File.to_asgi_response:3
+#: litestar.response.redirect.Redirect.to_asgi_response:3
+#: litestar.response.streaming.Stream.to_asgi_response:3
+#: litestar.response.template.Template.to_asgi_response:3
+msgid "Background task(s) to be executed after the response is sent."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.to_asgi_response:4
+#: litestar.response.file.File.to_asgi_response:4
+#: litestar.response.redirect.Redirect.to_asgi_response:4
+#: litestar.response.streaming.Stream.to_asgi_response:4
+#: litestar.response.template.Template.to_asgi_response:4
+msgid "A list of cookies to be set on the response."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.to_asgi_response:5
+#: litestar.response.file.File.to_asgi_response:5
+#: litestar.response.redirect.Redirect.to_asgi_response:5
+#: litestar.response.streaming.Stream.to_asgi_response:5
+#: litestar.response.template.Template.to_asgi_response:5
+msgid ""
+"Additional headers to be merged with the response headers. Response headers "
+"take precedence."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.to_asgi_response:6
+#: litestar.response.file.File.to_asgi_response:6
+#: litestar.response.redirect.Redirect.to_asgi_response:6
+#: litestar.response.streaming.Stream.to_asgi_response:6
+#: litestar.response.template.Template.to_asgi_response:6
+msgid "Whether the response is a HEAD response."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.to_asgi_response:7
+#: litestar.response.file.File.to_asgi_response:7
+#: litestar.response.redirect.Redirect.to_asgi_response:7
+#: litestar.response.streaming.Stream.to_asgi_response:7
+#: litestar.response.template.Template.to_asgi_response:7
+msgid ""
+"Media type for the response. If ``media_type`` is already set on the "
+"response, this is ignored."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.to_asgi_response:8
+#: litestar.response.file.File.to_asgi_response:8
+#: litestar.response.redirect.Redirect.to_asgi_response:8
+#: litestar.response.streaming.Stream.to_asgi_response:8
+#: litestar.response.template.Template.to_asgi_response:8
+msgid "The :class:`Request <.connection.Request>` instance."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.to_asgi_response:9
+#: litestar.response.file.File.to_asgi_response:9
+#: litestar.response.redirect.Redirect.to_asgi_response:9
+#: litestar.response.streaming.Stream.to_asgi_response:9
+#: litestar.response.template.Template.to_asgi_response:9
+msgid ""
+"Status code for the response. If ``status_code`` is already set on the "
+"response, this is"
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.to_asgi_response:10
+#: litestar.response.file.File.to_asgi_response:10
+#: litestar.response.redirect.Redirect.to_asgi_response:10
+#: litestar.response.streaming.Stream.to_asgi_response:10
+#: litestar.response.template.Template.to_asgi_response:10
+msgid "A dictionary of type encoders to use for encoding the response content."
+msgstr ""
+
+#: ../../../reference/response/index.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.file.File.to_asgi_response:12
+msgid "A low-level ASGI file response."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.redirect.Redirect:1
+msgid ""
+"Bases: :py:class:`~litestar.response.base.Response`\\ [:py:obj:`~typing.Any`]"
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.redirect.Redirect:1
+msgid "A redirect response."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.__init__:1
+#: litestar.response.redirect.Redirect.__init__:1
+#: litestar.response.sse.ServerSentEvent.__init__:1
+#: litestar.response.streaming.Stream.__init__:1
+msgid "Initialize the response."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.redirect.Redirect.__init__:3
+msgid "A path to redirect to."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.redirect.Redirect.__init__:4
+msgid "A background task or tasks to be run after the response is sent."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.__init__:5
+#: litestar.response.redirect.Redirect.__init__:9
+#: litestar.response.streaming.Stream.__init__:11
+msgid "A value for the response ``Content-Type`` header."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.redirect.Redirect.__init__:10
+msgid ""
+"An HTTP status code. The status code should be one of 301, 302, 303, 307 or "
+"308, otherwise an exception will be raised."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.__init__:13
+#: litestar.response.redirect.Redirect.__init__:12
+msgid ""
+"A mapping of types to callables that transform them into types supported for "
+"serialization."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.redirect.Redirect.__init__:13
+msgid ""
+"A dictionary of values from which the request's query will be generated."
+msgstr ""
+
+#: ../../../reference/response/index.rst:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.redirect.Redirect.__init__:15
+msgid ""
+"Either if status code is not a redirect status code or media type is not     "
+"supported."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.to_asgi_response:1
+#: litestar.response.redirect.Redirect.to_asgi_response:1
+#: litestar.response.template.Template.to_asgi_response:1
+msgid "Create an ASGIResponse from a Response instance."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.to_asgi_response:12
+#: litestar.response.redirect.Redirect.to_asgi_response:12
+#: litestar.response.template.Template.to_asgi_response:12
+msgid "An ASGIResponse instance."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response:1
+msgid ""
+"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~litestar.response.base.T`]"
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response:1
+msgid ""
+"Base Litestar HTTP response class, used as the basis for all other response "
+"classes."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.__init__:3
+msgid "A value for the response body that will be rendered into bytes string."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.__init__:6
+#: litestar.response.template.Template.__init__:5
+msgid ""
+"A :class:`BackgroundTask <.background_tasks.BackgroundTask>` instance or :"
+"class:`BackgroundTasks <.background_tasks.BackgroundTasks>` to execute after "
+"the response is finished. Defaults to ``None``."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.delete_cookie:1
+msgid "Delete a cookie."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.delete_cookie:3
+msgid "Key of the cookie."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.delete_cookie:4
+msgid "Path of the cookie."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.delete_cookie:5
+msgid "Domain of the cookie."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.delete_cookie:7
+#: litestar.response.base.Response.set_cookie:14
+#: litestar.response.base.Response.set_header:6
+msgid "None."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.render:1
+msgid "Handle the rendering of content into a bytes string."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.render:3
+msgid "An encoded bytes string"
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.set_cookie:1
+msgid ""
+"Set a cookie on the response. If passed a :class:`Cookie <.datastructures."
+"Cookie>` instance, keyword arguments will be ignored."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.set_cookie:4
+msgid ""
+"Key for the cookie or a :class:`Cookie <.datastructures.Cookie>` instance."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.set_cookie:5
+msgid "Value for the cookie, if none given defaults to empty string."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.set_cookie:6
+msgid "Maximal age of the cookie before its invalidated."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.set_cookie:7
+msgid "Seconds from now until the cookie expires."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.set_cookie:8
+msgid ""
+"Path fragment that must exist in the request url for the cookie to be valid. "
+"Defaults to ``/``."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.set_cookie:9
+msgid "Domain for which the cookie is valid."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.set_cookie:10
+msgid "Https is required for the cookie."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.set_cookie:11
+msgid "Forbids javascript to access the cookie via ``document.cookie``."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.set_cookie:12
+msgid ""
+"Controls whether a cookie is sent with cross-site requests. Defaults to "
+"``lax``."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.set_etag:1
+msgid "Set an etag header."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.set_etag:3
+msgid "An etag value."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.set_etag:5
+msgid "None"
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.set_header:1
+msgid "Set a header on the response."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.set_header:3
+msgid "Header key."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.base.Response.set_header:4
+msgid "Header value."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.sse.ServerSentEvent:1
+msgid "Bases: :py:class:`~litestar.response.streaming.Stream`"
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.sse.ServerSentEvent.__init__:3
+msgid "Bytes, string or a sync or async iterator or iterable."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.sse.ServerSentEvent.__init__:11
+msgid "The response status code. Defaults to 200."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.sse.ServerSentEvent.__init__:12
+msgid ""
+"The type of the SSE event. If given, the browser will sent the event to any "
+"'event-listener' declared for it (e.g. via 'addEventListener' in JS)."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.sse.ServerSentEvent.__init__:14
+msgid "The event ID. This sets the event source's 'last event id'."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.sse.ServerSentEvent.__init__:15
+msgid "Retry duration in milliseconds."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.sse.ServerSentEvent.__init__:16
+msgid ""
+"A comment message. This value is ignored by clients and is used mostly for "
+"pinging."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.sse.ServerSentEventMessage:1
+msgid "Bases: :py:class:`object`"
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.sse.ServerSentEventMessage:1
+msgid ""
+"ServerSentEventMessage(data: 'str | int | bytes | None' = '', event: 'str | "
+"None' = None, id: 'int | str | None' = None, retry: 'int | None' = None, "
+"comment: 'str | None' = None, sep: 'str' = '\\r\\n')"
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.streaming.Stream:1
+msgid ""
+"Bases: :py:class:`~litestar.response.base.Response`\\ [:py:class:"
+"`~collections.abc.Iterable`\\ [:py:class:`str` | :py:class:`bytes`] | :py:"
+"class:`~collections.abc.Iterator`\\ [:py:class:`str` | :py:class:`bytes`] | :"
+"py:class:`~collections.abc.AsyncIterable`\\ [:py:class:`str` | :py:class:"
+"`bytes`] | :py:class:`~collections.abc.AsyncIterator`\\ [:py:class:`str` | :"
+"py:class:`bytes`]]"
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.streaming.Stream:1
+msgid ""
+"An HTTP response that streams the response data as a series of ASGI ``http."
+"response.body`` events."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.streaming.Stream.__init__:3
+msgid "A sync or async iterator or iterable."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.streaming.Stream.to_asgi_response:1
+msgid "Create an ASGIStreamingResponse from a StremaingResponse instance."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.streaming.Stream.to_asgi_response:12
+msgid "An ASGIStreamingResponse instance."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.template.Template:1
+msgid ""
+"Bases: :py:class:`~litestar.response.base.Response`\\ [:py:class:`bytes`]"
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.template.Template:1
+msgid ""
+"Template-based response, rendering a given template into a bytes string."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.template.Template.__init__:1
+msgid "Handle the rendering of a given template into a bytes string."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.template.Template.__init__:3
+msgid "Path-like name for the template to be rendered, e.g. ``index.html``."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.template.Template.__init__:4
+msgid ""
+"A string representing the template, e.g. ``tmpl = \"Hello <strong>World</"
+"strong>\"``."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.template.Template.__init__:8
+msgid ""
+"A dictionary of key/value pairs to be passed to the temple engine's render "
+"method."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.template.Template.__init__:11
+msgid "Content encoding"
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.template.Template.__init__:13
+msgid ""
+"A string or member of the :class:`MediaType <.enums.MediaType>` enum. If not "
+"set, try to infer the media type based on the template name. If this fails, "
+"fall back to ``text/plain``."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.template.Template.__init__:15
+msgid "A value for the response HTTP status code."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.template.Template.create_template_context:1
+msgid "Create a context object for the template."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.template.Template.create_template_context:3
+msgid "A :class:`Request <.connection.Request>` instance."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.template.Template.create_template_context:5
+msgid "A dictionary holding the template context"
+msgstr ""

@@ -1,0 +1,257 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:2
+msgid "SQLAlchemy Serialization Plugin"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:4
+msgid ""
+"The SQLAlchemy Serialization Plugin allows Litestar to do the work of "
+"transforming inbound and outbound data to and from SQLAlchemy models. The "
+"plugin takes no arguments, simply instantiate it and pass it to your "
+"application."
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:8
+msgid "Example"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:0
+msgid "Async"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:15
+msgid "SQLAlchemy Async Serialization Plugin"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:15
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:40
+msgid ""
+"from __future__ import annotations\n"
+"\n"
+"from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column\n"
+"\n"
+"from litestar import Litestar, post\n"
+"from litestar.plugins.sqlalchemy import SQLAlchemySerializationPlugin\n"
+"\n"
+"\n"
+"class Base(DeclarativeBase): ...\n"
+"\n"
+"\n"
+"class TodoItem(Base):\n"
+"    __tablename__ = \"todo_item\"\n"
+"    title: Mapped[str] = mapped_column(primary_key=True)\n"
+"    done: Mapped[bool]\n"
+"\n"
+"\n"
+"@post(\"/\")\n"
+"async def add_item(data: TodoItem) -> list[TodoItem]:\n"
+"    return [data]\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[add_item], "
+"plugins=[SQLAlchemySerializationPlugin()])"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:0
+msgid "Sync"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:22
+msgid "SQLAlchemy Sync Serialization Plugin"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:22
+msgid ""
+"from __future__ import annotations\n"
+"\n"
+"from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column\n"
+"\n"
+"from litestar import Litestar, post\n"
+"from litestar.plugins.sqlalchemy import SQLAlchemySerializationPlugin\n"
+"\n"
+"\n"
+"class Base(DeclarativeBase): ...\n"
+"\n"
+"\n"
+"class TodoItem(Base):\n"
+"    __tablename__ = \"todo_item\"\n"
+"    title: Mapped[str] = mapped_column(primary_key=True)\n"
+"    done: Mapped[bool]\n"
+"\n"
+"\n"
+"@post(\"/\", sync_to_thread=False)\n"
+"def add_item(data: TodoItem) -> list[TodoItem]:\n"
+"    return [data]\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[add_item], "
+"plugins=[SQLAlchemySerializationPlugin()])"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:27
+msgid "How it works"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:29
+msgid ""
+"The plugin works by defining a :class:`SQLAlchemyDTO <advanced_alchemy."
+"extensions.litestar.dto.SQLAlchemyDTO>` class for each handler ``data`` or "
+"return annotation that is a SQLAlchemy model, or collection of SQLAlchemy "
+"models, that isn't otherwise managed by an explicitly defined DTO class."
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:33
+msgid "The following two examples are functionally equivalent:"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:0
+msgid "Serialization Plugin"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:0
+msgid "Data Transfer Object"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:46
+msgid ""
+"from __future__ import annotations\n"
+"\n"
+"from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column\n"
+"\n"
+"from litestar import Litestar, post\n"
+"from litestar.plugins.sqlalchemy import SQLAlchemyDTO\n"
+"\n"
+"\n"
+"class Base(DeclarativeBase): ...\n"
+"\n"
+"\n"
+"class TodoItem(Base):\n"
+"    __tablename__ = \"todo_item\"\n"
+"    title: Mapped[str] = mapped_column(primary_key=True)\n"
+"    done: Mapped[bool]\n"
+"\n"
+"\n"
+"@post(\"/\", dto=SQLAlchemyDTO[TodoItem])\n"
+"async def add_item(data: TodoItem) -> list[TodoItem]:\n"
+"    return [data]\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[add_item])"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:49
+msgid ""
+"During registration, the application recognizes that there is no DTO class "
+"explicitly defined and determines that the handler annotations are supported "
+"by the SQLAlchemy Serialization Plugin. The plugin is then used to generate "
+"a DTO class for both the ``data`` keyword argument and the return annotation."
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:54
+msgid "Configuring data transfer"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:56
+msgid ""
+"As the serialization plugin merely defines DTOs for the handler, we can :ref:"
+"`mark the model fields <dto-marking-fields>` to control the data that we "
+"allow in and out of our application."
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:65
+msgid "SQLAlchemy Async Marking Fields"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:65
+msgid ""
+"from __future__ import annotations\n"
+"\n"
+"from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column\n"
+"\n"
+"from litestar import Litestar, post\n"
+"from litestar.dto import dto_field\n"
+"from litestar.plugins.sqlalchemy import SQLAlchemySerializationPlugin\n"
+"\n"
+"\n"
+"class Base(DeclarativeBase): ...\n"
+"\n"
+"\n"
+"class TodoItem(Base):\n"
+"    __tablename__ = \"todo_item\"\n"
+"    title: Mapped[str] = mapped_column(primary_key=True)\n"
+"    done: Mapped[bool]\n"
+"    super_secret_value: Mapped[str] = "
+"mapped_column(info=dto_field(\"private\"))\n"
+"\n"
+"\n"
+"@post(\"/\")\n"
+"async def add_item(data: TodoItem) -> list[TodoItem]:\n"
+"    data.super_secret_value = \"This is a secret\"\n"
+"    return [data]\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[add_item], "
+"plugins=[SQLAlchemySerializationPlugin()])"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:73
+msgid "SQLAlchemy Sync Marking Fields"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:73
+msgid ""
+"from __future__ import annotations\n"
+"\n"
+"from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column\n"
+"\n"
+"from litestar import Litestar, post\n"
+"from litestar.dto import dto_field\n"
+"from litestar.plugins.sqlalchemy import SQLAlchemySerializationPlugin\n"
+"\n"
+"\n"
+"class Base(DeclarativeBase): ...\n"
+"\n"
+"\n"
+"class TodoItem(Base):\n"
+"    __tablename__ = \"todo_item\"\n"
+"    title: Mapped[str] = mapped_column(primary_key=True)\n"
+"    done: Mapped[bool]\n"
+"    super_secret_value: Mapped[str] = "
+"mapped_column(info=dto_field(\"private\"))\n"
+"\n"
+"\n"
+"@post(\"/\", sync_to_thread=False)\n"
+"def add_item(data: TodoItem) -> list[TodoItem]:\n"
+"    data.super_secret_value = \"This is a secret\"\n"
+"    return [data]\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[add_item], "
+"plugins=[SQLAlchemySerializationPlugin()])"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:78
+msgid ""
+"In the above example, a new attribute called ``super_secret_value`` has been "
+"added to the model, and a value set for it in the handler. However, due to "
+"\"marking\" the field as \"private\", when the model is serialized, the "
+"value is not present in the response."
+msgstr ""

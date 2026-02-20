@@ -1,0 +1,232 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/response/streaming.rst:2
+msgid "streaming"
+msgstr ""
+
+#: ../../../../litestar/response/streaming.py:docstring of
+#: litestar.response.streaming.ASGIStreamingResponse:1
+msgid "Bases: :py:class:`~litestar.response.base.ASGIResponse`"
+msgstr ""
+
+#: ../../../../litestar/response/streaming.py:docstring of
+#: litestar.response.streaming.ASGIStreamingResponse:1
+msgid "A streaming response."
+msgstr ""
+
+#: ../../../../litestar/response/streaming.py:docstring of
+#: litestar.response.streaming.ASGIStreamingResponse.__init__:1
+msgid "A low-level ASGI streaming response."
+msgstr ""
+
+#: ../../../reference/response/streaming.rst:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../litestar/response/streaming.py:docstring of
+#: litestar.response.streaming.ASGIStreamingResponse.__init__:3
+msgid ""
+"A background task or a list of background tasks to be executed after the "
+"response is sent."
+msgstr ""
+
+#: ../../../../litestar/response/streaming.py:docstring of
+#: litestar.response.streaming.ASGIStreamingResponse.__init__:4
+msgid "The response content length."
+msgstr ""
+
+#: ../../../../litestar/response/streaming.py:docstring of
+#: litestar.response.streaming.ASGIStreamingResponse.__init__:5
+msgid "The response cookies."
+msgstr ""
+
+#: ../../../../litestar/response/streaming.py:docstring of
+#: litestar.response.streaming.ASGIStreamingResponse.__init__:6
+msgid "The response encoding."
+msgstr ""
+
+#: ../../../../litestar/response/streaming.py:docstring of
+#: litestar.response.streaming.ASGIStreamingResponse.__init__:7
+msgid "The response headers."
+msgstr ""
+
+#: ../../../../litestar/response/streaming.py:docstring of
+#: litestar.response.streaming.ASGIStreamingResponse.__init__:8
+msgid "A boolean indicating if the response is a HEAD response."
+msgstr ""
+
+#: ../../../../litestar/response/streaming.py:docstring of
+#: litestar.response.streaming.ASGIStreamingResponse.__init__:9
+msgid "An async iterator or iterable."
+msgstr ""
+
+#: ../../../../litestar/response/streaming.py:docstring of
+#: litestar.response.streaming.ASGIStreamingResponse.__init__:10
+msgid "The response media type."
+msgstr ""
+
+#: ../../../../litestar/response/streaming.py:docstring of
+#: litestar.response.streaming.ASGIStreamingResponse.__init__:11
+msgid "The response status code."
+msgstr ""
+
+#: ../../../../litestar/response/streaming.py:docstring of
+#: litestar.response.streaming.ASGIStreamingResponse.send_body:1
+msgid "Emit a stream of events correlating with the response body."
+msgstr ""
+
+#: ../../../../litestar/response/streaming.py:docstring of
+#: litestar.response.streaming.ASGIStreamingResponse.send_body:3
+msgid "The ASGI send function."
+msgstr ""
+
+#: ../../../../litestar/response/streaming.py:docstring of
+#: litestar.response.streaming.ASGIStreamingResponse.send_body:4
+msgid "The ASGI receive function."
+msgstr ""
+
+#: ../../../reference/response/streaming.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/response/streaming.py:docstring of
+#: litestar.response.streaming.ASGIStreamingResponse.send_body:6
+msgid "None"
+msgstr ""
+
+#: ../../../../litestar/response/streaming.py:docstring of
+#: litestar.response.streaming.Stream:1
+msgid ""
+"Bases: :py:class:`~litestar.response.base.Response`\\ [:py:class:"
+"`~collections.abc.Iterable`\\ [:py:class:`str` | :py:class:`bytes`] | :py:"
+"class:`~collections.abc.Iterator`\\ [:py:class:`str` | :py:class:`bytes`] | :"
+"py:class:`~collections.abc.AsyncIterable`\\ [:py:class:`str` | :py:class:"
+"`bytes`] | :py:class:`~collections.abc.AsyncIterator`\\ [:py:class:`str` | :"
+"py:class:`bytes`]]"
+msgstr ""
+
+#: ../../../../litestar/response/streaming.py:docstring of
+#: litestar.response.streaming.Stream:1
+msgid ""
+"An HTTP response that streams the response data as a series of ASGI ``http."
+"response.body`` events."
+msgstr ""
+
+#: ../../../../litestar/response/streaming.py:docstring of
+#: litestar.response.streaming.Stream.__init__:1
+msgid "Initialize the response."
+msgstr ""
+
+#: ../../../../litestar/response/streaming.py:docstring of
+#: litestar.response.streaming.Stream.__init__:3
+msgid "A sync or async iterator or iterable."
+msgstr ""
+
+#: ../../../../litestar/response/streaming.py:docstring of
+#: litestar.response.streaming.Stream.__init__:4
+msgid ""
+"A :class:`BackgroundTask <.background_tasks.BackgroundTask>` instance or :"
+"class:`BackgroundTasks <.background_tasks.BackgroundTasks>` to execute after "
+"the response is finished. Defaults to None."
+msgstr ""
+
+#: ../../../../litestar/response/streaming.py:docstring of
+#: litestar.response.streaming.Stream.__init__:7
+msgid ""
+"A list of :class:`Cookie <.datastructures.Cookie>` instances to be set under "
+"the response ``Set-Cookie`` header."
+msgstr ""
+
+#: ../../../../litestar/response/streaming.py:docstring of
+#: litestar.response.streaming.Stream.__init__:9
+msgid "The encoding to be used for the response headers."
+msgstr ""
+
+#: ../../../../litestar/response/streaming.py:docstring of
+#: litestar.response.streaming.Stream.__init__:10
+msgid ""
+"A string keyed dictionary of response headers. Header keys are insensitive."
+msgstr ""
+
+#: ../../../../litestar/response/streaming.py:docstring of
+#: litestar.response.streaming.Stream.__init__:11
+msgid "A value for the response ``Content-Type`` header."
+msgstr ""
+
+#: ../../../../litestar/response/streaming.py:docstring of
+#: litestar.response.streaming.Stream.__init__:12
+msgid "An HTTP status code."
+msgstr ""
+
+#: ../../../../litestar/response/streaming.py:docstring of
+#: litestar.response.streaming.Stream.to_asgi_response:1
+msgid "Create an ASGIStreamingResponse from a StremaingResponse instance."
+msgstr ""
+
+#: ../../../../litestar/response/streaming.py:docstring of
+#: litestar.response.streaming.Stream.to_asgi_response:3
+msgid "Background task(s) to be executed after the response is sent."
+msgstr ""
+
+#: ../../../../litestar/response/streaming.py:docstring of
+#: litestar.response.streaming.Stream.to_asgi_response:4
+msgid "A list of cookies to be set on the response."
+msgstr ""
+
+#: ../../../../litestar/response/streaming.py:docstring of
+#: litestar.response.streaming.Stream.to_asgi_response:5
+msgid ""
+"Additional headers to be merged with the response headers. Response headers "
+"take precedence."
+msgstr ""
+
+#: ../../../../litestar/response/streaming.py:docstring of
+#: litestar.response.streaming.Stream.to_asgi_response:6
+msgid "Whether the response is a HEAD response."
+msgstr ""
+
+#: ../../../../litestar/response/streaming.py:docstring of
+#: litestar.response.streaming.Stream.to_asgi_response:7
+msgid ""
+"Media type for the response. If ``media_type`` is already set on the "
+"response, this is ignored."
+msgstr ""
+
+#: ../../../../litestar/response/streaming.py:docstring of
+#: litestar.response.streaming.Stream.to_asgi_response:8
+msgid "The :class:`Request <.connection.Request>` instance."
+msgstr ""
+
+#: ../../../../litestar/response/streaming.py:docstring of
+#: litestar.response.streaming.Stream.to_asgi_response:9
+msgid ""
+"Status code for the response. If ``status_code`` is already set on the "
+"response, this is"
+msgstr ""
+
+#: ../../../../litestar/response/streaming.py:docstring of
+#: litestar.response.streaming.Stream.to_asgi_response:10
+msgid "A dictionary of type encoders to use for encoding the response content."
+msgstr ""
+
+#: ../../../../litestar/response/streaming.py:docstring of
+#: litestar.response.streaming.Stream.to_asgi_response:12
+msgid "An ASGIStreamingResponse instance."
+msgstr ""

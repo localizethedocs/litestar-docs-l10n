@@ -1,0 +1,1471 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/datastructures/index.rst:2
+msgid "datastructures"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.cookie.Cookie:1
+#: litestar.datastructures.headers.Accept:1
+#: litestar.datastructures.response_header.ResponseHeader:1
+#: litestar.datastructures.upload_file.UploadFile:1
+#: litestar.datastructures.url.URL:1
+msgid "Bases: :py:class:`object`"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.url.URL:1
+msgid "Representation and modification utilities of a URL."
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.URL.fragment:1
+msgid "Fragment component."
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.URL.hostname:1
+msgid "Hostname if specified."
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.URL.netloc:1
+msgid "Network location."
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.URL.password:1
+msgid "Password if specified."
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.URL.path:1
+msgid "Hierarchical path."
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.URL.port:1
+msgid "Port if specified."
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.URL.query:1
+msgid "Query string."
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.URL.scheme:1
+msgid "URL scheme."
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.URL.username:1
+msgid "Username if specified."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.url.URL.__new__:1
+msgid "Create a new instance."
+msgstr ""
+
+#: ../../../reference/datastructures/index.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.url.URL.__new__:3
+msgid "url string or split result to represent."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.url.URL.from_components:1
+msgid "Create a new URL from components."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.url.URL.from_components:3
+#: litestar.datastructures.url.URL.with_replacements:3
+msgid "URL scheme"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.url.URL.from_components:4
+#: litestar.datastructures.url.URL.with_replacements:4
+msgid "Network location"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.url.URL.from_components:5
+#: litestar.datastructures.url.URL.with_replacements:5
+msgid "Hierarchical path"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.url.URL.from_components:6
+msgid "Query component"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.url.URL.from_components:7
+#: litestar.datastructures.url.URL.with_replacements:7
+msgid "Fragment identifier"
+msgstr ""
+
+#: ../../../reference/datastructures/index.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.url.URL.from_components:9
+msgid "A new URL with the given components"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.url.URL.from_scope:1
+msgid "Construct a URL from a :class:`Scope <.types.Scope>`"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.url.URL.from_scope:3
+msgid "A scope"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.url.URL.from_scope:5
+msgid "A URL"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.URL.query_params:1
+msgid ""
+"Query parameters of a URL as a :class:`MultiDict <.datastructures."
+"multi_dicts.MultiDict>`"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.URL.query_params:3
+msgid ""
+"A :class:`MultiDict <.datastructures.multi_dicts.MultiDict>` with query "
+"parameters"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.URL.query_params:5
+#: litestar.datastructures.headers.MutableScopeHeaders.add:3
+#: litestar.datastructures.headers.MutableScopeHeaders.extend_header_value:3
+msgid "Notes"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.URL.query_params:7
+msgid ""
+"The returned ``MultiDict`` is mutable, :class:`URL` itself is *immutable*,"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.URL.query_params:8
+msgid ""
+"therefore mutating the query parameters will not directly mutate the "
+"``URL``. If you want to modify query parameters, make  modifications in the "
+"multidict and pass them back to :meth:`with_replacements`"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.url.URL.with_replacements:1
+msgid "Create a new URL, replacing the given components."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.url.URL.with_replacements:6
+msgid "Raw query string"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.url.URL.with_replacements:9
+msgid "A new URL with the given components replaced"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.Accept:1
+msgid "An ``Accept`` header."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.Accept.accepts:1
+msgid "Check if the request accepts the specified media type."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.Accept.accepts:3
+msgid ""
+"If multiple media types can be provided, it is better to use :func:"
+"`best_match`."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.Accept.accepts:5
+msgid "The media type to check for."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.Accept.accepts:7
+msgid "True if the request accepts ``media_type``."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.Accept.best_match:1
+msgid "Find the best matching media type for the request."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.Accept.best_match:3
+msgid ""
+"A list of media types that can be provided as a response. These types can "
+"contain a wildcard ``*`` character in the main- or subtype part."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.Accept.best_match:5
+msgid "The media type that is returned if none of the provided types match."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.Accept.best_match:7
+msgid ""
+"The best matching media type. If the matching provided type contains "
+"wildcard characters, they are replaced with the corresponding part of the "
+"accepted type. Otherwise the provided type is returned as-is."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.url.Address:1
+msgid "Bases: :py:class:`~typing.NamedTuple`"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.url.Address:1
+msgid "Just a network address."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: namedtuple_Address.Address.__new__:1
+msgid "Create new instance of Address(host, port)"
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.Address.host:1
+msgid "Address host."
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.Address.port:1
+msgid "Address port."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.CacheControlHeader:1
+#: litestar.datastructures.headers.ETag:1
+msgid "Bases: :py:class:`~litestar.datastructures.headers.Header`"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.CacheControlHeader:1
+msgid "A ``cache-control`` header."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.CacheControlHeader.from_header:1
+msgid "Create a ``CacheControlHeader`` instance from the header value."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.CacheControlHeader.from_header:3
+msgid "the header value as string"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.CacheControlHeader.from_header:5
+msgid "An instance of ``CacheControlHeader``"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.datastructures.CacheControlHeader.immutable:1
+msgid "Accessor for the ``immutable`` directive."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.datastructures.CacheControlHeader.max_age:1
+msgid "Accessor for the ``max-age`` directive."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.datastructures.CacheControlHeader.must_revalidate:1
+msgid "Accessor for the ``must-revalidate`` directive."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.datastructures.CacheControlHeader.must_understand:1
+msgid "Accessor for the ``must-understand`` directive."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.datastructures.CacheControlHeader.no_cache:1
+msgid "Accessor for the ``no-cache`` directive."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.datastructures.CacheControlHeader.no_store:1
+msgid "Accessor for the ``no-store`` directive."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.datastructures.CacheControlHeader.no_transform:1
+msgid "Accessor for the ``no-transform`` directive."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.CacheControlHeader.prevent_storing:1
+msgid ""
+"Create a ``cache-control`` header with the ``no-store`` directive which "
+"indicates that any caches of any kind (private or shared) should not store "
+"this response."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.datastructures.CacheControlHeader.private:1
+msgid "Accessor for the ``private`` directive."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.datastructures.CacheControlHeader.proxy_revalidate:1
+msgid "Accessor for the ``proxy-revalidate`` directive."
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.CacheControlHeader.public:1
+msgid "Accessor for the ``public`` directive."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.datastructures.CacheControlHeader.s_maxage:1
+msgid "Accessor for the ``s-maxage`` directive."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.datastructures.CacheControlHeader.stale_while_revalidate:1
+msgid "Accessor for the ``stale-while-revalidate`` directive."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.cookie.Cookie:1
+msgid "Container class for defining a cookie using the ``Set-Cookie`` header."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.cookie.Cookie:3
+msgid ""
+"See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie "
+"for more details regarding this header."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.cookie.Cookie.__eq__:1
+msgid ""
+"Determine whether two cookie instances are equal according to the cookie "
+"spec, i.e. hey have a similar path, domain and key."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.cookie.Cookie.__eq__:4
+msgid "An arbitrary value"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.cookie.Cookie.__eq__:6
+msgid "A boolean"
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.Cookie.description:1
+msgid "Description of the response cookie header for OpenAPI documentation."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.Cookie.dict:1
+msgid "Get the cookie as a dict."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.Cookie.dict:3
+msgid "A dict of values"
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.Cookie.documentation_only:1
+msgid "Defines the Cookie instance as for OpenAPI documentation purpose only."
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.Cookie.domain:1
+msgid "Domain for which the cookie is valid."
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.Cookie.expires:1
+msgid "Seconds from now until the cookie expires."
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.Cookie.httponly:1
+msgid "Forbids javascript to access the cookie via ``document.cookie``."
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.Cookie.max_age:1
+msgid "Maximal age of the cookie before its invalidated."
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.Cookie.path:1
+msgid ""
+"Path fragment that must exist in the request url for the cookie to be valid."
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.Cookie.path:3
+msgid "Defaults to ``/``."
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.Cookie.samesite:1
+msgid "Controls whether or not a cookie is sent with cross-site requests."
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.Cookie.samesite:3
+msgid "Defaults to 'lax'."
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.Cookie.secure:1
+msgid "Https is required for the cookie."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.Cookie.simple_cookie:1
+msgid "Get a simple cookie object from the values."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.Cookie.simple_cookie:3
+msgid "A :class:`SimpleCookie <http.cookies.SimpleCookie>`"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.cookie.Cookie.to_encoded_header:1
+msgid "Create encoded header for ASGI ``send``."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.cookie.Cookie.to_encoded_header:3
+msgid "A two tuple of bytes."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.cookie.Cookie.to_header:1
+msgid "Return a string representation suitable to be sent as HTTP headers."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.cookie.Cookie.to_header:3
+msgid "Any kwargs to pass to the simple cookie output method."
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.Cookie.value:1
+msgid "Value for the cookie, if none given defaults to empty string."
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.Cookie.key:1
+msgid "Key for the cookie."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.ETag:1
+msgid "An ``etag`` header."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.ETag.from_header:1
+msgid "Construct an ``etag`` header from its string representation."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.ETag.from_header:3
+msgid "Note that this will unquote etag-values"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.multi_dicts.FormMultiDict:1
+msgid ""
+"Bases: :py:class:`~litestar.datastructures.multi_dicts.ImmutableMultiDict`\\ "
+"[:py:obj:`~typing.Any`]"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.multi_dicts.FormMultiDict:1
+msgid "MultiDict for form data."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.multi_dicts.FormMultiDict.close:1
+msgid "Close all files in the multi-dict."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.MutableScopeHeaders.extend_header_value:11
+#: litestar.datastructures.multi_dicts.FormMultiDict.close:3
+#: litestar.datastructures.state.State.__delattr__:7
+#: litestar.datastructures.state.State.__delitem__:7
+#: litestar.datastructures.state.State.__setattr__:6
+#: litestar.datastructures.state.State.__setitem__:6
+msgid "None"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.multi_dicts.FormMultiDict.from_form_data:1
+msgid "Create a FormMultiDict from form data."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.multi_dicts.FormMultiDict.from_form_data:3
+msgid "Form data to create the FormMultiDict from."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.multi_dicts.FormMultiDict.from_form_data:5
+msgid "A FormMultiDict instance"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.Header:1
+msgid "Bases: :py:class:`~abc.ABC`"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.Header:1
+msgid "An abstract type for HTTP headers."
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.Header.documentation_only:1
+msgid "Defines the header instance as for OpenAPI documentation purpose only."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.Header.from_header:1
+msgid "Construct a header from its string representation."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.Header.to_header:1
+msgid "Get the header as string."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.Header.to_header:3
+msgid ""
+"should include the header name in the return value. If set to false the "
+"return value will only include the header value. if set to true the return "
+"value will be: ``<header name>: <header value>``. Defaults to false."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.Headers:1
+msgid ""
+"Bases: :py:class:`~multidict._multidict.CIMultiDictProxy`\\ [:py:class:"
+"`str`], :py:class:`~litestar.datastructures.multi_dicts.MultiMixin`\\ [:py:"
+"class:`str`]"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.Headers:1
+msgid "An immutable, case-insensitive multi dict for HTTP headers."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.Headers.__init__:1
+msgid "Initialize ``Headers``."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.Headers.__init__:3
+msgid "Initial value."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.Headers.from_scope:1
+msgid "Create headers from a send-message."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.Headers.from_scope:3
+#: litestar.datastructures.headers.MutableScopeHeaders.__init__:3
+msgid "The ASGI connection scope."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.Headers.from_scope:5
+msgid "Headers"
+msgstr ""
+
+#: ../../../reference/datastructures/index.rst:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.Headers.from_scope:7
+msgid "If the message does not have a ``headers`` key"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.Headers.to_header_list:1
+msgid "Raw header value."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.Headers.to_header_list:3
+msgid "A list of tuples contain the header and header-value as bytes"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.multi_dicts.ImmutableMultiDict:1
+msgid ""
+"Bases: :py:class:`~multidict._multidict.MultiDictProxy`\\ [:py:obj:"
+"`~litestar.datastructures.multi_dicts.T`], :py:class:`~litestar."
+"datastructures.multi_dicts.MultiMixin`\\ [:py:obj:`~litestar.datastructures."
+"multi_dicts.T`], :py:class:`~typing.Generic`\\ [:py:obj:`~litestar."
+"datastructures.multi_dicts.T`]"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.multi_dicts.ImmutableMultiDict:1
+msgid ""
+"Immutable MultiDict, using class:`MultiDictProxy <multidict.MultiDictProxy>`."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.multi_dicts.ImmutableMultiDict.__init__:1
+msgid ""
+"Initialize ``ImmutableMultiDict`` from a `MultiMapping``, :class:`Mapping "
+"<typing.Mapping>` or an iterable of tuples."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.multi_dicts.ImmutableMultiDict.__init__:4
+msgid "Mapping-like structure to create the ``ImmutableMultiDict`` from"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.multi_dicts.ImmutableMultiDict.copy:1
+#: litestar.datastructures.multi_dicts.MultiDict.copy:1
+msgid "Return a shallow copy"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.multi_dicts.ImmutableMultiDict.mutable_copy:1
+msgid "Create a mutable copy as a :class:`MultiDict`"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.multi_dicts.ImmutableMultiDict.mutable_copy:3
+msgid "A mutable multi dict"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.ImmutableState:1
+msgid ""
+"Bases: :py:class:`~collections.abc.Mapping`\\ [:py:class:`str`, :py:obj:"
+"`~typing.Any`]"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.ImmutableState:1
+#: litestar.datastructures.state.State:1
+msgid "An object meant to store arbitrary state."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.ImmutableState:3
+#: litestar.datastructures.state.State:3
+msgid ""
+"It can be accessed using dot notation while exposing dict like "
+"functionalities."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.ImmutableState.__bool__:1
+msgid ""
+"Return a boolean indicating whether the wrapped dict instance has values."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.ImmutableState.__copy__:1
+msgid "Return a shallow copy of the given state object."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.ImmutableState.__copy__:3
+msgid "Customizes how the builtin \"copy\" function will work."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.ImmutableState.__get_validators__:1
+msgid ""
+"Pydantic compatible method to allow custom parsing of state instances in a "
+"SignatureModel."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.ImmutableState.__getattr__:1
+msgid ""
+"Get the value for the corresponding key from the wrapped state object using "
+"attribute notation."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.ImmutableState.__getattr__:3
+msgid "Key to retrieve"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.ImmutableState.__getattr__:5
+#: litestar.datastructures.state.State.__delattr__:5
+#: litestar.datastructures.state.State.__delitem__:5
+msgid "if the given attribute is not set."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.ImmutableState.__getattr__:7
+msgid "The retrieved value"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.ImmutableState.__getitem__:1
+msgid ""
+"Get the value for the corresponding key from the wrapped state object using "
+"subscription notation."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.ImmutableState.__getitem__:3
+msgid "Key to access."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.ImmutableState.__getitem__:7
+msgid "A value from the wrapped state instance."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.ImmutableState.__init__:1
+msgid "Initialize an ``ImmutableState`` instance."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.ImmutableState.__init__:3
+msgid ""
+"An object to initialize the state from. Can be a dict, an instance of :class:"
+"`ImmutableState`, or a tuple of key value paris."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.ImmutableState.__init__:5
+#: litestar.datastructures.state.State.__init__:4
+msgid "Whether to 'deepcopy' the passed in state."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.ImmutableState.__init__:7
+#: litestar.datastructures.state.State.__init__:7
+msgid "Examples"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.ImmutableState.__init__:10
+msgid ""
+"from litestar.datastructures import ImmutableState\n"
+"\n"
+"state_dict = {\"first\": 1, \"second\": 2, \"third\": 3, \"fourth\": 4}\n"
+"state = ImmutableState(state_dict)\n"
+"\n"
+"# state implements the Mapping type:\n"
+"assert len(state) == 3\n"
+"assert \"first\" in state\n"
+"assert not \"fourth\" in state\n"
+"assert state[\"first\"] == 1\n"
+"assert [(k, v) for k, v in state.items()] == [(\"first\", 1), (\"second\", "
+"2), (\"third\", 3)]\n"
+"\n"
+"# state implements __bool__\n"
+"assert state  # state is true when it has values.\n"
+"assert not State()  # state is empty when it has no values.\n"
+"\n"
+"# it has a 'dict' method to retrieve a shallow copy of the underlying dict\n"
+"inner_dict = state.dict()\n"
+"assert inner_dict == state_dict\n"
+"\n"
+"# you can also retrieve a mutable State by calling 'mutable_copy'\n"
+"mutable_state = state.mutable_copy()\n"
+"del state[\"first\"]\n"
+"assert \"first\" not in state"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.ImmutableState.__iter__:1
+msgid "Return an iterator iterating the wrapped state dict."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.ImmutableState.__iter__:3
+msgid "An iterator of strings"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.ImmutableState.__len__:1
+msgid "Return length of the wrapped state dict."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.ImmutableState.__len__:3
+msgid "An integer"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.ImmutableState.dict:1
+msgid "Return a shallow copy of the wrapped dict."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.ImmutableState.dict:3
+msgid "A dict"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.ImmutableState.mutable_copy:1
+msgid "Return a mutable copy of the state object."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.ImmutableState.mutable_copy:3
+#: litestar.datastructures.state.State.copy:3
+#: litestar.datastructures.state.State.immutable_copy:3
+msgid "A ``State``"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.ImmutableState.validate:1
+msgid ""
+"Parse a value and instantiate state inside a SignatureModel. This allows us "
+"to use custom subclasses of state, as well as allows users to decide whether "
+"state is mutable or immutable."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.ImmutableState.validate:4
+msgid "The value from which to initialize the state instance."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.ImmutableState.validate:6
+msgid "An ImmutableState instance"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.multi_dicts.MultiDict:1
+msgid ""
+"Bases: :py:class:`~multidict._multidict.MultiDict`\\ [:py:obj:`~litestar."
+"datastructures.multi_dicts.T`], :py:class:`~litestar.datastructures."
+"multi_dicts.MultiMixin`\\ [:py:obj:`~litestar.datastructures.multi_dicts."
+"T`], :py:class:`~typing.Generic`\\ [:py:obj:`~litestar.datastructures."
+"multi_dicts.T`]"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.multi_dicts.MultiDict:1
+msgid "MultiDict, using :class:`MultiDict <multidict.MultiDictProxy>`."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.multi_dicts.MultiDict.__init__:1
+msgid ""
+"Initialize ``MultiDict`` from a`MultiMapping``, :class:`Mapping <typing."
+"Mapping>` or an iterable of tuples."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.multi_dicts.MultiDict.__init__:4
+msgid "Mapping-like structure to create the ``MultiDict`` from"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.multi_dicts.MultiDict.immutable:1
+msgid "Create an."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.multi_dicts.MultiDict.immutable:3
+msgid ":class:`ImmutableMultiDict` view."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.multi_dicts.MultiDict.immutable:5
+msgid "An immutable multi dict"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.multi_dicts.MultiMixin:1
+msgid ""
+"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~litestar.datastructures."
+"multi_dicts.T`], :py:class:`~multidict._abc.MultiMapping`\\ [:py:obj:"
+"`~litestar.datastructures.multi_dicts.T`], :py:class:`~abc.ABC`"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.multi_dicts.MultiMixin:1
+msgid ""
+"Mixin providing common methods for multi dicts, used by :class:"
+"`ImmutableMultiDict` and :class:`MultiDict`"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.multi_dicts.MultiMixin.dict:1
+msgid "Return the multi-dict as a dict of lists."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.multi_dicts.MultiMixin.dict:3
+msgid "A dict of lists"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.multi_dicts.MultiMixin.multi_items:1
+msgid "Get all keys and values, including duplicates."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.multi_dicts.MultiMixin.multi_items:3
+msgid "A list of tuples containing key-value pairs"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.MutableScopeHeaders:1
+msgid "Bases: :py:class:`~collections.abc.MutableMapping`"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.MutableScopeHeaders:1
+msgid ""
+"A case-insensitive, multidict-like structure that can be used to mutate "
+"headers within a :class:`Scope <.types.Scope>`"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.MutableScopeHeaders.__delitem__:1
+msgid "Delete all headers matching ``name``"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.MutableScopeHeaders.__getitem__:1
+msgid "Get the first header matching ``name``"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.MutableScopeHeaders.__init__:1
+msgid "Initialize ``MutableScopeHeaders`` from a ``HeaderScope``."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.MutableScopeHeaders.__iter__:1
+msgid "Create an iterator of header names including duplicates."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.MutableScopeHeaders.__len__:1
+msgid ""
+"Return the length of the internally stored headers, including duplicates."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.MutableScopeHeaders.__setitem__:1
+msgid "Set a header in the scope, overwriting duplicates."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.MutableScopeHeaders.add:1
+msgid "Add a header to the scope."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.MutableScopeHeaders.add:5
+msgid "This method keeps duplicates."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.MutableScopeHeaders.add:7
+#: litestar.datastructures.headers.MutableScopeHeaders.extend_header_value:8
+#: litestar.datastructures.headers.MutableScopeHeaders.getall:3
+msgid "Header key."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.MutableScopeHeaders.add:8
+msgid "Header value."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.MutableScopeHeaders.add:10
+#: litestar.datastructures.upload_file.UploadFile.close:3
+msgid "None."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.MutableScopeHeaders.extend_header_value:1
+msgid "Extend a multivalued header."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.MutableScopeHeaders.extend_header_value:5
+msgid "A multivalues header is a header that can take a comma separated list."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.MutableScopeHeaders.extend_header_value:6
+msgid "If the header previously did not exist, it will be added."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.MutableScopeHeaders.extend_header_value:9
+msgid "Header value to add,"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.MutableScopeHeaders.from_message:1
+msgid "Construct a header from a message object."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.MutableScopeHeaders.from_message:3
+msgid ":class:`Message <.types.Message>`."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.MutableScopeHeaders.from_message:5
+msgid "MutableScopeHeaders."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.MutableScopeHeaders.from_message:7
+msgid "If the message does not have a ``headers`` key."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.MutableScopeHeaders.getall:1
+msgid "Get all values of a header."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.MutableScopeHeaders.getall:4
+msgid "Default value to return if ``name`` is not found."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.MutableScopeHeaders.getall:6
+msgid "A list of strings."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.headers.MutableScopeHeaders.getall:8
+msgid "if no header for ``name`` was found and ``default`` is not given."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.response_header.ResponseHeader:1
+msgid "Container type for a response header."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.response_header.ResponseHeader.__post_init__:1
+msgid ""
+"Ensure that either value is set or the instance is for documentation_only."
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.ResponseHeader.deprecated:1
+msgid ""
+"Specifies that a parameter is deprecated and SHOULD be transitioned out of "
+"usage."
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.ResponseHeader.deprecated:4
+msgid "Default value is `false`."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.datastructures.ResponseHeader.description:1
+msgid ""
+"A brief description of the parameter. This could contain examples of use."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.datastructures.ResponseHeader.description:4
+msgid ""
+"[CommonMark syntax](https://spec.commonmark.org/) MAY be used for rich text "
+"representation."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.datastructures.ResponseHeader.documentation_only:1
+msgid ""
+"Defines the ResponseHeader instance as for OpenAPI documentation purpose "
+"only."
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.ResponseHeader.example:1
+msgid "Example of the parameter's potential value."
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.ResponseHeader.example:3
+msgid ""
+"The example SHOULD match the specified schema and encoding properties if "
+"present. The `example` field is mutually exclusive of the `examples` field. "
+"Furthermore, if referencing a `schema` that contains an example, the "
+"`example` value SHALL _override_ the example provided by the schema. To "
+"represent examples of media types that cannot naturally be represented in "
+"JSON or YAML, a string value can contain the example with escaping where "
+"necessary."
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.ResponseHeader.examples:1
+msgid ""
+"Examples of the parameter's potential value. Each example SHOULD contain a "
+"value in the correct format as specified in the parameter encoding. The "
+"`examples` field is mutually exclusive of the `example` field. Furthermore, "
+"if referencing a `schema` that contains an example, the `examples` value "
+"SHALL _override_ the example provided by the schema."
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.ResponseHeader.examples:7
+msgid ""
+"For more complex scenarios, the [content](https://spec.openapis.org/oas/"
+"v3.1.0#parameterContent) property can define the media type and schema of "
+"the parameter. A parameter MUST contain either a `schema` property, or a "
+"`content` property, but not both. When `example` or `examples` are provided "
+"in conjunction with the `schema` object, the example MUST follow the "
+"prescribed serialization strategy for the parameter."
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.ResponseHeader.explode:1
+msgid ""
+"When this is true, parameter values of type `array` or `object` generate "
+"separate parameters for each value of the array or key-value pair of the map."
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.ResponseHeader.explode:5
+msgid ""
+"For other types of parameters this property has no effect. When [style]"
+"(https://spec.openapis.org/oas/v3.1.0#parameterStyle) is `form`, the default "
+"value is `true`. For all other styles, the default value is `false`."
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.ResponseHeader.required:1
+msgid "Determines whether this parameter is mandatory."
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.ResponseHeader.required:3
+msgid ""
+"If the [parameter location](https://spec.openapis.org/oas/"
+"v3.1.0#parameterIn) is `\"path\"`, this property is **REQUIRED** and its "
+"value MUST be `true`. Otherwise, the property MAY be included and its "
+"default value is `false`."
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.ResponseHeader.style:1
+msgid ""
+"Describes how the parameter value will be serialized depending on the type "
+"of the parameter value. Default values (based on value of `in`):"
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.ResponseHeader.style:4
+msgid "for `query` - `form`;"
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.ResponseHeader.style:5
+msgid "for `path` - `simple`;"
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.ResponseHeader.style:6
+msgid "for `header` - `simple`;"
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.ResponseHeader.style:7
+msgid "for `cookie` - `form`."
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.ResponseHeader.value:1
+msgid "Value to set for the response header."
+msgstr ""
+
+#: ../../../../docstring of litestar.datastructures.ResponseHeader.name:1
+msgid "Header name"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.secret_values.SecretBytes:1
+msgid ""
+"Bases: :py:class:`~litestar.datastructures.secret_values.SecretValue`\\ [:py:"
+"class:`bytes`]"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.secret_values.SecretBytes:1
+msgid "Represents a secret bytes value."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.secret_values.SecretBytes.get_obscured:1
+msgid "Overrides the base class method to return the hidden bytes value."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.secret_values.SecretBytes.get_obscured:3
+msgid "The hidden bytes representation of the secret value."
+msgstr ""
+
+#: ../../../reference/datastructures/index.rst:0
+msgid "Return type"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.secret_values.SecretString:1
+msgid ""
+"Bases: :py:class:`~litestar.datastructures.secret_values.SecretValue`\\ [:py:"
+"class:`str`]"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.secret_values.SecretString:1
+msgid "Represents a secret string value."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.secret_values.SecretString.get_obscured:1
+msgid "Overrides the base class method to return the hidden string value."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.secret_values.SecretString.get_obscured:3
+msgid "The hidden string representation of the secret value."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.State:1
+msgid ""
+"Bases: :py:class:`~litestar.datastructures.state.ImmutableState`, :py:class:"
+"`~collections.abc.MutableMapping`\\ [:py:class:`str`, :py:obj:`~typing.Any`]"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.State.__delattr__:1
+msgid ""
+"Delete the value from the key from the wrapped state object using attribute "
+"notation."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.State.__delattr__:3
+#: litestar.datastructures.state.State.__delitem__:3
+msgid "Key to delete"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.State.__delitem__:1
+msgid ""
+"Delete the value from the key from the wrapped state object using "
+"subscription notation."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.State.__init__:1
+msgid "Initialize a ``State`` instance with an optional value."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.State.__init__:3
+msgid ""
+"An object to initialize the state from. Can be a dict, an instance of "
+"'ImmutableState', or a tuple of key value paris."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.State.__init__:7
+msgid ""
+"from litestar.datastructures import State\n"
+"\n"
+"state_dict = {\"first\": 1, \"second\": 2, \"third\": 3, \"fourth\": 4}\n"
+"state = State(state_dict)\n"
+"\n"
+"# state can be accessed using '.' notation\n"
+"assert state.fourth == 4\n"
+"del state.fourth\n"
+"\n"
+"# state implements the Mapping type:\n"
+"assert len(state) == 3\n"
+"assert \"first\" in state\n"
+"assert not \"fourth\" in state\n"
+"assert state[\"first\"] == 1\n"
+"assert [(k, v) for k, v in state.items()] == [(\"first\", 1), (\"second\", "
+"2), (\"third\", 3)]\n"
+"\n"
+"state[\"fourth\"] = 4\n"
+"assert \"fourth\" in state\n"
+"del state[\"fourth\"]\n"
+"\n"
+"# state implements __bool__\n"
+"assert state  # state is true when it has values.\n"
+"assert not State()  # state is empty when it has no values.\n"
+"\n"
+"# it has shallow copy\n"
+"copied_state = state.copy()\n"
+"del copied_state.first\n"
+"assert state.first\n"
+"\n"
+"# it has a 'dict' method to retrieve a shallow copy of the underlying dict\n"
+"inner_dict = state.dict()\n"
+"assert inner_dict == state_dict\n"
+"\n"
+"# you can get an immutable copy of the state by calling "
+"'immutable_immutable_copy'\n"
+"immutable_copy = state.immutable_copy()\n"
+"del immutable_copy.first  #  raises AttributeError"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.State.__setattr__:1
+msgid "Set an item in the state using attribute notation."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.State.__setattr__:3
+#: litestar.datastructures.state.State.__setitem__:3
+msgid "Key to set."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.State.__setattr__:4
+#: litestar.datastructures.state.State.__setitem__:4
+msgid "Value to set."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.State.__setitem__:1
+msgid "Set an item in the state using subscription notation."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.State.copy:1
+msgid "Return a shallow copy of the state object."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.state.State.immutable_copy:1
+msgid "Return a shallow copy of the state object, setting it to be frozen."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.upload_file.UploadFile:1
+msgid "Representation of a file upload"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.upload_file.UploadFile.__init__:1
+msgid "Upload file in-memory container."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.upload_file.UploadFile.__init__:3
+msgid "Content type for the file."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.upload_file.UploadFile.__init__:4
+msgid "The filename."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.upload_file.UploadFile.__init__:5
+msgid "File data."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.upload_file.UploadFile.__init__:6
+msgid "Any attached headers."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.upload_file.UploadFile.__init__:7
+msgid "The size above which the temporary file will be rolled to disk."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.upload_file.UploadFile.close:1
+msgid "Async proxy for file close."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.upload_file.UploadFile.read:1
+msgid "Proxy for data reading."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.upload_file.UploadFile.read:3
+msgid "position from which to read."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.upload_file.UploadFile.read:5
+msgid "Byte string."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.UploadFile.rolled_to_disk:1
+msgid ""
+"Determine whether the spooled file exceeded the rolled-to-disk threshold and "
+"is no longer in memory."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.UploadFile.rolled_to_disk:3
+msgid "A boolean flag"
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.upload_file.UploadFile.seek:1
+msgid "Async proxy for file seek."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.upload_file.UploadFile.seek:3
+msgid "start position.."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.upload_file.UploadFile.seek:5
+msgid "The new absolute file position (in bytes) after seeking."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.upload_file.UploadFile.write:1
+msgid "Proxy for data writing."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.upload_file.UploadFile.write:3
+msgid "Byte string to write."
+msgstr ""
+
+#: ../../../../litestar/datastructures/__init__.py:docstring of
+#: litestar.datastructures.upload_file.UploadFile.write:5
+msgid "Number of bytes written (int)."
+msgstr ""

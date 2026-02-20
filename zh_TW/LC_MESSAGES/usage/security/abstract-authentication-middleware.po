@@ -1,0 +1,253 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../usage/security/abstract-authentication-middleware.rst:3
+msgid "Implementing Custom Authentication"
+msgstr ""
+
+#: ../../../usage/security/abstract-authentication-middleware.rst:5
+msgid ""
+"Litestar exports :class:`~.middleware.authentication."
+"AbstractAuthenticationMiddleware`, which is an :term:`abstract base class` "
+"(ABC) that implements the :class:`~.middleware.base.MiddlewareProtocol`. To "
+"add authentication to your app using this class as a basis, subclass it and "
+"implement the abstract method :meth:`~.middleware.authentication."
+"AbstractAuthenticationMiddleware.authenticate_request`:"
+msgstr ""
+
+#: ../../../usage/security/abstract-authentication-middleware.rst:11
+msgid ""
+"Adding authentication to your app by subclassing :class:`~.middleware."
+"authentication.AbstractAuthenticationMiddleware`"
+msgstr ""
+
+#: ../../../usage/security/abstract-authentication-middleware.rst:11
+msgid ""
+"from litestar.middleware import (\n"
+"   AbstractAuthenticationMiddleware,\n"
+"   AuthenticationResult,\n"
+")\n"
+"from litestar.connection import ASGIConnection\n"
+"\n"
+"\n"
+"class MyAuthenticationMiddleware(AbstractAuthenticationMiddleware):\n"
+"   async def authenticate_request(\n"
+"       self, connection: ASGIConnection\n"
+"   ) -> AuthenticationResult:\n"
+"       # do something here.\n"
+"       ..."
+msgstr ""
+
+#: ../../../usage/security/abstract-authentication-middleware.rst:28
+msgid ""
+"As you can see, ``authenticate_request`` is an async function that receives "
+"a connection instance and is supposed to return an :class:`~.middleware."
+"authentication.AuthenticationResult` instance, which is a :doc:`dataclass "
+"<python:library/dataclasses>` that has two attributes:"
+msgstr ""
+
+#: ../../../usage/security/abstract-authentication-middleware.rst:32
+msgid ""
+"``user``: a non-optional value representing a user. It is typed as ``Any`` "
+"so it receives any value, including ``None``."
+msgstr ""
+
+#: ../../../usage/security/abstract-authentication-middleware.rst:34
+msgid ""
+"``auth``: an optional value representing the authentication scheme. Defaults "
+"to ``None``."
+msgstr ""
+
+#: ../../../usage/security/abstract-authentication-middleware.rst:36
+msgid ""
+"These values are then set as part of the ``scope`` dictionary, and they are "
+"made available as :attr:`Request.user <.connection.ASGIConnection.user>` "
+"and :attr:`Request.auth <.connection.ASGIConnection.auth>` respectively, for "
+"HTTP route handlers, and :attr:`WebSocket.user <.connection.ASGIConnection."
+"user>` and :attr:`WebSocket.auth <.connection.ASGIConnection.auth>` for "
+"websocket route handlers."
+msgstr ""
+
+#: ../../../usage/security/abstract-authentication-middleware.rst:43
+msgid "Creating a Custom Authentication Middleware"
+msgstr ""
+
+#: ../../../usage/security/abstract-authentication-middleware.rst:45
+msgid ""
+"Since the above is quite hard to grasp in the abstract, let us see an "
+"example."
+msgstr ""
+
+#: ../../../usage/security/abstract-authentication-middleware.rst:47
+msgid ""
+"We start off by creating a user model. It can be implemented using msgspec, "
+"Pydantic, an ODM, ORM, etc. For the sake of this example here let us say it "
+"is a dataclass:"
+msgstr ""
+
+#: ../../../usage/security/abstract-authentication-middleware.rst:51
+msgid "user and token models"
+msgstr ""
+
+#: ../../../usage/security/abstract-authentication-middleware.rst:51
+msgid ""
+"@dataclass\n"
+"class MyUser:\n"
+"    name: str\n"
+"\n"
+"\n"
+"@dataclass\n"
+"class MyToken:\n"
+"    api_key: str"
+msgstr ""
+
+#: ../../../usage/security/abstract-authentication-middleware.rst:56
+msgid "We can now create our authentication middleware:"
+msgstr ""
+
+#: ../../../usage/security/abstract-authentication-middleware.rst:59
+msgid "authentication_middleware.py"
+msgstr ""
+
+#: ../../../usage/security/abstract-authentication-middleware.rst:59
+msgid ""
+"class CustomAuthenticationMiddleware(AbstractAuthenticationMiddleware):\n"
+"    async def authenticate_request(self, connection: ASGIConnection) -> "
+"AuthenticationResult:\n"
+"        \"\"\"Given a request, parse the request api key stored in the "
+"header and retrieve the user correlating to the token from the DB\"\"\"\n"
+"\n"
+"        # retrieve the auth header\n"
+"        auth_header = connection.headers.get(API_KEY_HEADER)\n"
+"        if not auth_header:\n"
+"            raise NotAuthorizedException()\n"
+"\n"
+"        # this would be a database call\n"
+"        token = MyToken(api_key=auth_header)\n"
+"        user = MyUser(name=TOKEN_USER_DATABASE.get(token.api_key))\n"
+"        if not user.name:\n"
+"            raise NotAuthorizedException()\n"
+"        return AuthenticationResult(user=user, auth=token)"
+msgstr ""
+
+#: ../../../usage/security/abstract-authentication-middleware.rst:64
+msgid "Finally, we need to pass our middleware to the Litestar constructor:"
+msgstr ""
+
+#: ../../../usage/security/abstract-authentication-middleware.rst:68
+msgid "main.py"
+msgstr ""
+
+#: ../../../usage/security/abstract-authentication-middleware.rst:68
+msgid ""
+"# you can optionally exclude certain paths from authentication.\n"
+"# the following excludes all routes mounted at or under `/schema*`\n"
+"auth_mw = DefineMiddleware(CustomAuthenticationMiddleware, "
+"exclude=\"schema\")\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[site_index, my_http_handler, my_ws_handler],\n"
+"    middleware=[auth_mw],\n"
+"    dependencies={\"some_dependency\": Provide(my_dependency)},\n"
+")"
+msgstr ""
+
+#: ../../../usage/security/abstract-authentication-middleware.rst:73
+msgid ""
+"That is it. ``CustomAuthenticationMiddleware`` will now run for every "
+"request, and we would be able to access these in a http route handler in the "
+"following way:"
+msgstr ""
+
+#: ../../../usage/security/abstract-authentication-middleware.rst:77
+msgid ""
+"Accessing the user and auth in a http route handler with "
+"``CustomAuthenticationMiddleware``"
+msgstr ""
+
+#: ../../../usage/security/abstract-authentication-middleware.rst:77
+msgid ""
+"@get(\"/\")\n"
+"def my_http_handler(request: Request[MyUser, MyToken, State]) -> None:\n"
+"    user = request.user  # correctly typed as MyUser\n"
+"    auth = request.auth  # correctly typed as MyToken\n"
+"    assert isinstance(user, MyUser)\n"
+"    assert isinstance(auth, MyToken)"
+msgstr ""
+
+#: ../../../usage/security/abstract-authentication-middleware.rst:81
+msgid "Or for a websocket route:"
+msgstr ""
+
+#: ../../../usage/security/abstract-authentication-middleware.rst:84
+msgid ""
+"Accessing the user and auth in a websocket route handler with "
+"``CustomAuthenticationMiddleware``"
+msgstr ""
+
+#: ../../../usage/security/abstract-authentication-middleware.rst:84
+msgid ""
+"@websocket(\"/\")\n"
+"async def my_ws_handler(socket: WebSocket[MyUser, MyToken, State]) -> None:\n"
+"    user = socket.user  # correctly typed as MyUser\n"
+"    auth = socket.auth  # correctly typed as MyToken\n"
+"    assert isinstance(user, MyUser)\n"
+"    assert isinstance(auth, MyToken)"
+msgstr ""
+
+#: ../../../usage/security/abstract-authentication-middleware.rst:89
+msgid ""
+"And if you would like to exclude individual routes outside those configured:"
+msgstr ""
+
+#: ../../../usage/security/abstract-authentication-middleware.rst:93
+msgid "Excluding individual routes from ``CustomAuthenticationMiddleware``"
+msgstr ""
+
+#: ../../../usage/security/abstract-authentication-middleware.rst:93
+msgid ""
+"@get(path=\"/\", exclude_from_auth=True)\n"
+"async def site_index() -> Response:\n"
+"    \"\"\"Site index\"\"\"\n"
+"    exists = await anyio.Path(\"index.html\").exists()\n"
+"    if exists:\n"
+"        async with await anyio.open_file(anyio.Path(\"index.html\")) as "
+"file:\n"
+"            content = await file.read()\n"
+"            return Response(content=content, status_code=200, "
+"media_type=MediaType.HTML)\n"
+"    raise NotFoundException(\"Site index was not found\")"
+msgstr ""
+
+#: ../../../usage/security/abstract-authentication-middleware.rst:97
+msgid "And of course use the same kind of mechanism for dependencies:"
+msgstr ""
+
+#: ../../../usage/security/abstract-authentication-middleware.rst:100
+msgid "Using ``CustomAuthenticationMiddleware`` in a dependency"
+msgstr ""
+
+#: ../../../usage/security/abstract-authentication-middleware.rst:100
+msgid ""
+"async def my_dependency(request: Request[MyUser, MyToken, State]) -> Any:\n"
+"    user = request.user  # correctly typed as MyUser\n"
+"    auth = request.auth  # correctly typed as MyToken\n"
+"    assert isinstance(user, MyUser)\n"
+"    assert isinstance(auth, MyToken)"
+msgstr ""

@@ -1,0 +1,951 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../migration/flask.rst:2
+msgid "From Flask"
+msgstr ""
+
+#: ../../../migration/flask.rst:5
+msgid "ASGI vs WSGI"
+msgstr "ASGI 與 WSGI"
+
+#: ../../../migration/flask.rst:7
+msgid ""
+"`Flask <https://flask.palletsprojects.com>`_ is a WSGI framework, whereas "
+"Litestar is built using the modern `ASGI <https://asgi.readthedocs.io>`_ "
+"standard. A key difference is that *ASGI* is built with async in mind."
+msgstr ""
+
+#: ../../../migration/flask.rst:11
+msgid ""
+"While Flask has added support for ``async/await``, it remains synchronous at "
+"its core; The async support in Flask is limited to individual endpoints. "
+"What this means is that while you can use ``async def`` to define endpoints "
+"in Flask, **they will not run concurrently** - requests will still be "
+"processed one at a time. Flask handles asynchronous endpoints by creating an "
+"event loop for each request, run the endpoint function in it, and then "
+"return its result."
+msgstr ""
+
+#: ../../../migration/flask.rst:18
+msgid ""
+"ASGI on the other hand does the exact opposite; It runs everything in a "
+"central event loop. Litestar then adds support for synchronous functions by "
+"running them in a non-blocking way *on the event loop*. What this means is "
+"that synchronous and asynchronous code both run concurrently."
+msgstr ""
+
+#: ../../../migration/flask.rst:24
+msgid "Routing"
+msgstr ""
+
+#: ../../../migration/flask.rst:0 ../../../migration/flask.rst:177
+msgid "Flask"
+msgstr "Flask"
+
+#: ../../../migration/flask.rst:32
+msgid ""
+"from flask import Flask\n"
+"\n"
+"\n"
+"app = Flask(__name__)\n"
+"\n"
+"\n"
+"@app.route(\"/\")\n"
+"def index():\n"
+"    return \"Index Page\"\n"
+"\n"
+"\n"
+"@app.route(\"/hello\")\n"
+"def hello():\n"
+"    return \"Hello, World\""
+msgstr ""
+"from flask import Flask\n"
+"\n"
+"\n"
+"app = Flask(__name__)\n"
+"\n"
+"\n"
+"@app.route(\"/\")\n"
+"def index():\n"
+"    return \"Index Page\"\n"
+"\n"
+"\n"
+"@app.route(\"/hello\")\n"
+"def hello():\n"
+"    return \"Hello, World\""
+
+#: ../../../migration/flask.rst:0 ../../../migration/flask.rst:177
+msgid "Litestar"
+msgstr "Litestar"
+
+#: ../../../migration/flask.rst:53
+msgid ""
+"from litestar import Litestar, get\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"def index() -> str:\n"
+"    return \"Index Page\"\n"
+"\n"
+"\n"
+"@get(\"/hello\")\n"
+"def hello() -> str:\n"
+"    return \"Hello, World\"\n"
+"\n"
+"\n"
+"app = Litestar([index, hello])"
+msgstr ""
+"from litestar import Litestar, get\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"def index() -> str:\n"
+"    return \"Index Page\"\n"
+"\n"
+"\n"
+"@get(\"/hello\")\n"
+"def hello() -> str:\n"
+"    return \"Hello, World\"\n"
+"\n"
+"\n"
+"app = Litestar([index, hello])"
+
+#: ../../../migration/flask.rst:71
+msgid "Path parameters"
+msgstr "路徑參數"
+
+#: ../../../migration/flask.rst:78
+msgid ""
+"from flask import Flask\n"
+"\n"
+"\n"
+"app = Flask(__name__)\n"
+"\n"
+"\n"
+"@app.route(\"/user/<username>\")\n"
+"def show_user_profile(username):\n"
+"    return f\"User {username}\"\n"
+"\n"
+"\n"
+"@app.route(\"/post/<int:post_id>\")\n"
+"def show_post(post_id):\n"
+"    return f\"Post {post_id}\"\n"
+"\n"
+"\n"
+"@app.route(\"/path/<path:subpath>\")\n"
+"def show_subpath(subpath):\n"
+"    return f\"Subpath {subpath}\""
+msgstr ""
+"from flask import Flask\n"
+"\n"
+"\n"
+"app = Flask(__name__)\n"
+"\n"
+"\n"
+"@app.route(\"/user/<username>\")\n"
+"def show_user_profile(username):\n"
+"    return f\"User {username}\"\n"
+"\n"
+"\n"
+"@app.route(\"/post/<int:post_id>\")\n"
+"def show_post(post_id):\n"
+"    return f\"Post {post_id}\"\n"
+"\n"
+"\n"
+"@app.route(\"/path/<path:subpath>\")\n"
+"def show_subpath(subpath):\n"
+"    return f\"Subpath {subpath}\""
+
+#: ../../../migration/flask.rst:105
+msgid ""
+"from litestar import Litestar, get\n"
+"from pathlib import Path\n"
+"\n"
+"\n"
+"@get(\"/user/{username:str}\")\n"
+"def show_user_profile(username: str) -> str:\n"
+"    return f\"User {username}\"\n"
+"\n"
+"\n"
+"@get(\"/post/{post_id:int}\")\n"
+"def show_post(post_id: int) -> str:\n"
+"    return f\"Post {post_id}\"\n"
+"\n"
+"\n"
+"@get(\"/path/{subpath:path}\")\n"
+"def show_subpath(subpath: Path) -> str:\n"
+"    return f\"Subpath {subpath}\"\n"
+"\n"
+"\n"
+"app = Litestar([show_user_profile, show_post, show_subpath])"
+msgstr ""
+"from litestar import Litestar, get\n"
+"from pathlib import Path\n"
+"\n"
+"\n"
+"@get(\"/user/{username:str}\")\n"
+"def show_user_profile(username: str) -> str:\n"
+"    return f\"User {username}\"\n"
+"\n"
+"\n"
+"@get(\"/post/{post_id:int}\")\n"
+"def show_post(post_id: int) -> str:\n"
+"    return f\"Post {post_id}\"\n"
+"\n"
+"\n"
+"@get(\"/path/{subpath:path}\")\n"
+"def show_subpath(subpath: Path) -> str:\n"
+"    return f\"Subpath {subpath}\"\n"
+"\n"
+"\n"
+"app = Litestar([show_user_profile, show_post, show_subpath])"
+
+#: ../../../migration/flask.rst:130
+msgid ""
+"To learn more about path parameters, check out this chapter in the "
+"documentation:"
+msgstr ""
+
+#: ../../../migration/flask.rst:133
+msgid ":doc:`/usage/routing/parameters`"
+msgstr ":doc:`/usage/routing/parameters`"
+
+#: ../../../migration/flask.rst:136
+msgid "Request object"
+msgstr "請求物件"
+
+#: ../../../migration/flask.rst:138
+msgid ""
+"In Flask, the current request can be accessed through a global ``request`` "
+"variable. In Litestar, the request can be accessed through an optional "
+"parameter in the handler function."
+msgstr ""
+
+#: ../../../migration/flask.rst:147
+msgid ""
+"from flask import Flask, request\n"
+"\n"
+"\n"
+"app = Flask(__name__)\n"
+"\n"
+"\n"
+"@app.get(\"/\")\n"
+"def index():\n"
+"    print(request.method)"
+msgstr ""
+"from flask import Flask, request\n"
+"\n"
+"\n"
+"app = Flask(__name__)\n"
+"\n"
+"\n"
+"@app.get(\"/\")\n"
+"def index():\n"
+"    print(request.method)"
+
+#: ../../../migration/flask.rst:164
+msgid ""
+"from litestar import get, Request\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"def index(request: Request) -> None:\n"
+"    print(request.method)"
+msgstr ""
+"from litestar import get, Request\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"def index(request: Request) -> None:\n"
+"    print(request.method)"
+
+#: ../../../migration/flask.rst:174
+msgid "Request methods"
+msgstr "請求方法"
+
+#: ../../../migration/flask.rst:179
+msgid "``request.args``"
+msgstr "``request.args``"
+
+#: ../../../migration/flask.rst:179
+msgid "``request.query_params``"
+msgstr "``request.query_params``"
+
+#: ../../../migration/flask.rst:181
+msgid "``request.base_url``"
+msgstr "``request.base_url``"
+
+#: ../../../migration/flask.rst:183
+msgid "``request.authorization``"
+msgstr "``request.authorization``"
+
+#: ../../../migration/flask.rst:183
+msgid "``request.auth``"
+msgstr "``request.auth``"
+
+#: ../../../migration/flask.rst:185
+msgid "``request.cache_control``"
+msgstr "``request.cache_control``"
+
+#: ../../../migration/flask.rst:185
+msgid "``request.headers.get(\"cache-control\")``"
+msgstr "``request.headers.get(\"cache-control\")``"
+
+#: ../../../migration/flask.rst:187
+msgid "``request.content_encoding``"
+msgstr "``request.content_encoding``"
+
+#: ../../../migration/flask.rst:187
+msgid "``request.headers.get(\"content-encoding\")``"
+msgstr "``request.headers.get(\"content-encoding\")``"
+
+#: ../../../migration/flask.rst:189
+msgid "``request.content_length``"
+msgstr "``request.content_length``"
+
+#: ../../../migration/flask.rst:189
+msgid "``request.headers.get(\"content-length\")``"
+msgstr "``request.headers.get(\"content-length\")``"
+
+#: ../../../migration/flask.rst:191
+msgid "``request.content_md5``"
+msgstr "``request.content_md5``"
+
+#: ../../../migration/flask.rst:191 ../../../migration/flask.rst:213
+#: ../../../migration/flask.rst:215 ../../../migration/flask.rst:229
+#: ../../../migration/flask.rst:231 ../../../migration/flask.rst:233
+#: ../../../migration/flask.rst:243 ../../../migration/flask.rst:245
+#: ../../../migration/flask.rst:255
+msgid ":octicon:`dash`"
+msgstr ":octicon:`dash`"
+
+#: ../../../migration/flask.rst:192 ../../../migration/flask.rst:214
+#: ../../../migration/flask.rst:216 ../../../migration/flask.rst:230
+#: ../../../migration/flask.rst:232 ../../../migration/flask.rst:234
+#: ../../../migration/flask.rst:244 ../../../migration/flask.rst:246
+#: ../../../migration/flask.rst:256
+msgid ""
+"<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-"
+"octicon-dash\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M2 "
+"7.75A.75.75 0 0 1 2.75 7h10a.75.75 0 0 1 0 1.5h-10A.75.75 0 0 1 2 7.75Z\"></"
+"path></svg>"
+msgstr ""
+"<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-"
+"octicon-dash\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M2 "
+"7.75A.75.75 0 0 1 2.75 7h10a.75.75 0 0 1 0 1.5h-10A.75.75 0 0 1 2 7.75Z\"></"
+"path></svg>"
+
+#: ../../../migration/flask.rst:193
+msgid "``request.content_type``"
+msgstr "``request.content_type``"
+
+#: ../../../migration/flask.rst:195
+msgid "``request.cookies``"
+msgstr "``request.cookies``"
+
+#: ../../../migration/flask.rst:197
+msgid "``request.data``"
+msgstr "``request.data``"
+
+#: ../../../migration/flask.rst:197
+msgid "``request.body()``"
+msgstr "``request.body()``"
+
+#: ../../../migration/flask.rst:199
+msgid "``request.date``"
+msgstr "``request.date``"
+
+#: ../../../migration/flask.rst:199
+msgid "``request.headers.get(\"date\")``"
+msgstr "``request.headers.get(\"date\")``"
+
+#: ../../../migration/flask.rst:201
+msgid "``request.endpoint``"
+msgstr "``request.endpoint``"
+
+#: ../../../migration/flask.rst:201
+msgid "``request.route_handler``"
+msgstr "``request.route_handler``"
+
+#: ../../../migration/flask.rst:203
+msgid "``request.environ``"
+msgstr "``request.environ``"
+
+#: ../../../migration/flask.rst:203
+msgid "``request.scope``"
+msgstr "``request.scope``"
+
+#: ../../../migration/flask.rst:205
+msgid "``request.files``"
+msgstr "``request.files``"
+
+#: ../../../migration/flask.rst:205
+msgid "Use ``UploadFile`` see in :doc:`/usage/requests`"
+msgstr ""
+
+#: ../../../migration/flask.rst:207
+msgid "``request.form``"
+msgstr "``request.form``"
+
+#: ../../../migration/flask.rst:207
+msgid "``request.form()``, prefer ``Body`` see in :doc:`/usage/requests`"
+msgstr ""
+
+#: ../../../migration/flask.rst:209
+msgid "``request.get_json``"
+msgstr ""
+
+#: ../../../migration/flask.rst:209
+msgid ""
+"``request.json()``, prefer the ``data`` keyword argument, see in :doc:`/"
+"usage/requests`"
+msgstr ""
+
+#: ../../../migration/flask.rst:211
+msgid "``request.headers``"
+msgstr ""
+
+#: ../../../migration/flask.rst:213
+msgid "``request.host``"
+msgstr ""
+
+#: ../../../migration/flask.rst:215
+msgid "``request.host_url``"
+msgstr ""
+
+#: ../../../migration/flask.rst:217
+msgid "``request.if_match``"
+msgstr ""
+
+#: ../../../migration/flask.rst:217
+msgid "``request.headers.get(\"if-match\")``"
+msgstr ""
+
+#: ../../../migration/flask.rst:219
+msgid "``request.if_modified_since``"
+msgstr ""
+
+#: ../../../migration/flask.rst:219
+msgid "``request.headers.get(\"if_modified_since\")``"
+msgstr ""
+
+#: ../../../migration/flask.rst:221
+msgid "``request.if_none_match``"
+msgstr ""
+
+#: ../../../migration/flask.rst:221
+msgid "``request.headers.get(\"if_none_match\")``"
+msgstr ""
+
+#: ../../../migration/flask.rst:223
+msgid "``request.if_range``"
+msgstr ""
+
+#: ../../../migration/flask.rst:223
+msgid "``request.headers.get(\"if_range\")``"
+msgstr ""
+
+#: ../../../migration/flask.rst:225
+msgid "``request.if_unmodified_since``"
+msgstr ""
+
+#: ../../../migration/flask.rst:225
+msgid "``request.headers.get(\"if_unmodified_since\")``"
+msgstr ""
+
+#: ../../../migration/flask.rst:227
+msgid "``request.method``"
+msgstr ""
+
+#: ../../../migration/flask.rst:229
+msgid "``request.mimetype``"
+msgstr ""
+
+#: ../../../migration/flask.rst:231
+msgid "``request.mimetype_params``"
+msgstr ""
+
+#: ../../../migration/flask.rst:233
+msgid "``request.origin``"
+msgstr ""
+
+#: ../../../migration/flask.rst:235
+msgid "``request.path``"
+msgstr ""
+
+#: ../../../migration/flask.rst:235
+msgid "``request.scope[\"path\"]``"
+msgstr ""
+
+#: ../../../migration/flask.rst:237
+msgid "``request.query_string``"
+msgstr ""
+
+#: ../../../migration/flask.rst:237
+msgid "``request.scope[\"query_string\"]``"
+msgstr ""
+
+#: ../../../migration/flask.rst:239
+msgid "``request.range``"
+msgstr ""
+
+#: ../../../migration/flask.rst:239
+msgid "``request.headers.get(\"range\")``"
+msgstr ""
+
+#: ../../../migration/flask.rst:241
+msgid "``request.referrer``"
+msgstr ""
+
+#: ../../../migration/flask.rst:241
+msgid "``request.headers.get(\"referrer\")``"
+msgstr ""
+
+#: ../../../migration/flask.rst:243
+msgid "``request.remote_addr``"
+msgstr ""
+
+#: ../../../migration/flask.rst:245
+msgid "``request.remote_user``"
+msgstr ""
+
+#: ../../../migration/flask.rst:247
+msgid "``request.root_path``"
+msgstr ""
+
+#: ../../../migration/flask.rst:247
+msgid "``request.scope[\"root_path\"]``"
+msgstr ""
+
+#: ../../../migration/flask.rst:249
+msgid "``request.server``"
+msgstr ""
+
+#: ../../../migration/flask.rst:249
+msgid "``request.scope[\"server\"]``"
+msgstr ""
+
+#: ../../../migration/flask.rst:251
+msgid "``request.stream``"
+msgstr ""
+
+#: ../../../migration/flask.rst:253
+msgid "``request.url``"
+msgstr ""
+
+#: ../../../migration/flask.rst:255
+msgid "``request.url_charset``"
+msgstr ""
+
+#: ../../../migration/flask.rst:257 ../../../migration/flask.rst:259
+msgid "``request.user_agent``"
+msgstr ""
+
+#: ../../../migration/flask.rst:257 ../../../migration/flask.rst:259
+msgid "``request.headers.get(\"user-agent\")``"
+msgstr ""
+
+#: ../../../migration/flask.rst:264
+msgid ""
+"To learn more about requests, check out these chapters in the documentation"
+msgstr ""
+
+#: ../../../migration/flask.rst:266
+msgid ":doc:`/usage/requests`"
+msgstr ""
+
+#: ../../../migration/flask.rst:267
+msgid ":doc:`/reference/connection`"
+msgstr ""
+
+#: ../../../migration/flask.rst:270
+msgid "Static files"
+msgstr ""
+
+#: ../../../migration/flask.rst:272
+msgid ""
+"Like Flask, Litestar also has capabilities for serving static files, but "
+"while Flask will automatically serve files from a ``static`` folder, this "
+"has to be configured explicitly in Litestar."
+msgstr ""
+
+#: ../../../migration/flask.rst:277
+msgid ""
+"from litestar import Litestar\n"
+"from litestar.static_files import create_static_files_router\n"
+"\n"
+" app = Litestar(route_handlers=[\n"
+"     create_static_files_router(path=\"/static\", "
+"directories=[\"assets\"]),\n"
+" ])"
+msgstr ""
+
+#: ../../../migration/flask.rst:287
+msgid ""
+"To learn more about static files, check out this chapter in the documentation"
+msgstr ""
+
+#: ../../../migration/flask.rst:289
+msgid ":doc:`/usage/static-files`"
+msgstr ""
+
+#: ../../../migration/flask.rst:292
+msgid "Templates"
+msgstr ""
+
+#: ../../../migration/flask.rst:294
+msgid ""
+"Flask comes with the `Jinja <https://jinja.palletsprojects.com/en/3.1.x/>`_ "
+"templating engine built-in. You can use Jinja with Litestar as well, but "
+"you’ll need to install it explicitly. You can do by installing Litestar with "
+"``pip install 'litestar[jinja]'``. In addition to Jinja, Litestar supports "
+"`Mako <https://www.makotemplates.org/>`_ and `Minijinja <https://github.com/"
+"mitsuhiko/minijinja/tree/main/minijinja-py>`_ templates as well."
+msgstr ""
+
+#: ../../../migration/flask.rst:304
+msgid ""
+"from flask import Flask, render_template\n"
+"\n"
+"\n"
+"app = Flask(__name__)\n"
+"\n"
+"\n"
+"@app.route(\"/hello/<name>\")\n"
+"def hello(name):\n"
+"    return render_template(\"hello.html\", name=name)"
+msgstr ""
+
+#: ../../../migration/flask.rst:321
+msgid ""
+"from litestar import Litestar, get\n"
+"from litestar.contrib.jinja import JinjaTemplateEngine\n"
+"from litestar.response import Template\n"
+"from litestar.template.config import TemplateConfig\n"
+"\n"
+"\n"
+"@get(\"/hello/{name:str}\")\n"
+"def hello(name: str) -> Template:\n"
+"    return Template(response_name=\"hello.html\", context={\"name\": name})\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    [hello],\n"
+"    template_config=TemplateConfig(directory=\"templates\", "
+"engine=JinjaTemplateEngine),\n"
+")"
+msgstr ""
+
+#: ../../../migration/flask.rst:340
+msgid ""
+"To learn more about templates, check out this chapter in the documentation:"
+msgstr ""
+
+#: ../../../migration/flask.rst:342
+msgid ":doc:`/usage/templating`"
+msgstr ""
+
+#: ../../../migration/flask.rst:345
+msgid "Setting cookies and headers"
+msgstr ""
+
+#: ../../../migration/flask.rst:353
+msgid ""
+"from flask import Flask, make_response\n"
+"\n"
+"\n"
+"app = Flask(__name__)\n"
+"\n"
+"\n"
+"@app.get(\"/\")\n"
+"def index():\n"
+"    response = make_response(\"hello\")\n"
+"    response.set_cookie(\"my-cookie\", \"cookie-value\")\n"
+"    response.headers[\"my-header\"] = \"header-value\"\n"
+"    return response"
+msgstr ""
+
+#: ../../../migration/flask.rst:373
+msgid ""
+"from litestar import get, Response\n"
+"from litestar.datastructures import ResponseHeader, Cookie\n"
+"\n"
+"\n"
+"@get(\n"
+"    \"/static\",\n"
+"    response_headers={\"my-header\": ResponseHeader(value=\"header-"
+"value\")},\n"
+"    response_cookies=[Cookie(\"my-cookie\", \"cookie-value\")],\n"
+")\n"
+"def static() -> str:\n"
+"    # you can set headers and cookies when defining handlers\n"
+"    ...\n"
+"\n"
+"\n"
+"@get(\"/dynamic\")\n"
+"def dynamic() -> Response[str]:\n"
+"    # or dynamically, by returning an instance of Response\n"
+"    return Response(\n"
+"        \"hello\",\n"
+"        headers={\"my-header\": \"header-value\"},\n"
+"        cookies=[Cookie(\"my-cookie\", \"cookie-value\")],\n"
+"    )"
+msgstr ""
+
+#: ../../../migration/flask.rst:399
+msgid ""
+"To learn more about response headers and cookies, check out these chapters "
+"in the documentation:"
+msgstr ""
+
+#: ../../../migration/flask.rst:402
+msgid ""
+":ref:`Responses - Setting Response Headers <usage/responses:setting response "
+"headers>`"
+msgstr ""
+
+#: ../../../migration/flask.rst:403
+msgid ""
+":ref:`Responses - Setting Response Cookies <usage/responses:setting response "
+"cookies>`"
+msgstr ""
+
+#: ../../../migration/flask.rst:406
+msgid "Redirects"
+msgstr ""
+
+#: ../../../migration/flask.rst:408
+msgid "For redirects, instead of ``redirect`` use ``Redirect``:"
+msgstr ""
+
+#: ../../../migration/flask.rst:416
+msgid ""
+"from flask import Flask, redirect, url_for\n"
+"\n"
+"\n"
+"app = Flask(__name__)\n"
+"\n"
+"\n"
+"@app.get(\"/\")\n"
+"def index():\n"
+"    return \"hello\"\n"
+"\n"
+"\n"
+"@app.get(\"/hello\")\n"
+"def hello():\n"
+"    return redirect(url_for(\"index\"))"
+msgstr ""
+
+#: ../../../migration/flask.rst:438
+msgid ""
+"from litestar import Litestar, get\n"
+"from litestar.response import Redirect\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"def index() -> str:\n"
+"    return \"hello\"\n"
+"\n"
+"\n"
+"@get(\"/hello\")\n"
+"def hello() -> Redirect:\n"
+"    return Redirect(path=\"/\")\n"
+"\n"
+"\n"
+"app = Litestar([index, hello])"
+msgstr ""
+
+#: ../../../migration/flask.rst:457
+msgid "Raising HTTP errors"
+msgstr ""
+
+#: ../../../migration/flask.rst:459
+msgid "Instead of using the ``abort`` function, raise an ``HTTPException``:"
+msgstr ""
+
+#: ../../../migration/flask.rst:467
+msgid ""
+"from flask import Flask, abort\n"
+"\n"
+"\n"
+"app = Flask(__name__)\n"
+"\n"
+"\n"
+"@app.get(\"/\")\n"
+"def index():\n"
+"    abort(400, \"this did not work\")"
+msgstr ""
+
+#: ../../../migration/flask.rst:484
+msgid ""
+"from litestar import Litestar, get\n"
+"from litestar.exceptions import HTTPException\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"def index() -> None:\n"
+"    raise HTTPException(status_code=400, detail=\"this did not work\")\n"
+"\n"
+"\n"
+"app = Litestar([index])"
+msgstr ""
+
+#: ../../../migration/flask.rst:498
+msgid ""
+"To learn more about exceptions, check out this chapter in the documentation:"
+msgstr ""
+
+#: ../../../migration/flask.rst:500
+msgid ":doc:`/usage/exceptions`"
+msgstr ""
+
+#: ../../../migration/flask.rst:503
+msgid "Setting status codes"
+msgstr ""
+
+#: ../../../migration/flask.rst:511
+msgid ""
+"from flask import Flask\n"
+"\n"
+"\n"
+"app = Flask(__name__)\n"
+"\n"
+"\n"
+"@app.get(\"/\")\n"
+"def index():\n"
+"    return \"not found\", 404"
+msgstr ""
+
+#: ../../../migration/flask.rst:528
+msgid ""
+"from litestar import Litestar, get, Response\n"
+"\n"
+"\n"
+"@get(\"/static\", status_code=404)\n"
+"def static_status() -> str:\n"
+"    return \"not found\"\n"
+"\n"
+"\n"
+"@get(\"/dynamic\")\n"
+"def dynamic_status() -> Response[str]:\n"
+"    return Response(\"not found\", status_code=404)\n"
+"\n"
+"\n"
+"app = Litestar([static_status, dynamic_status])"
+msgstr ""
+
+#: ../../../migration/flask.rst:546
+msgid "Serialization"
+msgstr ""
+
+#: ../../../migration/flask.rst:548
+msgid ""
+"Flask uses a mix of explicit conversion (such as ``jsonify``) and inference "
+"(i.e. the type of the returned data) to determine how data should be "
+"serialized. Litestar instead assumes the data returned is intended to be "
+"serialized into JSON and will do so unless told otherwise."
+msgstr ""
+
+#: ../../../migration/flask.rst:558
+msgid ""
+"from flask import Flask, Response\n"
+"\n"
+"\n"
+"app = Flask(__name__)\n"
+"\n"
+"\n"
+"@app.get(\"/json\")\n"
+"def get_json():\n"
+"    return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"@app.get(\"/text\")\n"
+"def get_text():\n"
+"    return \"hello, world!\"\n"
+"\n"
+"\n"
+"@app.get(\"/html\")\n"
+"def get_html():\n"
+"    return Response(\"<strong>hello, world</strong>\", mimetype=\"text/"
+"html\")"
+msgstr ""
+
+#: ../../../migration/flask.rst:585
+msgid ""
+"from litestar import Litestar, get, MediaType\n"
+"\n"
+"\n"
+"@get(\"/json\")\n"
+"def get_json() -> dict[str, str]:\n"
+"    return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"@get(\"/text\", media_type=MediaType.TEXT)\n"
+"def get_text() -> str:\n"
+"    return \"hello, world\"\n"
+"\n"
+"\n"
+"@get(\"/html\", media_type=MediaType.HTML)\n"
+"def get_html() -> str:\n"
+"    return \"<strong>hello, world</strong>\"\n"
+"\n"
+"\n"
+"app = Litestar([get_json, get_text, get_html])"
+msgstr ""
+
+#: ../../../migration/flask.rst:608
+msgid "Error handling"
+msgstr ""
+
+#: ../../../migration/flask.rst:616
+msgid ""
+"from flask import Flask\n"
+"from werkzeug.exceptions import HTTPException\n"
+"\n"
+"\n"
+"app = Flask(__name__)\n"
+"\n"
+"\n"
+"@app.errorhandler(HTTPException)\n"
+"def handle_exception(e): ..."
+msgstr ""
+
+#: ../../../migration/flask.rst:633
+msgid ""
+"from litestar import Litestar, Request, Response\n"
+"from litestar.exceptions import HTTPException\n"
+"\n"
+"\n"
+"def handle_exception(request: Request, exception: Exception) -> "
+"Response: ...\n"
+"\n"
+"\n"
+"app = Litestar([], exception_handlers={HTTPException: handle_exception})"
+msgstr ""
+
+#: ../../../migration/flask.rst:646
+msgid ""
+"To learn more about exception handling, check out this chapter in the "
+"documentation:"
+msgstr ""
+
+#: ../../../migration/flask.rst:648
+msgid ":ref:`usage/exceptions:exception handling`"
+msgstr ""

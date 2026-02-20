@@ -1,0 +1,104 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../tutorials/dto-tutorial/02-nested-exclude.rst:2
+msgid "Excluding from nested models"
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/02-nested-exclude.rst:4
+msgid ""
+"The ``exclude`` option can be used to exclude fields from models that are "
+"related to our data model by using dotted paths. For example, ``exclude={\"a."
+"b\"}`` would exclude the ``b`` attribute of an instance nested on the ``a`` "
+"attribute."
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/02-nested-exclude.rst:7
+msgid ""
+"To demonstrate, let's adjust our script to add an ``Address`` model, that is "
+"related to the ``Person`` model:"
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/02-nested-exclude.rst:10
+msgid ""
+"from __future__ import annotations\n"
+"\n"
+"from dataclasses import dataclass\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.dto import DataclassDTO, DTOConfig\n"
+"\n"
+"\n"
+"@dataclass\n"
+"class Address:\n"
+"    street: str\n"
+"    city: str\n"
+"    country: str\n"
+"\n"
+"\n"
+"@dataclass\n"
+"class Person:\n"
+"    name: str\n"
+"    age: int\n"
+"    email: str\n"
+"    address: Address\n"
+"\n"
+"\n"
+"class ReadDTO(DataclassDTO[Person]):\n"
+"    config = DTOConfig(exclude={\"email\", \"address.street\"})\n"
+"\n"
+"\n"
+"@get(\"/person/{name:str}\", return_dto=ReadDTO, sync_to_thread=False)\n"
+"def get_person(name: str) -> Person:\n"
+"    # Your logic to retrieve the person goes here\n"
+"    # For demonstration purposes, a placeholder Person instance is returned\n"
+"    address = Address(street=\"123 Main St\", city=\"Cityville\", "
+"country=\"Countryland\")\n"
+"    return Person(name=name, age=30, email=f\"email_of_{name}@example.com\", "
+"address=address)\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[get_person])"
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/02-nested-exclude.rst:14
+msgid ""
+"The ``Address`` model has three attributes, ``street``, ``city``, and "
+"``country``, and we've added an ``address`` attribute to the ``Person`` "
+"model."
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/02-nested-exclude.rst:17
+msgid ""
+"The ``ReadDTO`` class has been updated to exclude the ``street`` attribute "
+"of the nested ``Address`` model using the dotted path syntax ``\"address."
+"street\"``."
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/02-nested-exclude.rst:20
+msgid ""
+"Inside the handler, we create an ``Address`` instance and assign it to the "
+"``address`` attribute of the ``Person``."
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/02-nested-exclude.rst:22
+msgid ""
+"When we call our handler, we can see that the ``street`` attribute is not "
+"included in the response:"
+msgstr ""

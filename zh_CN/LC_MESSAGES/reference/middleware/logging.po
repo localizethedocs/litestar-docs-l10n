@@ -1,0 +1,312 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/middleware/logging.rst:2
+msgid "logging"
+msgstr ""
+
+#: ../../../../litestar/middleware/logging.py:docstring of
+#: litestar.middleware.logging.LoggingMiddleware:1
+msgid "Bases: :py:class:`~litestar.middleware.base.AbstractMiddleware`"
+msgstr ""
+
+#: ../../../../litestar/middleware/logging.py:docstring of
+#: litestar.middleware.logging.LoggingMiddleware:1
+msgid "Logging middleware."
+msgstr ""
+
+#: ../../../../litestar/middleware/logging.py:docstring of
+#: litestar.middleware.logging.LoggingMiddleware.__init__:1
+msgid "Initialize ``LoggingMiddleware``."
+msgstr ""
+
+#: ../../../reference/middleware/logging.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../litestar/middleware/logging.py:docstring of
+#: litestar.middleware.logging.LoggingMiddleware.__init__:3
+msgid "The ``next`` ASGI app to call."
+msgstr ""
+
+#: ../../../../litestar/middleware/logging.py:docstring of
+#: litestar.middleware.logging.LoggingMiddleware.__init__:4
+msgid "An instance of LoggingMiddlewareConfig."
+msgstr ""
+
+#: ../../../../litestar/middleware/logging.py:docstring of
+#: litestar.middleware.logging.LoggingMiddleware.log_request:1
+msgid "Extract request data and log the message."
+msgstr ""
+
+#: ../../../../litestar/middleware/logging.py:docstring of
+#: litestar.middleware.logging.LoggingMiddleware.create_send_wrapper:3
+#: litestar.middleware.logging.LoggingMiddleware.extract_response_data:3
+#: litestar.middleware.logging.LoggingMiddleware.log_request:3
+#: litestar.middleware.logging.LoggingMiddleware.log_response:3
+msgid "The ASGI connection scope."
+msgstr ""
+
+#: ../../../../litestar/middleware/logging.py:docstring of
+#: litestar.middleware.logging.LoggingMiddleware.log_request:4
+msgid "ASGI receive callable"
+msgstr ""
+
+#: ../../../reference/middleware/logging.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/middleware/logging.py:docstring of
+#: litestar.middleware.logging.LoggingMiddleware.log_message:5
+#: litestar.middleware.logging.LoggingMiddleware.log_request:6
+#: litestar.middleware.logging.LoggingMiddleware.log_response:5
+msgid "None"
+msgstr ""
+
+#: ../../../../litestar/middleware/logging.py:docstring of
+#: litestar.middleware.logging.LoggingMiddleware.log_response:1
+msgid "Extract the response data and log the message."
+msgstr ""
+
+#: ../../../../litestar/middleware/logging.py:docstring of
+#: litestar.middleware.logging.LoggingMiddleware.log_message:1
+msgid "Log a message."
+msgstr ""
+
+#: ../../../../litestar/middleware/logging.py:docstring of
+#: litestar.middleware.logging.LoggingMiddleware.log_message:3
+msgid "Extract values to log."
+msgstr ""
+
+#: ../../../../litestar/middleware/logging.py:docstring of
+#: litestar.middleware.logging.LoggingMiddleware.extract_request_data:1
+msgid "Create a dictionary of values for the message."
+msgstr ""
+
+#: ../../../../litestar/middleware/logging.py:docstring of
+#: litestar.middleware.logging.LoggingMiddleware.extract_request_data:3
+msgid "A :class:`Request <litestar.connection.Request>` instance."
+msgstr ""
+
+#: ../../../../litestar/middleware/logging.py:docstring of
+#: litestar.middleware.logging.LoggingMiddleware.extract_request_data:5
+#: litestar.middleware.logging.LoggingMiddleware.extract_response_data:5
+msgid "An dict."
+msgstr ""
+
+#: ../../../../litestar/middleware/logging.py:docstring of
+#: litestar.middleware.logging.LoggingMiddleware.extract_response_data:1
+msgid "Extract data from the response."
+msgstr ""
+
+#: ../../../../litestar/middleware/logging.py:docstring of
+#: litestar.middleware.logging.LoggingMiddleware.create_send_wrapper:1
+msgid "Create a ``send`` wrapper, which handles logging response data."
+msgstr ""
+
+#: ../../../../litestar/middleware/logging.py:docstring of
+#: litestar.middleware.logging.LoggingMiddleware.create_send_wrapper:4
+msgid "The ASGI send function."
+msgstr ""
+
+#: ../../../../litestar/middleware/logging.py:docstring of
+#: litestar.middleware.logging.LoggingMiddleware.create_send_wrapper:6
+msgid "An ASGI send function."
+msgstr ""
+
+#: ../../../../litestar/middleware/logging.py:docstring of
+#: litestar.middleware.logging.LoggingMiddlewareConfig:1
+msgid "Bases: :py:class:`object`"
+msgstr ""
+
+#: ../../../../litestar/middleware/logging.py:docstring of
+#: litestar.middleware.logging.LoggingMiddlewareConfig:1
+msgid "Configuration for ``LoggingMiddleware``"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.logging.LoggingMiddlewareConfig.exclude:1
+msgid "List of paths to exclude from logging."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.logging.LoggingMiddlewareConfig.exclude_opt_key:1
+msgid ""
+"An identifier to use on routes to disable logging for a particular route."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.logging.LoggingMiddlewareConfig.include_compressed_body:1
+msgid ""
+"Include body of compressed response in middleware. If `\"body\"` not set "
+"in. :attr:`response_log_fields <LoggingMiddlewareConfig."
+"response_log_fields>` this config value is ignored."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.logging.LoggingMiddlewareConfig.logger_name:1
+msgid "Name of the logger to retrieve using `app.get_logger(\"<name>\")`."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.logging.LoggingMiddlewareConfig.request_cookies_to_obfuscate:1
+msgid "Request cookie keys to obfuscate."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.logging.LoggingMiddlewareConfig.request_cookies_to_obfuscate:3
+#: litestar.middleware.logging.LoggingMiddlewareConfig.request_headers_to_obfuscate:3
+#: litestar.middleware.logging.LoggingMiddlewareConfig.response_cookies_to_obfuscate:3
+#: litestar.middleware.logging.LoggingMiddlewareConfig.response_headers_to_obfuscate:3
+msgid "Obfuscated values are replaced with '*****'."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.logging.LoggingMiddlewareConfig.request_headers_to_obfuscate:1
+msgid "Request header keys to obfuscate."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.logging.LoggingMiddlewareConfig.response_cookies_to_obfuscate:1
+msgid "Response cookie keys to obfuscate."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.logging.LoggingMiddlewareConfig.response_headers_to_obfuscate:1
+msgid "Response header keys to obfuscate."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.logging.LoggingMiddlewareConfig.request_log_message:1
+msgid "Log message to prepend when logging a request."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.logging.LoggingMiddlewareConfig.response_log_message:1
+msgid "Log message to prepend when logging a response."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.logging.LoggingMiddlewareConfig.request_log_fields:1
+msgid "Fields to extract and log from the request."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.logging.LoggingMiddlewareConfig.request_log_fields:3
+#: litestar.middleware.logging.LoggingMiddlewareConfig.response_log_fields:4
+msgid "Notes"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.logging.LoggingMiddlewareConfig.request_log_fields:5
+#: litestar.middleware.logging.LoggingMiddlewareConfig.response_log_fields:6
+msgid ""
+"The order of fields in the iterable determines the order of the log message "
+"logged out."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.logging.LoggingMiddlewareConfig.request_log_fields:6
+#: litestar.middleware.logging.LoggingMiddlewareConfig.response_log_fields:7
+msgid ""
+"Thus, re-arranging the log-message is as simple as changing the iterable."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.logging.LoggingMiddlewareConfig.request_log_fields:7
+msgid "To turn off logging of requests, use and empty iterable."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.logging.LoggingMiddlewareConfig.response_log_fields:1
+msgid ""
+"Fields to extract and log from the response. The order of fields in the "
+"iterable determines the order of the log message logged out."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.logging.LoggingMiddlewareConfig.response_log_fields:8
+msgid "To turn off logging of responses, use and empty iterable."
+msgstr ""
+
+#: ../../../../litestar/middleware/logging.py:docstring of
+#: litestar.middleware.logging.LoggingMiddleware:1
+msgid "Middleware class to use."
+msgstr ""
+
+#: ../../../../litestar/middleware/logging.py:docstring of
+#: litestar.middleware.logging.LoggingMiddleware:3
+msgid "Should be a subclass of [litestar.middleware.LoggingMiddleware]."
+msgstr ""
+
+#: ../../../../litestar/middleware/logging.py:docstring of
+#: litestar.middleware.logging.LoggingMiddlewareConfig.__post_init__:1
+msgid "Override default Pydantic type conversion for iterables."
+msgstr ""
+
+#: ../../../../litestar/middleware/logging.py:docstring of
+#: litestar.middleware.logging.LoggingMiddlewareConfig.__post_init__:3
+msgid "An iterable"
+msgstr ""
+
+#: ../../../../litestar/middleware/logging.py:docstring of
+#: litestar.middleware.logging.LoggingMiddlewareConfig.__post_init__:5
+msgid "The `value` argument cast as a tuple."
+msgstr ""
+
+#: ../../../../litestar/middleware/logging.py:docstring of
+#: litestar.middleware.logging.LoggingMiddlewareConfig.middleware:1
+msgid ""
+"Use this property to insert the config into a middleware list on one of the "
+"application layers."
+msgstr ""
+
+#: ../../../../litestar/middleware/logging.py:docstring of
+#: litestar.middleware.logging.LoggingMiddlewareConfig.middleware:3
+msgid "Examples"
+msgstr ""
+
+#: ../../../../litestar/middleware/logging.py:docstring of
+#: litestar.middleware.logging.LoggingMiddlewareConfig.middleware:6
+msgid ""
+"from litestar import Litestar, Request, get\n"
+"from litestar.logging import LoggingConfig\n"
+"from litestar.middleware.logging import LoggingMiddlewareConfig\n"
+"\n"
+"logging_config = LoggingConfig()\n"
+"\n"
+"logging_middleware_config = LoggingMiddlewareConfig()\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"def my_handler(request: Request) -> None: ...\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[my_handler],\n"
+"    logging_config=logging_config,\n"
+"    middleware=[logging_middleware_config.middleware],\n"
+")"
+msgstr ""
+
+#: ../../../../litestar/middleware/logging.py:docstring of
+#: litestar.middleware.logging.LoggingMiddlewareConfig.middleware:26
+msgid ""
+"An instance of DefineMiddleware including ``self`` as the config kwarg value."
+msgstr ""

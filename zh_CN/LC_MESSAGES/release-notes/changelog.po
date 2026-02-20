@@ -1,0 +1,337 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../release-notes/changelog.rst:4
+msgid "3.x Changelog"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:15
+msgid ""
+"Remove all SQLAlchemy functionality from Litestar. Both ``litestar.contrib."
+"sqlalchemy`` and ``litestar.plugins.sqlalchemy`` modules have been "
+"completely removed. Users must now import directly from ``advanced_alchemy."
+"extensions.litestar``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:19
+msgid ""
+"Migration: - ``from litestar.contrib.sqlalchemy import X`` → ``from "
+"advanced_alchemy.extensions.litestar import X`` - ``from litestar.plugins."
+"sqlalchemy import Y`` → ``from advanced_alchemy.extensions.litestar import "
+"Y``"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:23
+msgid ""
+"This completes the separation of concerns, with advanced-alchemy being the "
+"sole provider of SQLAlchemy integration for Litestar."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:32
+msgid ""
+"Remove the deprecated ``litestar.contrib.prometheus`` module. Code still "
+"using imports from this module should switch to using ``litestar.plugins."
+"prometheus``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:42
+msgid ""
+"Re-implement :class:`~litestar.testing.AsyncTestClient` to be async-native, "
+"i.e. use the currently running event loop to run the application, instead of "
+"running a separate event loop in a new thread. Additionally, a new :class:"
+"`~litestar.testing.AsyncWebSocketTestSession` has been introduced, providing "
+"an async testing utility for WebSockets."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:47
+msgid ""
+"To ensure consisten behaviour across ``TestClient`` and ``AsyncTestClient``, "
+"all testing utilities have been rewritten to be async first, with their "
+"synchronous counterparts proxying calls to the async implementation, which "
+"they run internally within a dedicated thread + event loop."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:52
+msgid ""
+":ref:`usage/testing:Test Clients` :ref:`usage/testing:Deciding which test "
+"client to use`"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:60
+msgid ""
+"Remove deprecated ``<plugin_type>_plugins`` properties from :class:"
+"`Litestar`."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:63
+msgid "Removed"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:63
+msgid "Use instead"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:65
+msgid "``Litestar.openapi_schema_plugins``"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:65
+msgid "``Litestar.plugins.openapi_schema``"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:66
+msgid "``Litestar.cli_plugins``"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:66
+msgid "``Litestar.plugins.cli``"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:67
+msgid "``Litestar.serialization_plugins``"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:67
+msgid "``Litestar.serialization.cli``"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:75
+msgid ""
+"Remove the deprecated properties ``allow_reserved`` and "
+"``allow_empty_value`` from :class:`~litestar.datastructures.ResponseHeader` "
+"and :class:`~litestar.openapi.spec.OpenAPIHeader`."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:83
+msgid ""
+"The ``traceback_line_limit`` parameter of :class:`~litestar.logging.config."
+"LoggingConfig` has been removed. This parameter had no effect since version "
+"``2.9.0``, so it can be removed safely from applications without any change "
+"in behaviour."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:92
+msgid ""
+"Remove the deprecated ``litestar.middleware.cors`` module and ``litestar."
+"middleware.cors.CORSMiddleware``. To configure the CORS middleware, use :"
+"class:`~litestar.config.cors.CORSConfig`."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:100
+msgid ""
+"The deprecated ``encoded_headers`` parameter has been removed from the "
+"following clases:"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:102
+msgid ":class:`~litestar.response.base.ASGIResponse`"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:103
+msgid ":meth:`~litestar.response.Response.to_asgi_response`"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:104
+msgid ":class:`~litestar.response.file.ASGIFileResponse`"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:105
+msgid ":meth:`~litestar.response.File.to_asgi_response`"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:106
+msgid ":class:`~litestar.response.redirect.ASGIRedirectResponse`"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:107
+msgid ":meth:`~litestar.response.Redirect.to_asgi_response`"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:108
+msgid ":class:`~litestar.response.streaming.ASGIStreamingResponse`"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:109
+msgid ":meth:`~litestar.response.Stream.to_asgi_response`"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:110
+msgid ":meth:`~litestar.response.Template.to_asgi_response`"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:112
+msgid ""
+"Existing code still using ``encoded_headers`` should be migrated to using "
+"the ``headers`` parameter instead."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:120
+msgid ""
+"Remove the deprecated ``litestar.contrib.htmx`` module. Code still using "
+"imports from this module should switch to using ``litestar_htmx``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:123
+msgid "Install it via ``litestar[htmx]`` extra."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:130
+msgid ""
+"Remove the deprecated ``litestar.types.internal_types.LitestarType`` type "
+"alias. In its stead, ``type[Litestar]`` can be used."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:138
+msgid ""
+"Remove the deprecated ``litestar.template.base.TemplateContext`` type. Its "
+"usages should be replaced with :class:`collections.abc.Mapping`."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:146
+msgid ""
+"Remove the deprecated ``ASGIResponse.encoded_headers`` property. Instead, :"
+"meth:`~litestar.response.base.ASGIResponse.encode_headers` should be used."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:154
+msgid ""
+"Remove the deprecated ``pydantic_get_unwrapped_annotation_and_type_hints`` "
+"function."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:162
+msgid ""
+"Remove the deprecated ``litestar.contrib.attrs`` module. Code still using "
+"imports from this module should switch to using ``litestar.plugins.attrs``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:171
+msgid ""
+"Remove the deprecated ``litestar.contrib.jwt`` module. Code still using "
+"imports from this module should switch to using ``litestar.security.jwt``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:180
+msgid ""
+"Remove the deprecated ``litestar.contrib.repository`` module. Code still "
+"using imports from this module should switch to using ``litestar."
+"repository``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:189
+msgid ""
+"Remove the deprecated ``litestar.contrib.pydantic`` module. Code still using "
+"imports from this module should switch to using ``litestar.plugins."
+"pydantic``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:198
+msgid ""
+"Remove the deprecated module ``litestar.contrib.minijnja``. This module was "
+"created with a typo in its name (`minijnja` instead of `minijinja`). Instead "
+"``litestar.contrib.minijinja`` should be used."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:206
+msgid ""
+"New ``round_trip: bool`` parameter to :class:`~litestar.contrib.pydantic."
+"PydanticPlugin` allows serializing types like ``pydanctic.Json`` correctly."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:216
+msgid ""
+"Remove the deprecated ``litestar.contrib.minijinja.minijinja_from_state`` "
+"function. Instead use a callable that receives the minijinja ``State`` "
+"object as first argument."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:225
+msgid ""
+"Use ``litestar[piccolo]`` extra installation target and ``litestar_piccolo`` "
+"plugin instead: https://github.com/litestar-org/litestar-piccolo"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:241
+msgid ""
+"Middlewares inheriting from :class:`~litestar.middleware.base."
+"ASGIMiddleware` will now have zero runtime cost when they are excluded e.g. "
+"via the ``scope`` or ``exclude_opt_key`` options."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:245
+msgid ""
+"Previously, the base middleware was always being invoked for every request, "
+"evaluating the exclusion criteria, and then calling the user defined "
+"middleware functions. If a middleware had defined ``scopes = (ScopeType."
+"HTTP,)``, it would still be called for *every* request, regardless of the "
+"scope type. Only for requests with the type ``HTTP``, it would then call the "
+"user's function."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:252
+msgid "This behaviour is still true for the legacy ``AbstractMiddleware``"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:254
+msgid ""
+"With *zero cost exclusion*, the exclusion is being evaluated statically. At "
+"app creation time, when route handlers are registered and their middleware "
+"stacks are being built, a middleware that is to be excluded will simply not "
+"be included in the stack."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:260
+msgid ""
+"Even though this change is marked as breaking, no runtime behaviour "
+"difference is expected. Some test cases may break though if they relied on "
+"the fact that the middleware wrapper created by ``ASGIMiddleware`` was "
+"always being called"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:270
+msgid "Support unwrapping ``ReadOnly`` type in schemas like:"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:272
+msgid ""
+"from typing import ReadOnly, TypedDict\n"
+"\n"
+"class User(TypedDict):\n"
+"    id: ReadOnly[int]"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:279
+msgid ""
+"``typing_extensions.ReadOnly`` should be used for python versions <3.13."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:286
+msgid ""
+"Add a new attribute :attr:`~litestar.middleware.ASGIMiddleware."
+"should_bypass_for_scope`; A callable which takes in a :class:`~litestar."
+"types.Scope` and returns a boolean to indicate whether to bypass the "
+"middleware for the current request."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:234
+msgid ""
+"Now, in the OpenAPI schema, ``pydantic`` fields with ``default_factory`` are "
+"displayed as non-null and not required. Previously, this fields was nullable "
+"and not required."
+msgstr ""

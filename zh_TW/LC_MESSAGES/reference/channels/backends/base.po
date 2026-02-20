@@ -1,0 +1,64 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/channels/backends/base.rst:2
+msgid "base"
+msgstr ""
+
+#: ../../../../litestar/channels/backends/base.py:docstring of
+#: litestar.channels.backends.base.ChannelsBackend:1
+msgid "Bases: :py:class:`~abc.ABC`"
+msgstr ""
+
+#: ../../../../litestar/channels/backends/base.py:docstring of
+#: litestar.channels.backends.base.ChannelsBackend.on_startup:1
+msgid "Called by the plugin on application startup"
+msgstr ""
+
+#: ../../../../litestar/channels/backends/base.py:docstring of
+#: litestar.channels.backends.base.ChannelsBackend.on_shutdown:1
+msgid "Called by the plugin on application shutdown"
+msgstr ""
+
+#: ../../../../litestar/channels/backends/base.py:docstring of
+#: litestar.channels.backends.base.ChannelsBackend.publish:1
+msgid "Publish the message ``data`` to all ``channels``"
+msgstr ""
+
+#: ../../../../litestar/channels/backends/base.py:docstring of
+#: litestar.channels.backends.base.ChannelsBackend.subscribe:1
+msgid "Start listening for events on ``channels``"
+msgstr ""
+
+#: ../../../../litestar/channels/backends/base.py:docstring of
+#: litestar.channels.backends.base.ChannelsBackend.unsubscribe:1
+msgid "Stop listening for events on ``channels``"
+msgstr ""
+
+#: ../../../../litestar/channels/backends/base.py:docstring of
+#: litestar.channels.backends.base.ChannelsBackend.stream_events:1
+msgid ""
+"Return a generator, iterating over events of subscribed channels as they "
+"become available"
+msgstr ""
+
+#: ../../../../litestar/channels/backends/base.py:docstring of
+#: litestar.channels.backends.base.ChannelsBackend.get_history:1
+msgid "Return the event history of ``channel``, at most ``limit`` entries"
+msgstr ""
