@@ -1,0 +1,46 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../usage/databases/piccolo.rst:2
+msgid "Piccolo ORM"
+msgstr ""
+
+#: ../../../usage/databases/piccolo.rst:4
+msgid ""
+"Piccolo ORM is an easy-to-use async ORM and query builder and Litestar has a "
+"plugin called ``litestar-piccolo`` for working with this ORM."
+msgstr ""
+
+#: ../../../usage/databases/piccolo.rst:7
+msgid ""
+"Check out `the plugin docs <https://github.com/litestar-org/litestar-"
+"piccolo>`_ for more information about enabling the support."
+msgstr ""
+
+#: ../../../usage/databases/piccolo.rst:11
+msgid ""
+"Prior to removal in ``3.0.0`` we had ``piccolo`` bundled with the "
+"``litestar`` itself."
+msgstr ""
+
+#: ../../../usage/databases/piccolo.rst:14
+msgid ""
+"To migrate: - Use ``litestar[piccolo]`` installation extra - Use "
+"``litestar_piccolo`` plugin"
+msgstr ""

@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../tutorials/todo-app/index.rst:2
+msgid "Developing a basic TODO application"
+msgstr ""
+
+#: ../../../tutorials/todo-app/index.rst:4
+msgid "Who is this tutorial for?"
+msgstr ""
+
+#: ../../../tutorials/todo-app/index.rst:7
+msgid ""
+"This tutorial is intended to familiarize you with the basic concepts of "
+"Litestar. If you have no prior experience with Litestar or web frameworks in "
+"general, this is the right place to start."
+msgstr ""
+
+#: ../../../tutorials/todo-app/index.rst:12
+msgid "Basic knowledge of Python and web development concepts are required."
+msgstr ""
+
+#: ../../../tutorials/todo-app/index.rst:15
+msgid ""
+"The goal of this tutorial is to develop a TODO application with the "
+"following functionalities:"
+msgstr ""
+
+#: ../../../tutorials/todo-app/index.rst:18
+msgid "Retrieve a TODO list"
+msgstr ""
+
+#: ../../../tutorials/todo-app/index.rst:19
+msgid "Add items to a TODO list"
+msgstr ""
+
+#: ../../../tutorials/todo-app/index.rst:20
+msgid "Mark TODO items as *done*"
+msgstr ""
+
+#: ../../../tutorials/todo-app/index.rst:22
+msgid ""
+"This is not a whole lot of functionality, but enough to learn most of the "
+"fundamental building blocks of Litestar."
+msgstr ""

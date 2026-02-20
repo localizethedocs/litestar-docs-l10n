@@ -1,0 +1,742 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../usage/dependency-injection.rst:2
+msgid "Dependency Injection"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:4
+msgid ""
+"Litestar has a simple but powerful dependency injection system that allows "
+"for declaring dependencies on all layers of the application:"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:8
+msgid ""
+"from litestar import Controller, Router, Litestar, get\n"
+"from litestar.di import Provide\n"
+"\n"
+"\n"
+"async def bool_fn() -> bool: ...\n"
+"\n"
+"\n"
+"async def dict_fn() -> dict: ...\n"
+"\n"
+"\n"
+"async def list_fn() -> list: ...\n"
+"\n"
+"\n"
+"async def int_fn() -> int: ...\n"
+"\n"
+"\n"
+"class MyController(Controller):\n"
+"    path = \"/controller\"\n"
+"    # on the controller\n"
+"    dependencies = {\"controller_dependency\": Provide(list_fn)}\n"
+"\n"
+"    # on the route handler\n"
+"    @get(path=\"/handler\", dependencies={\"local_dependency\": "
+"Provide(int_fn)})\n"
+"    def my_route_handler(\n"
+"        self,\n"
+"        app_dependency: bool,\n"
+"        router_dependency: dict,\n"
+"        controller_dependency: list,\n"
+"        local_dependency: int,\n"
+"    ) -> None: ...\n"
+"\n"
+"\n"
+"# on the router\n"
+"my_router = Router(\n"
+"    path=\"/router\",\n"
+"    dependencies={\"router_dependency\": Provide(dict_fn)},\n"
+"    route_handlers=[MyController],\n"
+")\n"
+"\n"
+"# on the app\n"
+"app = Litestar(\n"
+"    route_handlers=[my_router], dependencies={\"app_dependency\": "
+"Provide(bool_fn)}\n"
+")"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:53
+msgid ""
+"The above example illustrates how dependencies are declared on the different "
+"layers of the application."
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:57
+msgid ""
+"Litestar needs the injected types at runtime which might clash with linter "
+"rules' recommendation to use ``TYPE_CHECKING``."
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:61
+msgid ":ref:`Signature namespace <signature_namespace>`"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:63
+msgid ""
+"Dependencies can be either callables - sync or async functions, methods, or "
+"class instances that implement the :meth:`object.__call__` method, or "
+"classes. These are in turn wrapped inside an instance of the :class:`Provide "
+"<.di.Provide>` class."
+msgstr ""
+
+#: ../../../admonitions/sync-to-thread-info.rst:1
+msgid "Synchronous and asynchronous callables"
+msgstr ""
+
+#: ../../../admonitions/sync-to-thread-info.rst:4
+msgid ""
+"Both synchronous and asynchronous callables are supported. One important "
+"aspect of this is that using a synchronous function which perform blocking "
+"operations, such as I/O or computationally intensive tasks, can potentially "
+"block the main thread running the event loop, and in turn block the whole "
+"application."
+msgstr ""
+
+#: ../../../admonitions/sync-to-thread-info.rst:9
+msgid ""
+"To mitigate this, the ``sync_to_thread`` parameter can be set to ``True``, "
+"which will result in the function being run in a thread pool."
+msgstr ""
+
+#: ../../../admonitions/sync-to-thread-info.rst:12
+msgid ""
+"If a synchronous function is non-blocking, setting ``sync_to_thread`` to "
+"``False`` will tell Litestar that the user is sure about its behavior and "
+"the function can be treated as non-blocking."
+msgstr ""
+
+#: ../../../admonitions/sync-to-thread-info.rst:16
+msgid ""
+"If a synchronous function is passed, without setting an explicit "
+"``sync_to_thread`` value, a warning will be raised."
+msgstr ""
+
+#: ../../../admonitions/sync-to-thread-info.rst:21
+msgid ":doc:`/topics/sync-vs-async`"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:72
+msgid "Pre-requisites and scope"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:74
+msgid "The pre-requisites for dependency injection are these:"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:77
+msgid "dependencies must be callables."
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:78
+msgid ""
+"dependencies can receive kwargs and a ``self`` arg but not positional args."
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:79
+msgid "the kwarg name and the dependency key must be identical."
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:80
+msgid "the dependency must be declared using the ``Provide`` class."
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:81
+msgid "the dependency must be in the *scope* of the handler function."
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:83
+msgid ""
+"What is *scope* in this context? Dependencies are **isolated** to the "
+"context in which they are declared. Thus, in the above example, the "
+"``local_dependency`` can only be accessed within the specific route handler "
+"on which it was declared; The ``controller_dependency`` is available only "
+"for route handlers on that specific controller; And the ``router "
+"dependency`` is available only to the route handlers registered on that "
+"particular router. Only the ``app_dependency`` is available to all route "
+"handlers."
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:92
+msgid "Dependencies with yield (cleanup step)"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:94
+msgid ""
+"In addition to simple callables, dependencies can also be (async) generator "
+"functions, which allows to execute an additional cleanup step, such as "
+"closing a connection, after the handler function has returned."
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:98
+msgid "Technical details"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:101
+msgid ""
+"The cleanup stage is executed **after** the handler function returns, but "
+"**before** the response is sent (in case of HTTP requests)"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:106
+msgid "A basic example"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:109
+#: ../../../usage/dependency-injection.rst:134
+msgid "``dependencies.py``"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:109
+msgid ""
+"from collections.abc import Generator\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.di import Provide\n"
+"\n"
+"CONNECTION = {\"open\": False}\n"
+"\n"
+"\n"
+"def generator_function() -> Generator[dict[str, bool], None, None]:\n"
+"    \"\"\"Set connection to open and close it after the handler returns."
+"\"\"\"\n"
+"    CONNECTION[\"open\"] = True\n"
+"    yield CONNECTION\n"
+"    CONNECTION[\"open\"] = False\n"
+"\n"
+"\n"
+"@get(\"/\", dependencies={\"conn\": Provide(generator_function)})\n"
+"def index(conn: dict[str, bool]) -> dict[str, bool]:\n"
+"    \"\"\"Return the current connection state.\"\"\"\n"
+"    return conn\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[index])"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:113
+msgid ""
+"If you run the code you'll see that ``CONNECTION`` has been reset after the "
+"handler function returned:"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:117
+msgid ""
+"from litestar.testing import TestClient\n"
+"from dependencies import app, CONNECTION\n"
+"\n"
+"with TestClient(app=app) as client:\n"
+"    print(client.get(\"/\").json())  # {\"open\": True}\n"
+"    print(CONNECTION)  # {\"open\": False}"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:126
+msgid "Handling exceptions"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:128
+msgid ""
+"If an exception occurs within the handler function, it will be raised "
+"**within** the generator, at the point where it first ``yield`` ed. This "
+"makes it possible to adapt behaviour of the dependency based on exceptions, "
+"for example rolling back a database session on error and committing "
+"otherwise."
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:134
+msgid ""
+"from collections.abc import Generator\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.di import Provide\n"
+"\n"
+"STATE = {\"result\": None, \"connection\": \"closed\"}\n"
+"\n"
+"\n"
+"def generator_function() -> Generator[str, None, None]:\n"
+"    \"\"\"Set the connection state to open and close it after the handler "
+"returns.\n"
+"\n"
+"    If an error occurs, set `result` to `\"error\"`, else set it to "
+"`\"OK\"`.\n"
+"    \"\"\"\n"
+"    try:\n"
+"        STATE[\"connection\"] = \"open\"\n"
+"        yield \"hello\"\n"
+"        STATE[\"result\"] = \"OK\"\n"
+"    except ValueError:\n"
+"        STATE[\"result\"] = \"error\"\n"
+"    finally:\n"
+"        STATE[\"connection\"] = \"closed\"\n"
+"\n"
+"\n"
+"@get(\"/{name:str}\", dependencies={\"message\": "
+"Provide(generator_function)})\n"
+"def index(name: str, message: str) -> dict[str, str]:\n"
+"    \"\"\"If `name` is \"John\", return a message, otherwise raise an error."
+"\"\"\"\n"
+"    if name == \"John\":\n"
+"        return {name: message}\n"
+"    raise ValueError()\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[index])"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:139
+msgid ""
+"from litestar.testing import TestClient\n"
+"from dependencies import STATE, app\n"
+"\n"
+"with TestClient(app=app) as client:\n"
+"    response = client.get(\"/John\")\n"
+"    print(response.json())  # {\"John\": \"hello\"}\n"
+"    print(STATE)  # {\"result\": \"OK\", \"connection\": \"closed\"}\n"
+"\n"
+"    response = client.get(\"/Peter\")\n"
+"    print(response.status_code)  # 500\n"
+"    print(STATE)  # {\"result\": \"error\", \"connection\": \"closed\"}"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:153
+msgid "Best Practice"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:156
+msgid ""
+"You should always wrap ``yield`` in a ``try``/``finally`` block, regardless "
+"of whether you want to handle exceptions, to ensure that the cleanup code is "
+"run even when exceptions occurred:"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:161
+msgid ""
+"def generator_dependency():\n"
+"    try:\n"
+"        yield\n"
+"    finally:\n"
+"        ...  # cleanup code"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:171
+msgid ""
+"Do not re-raise exceptions within the dependency. Exceptions caught within "
+"these dependencies will still be handled by the regular mechanisms without "
+"an explicit re-raise"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:178
+msgid ""
+"Exceptions raised during the cleanup step of a dependency will be re-raised "
+"in an :exc:`ExceptionGroup` (for Python versions < 3.11, the `exceptiongroup "
+"<https://github.com/agronholm/exceptiongroup>`_ will be used). This happens "
+"after all dependencies have been cleaned up, so exceptions raised during "
+"cleanup of one dependencies do not affect the cleanup of other dependencies."
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:187
+msgid "Dependency keyword arguments"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:189
+msgid ""
+"As stated above dependencies can receive kwargs but no args. The reason for "
+"this is that dependencies are parsed using the same mechanism that parses "
+"route handler functions, and they too - like route handler functions, can "
+"have data injected into them."
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:193
+msgid ""
+"In fact, you can inject the same data that you can :ref:`inject into route "
+"handlers <usage/routing/handlers:\"reserved\" keyword arguments>`."
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:197
+msgid ""
+"from litestar import Controller, patch\n"
+"from litestar.di import Provide\n"
+"from pydantic import BaseModel, UUID4\n"
+"\n"
+"\n"
+"class User(BaseModel):\n"
+"    id: UUID4\n"
+"    name: str\n"
+"\n"
+"\n"
+"async def retrieve_db_user(user_id: UUID4) -> User: ...\n"
+"\n"
+"\n"
+"class UserController(Controller):\n"
+"    path = \"/user\"\n"
+"    dependencies = {\"user\": Provide(retrieve_db_user)}\n"
+"\n"
+"    @patch(path=\"/{user_id:uuid}\")\n"
+"    async def get_user(self, user: User) -> User: ..."
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:218
+msgid ""
+"In the above example we have a ``User`` model that we are persisting into a "
+"db. The model is fetched using the helper method ``retrieve_db_user`` which "
+"receives a ``user_id`` kwarg and retrieves the corresponding ``User`` "
+"instance. The ``UserController`` class maps the ``retrieve_db_user`` "
+"provider to the key ``user`` in its ``dependencies`` dictionary. This in "
+"turn makes it available as a kwarg in the ``get_user`` method."
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:227
+msgid "Dependency overrides"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:229
+msgid ""
+"Because dependencies are declared at each level of the app using a string "
+"keyed dictionary, overriding dependencies is very simple:"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:233
+msgid ""
+"from litestar import Controller, get\n"
+"from litestar.di import Provide\n"
+"\n"
+"\n"
+"def bool_fn() -> bool: ...\n"
+"\n"
+"\n"
+"def dict_fn() -> dict: ...\n"
+"\n"
+"\n"
+"class MyController(Controller):\n"
+"    path = \"/controller\"\n"
+"    # on the controller\n"
+"    dependencies = {\"some_dependency\": Provide(dict_fn)}\n"
+"\n"
+"    # on the route handler\n"
+"    @get(path=\"/handler\", dependencies={\"some_dependency\": "
+"Provide(bool_fn)})\n"
+"    def my_route_handler(\n"
+"        self,\n"
+"        some_dependency: bool,\n"
+"    ) -> None: ..."
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:256
+msgid ""
+"The lower scoped route handler function declares a dependency with the same "
+"key as the one declared on the higher scoped controller. The lower scoped "
+"dependency therefore overrides the higher scoped one."
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:261
+msgid "The ``Provide`` class"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:263
+msgid ""
+"The :class:`Provide <.di.Provide>` class is a wrapper used for dependency "
+"injection. To inject a callable you must wrap it in ``Provide``:"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:267
+msgid ""
+"from random import randint\n"
+"from litestar import get\n"
+"from litestar.di import Provide\n"
+"\n"
+"\n"
+"def my_dependency() -> int:\n"
+"    return randint(1, 10)\n"
+"\n"
+"\n"
+"@get(\n"
+"    \"/some-path\",\n"
+"    dependencies={\n"
+"        \"my_dep\": Provide(\n"
+"            my_dependency,\n"
+"        )\n"
+"    },\n"
+")\n"
+"def my_handler(my_dep: int) -> None: ..."
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:290
+msgid ""
+"If :class:`Provide.use_cache <.di.Provide>` is ``True``, the return value of "
+"the function will be memoized the first time it is called and then will be "
+"used. There is no sophisticated comparison of kwargs, LRU implementation, "
+"etc., so you should be careful when you choose to use this option. Note that "
+"dependencies will only be called once per request, even with ``Provide."
+"use_cache`` set to ``False``."
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:298
+msgid "Dependencies within dependencies"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:300
+msgid ""
+"You can inject dependencies into other dependencies - exactly like you would "
+"into regular functions."
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:303
+msgid ""
+"from litestar import Litestar, get\n"
+"from litestar.di import Provide\n"
+"from random import randint\n"
+"\n"
+"\n"
+"def first_dependency() -> int:\n"
+"    return randint(1, 10)\n"
+"\n"
+"\n"
+"def second_dependency(injected_integer: int) -> bool:\n"
+"    return injected_integer % 2 == 0\n"
+"\n"
+"\n"
+"@get(\"/true-or-false\")\n"
+"def true_or_false_handler(injected_bool: bool) -> str:\n"
+"    return \"its true!\" if injected_bool else \"nope, its false...\"\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[true_or_false_handler],\n"
+"    dependencies={\n"
+"        \"injected_integer\": Provide(first_dependency),\n"
+"        \"injected_bool\": Provide(second_dependency),\n"
+"    },\n"
+")"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:332
+msgid "The rules for `dependency overrides`_ apply here as well."
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:336
+msgid "The ``Dependency`` function"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:339
+msgid "Dependency validation"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:341
+msgid ""
+"By default, injected dependency values are validated by Litestar, for "
+"example, this application will raise an internal server error:"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:345
+#: ../../../usage/dependency-injection.rst:352
+msgid "Dependency validation error"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:345
+msgid ""
+"from typing import Any\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.di import Provide\n"
+"\n"
+"\n"
+"async def provide_str() -> str:\n"
+"    \"\"\"Returns a string.\"\"\"\n"
+"    return \"whoops\"\n"
+"\n"
+"\n"
+"@get(\"/\", dependencies={\"injected\": Provide(provide_str)}, "
+"sync_to_thread=False)\n"
+"def hello_world(injected: int) -> dict[str, Any]:\n"
+"    \"\"\"Handler expects an `int`, but we've provided a `str`.\"\"\"\n"
+"    return {\"hello\": injected}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[hello_world])"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:349
+msgid ""
+"Dependency validation can be toggled using the :class:`Dependency <litestar."
+"params.Dependency>` function."
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:352
+msgid ""
+"from typing import Annotated, Any\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.di import Provide\n"
+"from litestar.params import Dependency\n"
+"\n"
+"\n"
+"async def provide_str() -> str:\n"
+"    \"\"\"Returns a string.\"\"\"\n"
+"    return \"whoops\"\n"
+"\n"
+"\n"
+"@get(\"/\", dependencies={\"injected\": Provide(provide_str)}, "
+"sync_to_thread=False)\n"
+"def hello_world(injected: Annotated[int, Dependency(skip_validation=True)]) -"
+"> dict[str, Any]:\n"
+"    \"\"\"Handler expects an `int`, but we've provided a `str`.\"\"\"\n"
+"    return {\"hello\": injected}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[hello_world])"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:356
+msgid ""
+"This may be useful for reasons of efficiency, or if pydantic cannot validate "
+"a certain type, but use with caution!"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:359
+msgid "Dependency function as a marker"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:361
+msgid ""
+"The :class:`Dependency <litestar.params.Dependency>` function can also be "
+"used as a marker that gives us a bit more detail about your application."
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:365
+msgid "Exclude dependencies with default values from OpenAPI docs"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:367
+msgid ""
+"Depending on your application design, it is possible to have a dependency "
+"declared in a handler or :class:`Provide <.di.Provide>` function that has a "
+"default value. If the dependency isn't provided for the route, the default "
+"should be used by the function."
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:372
+#: ../../../usage/dependency-injection.rst:383
+msgid "Dependency with default value"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:372
+msgid ""
+"from typing import Any\n"
+"\n"
+"from litestar import Litestar, get\n"
+"\n"
+"\n"
+"@get(\"/\", sync_to_thread=False)\n"
+"def hello_world(optional_dependency: int = 3) -> dict[str, Any]:\n"
+"    \"\"\"Notice we haven't provided the dependency to the route.\n"
+"\n"
+"    This is OK, because of the default value, but the parameter shows in the "
+"docs.\n"
+"    \"\"\"\n"
+"    return {\"hello\": optional_dependency}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[hello_world])"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:376
+msgid ""
+"This doesn't fail, but due to the way the application determines parameter "
+"types, it is inferred to be a query parameter."
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:380
+msgid ""
+"By declaring the parameter to be a dependency, Litestar knows to exclude it "
+"from the docs:"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:383
+msgid ""
+"from typing import Annotated, Any\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.params import Dependency\n"
+"\n"
+"\n"
+"@get(\"/\", sync_to_thread=False)\n"
+"def hello_world(optional_dependency: Annotated[int, Dependency(default=3)]) -"
+"> dict[str, Any]:\n"
+"    \"\"\"Notice we haven't provided the dependency to the route.\n"
+"\n"
+"    This is OK, because of the default value, and now the parameter is "
+"excluded from the docs.\n"
+"    \"\"\"\n"
+"    return {\"hello\": optional_dependency}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[hello_world])"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:388
+msgid "Early detection if a dependency isn't provided"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:390
+msgid ""
+"The other side of the same coin is when a dependency isn't provided, and no "
+"default is specified. Without the dependency marker, the parameter is "
+"assumed to be a query parameter and the route will most likely fail when "
+"accessed."
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:393
+msgid ""
+"If the parameter is marked as a dependency, this allows us to fail early "
+"instead:"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:396
+msgid "Dependency not provided error"
+msgstr ""
+
+#: ../../../usage/dependency-injection.rst:396
+msgid ""
+"from typing import Annotated, Any\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.params import Dependency\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"def hello_world(non_optional_dependency: Annotated[int, Dependency()]) -> "
+"dict[str, Any]:\n"
+"    \"\"\"Notice we haven't provided the dependency to the route.\n"
+"\n"
+"    This is not great, however by explicitly marking dependencies, Litestar "
+"won't let the app start.\n"
+"    \"\"\"\n"
+"    return {\"hello\": non_optional_dependency}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[hello_world])\n"
+"\n"
+"# ImproperlyConfiguredException: 500: Explicit dependency "
+"'non_optional_dependency' for 'hello_world' has no default\n"
+"# value, or provided dependency."
+msgstr ""

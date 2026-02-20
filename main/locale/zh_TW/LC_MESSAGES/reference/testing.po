@@ -1,0 +1,1243 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/testing.rst:2
+msgid "testing"
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.client.async_client.AsyncTestClient:1
+msgid ""
+"Bases: :py:class:`~httpx.AsyncClient`, :py:class:`~typing.Generic`\\ [:py:"
+"obj:`~litestar.testing.client.async_client.T`]"
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.client.async_client.AsyncTestClient.__init__:1
+msgid ""
+"An Async client implementation providing a context manager for testing "
+"applications asynchronously."
+msgstr ""
+
+#: ../../../reference/testing.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.client.async_client.AsyncTestClient.__init__:3
+#: litestar.testing.client.sync_client.TestClient.__init__:3
+msgid "The instance of :class:`Litestar <litestar.app.Litestar>` under test."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.client.async_client.AsyncTestClient.__init__:4
+#: litestar.testing.client.sync_client.TestClient.__init__:4
+#: litestar.testing.helpers.create_async_test_client:31
+#: litestar.testing.helpers.create_test_client:33
+msgid ""
+"URL scheme and domain for test request paths, e.g. ``http://testserver``."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.client.async_client.AsyncTestClient.__init__:5
+#: litestar.testing.client.sync_client.TestClient.__init__:5
+msgid ""
+"Flag for the underlying test client to raise server exceptions instead of "
+"wrapping them in an HTTP response."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.client.async_client.AsyncTestClient.__init__:7
+#: litestar.testing.client.sync_client.TestClient.__init__:7
+#: litestar.testing.helpers.create_async_test_client:34
+#: litestar.testing.helpers.create_test_client:36
+msgid "Path prefix for requests."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.client.async_client.AsyncTestClient.__init__:8
+#: litestar.testing.client.sync_client.TestClient.__init__:8
+#: litestar.testing.helpers.create_async_test_client:121
+#: litestar.testing.helpers.create_test_client:123
+msgid "Request timeout"
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.client.async_client.AsyncTestClient.__init__:9
+#: litestar.testing.client.sync_client.TestClient.__init__:9
+msgid "Cookies to set on the client."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.client.async_client.AsyncTestClient.__init__:10
+#: litestar.testing.client.sync_client.TestClient.__init__:12
+msgid "Session backend configuration"
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.client.async_client.AsyncTestClient.get_session_data:1
+#: litestar.testing.client.sync_client.TestClient.get_session_data:1
+msgid "Get session data."
+msgstr ""
+
+#: ../../../reference/testing.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.client.async_client.AsyncTestClient.get_session_data:3
+#: litestar.testing.client.sync_client.TestClient.get_session_data:3
+msgid "A dictionary containing session data."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.client.async_client.AsyncTestClient.get_session_data:5
+#: litestar.testing.client.async_client.AsyncTestClient.set_session_data:7
+#: litestar.testing.client.sync_client.TestClient.get_session_data:5
+#: litestar.testing.client.sync_client.TestClient.set_session_data:7
+#: litestar.testing.helpers.create_async_test_client:10
+#: litestar.testing.helpers.create_test_client:10
+#: litestar.testing.request_factory.RequestFactory.__init__:10
+msgid "Examples"
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.client.async_client.AsyncTestClient.get_session_data:8
+#: litestar.testing.client.sync_client.TestClient.get_session_data:8
+msgid ""
+"from litestar import Litestar, post\n"
+"from litestar.middleware.session.memory_backend import MemoryBackendConfig\n"
+"\n"
+"session_config = MemoryBackendConfig()\n"
+"\n"
+"\n"
+"@post(path=\"/test\")\n"
+"def set_session_data(request: Request) -> None:\n"
+"    request.session[\"foo\"] == \"bar\"\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[set_session_data], middleware=[session_config."
+"middleware]\n"
+")\n"
+"\n"
+"async with AsyncTestClient(app=app, session_config=session_config) as "
+"client:\n"
+"    await client.post(\"/test\")\n"
+"    assert await client.get_session_data() == {\"foo\": \"bar\"}"
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.client.async_client.AsyncTestClient.set_session_data:1
+#: litestar.testing.client.sync_client.TestClient.set_session_data:1
+msgid "Set session data."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.client.async_client.AsyncTestClient.set_session_data:3
+#: litestar.testing.client.sync_client.TestClient.set_session_data:3
+msgid "Session data"
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.client.async_client.AsyncTestClient.set_session_data:5
+#: litestar.testing.client.sync_client.TestClient.set_session_data:5
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.send_bytes:6
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.send_json:6
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.send_msgpack:5
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.send_text:6
+#: litestar.testing.websocket_test_session.WebSocketTestSession.send_bytes:6
+#: litestar.testing.websocket_test_session.WebSocketTestSession.send_json:6
+#: litestar.testing.websocket_test_session.WebSocketTestSession.send_msgpack:5
+#: litestar.testing.websocket_test_session.WebSocketTestSession.send_text:6
+msgid "None"
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.client.async_client.AsyncTestClient.set_session_data:10
+#: litestar.testing.client.sync_client.TestClient.set_session_data:10
+msgid ""
+"from litestar import Litestar, get\n"
+"from litestar.middleware.session.memory_backend import MemoryBackendConfig\n"
+"\n"
+"session_config = MemoryBackendConfig()\n"
+"\n"
+"\n"
+"@get(path=\"/test\")\n"
+"def get_session_data(request: Request) -> Dict[str, Any]:\n"
+"    return request.session\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[get_session_data], middleware=[session_config."
+"middleware]\n"
+")\n"
+"\n"
+"async with AsyncTestClient(app=app, session_config=session_config) as "
+"client:\n"
+"    await client.set_session_data({\"foo\": \"bar\"})\n"
+"    assert await client.get(\"/test\").json() == {\"foo\": \"bar\"}"
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.client.async_client.AsyncTestClient.websocket_connect:1
+#: litestar.testing.client.sync_client.TestClient.websocket_connect:1
+msgid "Sends a GET request to establish a websocket connection."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.client.async_client.AsyncTestClient.websocket_connect:3
+#: litestar.testing.client.sync_client.TestClient.websocket_connect:3
+msgid "Request URL."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.client.async_client.AsyncTestClient.websocket_connect:4
+#: litestar.testing.client.sync_client.TestClient.websocket_connect:4
+msgid "Websocket subprotocols."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.client.async_client.AsyncTestClient.websocket_connect:5
+#: litestar.testing.client.sync_client.TestClient.websocket_connect:5
+msgid "Query parameters."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.client.async_client.AsyncTestClient.websocket_connect:6
+#: litestar.testing.client.sync_client.TestClient.websocket_connect:6
+msgid "Request headers."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.client.async_client.AsyncTestClient.websocket_connect:7
+#: litestar.testing.client.sync_client.TestClient.websocket_connect:7
+msgid "Request cookies."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.client.async_client.AsyncTestClient.websocket_connect:8
+#: litestar.testing.client.sync_client.TestClient.websocket_connect:8
+msgid "Auth headers."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.client.async_client.AsyncTestClient.websocket_connect:9
+#: litestar.testing.client.sync_client.TestClient.websocket_connect:9
+msgid "Whether to follow redirects."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.client.async_client.AsyncTestClient.websocket_connect:10
+#: litestar.testing.client.sync_client.TestClient.websocket_connect:10
+msgid "Request timeout."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.client.async_client.AsyncTestClient.websocket_connect:11
+#: litestar.testing.client.sync_client.TestClient.websocket_connect:11
+msgid "Dictionary of ASGI extensions."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.client.async_client.AsyncTestClient.websocket_connect:13
+#: litestar.testing.client.sync_client.TestClient.websocket_connect:13
+msgid ""
+"A `WebSocketTestSession <litestar.testing.WebSocketTestSession>` instance."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.request_factory.RequestFactory:1
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession:1
+#: litestar.testing.websocket_test_session.WebSocketTestSession:1
+#: ../../../../litestar/testing/life_span_handler.py:docstring
+#: litestar.testing.life_span_handler.LifeSpanHandler:1
+msgid "Bases: :py:class:`object`"
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.close:1
+#: litestar.testing.websocket_test_session.WebSocketTestSession.close:1
+msgid "Sends an 'websocket.disconnect' event."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.close:3
+#: litestar.testing.websocket_test_session.WebSocketTestSession.close:3
+msgid "status code for closing the connection."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.close:4
+#: litestar.testing.websocket_test_session.WebSocketTestSession.close:4
+msgid "Reason for closure"
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.close:6
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.send:7
+#: litestar.testing.websocket_test_session.WebSocketTestSession.close:6
+#: litestar.testing.websocket_test_session.WebSocketTestSession.send:7
+msgid "None."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.receive:1
+#: litestar.testing.websocket_test_session.WebSocketTestSession.receive:1
+msgid "This is the base receive method."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.receive:3
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.receive_bytes:3
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.receive_json:4
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.receive_text:3
+#: litestar.testing.websocket_test_session.WebSocketTestSession.receive:3
+#: litestar.testing.websocket_test_session.WebSocketTestSession.receive_bytes:3
+#: litestar.testing.websocket_test_session.WebSocketTestSession.receive_json:4
+#: litestar.testing.websocket_test_session.WebSocketTestSession.receive_text:3
+msgid "Block until a message is received"
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.receive:4
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.receive_bytes:4
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.receive_json:5
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.receive_text:4
+#: litestar.testing.websocket_test_session.WebSocketTestSession.receive:4
+#: litestar.testing.websocket_test_session.WebSocketTestSession.receive_bytes:4
+#: litestar.testing.websocket_test_session.WebSocketTestSession.receive_json:5
+#: litestar.testing.websocket_test_session.WebSocketTestSession.receive_text:4
+msgid "If ``block`` is ``True``, block at most ``timeout`` seconds"
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:5
+#: litestar.testing.helpers.create_test_client:5
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.receive:6
+#: litestar.testing.websocket_test_session.WebSocketTestSession.receive:6
+msgid "Notes"
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.receive:8
+#: litestar.testing.websocket_test_session.WebSocketTestSession.receive:8
+msgid ""
+"you can use one of the other receive methods to extract the data from the "
+"message."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.receive:10
+#: litestar.testing.websocket_test_session.WebSocketTestSession.receive:10
+msgid "A websocket message."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.receive_bytes:1
+#: litestar.testing.websocket_test_session.WebSocketTestSession.receive_bytes:1
+msgid "Receive data in ``binary`` mode and return bytes"
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.receive_bytes:6
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.receive_text:6
+#: litestar.testing.websocket_test_session.WebSocketTestSession.receive_bytes:6
+#: litestar.testing.websocket_test_session.WebSocketTestSession.receive_text:6
+msgid "A string value."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.receive_json:1
+#: litestar.testing.websocket_test_session.WebSocketTestSession.receive_json:1
+msgid ""
+"Receive data in either ``text`` or ``binary`` mode and decode it as JSON."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.receive_json:3
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.send_json:4
+#: litestar.testing.websocket_test_session.WebSocketTestSession.receive_json:3
+#: litestar.testing.websocket_test_session.WebSocketTestSession.send_json:4
+msgid "Either ``text`` or ``binary``"
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.receive_json:7
+#: litestar.testing.websocket_test_session.WebSocketTestSession.receive_json:7
+msgid "An arbitrary value"
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.receive_text:1
+#: litestar.testing.websocket_test_session.WebSocketTestSession.receive_text:1
+msgid "Receive data in ``text`` mode and return a string"
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.send:1
+#: litestar.testing.websocket_test_session.WebSocketTestSession.send:1
+msgid "Sends a \"receive\" event. This is the inverse of the ASGI send method."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.send:3
+#: litestar.testing.websocket_test_session.WebSocketTestSession.send:3
+msgid "Either a string or a byte string."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.send:4
+#: litestar.testing.websocket_test_session.WebSocketTestSession.send:4
+msgid "The key to use - ``text`` or ``bytes``"
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.send:5
+#: litestar.testing.websocket_test_session.WebSocketTestSession.send:5
+msgid "The encoding to use when encoding or decoding data."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.send_bytes:1
+#: litestar.testing.websocket_test_session.WebSocketTestSession.send_bytes:1
+msgid "Sends the data using the ``bytes`` key."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.send_bytes:3
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.send_text:3
+#: litestar.testing.websocket_test_session.WebSocketTestSession.send_bytes:3
+#: litestar.testing.websocket_test_session.WebSocketTestSession.send_text:3
+msgid "Data to send."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.send_bytes:4
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.send_text:4
+#: litestar.testing.websocket_test_session.WebSocketTestSession.send_bytes:4
+#: litestar.testing.websocket_test_session.WebSocketTestSession.send_text:4
+msgid "Encoding to use."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.send_json:1
+#: litestar.testing.websocket_test_session.WebSocketTestSession.send_json:1
+msgid "Sends the given data as JSON."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.send_json:3
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.send_msgpack:3
+#: litestar.testing.websocket_test_session.WebSocketTestSession.send_json:3
+#: litestar.testing.websocket_test_session.WebSocketTestSession.send_msgpack:3
+msgid "The data to send."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.send_msgpack:1
+#: litestar.testing.websocket_test_session.WebSocketTestSession.send_msgpack:1
+msgid "Sends the given data as MessagePack."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.send_text:1
+#: litestar.testing.websocket_test_session.WebSocketTestSession.send_text:1
+msgid "Sends the data using the ``text`` key."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.request_factory.RequestFactory:1
+msgid ""
+"Factory to create :class:`Request <litestar.connection.Request>` instances."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.request_factory.RequestFactory.__init__:1
+msgid "Initialize ``RequestFactory``"
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.request_factory.RequestFactory.__init__:3
+msgid ""
+"An instance of :class:`Litestar <litestar.app.Litestar>` to set as ``request."
+"scope[\"litestar_app\"]``."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.request_factory.RequestFactory.__init__:4
+msgid "The server's domain."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.request_factory.RequestFactory.__init__:5
+msgid "The server's port."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.request_factory.RequestFactory.__init__:6
+msgid "Root path for the server."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.request_factory.RequestFactory.__init__:7
+msgid "Scheme for the server."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.request_factory.RequestFactory.__init__:8
+msgid "Kwargs to pass to the route handler created for the request"
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.request_factory.RequestFactory.__init__:13
+msgid ""
+"from litestar import Litestar\n"
+"from litestar.enums import RequestEncodingType\n"
+"from litestar.testing import RequestFactory\n"
+"\n"
+"from tests import PersonFactory\n"
+"\n"
+"my_app = Litestar(route_handlers=[])\n"
+"my_server = \"litestar.org\"\n"
+"\n"
+"# Create a GET request\n"
+"query_params = {\"id\": 1}\n"
+"get_user_request = RequestFactory(app=my_app, server=my_server).get(\n"
+"    \"/person\", query_params=query_params\n"
+")\n"
+"\n"
+"# Create a POST request\n"
+"new_person = PersonFactory.build()\n"
+"create_user_request = RequestFactory(app=my_app, server=my_server).post(\n"
+"    \"/person\", data=person\n"
+")\n"
+"\n"
+"# Create a request with a special header\n"
+"headers = {\"header1\": \"value1\"}\n"
+"request_with_header = RequestFactory(app=my_app, server=my_server).get(\n"
+"    \"/person\", query_params=query_params, headers=headers\n"
+")\n"
+"\n"
+"# Create a request with a media type\n"
+"request_with_media_type = RequestFactory(app=my_app, server=my_server)."
+"post(\n"
+"    \"/person\", data=person, request_media_type=RequestEncodingType."
+"MULTI_PART\n"
+")"
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.request_factory.RequestFactory.delete:1
+#: litestar.testing.request_factory.RequestFactory.post:1
+msgid "Create a POST :class:`Request <litestar.connection.Request>` instance."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.request_factory.RequestFactory.delete:3
+#: litestar.testing.request_factory.RequestFactory.get:3
+#: litestar.testing.request_factory.RequestFactory.patch:3
+#: litestar.testing.request_factory.RequestFactory.post:3
+#: litestar.testing.request_factory.RequestFactory.put:3
+msgid "The request's path."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.request_factory.RequestFactory.delete:4
+#: litestar.testing.request_factory.RequestFactory.get:4
+#: litestar.testing.request_factory.RequestFactory.patch:4
+#: litestar.testing.request_factory.RequestFactory.post:4
+#: litestar.testing.request_factory.RequestFactory.put:4
+msgid "A dictionary of headers."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.request_factory.RequestFactory.delete:5
+#: litestar.testing.request_factory.RequestFactory.get:5
+#: litestar.testing.request_factory.RequestFactory.patch:5
+#: litestar.testing.request_factory.RequestFactory.post:5
+#: litestar.testing.request_factory.RequestFactory.put:5
+msgid ""
+"A string representing the cookie header or a list of \"Cookie\" instances. "
+"This value can include multiple cookies."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.request_factory.RequestFactory.delete:7
+#: litestar.testing.request_factory.RequestFactory.get:7
+#: litestar.testing.request_factory.RequestFactory.patch:7
+#: litestar.testing.request_factory.RequestFactory.post:7
+#: litestar.testing.request_factory.RequestFactory.put:7
+msgid "A dictionary of session data."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.request_factory.RequestFactory.delete:8
+#: litestar.testing.request_factory.RequestFactory.get:8
+#: litestar.testing.request_factory.RequestFactory.patch:8
+#: litestar.testing.request_factory.RequestFactory.post:8
+#: litestar.testing.request_factory.RequestFactory.put:8
+msgid "A value for `request.scope[\"user\"]`."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.request_factory.RequestFactory.delete:9
+#: litestar.testing.request_factory.RequestFactory.get:9
+#: litestar.testing.request_factory.RequestFactory.patch:9
+#: litestar.testing.request_factory.RequestFactory.post:9
+#: litestar.testing.request_factory.RequestFactory.put:9
+msgid "A value for `request.scope[\"auth\"]`."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.request_factory.RequestFactory.delete:10
+#: litestar.testing.request_factory.RequestFactory.get:10
+#: litestar.testing.request_factory.RequestFactory.patch:12
+#: litestar.testing.request_factory.RequestFactory.post:12
+#: litestar.testing.request_factory.RequestFactory.put:12
+msgid ""
+"A dictionary of values from which the request's query will be generated."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.request_factory.RequestFactory.delete:11
+#: litestar.testing.request_factory.RequestFactory.get:11
+#: litestar.testing.request_factory.RequestFactory.patch:13
+#: litestar.testing.request_factory.RequestFactory.post:13
+#: litestar.testing.request_factory.RequestFactory.put:13
+msgid "Arbitrary request state."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.request_factory.RequestFactory.delete:12
+#: litestar.testing.request_factory.RequestFactory.get:12
+#: litestar.testing.request_factory.RequestFactory.patch:14
+#: litestar.testing.request_factory.RequestFactory.post:14
+#: litestar.testing.request_factory.RequestFactory.put:14
+msgid "A string keyed dictionary of path parameter values."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.request_factory.RequestFactory.delete:13
+#: litestar.testing.request_factory.RequestFactory.get:13
+#: litestar.testing.request_factory.RequestFactory.patch:15
+#: litestar.testing.request_factory.RequestFactory.post:15
+#: litestar.testing.request_factory.RequestFactory.put:15
+msgid "HTTP version. Defaults to \"1.1\"."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.request_factory.RequestFactory.delete:14
+#: litestar.testing.request_factory.RequestFactory.get:14
+#: litestar.testing.request_factory.RequestFactory.patch:16
+#: litestar.testing.request_factory.RequestFactory.post:16
+#: litestar.testing.request_factory.RequestFactory.put:16
+msgid ""
+"A route handler instance or method. If not provided a default handler is set."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.request_factory.RequestFactory.delete:16
+#: litestar.testing.request_factory.RequestFactory.get:16
+#: litestar.testing.request_factory.RequestFactory.patch:18
+#: litestar.testing.request_factory.RequestFactory.post:18
+#: litestar.testing.request_factory.RequestFactory.put:18
+msgid "A :class:`Request <litestar.connection.Request>` instance"
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.request_factory.RequestFactory.get:1
+msgid "Create a GET :class:`Request <litestar.connection.Request>` instance."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.request_factory.RequestFactory.patch:1
+msgid "Create a PATCH :class:`Request <litestar.connection.Request>` instance."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.request_factory.RequestFactory.patch:10
+#: litestar.testing.request_factory.RequestFactory.post:10
+#: litestar.testing.request_factory.RequestFactory.put:10
+msgid "The 'Content-Type' header of the request."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.request_factory.RequestFactory.patch:11
+#: litestar.testing.request_factory.RequestFactory.post:11
+#: litestar.testing.request_factory.RequestFactory.put:11
+msgid "A value for the request's body. Can be any supported serializable type."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.request_factory.RequestFactory.put:1
+msgid "Create a PUT :class:`Request <litestar.connection.Request>` instance."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.client.sync_client.TestClient:1
+msgid ""
+"Bases: :py:class:`~httpx.Client`, :py:class:`~typing.Generic`\\ [:py:obj:"
+"`~litestar.testing.client.sync_client.T`]"
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.client.sync_client.TestClient.__init__:1
+msgid ""
+"A client implementation providing a context manager for testing applications."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.client.sync_client.TestClient.__init__:10
+#: litestar.testing.helpers.create_test_client:31
+msgid "The async backend to use, options are \"asyncio\" or \"trio\"."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.client.sync_client.TestClient.__init__:11
+#: litestar.testing.helpers.create_test_client:32
+msgid "``anyio`` options."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:1
+#: litestar.testing.helpers.create_test_client:1
+msgid "Create a Litestar app instance and initializes it."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:3
+msgid ":class:`AsyncTestClient <litestar.testing.AsyncTestClient>` with it."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:7
+#: litestar.testing.helpers.create_test_client:7
+msgid ""
+"This function should be called as a context manager to ensure async startup "
+"and shutdown are"
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:8
+#: litestar.testing.helpers.create_test_client:8
+msgid "handled correctly."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:13
+msgid ""
+"from litestar import get\n"
+"from litestar.testing import create_async_test_client\n"
+"\n"
+"\n"
+"@get(\"/some-path\")\n"
+"def my_handler() -> dict[str, str]:\n"
+"    return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"async def test_my_handler() -> None:\n"
+"    async with create_async_test_client(my_handler) as client:\n"
+"        response = await client.get(\"/some-path\")\n"
+"        assert response.json() == {\"hello\": \"world\"}"
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:28
+#: litestar.testing.helpers.create_test_client:28
+msgid ""
+"A single handler or a sequence of route handlers, which can include "
+"instances of :class:`Router <litestar.router.Router>`, subclasses of :class:"
+"`Controller <.controller.Controller>` or any function decorated by the route "
+"handler decorators."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:32
+#: litestar.testing.helpers.create_test_client:34
+msgid ""
+"Flag for underlying the test client to raise server exceptions instead of "
+"wrapping them in an HTTP response."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:35
+#: litestar.testing.helpers.create_test_client:37
+msgid ""
+"Configuration for Session Middleware class to create raw session cookies for "
+"request to the route handlers."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:37
+#: litestar.testing.helpers.create_test_client:39
+msgid ""
+"A sequence of :class:`exception hook handlers <.types."
+"AfterExceptionHookHandler>`. This hook is called after an exception occurs. "
+"In difference to exception handlers, it is not meant to return a response - "
+"only to process the exception (e.g. log it, send it to Sentry etc.)."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:40
+#: litestar.testing.helpers.create_test_client:42
+msgid ""
+"A sync or async function executed after the route handler function returned "
+"and the response object has been resolved. Receives the response object."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:42
+#: litestar.testing.helpers.create_test_client:44
+msgid ""
+"A sync or async function called after the response has been awaited. It "
+"receives the :class:`Request <.connection.Request>` object and should not "
+"return any values."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:44
+#: litestar.testing.helpers.create_test_client:46
+msgid ""
+"A sequence of allowed hosts, or an :class:`AllowedHostsConfig <.config."
+"allowed_hosts.AllowedHostsConfig>` instance. Enables the builtin allowed "
+"hosts middleware."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:47
+#: litestar.testing.helpers.create_test_client:49
+msgid ""
+"A sync or async function called immediately before calling the route "
+"handler. Receives the :class:`Request <.connection.Request>` instance and "
+"any non-``None`` return value is used for the response, bypassing the route "
+"handler."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:50
+#: litestar.testing.helpers.create_test_client:52
+msgid ""
+"A sequence of :class:`before send hook handlers <.types."
+"BeforeMessageSendHookHandler>`. Called when the ASGI send function is called."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:52
+#: litestar.testing.helpers.create_test_client:54
+msgid ""
+"A ``cache-control`` header of type :class:`CacheControlHeader <litestar."
+"datastructures.CacheControlHeader>` to add to route handlers of this app. "
+"Can be overridden by route handlers."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:55
+#: litestar.testing.helpers.create_test_client:57
+msgid ""
+"Configures compression behaviour of the application, this enabled a builtin "
+"or user defined Compression middleware."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:57
+#: litestar.testing.helpers.create_test_client:59
+msgid "If set, configures CORS handling for the application."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:58
+#: litestar.testing.helpers.create_test_client:60
+msgid ""
+"If set, configures :class:`CSRFMiddleware <.middleware.csrf.CSRFMiddleware>`."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:59
+#: litestar.testing.helpers.create_test_client:61
+msgid "If ``True``, app errors rendered as HTML with a stack trace."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:60
+#: litestar.testing.helpers.create_test_client:62
+msgid "A string keyed mapping of dependency :class:`Providers <.di.Provide>`."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:61
+#: litestar.testing.helpers.create_test_client:63
+msgid ""
+":class:`AbstractDTO <.dto.base_dto.AbstractDTO>` to use for (de)serializing "
+"and validation of request data."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:63
+#: litestar.testing.helpers.create_test_client:65
+msgid ""
+"An ``etag`` header of type :class:`ETag <.datastructures.ETag>` to add to "
+"route handlers of this app. Can be overridden by route handlers."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:65
+#: litestar.testing.helpers.create_test_client:67
+msgid ""
+"A subclass of :class:`BaseEventEmitterBackend <.events.emitter."
+"BaseEventEmitterBackend>`."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:67
+#: litestar.testing.helpers.create_test_client:69
+msgid "A mapping of status codes and/or exception types to handler functions."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:68
+#: litestar.testing.helpers.create_test_client:70
+msgid "A sequence of :class:`Guard <.types.Guard>` callables."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:69
+#: litestar.testing.helpers.create_test_client:71
+msgid ""
+"A boolean flag dictating whether  the route handler should be documented in "
+"the OpenAPI schema."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:70
+#: litestar.testing.helpers.create_test_client:72
+msgid ""
+"A list of callables returning async context managers, wrapping the lifespan "
+"of the ASGI application"
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:71
+#: litestar.testing.helpers.create_test_client:73
+msgid "A sequence of :class:`EventListener <.events.listener.EventListener>`."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:72
+#: litestar.testing.helpers.create_test_client:74
+msgid ""
+"A subclass of :class:`BaseLoggingConfig <.logging.config.BaseLoggingConfig>`."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:73
+#: litestar.testing.helpers.create_test_client:75
+msgid "A sequence of :class:`Middleware <.types.Middleware>`."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:74
+#: litestar.testing.helpers.create_test_client:76
+msgid ""
+"The maximal number of allowed parts in a multipart/formdata request. This "
+"limit is intended to protect from DoS attacks."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:76
+#: litestar.testing.helpers.create_test_client:78
+msgid ""
+"A sequence of :class:`OnAppInitHandler <.types.OnAppInitHandler>` instances. "
+"Handlers receive an instance of :class:`AppConfig <.config.app.AppConfig>` "
+"that will have been initially populated with the parameters passed to :class:"
+"`Litestar <litestar.app.Litestar>`, and must return an instance of same. If "
+"more than one handler is registered they are called in the order they are "
+"provided."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:80
+#: litestar.testing.helpers.create_test_client:82
+msgid ""
+"A sequence of :class:`LifespanHook <.types.LifespanHook>` called during "
+"application shutdown."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:82
+#: litestar.testing.helpers.create_test_client:84
+msgid ""
+"A sequence of :class:`LifespanHook <litestar.types.LifespanHook>` called "
+"during application startup."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:84
+#: litestar.testing.helpers.create_test_client:86
+msgid "Defaults to :attr:`DEFAULT_OPENAPI_CONFIG`"
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:85
+#: litestar.testing.helpers.create_test_client:87
+msgid ""
+"A string keyed mapping of arbitrary values that can be accessed in :class:"
+"`Guards <.types.Guard>` or wherever you have access to :class:`Request "
+"<litestar.connection.request.Request>` or :class:`ASGI Scope <.types.Scope>`."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:88
+#: litestar.testing.helpers.create_test_client:90
+msgid ""
+"A mapping of :class:`Parameter <.params.Parameter>` definitions available to "
+"all application paths."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:90
+#: litestar.testing.helpers.create_test_client:92
+msgid ""
+"A path fragment that is prefixed to all route handlers, controllers and "
+"routers associated with the application instance.  .. versionadded:: 2.8.0"
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:90
+#: litestar.testing.helpers.create_test_client:92
+msgid ""
+"A path fragment that is prefixed to all route handlers, controllers and "
+"routers associated with the application instance."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:94
+#: litestar.testing.helpers.create_test_client:96
+msgid "Drop into the PDB when an exception occurs."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:95
+#: litestar.testing.helpers.create_test_client:97
+msgid "Sequence of plugins."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:96
+#: litestar.testing.helpers.create_test_client:98
+msgid ""
+"An optional subclass of :class:`Request <.connection.Request>` to use for "
+"http connections."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:97
+#: litestar.testing.helpers.create_test_client:99
+msgid ""
+"A custom subclass of :class:`Response <.response.Response>` to be used as "
+"the app's default response."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:99
+#: litestar.testing.helpers.create_test_client:101
+msgid "A sequence of :class:`Cookie <.datastructures.Cookie>`."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:100
+#: litestar.testing.helpers.create_test_client:102
+msgid ""
+"A string keyed mapping of :class:`ResponseHeader <.datastructures."
+"ResponseHeader>`"
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:101
+#: litestar.testing.helpers.create_test_client:103
+msgid "Configures caching behavior of the application."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:102
+#: litestar.testing.helpers.create_test_client:104
+msgid ""
+":class:`AbstractDTO <.dto.base_dto.AbstractDTO>` to use for serializing "
+"outbound response data."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:104
+#: litestar.testing.helpers.create_test_client:106
+msgid ""
+"A sequence of route handlers, which can include instances of :class:`Router "
+"<.router.Router>`, subclasses of :class:`Controller <.controller."
+"Controller>` or any callable decorated by the route handler decorators."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:107
+#: litestar.testing.helpers.create_test_client:109
+msgid ""
+"A sequence of dicts that will be added to the schema of all route handlers "
+"in the application. See :data:`SecurityRequirement <.openapi.spec."
+"SecurityRequirement>` for details."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:110
+#: litestar.testing.helpers.create_test_client:112
+msgid ""
+"A mapping of names to types for use in forward reference resolution during "
+"signature modelling."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:111
+#: litestar.testing.helpers.create_test_client:113
+msgid ""
+"A sequence of types for use in forward reference resolution during signature "
+"modelling. These types will be added to the signature namespace using their "
+"``__name__`` attribute."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:113
+#: litestar.testing.helpers.create_test_client:115
+msgid ""
+"An optional :class:`State <.datastructures.State>` for application state."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:114
+#: litestar.testing.helpers.create_test_client:116
+msgid ""
+"Central registry of :class:`Store <.stores.base.Store>` that will be "
+"available throughout the application. If this is a dictionary to it will be "
+"passed to a :class:`StoreRegistry <.stores.registry.StoreRegistry>`. If it "
+"is a :class:`StoreRegistry <.stores.registry.StoreRegistry>`, this instance "
+"will be used directly."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:118
+#: litestar.testing.helpers.create_test_client:120
+msgid ""
+"A sequence of string tags that will be appended to the schema of all route "
+"handlers under the application."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:120
+#: litestar.testing.helpers.create_test_client:122
+msgid "An instance of :class:`TemplateConfig <.template.TemplateConfig>`"
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:122
+#: litestar.testing.helpers.create_test_client:124
+msgid ""
+"A mapping of types to callables that transform them into types supported for "
+"serialization."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:123
+#: litestar.testing.helpers.create_test_client:125
+msgid ""
+"An optional subclass of :class:`WebSocket <.connection.WebSocket>` to use "
+"for websocket connections."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:125
+#: litestar.testing.helpers.create_test_client:127
+msgid "An iterable of experimental features to enable"
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_async_test_client:127
+msgid ""
+"An instance of :class:`AsyncTestClient <litestar.testing.AsyncTestClient>` "
+"with a created app instance."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_test_client:3
+msgid ":class:`TestClient <litestar.testing.TestClient>` with it."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_test_client:13
+msgid ""
+"from litestar import get\n"
+"from litestar.testing import create_test_client\n"
+"\n"
+"\n"
+"@get(\"/some-path\")\n"
+"def my_handler() -> dict[str, str]:\n"
+"    return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"def test_my_handler() -> None:\n"
+"    with create_test_client(my_handler) as client:\n"
+"        response = client.get(\"/some-path\")\n"
+"        assert response.json() == {\"hello\": \"world\"}"
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.helpers.create_test_client:129
+msgid ""
+"An instance of :class:`TestClient <.testing.TestClient>` with a created app "
+"instance."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.client.subprocess_client.subprocess_async_client:1
+msgid ""
+"Provides an async httpx client for a litestar app launched in a subprocess."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.client.subprocess_client.subprocess_async_client:3
+#: litestar.testing.client.subprocess_client.subprocess_sync_client:3
+msgid "Path to the directory in which the app module resides."
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.client.subprocess_client.subprocess_async_client:4
+#: litestar.testing.client.subprocess_client.subprocess_sync_client:4
+msgid ""
+"Uvicorn app string that can be resolved in the provided working directory, e."
+"g.: \"app:app\""
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.client.subprocess_client.subprocess_async_client:5
+#: litestar.testing.client.subprocess_client.subprocess_sync_client:5
+msgid ""
+"Whether to capture output from the subprocess in the main process stdout/"
+"stderr"
+msgstr ""
+
+#: ../../../../litestar/testing/__init__.py:docstring of
+#: litestar.testing.client.subprocess_client.subprocess_sync_client:1
+msgid ""
+"Provides a sync httpx client for a litestar app launched in a subprocess."
+msgstr ""

@@ -1,0 +1,228 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/response/redirect.rst:2
+msgid "redirect"
+msgstr ""
+
+#: ../../../../litestar/response/redirect.py:docstring of
+#: litestar.response.redirect.ASGIRedirectResponse:1
+msgid "Bases: :py:class:`~litestar.response.base.ASGIResponse`"
+msgstr ""
+
+#: ../../../../litestar/response/redirect.py:docstring of
+#: litestar.response.redirect.ASGIRedirectResponse:1
+msgid "A low-level ASGI redirect response class."
+msgstr ""
+
+#: ../../../../litestar/response/redirect.py:docstring of
+#: litestar.response.redirect.ASGIRedirectResponse.__init__:1
+msgid "A low-level ASGI response class."
+msgstr ""
+
+#: ../../../reference/response/redirect.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../litestar/response/redirect.py:docstring of
+#: litestar.response.redirect.ASGIRedirectResponse.__init__:3
+msgid ""
+"A background task or a list of background tasks to be executed after the "
+"response is sent."
+msgstr ""
+
+#: ../../../../litestar/response/redirect.py:docstring of
+#: litestar.response.redirect.ASGIRedirectResponse.__init__:4
+msgid "encoded content to send in the response body."
+msgstr ""
+
+#: ../../../../litestar/response/redirect.py:docstring of
+#: litestar.response.redirect.ASGIRedirectResponse.__init__:5
+msgid "The response content length."
+msgstr ""
+
+#: ../../../../litestar/response/redirect.py:docstring of
+#: litestar.response.redirect.ASGIRedirectResponse.__init__:6
+msgid "The response cookies."
+msgstr ""
+
+#: ../../../../litestar/response/redirect.py:docstring of
+#: litestar.response.redirect.ASGIRedirectResponse.__init__:7
+msgid "The response encoding."
+msgstr ""
+
+#: ../../../../litestar/response/redirect.py:docstring of
+#: litestar.response.redirect.ASGIRedirectResponse.__init__:8
+msgid "The response headers."
+msgstr ""
+
+#: ../../../../litestar/response/redirect.py:docstring of
+#: litestar.response.redirect.ASGIRedirectResponse.__init__:9
+msgid "A boolean indicating if the response is a HEAD response."
+msgstr ""
+
+#: ../../../../litestar/response/redirect.py:docstring of
+#: litestar.response.redirect.ASGIRedirectResponse.__init__:10
+msgid "The response media type."
+msgstr ""
+
+#: ../../../../litestar/response/redirect.py:docstring of
+#: litestar.response.redirect.ASGIRedirectResponse.__init__:11
+msgid "The response status code."
+msgstr ""
+
+#: ../../../../litestar/response/redirect.py:docstring of
+#: litestar.response.redirect.Redirect:1
+msgid ""
+"Bases: :py:class:`~litestar.response.base.Response`\\ [:py:obj:`~typing.Any`]"
+msgstr ""
+
+#: ../../../../litestar/response/redirect.py:docstring of
+#: litestar.response.redirect.Redirect:1
+msgid "A redirect response."
+msgstr ""
+
+#: ../../../../litestar/response/redirect.py:docstring of
+#: litestar.response.redirect.Redirect.__init__:1
+msgid "Initialize the response."
+msgstr ""
+
+#: ../../../../litestar/response/redirect.py:docstring of
+#: litestar.response.redirect.Redirect.__init__:3
+msgid "A path to redirect to."
+msgstr ""
+
+#: ../../../../litestar/response/redirect.py:docstring of
+#: litestar.response.redirect.Redirect.__init__:4
+msgid "A background task or tasks to be run after the response is sent."
+msgstr ""
+
+#: ../../../../litestar/response/redirect.py:docstring of
+#: litestar.response.redirect.Redirect.__init__:5
+msgid ""
+"A list of :class:`Cookie <.datastructures.Cookie>` instances to be set under "
+"the response ``Set-Cookie`` header."
+msgstr ""
+
+#: ../../../../litestar/response/redirect.py:docstring of
+#: litestar.response.redirect.Redirect.__init__:7
+msgid "The encoding to be used for the response headers."
+msgstr ""
+
+#: ../../../../litestar/response/redirect.py:docstring of
+#: litestar.response.redirect.Redirect.__init__:8
+msgid ""
+"A string keyed dictionary of response headers. Header keys are insensitive."
+msgstr ""
+
+#: ../../../../litestar/response/redirect.py:docstring of
+#: litestar.response.redirect.Redirect.__init__:9
+msgid "A value for the response ``Content-Type`` header."
+msgstr ""
+
+#: ../../../../litestar/response/redirect.py:docstring of
+#: litestar.response.redirect.Redirect.__init__:10
+msgid ""
+"An HTTP status code. The status code should be one of 301, 302, 303, 307 or "
+"308, otherwise an exception will be raised."
+msgstr ""
+
+#: ../../../../litestar/response/redirect.py:docstring of
+#: litestar.response.redirect.Redirect.__init__:12
+msgid ""
+"A mapping of types to callables that transform them into types supported for "
+"serialization."
+msgstr ""
+
+#: ../../../../litestar/response/redirect.py:docstring of
+#: litestar.response.redirect.Redirect.__init__:13
+msgid ""
+"A dictionary of values from which the request's query will be generated."
+msgstr ""
+
+#: ../../../reference/response/redirect.rst:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../litestar/response/redirect.py:docstring of
+#: litestar.response.redirect.Redirect.__init__:15
+msgid ""
+"Either if status code is not a redirect status code or media type is not     "
+"supported."
+msgstr ""
+
+#: ../../../../litestar/response/redirect.py:docstring of
+#: litestar.response.redirect.Redirect.to_asgi_response:1
+msgid "Create an ASGIResponse from a Response instance."
+msgstr ""
+
+#: ../../../../litestar/response/redirect.py:docstring of
+#: litestar.response.redirect.Redirect.to_asgi_response:3
+msgid "Background task(s) to be executed after the response is sent."
+msgstr ""
+
+#: ../../../../litestar/response/redirect.py:docstring of
+#: litestar.response.redirect.Redirect.to_asgi_response:4
+msgid "A list of cookies to be set on the response."
+msgstr ""
+
+#: ../../../../litestar/response/redirect.py:docstring of
+#: litestar.response.redirect.Redirect.to_asgi_response:5
+msgid ""
+"Additional headers to be merged with the response headers. Response headers "
+"take precedence."
+msgstr ""
+
+#: ../../../../litestar/response/redirect.py:docstring of
+#: litestar.response.redirect.Redirect.to_asgi_response:6
+msgid "Whether the response is a HEAD response."
+msgstr ""
+
+#: ../../../../litestar/response/redirect.py:docstring of
+#: litestar.response.redirect.Redirect.to_asgi_response:7
+msgid ""
+"Media type for the response. If ``media_type`` is already set on the "
+"response, this is ignored."
+msgstr ""
+
+#: ../../../../litestar/response/redirect.py:docstring of
+#: litestar.response.redirect.Redirect.to_asgi_response:8
+msgid "The :class:`Request <.connection.Request>` instance."
+msgstr ""
+
+#: ../../../../litestar/response/redirect.py:docstring of
+#: litestar.response.redirect.Redirect.to_asgi_response:9
+msgid ""
+"Status code for the response. If ``status_code`` is already set on the "
+"response, this is"
+msgstr ""
+
+#: ../../../../litestar/response/redirect.py:docstring of
+#: litestar.response.redirect.Redirect.to_asgi_response:10
+msgid "A dictionary of type encoders to use for encoding the response content."
+msgstr ""
+
+#: ../../../reference/response/redirect.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/response/redirect.py:docstring of
+#: litestar.response.redirect.Redirect.to_asgi_response:12
+msgid "An ASGIResponse instance."
+msgstr ""

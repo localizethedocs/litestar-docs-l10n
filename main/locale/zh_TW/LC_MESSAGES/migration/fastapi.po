@@ -1,0 +1,582 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../migration/fastapi.rst:2
+msgid "From Starlette / FastAPI"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:5
+msgid "Routing Decorators"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:7
+msgid ""
+"Litestar does not include any decorator as part of the ``Router`` or "
+"``Litestar`` instances. Instead, all routes are declared using :doc:`route "
+"handlers </usage/routing/handlers>`, either as standalone functions or "
+"controller methods. The handler can then be registered on an application or "
+"router instance."
+msgstr ""
+
+#: ../../../migration/fastapi.rst:0
+msgid "FastAPI"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:17
+msgid ""
+"from fastapi import FastAPI\n"
+"\n"
+"\n"
+"app = FastAPI()\n"
+"\n"
+"\n"
+"@app.get(\"/\")\n"
+"async def index() -> dict[str, str]: ..."
+msgstr ""
+
+#: ../../../migration/fastapi.rst:0
+msgid "Starlette"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:32
+msgid ""
+"from starlette.applications import Starlette\n"
+"from starlette.routing import Route\n"
+"\n"
+"\n"
+"async def index(request): ...\n"
+"\n"
+"\n"
+"routes = [Route(\"/\", endpoint=index)]\n"
+"\n"
+"app = Starlette(routes=routes)"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:0
+msgid "Litestar"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:48
+msgid ""
+"from litestar import Litestar, get\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"async def index() -> dict[str, str]: ...\n"
+"\n"
+"\n"
+"app = Litestar([index])"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:61
+msgid ""
+"To learn more about registering routes, check out this chapter in the "
+"documentation:"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:64
+msgid ""
+":ref:`Routing - Registering Routes <usage/routing/overview:registering "
+"routes>`"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:67
+msgid "Routers and Routes"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:69
+msgid ""
+"There are a few key differences between Litestar’s and Starlette’s "
+"``Router`` class:"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:71
+msgid "The Litestar version is not an ASGI app"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:72
+msgid ""
+"The Litestar version does not include decorators: Use :doc:`route handlers </"
+"usage/routing/handlers>`."
+msgstr ""
+
+#: ../../../migration/fastapi.rst:73
+msgid ""
+"The Litestar version does not support lifecycle hooks: Those have to be "
+"handled on the application layer. See :doc:`lifecycle hooks </usage/"
+"lifecycle-hooks>`"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:75
+msgid ""
+"If you are using Starlette’s ``Route``\\ s, you will need to replace these "
+"with :doc:`route handlers </usage/routing/handlers>`."
+msgstr ""
+
+#: ../../../migration/fastapi.rst:78
+msgid "Host based routing"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:80
+msgid ""
+"Host based routing class is intentionally unsupported. If your application "
+"relies on ``Host`` you will have to separate the logic into different "
+"services and handle this part of request dispatching with a proxy server "
+"like `nginx <https://www.nginx.com/>`_ or `traefik <https://traefik.io/>`_."
+msgstr ""
+
+#: ../../../migration/fastapi.rst:85
+msgid "Dependency Injection"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:87
+msgid ""
+"The Litestar dependency injection system is different from the one used by "
+"FastAPI. You can read about it in the :doc:`dependency injection </usage/"
+"dependency-injection>` section of the documentation."
+msgstr ""
+
+#: ../../../migration/fastapi.rst:90
+msgid ""
+"In FastAPI you declare dependencies either as a list of functions passed to "
+"the ``Router`` or ``FastAPI`` instances, or as a default function argument "
+"value wrapped in an instance of the ``Depends`` class."
+msgstr ""
+
+#: ../../../migration/fastapi.rst:93
+msgid ""
+"In Litestar **dependencies are always declared using a dictionary** with a "
+"string key and the value wrapped in an instance of the ``Provide`` class. "
+"This also allows to transparently override dependencies on every level of "
+"the application, and to easily access dependencies from higher levels."
+msgstr ""
+
+#: ../../../migration/fastapi.rst:103
+msgid ""
+"from fastapi import FastAPI, Depends, APIRouter\n"
+"\n"
+"\n"
+"async def route_dependency() -> bool: ...\n"
+"\n"
+"\n"
+"async def nested_dependency() -> str: ...\n"
+"\n"
+"\n"
+"async def router_dependency() -> int: ...\n"
+"\n"
+"\n"
+"async def app_dependency(data: str = Depends(nested_dependency)) -> "
+"int: ...\n"
+"\n"
+"\n"
+"router = APIRouter(dependencies=[Depends(router_dependency)])\n"
+"app = FastAPI(dependencies=[Depends(nested_dependency)])\n"
+"app.include_router(router)\n"
+"\n"
+"\n"
+"@app.get(\"/\")\n"
+"async def handler(\n"
+"    val_route: bool = Depends(route_dependency),\n"
+"    val_router: int = Depends(router_dependency),\n"
+"    val_nested: str = Depends(nested_dependency),\n"
+"    val_app: int = Depends(app_dependency),\n"
+") -> None: ..."
+msgstr ""
+
+#: ../../../migration/fastapi.rst:138
+msgid ""
+"from litestar import Litestar, get, Router\n"
+"from litestar.di import Provide\n"
+"\n"
+"\n"
+"async def route_dependency() -> bool: ...\n"
+"\n"
+"\n"
+"async def nested_dependency() -> str: ...\n"
+"\n"
+"\n"
+"async def router_dependency() -> int: ...\n"
+"\n"
+"\n"
+"async def app_dependency(nested: str) -> int: ...\n"
+"\n"
+"\n"
+"@get(\"/\", dependencies={\"val_route\": Provide(route_dependency)})\n"
+"async def handler(\n"
+"    val_route: bool, val_router: int, val_nested: str, val_app: int\n"
+") -> None: ...\n"
+"\n"
+"\n"
+"router = Router(dependencies={\"val_router\": Provide(router_dependency)})\n"
+"app = Litestar(\n"
+"    route_handlers=[handler],\n"
+"    dependencies={\n"
+"        \"val_app\": Provide(app_dependency),\n"
+"        \"val_nested\": Provide(nested_dependency),\n"
+"    },\n"
+")"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:173
+msgid ""
+"To learn more about dependency injection, check out this chapter in the "
+"documentation:"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:176
+msgid ":doc:`/usage/dependency-injection`"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:179
+msgid "Lifespan"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:181
+msgid ""
+"Litestar uses the same async context manager style as FastAPI, so the code "
+"does not need to be changed:"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:189
+msgid ""
+"@asynccontextmanager\n"
+"async def lifespan(\n"
+"    app: FastAPI\n"
+"):\n"
+"    # Setup code here\n"
+"    yield\n"
+"    # Teardown code here"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:202
+msgid ""
+"@asynccontextmanager\n"
+"async def lifespan(\n"
+"    app: Litestar\n"
+"):\n"
+"    # Setup code here\n"
+"    yield\n"
+"    # Teardown code here"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:213
+msgid "Cookies"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:215
+msgid ""
+"While with FastAPI you usually set cookies on the response ``Response`` "
+"object, in Litestar there are two options: At the decorator level, using the "
+"``response_cookies`` keyword argument, or dynamically at the response level "
+"(see: :ref:`Setting Cookies dynamically <usage/responses:setting cookies "
+"dynamically>`)"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:223
+msgid ""
+"@app.get(\"/\")\n"
+"async def index(response: Response) -> dict[str, str]:\n"
+"    response.set_cookie(key=\"my_cookie\", value=\"cookie_value\")\n"
+"    ..."
+msgstr ""
+
+#: ../../../migration/fastapi.rst:233
+msgid ""
+"@get(response_cookies={\"my-cookie\": \"cookie-value\"})\n"
+"async def handler() -> str:\n"
+"    ..."
+msgstr ""
+
+#: ../../../migration/fastapi.rst:240
+msgid "Dependencies parameters"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:241
+msgid ""
+"The way dependencies parameters are passed differs between FastAPI and "
+"Litestar, note the `state: State` parameter in the Litestar example. You can "
+"get the state either with the state kwarg in the handler or ``request."
+"state`` (which point to the same object, a request local state, inherited "
+"from the application's state), or via `request.app.state`, the application's "
+"state."
+msgstr ""
+
+#: ../../../migration/fastapi.rst:250
+msgid ""
+"from fastapi import Request\n"
+"\n"
+"async def get_arqredis(request: Request) -> ArqRedis:\n"
+"    return request.state.arqredis"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:260
+msgid ""
+"from litestar import State\n"
+"\n"
+"async def get_arqredis(state: State) -> ArqRedis:\n"
+"    return state.arqredis"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:267
+msgid "Post json"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:269
+msgid ""
+"In FastAPI, you pass the JSON object directly as a parameter to the "
+"endpoint, which will then be validated by Pydantic. In Litestar, you use the "
+"`data` keyword argument. The data will be parsed and validated by the "
+"associated modelling library."
+msgstr ""
+
+#: ../../../migration/fastapi.rst:277
+msgid ""
+"class ObjectType(BaseModel):\n"
+"    name: str\n"
+"\n"
+"@app.post(\"/items/\")\n"
+"async def create_item(object_name: ObjectType) -> dict[str, str]:\n"
+"    return {\"name\": object_name.name}"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:290
+msgid ""
+"from litestar import post\n"
+"from pydantic import BaseModel\n"
+"\n"
+"class ObjectType(BaseModel):\n"
+"    name: str\n"
+"\n"
+"@post(\"/items/\")\n"
+"async def create_item(data: ObjectType) -> dict[str, str]:\n"
+"    return {\"name\": data.name}"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:303
+msgid "Default status codes"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:305
+msgid "Post defaults to 200 in FastApi and 201 in Litestar."
+msgstr ""
+
+#: ../../../migration/fastapi.rst:308
+msgid "Templates"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:310
+msgid ""
+"In FastAPI, you use `TemplateResponse` to render templates. In Litestar, you "
+"use the `Template` class. Also FastAPI let you pass a dictionary while in "
+"Litestar you need to explicitly pass the context kwarg."
+msgstr ""
+
+#: ../../../migration/fastapi.rst:319
+msgid ""
+"@app.get(\"/uploads\")\n"
+"async def get_uploads(request: Request):\n"
+"    return templates.TemplateResponse(\n"
+"        \"uploads.html\", {\"request\": request, \"debug\": app.state."
+"debug}\n"
+"    )"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:330
+msgid ""
+"@get(\"/uploads\")\n"
+"async def get_uploads(app_settings) -> Template:\n"
+"    return Template(\n"
+"        name=\"uploads.html\", context={\"debug\": app_settings.debug}\n"
+"    )"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:338
+msgid "Uploads"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:340
+msgid ""
+"In FastAPI, you use the `File` class to handle file uploads. In Litestar, "
+"you use the `data` keyword argument with `Body` and specify the `media_type` "
+"as `RequestEncodingType.MULTI_PART`. While this is more verbose, it's also "
+"more explicit and communicates the intent more clearly."
+msgstr ""
+
+#: ../../../migration/fastapi.rst:349
+msgid ""
+"@app.post(\"/upload/\")\n"
+"async def upload_file(files: list[UploadFile] = File(...)) -> dict[str, "
+"str]:\n"
+"    return {\"file_names\": [file.filename for file in files]}"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:358
+msgid ""
+"@post(\"/upload/\")\n"
+"async def upload_file(data: Annotated[list[UploadFile], "
+"Body(media_type=RequestEncodingType.MULTI_PART)]) -> dict[str, str]:\n"
+"    return {\"file_names\": [file.filename for file in data]}\n"
+"\n"
+"app = Litestar([upload_file])"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:367
+msgid "Exceptions signature"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:369
+msgid ""
+"In FastAPI, status code and exception details can be passed to "
+"`HTTPException` as positional arguments, while in Litestar they are set with "
+"keywords arguments, e.g. `status_code`. Positional arguments to "
+"`HTTPException` in Litestar will be added to the exception detail. If "
+"migrating you just change your HTTPException import this will break."
+msgstr ""
+
+#: ../../../migration/fastapi.rst:378
+msgid ""
+"from fastapi import FastAPI, HTTPException\n"
+"\n"
+"app = FastAPI()\n"
+"\n"
+"@app.get(\"/\")\n"
+"async def index() -> None:\n"
+"    response_fields = {\"array\": \"value\"}\n"
+"    raise HTTPException(\n"
+"        400, detail=f\"can't get that field: {response_fields."
+"get('array')}\"\n"
+"    )"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:394
+msgid ""
+"from litestar import Litestar, get\n"
+"from litestar.exceptions import HTTPException\n"
+"\n"
+"@get(\"/\")\n"
+"async def index() -> None:\n"
+"    response_fields = {\"array\": \"value\"}\n"
+"    raise HTTPException(\n"
+"        status_code=400, detail=f\"can't get that field: {response_fields."
+"get('array')}\"\n"
+"    )\n"
+"\n"
+"app = Litestar([index])"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:409
+msgid "Authentication"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:411
+msgid ""
+"FastAPI promotes a pattern of using dependency injection for authentication. "
+"You can do the same in Litestar, but the preferred way of handling this is "
+"extending :doc:`/usage/security/abstract-authentication-middleware`."
+msgstr ""
+
+#: ../../../migration/fastapi.rst:419
+msgid ""
+"from fastapi import FastAPI, Depends, Request\n"
+"\n"
+"\n"
+"async def authenticate(request: Request) -> None: ...\n"
+"\n"
+"\n"
+"app = FastAPI()\n"
+"\n"
+"\n"
+"@app.get(\"/\", dependencies=[Depends(authenticate)])\n"
+"async def index() -> dict[str, str]: ..."
+msgstr ""
+
+#: ../../../migration/fastapi.rst:437
+msgid ""
+"from litestar import get, ASGIConnection, BaseRouteHandler\n"
+"\n"
+"\n"
+"async def authenticate(\n"
+"    connection: ASGIConnection, route_handler: BaseRouteHandler\n"
+") -> None: ...\n"
+"\n"
+"\n"
+"@get(\"/\", guards=[authenticate])\n"
+"async def index() -> dict[str, str]: ..."
+msgstr ""
+
+#: ../../../migration/fastapi.rst:452
+msgid ""
+"To learn more about security and authentication, check out this chapter in "
+"the documentation:"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:455
+msgid ":doc:`/usage/security/index`"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:458
+msgid "Dependency overrides"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:460
+msgid ""
+"While FastAPI includes a mechanism to override dependencies on an existing "
+"application object, Litestar promotes architectural solutions to the issue "
+"this is aimed to solve. Therefore, overriding dependencies in Litestar is "
+"strictly supported at definition time, i.e. when you’re defining handlers, "
+"controllers, routers, and applications. Dependency overrides are "
+"fundamentally the same idea as mocking and should be approached with the "
+"same caution and used sparingly instead of being the default."
+msgstr ""
+
+#: ../../../migration/fastapi.rst:467
+msgid "To achieve the same effect there are three general approaches:"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:469
+msgid ""
+"Structuring the application with different environments in mind. This could "
+"mean for example connecting to a different database depending on the "
+"environment, which in turn is set via and env-variable. This is sufficient "
+"and most cases and designing your application around this principle is a "
+"general good practice since it facilitates configurability and integration-"
+"testing capabilities"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:474
+msgid "Isolating tests for unit testing and using ``create_test_client``"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:475
+msgid "Resort to mocking if none of the above approaches can be made to work"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:478
+msgid "Middleware"
+msgstr ""
+
+#: ../../../migration/fastapi.rst:480
+msgid ""
+"Pure ASGI middleware is fully compatible, and can be used with any ASGI "
+"framework. Middlewares that make use of FastAPI/Starlette specific "
+"middleware features such as Starlette’s `BaseHTTPMiddleware <https://www."
+"starlette.io/middleware/#basehttpmiddleware>`_ are not compatible, but can "
+"be easily replaced by :doc:`Creating Middlewares </usage/middleware/creating-"
+"middleware>`."
+msgstr ""

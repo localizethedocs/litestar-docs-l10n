@@ -1,0 +1,347 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../usage/plugins/index.rst:5
+msgid "Plugins"
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:7
+msgid ""
+"Litestar supports a plugin system that allows you to extend the "
+"functionality of the framework."
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:10
+msgid ""
+"Plugins are defined by protocols, and any type that satisfies a protocol can "
+"be included in the ``plugins`` argument of the :class:`app <litestar.app."
+"Litestar>`."
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:15
+msgid "InitPlugin"
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:17
+msgid ""
+"``InitPlugin`` defines an interface that allows for customization of the "
+"application's initialization process. Init plugins can define dependencies, "
+"add route handlers, configure middleware, and much more!"
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:20
+msgid ""
+"Implementations of these plugins must define a single method: :meth:"
+"`on_app_init(self, app_config: AppConfig) -> AppConfig: <litestar.plugins."
+"InitPlugin.on_app_init>`"
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:23
+msgid ""
+"The method accepts and must return an :class:`AppConfig <litestar.config.app."
+"AppConfig>` instance, which can be modified and is later used to instantiate "
+"the application."
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:26
+msgid ""
+"This method is invoked after any ``on_app_init`` hooks have been called, and "
+"each plugin is invoked in the order that they are provided in the "
+"``plugins`` argument of the :class:`app <litestar.app.Litestar>`. Because of "
+"this, plugin authors should make it clear in their documentation if their "
+"plugin should be invoked before or after other plugins."
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:31 ../../../usage/plugins/index.rst:72
+#: ../../../usage/plugins/index.rst:135
+msgid "Example"
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:33
+msgid ""
+"The following example shows a simple plugin that adds a route handler, and a "
+"dependency to the application."
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:36
+msgid "``InitPlugin`` implementation example"
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:36
+msgid ""
+"from litestar import Litestar, get\n"
+"from litestar.config.app import AppConfig\n"
+"from litestar.di import Provide\n"
+"from litestar.plugins import InitPlugin\n"
+"\n"
+"\n"
+"@get(\"/\", sync_to_thread=False)\n"
+"def route_handler(name: str) -> dict[str, str]:\n"
+"    return {\"hello\": name}\n"
+"\n"
+"\n"
+"def get_name() -> str:\n"
+"    return \"world\"\n"
+"\n"
+"\n"
+"class MyPlugin(InitPlugin):\n"
+"    def on_app_init(self, app_config: AppConfig) -> AppConfig:\n"
+"        app_config.dependencies[\"name\"] = Provide(get_name, "
+"sync_to_thread=False)\n"
+"        app_config.route_handlers.append(route_handler)\n"
+"        return app_config\n"
+"\n"
+"\n"
+"app = Litestar(plugins=[MyPlugin()])"
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:-1
+msgid ""
+"> curl http://127.0.0.1:8000/\n"
+"{\"hello\":\"world\"}"
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:39
+msgid ""
+"The ``MyPlugin`` class is an implementation of the :class:`InitPlugin "
+"<litestar.plugins.InitPlugin>`. It defines a single method, "
+"``on_app_init()``, which takes an :class:`AppConfig <litestar.config.app."
+"AppConfig>` instance as an argument and returns same."
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:43
+msgid ""
+"In the ``on_app_init()`` method, the dependency mapping is updated to "
+"include a new dependency named ``\"name\"``, which is provided by the "
+"``get_name()`` function, and ``route_handlers`` is updated to include the "
+"``route_handler()`` function. The modified :class:`AppConfig <litestar."
+"config.app.AppConfig>` instance is then returned."
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:48
+msgid "SerializationPlugin"
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:50
+msgid ""
+"The :class:`~litestar.plugins.SerializationPlugin` defines a contract for "
+"plugins that provide serialization functionality for data types that are "
+"otherwise unsupported by the framework."
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:54
+msgid "Implementations of these plugins must define the following methods."
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:56
+msgid ""
+":meth:`supports_type(self, field_definition: FieldDefinition) -> bool: "
+"<litestar.plugins.SerializationPlugin>`"
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:58
+msgid ""
+"The method takes a :class:`FieldDefinition <litestar.typing."
+"FieldDefinition>` instance as an argument and returns a :class:`bool` "
+"indicating whether the plugin supports serialization for that type."
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:61
+msgid ""
+":meth:`create_dto_for_type(self, field_definition: FieldDefinition) -> "
+"type[AbstractDTO]: <litestar.plugins.SerializationPlugin."
+"create_dto_for_type>`"
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:63
+msgid ""
+"This method accepts a :class:`FieldDefinition <litestar.typing."
+"FieldDefinition>` instance as an argument and must return a :class:"
+"`AbstractDTO <litestar.dto.base_dto.AbstractDTO>` implementation that can be "
+"used to serialize and deserialize the type."
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:67
+msgid ""
+"During application startup, if a data or return annotation is encountered "
+"that is not a supported type, is supported by the plugin, and doesn't "
+"otherwise have a ``dto`` or ``return_dto`` defined, the plugin is used to "
+"create a DTO type for that annotation."
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:74
+msgid ""
+"The following example shows the implementation pattern of a "
+"``SerializationPlugin`` for `SQLAlchemy <https://www.sqlalchemy.org/>`_ "
+"models. For the actual implementation, see the ``advanced_alchemy`` library "
+"documentation."
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:78
+msgid ""
+":meth:`supports_type(self, field_definition: FieldDefinition) -> bool: "
+"<advanced_alchemy.extensions.litestar.SQLAlchemySerializationPlugin."
+"supports_type>` returns a :class:`bool` indicating whether the plugin "
+"supports serialization for the given type. Specifically, we return ``True`` "
+"if the parsed type is either a collection of SQLAlchemy models or a single "
+"SQLAlchemy model."
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:82
+msgid ""
+":meth:`create_dto_for_type(self, field_definition: FieldDefinition) -> "
+"type[AbstractDTO]: <advanced_alchemy.extensions.litestar."
+"SQLAlchemySerializationPlugin.create_dto_for_type>` takes a :class:"
+"`FieldDefinition <litestar.typing.FieldDefinition>` instance as an argument "
+"and returns a :class:`SQLAlchemyDTO <advanced_alchemy.extensions.litestar."
+"dto.SQLAlchemyDTO>` subclass and includes some logic that may be interesting "
+"to potential serialization plugin authors."
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:87
+msgid ""
+"The first thing the method does is check if the parsed type is a collection "
+"of SQLAlchemy models or a single SQLAlchemy model, retrieves the model type "
+"in either case and assigns it to the ``annotation`` variable."
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:90
+msgid ""
+"The method then checks if ``annotation`` is already in the ``_type_dto_map`` "
+"dictionary. If it is, it returns the corresponding DTO type. This is done to "
+"ensure that multiple :class:`SQLAlchemyDTO <advanced_alchemy.extensions."
+"litestar.dto.SQLAlchemyDTO>` subtypes are not created for the same model."
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:94
+msgid ""
+"If the annotation is not in the ``_type_dto_map`` dictionary, the method "
+"creates a new DTO type for the annotation, adds it to the ``_type_dto_map`` "
+"dictionary, and returns it."
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:99
+msgid "DIPlugin"
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:101
+msgid ""
+":class:`~litestar.plugins.DIPlugin` can be used to extend Litestar's "
+"dependency injection by providing information about injectable types."
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:104
+msgid ""
+"Its main purpose it to facilitate the injection of callables with unknown "
+"signatures, for example Pydantic's ``BaseModel`` classes; These are not "
+"supported natively since, while they are callables, their type information "
+"is not contained within their callable signature (their :func:`__init__` "
+"method)."
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:111
+msgid "Dynamically generating signature information for a custom type"
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:111
+msgid ""
+"from inspect import Parameter, Signature\n"
+"from typing import Any\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.di import Provide\n"
+"from litestar.plugins import DIPlugin\n"
+"\n"
+"\n"
+"class MyBaseType:\n"
+"    def __init__(self, param):\n"
+"        self.param = param\n"
+"\n"
+"\n"
+"class MyDIPlugin(DIPlugin):\n"
+"    def has_typed_init(self, type_: Any) -> bool:\n"
+"        return issubclass(type_, MyBaseType)\n"
+"\n"
+"    def get_typed_init(self, type_: Any) -> tuple[Signature, dict[str, "
+"Any]]:\n"
+"        signature = Signature([Parameter(name=\"param\", kind=Parameter."
+"POSITIONAL_OR_KEYWORD)])\n"
+"        annotations = {\"param\": str}\n"
+"        return signature, annotations\n"
+"\n"
+"\n"
+"@get(\"/\", dependencies={\"injected\": Provide(MyBaseType, "
+"sync_to_thread=False)})\n"
+"async def handler(injected: MyBaseType) -> str:\n"
+"    return injected.param\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[handler], plugins=[MyDIPlugin()])"
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:-1
+msgid ""
+"> curl http://127.0.0.1:8000/?param=hello\n"
+"hello"
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:122
+msgid "ReceiveRoutePlugin"
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:124
+msgid ""
+":class:`~litestar.plugins.ReceiveRoutePlugin` allows you to receive routes "
+"as they are registered on the application. This can be useful for plugins "
+"that need to perform actions based on the routes being added, such as "
+"generating documentation, validating route configurations, or tracking route "
+"statistics."
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:128
+msgid ""
+"Implementations of this plugin must define a single method: :meth:"
+"`receive_route(self, route: BaseRoute) -> None: <litestar.plugins."
+"ReceiveRoutePlugin.receive_route>`"
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:131
+msgid ""
+"The method receives a :class:`BaseRoute <litestar.routes.BaseRoute>` "
+"instance as routes are registered on the application. This happens during "
+"the application initialization process, after routes are created but before "
+"the application starts."
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:137
+msgid ""
+"The following example shows a simple plugin that logs information about each "
+"route as it's registered:"
+msgstr ""
+
+#: ../../../usage/plugins/index.rst:140
+msgid ""
+"from litestar.plugins import ReceiveRoutePlugin\n"
+"from litestar.routes import BaseRoute\n"
+"\n"
+"class RouteLoggerPlugin(ReceiveRoutePlugin):\n"
+"    def receive_route(self, route: BaseRoute) -> None:\n"
+"        print(f\"Route registered: {route.path} [{', '.join(route."
+"methods)}]\")"
+msgstr ""

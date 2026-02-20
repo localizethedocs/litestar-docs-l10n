@@ -1,0 +1,378 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../topics/deployment/docker.rst:2
+msgid "Docker"
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:4
+msgid ""
+"Docker is a containerization platform that allows you to package your "
+"application and all its dependencies together. It is useful for creating "
+"consistent environments for your application to run in, irrespective of the "
+"host system and its own configuration or dependencies - which is especially "
+"helpful in preventing dependency conflicts."
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:8
+msgid ""
+"This guide uses the `Docker official Python container <https://hub.docker."
+"com/_/python>`_ as a base image."
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:11
+msgid "Use When"
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:13
+msgid ""
+"Docker is ideal for deploying Python web applications in scenarios where:"
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:15
+msgid ""
+"**Isolation:** You require a consistent, isolated environment for your "
+"application, independent of the host system."
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:16
+msgid ""
+"**Scalability:** Your application needs to be easily scaled up or down based "
+"on demand."
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:17
+msgid ""
+"**Portability:** The need to run your application consistently across "
+"different environments (development, testing, production) is crucial."
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:18
+msgid ""
+"**Microservices Architecture:** You are adopting a microservices "
+"architecture, where each service can be containerized and managed "
+"independently."
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:19
+msgid ""
+"**Continuous Integration/Continuous Deployment (CI/CD):** You are "
+"implementing CI/CD pipelines, and Docker facilitates the building, testing, "
+"and deployment of applications."
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:20
+msgid ""
+"**Dependency Management:** Ensuring that your application has all its "
+"dependencies bundled together without conflicts with other applications."
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:23
+msgid "Alternatives"
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:25
+msgid "For different deployment scenarios, consider these alternatives:"
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:27
+msgid "`systemd <https://www.freedesktop.org/wiki/Software/systemd/>`_:"
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:28
+msgid ""
+"A system and service manager, integrated into many Linux distributions for "
+"managing system processes."
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:30
+msgid "Official documentation coming soon"
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:31
+msgid ":doc:`Supervisor <supervisor>`:"
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:32
+msgid ""
+"A process control system that can be used to automatically start, stop and "
+"restart processes; includes a web UI."
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:33
+msgid ":doc:`Manually with an ASGI server <manually-with-asgi-server>`:"
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:34
+msgid ""
+"Direct control by running the application with an ASGI server like Uvicorn, "
+"Hypercorn, Daphne, etc."
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:36
+msgid ""
+"This guide assumes that you have Docker installed and running on your "
+"system, and that you have the following files in your project directory:"
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:39
+msgid "``requirements.txt``"
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:39
+msgid "litestar[standard]>=2.4.0,<3.0.0"
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:0
+msgid "Python 3.8+"
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:45
+msgid "``app.py``"
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:45
+msgid ""
+"\"\"\"Minimal Litestar application.\"\"\"\n"
+"\n"
+"from asyncio import sleep\n"
+"from typing import Any, Dict\n"
+"\n"
+"from litestar import Litestar, get\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"async def async_hello_world() -> Dict[str, Any]:\n"
+"    \"\"\"Route Handler that outputs hello world.\"\"\"\n"
+"    await sleep(0.1)\n"
+"    return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"@get(\"/sync\", sync_to_thread=False)\n"
+"def sync_hello_world() -> Dict[str, Any]:\n"
+"    \"\"\"Route Handler that outputs hello world.\"\"\"\n"
+"    return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[sync_hello_world, async_hello_world])"
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:0
+msgid "Python 3.9+"
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:45
+msgid ""
+"\"\"\"Minimal Litestar application.\"\"\"\n"
+"\n"
+"from asyncio import sleep\n"
+"from typing import Any\n"
+"\n"
+"from litestar import Litestar, get\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"async def async_hello_world() -> dict[str, Any]:\n"
+"    \"\"\"Route Handler that outputs hello world.\"\"\"\n"
+"    await sleep(0.1)\n"
+"    return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"@get(\"/sync\", sync_to_thread=False)\n"
+"def sync_hello_world() -> dict[str, Any]:\n"
+"    \"\"\"Route Handler that outputs hello world.\"\"\"\n"
+"    return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[sync_hello_world, async_hello_world])"
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:71
+msgid "Dockerfile"
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:73
+msgid "Example Dockerfile"
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:73
+msgid ""
+"# Set the base image using Python 3.12 and Debian Bookworm\n"
+"FROM python:3.12-slim-bookworm\n"
+"\n"
+"# Set the working directory to /app\n"
+"WORKDIR /app\n"
+"\n"
+"# Copy only the necessary files to the working directory\n"
+"COPY . /app\n"
+"\n"
+"# Install the requirements\n"
+"RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt\n"
+"\n"
+"# Expose the port the app runs on\n"
+"EXPOSE 80\n"
+"\n"
+"# Run the app with the Litestar CLI\n"
+"CMD [\"litestar\", \"run\", \"--host\", \"0.0.0.0\", \"--port\", \"80\"]"
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:94
+msgid ""
+"This copies your local project folder to the ``/app`` directory in the "
+"Docker container and runs your app via ``uvicorn`` utilizing the ``litestar "
+"run`` command. ``uvicorn`` is provided by the ``litestar[standard]`` extra, "
+"which is installed in the ``requirements.txt`` file."
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:98
+msgid ""
+"You can also launch the application with an :doc:`ASGI server <manually-with-"
+"asgi-server>` directly, if you prefer."
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:100
+msgid ""
+"Once you have your ``Dockerfile`` defined, you can build the image with "
+"``docker build`` and run it with ``docker run``."
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:0
+msgid "Useful Dockerfile Commands"
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:104
+msgid "Useful Docker commands"
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:104
+msgid ""
+"# Build the container\n"
+"docker build -t exampleapp .\n"
+"\n"
+"# Run the container\n"
+"docker run -d -p 80:80 --name exampleapp exampleapp\n"
+"\n"
+"# Stop the container\n"
+"docker stop exampleapp\n"
+"\n"
+"# Start the container\n"
+"docker start exampleapp\n"
+"\n"
+"# Remove the container\n"
+"docker rm exampleapp"
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:123
+msgid "Docker Compose"
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:125
+msgid ""
+"Compose is a tool for defining and running multi-container Docker "
+"applications. Read more about Compose in the `official Docker documentation "
+"<https://docs.docker.com/compose/>`_."
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:128
+msgid ""
+"If you want to run the container as part of a Docker Compose setup then you "
+"can simply use this compose file:"
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:130
+msgid "``docker-compose.yml``"
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:130
+msgid ""
+"version: \"3.9\"\n"
+"\n"
+"services:\n"
+"  exampleapp:\n"
+"    build:\n"
+"      context: ./\n"
+"      dockerfile: Dockerfile\n"
+"    container_name: \"exampleapp\"\n"
+"    depends_on:\n"
+"      - database\n"
+"    ports:\n"
+"      - \"80:80\"\n"
+"    environment:\n"
+"      - DB_HOST=database\n"
+"      - DB_PORT=5432\n"
+"      - DB_USER=litestar\n"
+"      - DB_PASS=r0cks\n"
+"      - DB_NAME=exampleapp\n"
+"\n"
+"  database:\n"
+"    image: postgres:latest\n"
+"    container_name: \"exampledb\"\n"
+"    environment:\n"
+"      POSTGRES_USER: exampleuser\n"
+"      POSTGRES_PASSWORD: examplepass\n"
+"      POSTGRES_DB: exampledb\n"
+"    ports:\n"
+"      - \"5432:5432\"\n"
+"    volumes:\n"
+"      - db_data:/var/lib/postgresql/data\n"
+"\n"
+"volumes:\n"
+"  db_data:"
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:167
+msgid ""
+"This compose file defines two services: ``exampleapp`` and ``database``. The "
+"``exampleapp`` service is built from the Dockerfile in the current "
+"directory, and exposes port 80. The ``database`` service uses the official "
+"PostgreSQL image, and exposes port ``5432``. The ``exampleapp`` service "
+"depends on the ``database`` service, so the database will be started before "
+"the app. The ``exampleapp`` service also has environment variables set for "
+"the database connection details, which are used by the app."
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:173
+msgid ""
+"Once you have your ``docker-compose.yml`` defined, you can run ``docker "
+"compose up`` to start the containers. You can also run ``docker compose up -"
+"d`` to run the containers in the background, or \"detached\" mode."
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:0
+msgid "Useful Compose Commands"
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:178
+msgid "Useful Docker Compose commands"
+msgstr ""
+
+#: ../../../topics/deployment/docker.rst:178
+msgid ""
+"# Build the containers\n"
+"docker compose build\n"
+"\n"
+"# Run the containers\n"
+"docker compose up\n"
+"\n"
+"# Run the containers in the background\n"
+"docker compose up -d\n"
+"\n"
+"# Stop the containers\n"
+"docker compose down"
+msgstr ""

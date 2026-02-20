@@ -1,0 +1,142 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../usage/metrics/prometheus.rst:2
+msgid "Prometheus"
+msgstr ""
+
+#: ../../../usage/metrics/prometheus.rst:4
+msgid ""
+"Litestar includes optional Prometheus exporter that is exported from "
+"``litestar.plugins.prometheus``. To use this package, you should first "
+"install the required dependencies:"
+msgstr ""
+
+#: ../../../usage/metrics/prometheus.rst:7
+msgid "as separate package"
+msgstr ""
+
+#: ../../../usage/metrics/prometheus.rst:7
+msgid "pip install prometheus-client"
+msgstr ""
+
+#: ../../../usage/metrics/prometheus.rst:13
+msgid "as a Litestar extra"
+msgstr ""
+
+#: ../../../usage/metrics/prometheus.rst:13
+msgid "pip install 'litestar[prometheus]'"
+msgstr ""
+
+#: ../../../usage/metrics/prometheus.rst:18
+msgid ""
+"Once these requirements are satisfied, you can instrument your Litestar "
+"application:"
+msgstr ""
+
+#: ../../../usage/metrics/prometheus.rst:21
+msgid "Using the Prometheus Exporter"
+msgstr ""
+
+#: ../../../usage/metrics/prometheus.rst:21
+msgid ""
+"from litestar import Litestar\n"
+"from litestar.plugins.prometheus import PrometheusConfig, "
+"PrometheusController\n"
+"\n"
+"\n"
+"def create_app(group_path: bool = False):\n"
+"    # Default app name and prefix is litestar.\n"
+"    prometheus_config = PrometheusConfig(group_path=group_path)\n"
+"\n"
+"    # By default the metrics are available in prometheus format and the path "
+"is set to '/metrics'.\n"
+"    # If you want to change the path and format you can do it by subclassing "
+"the PrometheusController class.\n"
+"\n"
+"    # Creating the litestar app instance with our custom PrometheusConfig "
+"and PrometheusController.\n"
+"    return Litestar(route_handlers=[PrometheusController], "
+"middleware=[prometheus_config.middleware])"
+msgstr ""
+
+#: ../../../usage/metrics/prometheus.rst:24
+msgid "You can also customize the configuration:"
+msgstr ""
+
+#: ../../../usage/metrics/prometheus.rst:27
+msgid "Configuring the Prometheus Exporter"
+msgstr ""
+
+#: ../../../usage/metrics/prometheus.rst:27
+msgid ""
+"from typing import Any\n"
+"\n"
+"from litestar import Litestar, Request\n"
+"from litestar.plugins.prometheus import PrometheusConfig, "
+"PrometheusController\n"
+"\n"
+"\n"
+"# We can modify the path of our custom handler and override the metrics "
+"format by subclassing the PrometheusController.\n"
+"class CustomPrometheusController(PrometheusController):\n"
+"    path = \"/custom-path\"\n"
+"    openmetrics_format = True\n"
+"\n"
+"\n"
+"# Let's assume this as our extra custom labels which we want our metrics to "
+"have.\n"
+"# The values can be either a string or a callable that returns a string.\n"
+"def custom_label_callable(request: Request[Any, Any, Any]) -> str:\n"
+"    return \"v2.0\"\n"
+"\n"
+"\n"
+"extra_labels = {\n"
+"    \"version_no\": custom_label_callable,\n"
+"    \"location\": \"earth\",\n"
+"}\n"
+"\n"
+"# Customizing the buckets for the histogram.\n"
+"buckets = [0.1, 0.2, 0.3, 0.4, 0.5]\n"
+"\n"
+"\n"
+"# Adding exemplars to the metrics.\n"
+"# Note that this supported only in openmetrics format.\n"
+"def custom_exemplar(request: Request[Any, Any, Any]) -> dict[str, str]:\n"
+"    return {\"trace_id\": \"1234\"}\n"
+"\n"
+"\n"
+"# Creating the instance of PrometheusConfig with our own custom options.\n"
+"# The given options are not necessary, you can use the default ones\n"
+"# as well by just creating a raw instance PrometheusConfig()\n"
+"prometheus_config = PrometheusConfig(\n"
+"    app_name=\"litestar-example\",\n"
+"    prefix=\"litestar\",\n"
+"    labels=extra_labels,\n"
+"    buckets=buckets,  # pyright: ignore[reportArgumentType]\n"
+"    exemplars=custom_exemplar,\n"
+"    excluded_http_methods=[\"POST\"],\n"
+")\n"
+"\n"
+"\n"
+"# Creating the litestar app instance with our custom PrometheusConfig and "
+"PrometheusController.\n"
+"app = Litestar(route_handlers=[CustomPrometheusController], "
+"middleware=[prometheus_config.middleware])"
+msgstr ""

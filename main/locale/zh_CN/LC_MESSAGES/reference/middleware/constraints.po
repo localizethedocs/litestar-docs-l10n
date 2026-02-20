@@ -1,0 +1,168 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/middleware/constraints.rst:2
+msgid "constraints"
+msgstr ""
+
+#: ../../../../litestar/middleware/constraints.py:docstring of
+#: litestar.middleware.constraints.ConstraintViolationError:1
+#: litestar.middleware.constraints.CycleError:1
+msgid ""
+"Bases: :py:class:`~litestar.middleware.constraints.MiddlewareConstraintError`"
+msgstr ""
+
+#: ../../../../litestar/middleware/constraints.py:docstring of
+#: litestar.middleware.constraints.MiddlewareConstraintError:1
+msgid ""
+"Bases: :py:class:`~litestar.exceptions.base_exceptions.LitestarException`"
+msgstr ""
+
+#: ../../../../litestar/middleware/constraints.py:docstring of
+#: litestar.middleware.constraints.MiddlewareConstraints:1
+#: litestar.middleware.constraints.MiddlewareForwardRef:1
+msgid "Bases: :py:class:`object`"
+msgstr ""
+
+#: ../../../../litestar/middleware/constraints.py:docstring of
+#: litestar.middleware.constraints.MiddlewareConstraints:1
+msgid "Constraints for a middleware."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.constraints.MiddlewareConstraints.before:1
+msgid ""
+"Tuple of middlewares that, if present, need to appear *before* the "
+"middleware this constraint is applied to (i.e. closer to the application)"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.constraints.MiddlewareConstraints.after:1
+msgid ""
+"Tuple of middlewares that, if present, need to appear *after* the middleware "
+"this constraint is applied to (i.e. closer to the handler)"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.constraints.MiddlewareConstraints.first:1
+msgid ""
+"If ``True``, require the middleware to be the first (i.e. the first "
+"middleware on the application)."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.constraints.MiddlewareConstraints.first:4
+msgid "Mutually exclusive with ``last=True``. Implicitly sets ``unique=True``"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.constraints.MiddlewareConstraints.last:1
+msgid ""
+"If ``True``, require the middleware to be the last (i.e. the last middleware "
+"on the handler)."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.constraints.MiddlewareConstraints.last:4
+msgid "Mutually exclusive with ``first=True``. Implicitly sets ``unique=True``"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.constraints.MiddlewareConstraints.unique:1
+msgid "If ``True``, require the middleware to be the only one of its type"
+msgstr ""
+
+#: ../../../../litestar/middleware/constraints.py:docstring of
+#: litestar.middleware.constraints.MiddlewareConstraints.require_unique:1
+msgid "Return a new constraint with a ``unique`` value set"
+msgstr ""
+
+#: ../../../../litestar/middleware/constraints.py:docstring of
+#: litestar.middleware.constraints.MiddlewareConstraints.apply_first:1
+msgid "Return a new constraint with ``first=True``. Overrides ``last=True``"
+msgstr ""
+
+#: ../../../../litestar/middleware/constraints.py:docstring of
+#: litestar.middleware.constraints.MiddlewareConstraints.apply_last:1
+msgid "Return a new constraint with ``first=True``. Overrides ``first=True``"
+msgstr ""
+
+#: ../../../../litestar/middleware/constraints.py:docstring of
+#: litestar.middleware.constraints.MiddlewareConstraints.apply_before:1
+msgid ""
+"Return new :class:`~litestar.middleware.constraints.MiddlewareConstraints` "
+"with ``other`` added to existing ``before`` constraint."
+msgstr ""
+
+#: ../../../reference/middleware/constraints.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../litestar/middleware/constraints.py:docstring of
+#: litestar.middleware.constraints.MiddlewareConstraints.apply_after:4
+#: litestar.middleware.constraints.MiddlewareConstraints.apply_before:4
+msgid ""
+"Middleware this middleware needs to be applied before. If passed a string, "
+"create a :class:`~litestar.middleware.constraints.MiddlewareForwardRef` that "
+"resolves to the actual middleware at runtime"
+msgstr ""
+
+#: ../../../../litestar/middleware/constraints.py:docstring of
+#: litestar.middleware.constraints.MiddlewareConstraints.apply_after:7
+#: litestar.middleware.constraints.MiddlewareConstraints.apply_before:7
+msgid ""
+"If ``True`` and ``other`` is a string, ignore the constraint if an :exc:"
+"`ImportError` occurs when trying to import it"
+msgstr ""
+
+#: ../../../../litestar/middleware/constraints.py:docstring of
+#: litestar.middleware.constraints.MiddlewareConstraints.apply_after:1
+msgid ""
+"Return new :class:`~litestar.middleware.constraints.MiddlewareConstraints` "
+"with ``other`` added to existing ``after`` constraint."
+msgstr ""
+
+#: ../../../../litestar/middleware/constraints.py:docstring of
+#: litestar.middleware.constraints.MiddlewareForwardRef:1
+msgid "Forward reference to a middleware"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.constraints.MiddlewareForwardRef.target:1
+msgid "Absolute path to an importable name of the middleware"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.middleware.constraints.MiddlewareForwardRef.ignore_import_error:1
+msgid ""
+"If 'True', ignore :exc:`ImportError`\\ s will be ignored when resolving the "
+"middleware"
+msgstr ""
+
+#: ../../../../litestar/middleware/constraints.py:docstring of
+#: litestar.middleware.constraints.MiddlewareForwardRef.resolve:1
+msgid "Resolve the reference to a concrete value by importing the target path."
+msgstr ""
+
+#: ../../../../litestar/middleware/constraints.py:docstring of
+#: litestar.middleware.constraints.MiddlewareForwardRef.resolve:3
+msgid ""
+"If ``ignore_import_error=True`` and an :exc:`ImportError` is raised, ignore "
+"the error and return ``None``"
+msgstr ""

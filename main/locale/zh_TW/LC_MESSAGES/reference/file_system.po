@@ -1,0 +1,341 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/file_system.rst:2
+msgid "file_system"
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.BaseFileSystem:1
+msgid "Bases: :py:class:`~abc.ABC`"
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.BaseFileSystem.info:1
+#: litestar.file_system.BaseLocalFileSystem.info:1
+msgid "Return a :class:`~litestar.file_system.FileInfo` for the given ``path``"
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.BaseFileSystem.read_bytes:1
+#: litestar.file_system.BaseLocalFileSystem.read_bytes:1
+msgid "Read bytes from ``path``"
+msgstr ""
+
+#: ../../../reference/file_system.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.BaseFileSystem.read_bytes:3
+#: litestar.file_system.BaseLocalFileSystem.read_bytes:3
+#: litestar.file_system.FsspecAsyncWrapper.read_bytes:3
+#: litestar.file_system.FsspecSyncWrapper.read_bytes:3
+msgid "File to read from"
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.BaseFileSystem.iter:5
+#: litestar.file_system.BaseFileSystem.read_bytes:4
+#: litestar.file_system.BaseLocalFileSystem.iter:5
+#: litestar.file_system.BaseLocalFileSystem.read_bytes:4
+#: litestar.file_system.FsspecAsyncWrapper.iter:9
+#: litestar.file_system.FsspecAsyncWrapper.read_bytes:4
+#: litestar.file_system.FsspecSyncWrapper.iter:5
+#: litestar.file_system.FsspecSyncWrapper.read_bytes:4
+msgid "Offset to start reading from"
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.BaseFileSystem.iter:6
+#: litestar.file_system.BaseFileSystem.read_bytes:5
+#: litestar.file_system.BaseLocalFileSystem.iter:6
+#: litestar.file_system.BaseLocalFileSystem.read_bytes:5
+#: litestar.file_system.FsspecAsyncWrapper.iter:10
+#: litestar.file_system.FsspecAsyncWrapper.read_bytes:5
+#: litestar.file_system.FsspecSyncWrapper.iter:6
+#: litestar.file_system.FsspecSyncWrapper.read_bytes:5
+msgid "Offset to stop reading at (inclusive)"
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.BaseFileSystem.iter:1
+#: litestar.file_system.BaseLocalFileSystem.iter:1
+msgid "Stream bytes from ``path``"
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.BaseFileSystem.iter:3
+#: litestar.file_system.BaseLocalFileSystem.iter:3
+#: litestar.file_system.FsspecAsyncWrapper.iter:7
+#: litestar.file_system.FsspecSyncWrapper.iter:3
+msgid "Path to read from"
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.BaseFileSystem.iter:4
+#: litestar.file_system.BaseLocalFileSystem.iter:4
+#: litestar.file_system.FsspecAsyncWrapper.iter:8
+#: litestar.file_system.FsspecSyncWrapper.iter:4
+msgid "Number of bytes to read per chunk"
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.BaseLocalFileSystem:1
+msgid "Bases: :py:class:`~litestar.file_system.LinkableFileSystem`"
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.BaseLocalFileSystem:1
+msgid "Base class for a local file system."
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.BaseLocalFileSystem.resolve_symlinks:1
+#: litestar.file_system.LinkableFileSystem.resolve_symlinks:1
+msgid "Return ``path`` with all symlinks resolved"
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.FileInfo:1
+msgid "Bases: :py:class:`~typing_extensions.TypedDict`"
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.FileInfo:1
+msgid "File information gathered from a file system."
+msgstr ""
+
+#: ../../../../docstring of litestar.file_system.FileInfo.is_symlink:1
+msgid ""
+"'True' if the file is a symbolic link. 'None' if the file system does not "
+"support symlinks"
+msgstr ""
+
+#: ../../../../docstring of litestar.file_system.FileInfo.mtime:1
+msgid "Modified time stamp."
+msgstr ""
+
+#: ../../../../docstring of litestar.file_system.FileInfo.name:1
+msgid "The path of the file."
+msgstr ""
+
+#: ../../../../docstring of litestar.file_system.FileInfo.size:1
+msgid "Total size, in bytes."
+msgstr ""
+
+#: ../../../../docstring of litestar.file_system.FileInfo.type:1
+msgid "The type of the file system object."
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.FileSystemRegistry:1
+msgid "Bases: :py:class:`~litestar.plugins.base.InitPlugin`"
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.FileSystemRegistry.__init__:1
+msgid "File system registry"
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.FileSystemRegistry.__init__:3
+msgid "A mapping of names to file systems"
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.FileSystemRegistry.__init__:4
+msgid ""
+"Default file system to use when no system is specified. If ``None``, default "
+"to :class:`~litestar.file_system.BaseLocalFileSystem`"
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.FileSystemRegistry.default:1
+msgid "Return the default file system"
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.FileSystemRegistry.get:1
+msgid ""
+"Return the file system registered under ``name``. If no matching file system "
+"is found, return ``None``"
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.FileSystemRegistry.register:1
+msgid ""
+"Register a file system ``fs`` under ``name``. If a file system was "
+"previously registered under this name, it will be overwritten"
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.FsspecAsyncWrapper:1
+#: litestar.file_system.FsspecSyncWrapper:1
+msgid "Bases: :py:class:`~litestar.file_system.BaseFileSystem`"
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.FsspecAsyncWrapper.__init__:1
+msgid ""
+"Wrap a :class:`fsspec.asyn.AsyncFileSystem` to provide a class:`litestar."
+"file_system.BaseFileSystem` compatible interface"
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.FsspecAsyncWrapper.__init__:4
+msgid ""
+"An :class:`fsspec.asyn.AsyncFileSystem` instantiated with ` "
+"`asynchronous=True``"
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.FsspecAsyncWrapper.info:1
+#: litestar.file_system.FsspecSyncWrapper.info:1
+msgid ""
+"Return a :class:`~litestar.file_system.FileInfo` for the given ``path``."
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.FsspecAsyncWrapper.info:3
+msgid ""
+"Return info verbatim from ``fsspec.async.AsyncFileSystem._info``, but try to "
+"patch 'mtime' using :func:`litestar.file_system.get_fsspec_mtime_equivalent`."
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.FsspecAsyncWrapper.read_bytes:1
+msgid ""
+"Read bytes from ``path`` using ``fsspec.asyn.AsyncFileSystem._cat_file``"
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.FsspecAsyncWrapper.iter:1
+msgid "Stream bytes from ``path``."
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.FsspecAsyncWrapper.iter:3
+msgid ""
+"If no offsets are given and the file system implements ``fsspec.async."
+"AsyncFileSystem.async_open``, use ``async_open``, otherwise read chunks "
+"manually using ``fsspec.async.AsyncFileSystem._cat_file``"
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.FsspecSyncWrapper.__init__:1
+msgid ""
+"Wrap a :class:`fsspec.spec.AbstractFileSystem` to provide a :class:`litestar."
+"file_system.BaseFileSystem` compatible interface"
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.FsspecSyncWrapper.info:3
+msgid ""
+"Return info verbatim from :meth:`fsspec.spec.AbstractFileSystem.info`, but "
+"try to patch 'mtime' using :func:`litestar.file_system."
+"get_fsspec_mtime_equivalent`."
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.FsspecSyncWrapper.read_bytes:1
+msgid ""
+"Read bytes from ``path`` using :meth:`fsspec.spec.AbstractFileSystem."
+"cat_file`"
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.FsspecSyncWrapper.iter:1
+msgid ""
+"Stream bytes from ``path`` using :meth:`fsspec.spec.AbstractFileSystem.open`"
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.LinkableFileSystem:1
+msgid ""
+"Bases: :py:class:`~litestar.file_system.BaseFileSystem`, :py:class:`~abc.ABC`"
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.LinkableFileSystem:1
+msgid "A file system that supports symlinks"
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.LinkableFileSystem.register_as_linkable:1
+msgid ""
+"Register a file system as 'linkable', i.e. supporting symlinks, that does "
+"not itself implement :class:`~litestar.file_system.LinkableFileSystem`."
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.LinkableFileSystem.register_as_linkable:4
+msgid ""
+"By default, :class:`fsspec.implementations.local.LocalFileSystem` is "
+"registered."
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.LinkableFileSystem.register_as_linkable:6
+msgid "The file system type"
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.LinkableFileSystem.register_as_linkable:7
+msgid ""
+"A function that takes in a path and returns an absolute path with all "
+"symlinks resolved"
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.LinkableFileSystem.get_symlink_resolver:1
+msgid ""
+"For a given file system, get a function to resolve potential symlinks in a "
+"path."
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.LinkableFileSystem.get_symlink_resolver:3
+msgid ""
+"For classes implementing :class:`~litestar.file_system.LinkableFileSystem`, "
+"their :meth:`~litestar.file_system.LinkableFileSystem.resolve_symlinks` is "
+"returned. Otherwise, the ``resolver`` registered via :class:`~litestar."
+"file_system.LinkableFileSystem.register_as_linkable` will be returned."
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.get_fsspec_mtime_equivalent:1
+msgid ""
+"Return the 'mtime' or equivalent for different fsspec implementations, since "
+"they are not standardized."
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.get_fsspec_mtime_equivalent:4
+msgid "See https://github.com/fsspec/filesystem_spec/issues/526."
+msgstr ""
+
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.maybe_wrap_fsspec_file_system:1
+msgid ""
+"If ``file_system`` is an fsspec file system, wrap it in :class:`~litestar."
+"file_system.FsspecSyncWrapper` or :class:`~litestar.file_system."
+"FsspecAsyncWrapper` depending on its type. If fsspec is not installed or "
+"``file_system`` is not an fsspec file system, return ``file_system``"
+msgstr ""
