@@ -1,0 +1,244 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/security/index.rst:2
+msgid "security"
+msgstr ""
+
+#: ../../../../litestar/security/__init__.py:docstring of
+#: litestar.security.base.AbstractSecurityConfig:1
+msgid ""
+"Bases: :py:class:`~abc.ABC`, :py:class:`~typing.Generic`\\ [:py:obj:"
+"`~litestar.security.base.UserType`, :py:obj:`~litestar.security.base."
+"AuthType`]"
+msgstr ""
+
+#: ../../../../litestar/security/__init__.py:docstring of
+#: litestar.security.base.AbstractSecurityConfig:1
+msgid ""
+"A base class for Security Configs - this class can be used on the "
+"application level or be manually configured on the router / controller level "
+"to provide auth."
+msgstr ""
+
+#: ../../../../litestar/security/__init__.py:docstring of
+#: litestar.security.base.AbstractSecurityConfig.create_response:1
+msgid "Create a response object."
+msgstr ""
+
+#: ../../../../litestar/security/__init__.py:docstring of
+#: litestar.security.base.AbstractSecurityConfig.create_response:3
+msgid "Handles setting the type encoders mapping on the response."
+msgstr ""
+
+#: ../../../reference/security/index.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../litestar/security/__init__.py:docstring of
+#: litestar.security.base.AbstractSecurityConfig.create_response:5
+msgid "A value for the response body that will be rendered into bytes string."
+msgstr ""
+
+#: ../../../../litestar/security/__init__.py:docstring of
+#: litestar.security.base.AbstractSecurityConfig.create_response:6
+msgid "An HTTP status code."
+msgstr ""
+
+#: ../../../../litestar/security/__init__.py:docstring of
+#: litestar.security.base.AbstractSecurityConfig.create_response:7
+msgid "A value for the response 'Content-Type' header."
+msgstr ""
+
+#: ../../../../litestar/security/__init__.py:docstring of
+#: litestar.security.base.AbstractSecurityConfig.create_response:8
+msgid ""
+"A string keyed dictionary of response headers. Header keys are insensitive."
+msgstr ""
+
+#: ../../../../litestar/security/__init__.py:docstring of
+#: litestar.security.base.AbstractSecurityConfig.create_response:9
+msgid ""
+"A list of :class:`Cookie <litestar.datastructures.Cookie>` instances to be "
+"set under the response 'Set-Cookie' header."
+msgstr ""
+
+#: ../../../reference/security/index.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/security/__init__.py:docstring of
+#: litestar.security.base.AbstractSecurityConfig.create_response:12
+msgid "A response object."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.security.AbstractSecurityConfig.dependencies:1
+msgid "An optional dictionary of dependency providers."
+msgstr ""
+
+#: ../../../../docstring of litestar.security.AbstractSecurityConfig.exclude:1
+msgid "A pattern or list of patterns to skip in the authentication middleware."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.security.AbstractSecurityConfig.exclude_http_methods:1
+msgid ""
+"A sequence of http methods that do not require authentication. Defaults to "
+"['OPTIONS', 'HEAD']"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.security.AbstractSecurityConfig.exclude_opt_key:1
+msgid ""
+"An identifier to use on routes to disable authentication and authorization "
+"checks for a particular route."
+msgstr ""
+
+#: ../../../../docstring of litestar.security.AbstractSecurityConfig.guards:1
+msgid ""
+"An iterable of guards to call for requests, providing authorization "
+"functionalities."
+msgstr ""
+
+#: ../../../../litestar/security/__init__.py:docstring of
+#: litestar.security.AbstractSecurityConfig.middleware:1
+msgid ""
+"Create an instance of the config's ``authentication_middleware_class`` "
+"attribute and any required kwargs, wrapping it in Litestar's "
+"``DefineMiddleware``."
+msgstr ""
+
+#: ../../../../litestar/security/__init__.py:docstring of
+#: litestar.security.AbstractSecurityConfig.middleware:4
+msgid ""
+"An instance of :class:`DefineMiddleware <litestar.middleware.base."
+"DefineMiddleware>`."
+msgstr ""
+
+#: ../../../../litestar/security/__init__.py:docstring of
+#: litestar.security.base.AbstractSecurityConfig.on_app_init:1
+msgid ""
+"Handle app init by injecting middleware, guards etc. into the app. This "
+"method can be used only on the app level."
+msgstr ""
+
+#: ../../../../litestar/security/__init__.py:docstring of
+#: litestar.security.base.AbstractSecurityConfig.on_app_init:4
+msgid "An instance of :class:`AppConfig <.config.app.AppConfig>`"
+msgstr ""
+
+#: ../../../../litestar/security/__init__.py:docstring of
+#: litestar.security.base.AbstractSecurityConfig.on_app_init:6
+msgid "The :class:`AppConfig <.config.app.AppConfig>`."
+msgstr ""
+
+#: ../../../../litestar/security/__init__.py:docstring of
+#: litestar.security.AbstractSecurityConfig.openapi_components:1
+msgid "Create OpenAPI documentation for the JWT auth schema used."
+msgstr ""
+
+#: ../../../../litestar/security/__init__.py:docstring of
+#: litestar.security.AbstractSecurityConfig.openapi_components:3
+msgid ""
+"An :class:`Components <litestar.openapi.spec.components.Components>` "
+"instance."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.security.AbstractSecurityConfig.route_handlers:1
+msgid "An optional iterable of route handlers to register."
+msgstr ""
+
+#: ../../../../docstring of litestar.security.AbstractSecurityConfig.scopes:1
+msgid ""
+"ASGI scopes processed by the authentication middleware, if ``None``, both "
+"``http`` and ``websocket`` will be processed."
+msgstr ""
+
+#: ../../../../litestar/security/__init__.py:docstring of
+#: litestar.security.AbstractSecurityConfig.security_requirement:1
+msgid "Return OpenAPI 3.1."
+msgstr ""
+
+#: ../../../../litestar/security/__init__.py:docstring of
+#: litestar.security.AbstractSecurityConfig.security_requirement:3
+msgid ""
+":data:`SecurityRequirement <.openapi.spec.SecurityRequirement>` for the auth "
+"backend."
+msgstr ""
+
+#: ../../../../litestar/security/__init__.py:docstring of
+#: litestar.security.AbstractSecurityConfig.security_requirement:6
+msgid ""
+"An OpenAPI 3.1 :data:`SecurityRequirement <.openapi.spec."
+"SecurityRequirement>` dictionary."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.security.AbstractSecurityConfig.type_encoders:1
+msgid ""
+"A mapping of types to callables that transform them into types supported for "
+"serialization."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.security.AbstractSecurityConfig.authentication_middleware_class:1
+msgid "The authentication middleware class to use."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.security.AbstractSecurityConfig.authentication_middleware_class:3
+msgid ""
+"Must inherit from :class:`AbstractAuthenticationMiddleware <litestar."
+"middleware.authentication.AbstractAuthenticationMiddleware>`"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.security.AbstractSecurityConfig.retrieve_user_handler:1
+msgid ""
+"Callable that receives the ``auth`` value from the authentication middleware "
+"and returns a ``user`` value."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.security.AbstractSecurityConfig.retrieve_user_handler:3
+msgid "Notes"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.security.AbstractSecurityConfig.retrieve_user_handler:5
+msgid ""
+"User and Auth can be any arbitrary values specified by the security backend."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.security.AbstractSecurityConfig.retrieve_user_handler:6
+msgid ""
+"The User and Auth values will be set by the middleware as "
+"``scope[\"user\"]`` and ``scope[\"auth\"]`` respectively. Once provided, "
+"they can access via the ``connection.user`` and ``connection.auth`` "
+"properties."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.security.AbstractSecurityConfig.retrieve_user_handler:8
+msgid ""
+"The callable can be sync or async. If it is sync, it will be wrapped to "
+"support async."
+msgstr ""

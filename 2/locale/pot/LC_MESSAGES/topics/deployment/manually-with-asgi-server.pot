@@ -1,0 +1,277 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:2
+msgid "Manually with ASGI server"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:4
+msgid ""
+"ASGI (Asynchronous Server Gateway Interface) is intended to provide a "
+"standard interface between async Python web frameworks like Litestar, and "
+"async web servers."
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:7
+msgid ""
+"There are several popular ASGI servers available, and you can choose the one "
+"that best fits your application's needs."
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:10
+msgid "Use When"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:12
+msgid ""
+"Running your application manually with an ASGI server is usually only ideal "
+"in development and testing environments."
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:14
+msgid ""
+"It is generally recommended to run your production workloads inside a "
+"containerized environment, such as :doc:`Docker <docker>` or Kubernetes or "
+"via a process control system such as :doc:`Supervisor <supervisor>` or "
+"``systemd``."
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:19
+msgid "Alternatives"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:21
+msgid "For different deployment scenarios, consider these alternatives:"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:23
+msgid "`systemd <https://www.freedesktop.org/wiki/Software/systemd/>`_:"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:24
+msgid ""
+"A system and service manager, integrated into many Linux distributions for "
+"managing system processes."
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:26
+msgid "Official documentation coming soon"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:27
+msgid ":doc:`Supervisor <supervisor>`:"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:28
+msgid ""
+"A process control system that can be used to automatically start, stop and "
+"restart processes; includes a web UI."
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:29
+msgid ":doc:`Docker <docker>`:"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:30
+msgid ""
+"Ideal for containerized environments, offering isolation and scalability."
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:33
+msgid "Choosing an ASGI Server"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:0
+msgid "Uvicorn"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:40
+msgid ""
+"`Uvicorn <https://www.uvicorn.org/>`_ is an ASGI server that supports "
+"``HTTP/1.1`` and WebSocket."
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:0
+msgid "Hypercorn"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:45
+msgid ""
+"`Hypercorn <https://hypercorn.readthedocs.io/en/latest/#/>`_ is an ASGI "
+"server that was initially part of `Quart <https://pgjones.gitlab.io/quart//"
+">`_, and supports ``HTTP/1.1``, ``HTTP/2``, and WebSocket."
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:0
+msgid "Daphne"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:51
+msgid ""
+"`Daphne <https://github.com/django/daphne/>`_ is an ASGI server that was "
+"originally developed for `Django Channels <https://channels.readthedocs.io/"
+"en/latest/>`_, and supports ``HTTP/1.1``, ``HTTP/2``, and WebSocket."
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:0
+msgid "Granian"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:58
+msgid ""
+"`Granian <https://github.com/emmett-framework/granian/>`_ is a Rust-based "
+"ASGI server that supports ``HTTP/1.1``, ``HTTP/2``, and WebSocket."
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:62
+msgid "Install the ASGI Server"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:69
+msgid "Install Uvicorn with pip"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:69
+msgid "pip install uvicorn"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:77
+msgid "Install Hypercorn with pip"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:77
+msgid "pip install hypercorn"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:85
+msgid "Install Daphne with pip"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:85
+msgid "pip install daphne"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:93
+msgid "Install Granian with pip"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:93
+msgid "pip install granian"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:99
+msgid "Run the ASGI Server"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:101
+msgid ""
+"Assuming your app is defined in the same manner as :ref:`Minimal Example "
+"<minimal_example>`, you can run the ASGI server with the following command:"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:109
+msgid "Run Uvicorn with the default configuration"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:109
+msgid "uvicorn app:app"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:114
+#: ../../../topics/deployment/manually-with-asgi-server.rst:129
+#: ../../../topics/deployment/manually-with-asgi-server.rst:142
+#: ../../../topics/deployment/manually-with-asgi-server.rst:156
+msgid "Console Output"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:114
+msgid ""
+"INFO:     Waiting for application startup.\n"
+"INFO:     Application startup complete.\n"
+"INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:124
+msgid "Run Hypercorn with the default configuration"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:124
+msgid "hypercorn app:app"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:129
+msgid ""
+"[2023-11-12 23:31:26 -0800] [16748] [INFO] Running on http://127.0.0.1:8000 "
+"(CTRL + C to quit)"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:137
+msgid "Run Daphne with the default configuration"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:137
+msgid "daphne app:app"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:142
+msgid ""
+"INFO - 2023-11-12 23:31:51,571 - daphne.cli - cli - Starting server at tcp:"
+"port=8000:interface=127.0.0.1\n"
+"INFO - 2023-11-12 23:31:51,572 - daphne.server - server - Listening on TCP "
+"address 127.0.0.1:8000"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:151
+msgid "Run Granian with the default configuration"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:151
+msgid "granian --interface asgi app:app"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:156
+msgid ""
+"[INFO] Starting granian\n"
+"[INFO] Listening at: 127.0.0.1:8000"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:163
+msgid "Gunicorn with Uvicorn workers"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:165
+msgid "**Deprecation Notice**"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:167
+msgid ""
+"The Gunicorn+Uvicorn pattern is considered legacy for ASGI deployments since "
+"`Uvicorn 0.30.0+ <https://github.com/encode/uvicorn/releases/tag/0.30.0/>`_ "
+"includes native worker management."
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:169
+msgid ""
+"Uvicorn added a new multiprocess manager, that is meant to replace Gunicorn "
+"entirely. Refer to the pull request `#2183 <https://github.com/encode/"
+"uvicorn/pull/2183/>`_ for implementation details."
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:171
+msgid "For new deployments, use Uvicorn directly."
+msgstr ""
