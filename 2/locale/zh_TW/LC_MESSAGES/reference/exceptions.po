@@ -81,7 +81,7 @@ msgstr ""
 
 #: ../../../reference/exceptions.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/exceptions/__init__.py:docstring of
 #: litestar.exceptions.http_exceptions.HTTPException.__init__:5

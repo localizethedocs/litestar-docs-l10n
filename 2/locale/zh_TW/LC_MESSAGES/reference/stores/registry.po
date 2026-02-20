@@ -38,7 +38,7 @@ msgstr ""
 
 #: ../../../reference/stores/registry.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/stores/registry.py:docstring of
 #: litestar.stores.registry.StoreRegistry.__init__:3

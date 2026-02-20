@@ -200,7 +200,7 @@ msgstr ""
 
 #: ../../../usage/openapi/schema_generation.rst:0
 msgid "Python 3.8+"
-msgstr ""
+msgstr "Python 3.8+"
 
 #: ../../../usage/openapi/schema_generation.rst:98
 msgid ""
@@ -235,7 +235,7 @@ msgstr ""
 
 #: ../../../usage/openapi/schema_generation.rst:0
 msgid "Python 3.10+"
-msgstr ""
+msgstr "Python 3.10+"
 
 #: ../../../usage/openapi/schema_generation.rst:98
 msgid ""

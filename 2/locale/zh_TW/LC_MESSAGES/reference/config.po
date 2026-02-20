@@ -702,7 +702,7 @@ msgstr ""
 
 #: ../../../reference/config.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/config/cors.py:docstring of
 #: litestar.config.cors.CORSConfig.is_origin_allowed:3

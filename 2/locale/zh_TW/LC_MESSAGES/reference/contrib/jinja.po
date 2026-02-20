@@ -41,7 +41,7 @@ msgstr ""
 
 #: ../../../reference/contrib/jinja.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/contrib/jinja.py:docstring of
 #: litestar.contrib.jinja.JinjaTemplateEngine.__init__:3

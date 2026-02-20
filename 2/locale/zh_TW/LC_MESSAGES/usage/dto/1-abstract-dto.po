@@ -221,7 +221,7 @@ msgstr ""
 
 #: ../../../usage/dto/1-abstract-dto.rst:0
 msgid "Python 3.8+"
-msgstr ""
+msgstr "Python 3.8+"
 
 #: ../../../usage/dto/1-abstract-dto.rst:70
 msgid ""

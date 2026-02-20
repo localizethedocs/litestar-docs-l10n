@@ -34,11 +34,11 @@ msgstr ""
 #: ../../../../litestar/stores/redis.py:docstring of
 #: litestar.stores.redis.RedisStore.__init__:1
 msgid "Initialize :class:`RedisStore`"
-msgstr ""
+msgstr "初始化 :class:`RedisStore`"
 
 #: ../../../reference/stores/redis.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/stores/redis.py:docstring of
 #: litestar.stores.redis.RedisStore.__init__:3

@@ -55,7 +55,7 @@ msgstr ""
 
 #: ../../../usage/security/jwt.rst:0
 msgid "Python 3.8+"
-msgstr ""
+msgstr "Python 3.8+"
 
 #: ../../../usage/security/jwt.rst:23
 msgid "Using JWT Auth"
@@ -249,7 +249,7 @@ msgstr ""
 
 #: ../../../usage/security/jwt.rst:0
 msgid "Python 3.10+"
-msgstr ""
+msgstr "Python 3.10+"
 
 #: ../../../usage/security/jwt.rst:23
 msgid ""

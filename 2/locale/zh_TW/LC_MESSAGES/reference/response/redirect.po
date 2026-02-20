@@ -38,7 +38,7 @@ msgstr ""
 
 #: ../../../reference/response/redirect.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/response/redirect.py:docstring of
 #: litestar.response.redirect.ASGIRedirectResponse.__init__:3

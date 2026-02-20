@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../../../migration/flask.rst:5
 msgid "ASGI vs WSGI"
-msgstr ""
+msgstr "ASGI 與 WSGI"
 
 #: ../../../migration/flask.rst:7
 msgid ""
@@ -57,7 +57,7 @@ msgstr ""
 
 #: ../../../migration/flask.rst:0 ../../../migration/flask.rst:177
 msgid "Flask"
-msgstr ""
+msgstr "Flask"
 
 #: ../../../migration/flask.rst:32
 msgid ""
@@ -76,10 +76,24 @@ msgid ""
 "def hello():\n"
 "    return \"Hello, World\""
 msgstr ""
+"from flask import Flask\n"
+"\n"
+"\n"
+"app = Flask(__name__)\n"
+"\n"
+"\n"
+"@app.route(\"/\")\n"
+"def index():\n"
+"    return \"Index Page\"\n"
+"\n"
+"\n"
+"@app.route(\"/hello\")\n"
+"def hello():\n"
+"    return \"Hello, World\""
 
 #: ../../../migration/flask.rst:0 ../../../migration/flask.rst:177
 msgid "Litestar"
-msgstr ""
+msgstr "Litestar"
 
 #: ../../../migration/flask.rst:53
 msgid ""
@@ -98,10 +112,24 @@ msgid ""
 "\n"
 "app = Litestar([index, hello])"
 msgstr ""
+"from litestar import Litestar, get\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"def index() -> str:\n"
+"    return \"Index Page\"\n"
+"\n"
+"\n"
+"@get(\"/hello\")\n"
+"def hello() -> str:\n"
+"    return \"Hello, World\"\n"
+"\n"
+"\n"
+"app = Litestar([index, hello])"
 
 #: ../../../migration/flask.rst:71
 msgid "Path parameters"
-msgstr ""
+msgstr "路徑參數"
 
 #: ../../../migration/flask.rst:78
 msgid ""
@@ -125,6 +153,25 @@ msgid ""
 "def show_subpath(subpath):\n"
 "    return f\"Subpath {subpath}\""
 msgstr ""
+"from flask import Flask\n"
+"\n"
+"\n"
+"app = Flask(__name__)\n"
+"\n"
+"\n"
+"@app.route(\"/user/<username>\")\n"
+"def show_user_profile(username):\n"
+"    return f\"User {username}\"\n"
+"\n"
+"\n"
+"@app.route(\"/post/<int:post_id>\")\n"
+"def show_post(post_id):\n"
+"    return f\"Post {post_id}\"\n"
+"\n"
+"\n"
+"@app.route(\"/path/<path:subpath>\")\n"
+"def show_subpath(subpath):\n"
+"    return f\"Subpath {subpath}\""
 
 #: ../../../migration/flask.rst:105
 msgid ""
@@ -149,6 +196,26 @@ msgid ""
 "\n"
 "app = Litestar([show_user_profile, show_post, show_subpath])"
 msgstr ""
+"from litestar import Litestar, get\n"
+"from pathlib import Path\n"
+"\n"
+"\n"
+"@get(\"/user/{username:str}\")\n"
+"def show_user_profile(username: str) -> str:\n"
+"    return f\"User {username}\"\n"
+"\n"
+"\n"
+"@get(\"/post/{post_id:int}\")\n"
+"def show_post(post_id: int) -> str:\n"
+"    return f\"Post {post_id}\"\n"
+"\n"
+"\n"
+"@get(\"/path/{subpath:path}\")\n"
+"def show_subpath(subpath: Path) -> str:\n"
+"    return f\"Subpath {subpath}\"\n"
+"\n"
+"\n"
+"app = Litestar([show_user_profile, show_post, show_subpath])"
 
 #: ../../../migration/flask.rst:130
 msgid ""
@@ -158,11 +225,11 @@ msgstr ""
 
 #: ../../../migration/flask.rst:133
 msgid ":doc:`/usage/routing/parameters`"
-msgstr ""
+msgstr ":doc:`/usage/routing/parameters`"
 
 #: ../../../migration/flask.rst:136
 msgid "Request object"
-msgstr ""
+msgstr "請求物件"
 
 #: ../../../migration/flask.rst:138
 msgid ""
@@ -183,6 +250,15 @@ msgid ""
 "def index():\n"
 "    print(request.method)"
 msgstr ""
+"from flask import Flask, request\n"
+"\n"
+"\n"
+"app = Flask(__name__)\n"
+"\n"
+"\n"
+"@app.get(\"/\")\n"
+"def index():\n"
+"    print(request.method)"
 
 #: ../../../migration/flask.rst:164
 msgid ""
@@ -193,58 +269,64 @@ msgid ""
 "def index(request: Request) -> None:\n"
 "    print(request.method)"
 msgstr ""
+"from litestar import get, Request\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"def index(request: Request) -> None:\n"
+"    print(request.method)"
 
 #: ../../../migration/flask.rst:174
 msgid "Request methods"
-msgstr ""
+msgstr "請求方法"
 
 #: ../../../migration/flask.rst:179
 msgid "``request.args``"
-msgstr ""
+msgstr "``request.args``"
 
 #: ../../../migration/flask.rst:179
 msgid "``request.query_params``"
-msgstr ""
+msgstr "``request.query_params``"
 
 #: ../../../migration/flask.rst:181
 msgid "``request.base_url``"
-msgstr ""
+msgstr "``request.base_url``"
 
 #: ../../../migration/flask.rst:183
 msgid "``request.authorization``"
-msgstr ""
+msgstr "``request.authorization``"
 
 #: ../../../migration/flask.rst:183
 msgid "``request.auth``"
-msgstr ""
+msgstr "``request.auth``"
 
 #: ../../../migration/flask.rst:185
 msgid "``request.cache_control``"
-msgstr ""
+msgstr "``request.cache_control``"
 
 #: ../../../migration/flask.rst:185
 msgid "``request.headers.get(\"cache-control\")``"
-msgstr ""
+msgstr "``request.headers.get(\"cache-control\")``"
 
 #: ../../../migration/flask.rst:187
 msgid "``request.content_encoding``"
-msgstr ""
+msgstr "``request.content_encoding``"
 
 #: ../../../migration/flask.rst:187
 msgid "``request.headers.get(\"content-encoding\")``"
-msgstr ""
+msgstr "``request.headers.get(\"content-encoding\")``"
 
 #: ../../../migration/flask.rst:189
 msgid "``request.content_length``"
-msgstr ""
+msgstr "``request.content_length``"
 
 #: ../../../migration/flask.rst:189
 msgid "``request.headers.get(\"content-length\")``"
-msgstr ""
+msgstr "``request.headers.get(\"content-length\")``"
 
 #: ../../../migration/flask.rst:191
 msgid "``request.content_md5``"
-msgstr ""
+msgstr "``request.content_md5``"
 
 #: ../../../migration/flask.rst:191 ../../../migration/flask.rst:213
 #: ../../../migration/flask.rst:215 ../../../migration/flask.rst:229
@@ -252,7 +334,7 @@ msgstr ""
 #: ../../../migration/flask.rst:243 ../../../migration/flask.rst:245
 #: ../../../migration/flask.rst:255
 msgid ":octicon:`dash`"
-msgstr ""
+msgstr ":octicon:`dash`"
 
 #: ../../../migration/flask.rst:192 ../../../migration/flask.rst:214
 #: ../../../migration/flask.rst:216 ../../../migration/flask.rst:230
@@ -265,50 +347,54 @@ msgid ""
 "7.75A.75.75 0 0 1 2.75 7h10a.75.75 0 0 1 0 1.5h-10A.75.75 0 0 1 2 7.75Z\"></"
 "path></svg>"
 msgstr ""
+"<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-"
+"octicon-dash\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M2 "
+"7.75A.75.75 0 0 1 2.75 7h10a.75.75 0 0 1 0 1.5h-10A.75.75 0 0 1 2 7.75Z\"></"
+"path></svg>"
 
 #: ../../../migration/flask.rst:193
 msgid "``request.content_type``"
-msgstr ""
+msgstr "``request.content_type``"
 
 #: ../../../migration/flask.rst:195
 msgid "``request.cookies``"
-msgstr ""
+msgstr "``request.cookies``"
 
 #: ../../../migration/flask.rst:197
 msgid "``request.data``"
-msgstr ""
+msgstr "``request.data``"
 
 #: ../../../migration/flask.rst:197
 msgid "``request.body()``"
-msgstr ""
+msgstr "``request.body()``"
 
 #: ../../../migration/flask.rst:199
 msgid "``request.date``"
-msgstr ""
+msgstr "``request.date``"
 
 #: ../../../migration/flask.rst:199
 msgid "``request.headers.get(\"date\")``"
-msgstr ""
+msgstr "``request.headers.get(\"date\")``"
 
 #: ../../../migration/flask.rst:201
 msgid "``request.endpoint``"
-msgstr ""
+msgstr "``request.endpoint``"
 
 #: ../../../migration/flask.rst:201
 msgid "``request.route_handler``"
-msgstr ""
+msgstr "``request.route_handler``"
 
 #: ../../../migration/flask.rst:203
 msgid "``request.environ``"
-msgstr ""
+msgstr "``request.environ``"
 
 #: ../../../migration/flask.rst:203
 msgid "``request.scope``"
-msgstr ""
+msgstr "``request.scope``"
 
 #: ../../../migration/flask.rst:205
 msgid "``request.files``"
-msgstr ""
+msgstr "``request.files``"
 
 #: ../../../migration/flask.rst:205
 msgid "Use ``UploadFile`` see in :doc:`/usage/requests`"
@@ -316,7 +402,7 @@ msgstr ""
 
 #: ../../../migration/flask.rst:207
 msgid "``request.form``"
-msgstr ""
+msgstr "``request.form``"
 
 #: ../../../migration/flask.rst:207
 msgid "``request.form()``, prefer ``Body`` see in :doc:`/usage/requests`"

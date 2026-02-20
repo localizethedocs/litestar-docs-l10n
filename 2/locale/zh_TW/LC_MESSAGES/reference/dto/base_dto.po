@@ -53,7 +53,7 @@ msgstr ""
 
 #: ../../../reference/dto/base_dto.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/dto/base_dto.py:docstring of
 #: litestar.dto.base_dto.AbstractDTO.__init__:3

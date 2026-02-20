@@ -172,7 +172,7 @@ msgstr ""
 
 #: ../../../reference/plugins/htmx.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/plugins/htmx.py:docstring of
 #: litestar_htmx.plugin.HTMXPlugin.__init__:3

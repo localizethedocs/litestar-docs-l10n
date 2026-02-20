@@ -43,7 +43,7 @@ msgstr ""
 
 #: ../../../reference/openapi/plugins.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/openapi/plugins.py:docstring of
 #: litestar.openapi.plugins.OpenAPIRenderPlugin.__init__:3

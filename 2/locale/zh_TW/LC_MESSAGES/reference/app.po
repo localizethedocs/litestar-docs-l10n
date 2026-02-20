@@ -78,7 +78,7 @@ msgstr ""
 
 #: ../../../reference/app.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:3
 msgid ""
@@ -498,7 +498,7 @@ msgstr ""
 #: litestar.app.Litestar.route_reverse:4
 #: litestar.app.Litestar.url_for_static_asset:3
 msgid "Examples"
-msgstr ""
+msgstr "範例"
 
 #: ../../../../litestar/app.py:docstring of
 #: litestar.app.Litestar.get_handler_index_by_name:7

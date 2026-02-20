@@ -35,7 +35,7 @@ msgstr ""
 
 #: ../../../reference/channels/backends/redis.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/channels/backends/redis.py:docstring of
 #: litestar.channels.backends.redis.RedisChannelsBackend.__init__:3

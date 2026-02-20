@@ -94,7 +94,7 @@ msgstr ""
 
 #: ../../../reference/template.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/template/__init__.py:docstring of
 #: litestar.template.base.TemplateEngineProtocol.__init__:3

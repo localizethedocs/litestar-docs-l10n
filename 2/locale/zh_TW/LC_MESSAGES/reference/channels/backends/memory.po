@@ -50,7 +50,7 @@ msgstr ""
 
 #: ../../../reference/channels/backends/memory.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/channels/backends/memory.py:docstring of
 #: litestar.channels.backends.memory.MemoryChannelsBackend.publish:4

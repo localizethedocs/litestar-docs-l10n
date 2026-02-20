@@ -224,7 +224,7 @@ msgstr ""
 
 #: ../../../topics/deployment/supervisor.rst:0
 msgid "Alias Examples"
-msgstr ""
+msgstr "別名範例"
 
 #: ../../../topics/deployment/supervisor.rst:107
 msgid "Example commands provided by the alias file"
@@ -300,7 +300,7 @@ msgstr ""
 
 #: ../../../topics/deployment/supervisor.rst:169
 msgid "Update Script"
-msgstr ""
+msgstr "更新腳本"
 
 #: ../../../topics/deployment/supervisor.rst:171
 msgid ""

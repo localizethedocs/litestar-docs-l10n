@@ -42,7 +42,7 @@ msgstr ""
 
 #: ../../../reference/data_extractors.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/data_extractors.py:docstring of
 #: litestar.data_extractors.ConnectionDataExtractor.__init__:3

@@ -38,7 +38,7 @@ msgstr ""
 
 #: ../../../reference/response/streaming.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/response/streaming.py:docstring of
 #: litestar.response.streaming.ASGIStreamingResponse.__init__:3

@@ -40,7 +40,7 @@ msgstr ""
 
 #: ../../../reference/dto/data_structures.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/dto/data_structures.py:docstring of
 #: litestar.dto.data_structures.DTOData.create_instance:3

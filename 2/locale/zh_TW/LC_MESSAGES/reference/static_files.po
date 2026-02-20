@@ -39,7 +39,7 @@ msgstr ""
 
 #: ../../../reference/static_files.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/static_files/__init__.py:docstring of
 #: litestar.static_files.base.StaticFiles.__call__:3

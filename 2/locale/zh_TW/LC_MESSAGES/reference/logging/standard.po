@@ -38,7 +38,7 @@ msgstr ""
 
 #: ../../../reference/logging/standard.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/logging/standard.py:docstring of
 #: litestar.logging.standard.LoggingQueueListener.__init__:3
