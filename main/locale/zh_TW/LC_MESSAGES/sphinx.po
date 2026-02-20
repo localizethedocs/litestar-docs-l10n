@@ -68,19 +68,19 @@ msgstr "發行版"
 #: conf.py:353
 msgid ""
 "Explore the release process, versioning, and deprecation policy for Litestar"
-msgstr ""
+msgstr "探索 Litestar 的發行過程、版本控制與棄用方針"
 
 #: conf.py:360
 msgid "Release notes"
-msgstr ""
+msgstr "發行備註"
 
 #: conf.py:363
 msgid "What's new in 3.0"
-msgstr ""
+msgstr "3.0 版本的新內容"
 
 #: conf.py:364
 msgid "Explore the new features in Litestar 3.0"
-msgstr ""
+msgstr "探索 Litestar 3.0 的新功能"
 
 #: conf.py:368
 msgid "3.x Changelog"
@@ -88,23 +88,23 @@ msgstr "3.x 變更日誌"
 
 #: conf.py:369
 msgid "All changes in the 3.x series"
-msgstr ""
+msgstr "3.x 系列的所有變更"
 
 #: conf.py:373
 msgid "2.x Changelog"
-msgstr ""
+msgstr "2.x 變更日誌"
 
 #: conf.py:374
 msgid "All changes in the 2.x series"
-msgstr ""
+msgstr "2.x 系列的所有變更"
 
 #: conf.py:380
 msgid "Help"
-msgstr ""
+msgstr "幫助"
 
 #: conf.py:383
 msgid "Discord Help Forum"
-msgstr ""
+msgstr "Discord 幫助論壇"
 
 #: conf.py:384
 msgid "Dedicated Discord help forum"

@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../release-notes/2.x-changelog.rst:4
 msgid "2.x Changelog"
-msgstr ""
+msgstr "2.x 變更日誌"
 
 #: ../../../release-notes/2.x-changelog.rst:13
 msgid ""
