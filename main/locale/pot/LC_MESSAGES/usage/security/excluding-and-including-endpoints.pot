@@ -1,0 +1,155 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../usage/security/excluding-and-including-endpoints.rst:2
+msgid "Excluding and including endpoints"
+msgstr ""
+
+#: ../../../usage/security/excluding-and-including-endpoints.rst:4
+msgid ""
+"Please make sure you read the :doc:`security backends documentation </usage/"
+"security/security-backends>` first for learning how to set up a security "
+"backend. This section focuses on configuring the ``exclude`` rule for those "
+"backends."
+msgstr ""
+
+#: ../../../usage/security/excluding-and-including-endpoints.rst:7
+msgid ""
+"There are multiple ways for including or excluding endpoints in the "
+"authentication flow. The default rules are configured in the ``Auth`` object "
+"used (subclass of :class:`~.security.base.AbstractSecurityConfig`). The "
+"examples below use :class:`~.security.session_auth.auth.SessionAuth` but it "
+"is the same for :class:`~.security.jwt.auth.JWTAuth` and :class:`~.security."
+"jwt.auth.JWTCookieAuth`."
+msgstr ""
+
+#: ../../../usage/security/excluding-and-including-endpoints.rst:13
+msgid "Excluding routes"
+msgstr ""
+
+#: ../../../usage/security/excluding-and-including-endpoints.rst:15
+msgid ""
+"The ``exclude`` argument takes a :class:`string <str>` or :class:`list` of :"
+"class:`strings <str>` that are interpreted as regex patterns. For example, "
+"the configuration below would apply authentication to all endpoints except "
+"those where the route starts with ``/login``, ``/signup``, or ``/schema``. "
+"Thus, one does not have to exclude ``/schema/swagger`` as well - it is "
+"included in the ``/schema`` pattern."
+msgstr ""
+
+#: ../../../usage/security/excluding-and-including-endpoints.rst:22
+msgid ""
+"Passing ``/`` will disable authentication for all routes, since, as a regex, "
+"it matches *every* path."
+msgstr ""
+
+#: ../../../usage/security/excluding-and-including-endpoints.rst:26
+msgid ""
+"session_auth = SessionAuth[User, ServerSideSessionBackend](\n"
+"retrieve_user_handler=retrieve_user_handler,\n"
+"# we must pass a config for a session backend.\n"
+"# all session backends are supported\n"
+"session_backend_config=ServerSideSessionConfig(),\n"
+"# exclude any URLs that should not have authentication.\n"
+"# We exclude the documentation URLs, signup and login.\n"
+"exclude=[\"/login\", \"/signup\", \"/schema\"],\n"
+")\n"
+"..."
+msgstr ""
+
+#: ../../../usage/security/excluding-and-including-endpoints.rst:39
+msgid "Including routes"
+msgstr ""
+
+#: ../../../usage/security/excluding-and-including-endpoints.rst:41
+msgid ""
+"Since the exclusion rules are evaluated as regex, it is possible to pass a "
+"rule that inverts exclusion - meaning, no path but the one specified in the "
+"pattern will be protected by authentication. In the example below, only "
+"endpoints under the ``/secured`` route will require authentication - all "
+"other routes do not."
+msgstr ""
+
+#: ../../../usage/security/excluding-and-including-endpoints.rst:46
+msgid ""
+"...\n"
+"session_auth = SessionAuth[User, ServerSideSessionBackend](\n"
+"retrieve_user_handler=retrieve_user_handler,\n"
+"# we must pass a config for a session backend.\n"
+"# all session backends are supported\n"
+"session_backend_config=ServerSideSessionConfig(),\n"
+"# exclude any URLs that should not have authentication.\n"
+"# We exclude the documentation URLs, signup and login.\n"
+"exclude=[r\"^(?!.*\\/secured$).*$\"],\n"
+")\n"
+"..."
+msgstr ""
+
+#: ../../../usage/security/excluding-and-including-endpoints.rst:60
+msgid "Exclude from auth"
+msgstr ""
+
+#: ../../../usage/security/excluding-and-including-endpoints.rst:61
+msgid ""
+"Sometimes, you might want to apply authentication to all endpoints under a "
+"route but a few selected. In this case, you can pass "
+"``exclude_from_auth=True`` to the route handler as shown below."
+msgstr ""
+
+#: ../../../usage/security/excluding-and-including-endpoints.rst:65
+msgid ""
+"...\n"
+"@get(\"/secured\")\n"
+"def secured_route() -> Any:\n"
+"    ...\n"
+"\n"
+"@get(\"/unsecured\", exclude_from_auth=True)\n"
+"def unsecured_route() -> Any:\n"
+"    ...\n"
+"..."
+msgstr ""
+
+#: ../../../usage/security/excluding-and-including-endpoints.rst:76
+msgid ""
+"You can set an alternative option key in the security configuration, e.g., "
+"you can use ``no_auth`` instead of ``exclude_from_auth``."
+msgstr ""
+
+#: ../../../usage/security/excluding-and-including-endpoints.rst:80
+msgid ""
+"...\n"
+"@get(\"/secured\")\n"
+"def secured_route() -> Any:\n"
+"    ...\n"
+"\n"
+"@get(\"/unsecured\", no_auth=True)\n"
+"def unsecured_route() -> Any:\n"
+"    ...\n"
+"\n"
+"session_auth = SessionAuth[User, ServerSideSessionBackend](\n"
+"retrieve_user_handler=retrieve_user_handler,\n"
+"# we must pass a config for a session backend.\n"
+"# all session backends are supported\n"
+"session_backend_config=ServerSideSessionConfig(),\n"
+"# exclude any URLs that should not have authentication.\n"
+"# We exclude the documentation URLs, signup and login.\n"
+"exclude=[\"/login\", \"/signup\", \"/schema\"],\n"
+"exclude_opt_key=\"no_auth\"  # default value is `exclude_from_auth`\n"
+")\n"
+"..."
+msgstr ""

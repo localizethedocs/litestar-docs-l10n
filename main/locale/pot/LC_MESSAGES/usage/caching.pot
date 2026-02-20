@@ -1,0 +1,248 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../usage/caching.rst:2
+msgid "Caching"
+msgstr ""
+
+#: ../../../usage/caching.rst:5
+msgid "Caching responses"
+msgstr ""
+
+#: ../../../usage/caching.rst:7
+msgid ""
+"Sometimes it's desirable to cache some responses, especially if these "
+"involve expensive calculations, or when polling is expected. Litestar comes "
+"with a simple mechanism for caching:"
+msgstr ""
+
+#: ../../../usage/caching.rst:11
+msgid ""
+"from litestar import get\n"
+"\n"
+"@get(\"/cached\", cache=True)\n"
+"async def my_cached_handler() -> str:\n"
+"    return \"cached\""
+msgstr ""
+
+#: ../../../usage/caching.rst:14
+msgid ""
+"By setting :paramref:`~litestar.handlers.HTTPRouteHandler.cache` to "
+"``True``, the response from the handler will be cached. If no "
+"``cache_key_builder`` is set in the route handler, caching for the route "
+"handler will be enabled for the :attr:`~.config.response_cache."
+"ResponseCacheConfig.default_expiration`."
+msgstr ""
+
+#: ../../../usage/caching.rst:18
+msgid ""
+"If the default :paramref:`~litestar.config.response_cache."
+"ResponseCacheConfig.default_expiration` is set to ``None``, setting up the "
+"route handler with :paramref:`~litestar.handlers.HTTPRouteHandler.cache` set "
+"to ``True`` will keep the response in cache indefinitely."
+msgstr ""
+
+#: ../../../usage/caching.rst:22
+msgid ""
+"Alternatively you can specify the number of seconds to cache the responses "
+"from the given handler like so:"
+msgstr ""
+
+#: ../../../usage/caching.rst:25
+msgid ""
+"Caching the response for 120 seconds by setting the :paramref:`~litestar."
+"handlers.HTTPRouteHandler.cache` parameter to the number of seconds to cache "
+"the response."
+msgstr ""
+
+#: ../../../usage/caching.rst:25
+msgid ""
+"from litestar import get\n"
+"\n"
+"@get(\"/cached-seconds\", cache=120)  # seconds\n"
+"async def my_cached_handler_seconds() -> str:\n"
+"    return \"cached for 120 seconds\""
+msgstr ""
+
+#: ../../../usage/caching.rst:31
+msgid ""
+"If you want the response to be cached indefinitely, you can pass the :class:"
+"`~.config.response_cache.CACHE_FOREVER` sentinel instead:"
+msgstr ""
+
+#: ../../../usage/caching.rst:35
+msgid ""
+"Caching the response indefinitely by setting the :paramref:`~litestar."
+"handlers.HTTPRouteHandler.cache` parameter to :class:`~litestar.config."
+"response_cache.CACHE_FOREVER`."
+msgstr ""
+
+#: ../../../usage/caching.rst:35
+msgid ""
+"from litestar import get\n"
+"from litestar.config.response_cache import CACHE_FOREVER\n"
+"\n"
+"\n"
+"@get(\"/cached-forever\", cache=CACHE_FOREVER)\n"
+"async def my_cached_handler_forever() -> str:\n"
+"    return \"cached forever\""
+msgstr ""
+
+#: ../../../usage/caching.rst:42
+msgid "Configuration"
+msgstr ""
+
+#: ../../../usage/caching.rst:44
+msgid ""
+"You can configure caching behaviour on the application level by passing an "
+"instance of :class:`~.config.response_cache.ResponseCacheConfig` to the :"
+"class:`Litestar instance <.app.Litestar>`."
+msgstr ""
+
+#: ../../../usage/caching.rst:48
+msgid "Changing where data is stored"
+msgstr ""
+
+#: ../../../usage/caching.rst:50
+msgid ""
+"By default, caching will use the :class:`~.stores.memory.MemoryStore`, but "
+"it can be configured with any :class:`~.stores.base.Store`, for example :"
+"class:`~.stores.redis.RedisStore`:"
+msgstr ""
+
+#: ../../../usage/caching.rst:54
+msgid "Using Redis as the cache store."
+msgstr ""
+
+#: ../../../usage/caching.rst:54
+msgid ""
+"import asyncio\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.config.response_cache import ResponseCacheConfig\n"
+"from litestar.stores.redis import RedisStore\n"
+"\n"
+"\n"
+"@get(cache=10)\n"
+"async def something() -> str:\n"
+"    await asyncio.sleep(1)\n"
+"    return \"something\"\n"
+"\n"
+"\n"
+"redis_store = RedisStore.with_client(url=\"redis://localhost/\", port=6379, "
+"db=0)\n"
+"cache_config = ResponseCacheConfig(store=\"redis_backed_store\")\n"
+"app = Litestar(\n"
+"    [something],\n"
+"    stores={\"redis_backed_store\": redis_store},\n"
+"    response_cache_config=cache_config,\n"
+")"
+msgstr ""
+
+#: ../../../usage/caching.rst:58
+msgid "Specifying a cache key builder"
+msgstr ""
+
+#: ../../../usage/caching.rst:60
+msgid ""
+"Litestar uses the request's path + sorted query parameters as the cache key. "
+"This can be adjusted by providing a \"key builder\" function, either at "
+"application or route handler level."
+msgstr ""
+
+#: ../../../usage/caching.rst:64
+msgid "Using a custom cache key builder."
+msgstr ""
+
+#: ../../../usage/caching.rst:64
+msgid ""
+"from litestar import Litestar, Request\n"
+"from litestar.config.response_cache import ResponseCacheConfig\n"
+"\n"
+"\n"
+"def key_builder(request: Request) -> str:\n"
+"    return request.url.path + request.headers.get(\"my-header\", \"\")\n"
+"\n"
+"\n"
+"app = Litestar([], "
+"response_cache_config=ResponseCacheConfig(key_builder=key_builder))"
+msgstr ""
+
+#: ../../../usage/caching.rst:68
+msgid "Using a custom cache key builder for a specific route handler."
+msgstr ""
+
+#: ../../../usage/caching.rst:68
+msgid ""
+"from litestar import Litestar, Request, get\n"
+"\n"
+"\n"
+"def key_builder(request: Request) -> str:\n"
+"    return request.url.path + request.headers.get(\"my-header\", \"\")\n"
+"\n"
+"\n"
+"@get(\"/cached-path\", cache=True, cache_key_builder=key_builder)\n"
+"async def cached_handler() -> str:\n"
+"    return \"cached\"\n"
+"\n"
+"\n"
+"app = Litestar([cached_handler])"
+msgstr ""
+
+#: ../../../usage/caching.rst:72
+msgid "Using the cache_response_filter"
+msgstr ""
+
+#: ../../../usage/caching.rst:74
+msgid ""
+"The :attr:`~.config.response_cache.ResponseCacheConfig."
+"cache_response_filter` can be customized to implement any caching logic "
+"based on the application's needs. For example, you might want to cache only "
+"successful responses, or cache responses based on certain headers or content."
+msgstr ""
+
+#: ../../../usage/caching.rst:78
+msgid "Using the cache_response_filter to customize caching behavior."
+msgstr ""
+
+#: ../../../usage/caching.rst:78
+msgid ""
+"from litestar import Litestar\n"
+"from litestar.config.response_cache import ResponseCacheConfig\n"
+"from litestar.types import HTTPScope\n"
+"\n"
+"\n"
+"def custom_cache_response_filter(_: HTTPScope, status_code: int) -> bool:\n"
+"    # Cache only 2xx responses\n"
+"    return 200 <= status_code < 300\n"
+"\n"
+"\n"
+"response_cache_config = "
+"ResponseCacheConfig(cache_response_filter=custom_cache_response_filter)\n"
+"\n"
+"# Create the app with a custom cache response filter\n"
+"app = Litestar(\n"
+"    response_cache_config=response_cache_config,\n"
+")"
+msgstr ""
+
+#: ../../../usage/caching.rst:81
+msgid ""
+"In this example, the `custom_cache_response_filter` function caches only "
+"successful (2xx) responses."
+msgstr ""

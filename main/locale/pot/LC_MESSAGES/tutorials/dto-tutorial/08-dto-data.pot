@@ -1,0 +1,118 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../tutorials/dto-tutorial/08-dto-data.rst:2
+msgid "Accessing the data"
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/08-dto-data.rst:4
+msgid ""
+"Sometimes, it doesn't make sense for data to be immediately parsed into an "
+"instance of the target class. We just saw an example of this in the previous "
+"section, :ref:`read-only-fields`. When required fields are excluded from, or "
+"do not exist in the client submitted data we will get an error upon "
+"instantiation of the class."
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/08-dto-data.rst:8
+msgid ""
+"The solution to this is the :class:`DTOData <litestar.dto.data_structures."
+"DTOData>` type."
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/08-dto-data.rst:11
+msgid ""
+"from __future__ import annotations\n"
+"\n"
+"from dataclasses import dataclass\n"
+"\n"
+"from litestar import Litestar, post\n"
+"from litestar.dto import DataclassDTO, DTOConfig, DTOData\n"
+"\n"
+"\n"
+"@dataclass\n"
+"class Person:\n"
+"    name: str\n"
+"    age: int\n"
+"    email: str\n"
+"    id: int\n"
+"\n"
+"\n"
+"class ReadDTO(DataclassDTO[Person]):\n"
+"    config = DTOConfig(exclude={\"email\"})\n"
+"\n"
+"\n"
+"class WriteDTO(DataclassDTO[Person]):\n"
+"    config = DTOConfig(exclude={\"id\"})\n"
+"\n"
+"\n"
+"@post(\"/person\", dto=WriteDTO, return_dto=ReadDTO, sync_to_thread=False)\n"
+"def create_person(data: DTOData[Person]) -> Person:\n"
+"    # Logic for persisting the person goes here\n"
+"    return data.create_instance(id=1)\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[create_person])"
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/08-dto-data.rst:15
+msgid ""
+"The :class:`DTOData <litestar.dto.data_structures.DTOData>` type is a "
+"container for data that can be used to create instances, and access the "
+"underlying parsed and validated data. In our latest adjustments, we import "
+"that from ``litestar.dto.factory``."
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/08-dto-data.rst:19
+msgid ""
+"The handler function's data parameter type is changed to ``DTOData[Person]`` "
+"instead of ``Person``, and accordingly, the value injected to represent the "
+"inbound client data will be an instance of :class:`DTOData <litestar.dto."
+"data_structures.DTOData>`."
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/08-dto-data.rst:23
+msgid ""
+"In the handler, we produce a value for the ``id`` field, and create an "
+"instance of ``Person`` using the :meth:`create_instance <litestar.dto."
+"data_structures.DTOData.create_instance>` method of the ``DTOData`` instance."
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/08-dto-data.rst:26
+msgid "And our app is back to a working state:"
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/08-dto-data.rst:32
+msgid ""
+"To provide values for nested attributes you can use the \"double-"
+"underscore\" syntax as a keyword argument to the :meth:`create_instance() "
+"<litestar.dto.data_structures.DTOData.create_instance>` method. For example, "
+"``address__id=1`` will set the ``id`` attribute of the ``address`` attribute "
+"of the created instance."
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/08-dto-data.rst:36
+msgid "See :ref:`dto-create-instance-nested-data` for more information."
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/08-dto-data.rst:38
+msgid ""
+"The :class:`DTOData <litestar.dto.data_structures.DTOData>` type has some "
+"other useful methods, and we'll take a look at those in the next section: :"
+"ref:`updating`."
+msgstr ""

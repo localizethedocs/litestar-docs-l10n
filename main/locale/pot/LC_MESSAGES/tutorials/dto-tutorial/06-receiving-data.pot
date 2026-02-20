@@ -1,0 +1,95 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../tutorials/dto-tutorial/06-receiving-data.rst:2
+msgid "Receiving data"
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/06-receiving-data.rst:4
+msgid ""
+"So far, we've only returned data to the client, however, this is only half "
+"of the story. We also need to be able to control the data that we receive "
+"from the client."
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/06-receiving-data.rst:7
+msgid "Here's the code we'll use to start:"
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/06-receiving-data.rst:10
+msgid ""
+"from __future__ import annotations\n"
+"\n"
+"from dataclasses import dataclass\n"
+"\n"
+"from litestar import Litestar, post\n"
+"from litestar.dto import DataclassDTO, DTOConfig\n"
+"\n"
+"\n"
+"@dataclass\n"
+"class Person:\n"
+"    name: str\n"
+"    age: int\n"
+"    email: str\n"
+"\n"
+"\n"
+"class ReadDTO(DataclassDTO[Person]):\n"
+"    config = DTOConfig(exclude={\"email\"})\n"
+"\n"
+"\n"
+"@post(\"/person\", return_dto=ReadDTO, sync_to_thread=False)\n"
+"def create_person(data: Person) -> Person:\n"
+"    # Logic for persisting the person goes here\n"
+"    return data\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[create_person])"
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/06-receiving-data.rst:13
+msgid ""
+"To simplify our demonstration, we've reduced our data model back down to a "
+"single ``Person`` class, with ``name`` ``age`` and ``email`` attributes."
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/06-receiving-data.rst:16
+msgid ""
+"As before, ``ReadDTO`` is configured for the handler, and excludes the "
+"``email`` attribute from return payloads."
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/06-receiving-data.rst:18
+msgid ""
+"Our handler is now a :class:`@post() <litestar.handlers.post>` handler, that "
+"is annotated to both accept and return an instance of ``Person``."
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/06-receiving-data.rst:21
+msgid ""
+"Litestar can natively decode request payloads into Python :func:`dataclasses "
+"<dataclasses.dataclass>`, so we don't *need* a DTO defined for the inbound "
+"data for this script to work."
+msgstr ""
+
+#: ../../../tutorials/dto-tutorial/06-receiving-data.rst:24
+msgid ""
+"Now that we need to send data to the server to test our program, you can use "
+"a tool like `Postman <https://www.postman.com/>`_ or `Posting <https://"
+"github.com/darrenburns/posting?tab=readme-ov-file#posting>`_. Here's an "
+"example of a request/response payload:"
+msgstr ""

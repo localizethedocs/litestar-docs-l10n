@@ -1,0 +1,67 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../usage/dto/2-creating-custom-dto-classes.rst:2
+msgid "Implementing Custom DTO Classes"
+msgstr ""
+
+#: ../../../usage/dto/2-creating-custom-dto-classes.rst:4
+msgid ""
+"While Litestar maintains a suite of DTO factories, it is possible to create "
+"your own DTOs. To do so, you must implement the :class:`AbstractDTO "
+"<litestar.dto.base_dto.AbstractDTO>` abc."
+msgstr ""
+
+#: ../../../usage/dto/2-creating-custom-dto-classes.rst:7
+msgid ""
+"The following is a description of the methods of the protocol, and how they "
+"are used by Litestar. For detailed information on the signature of each "
+"method, see the :class:`reference docs <litestar.dto.base_dto.AbstractDTO>`."
+msgstr ""
+
+#: ../../../usage/dto/2-creating-custom-dto-classes.rst:11
+msgid "Abstract Methods"
+msgstr ""
+
+#: ../../../usage/dto/2-creating-custom-dto-classes.rst:13
+msgid ""
+"These methods must be implemented on any :class:`AbstractDTO <litestar.dto."
+"base_dto.AbstractDTO>` subtype."
+msgstr ""
+
+#: ../../../usage/dto/2-creating-custom-dto-classes.rst:16
+msgid "``generate_field_definitions``"
+msgstr ""
+
+#: ../../../usage/dto/2-creating-custom-dto-classes.rst:18
+msgid ""
+"This method receives the model type for the DTO and it should return a "
+"generator yielding :class:`DTOFieldDefinition<litestar.dto.data_structures."
+"DTOFieldDefinition>` instances corresponding with the model fields."
+msgstr ""
+
+#: ../../../usage/dto/2-creating-custom-dto-classes.rst:23
+msgid "``detect_nested_field``"
+msgstr ""
+
+#: ../../../usage/dto/2-creating-custom-dto-classes.rst:25
+msgid ""
+"This method receives a :class:`FieldDefinition<litestar.typing."
+"FieldDefinition>` instance and it should return a boolean indicating whether "
+"the field is a nested model field."
+msgstr ""

@@ -1,0 +1,55 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/di.rst:2
+msgid "di"
+msgstr ""
+
+#: ../../../../litestar/di.py:docstring of litestar.di.Provide:1
+msgid "Bases: :py:class:`object`"
+msgstr ""
+
+#: ../../../../litestar/di.py:docstring of litestar.di.Provide:1
+msgid "Wrapper class for dependency injection"
+msgstr ""
+
+#: ../../../../litestar/di.py:docstring of litestar.di.Provide.__init__:1
+msgid "Initialize ``Provide``"
+msgstr ""
+
+#: ../../../reference/di.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../litestar/di.py:docstring of litestar.di.Provide.__init__:3
+msgid ""
+"Callable to call or class to instantiate. The result is then injected as a "
+"dependency."
+msgstr ""
+
+#: ../../../../litestar/di.py:docstring of litestar.di.Provide.__init__:4
+msgid "Cache the dependency return value. Defaults to False."
+msgstr ""
+
+#: ../../../../litestar/di.py:docstring of litestar.di.Provide.__init__:5
+msgid "Run sync code in an async thread. Defaults to False."
+msgstr ""
+
+#: ../../../../litestar/di.py:docstring of litestar.di.Provide.__call__:1
+msgid "Call the provider's dependency."
+msgstr ""
