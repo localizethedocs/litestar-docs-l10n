@@ -34,7 +34,7 @@ msgstr ""
 #: ../../../../litestar/logging/standard.py:docstring of
 #: litestar.logging.standard.LoggingQueueListener.__init__:1
 msgid "Initialize ``LoggingQueueListener``."
-msgstr ""
+msgstr "初始化 ``LoggingQueueListener``。"
 
 #: ../../../reference/logging/standard.rst:0
 msgid "Parameters"
@@ -81,7 +81,7 @@ msgstr ""
 #: ../../../../litestar/logging/standard.py:docstring of
 #: litestar.logging.standard.QueueListenerHandler.__init__:1
 msgid "Initialize ``QueueListenerHandler``."
-msgstr ""
+msgstr "初始化 ``QueueListenerHandler``。"
 
 #: ../../../../litestar/logging/standard.py:docstring of
 #: litestar.logging.standard.QueueListenerHandler.__init__:3

@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../reference/contrib/htmx.rst:2
 msgid "HTMX"
-msgstr ""
+msgstr "HTMX"
 
 #: ../../../reference/contrib/htmx.rst:5
 msgid "Request"

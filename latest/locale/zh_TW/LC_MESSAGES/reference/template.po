@@ -183,7 +183,7 @@ msgstr ""
 #: ../../../../litestar/template/__init__.py:docstring of
 #: litestar.template.base.TemplateProtocol:1
 msgid "Bases: :py:class:`~typing.Protocol`"
-msgstr ""
+msgstr "基底類別：:py:class:`~typing.Protocol`"
 
 #: ../../../../litestar/template/__init__.py:docstring of
 #: litestar.template.base.TemplateProtocol:1

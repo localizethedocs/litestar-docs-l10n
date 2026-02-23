@@ -90,7 +90,7 @@ msgstr ""
 #: ../../../../litestar/contrib/mako.py:docstring of
 #: litestar.contrib.mako.MakoTemplateEngine.__init__:1
 msgid "Initialize template engine."
-msgstr ""
+msgstr "初始化模板引擎。"
 
 #: ../../../../litestar/contrib/mako.py:docstring of
 #: litestar.contrib.mako.MakoTemplateEngine.__init__:3

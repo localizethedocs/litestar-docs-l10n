@@ -24,7 +24,7 @@ msgstr ""
 #: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
 #: litestar.plugins.pydantic.plugins.di.PydanticDIPlugin:1
 msgid "Bases: :py:class:`~litestar.plugins.base.DIPlugin`"
-msgstr ""
+msgstr "基底類別：:py:class:`~litestar.plugins.base.DIPlugin`"
 
 #: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
 #: litestar.plugins.pydantic.plugins.di.PydanticDIPlugin.get_typed_init:1
@@ -121,7 +121,7 @@ msgstr ""
 #: litestar.plugins.pydantic.PydanticPlugin:1
 #: litestar.plugins.pydantic.plugins.init.PydanticInitPlugin:1
 msgid "Bases: :py:class:`~litestar.plugins.base.InitPlugin`"
-msgstr ""
+msgstr "基底類別：:py:class:`~litestar.plugins.base.InitPlugin`"
 
 #: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
 #: litestar.plugins.pydantic.PydanticPlugin.__init__:1

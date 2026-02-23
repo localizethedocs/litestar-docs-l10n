@@ -25,7 +25,7 @@ msgstr ""
 #: litestar.openapi.config.OpenAPIConfig:1
 #: litestar.openapi.datastructures.ResponseSpec:1
 msgid "Bases: :py:class:`object`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../litestar/openapi/__init__.py:docstring of
 #: litestar.openapi.config.OpenAPIConfig:1
@@ -60,7 +60,7 @@ msgstr ""
 
 #: ../../../../docstring of litestar.openapi.OpenAPIConfig.external_docs:1
 msgid "Links to external documentation."
-msgstr ""
+msgstr "外部文件連結。"
 
 #: ../../../../docstring of litestar.openapi.OpenAPIConfig.external_docs:3
 msgid ""
@@ -233,7 +233,7 @@ msgstr ""
 
 #: ../../../../docstring of litestar.openapi.OpenAPIConfig.title:1
 msgid "Title of API documentation."
-msgstr ""
+msgstr "API 文件的題名。"
 
 #: ../../../../docstring of litestar.openapi.OpenAPIConfig.version:1
 msgid "API version, e.g. '1.0.0'."

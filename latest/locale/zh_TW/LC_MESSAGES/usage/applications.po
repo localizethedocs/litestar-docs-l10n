@@ -296,7 +296,7 @@ msgstr ""
 #: ../../../usage/applications.rst:97 ../../../usage/applications.rst:122
 #: ../../../usage/applications.rst:134
 msgid "Using Application State"
-msgstr ""
+msgstr "使用應用狀態"
 
 #: ../../../usage/applications.rst:99
 msgid ""
@@ -394,7 +394,7 @@ msgstr ""
 
 #: ../../../usage/applications.rst:128
 msgid "Initializing Application State"
-msgstr ""
+msgstr "初始化應用狀態"
 
 #: ../../../usage/applications.rst:130
 msgid ""
@@ -434,6 +434,18 @@ msgid ""
 "\n"
 "app = Litestar(route_handlers=[handler], state=State({\"count\": 100}))"
 msgstr ""
+"from typing import Any\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.datastructures import State\n"
+"\n"
+"\n"
+"@get(\"/\", sync_to_thread=False)\n"
+"def handler(state: State) -> dict[str, Any]:\n"
+"    return state.dict()\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[handler], state=State({\"count\": 100}))"
 
 #: ../../../usage/applications.rst:137
 msgid ""
@@ -788,19 +800,19 @@ msgstr ""
 
 #: ../../../usage/applications.rst:251
 msgid ":ref:`after_request <after_request>`"
-msgstr ""
+msgstr ":ref:`after_request <after_request>`"
 
 #: ../../../usage/applications.rst:252
 msgid ":ref:`after_response <after_response>`"
-msgstr ""
+msgstr ":ref:`after_response <after_response>`"
 
 #: ../../../usage/applications.rst:253
 msgid ":ref:`before_request <before_request>`"
-msgstr ""
+msgstr ":ref:`before_request <before_request>`"
 
 #: ../../../usage/applications.rst:254
 msgid ":ref:`cache_control <usage/responses:cache control>`"
-msgstr ""
+msgstr ":ref:`cache_control <usage/responses:cache control>`"
 
 #: ../../../usage/applications.rst:255
 msgid ":doc:`dependencies </usage/dependency-injection>`"

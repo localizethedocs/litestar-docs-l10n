@@ -24,7 +24,7 @@ msgstr ""
 #: ../../../../litestar/dto/config.py:docstring of
 #: litestar.dto.config.DTOConfig:1
 msgid "Bases: :py:class:`object`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../litestar/dto/config.py:docstring of
 #: litestar.dto.config.DTOConfig:1

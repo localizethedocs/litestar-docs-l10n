@@ -225,7 +225,7 @@ msgstr ""
 #: ../../../../litestar/params.py:docstring of
 #: litestar.params.DependencyKwarg:1 litestar.params.KwargDefinition:1
 msgid "Bases: :py:class:`object`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../litestar/params.py:docstring of
 #: litestar.params.DependencyKwarg:1

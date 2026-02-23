@@ -24,7 +24,7 @@ msgstr ""
 #: ../../../../litestar/response/sse.py:docstring of
 #: litestar.response.sse.ServerSentEventMessage:1
 msgid "Bases: :py:class:`object`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../litestar/response/sse.py:docstring of
 #: litestar.response.sse.ServerSentEventMessage:1

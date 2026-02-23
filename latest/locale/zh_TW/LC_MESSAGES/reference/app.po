@@ -29,7 +29,7 @@ msgstr ""
 
 #: ../../../../litestar/app.py:docstring of litestar.app.HandlerIndex:1
 msgid "Bases: :py:class:`~typing.TypedDict`"
-msgstr ""
+msgstr "基底類別：:py:class:`~typing.TypedDict`"
 
 #: ../../../../litestar/app.py:docstring of litestar.app.HandlerIndex:1
 msgid "Map route handler names to a mapping of paths + route handler."
@@ -59,7 +59,7 @@ msgstr ""
 
 #: ../../../../litestar/app.py:docstring of litestar.app.Litestar:1
 msgid "Bases: :py:class:`~litestar.router.Router`"
-msgstr ""
+msgstr "基底類別：:py:class:`~litestar.router.Router`"
 
 #: ../../../../litestar/app.py:docstring of litestar.app.Litestar:1
 msgid "The Litestar application."
@@ -74,7 +74,7 @@ msgstr ""
 
 #: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:1
 msgid "Initialize a ``Litestar`` application."
-msgstr ""
+msgstr "初始化 ``Litestar`` 應用。"
 
 #: ../../../reference/app.rst:0
 msgid "Parameters"
@@ -406,11 +406,11 @@ msgstr ""
 
 #: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__call__:6
 msgid "The ASGI receive function."
-msgstr ""
+msgstr "ASGI 接收函式。"
 
 #: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__call__:7
 msgid "The ASGI send function."
-msgstr ""
+msgstr "ASGI 發送函式。"
 
 #: ../../../reference/app.rst:0
 msgid "Returns"

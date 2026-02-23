@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../tutorials/sqlalchemy/3-init-plugin.rst:2
 msgid "Using the init plugin"
-msgstr ""
+msgstr "使用初始化插件"
 
 #: ../../../tutorials/sqlalchemy/3-init-plugin.rst:4
 msgid ""

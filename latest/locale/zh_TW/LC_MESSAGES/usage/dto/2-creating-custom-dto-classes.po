@@ -47,7 +47,7 @@ msgstr ""
 
 #: ../../../usage/dto/2-creating-custom-dto-classes.rst:16
 msgid "``generate_field_definitions``"
-msgstr ""
+msgstr "``generate_field_definitions``"
 
 #: ../../../usage/dto/2-creating-custom-dto-classes.rst:18
 msgid ""

@@ -31,7 +31,7 @@ msgstr ""
 
 #: ../../../usage/cli.rst:12
 msgid "Enabling all CLI features"
-msgstr ""
+msgstr "啟用所有 CLI 功能"
 
 #: ../../../usage/cli.rst:14
 msgid ""
@@ -46,7 +46,7 @@ msgstr ""
 
 #: ../../../usage/cli.rst:20
 msgid "Install the standard group"
-msgstr ""
+msgstr "安裝標準群組"
 
 #: ../../../usage/cli.rst:20
 msgid "pip install 'litestar[standard]'"
@@ -56,7 +56,7 @@ msgstr ""
 msgid ""
 "Once you have installed ``standard``, you will have access to the ``litestar "
 "run`` command."
-msgstr ""
+msgstr "安裝好 ``standard`` 之後，您就可以使用 ``litestar run`` 命令。"
 
 #: ../../../usage/cli.rst:28
 msgid "Autodiscovery"
@@ -86,7 +86,7 @@ msgstr ""
 
 #: ../../../usage/cli.rst:39
 msgid "Submodules of ``app``"
-msgstr ""
+msgstr "``app`` 的子模組"
 
 #: ../../../usage/cli.rst:40
 msgid "``application.py``"
@@ -98,11 +98,11 @@ msgstr ""
 
 #: ../../../usage/cli.rst:42
 msgid "Submodules of ``application``"
-msgstr ""
+msgstr "``application`` 的子模組"
 
 #: ../../../usage/cli.rst:44
 msgid "Within these locations, Litestar CLI looks for:"
-msgstr ""
+msgstr "在這些位置中，Litestar CLI 會尋找："
 
 #: ../../../usage/cli.rst:46
 msgid ""

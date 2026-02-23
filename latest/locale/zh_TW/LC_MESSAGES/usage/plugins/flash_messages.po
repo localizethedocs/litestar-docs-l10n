@@ -75,7 +75,7 @@ msgstr ""
 
 #: ../../../usage/plugins/flash_messages.rst:0
 msgid "Mako"
-msgstr ""
+msgstr "Mako"
 
 #: ../../../usage/plugins/flash_messages.rst:33
 msgid "Registering the flash message plugin using the Mako templating engine"
@@ -102,7 +102,7 @@ msgstr ""
 
 #: ../../../usage/plugins/flash_messages.rst:0
 msgid "MiniJinja"
-msgstr ""
+msgstr "MiniJinja"
 
 #: ../../../usage/plugins/flash_messages.rst:40
 msgid ""

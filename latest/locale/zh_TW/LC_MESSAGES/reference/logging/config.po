@@ -24,7 +24,7 @@ msgstr ""
 #: ../../../../litestar/logging/config.py:docstring of
 #: litestar.logging.config.BaseLoggingConfig:1
 msgid "Bases: :py:class:`~abc.ABC`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../litestar/logging/config.py:docstring of
 #: litestar.logging.config.BaseLoggingConfig:1
@@ -98,7 +98,7 @@ msgstr ""
 #: litestar.logging.config.LoggingConfig:1
 #: litestar.logging.config.StructLoggingConfig:1
 msgid "Bases: :py:class:`~litestar.logging.config.BaseLoggingConfig`"
-msgstr ""
+msgstr "基底類別：:py:class:`~litestar.logging.config.BaseLoggingConfig`"
 
 #: ../../../../litestar/logging/config.py:docstring of
 #: litestar.logging.config.LoggingConfig:1

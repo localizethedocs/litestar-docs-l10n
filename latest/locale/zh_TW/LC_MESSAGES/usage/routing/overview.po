@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../usage/routing/overview.rst:3
 msgid "Overview"
-msgstr ""
+msgstr "概覽"
 
 #: ../../../usage/routing/overview.rst:6
 msgid "Registering Routes"

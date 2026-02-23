@@ -107,7 +107,7 @@ msgstr ""
 
 #: ../../../release-notes/whats-new-2.rst:54
 msgid "**Enums**"
-msgstr ""
+msgstr "**列舉**"
 
 #: ../../../release-notes/whats-new-2.rst:56
 msgid "``starlite.RequestEncodingType``"
@@ -115,7 +115,7 @@ msgstr ""
 
 #: ../../../release-notes/whats-new-2.rst:56
 msgid ":class:`.enums.RequestEncodingType`"
-msgstr ""
+msgstr ":class:`.enums.RequestEncodingType`"
 
 #: ../../../release-notes/whats-new-2.rst:58
 msgid "``starlite.ScopeType``"
@@ -123,7 +123,7 @@ msgstr ""
 
 #: ../../../release-notes/whats-new-2.rst:58
 msgid ":class:`.enums.ScopeType`"
-msgstr ""
+msgstr ":class:`.enums.ScopeType`"
 
 #: ../../../release-notes/whats-new-2.rst:60
 msgid "``starlite.OpenAPIMediaType``"
@@ -131,7 +131,7 @@ msgstr ""
 
 #: ../../../release-notes/whats-new-2.rst:60
 msgid ":class:`.enums.OpenAPIMediaType`"
-msgstr ""
+msgstr ":class:`.enums.OpenAPIMediaType`"
 
 #: ../../../release-notes/whats-new-2.rst:62
 msgid "**Datastructures**"
@@ -839,7 +839,7 @@ msgstr ""
 
 #: ../../../release-notes/whats-new-2.rst:290
 msgid "SQLAlchemy Plugin"
-msgstr ""
+msgstr "SQLAlchemy 插件"
 
 #: ../../../release-notes/whats-new-2.rst:292
 msgid ""
@@ -1613,7 +1613,7 @@ msgstr ""
 
 #: ../../../release-notes/whats-new-2.rst:585
 msgid "HTMX"
-msgstr ""
+msgstr "HTMX"
 
 #: ../../../release-notes/whats-new-2.rst:587
 msgid ""

@@ -24,7 +24,7 @@ msgstr ""
 #: ../../../../litestar/response/redirect.py:docstring of
 #: litestar.response.redirect.ASGIRedirectResponse:1
 msgid "Bases: :py:class:`~litestar.response.base.ASGIResponse`"
-msgstr ""
+msgstr "基底類別：:py:class:`~litestar.response.base.ASGIResponse`"
 
 #: ../../../../litestar/response/redirect.py:docstring of
 #: litestar.response.redirect.ASGIRedirectResponse:1

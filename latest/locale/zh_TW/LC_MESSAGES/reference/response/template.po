@@ -26,6 +26,7 @@ msgstr ""
 msgid ""
 "Bases: :py:class:`~litestar.response.base.Response`\\ [:py:class:`bytes`]"
 msgstr ""
+"基底類別：:py:class:`~litestar.response.base.Response`\\ [:py:class:`bytes`]"
 
 #: ../../../../litestar/response/template.py:docstring of
 #: litestar.response.template.Template:1

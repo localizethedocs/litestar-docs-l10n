@@ -89,7 +89,7 @@ msgstr ""
 #: ../../../../litestar/types/file_types.py:docstring
 #: litestar.types.file_types.FileInfo:1
 msgid "Bases: :py:class:`~typing.TypedDict`"
-msgstr ""
+msgstr "基底類別：:py:class:`~typing.TypedDict`"
 
 #: ../../../../litestar/types/asgi_types.py:docstring of
 #: litestar.types.asgi_types.ASGIVersion:1
@@ -114,7 +114,7 @@ msgstr ""
 #: litestar.types.asgi_types.HTTPScope:1
 #: litestar.types.asgi_types.WebSocketScope:1
 msgid "Bases: :py:class:`~litestar.types.asgi_types.BaseScope`"
-msgstr ""
+msgstr "基底類別：:py:class:`~litestar.types.asgi_types.BaseScope`"
 
 #: ../../../../litestar/types/asgi_types.py:docstring of
 #: litestar.types.asgi_types.HTTPScope:1
@@ -255,7 +255,7 @@ msgstr ""
 #: ../../../../litestar/types/protocols.py:docstring
 #: litestar.types.protocols.Logger:1
 msgid "Bases: :py:class:`~typing.Protocol`"
-msgstr ""
+msgstr "基底類別：:py:class:`~typing.Protocol`"
 
 #: ../../../../litestar/types/protocols.py:docstring of
 #: litestar.types.protocols.Logger:1
