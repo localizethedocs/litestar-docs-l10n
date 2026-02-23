@@ -24,7 +24,7 @@ msgstr ""
 #: ../../../../litestar/response/base.py:docstring of
 #: litestar.response.base.ASGIResponse:1
 msgid "Bases: :py:class:`object`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../litestar/response/base.py:docstring of
 #: litestar.response.base.ASGIResponse:1
@@ -125,7 +125,7 @@ msgstr ""
 #: litestar.response.base.ASGIResponse.send_body:3
 #: litestar.response.base.ASGIResponse.start_response:3
 msgid "The ASGI send function."
-msgstr ""
+msgstr "ASGI 發送函式。"
 
 #: ../../../../litestar/response/base.py:docstring of
 #: litestar.response.base.ASGIResponse.send_body:1
@@ -136,7 +136,7 @@ msgstr ""
 #: litestar.response.base.ASGIResponse.__call__:4
 #: litestar.response.base.ASGIResponse.send_body:4
 msgid "The ASGI receive function."
-msgstr ""
+msgstr "ASGI 接收函式。"
 
 #: ../../../../litestar/response/base.py:docstring of
 #: litestar.response.base.ASGIResponse.send_body:6

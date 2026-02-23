@@ -52,7 +52,7 @@ msgstr ""
 
 #: ../../../tutorials/todo-app/index.rst:20
 msgid "Mark TODO items as *done*"
-msgstr ""
+msgstr "將待辦事項標註為 *已完成*"
 
 #: ../../../tutorials/todo-app/index.rst:22
 msgid ""

@@ -24,7 +24,7 @@ msgstr ""
 #: ../../../../litestar/file_system.py:docstring of
 #: litestar.file_system.BaseFileSystem:1
 msgid "Bases: :py:class:`~abc.ABC`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../litestar/file_system.py:docstring of
 #: litestar.file_system.BaseFileSystem.info:1
@@ -147,7 +147,7 @@ msgstr ""
 #: ../../../../litestar/file_system.py:docstring of
 #: litestar.file_system.FileSystemRegistry:1
 msgid "Bases: :py:class:`~litestar.plugins.base.InitPlugin`"
-msgstr ""
+msgstr "基底類別：:py:class:`~litestar.plugins.base.InitPlugin`"
 
 #: ../../../../litestar/file_system.py:docstring of
 #: litestar.file_system.FileSystemRegistry.__init__:1

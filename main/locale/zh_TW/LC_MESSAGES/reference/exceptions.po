@@ -72,7 +72,7 @@ msgstr ""
 #: ../../../../litestar/exceptions/__init__.py:docstring of
 #: litestar.exceptions.http_exceptions.HTTPException.__init__:1
 msgid "Initialize ``HTTPException``."
-msgstr ""
+msgstr "初始化 ``HTTPException``。"
 
 #: ../../../../litestar/exceptions/__init__.py:docstring of
 #: litestar.exceptions.http_exceptions.HTTPException.__init__:3
@@ -160,7 +160,7 @@ msgstr ""
 #: ../../../../litestar/exceptions/__init__.py:docstring of
 #: litestar.exceptions.base_exceptions.LitestarException:1
 msgid "Bases: :py:class:`Exception`"
-msgstr ""
+msgstr "基底類別：:py:class:`Exception`"
 
 #: ../../../../litestar/exceptions/__init__.py:docstring of
 #: litestar.exceptions.base_exceptions.LitestarException:1
@@ -171,7 +171,7 @@ msgstr ""
 #: litestar.exceptions.base_exceptions.LitestarException.__init__:1
 #: litestar.exceptions.base_exceptions.MissingDependencyException.__init__:1
 msgid "Initialize ``LitestarException``."
-msgstr ""
+msgstr "初始化 ``LitestarException``。"
 
 #: ../../../../litestar/exceptions/__init__.py:docstring of
 #: litestar.exceptions.base_exceptions.LitestarException.__init__:3
@@ -188,7 +188,7 @@ msgstr ""
 #: ../../../../litestar/exceptions/__init__.py:docstring of
 #: litestar.exceptions.base_exceptions.LitestarWarning:1
 msgid "Bases: :py:class:`UserWarning`"
-msgstr ""
+msgstr "基底類別：:py:class:`UserWarning`"
 
 #: ../../../../litestar/exceptions/__init__.py:docstring of
 #: litestar.exceptions.base_exceptions.LitestarWarning:1
@@ -202,6 +202,7 @@ msgstr ""
 #: litestar.exceptions.http_exceptions.TooManyRequestsException:1
 msgid "Bases: :py:class:`~litestar.exceptions.http_exceptions.ClientException`"
 msgstr ""
+"基底類別：:py:class:`~litestar.exceptions.http_exceptions.ClientException`"
 
 #: ../../../../litestar/exceptions/__init__.py:docstring of
 #: litestar.exceptions.http_exceptions.MethodNotAllowedException:1
@@ -237,6 +238,8 @@ msgid ""
 "Bases: :py:class:`~litestar.exceptions.http_exceptions."
 "InternalServerException`"
 msgstr ""
+"基底類別：:py:class:`~litestar.exceptions.http_exceptions."
+"InternalServerException`"
 
 #: ../../../../litestar/exceptions/__init__.py:docstring of
 #: litestar.exceptions.http_exceptions.NoRouteMatchFoundException:1
@@ -285,7 +288,7 @@ msgstr ""
 #: ../../../../litestar/exceptions/__init__.py:docstring of
 #: litestar.exceptions.http_exceptions.TemplateNotFoundException.__init__:1
 msgid "Initialize ``TemplateNotFoundException``."
-msgstr ""
+msgstr "初始化 ``TemplateNotFoundException``。"
 
 #: ../../../../litestar/exceptions/__init__.py:docstring of
 #: litestar.exceptions.http_exceptions.TemplateNotFoundException.__init__:3
@@ -314,6 +317,8 @@ msgid ""
 "Bases: :py:class:`~litestar.exceptions.websocket_exceptions."
 "WebSocketException`"
 msgstr ""
+"基底類別：:py:class:`~litestar.exceptions.websocket_exceptions."
+"WebSocketException`"
 
 #: ../../../../litestar/exceptions/__init__.py:docstring of
 #: litestar.exceptions.websocket_exceptions.WebSocketDisconnect:1
@@ -323,7 +328,7 @@ msgstr ""
 #: ../../../../litestar/exceptions/__init__.py:docstring of
 #: litestar.exceptions.websocket_exceptions.WebSocketDisconnect.__init__:1
 msgid "Initialize ``WebSocketDisconnect``."
-msgstr ""
+msgstr "初始化 ``WebSocketDisconnect``。"
 
 #: ../../../../litestar/exceptions/__init__.py:docstring of
 #: litestar.exceptions.websocket_exceptions.WebSocketDisconnect.__init__:3
@@ -351,7 +356,7 @@ msgstr ""
 #: ../../../../litestar/exceptions/__init__.py:docstring of
 #: litestar.exceptions.websocket_exceptions.WebSocketException.__init__:1
 msgid "Initialize ``WebSocketException``."
-msgstr ""
+msgstr "初始化 ``WebSocketException``。"
 
 #: ../../../../docstring of litestar.exceptions.WebSocketException.code:1
 msgid ""
@@ -363,7 +368,7 @@ msgstr ""
 #: ../../../../litestar/exceptions/responses/__init__.py:docstring of
 #: litestar.exceptions.responses.ExceptionResponseContent:1
 msgid "Bases: :py:class:`object`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../litestar/exceptions/responses/__init__.py:docstring of
 #: litestar.exceptions.responses.ExceptionResponseContent:1

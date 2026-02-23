@@ -31,6 +31,9 @@ msgid ""
 "Litestar is built using the modern `ASGI <https://asgi.readthedocs.io>`_ "
 "standard. A key difference is that *ASGI* is built with async in mind."
 msgstr ""
+"`Flask <https://flask.palletsprojects.com>`_ 是一個 WSGI 框架，而 Litestar 則"
+"是使用現代的 ASGI 標準建置的。兩者之間的一個關鍵區別在於 ASGI 是以異步"
+"（async）為核心設計的。"
 
 #: ../../../migration/flask.rst:11
 msgid ""
@@ -50,6 +53,9 @@ msgid ""
 "running them in a non-blocking way *on the event loop*. What this means is "
 "that synchronous and asynchronous code both run concurrently."
 msgstr ""
+"另一方面，ASGI 則完全相反；它在中心事件迴圈中執行所有內容。Litestar 接著透過"
+"在事件迴圈上以非阻塞方式執行同步函式，進而提供對同步函式的支援。這意味著同步"
+"和非同步程式碼都能同時並行執行。"
 
 #: ../../../migration/flask.rst:24
 msgid "Routing"

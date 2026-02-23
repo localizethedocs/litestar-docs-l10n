@@ -41,15 +41,15 @@ msgstr ""
 
 #: ../../../getting-started.rst:17
 msgid "`Pydantic <https://docs.pydantic.dev/latest/>`_"
-msgstr ""
+msgstr "`Pydantic <https://docs.pydantic.dev/latest/>`_"
 
 #: ../../../getting-started.rst:18
 msgid ":code:`pip install 'litestar[pydantic]'`"
-msgstr ""
+msgstr ":code:`pip install 'litestar[pydantic]'`"
 
 #: ../../../getting-started.rst:20
 msgid "`Attrs <https://www.attrs.org>`_"
-msgstr ""
+msgstr "`Attrs <https://www.attrs.org>`_"
 
 #: ../../../getting-started.rst:21
 msgid ":code:`pip install 'litestar[attrs]'`"
@@ -102,19 +102,19 @@ msgstr ":code:`pip install 'litestar[redis]'`"
 
 #: ../../../getting-started.rst:38
 msgid ":ref:`Picologging <usage/logging:using picologging>`"
-msgstr ""
+msgstr ":ref:`Picologging <usage/logging:using picologging>`"
 
 #: ../../../getting-started.rst:39
 msgid ":code:`pip install 'litestar[picologging]'`"
-msgstr ""
+msgstr ":code:`pip install 'litestar[picologging]'`"
 
 #: ../../../getting-started.rst:41
 msgid ":ref:`StructLog <usage/logging:using structlog>`"
-msgstr ""
+msgstr ":ref:`StructLog <usage/logging:using structlog>`"
 
 #: ../../../getting-started.rst:42
 msgid ":code:`pip install 'litestar[structlog]'`"
-msgstr ""
+msgstr ":code:`pip install 'litestar[structlog]'`"
 
 #: ../../../getting-started.rst:44
 msgid ":doc:`Prometheus Instrumentation </usage/metrics/prometheus>`"
@@ -122,7 +122,7 @@ msgstr ""
 
 #: ../../../getting-started.rst:45
 msgid ":code:`pip install 'litestar[prometheus]'`"
-msgstr ""
+msgstr ":code:`pip install 'litestar[prometheus]'`"
 
 #: ../../../getting-started.rst:47
 msgid ":doc:`Open Telemetry Instrumentation </usage/metrics/open-telemetry>`"
@@ -130,7 +130,7 @@ msgstr ""
 
 #: ../../../getting-started.rst:48
 msgid ":code:`pip install 'litestar[opentelemetry]'`"
-msgstr ""
+msgstr ":code:`pip install 'litestar[opentelemetry]'`"
 
 #: ../../../getting-started.rst:50
 msgid ""
@@ -167,7 +167,7 @@ msgstr ""
 
 #: ../../../getting-started.rst:60
 msgid ":code:`pip install 'litestar[polyfactory]'`"
-msgstr ""
+msgstr ":code:`pip install 'litestar[polyfactory]'`"
 
 #: ../../../getting-started.rst:62
 msgid ":doc:`HTMX plugin </usage/htmx>`"
@@ -523,7 +523,7 @@ msgstr ""
 
 #: ../../../getting-started.rst:228
 msgid "Philosophy"
-msgstr ""
+msgstr "理念"
 
 #: ../../../getting-started.rst:230
 msgid ""
@@ -532,6 +532,9 @@ msgid ""
 "community of contributors. Litestar currently has 5 maintainers and is being "
 "very actively developed."
 msgstr ""
+"Litestar 是一個由社群驅動的專案。這意味著該專案並非由單一作者領導，而是由一個"
+"核心維護團隊帶領，並得到貢獻者社群的支援。Litestar 目前擁有 5 位維護者，且正"
+"處於非常活躍的開發狀態。"
 
 #: ../../../getting-started.rst:233
 msgid ""
@@ -556,6 +559,10 @@ msgid ""
 "many more. It's not aiming to be \"the next Django\" (for example, it will "
 "never feature its own ORM), but its scope is not micro either."
 msgstr ""
+"Litestar 並\\ **非**\\ 微框架。與 FastAPI、Starlette 或 Flask 等框架不同，"
+"Litestar 開箱即用，內建了許多現代 Web 應用程式所需的各項功能，例如 ORM 整合、"
+"客戶端與伺服器端會話、快取、OpenTelemetry 整合等。它的目標並非成為「下一個 "
+"Django」（例如，它永遠不會推出自己的 ORM），但其規模也絕非微型。"
 
 #: ../../../getting-started.rst:244
 msgid "Feature comparison with similar frameworks"

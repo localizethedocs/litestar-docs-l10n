@@ -24,7 +24,7 @@ msgstr ""
 #: ../../../../litestar/response/__init__.py:docstring of
 #: litestar.response.file.File:1
 msgid "Bases: :py:class:`~litestar.response.base.Response`"
-msgstr ""
+msgstr "基底類別：:py:class:`~litestar.response.base.Response`"
 
 #: ../../../../litestar/response/__init__.py:docstring of
 #: litestar.response.file.File:1
@@ -242,6 +242,8 @@ msgstr ""
 msgid ""
 "Bases: :py:class:`~litestar.response.base.Response`\\ [:py:obj:`~typing.Any`]"
 msgstr ""
+"基底類別：:py:class:`~litestar.response.base.Response`\\ [:py:obj:`~typing."
+"Any`]"
 
 #: ../../../../litestar/response/__init__.py:docstring of
 #: litestar.response.redirect.Redirect:1
@@ -324,6 +326,7 @@ msgstr ""
 msgid ""
 "Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~litestar.response.base.T`]"
 msgstr ""
+"基底類別：:py:class:`~typing.Generic`\\ [:py:obj:`~litestar.response.base.T`]"
 
 #: ../../../../litestar/response/__init__.py:docstring of
 #: litestar.response.base.Response:1
@@ -473,7 +476,7 @@ msgstr ""
 #: ../../../../litestar/response/__init__.py:docstring of
 #: litestar.response.sse.ServerSentEvent:1
 msgid "Bases: :py:class:`~litestar.response.streaming.Stream`"
-msgstr ""
+msgstr "基底類別：:py:class:`~litestar.response.streaming.Stream`"
 
 #: ../../../../litestar/response/__init__.py:docstring of
 #: litestar.response.sse.ServerSentEvent.__init__:3
@@ -512,7 +515,7 @@ msgstr ""
 #: ../../../../litestar/response/__init__.py:docstring of
 #: litestar.response.sse.ServerSentEventMessage:1
 msgid "Bases: :py:class:`object`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../litestar/response/__init__.py:docstring of
 #: litestar.response.sse.ServerSentEventMessage:1
@@ -532,6 +535,12 @@ msgid ""
 "`bytes`] | :py:class:`~collections.abc.AsyncIterator`\\ [:py:class:`str` | :"
 "py:class:`bytes`]]"
 msgstr ""
+"基底類別：:py:class:`~litestar.response.base.Response`\\ [:py:class:"
+"`~collections.abc.Iterable`\\ [:py:class:`str` | :py:class:`bytes`] | :py:"
+"class:`~collections.abc.Iterator`\\ [:py:class:`str` | :py:class:`bytes`] | :"
+"py:class:`~collections.abc.AsyncIterable`\\ [:py:class:`str` | :py:class:"
+"`bytes`] | :py:class:`~collections.abc.AsyncIterator`\\ [:py:class:`str` | :"
+"py:class:`bytes`]]"
 
 #: ../../../../litestar/response/__init__.py:docstring of
 #: litestar.response.streaming.Stream:1
@@ -560,6 +569,7 @@ msgstr ""
 msgid ""
 "Bases: :py:class:`~litestar.response.base.Response`\\ [:py:class:`bytes`]"
 msgstr ""
+"基底類別：:py:class:`~litestar.response.base.Response`\\ [:py:class:`bytes`]"
 
 #: ../../../../litestar/response/__init__.py:docstring of
 #: litestar.response.template.Template:1

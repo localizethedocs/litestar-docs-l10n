@@ -102,7 +102,7 @@ msgstr ""
 
 #: ../../../usage/logging.rst:66
 msgid "Using Python standard library"
-msgstr ""
+msgstr "使用 Python 標準庫"
 
 #: ../../../usage/logging.rst:68
 msgid ""
@@ -188,7 +188,7 @@ msgstr ""
 
 #: ../../../usage/logging.rst:140
 msgid "Using Picologging"
-msgstr ""
+msgstr "使用 Picologging"
 
 #: ../../../usage/logging.rst:142
 msgid ""
@@ -201,7 +201,7 @@ msgstr ""
 
 #: ../../../usage/logging.rst:147
 msgid "Using StructLog"
-msgstr ""
+msgstr "使用 StructLog"
 
 #: ../../../usage/logging.rst:149
 msgid ""

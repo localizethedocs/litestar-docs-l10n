@@ -86,7 +86,7 @@ msgstr ""
 #: ../../../../litestar/events/__init__.py:docstring of
 #: litestar.events.listener.EventListener:1
 msgid "Bases: :py:class:`object`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../litestar/events/__init__.py:docstring of
 #: litestar.events.listener.EventListener:1

@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../tutorials/sqlalchemy/0-introduction.rst:2
 msgid "Introduction"
-msgstr ""
+msgstr "介紹"
 
 #: ../../../tutorials/sqlalchemy/0-introduction.rst:4
 msgid ""
@@ -380,7 +380,7 @@ msgstr ""
 
 #: ../../../tutorials/sqlalchemy/0-introduction.rst:71
 msgid "Application state"
-msgstr ""
+msgstr "應用程式狀態"
 
 #: ../../../tutorials/sqlalchemy/0-introduction.rst:73
 msgid ""
@@ -405,7 +405,7 @@ msgstr ""
 
 #: ../../../tutorials/sqlalchemy/0-introduction.rst:94
 msgid "Serialization"
-msgstr ""
+msgstr "序列化"
 
 #: ../../../tutorials/sqlalchemy/0-introduction.rst:96
 msgid ""
@@ -437,6 +437,22 @@ msgid ""
 "        todo_item.done = data[\"done\"]\n"
 "    return serialize_todo(todo_item)"
 msgstr ""
+"from typing import Any\n"
+"\n"
+"TodoType = dict[str, Any]\n"
+"\n"
+"def serialize_todo(todo: TodoItem) -> TodoType:\n"
+"    return {\"title\": todo.title, \"done\": todo.done}\n"
+"\n"
+"\n"
+"@put(\"/{item_title:str}\")\n"
+"async def update_item(item_title: str, data: TodoType, state: State) -> "
+"TodoType:\n"
+"    async with sessionmaker(bind=state.engine) as session, session.begin():\n"
+"        todo_item = await get_todo_by_title(item_title, session)\n"
+"        todo_item.title = data[\"title\"]\n"
+"        todo_item.done = data[\"done\"]\n"
+"    return serialize_todo(todo_item)"
 
 #: ../../../tutorials/sqlalchemy/0-introduction.rst:110
 msgid "Behavior"

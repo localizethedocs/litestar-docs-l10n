@@ -24,7 +24,7 @@ msgstr ""
 #: ../../../../litestar/stores/memory.py:docstring of
 #: litestar.stores.memory.MemoryStore:1
 msgid "Bases: :py:class:`~litestar.stores.base.Store`"
-msgstr ""
+msgstr "基底類別：:py:class:`~litestar.stores.base.Store`"
 
 #: ../../../../litestar/stores/memory.py:docstring of
 #: litestar.stores.memory.MemoryStore:1

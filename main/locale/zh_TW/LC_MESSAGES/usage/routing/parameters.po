@@ -324,7 +324,7 @@ msgstr ""
 
 #: ../../../usage/routing/parameters.rst:82
 msgid "Query Parameters"
-msgstr ""
+msgstr "查詢參數"
 
 #: ../../../usage/routing/parameters.rst:84
 msgid ""
@@ -403,7 +403,7 @@ msgstr ""
 
 #: ../../../usage/routing/parameters.rst:111
 msgid "Default values"
-msgstr ""
+msgstr "預設值"
 
 #: ../../../usage/routing/parameters.rst:113
 msgid ""
@@ -428,6 +428,15 @@ msgid ""
 "\n"
 "app = Litestar(route_handlers=[index])"
 msgstr ""
+"from litestar import Litestar, get\n"
+"\n"
+"\n"
+"@get(\"/\", sync_to_thread=False)\n"
+"def index(param: str = \"hello\") -> dict[str, str]:\n"
+"    return {\"param\": param}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[index])"
 
 #: ../../../usage/routing/parameters.rst:-1
 msgid ""
@@ -436,6 +445,10 @@ msgid ""
 "> curl http://127.0.0.1:8000/?param=john\n"
 "{\"param\":\"john\"}"
 msgstr ""
+"> curl http://127.0.0.1:8000/\n"
+"{\"param\":\"hello\"}\n"
+"> curl http://127.0.0.1:8000/?param=john\n"
+"{\"param\":\"john\"}"
 
 #: ../../../usage/routing/parameters.rst:121
 msgid "Optional :term:`parameters <parameter>`"
@@ -478,6 +491,17 @@ msgid ""
 "\n"
 "app = Litestar(route_handlers=[index])"
 msgstr ""
+"from typing import Optional\n"
+"\n"
+"from litestar import Litestar, get\n"
+"\n"
+"\n"
+"@get(\"/\", sync_to_thread=False)\n"
+"def index(param: Optional[str] = None) -> dict[str, Optional[str]]:\n"
+"    return {\"param\": param}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[index])"
 
 #: ../../../usage/routing/parameters.rst:0
 msgid "Python 3.10+"
@@ -495,6 +519,15 @@ msgid ""
 "\n"
 "app = Litestar(route_handlers=[index])"
 msgstr ""
+"from litestar import Litestar, get\n"
+"\n"
+"\n"
+"@get(\"/\", sync_to_thread=False)\n"
+"def index(param: str | None = None) -> dict[str, str | None]:\n"
+"    return {\"param\": param}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[index])"
 
 #: ../../../usage/routing/parameters.rst:-1
 msgid ""
@@ -503,6 +536,10 @@ msgid ""
 "> curl http://127.0.0.1:8000/?param=goodbye\n"
 "{\"param\":\"goodbye\"}"
 msgstr ""
+"> curl http://127.0.0.1:8000/\n"
+"{\"param\":null}\n"
+"> curl http://127.0.0.1:8000/?param=goodbye\n"
+"{\"param\":\"goodbye\"}"
 
 #: ../../../usage/routing/parameters.rst:136
 msgid "Type coercion"
@@ -548,6 +585,10 @@ msgid ""
 "{\"datetime\":\"2022-11-29T13:22:06.916540\",\"int\":42,\"float\":0.1,"
 "\"list\":[\"1\",\"2\"]}"
 msgstr ""
+"> curl http://127.0.0.1:8000/?"
+"date=2022-11-28T13:22:06.916540&floating_number=0.1&number=42&strings=1&strings=2\n"
+"{\"datetime\":\"2022-11-29T13:22:06.916540\",\"int\":42,\"float\":0.1,"
+"\"list\":[\"1\",\"2\"]}"
 
 #: ../../../usage/routing/parameters.rst:146
 msgid "Alternative names and constraints"
@@ -586,6 +627,8 @@ msgid ""
 "> curl http://127.0.0.1:8000/?camelCase=foo\n"
 "{\"param\":\"foo\"}"
 msgstr ""
+"> curl http://127.0.0.1:8000/?camelCase=foo\n"
+"{\"param\":\"foo\"}"
 
 #: ../../../usage/routing/parameters.rst:155
 msgid ""
@@ -626,7 +669,7 @@ msgstr ""
 
 #: ../../../usage/routing/parameters.rst:168
 msgid "Documenting enum query parameters"
-msgstr ""
+msgstr "記載列舉查詢參數"
 
 #: ../../../usage/routing/parameters.rst:170
 msgid ""

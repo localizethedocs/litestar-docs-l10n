@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:2
 msgid "SQLAlchemy Serialization Plugin"
-msgstr ""
+msgstr "SQLAlchemy 序列化插件"
 
 #: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:4
 msgid ""
@@ -35,7 +35,7 @@ msgstr ""
 
 #: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:0
 msgid "Async"
-msgstr ""
+msgstr "異步"
 
 #: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:15
 msgid "SQLAlchemy Async Serialization Plugin"
@@ -69,14 +69,38 @@ msgid ""
 "app = Litestar(route_handlers=[add_item], "
 "plugins=[SQLAlchemySerializationPlugin()])"
 msgstr ""
+"from __future__ import annotations\n"
+"\n"
+"from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column\n"
+"\n"
+"from litestar import Litestar, post\n"
+"from litestar.plugins.sqlalchemy import SQLAlchemySerializationPlugin\n"
+"\n"
+"\n"
+"class Base(DeclarativeBase): ...\n"
+"\n"
+"\n"
+"class TodoItem(Base):\n"
+"    __tablename__ = \"todo_item\"\n"
+"    title: Mapped[str] = mapped_column(primary_key=True)\n"
+"    done: Mapped[bool]\n"
+"\n"
+"\n"
+"@post(\"/\")\n"
+"async def add_item(data: TodoItem) -> list[TodoItem]:\n"
+"    return [data]\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[add_item], "
+"plugins=[SQLAlchemySerializationPlugin()])"
 
 #: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:0
 msgid "Sync"
-msgstr ""
+msgstr "同步"
 
 #: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:22
 msgid "SQLAlchemy Sync Serialization Plugin"
-msgstr ""
+msgstr "SQLAlchemy 同步序列化插件"
 
 #: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:22
 msgid ""
@@ -124,11 +148,11 @@ msgstr ""
 
 #: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:0
 msgid "Serialization Plugin"
-msgstr ""
+msgstr "序列化插件"
 
 #: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:0
 msgid "Data Transfer Object"
-msgstr ""
+msgstr "資料傳輸物件"
 
 #: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:46
 msgid ""
@@ -214,7 +238,7 @@ msgstr ""
 
 #: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:73
 msgid "SQLAlchemy Sync Marking Fields"
-msgstr ""
+msgstr "SQLAlchemy 同步標註欄位"
 
 #: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:73
 msgid ""
@@ -247,6 +271,34 @@ msgid ""
 "app = Litestar(route_handlers=[add_item], "
 "plugins=[SQLAlchemySerializationPlugin()])"
 msgstr ""
+"from __future__ import annotations\n"
+"\n"
+"from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column\n"
+"\n"
+"from litestar import Litestar, post\n"
+"from litestar.dto import dto_field\n"
+"from litestar.plugins.sqlalchemy import SQLAlchemySerializationPlugin\n"
+"\n"
+"\n"
+"class Base(DeclarativeBase): ...\n"
+"\n"
+"\n"
+"class TodoItem(Base):\n"
+"    __tablename__ = \"todo_item\"\n"
+"    title: Mapped[str] = mapped_column(primary_key=True)\n"
+"    done: Mapped[bool]\n"
+"    super_secret_value: Mapped[str] = "
+"mapped_column(info=dto_field(\"private\"))\n"
+"\n"
+"\n"
+"@post(\"/\", sync_to_thread=False)\n"
+"def add_item(data: TodoItem) -> list[TodoItem]:\n"
+"    data.super_secret_value = \"This is a secret\"\n"
+"    return [data]\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[add_item], "
+"plugins=[SQLAlchemySerializationPlugin()])"
 
 #: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:78
 msgid ""

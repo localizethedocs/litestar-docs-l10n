@@ -47,7 +47,7 @@ msgstr "<h1>Litestar</h1>"
 
 #: ../../../index.rst:21
 msgid "GitHub Actions Latest Release Workflow Status"
-msgstr ""
+msgstr "GitHub 動作最新發行版工作流程狀態"
 
 #: ../../../index.rst:24
 msgid "GitHub Actions CI Workflow Status"
@@ -71,7 +71,7 @@ msgstr "貢獻者人數"
 
 #: ../../../index.rst:39
 msgid "PyPI Downloads"
-msgstr ""
+msgstr "PyPI 下載量"
 
 #: ../../../index.rst:42
 msgid "Supported Python Versions"
@@ -89,7 +89,7 @@ msgstr ""
 "Litestar 框架支援 :doc:`/usage/plugins/index`，並內建了\\ :doc:`依賴注入 </"
 "usage/dependency-injection>`、:doc:`安全性原語 </usage/security/index>`、:"
 "doc:`OpenAPI 結構生成 </usage/openapi/index>`、`MessagePack <https://msgpack."
-"org/>`_、:doc:`中介體 </usage/middleware/index>`、優異的 :doc:`CLI </usage/"
+"org/>`_、:doc:`中介軟體 </usage/middleware/index>`、優異的 :doc:`CLI </usage/"
 "cli>` 體驗以及更多功能。"
 
 #: ../../../index.rst:54
@@ -300,6 +300,8 @@ msgid ""
 "developments and continue our mission to provide exceptional tools and "
 "resources to our users."
 msgstr ""
+"Litestar 是一項由社群驅動的開源倡議，仰賴贊助者們慷慨的支援，使我們得以推動創"
+"新發展，並持續達成為使用者提供卓越工具與資源的使命。"
 
 #: ../../../index.rst:107
 msgid "A huge thank you to our current sponsors:"
@@ -346,3 +348,5 @@ msgid ""
 "opportunities through `Polar <sponsor-polar_>`_, where you can pledge an "
 "amount towards an issue or feature you would like to see implemented."
 msgstr ""
+"除了常態性贊助之外，我們也透過 `Polar <sponsor-polar_>`_ 提供基於承諾的贊助機"
+"會，讓您可針對希望實現的某項議題或功能，承諾捐贈特定金額。"

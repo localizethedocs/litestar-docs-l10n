@@ -24,7 +24,7 @@ msgstr ""
 #: ../../../../litestar/controller.py:docstring of
 #: litestar.controller.Controller:1
 msgid "Bases: :py:class:`object`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../litestar/controller.py:docstring of
 #: litestar.controller.Controller:1

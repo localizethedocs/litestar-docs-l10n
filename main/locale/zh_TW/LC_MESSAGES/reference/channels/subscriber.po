@@ -24,7 +24,7 @@ msgstr ""
 #: ../../../../litestar/channels/subscriber.py:docstring of
 #: litestar.channels.subscriber.Subscriber:1
 msgid "Bases: :py:class:`object`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../litestar/channels/subscriber.py:docstring of
 #: litestar.channels.subscriber.Subscriber:1

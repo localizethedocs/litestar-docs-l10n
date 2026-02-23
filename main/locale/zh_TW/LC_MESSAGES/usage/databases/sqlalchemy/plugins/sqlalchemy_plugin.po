@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:2
 msgid "SQLAlchemy Plugin"
-msgstr ""
+msgstr "SQLAlchemy 插件"
 
 #: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:4
 msgid ""
@@ -64,7 +64,7 @@ msgstr ""
 
 #: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:0
 msgid "Async"
-msgstr ""
+msgstr "異步"
 
 #: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:33
 #: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:55
@@ -119,7 +119,7 @@ msgstr ""
 
 #: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:0
 msgid "Sync"
-msgstr ""
+msgstr "同步"
 
 #: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:40
 #: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:62
@@ -168,10 +168,46 @@ msgid ""
 "plugin = SQLAlchemyPlugin(config=config)\n"
 "app = Litestar(route_handlers=[add_item], plugins=[plugin])"
 msgstr ""
+"from __future__ import annotations\n"
+"\n"
+"from collections.abc import Sequence\n"
+"from typing import TYPE_CHECKING\n"
+"\n"
+"from sqlalchemy import select\n"
+"from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column\n"
+"\n"
+"from litestar import Litestar, post\n"
+"from litestar.plugins.sqlalchemy import SQLAlchemyPlugin, "
+"SQLAlchemySyncConfig\n"
+"\n"
+"if TYPE_CHECKING:\n"
+"    from sqlalchemy.orm import Session\n"
+"\n"
+"\n"
+"class Base(DeclarativeBase): ...\n"
+"\n"
+"\n"
+"class TodoItem(Base):\n"
+"    __tablename__ = \"todo_item\"\n"
+"    title: Mapped[str] = mapped_column(primary_key=True)\n"
+"    done: Mapped[bool]\n"
+"\n"
+"\n"
+"@post(\"/\", sync_to_thread=True)\n"
+"def add_item(data: TodoItem, db_session: Session) -> Sequence[TodoItem]:\n"
+"    with db_session.begin():\n"
+"        db_session.add(data)\n"
+"    return db_session.execute(select(TodoItem)).scalars().all()\n"
+"\n"
+"\n"
+"config = SQLAlchemySyncConfig(connection_string=\"sqlite:///todo_sync."
+"sqlite\", create_all=True, metadata=Base.metadata)\n"
+"plugin = SQLAlchemyPlugin(config=config)\n"
+"app = Litestar(route_handlers=[add_item], plugins=[plugin])"
 
 #: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:45
 msgid "Defining the Database Models"
-msgstr ""
+msgstr "定義資料庫模型"
 
 #: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:47
 msgid ""

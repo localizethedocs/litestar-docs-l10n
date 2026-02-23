@@ -165,6 +165,11 @@ msgid ""
 "        return TODO_LIST\n"
 "    return [item for item in TODO_LIST if item.done == done]"
 msgstr ""
+"@get(\"/\")\n"
+"async def get_list(done: Optional[bool] = None) -> list[TodoItem]:\n"
+"    if done is None:\n"
+"        return TODO_LIST\n"
+"    return [item for item in TODO_LIST if item.done == done]"
 
 #: ../../../tutorials/todo-app/3-assembling-the-app.rst:28
 msgid ""
@@ -182,6 +187,10 @@ msgid ""
 "    TODO_LIST.append(data)\n"
 "    return TODO_LIST"
 msgstr ""
+"@post(\"/\")\n"
+"async def add_item(data: TodoItem) -> list[TodoItem]:\n"
+"    TODO_LIST.append(data)\n"
+"    return TODO_LIST"
 
 #: ../../../tutorials/todo-app/3-assembling-the-app.rst:41
 msgid ""
@@ -202,6 +211,12 @@ msgid ""
 "    todo_item.done = data.done\n"
 "    return TODO_LIST"
 msgstr ""
+"@put(\"/{item_title:str}\")\n"
+"async def update_item(item_title: str, data: TodoItem) -> list[TodoItem]:\n"
+"    todo_item = get_todo_by_title(item_title)\n"
+"    todo_item.title = data.title\n"
+"    todo_item.done = data.done\n"
+"    return TODO_LIST"
 
 #: ../../../tutorials/todo-app/3-assembling-the-app.rst:56
 msgid ""
@@ -216,7 +231,7 @@ msgstr ""
 
 #: ../../../tutorials/todo-app/3-assembling-the-app.rst:65
 msgid "app = Litestar([get_list, add_item, update_item])"
-msgstr ""
+msgstr "app = Litestar([get_list, add_item, update_item])"
 
 #: ../../../tutorials/todo-app/3-assembling-the-app.rst:71
 msgid ""

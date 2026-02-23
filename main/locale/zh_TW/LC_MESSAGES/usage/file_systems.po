@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../usage/file_systems.rst:2
 msgid "File Systems"
-msgstr ""
+msgstr "檔案系統"
 
 #: ../../../usage/file_systems.rst:4
 msgid ""
@@ -169,7 +169,7 @@ msgstr ""
 
 #: ../../../usage/file_systems.rst:73
 msgid "Adapting file systems that support symlinks"
-msgstr ""
+msgstr "適配支援符號連結的檔案系統"
 
 #: ../../../usage/file_systems.rst:75
 msgid ""
@@ -211,7 +211,7 @@ msgstr ""
 
 #: ../../../usage/file_systems.rst:93
 msgid "Registry"
-msgstr ""
+msgstr "註冊表"
 
 #: ../../../usage/file_systems.rst:95
 msgid ""
@@ -264,7 +264,7 @@ msgstr ""
 
 #: ../../../usage/file_systems.rst:115
 msgid "Accessing the registry"
-msgstr ""
+msgstr "存取註冊表"
 
 #: ../../../usage/file_systems.rst:115
 msgid ""
@@ -280,10 +280,21 @@ msgid ""
 "\n"
 "app = Litestar([handler])"
 msgstr ""
+"from litestar import Litestar, Request, get\n"
+"from litestar.file_system import FileSystemRegistry\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"async def handler(request: Request) -> bytes:\n"
+"    registry = request.app.plugins.get(FileSystemRegistry)\n"
+"    return registry.default.read_bytes(\"some/file.txt\")\n"
+"\n"
+"\n"
+"app = Litestar([handler])"
 
 #: ../../../usage/file_systems.rst:120
 msgid "Setting a default file system"
-msgstr ""
+msgstr "設定預設檔案系統"
 
 #: ../../../usage/file_systems.rst:122
 msgid ""
@@ -295,7 +306,7 @@ msgstr ""
 
 #: ../../../usage/file_systems.rst:128
 msgid "Changing the default file system"
-msgstr ""
+msgstr "變更預設檔案系統"
 
 #: ../../../usage/file_systems.rst:128
 msgid ""
@@ -319,3 +330,22 @@ msgid ""
 "    ],\n"
 ")"
 msgstr ""
+"import fsspec\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.file_system import FileSystemRegistry\n"
+"from litestar.response import File\n"
+"\n"
+"\n"
+"@get(\"/{file_name:str}\")\n"
+"async def file_handler(file_name: str) -> File:\n"
+"    return File(file_name)\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    [file_handler],\n"
+"    plugins=[\n"
+"        FileSystemRegistry(default=fsspec.filesystem(\"s3\", "
+"asynchronous=True)),\n"
+"    ],\n"
+")"

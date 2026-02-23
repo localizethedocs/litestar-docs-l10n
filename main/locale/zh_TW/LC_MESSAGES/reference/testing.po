@@ -217,13 +217,13 @@ msgstr ""
 #: litestar.testing.client.async_client.AsyncTestClient.websocket_connect:5
 #: litestar.testing.client.sync_client.TestClient.websocket_connect:5
 msgid "Query parameters."
-msgstr ""
+msgstr "查詢參數。"
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.client.async_client.AsyncTestClient.websocket_connect:6
 #: litestar.testing.client.sync_client.TestClient.websocket_connect:6
 msgid "Request headers."
-msgstr ""
+msgstr "請求標頭。"
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.client.async_client.AsyncTestClient.websocket_connect:7
@@ -247,7 +247,7 @@ msgstr ""
 #: litestar.testing.client.async_client.AsyncTestClient.websocket_connect:10
 #: litestar.testing.client.sync_client.TestClient.websocket_connect:10
 msgid "Request timeout."
-msgstr ""
+msgstr "請求逾時。"
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.client.async_client.AsyncTestClient.websocket_connect:11
@@ -269,7 +269,7 @@ msgstr ""
 #: ../../../../litestar/testing/life_span_handler.py:docstring
 #: litestar.testing.life_span_handler.LifeSpanHandler:1
 msgid "Bases: :py:class:`object`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.websocket_test_session.AsyncWebSocketTestSession.close:1

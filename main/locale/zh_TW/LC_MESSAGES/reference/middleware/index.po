@@ -25,7 +25,7 @@ msgstr ""
 #: litestar.middleware.authentication.AbstractAuthenticationMiddleware:1
 #: litestar.middleware.base.ASGIMiddleware:1
 msgid "Bases: :py:class:`~abc.ABC`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../litestar/middleware/__init__.py:docstring of
 #: litestar.middleware.base.ASGIMiddleware:1
@@ -202,7 +202,7 @@ msgstr ""
 #: litestar.middleware.base.AbstractMiddleware.__call__:9
 #: litestar.middleware.base.MiddlewareProtocol.__call__:9
 msgid "The ASGI receive function."
-msgstr ""
+msgstr "ASGI 接收函式。"
 
 #: ../../../../litestar/middleware/__init__.py:docstring of
 #: litestar.middleware.base.ASGIMiddleware.handle:5
@@ -282,7 +282,7 @@ msgstr ""
 #: litestar.middleware.base.AbstractMiddleware.__call__:10
 #: litestar.middleware.base.MiddlewareProtocol.__call__:10
 msgid "The ASGI send function."
-msgstr ""
+msgstr "ASGI 發送函式。"
 
 #: ../../../reference/middleware/index.rst:0
 msgid "Returns"
@@ -374,7 +374,7 @@ msgstr ""
 #: litestar.middleware.base.AbstractMiddleware:1
 #: litestar.middleware.base.DefineMiddleware:1
 msgid "Bases: :py:class:`object`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../litestar/middleware/__init__.py:docstring of
 #: litestar.middleware.base.AbstractMiddleware:1
@@ -505,7 +505,7 @@ msgstr ""
 #: ../../../../litestar/middleware/__init__.py:docstring of
 #: litestar.middleware.base.MiddlewareProtocol:1
 msgid "Bases: :py:class:`~typing.Protocol`"
-msgstr ""
+msgstr "基底類別：:py:class:`~typing.Protocol`"
 
 #: ../../../../litestar/middleware/__init__.py:docstring of
 #: litestar.middleware.base.MiddlewareProtocol:1

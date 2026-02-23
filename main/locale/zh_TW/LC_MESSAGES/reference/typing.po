@@ -24,7 +24,7 @@ msgstr ""
 #: ../../../../litestar/typing.py:docstring of
 #: litestar.typing.FieldDefinition:1
 msgid "Bases: :py:class:`object`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../litestar/typing.py:docstring of
 #: litestar.typing.FieldDefinition:1
@@ -328,7 +328,7 @@ msgstr ""
 #: ../../../../litestar/typing.py:docstring of
 #: litestar.typing.FieldDefinition.from_annotation:1
 msgid "Initialize FieldDefinition."
-msgstr ""
+msgstr "初始化 FieldDefinition。"
 
 #: ../../../../litestar/typing.py:docstring of
 #: litestar.typing.FieldDefinition.from_annotation:3
@@ -378,7 +378,7 @@ msgstr ""
 #: ../../../../litestar/typing.py:docstring of
 #: litestar.typing.FieldDefinition.from_parameter:1
 msgid "Initialize ParsedSignatureParameter."
-msgstr ""
+msgstr "初始化 ParsedSignatureParameter。"
 
 #: ../../../../litestar/typing.py:docstring of
 #: litestar.typing.FieldDefinition.from_parameter:3

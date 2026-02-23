@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../migration/index.rst:2
 msgid "Migrating to Litestar"
-msgstr ""
+msgstr "遷移至 Litestar"
 
 #: ../../../migration/index.rst:4
 msgid ""

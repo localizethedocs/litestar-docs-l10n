@@ -39,7 +39,7 @@ msgstr ""
 
 #: ../../../tutorials/sqlalchemy/index.rst:14
 msgid "Install SQLAlchemy via Advanced Alchemy"
-msgstr ""
+msgstr "透過 Advanced Alchemy 安裝 SQLAlchemy"
 
 #: ../../../tutorials/sqlalchemy/index.rst:16
 msgid ""

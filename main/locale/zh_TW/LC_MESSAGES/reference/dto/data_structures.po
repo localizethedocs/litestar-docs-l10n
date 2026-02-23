@@ -74,7 +74,7 @@ msgstr ""
 #: ../../../../litestar/dto/data_structures.py:docstring of
 #: litestar.dto.data_structures.DTOFieldDefinition:1
 msgid "Bases: :py:class:`~litestar.typing.FieldDefinition`"
-msgstr ""
+msgstr "基底類別：:py:class:`~litestar.typing.FieldDefinition`"
 
 #: ../../../../litestar/dto/data_structures.py:docstring of
 #: litestar.dto.data_structures.DTOFieldDefinition:1

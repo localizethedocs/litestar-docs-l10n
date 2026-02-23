@@ -33,12 +33,13 @@ msgstr ""
 msgid ""
 "Bases: :py:class:`~litestar.exceptions.base_exceptions.LitestarException`"
 msgstr ""
+"基底類別：:py:class:`~litestar.exceptions.base_exceptions.LitestarException`"
 
 #: ../../../../litestar/middleware/constraints.py:docstring of
 #: litestar.middleware.constraints.MiddlewareConstraints:1
 #: litestar.middleware.constraints.MiddlewareForwardRef:1
 msgid "Bases: :py:class:`object`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../litestar/middleware/constraints.py:docstring of
 #: litestar.middleware.constraints.MiddlewareConstraints:1

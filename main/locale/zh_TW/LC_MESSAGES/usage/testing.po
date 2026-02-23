@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../usage/testing.rst:2
 msgid "Testing"
-msgstr ""
+msgstr "測試"
 
 #: ../../../usage/testing.rst:4
 msgid ""
@@ -59,7 +59,7 @@ msgstr ""
 
 #: ../../../usage/testing.rst:25
 msgid "``my_app/main.py``"
-msgstr ""
+msgstr "``my_app/main.py``"
 
 #: ../../../usage/testing.rst:25
 msgid ""
@@ -73,6 +73,15 @@ msgid ""
 "\n"
 "app = Litestar(route_handlers=[health_check])"
 msgstr ""
+"from litestar import Litestar, MediaType, get\n"
+"\n"
+"\n"
+"@get(path=\"/health-check\", media_type=MediaType.TEXT)\n"
+"def health_check() -> str:\n"
+"    return \"healthy\"\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[health_check])"
 
 #: ../../../usage/testing.rst:38
 msgid "We would then test it using the test client like so:"
@@ -80,12 +89,12 @@ msgstr ""
 
 #: ../../../usage/testing.rst:0
 msgid "Sync"
-msgstr ""
+msgstr "同步"
 
 #: ../../../usage/testing.rst:46 ../../../usage/testing.rst:66
 #: ../../../usage/testing.rst:148 ../../../usage/testing.rst:156
 msgid "``tests/test_health_check.py``"
-msgstr ""
+msgstr "``tests/test_health_check.py``"
 
 #: ../../../usage/testing.rst:46
 msgid ""
@@ -106,7 +115,7 @@ msgstr ""
 
 #: ../../../usage/testing.rst:0
 msgid "Async"
-msgstr ""
+msgstr "異步"
 
 #: ../../../usage/testing.rst:66
 msgid ""
@@ -137,7 +146,7 @@ msgstr "Python 3.8+"
 
 #: ../../../usage/testing.rst:92 ../../../usage/testing.rst:118
 msgid "``tests/conftest.py``"
-msgstr ""
+msgstr "``tests/conftest.py``"
 
 #: ../../../usage/testing.rst:92
 msgid ""
@@ -160,6 +169,24 @@ msgid ""
 "    with TestClient(app=app) as client:\n"
 "        yield client"
 msgstr ""
+"from typing import TYPE_CHECKING, Iterator\n"
+"\n"
+"import pytest\n"
+"\n"
+"from litestar.testing import TestClient\n"
+"\n"
+"from my_app.main import app\n"
+"\n"
+"if TYPE_CHECKING:\n"
+"    from litestar import Litestar\n"
+"\n"
+"app.debug = True\n"
+"\n"
+"\n"
+"@pytest.fixture(scope=\"function\")\n"
+"def test_client() -> Iterator[TestClient[Litestar]]:\n"
+"    with TestClient(app=app) as client:\n"
+"        yield client"
 
 #: ../../../usage/testing.rst:0
 msgid "Python 3.9+"
@@ -187,6 +214,25 @@ msgid ""
 "    with TestClient(app=app) as client:\n"
 "        yield client"
 msgstr ""
+"from typing import TYPE_CHECKING\n"
+"from collections.abc import Iterator\n"
+"\n"
+"import pytest\n"
+"\n"
+"from litestar.testing import TestClient\n"
+"\n"
+"from my_app.main import app\n"
+"\n"
+"if TYPE_CHECKING:\n"
+"    from litestar import Litestar\n"
+"\n"
+"app.debug = True\n"
+"\n"
+"\n"
+"@pytest.fixture(scope=\"function\")\n"
+"def test_client() -> Iterator[TestClient[Litestar]]:\n"
+"    with TestClient(app=app) as client:\n"
+"        yield client"
 
 #: ../../../usage/testing.rst:118
 msgid ""
@@ -955,6 +1001,19 @@ msgid ""
 "    ):\n"
 "        raise NotAuthorizedException()"
 msgstr ""
+"from litestar import Request\n"
+"from litestar.exceptions import NotAuthorizedException\n"
+"from litestar.handlers.base import BaseRouteHandler\n"
+"\n"
+"\n"
+"def secret_token_guard(request: Request, route_handler: BaseRouteHandler) -> "
+"None:\n"
+"    if (\n"
+"        route_handler.opt.get(\"secret\")\n"
+"        and not request.headers.get(\"Secret-Header\", \"\") == "
+"route_handler.opt[\"secret\"]\n"
+"    ):\n"
+"        raise NotAuthorizedException()"
 
 #: ../../../usage/testing.rst:369
 msgid "We already have our route handler in place:"
@@ -962,7 +1021,7 @@ msgstr ""
 
 #: ../../../usage/testing.rst:372
 msgid "``my_app/secret.py``"
-msgstr ""
+msgstr "``my_app/secret.py``"
 
 #: ../../../usage/testing.rst:372
 msgid ""
@@ -977,6 +1036,16 @@ msgid ""
 "get(\"SECRET\")})\n"
 "def secret_endpoint() -> None: ..."
 msgstr ""
+"from os import environ\n"
+"\n"
+"from litestar import get\n"
+"\n"
+"from my_app.guards import secret_token_guard\n"
+"\n"
+"\n"
+"@get(path=\"/secret\", guards=[secret_token_guard], opt={\"secret\": environ."
+"get(\"SECRET\")})\n"
+"def secret_endpoint() -> None: ..."
 
 #: ../../../usage/testing.rst:384
 msgid "We could thus test the guard function like so:"
@@ -984,7 +1053,7 @@ msgstr ""
 
 #: ../../../usage/testing.rst:387
 msgid "``tests/guards/test_secret_token_guard.py``"
-msgstr ""
+msgstr "``tests/guards/test_secret_token_guard.py``"
 
 #: ../../../usage/testing.rst:387
 msgid ""
@@ -1013,3 +1082,27 @@ msgid ""
 "    secret_token_guard(request=request, "
 "route_handler=copied_endpoint_handler)"
 msgstr ""
+"import pytest\n"
+"\n"
+"from litestar.exceptions import NotAuthorizedException\n"
+"from litestar.testing import RequestFactory\n"
+"\n"
+"from my_app.guards import secret_token_guard\n"
+"from my_app.secret import secret_endpoint\n"
+"\n"
+"request = RequestFactory().get(\"/\")\n"
+"\n"
+"\n"
+"def test_secret_token_guard_failure_scenario():\n"
+"    copied_endpoint_handler = secret_endpoint.copy()\n"
+"    copied_endpoint_handler.opt[\"secret\"] = None\n"
+"    with pytest.raises(NotAuthorizedException):\n"
+"        secret_token_guard(request=request, "
+"route_handler=copied_endpoint_handler)\n"
+"\n"
+"\n"
+"def test_secret_token_guard_success_scenario():\n"
+"    copied_endpoint_handler = secret_endpoint.copy()\n"
+"    copied_endpoint_handler.opt[\"secret\"] = \"super-secret\"\n"
+"    secret_token_guard(request=request, "
+"route_handler=copied_endpoint_handler)"

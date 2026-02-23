@@ -70,13 +70,13 @@ msgstr ""
 #: ../../../../litestar/middleware/csrf.py:docstring of
 #: litestar.middleware.csrf.CSRFMiddleware.__call__:4
 msgid "The ASGI receive function."
-msgstr ""
+msgstr "ASGI 接收函式。"
 
 #: ../../../../litestar/middleware/csrf.py:docstring of
 #: litestar.middleware.csrf.CSRFMiddleware.__call__:5
 #: litestar.middleware.csrf.CSRFMiddleware.create_send_wrapper:4
 msgid "The ASGI send function."
-msgstr ""
+msgstr "ASGI 發送函式。"
 
 #: ../../../reference/middleware/csrf.rst:0
 msgid "Returns"

@@ -569,7 +569,7 @@ msgstr ""
 
 #: ../../../migration/fastapi.rst:478
 msgid "Middleware"
-msgstr ""
+msgstr "中介軟體"
 
 #: ../../../migration/fastapi.rst:480
 msgid ""

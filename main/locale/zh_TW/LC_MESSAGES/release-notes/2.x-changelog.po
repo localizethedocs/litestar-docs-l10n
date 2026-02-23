@@ -4591,7 +4591,7 @@ msgstr ""
 
 #: ../../../release-notes/2.x-changelog.rst:4025
 msgid "``openapi.enums``"
-msgstr ""
+msgstr "``openapi.enums``"
 
 #: ../../../release-notes/2.x-changelog.rst:4026
 msgid "``openapi.datastructures``"

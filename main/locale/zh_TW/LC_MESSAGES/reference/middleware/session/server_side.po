@@ -47,7 +47,7 @@ msgstr ""
 #: ../../../../litestar/middleware/session/server_side.py:docstring of
 #: litestar.middleware.session.server_side.ServerSideSessionBackend.__init__:1
 msgid "Initialize ``ServerSideSessionBackend``"
-msgstr ""
+msgstr "初始化 ``ServerSideSessionBackend``"
 
 #: ../../../reference/middleware/session/server_side.rst:0
 msgid "Parameters"

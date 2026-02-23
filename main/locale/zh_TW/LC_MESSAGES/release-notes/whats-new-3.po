@@ -258,15 +258,15 @@ msgstr ""
 
 #: ../../../release-notes/whats-new-3.rst:127
 msgid "``get_litestar_scope_state``"
-msgstr ""
+msgstr "``get_litestar_scope_state``"
 
 #: ../../../release-notes/whats-new-3.rst:128
 msgid "``set_litestar_scope_state``"
-msgstr ""
+msgstr "``set_litestar_scope_state``"
 
 #: ../../../release-notes/whats-new-3.rst:129
 msgid "``delete_litestar_scope_state``"
-msgstr ""
+msgstr "``delete_litestar_scope_state``"
 
 #: ../../../release-notes/whats-new-3.rst:133
 msgid "Deprecated utility function ``is_sync_or_async_generator`` removed"
@@ -290,6 +290,10 @@ msgid ""
 "def is_sync_or_async_generator(obj: Any) -> bool:\n"
 "    return isgeneratorfunction(obj) or isasyncgenfunction(obj)"
 msgstr ""
+"from inspect import isasyncgenfunction, isgeneratorfunction\n"
+"\n"
+"def is_sync_or_async_generator(obj: Any) -> bool:\n"
+"    return isgeneratorfunction(obj) or isasyncgenfunction(obj)"
 
 #: ../../../release-notes/whats-new-3.rst:148
 msgid "Removal of semantic HTTP route handler classes"
@@ -365,7 +369,7 @@ msgstr ""
 
 #: ../../../release-notes/whats-new-3.rst:205
 msgid "https://www.iana.org/assignments/media-types/application/vnd.msgpack"
-msgstr ""
+msgstr "https://www.iana.org/assignments/media-types/application/vnd.msgpack"
 
 #: ../../../release-notes/whats-new-3.rst:209
 msgid "Deprecated ``resolve_`` methods on route handlers"
@@ -393,15 +397,15 @@ msgstr ""
 
 #: ../../../release-notes/whats-new-3.rst:224
 msgid "``route_handler_method_map``"
-msgstr ""
+msgstr "``route_handler_method_map``"
 
 #: ../../../release-notes/whats-new-3.rst:225
 msgid "``get_route_handler_map``"
-msgstr ""
+msgstr "``get_route_handler_map``"
 
 #: ../../../release-notes/whats-new-3.rst:226
 msgid "``routes``"
-msgstr ""
+msgstr "``routes``"
 
 #: ../../../release-notes/whats-new-3.rst:230
 msgid "Removal of  ``CLIPluginProtocol``"
@@ -559,7 +563,7 @@ msgstr ""
 
 #: ../../../release-notes/whats-new-3.rst:338
 msgid "Middleware configuration constraints"
-msgstr ""
+msgstr "中介軟體組態約束"
 
 #: ../../../release-notes/whats-new-3.rst:340
 msgid ""

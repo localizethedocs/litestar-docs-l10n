@@ -24,7 +24,7 @@ msgstr ""
 #: ../../../../litestar/stores/valkey.py:docstring of
 #: litestar.stores.valkey.ValkeyStore:1
 msgid "Bases: :py:class:`~litestar.stores.base.NamespacedStore`"
-msgstr ""
+msgstr "基底類別：:py:class:`~litestar.stores.base.NamespacedStore`"
 
 #: ../../../../litestar/stores/valkey.py:docstring of
 #: litestar.stores.valkey.ValkeyStore:1

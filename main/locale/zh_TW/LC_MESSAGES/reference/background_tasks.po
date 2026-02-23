@@ -25,7 +25,7 @@ msgstr ""
 #: litestar.background_tasks.BackgroundTask:1
 #: litestar.background_tasks.BackgroundTasks:1
 msgid "Bases: :py:class:`object`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../litestar/background_tasks.py:docstring of
 #: litestar.background_tasks.BackgroundTask:1
@@ -41,7 +41,7 @@ msgstr ""
 #: ../../../../litestar/background_tasks.py:docstring of
 #: litestar.background_tasks.BackgroundTask.__init__:1
 msgid "Initialize ``BackgroundTask``."
-msgstr ""
+msgstr "初始化 ``BackgroundTask``。"
 
 #: ../../../reference/background_tasks.rst:0
 msgid "Parameters"
@@ -85,7 +85,7 @@ msgstr ""
 #: ../../../../litestar/background_tasks.py:docstring of
 #: litestar.background_tasks.BackgroundTasks.__init__:1
 msgid "Initialize ``BackgroundTasks``."
-msgstr ""
+msgstr "初始化 ``BackgroundTasks``。"
 
 #: ../../../../litestar/background_tasks.py:docstring of
 #: litestar.background_tasks.BackgroundTasks.__init__:3

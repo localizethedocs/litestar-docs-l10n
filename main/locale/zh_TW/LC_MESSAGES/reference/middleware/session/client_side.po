@@ -31,6 +31,8 @@ msgid ""
 "Bases: :py:class:`~litestar.middleware.session.base.BaseSessionBackend`\\ [:"
 "py:class:`CookieBackendConfig`]"
 msgstr ""
+"基底類別：:py:class:`~litestar.middleware.session.base.BaseSessionBackend`\\ "
+"[:py:class:`CookieBackendConfig`]"
 
 #: ../../../../litestar/middleware/session/client_side.py:docstring of
 #: litestar.middleware.session.client_side.ClientSideSessionBackend:1
@@ -40,7 +42,7 @@ msgstr ""
 #: ../../../../litestar/middleware/session/client_side.py:docstring of
 #: litestar.middleware.session.client_side.ClientSideSessionBackend.__init__:1
 msgid "Initialize ``ClientSideSessionBackend``."
-msgstr ""
+msgstr "初始化 ``ClientSideSessionBackend``。"
 
 #: ../../../reference/middleware/session/client_side.rst:0
 msgid "Parameters"

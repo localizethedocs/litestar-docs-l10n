@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../usage/openapi/ui_plugins.rst:2
 msgid "OpenAPI UI Plugins"
-msgstr ""
+msgstr "OpenAPI UI 插件"
 
 #: ../../../usage/openapi/ui_plugins.rst:6
 msgid ""
@@ -37,15 +37,15 @@ msgstr ""
 
 #: ../../../usage/openapi/ui_plugins.rst:12
 msgid "`Scalar <https://github.com/scalar/scalar/>`_"
-msgstr ""
+msgstr "`Scalar <https://github.com/scalar/scalar/>`_"
 
 #: ../../../usage/openapi/ui_plugins.rst:13
 msgid "`RapiDoc <https://rapidocweb.com/>`_"
-msgstr ""
+msgstr "`RapiDoc <https://rapidocweb.com/>`_"
 
 #: ../../../usage/openapi/ui_plugins.rst:14
 msgid "`ReDoc <https://redocly.com/>`_"
-msgstr ""
+msgstr "`ReDoc <https://redocly.com/>`_"
 
 #: ../../../usage/openapi/ui_plugins.rst:15
 msgid "`Stoplight Elements <https://stoplight.io/open-source/elements>`_"
@@ -67,7 +67,7 @@ msgstr ""
 
 #: ../../../usage/openapi/ui_plugins.rst:24
 msgid "Using OpenAPI UI Plugins"
-msgstr ""
+msgstr "使用 OpenAPI UI 插件"
 
 #: ../../../usage/openapi/ui_plugins.rst:26
 msgid ""
@@ -275,6 +275,26 @@ msgid ""
 "    ),\n"
 ")"
 msgstr ""
+"from litestar import Litestar, get\n"
+"from litestar.openapi.config import OpenAPIConfig\n"
+"from litestar.openapi.plugins import RapidocRenderPlugin, "
+"SwaggerRenderPlugin\n"
+"\n"
+"\n"
+"@get(\"/\", sync_to_thread=False)\n"
+"def hello_world() -> dict[str, str]:\n"
+"    return {\"message\": \"Hello World\"}\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[hello_world],\n"
+"    openapi_config=OpenAPIConfig(\n"
+"        title=\"Litestar Example\",\n"
+"        description=\"Example of litestar\",\n"
+"        version=\"0.0.1\",\n"
+"        render_plugins=[RapidocRenderPlugin(), SwaggerRenderPlugin()],\n"
+"    ),\n"
+")"
 
 #: ../../../usage/openapi/ui_plugins.rst:79
 msgid "Configuring OpenAPI UI Plugins"
@@ -534,7 +554,7 @@ msgstr ""
 
 #: ../../../usage/openapi/ui_plugins.rst:172
 msgid "class ScalarRenderPlugin(OpenAPIRenderPlugin):"
-msgstr ""
+msgstr "class ScalarRenderPlugin(OpenAPIRenderPlugin):"
 
 #: ../../../usage/openapi/ui_plugins.rst:176
 msgid "``__init__`` Constructor"
@@ -556,6 +576,19 @@ msgid ""
 "        self.css_url = css_url\n"
 "        super().__init__(path=path, **kwargs)"
 msgstr ""
+"    def __init__(\n"
+"        self,\n"
+"        *,\n"
+"        version: str = \"1.19.5\",\n"
+"        js_url: str | None = None,\n"
+"        css_url: str | None = None,\n"
+"        path: str | Sequence[str] = \"/scalar\",\n"
+"        **kwargs: Any,\n"
+"    ) -> None:\n"
+"        self.js_url = js_url or f\"https://cdn.jsdelivr.net/npm/@scalar/api-"
+"reference@{version}\"\n"
+"        self.css_url = css_url\n"
+"        super().__init__(path=path, **kwargs)"
 
 #: ../../../usage/openapi/ui_plugins.rst:182
 msgid "We support configuration via the following arguments:"
@@ -656,6 +689,13 @@ msgid ""
 "                <script src=\"{self.js_url}\" crossorigin></script>\n"
 "                \"\"\""
 msgstr ""
+"        body = f\"\"\"\n"
+"                <script\n"
+"                  id=\"api-reference\"\n"
+"                  data-url=\"openapi.json\">\n"
+"                </script>\n"
+"                <script src=\"{self.js_url}\" crossorigin></script>\n"
+"                \"\"\""
 
 #: ../../../usage/openapi/ui_plugins.rst:221
 msgid ""
@@ -718,6 +758,30 @@ msgid ""
 "\n"
 "        router.register(something)"
 msgstr ""
+"from __future__ import annotations\n"
+"\n"
+"from typing import TYPE_CHECKING\n"
+"\n"
+"from litestar import get\n"
+"from litestar.enums import MediaType\n"
+"from litestar.openapi.plugins import OpenAPIRenderPlugin\n"
+"\n"
+"if TYPE_CHECKING:\n"
+"    from litestar.connection import Request\n"
+"    from litestar.router import Router\n"
+"\n"
+"\n"
+"class MyOpenAPIPlugin(OpenAPIRenderPlugin):\n"
+"    def render(self, request: Request, openapi_schema: dict[str, str]) -> "
+"bytes:\n"
+"        return b\"<html>My UI of Choice!</html>\"\n"
+"\n"
+"    def receive_router(self, router: Router) -> None:\n"
+"        @get(\"/something\", media_type=MediaType.TEXT)\n"
+"        def something() -> str:\n"
+"            return \"Something\"\n"
+"\n"
+"        router.register(something)"
 
 #: ../../../usage/openapi/ui_plugins.rst:239
 msgid "OAuth2 in Swagger UI"

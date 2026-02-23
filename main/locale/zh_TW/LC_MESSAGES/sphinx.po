@@ -124,7 +124,7 @@ msgstr ""
 
 #: conf.py:403
 msgid "Sponsor"
-msgstr ""
+msgstr "贊助者"
 
 #: extension.py:58
 #, python-format
@@ -2758,7 +2758,7 @@ msgstr ""
 
 #: themes/basic/defindex.html:4
 msgid "Overview"
-msgstr ""
+msgstr "概覽"
 
 #: themes/basic/defindex.html:8
 msgid "Welcome! This is"
@@ -4292,7 +4292,7 @@ msgstr ""
 #: ext/autodoc/__init__.py:1966
 #, python-format
 msgid "Bases: %s"
-msgstr ""
+msgstr "基底類別：%s"
 
 #: ext/autodoc/__init__.py:1985
 #, python-format

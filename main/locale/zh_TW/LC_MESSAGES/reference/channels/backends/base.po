@@ -24,7 +24,7 @@ msgstr ""
 #: ../../../../litestar/channels/backends/base.py:docstring of
 #: litestar.channels.backends.base.ChannelsBackend:1
 msgid "Bases: :py:class:`~abc.ABC`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../litestar/channels/backends/base.py:docstring of
 #: litestar.channels.backends.base.ChannelsBackend.on_startup:1

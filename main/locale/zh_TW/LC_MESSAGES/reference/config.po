@@ -34,7 +34,7 @@ msgstr ""
 #: litestar.config.response_cache.CACHE_FOREVER:1
 #: litestar.config.response_cache.ResponseCacheConfig:1
 msgid "Bases: :py:class:`object`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../litestar/config/allowed_hosts.py:docstring of
 #: litestar.config.allowed_hosts.AllowedHostsConfig:1
