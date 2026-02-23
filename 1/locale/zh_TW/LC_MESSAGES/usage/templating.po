@@ -67,7 +67,7 @@ msgstr ""
 
 #: ../../../usage/templating.rst:0
 msgid "Jinja"
-msgstr ""
+msgstr "Jinja"
 
 #: ../../../usage/templating.rst:36
 msgid ""
@@ -87,7 +87,7 @@ msgstr ""
 
 #: ../../../usage/templating.rst:0
 msgid "Mako"
-msgstr ""
+msgstr "Mako"
 
 #: ../../../usage/templating.rst:42
 msgid ""

@@ -85,7 +85,7 @@ msgstr ""
 #: ../../../../starlite/datastructures/url.py:docstring of
 #: starlite.datastructures.url.URL:1
 msgid "Bases: :py:class:`object`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../starlite/datastructures/url.py:docstring of
 #: starlite.datastructures.url.URL:1
@@ -147,13 +147,13 @@ msgstr ""
 #: starlite.datastructures.url.URL.from_components:3
 #: starlite.datastructures.url.URL.with_replacements:3
 msgid "URL scheme"
-msgstr ""
+msgstr "URL 方案"
 
 #: ../../../../starlite/datastructures/url.py:docstring of
 #: starlite.datastructures.url.URL.from_components:4
 #: starlite.datastructures.url.URL.with_replacements:4
 msgid "Network location"
-msgstr ""
+msgstr "網路位置"
 
 #: ../../../../starlite/datastructures/url.py:docstring of
 #: starlite.datastructures.url.URL.from_components:5

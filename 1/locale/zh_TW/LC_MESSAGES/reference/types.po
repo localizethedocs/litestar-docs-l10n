@@ -214,7 +214,7 @@ msgstr ""
 #: ../../../../starlite/types/protocols.py:docstring
 #: starlite.types.protocols.Logger:1
 msgid "Bases: :py:class:`~typing.Protocol`"
-msgstr ""
+msgstr "基底類別：:py:class:`~typing.Protocol`"
 
 #: ../../../../starlite/types/protocols.py:docstring of
 #: starlite.types.protocols.Logger:1

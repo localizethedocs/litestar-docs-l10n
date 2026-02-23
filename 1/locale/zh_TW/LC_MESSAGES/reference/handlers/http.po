@@ -41,7 +41,7 @@ msgstr ""
 #: ../../../../starlite/handlers/http.py:docstring of
 #: starlite.handlers.http.HTTPRouteHandler.__init__:1
 msgid "Initialize ``HTTPRouteHandler``."
-msgstr ""
+msgstr "初始化 ``HTTPRouteHandler``。"
 
 #: ../../../../starlite/handlers/http.py:docstring of
 #: starlite.handlers.http.HTTPRouteHandler.__init__:0

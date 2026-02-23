@@ -25,7 +25,7 @@ msgstr ""
 #: starlite.datastructures.provide.DependencyCleanupGroup:1
 #: starlite.datastructures.provide.Provide:1
 msgid "Bases: :py:class:`object`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../starlite/datastructures/provide.py:docstring of
 #: starlite.datastructures.provide.Provide:1
@@ -35,7 +35,7 @@ msgstr ""
 #: ../../../../starlite/datastructures/provide.py:docstring of
 #: starlite.datastructures.provide.Provide.__init__:1
 msgid "Initialize ``Provide``"
-msgstr ""
+msgstr "初始化 ``Provide``"
 
 #: ../../../../starlite/datastructures/provide.py:docstring of
 #: starlite.datastructures.provide.DependencyCleanupGroup.__init__:0

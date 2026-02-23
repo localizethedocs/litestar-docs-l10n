@@ -40,7 +40,7 @@ msgstr ""
 #: ../../../../starlite/exceptions/http_exceptions.py:docstring of
 #: starlite.exceptions.http_exceptions.HTTPException.__init__:1
 msgid "Initialize ``HTTPException``."
-msgstr ""
+msgstr "初始化 ``HTTPException``。"
 
 #: ../../../../starlite/exceptions/http_exceptions.py:docstring of
 #: starlite.exceptions.http_exceptions.HTTPException.__init__:3
@@ -209,7 +209,7 @@ msgstr ""
 #: ../../../../starlite/exceptions/http_exceptions.py:docstring of
 #: starlite.exceptions.http_exceptions.TemplateNotFoundException.__init__:1
 msgid "Initialize ``TemplateNotFoundException``."
-msgstr ""
+msgstr "初始化 ``TemplateNotFoundException``。"
 
 #: ../../../../starlite/exceptions/http_exceptions.py:docstring of
 #: starlite.exceptions.http_exceptions.TemplateNotFoundException.__init__:3

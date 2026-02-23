@@ -39,7 +39,7 @@ msgstr ""
 #: ../../../../starlite/connection/websocket.py:docstring of
 #: starlite.connection.websocket.WebSocket.__init__:1
 msgid "Initialize ``WebSocket``."
-msgstr ""
+msgstr "初始化 ``WebSocket``。"
 
 #: ../../../../starlite/connection/websocket.py:docstring of
 #: starlite.connection.websocket.WebSocket.__init__:0
@@ -65,13 +65,13 @@ msgstr ""
 #: starlite.connection.websocket.WebSocket.__init__:4
 #: starlite.connection.websocket.WebSocket.receive_wrapper:3
 msgid "The ASGI receive function."
-msgstr ""
+msgstr "ASGI 接收函式。"
 
 #: ../../../../starlite/connection/websocket.py:docstring of
 #: starlite.connection.websocket.WebSocket.__init__:5
 #: starlite.connection.websocket.WebSocket.send_wrapper:3
 msgid "The ASGI send function."
-msgstr ""
+msgstr "ASGI 發送函式。"
 
 #: ../../../../starlite/connection/websocket.py:docstring of
 #: starlite.connection.websocket.WebSocket.receive_wrapper:1

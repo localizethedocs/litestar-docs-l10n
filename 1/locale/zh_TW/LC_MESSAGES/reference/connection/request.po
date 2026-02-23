@@ -38,7 +38,7 @@ msgstr ""
 #: ../../../../starlite/connection/request.py:docstring of
 #: starlite.connection.request.Request.__init__:1
 msgid "Initialize ``Request``."
-msgstr ""
+msgstr "初始化 ``Request``。"
 
 #: ../../../../starlite/connection/request.py:docstring of
 #: starlite.connection.request.Request.__init__:0
@@ -54,12 +54,12 @@ msgstr ""
 #: ../../../../starlite/connection/request.py:docstring of
 #: starlite.connection.request.Request.__init__:4
 msgid "The ASGI receive function."
-msgstr ""
+msgstr "ASGI 接收函式。"
 
 #: ../../../../starlite/connection/request.py:docstring of
 #: starlite.connection.request.Request.__init__:5
 msgid "The ASGI send function."
-msgstr ""
+msgstr "ASGI 發送函式。"
 
 #: ../../../../starlite/connection/request.py:docstring of
 #: starlite.connection.request.Request.method:1

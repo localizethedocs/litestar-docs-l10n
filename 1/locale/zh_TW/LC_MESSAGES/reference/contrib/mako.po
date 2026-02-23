@@ -96,7 +96,7 @@ msgstr ""
 #: ../../../../starlite/contrib/mako.py:docstring of
 #: starlite.contrib.mako.MakoTemplateEngine.__init__:1
 msgid "Initialize template engine."
-msgstr ""
+msgstr "初始化模板引擎。"
 
 #: ../../../../starlite/contrib/mako.py:docstring of
 #: starlite.contrib.mako.MakoTemplateEngine.__init__:3

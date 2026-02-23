@@ -171,7 +171,7 @@ msgstr ""
 #: ../../../usage/the-starlite-app.rst:76
 #: ../../../usage/the-starlite-app.rst:87
 msgid "Using Application State"
-msgstr ""
+msgstr "使用應用狀態"
 
 #: ../../../usage/the-starlite-app.rst:58
 msgid ""
@@ -260,7 +260,7 @@ msgstr ""
 
 #: ../../../usage/the-starlite-app.rst:81
 msgid "Initializing Application State"
-msgstr ""
+msgstr "初始化應用狀態"
 
 #: ../../../usage/the-starlite-app.rst:83
 msgid ""
@@ -533,7 +533,7 @@ msgstr ""
 
 #: ../../../usage/the-starlite-app.rst:252
 msgid "Using Picologging"
-msgstr ""
+msgstr "使用 Picologging"
 
 #: ../../../usage/the-starlite-app.rst:254
 msgid ""
@@ -546,7 +546,7 @@ msgstr ""
 
 #: ../../../usage/the-starlite-app.rst:259
 msgid "Using StructLog"
-msgstr ""
+msgstr "使用 StructLog"
 
 #: ../../../usage/the-starlite-app.rst:261
 msgid ""
@@ -974,19 +974,19 @@ msgstr ""
 
 #: ../../../usage/the-starlite-app.rst:394
 msgid ":ref:`after_request <after_request>`"
-msgstr ""
+msgstr ":ref:`after_request <after_request>`"
 
 #: ../../../usage/the-starlite-app.rst:395
 msgid ":ref:`after_response <after_response>`"
-msgstr ""
+msgstr ":ref:`after_response <after_response>`"
 
 #: ../../../usage/the-starlite-app.rst:396
 msgid ":ref:`before_request <before_request>`"
-msgstr ""
+msgstr ":ref:`before_request <before_request>`"
 
 #: ../../../usage/the-starlite-app.rst:397
 msgid ":ref:`cache_control <usage/responses:cache control>`"
-msgstr ""
+msgstr ":ref:`cache_control <usage/responses:cache control>`"
 
 #: ../../../usage/the-starlite-app.rst:398
 msgid ":doc:`dependencies </usage/dependency-injection>`"

@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../usage/middleware/using-middleware.rst:2
 msgid "Using Middleware"
-msgstr ""
+msgstr "使用中介軟體"
 
 #: ../../../usage/middleware/using-middleware.rst:4
 msgid ""

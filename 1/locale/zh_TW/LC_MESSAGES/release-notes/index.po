@@ -19,4 +19,4 @@ msgstr ""
 
 #: ../../../release-notes/index.rst:4
 msgid "Release notes"
-msgstr ""
+msgstr "發行備註"

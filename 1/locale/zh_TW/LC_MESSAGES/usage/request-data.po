@@ -29,7 +29,7 @@ msgstr ""
 msgid ""
 "The body of HTTP requests can be accessed using the special ``data`` "
 "parameter in a handler function."
-msgstr ""
+msgstr "HTTP 請求的正文可以使用處理器函式中的特殊 ``data`` 參數來存取。"
 
 #: ../../../usage/request-data.rst:0
 msgid "Python 3.8+"
@@ -258,7 +258,7 @@ msgstr ""
 
 #: ../../../usage/request-data.rst:0
 msgid "Async"
-msgstr ""
+msgstr "異步"
 
 #: ../../../usage/request-data.rst:90
 msgid ""
@@ -280,7 +280,7 @@ msgstr ""
 
 #: ../../../usage/request-data.rst:0
 msgid "Sync"
-msgstr ""
+msgstr "同步"
 
 #: ../../../usage/request-data.rst:95
 msgid ""

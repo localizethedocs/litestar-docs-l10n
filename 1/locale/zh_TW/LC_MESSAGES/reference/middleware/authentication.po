@@ -45,7 +45,7 @@ msgstr ""
 #: ../../../../starlite/middleware/authentication.py:docstring of
 #: starlite.middleware.authentication.AbstractAuthenticationMiddleware:1
 msgid "Bases: :py:class:`~abc.ABC`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../starlite/middleware/authentication.py:docstring of
 #: starlite.middleware.authentication.AbstractAuthenticationMiddleware:1
@@ -104,12 +104,12 @@ msgstr ""
 #: ../../../../starlite/middleware/authentication.py:docstring of
 #: starlite.middleware.authentication.AbstractAuthenticationMiddleware.__call__:4
 msgid "The ASGI receive function."
-msgstr ""
+msgstr "ASGI 接收函式。"
 
 #: ../../../../starlite/middleware/authentication.py:docstring of
 #: starlite.middleware.authentication.AbstractAuthenticationMiddleware.__call__:5
 msgid "The ASGI send function."
-msgstr ""
+msgstr "ASGI 發送函式。"
 
 #: ../../../../starlite/middleware/authentication.py:docstring of
 #: starlite.middleware.authentication.AbstractAuthenticationMiddleware.__call__:0

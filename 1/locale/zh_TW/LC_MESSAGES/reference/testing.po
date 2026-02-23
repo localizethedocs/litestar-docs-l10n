@@ -179,7 +179,7 @@ msgstr ""
 #: starlite.testing.client.sync_client.TestClient.request:9
 #: starlite.testing.client.sync_client.TestClient.websocket_connect:5
 msgid "Query parameters."
-msgstr ""
+msgstr "查詢參數。"
 
 #: ../../../../starlite/testing/client/sync_client.py:docstring of
 #: starlite.testing.client.sync_client.TestClient.delete:5
@@ -192,7 +192,7 @@ msgstr ""
 #: starlite.testing.client.sync_client.TestClient.request:10
 #: starlite.testing.client.sync_client.TestClient.websocket_connect:6
 msgid "Request headers."
-msgstr ""
+msgstr "請求標頭。"
 
 #: ../../../../starlite/testing/client/sync_client.py:docstring of
 #: starlite.testing.client.sync_client.TestClient.delete:6
@@ -244,7 +244,7 @@ msgstr ""
 #: starlite.testing.client.sync_client.TestClient.request:14
 #: starlite.testing.client.sync_client.TestClient.websocket_connect:10
 msgid "Request timeout."
-msgstr ""
+msgstr "請求逾時。"
 
 #: ../../../../starlite/testing/client/sync_client.py:docstring of
 #: starlite.testing.client.sync_client.TestClient.delete:10
@@ -432,7 +432,7 @@ msgstr ""
 #: ../../../../starlite/testing/request_factory.py:docstring of
 #: starlite.testing.request_factory.RequestFactory:1
 msgid "Bases: :py:class:`object`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../starlite/testing/request_factory.py:docstring of
 #: starlite.testing.request_factory.RequestFactory:1

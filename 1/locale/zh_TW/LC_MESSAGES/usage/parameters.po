@@ -317,7 +317,7 @@ msgstr ""
 
 #: ../../../usage/parameters.rst:78
 msgid "Query Parameters"
-msgstr ""
+msgstr "查詢參數"
 
 #: ../../../usage/parameters.rst:80
 msgid ""

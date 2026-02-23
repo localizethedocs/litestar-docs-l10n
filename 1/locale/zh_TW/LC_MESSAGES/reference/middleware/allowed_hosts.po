@@ -34,7 +34,7 @@ msgstr ""
 #: ../../../../starlite/middleware/allowed_hosts.py:docstring of
 #: starlite.middleware.allowed_hosts.AllowedHostsMiddleware.__init__:1
 msgid "Initialize ``AllowedHostsMiddleware``."
-msgstr ""
+msgstr "初始化 ``AllowedHostsMiddleware``。"
 
 #: ../../../../starlite/middleware/allowed_hosts.py:docstring of
 #: starlite.middleware.allowed_hosts.AllowedHostsMiddleware.__init__:0

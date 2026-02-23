@@ -93,7 +93,7 @@ msgstr ""
 #: ../../../../starlite/template/base.py:docstring of
 #: starlite.template.base.TemplateProtocol:1
 msgid "Bases: :py:class:`~typing.Protocol`"
-msgstr ""
+msgstr "基底類別：:py:class:`~typing.Protocol`"
 
 #: ../../../../starlite/template/base.py:docstring of
 #: starlite.template.base.TemplateProtocol:1

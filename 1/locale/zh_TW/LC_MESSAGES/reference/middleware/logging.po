@@ -34,7 +34,7 @@ msgstr ""
 #: ../../../../starlite/middleware/logging.py:docstring of
 #: starlite.middleware.logging.LoggingMiddleware.__init__:1
 msgid "Initialize ``LoggingMiddleware``."
-msgstr ""
+msgstr "初始化 ``LoggingMiddleware``。"
 
 #: ../../../../starlite/middleware/logging.py:docstring of
 #: starlite.middleware.logging.LoggingMiddleware.__init__:0
@@ -137,7 +137,7 @@ msgstr ""
 #: ../../../../starlite/middleware/logging.py:docstring of
 #: starlite.middleware.logging.LoggingMiddleware.create_send_wrapper:4
 msgid "The ASGI send function."
-msgstr ""
+msgstr "ASGI 發送函式。"
 
 #: ../../../../starlite/middleware/logging.py:docstring of
 #: starlite.middleware.logging.LoggingMiddleware.create_send_wrapper:6

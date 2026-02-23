@@ -24,7 +24,7 @@ msgstr ""
 #: ../../../../starlite/middleware/base.py:docstring of
 #: starlite.middleware.base.MiddlewareProtocol:1
 msgid "Bases: :py:class:`~typing.Protocol`"
-msgstr ""
+msgstr "基底類別：:py:class:`~typing.Protocol`"
 
 #: ../../../../starlite/middleware/base.py:docstring of
 #: starlite.middleware.base.MiddlewareProtocol:1
@@ -72,13 +72,13 @@ msgstr ""
 #: starlite.middleware.base.AbstractMiddleware.__call__:9
 #: starlite.middleware.base.MiddlewareProtocol.__call__:9
 msgid "The ASGI receive function."
-msgstr ""
+msgstr "ASGI 接收函式。"
 
 #: ../../../../starlite/middleware/base.py:docstring of
 #: starlite.middleware.base.AbstractMiddleware.__call__:10
 #: starlite.middleware.base.MiddlewareProtocol.__call__:10
 msgid "The ASGI send function."
-msgstr ""
+msgstr "ASGI 發送函式。"
 
 #: ../../../../starlite/middleware/base.py:docstring of
 #: starlite.middleware.base.AbstractMiddleware.__call__:0
@@ -97,7 +97,7 @@ msgstr ""
 #: starlite.middleware.base.AbstractMiddleware:1
 #: starlite.middleware.base.DefineMiddleware:1
 msgid "Bases: :py:class:`object`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../starlite/middleware/base.py:docstring of
 #: starlite.middleware.base.DefineMiddleware:1

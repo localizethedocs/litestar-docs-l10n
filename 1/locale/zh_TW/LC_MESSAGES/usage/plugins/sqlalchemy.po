@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../usage/plugins/sqlalchemy.rst:2
 msgid "SQLAlchemy Plugin"
-msgstr ""
+msgstr "SQLAlchemy 插件"
 
 #: ../../../usage/plugins/sqlalchemy.rst:4
 msgid ""
@@ -85,7 +85,7 @@ msgstr ""
 
 #: ../../../usage/plugins/sqlalchemy.rst:0
 msgid "Async"
-msgstr ""
+msgstr "異步"
 
 #: ../../../usage/plugins/sqlalchemy.rst:0
 msgid "Python 3.8+"
@@ -250,7 +250,7 @@ msgstr ""
 
 #: ../../../usage/plugins/sqlalchemy.rst:0
 msgid "Sync"
-msgstr ""
+msgstr "同步"
 
 #: ../../../usage/plugins/sqlalchemy.rst:51
 msgid ""

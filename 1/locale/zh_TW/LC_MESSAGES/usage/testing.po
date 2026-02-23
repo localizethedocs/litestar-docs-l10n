@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../usage/testing.rst:2
 msgid "Testing"
-msgstr ""
+msgstr "測試"
 
 #: ../../../usage/testing.rst:4
 msgid ""
@@ -65,7 +65,7 @@ msgstr ""
 
 #: ../../../usage/testing.rst:0
 msgid "Sync"
-msgstr ""
+msgstr "同步"
 
 #: ../../../usage/testing.rst:38 ../../../usage/testing.rst:56
 #: ../../../usage/testing.rst:120 ../../../usage/testing.rst:136
@@ -89,7 +89,7 @@ msgstr ""
 
 #: ../../../usage/testing.rst:0
 msgid "Async"
-msgstr ""
+msgstr "異步"
 
 #: ../../../usage/testing.rst:56
 msgid ""

@@ -24,7 +24,7 @@ msgstr ""
 #: ../../../../starlite/exceptions/base_exceptions.py:docstring of
 #: starlite.exceptions.base_exceptions.StarLiteException:1
 msgid "Bases: :py:class:`Exception`"
-msgstr ""
+msgstr "基底類別：:py:class:`Exception`"
 
 #: ../../../../starlite/exceptions/base_exceptions.py:docstring of
 #: starlite.exceptions.base_exceptions.StarLiteException:1

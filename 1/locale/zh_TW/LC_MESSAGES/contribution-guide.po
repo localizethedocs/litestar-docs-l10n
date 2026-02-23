@@ -51,11 +51,11 @@ msgstr ""
 
 #: ../../../../CONTRIBUTING.rst:16
 msgid "Code contributions"
-msgstr ""
+msgstr "程式碼貢獻"
 
 #: ../../../../CONTRIBUTING.rst:19
 msgid "Workflow"
-msgstr ""
+msgstr "工作流程"
 
 #: ../../../../CONTRIBUTING.rst:21
 msgid ""
@@ -88,7 +88,7 @@ msgstr ""
 
 #: ../../../../CONTRIBUTING.rst:28
 msgid "Push the changes to your fork"
-msgstr ""
+msgstr "將變更推送到您的分叉庫"
 
 #: ../../../../CONTRIBUTING.rst:29
 msgid ""
@@ -174,7 +174,7 @@ msgstr ""
 
 #: ../../../../CONTRIBUTING.rst:65
 msgid "Writing and running tests"
-msgstr ""
+msgstr "編寫並執行測試"
 
 #: ../../../../CONTRIBUTING.rst:67
 msgid ""
@@ -221,7 +221,7 @@ msgstr ""
 
 #: ../../../../CONTRIBUTING.rst:88
 msgid "Docs theme and appearance"
-msgstr ""
+msgstr "文件主題與外觀"
 
 #: ../../../../CONTRIBUTING.rst:90
 msgid ""
@@ -254,7 +254,7 @@ msgstr ""
 
 #: ../../../../CONTRIBUTING.rst:104
 msgid "Writing and editing docs"
-msgstr ""
+msgstr "撰寫與編輯文件"
 
 #: ../../../../CONTRIBUTING.rst:106
 msgid ""
@@ -329,7 +329,7 @@ msgstr ""
 
 #: ../../../../CONTRIBUTING.rst:135
 msgid "Automatically execute examples"
-msgstr ""
+msgstr "自動執行範例"
 
 #: ../../../../CONTRIBUTING.rst:137
 msgid ""

@@ -318,11 +318,11 @@ msgstr ""
 
 #: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__call__:6
 msgid "The ASGI receive function."
-msgstr ""
+msgstr "ASGI 接收函式。"
 
 #: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__call__:7
 msgid "The ASGI send function."
-msgstr ""
+msgstr "ASGI 發送函式。"
 
 #: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__call__:0
 #: starlite.app.Starlite.get_handler_index_by_name:0

@@ -404,7 +404,7 @@ msgstr ""
 #: ../../../../starlite/response/streaming.py:docstring
 #: starlite.response.streaming.StreamingResponse.send_body:3
 msgid "The ASGI send function."
-msgstr ""
+msgstr "ASGI 發送函式。"
 
 #: ../../../../starlite/response/base.py:docstring of
 #: starlite.response.base.Response.send_body:1
@@ -419,7 +419,7 @@ msgstr ""
 #: ../../../../starlite/response/streaming.py:docstring
 #: starlite.response.streaming.StreamingResponse.send_body:4
 msgid "The ASGI receive function."
-msgstr ""
+msgstr "ASGI 接收函式。"
 
 #: ../../../../starlite/response/base.py:docstring of
 #: starlite.response.base.Response.send_body:8

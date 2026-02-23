@@ -35,7 +35,7 @@ msgstr ""
 #: ../../../../starlite/exceptions/websocket_exceptions.py:docstring of
 #: starlite.exceptions.websocket_exceptions.WebSocketException.__init__:1
 msgid "Initialize ``WebSocketException``."
-msgstr ""
+msgstr "初始化 ``WebSocketException``。"
 
 #: ../../../../starlite/exceptions/websocket_exceptions.py:docstring of
 #: starlite.exceptions.websocket_exceptions.WebSocketDisconnect.__init__:0
@@ -86,4 +86,4 @@ msgstr ""
 #: ../../../../starlite/exceptions/websocket_exceptions.py:docstring of
 #: starlite.exceptions.websocket_exceptions.WebSocketDisconnect.__init__:1
 msgid "Initialize ``WebSocketDisconnect``."
-msgstr ""
+msgstr "初始化 ``WebSocketDisconnect``。"

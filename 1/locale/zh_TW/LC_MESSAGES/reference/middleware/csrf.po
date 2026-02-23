@@ -73,13 +73,13 @@ msgstr ""
 #: ../../../../starlite/middleware/csrf.py:docstring of
 #: starlite.middleware.csrf.CSRFMiddleware.__call__:4
 msgid "The ASGI receive function."
-msgstr ""
+msgstr "ASGI 接收函式。"
 
 #: ../../../../starlite/middleware/csrf.py:docstring of
 #: starlite.middleware.csrf.CSRFMiddleware.__call__:5
 #: starlite.middleware.csrf.CSRFMiddleware.create_send_wrapper:4
 msgid "The ASGI send function."
-msgstr ""
+msgstr "ASGI 發送函式。"
 
 #: ../../../../starlite/middleware/csrf.py:docstring of
 #: starlite.middleware.csrf.CSRFMiddleware.__call__:0

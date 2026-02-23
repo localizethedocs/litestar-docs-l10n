@@ -37,7 +37,7 @@ msgstr ""
 #: ../../../../starlite/datastructures/headers.py:docstring of
 #: starlite.datastructures.headers.Headers.__init__:1
 msgid "Initialize ``Headers``."
-msgstr ""
+msgstr "初始化 ``Headers``。"
 
 #: ../../../../starlite/datastructures/headers.py:docstring of
 #: starlite.datastructures.headers.CacheControlHeader.from_header:0
@@ -55,7 +55,7 @@ msgstr "參數"
 #: ../../../../starlite/datastructures/headers.py:docstring of
 #: starlite.datastructures.headers.Headers.__init__:3
 msgid "Initial value."
-msgstr ""
+msgstr "初始值。"
 
 #: ../../../../starlite/datastructures/headers.py:docstring of
 #: starlite.datastructures.headers.Headers.from_scope:1
@@ -136,7 +136,7 @@ msgstr ""
 #: ../../../../starlite/datastructures/headers.py:docstring of
 #: starlite.datastructures.headers.MutableScopeHeaders.from_message:5
 msgid "MutableScopeHeaders."
-msgstr ""
+msgstr "MutableScopeHeaders。"
 
 #: ../../../../starlite/datastructures/headers.py:docstring of
 #: starlite.datastructures.headers.MutableScopeHeaders.from_message:7

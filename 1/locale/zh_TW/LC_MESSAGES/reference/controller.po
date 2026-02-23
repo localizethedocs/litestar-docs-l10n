@@ -24,7 +24,7 @@ msgstr ""
 #: ../../../../starlite/controller.py:docstring of
 #: starlite.controller.Controller:1
 msgid "Bases: :py:class:`object`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../starlite/controller.py:docstring of
 #: starlite.controller.Controller:1

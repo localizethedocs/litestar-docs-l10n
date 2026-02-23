@@ -36,7 +36,7 @@ msgstr ""
 #: ../../../../starlite/middleware/compression.py:docstring of
 #: starlite.middleware.compression.CompressionFacade.__init__:1
 msgid "Initialize ``CompressionFacade``."
-msgstr ""
+msgstr "初始化 ``CompressionFacade``。"
 
 #: ../../../../starlite/middleware/compression.py:docstring of
 #: starlite.middleware.compression.CompressionFacade.__init__:0
@@ -110,7 +110,7 @@ msgstr ""
 #: ../../../../starlite/middleware/compression.py:docstring of
 #: starlite.middleware.compression.CompressionMiddleware.__init__:1
 msgid "Initialize ``CompressionMiddleware``"
-msgstr ""
+msgstr "初始化 ``CompressionMiddleware``"
 
 #: ../../../../starlite/middleware/compression.py:docstring of
 #: starlite.middleware.compression.CompressionMiddleware.__init__:3
@@ -130,7 +130,7 @@ msgstr ""
 #: ../../../../starlite/middleware/compression.py:docstring of
 #: starlite.middleware.compression.CompressionMiddleware.create_compression_send_wrapper:3
 msgid "The ASGI send function."
-msgstr ""
+msgstr "ASGI 發送函式。"
 
 #: ../../../../starlite/middleware/compression.py:docstring of
 #: starlite.middleware.compression.CompressionMiddleware.create_compression_send_wrapper:5

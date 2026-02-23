@@ -24,7 +24,7 @@ msgstr ""
 #: ../../../../starlite/middleware/rate_limit.py:docstring of
 #: starlite.middleware.rate_limit.CacheObject:1
 msgid "Bases: :py:class:`object`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../starlite/middleware/rate_limit.py:docstring of
 #: starlite.middleware.rate_limit.CacheObject:1
@@ -44,7 +44,7 @@ msgstr ""
 #: ../../../../starlite/middleware/rate_limit.py:docstring of
 #: starlite.middleware.rate_limit.RateLimitMiddleware.__init__:1
 msgid "Initialize ``RateLimitMiddleware``."
-msgstr ""
+msgstr "初始化 ``RateLimitMiddleware``。"
 
 #: ../../../../starlite/middleware/rate_limit.py:docstring of
 #: starlite.middleware.rate_limit.RateLimitConfig.validate_check_throttle_handler:0
@@ -78,7 +78,7 @@ msgstr ""
 #: ../../../../starlite/middleware/rate_limit.py:docstring of
 #: starlite.middleware.rate_limit.RateLimitMiddleware.create_send_wrapper:3
 msgid "The ASGI send function."
-msgstr ""
+msgstr "ASGI 發送函式。"
 
 #: ../../../../starlite/middleware/rate_limit.py:docstring of
 #: starlite.middleware.rate_limit.RateLimitMiddleware.create_send_wrapper:4

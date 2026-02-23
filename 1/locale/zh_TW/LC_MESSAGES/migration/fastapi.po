@@ -318,7 +318,7 @@ msgstr ""
 
 #: ../../../migration/fastapi.rst:241
 msgid "Middleware"
-msgstr ""
+msgstr "中介軟體"
 
 #: ../../../migration/fastapi.rst:243
 msgid ""

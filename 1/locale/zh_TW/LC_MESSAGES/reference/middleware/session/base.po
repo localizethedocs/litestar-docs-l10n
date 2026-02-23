@@ -185,7 +185,7 @@ msgstr ""
 #: ../../../../starlite/middleware/session/base.py:docstring of
 #: starlite.middleware.session.base.BaseSessionBackend.__init__:1
 msgid "Initialize ``BaseSessionBackend``"
-msgstr ""
+msgstr "初始化 ``BaseSessionBackend``"
 
 #: ../../../../starlite/middleware/session/base.py:docstring of
 #: starlite.middleware.session.base.BaseSessionBackend.__init__:0
@@ -447,7 +447,7 @@ msgstr ""
 #: ../../../../starlite/middleware/session/base.py:docstring of
 #: starlite.middleware.session.base.SessionMiddleware.__init__:1
 msgid "Initialize ``SessionMiddleware``"
-msgstr ""
+msgstr "初始化 ``SessionMiddleware``"
 
 #: ../../../../starlite/middleware/session/base.py:docstring of
 #: starlite.middleware.session.base.SessionMiddleware.__init__:3
@@ -471,4 +471,4 @@ msgstr ""
 #: ../../../../starlite/middleware/session/base.py:docstring of
 #: starlite.middleware.session.base.SessionMiddleware.create_send_wrapper:3
 msgid "ASGIConnection"
-msgstr ""
+msgstr "ASGIConnection"

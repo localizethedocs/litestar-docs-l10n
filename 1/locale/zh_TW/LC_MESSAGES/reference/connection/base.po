@@ -37,7 +37,7 @@ msgstr ""
 #: ../../../../starlite/connection/base.py:docstring of
 #: starlite.connection.base.ASGIConnection.__init__:1
 msgid "Initialize ``ASGIConnection``."
-msgstr ""
+msgstr "初始化 ``ASGIConnection``。"
 
 #: ../../../../starlite/connection/base.py:docstring of
 #: starlite.connection.base.ASGIConnection.__init__:0
@@ -56,13 +56,13 @@ msgstr ""
 #: starlite.connection.base.ASGIConnection.__init__:4 ../../../../docstring
 #: starlite.connection.base.ASGIConnection.receive:1
 msgid "The ASGI receive function."
-msgstr ""
+msgstr "ASGI 接收函式。"
 
 #: ../../../../starlite/connection/base.py:docstring of
 #: starlite.connection.base.ASGIConnection.__init__:5 ../../../../docstring
 #: starlite.connection.base.ASGIConnection.send:1
 msgid "The ASGI send function."
-msgstr ""
+msgstr "ASGI 發送函式。"
 
 #: ../../../../docstring of starlite.connection.base.ASGIConnection.scope:1
 msgid "The ASGI scope attached to the connection."

@@ -100,7 +100,7 @@ msgstr ""
 #: starlite.utils.extractors.ConnectionDataExtractor:1
 #: starlite.utils.extractors.ResponseDataExtractor:1
 msgid "Bases: :py:class:`object`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../starlite/utils/extractors.py:docstring of
 #: starlite.utils.extractors.ConnectionDataExtractor:1
@@ -113,7 +113,7 @@ msgstr ""
 #: ../../../../starlite/utils/extractors.py:docstring of
 #: starlite.utils.extractors.ConnectionDataExtractor.__init__:1
 msgid "Initialize ``ConnectionDataExtractor``"
-msgstr ""
+msgstr "初始化 ``ConnectionDataExtractor``"
 
 #: ../../../../starlite/utils/extractors.py:docstring of
 #: starlite.utils.extractors.ConnectionDataExtractor.__init__:3
