@@ -146,12 +146,12 @@ msgstr ""
 #: litestar.response.file.ASGIFileResponse.send_body:3
 #: litestar.response.file.ASGIFileResponse.start_response:3
 msgid "The ASGI send function."
-msgstr ""
+msgstr "ASGI 發送函式。"
 
 #: ../../../../litestar/response/file.py:docstring of
 #: litestar.response.file.ASGIFileResponse.send_body:4
 msgid "The ASGI receive function."
-msgstr ""
+msgstr "ASGI 接收函式。"
 
 #: ../../../reference/response/file.rst:0
 msgid "Returns"

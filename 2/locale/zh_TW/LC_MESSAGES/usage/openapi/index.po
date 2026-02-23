@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../usage/openapi/index.rst:2
 msgid "OpenAPI"
-msgstr ""
+msgstr "OpenAPI"
 
 #: ../../../usage/openapi/index.rst:4
 msgid ""

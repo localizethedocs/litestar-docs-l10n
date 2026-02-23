@@ -27,7 +27,7 @@ msgstr ""
 
 #: ../../../../litestar/dto/field.py:docstring of litestar.dto.field.DTOField:1
 msgid "Bases: :py:class:`object`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../litestar/dto/field.py:docstring of litestar.dto.field.DTOField:1
 msgid "For configuring DTO behavior on model fields."

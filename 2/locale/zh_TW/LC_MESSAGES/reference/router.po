@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../../../../litestar/router.py:docstring of litestar.router.Router:1
 msgid "Bases: :py:class:`object`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../litestar/router.py:docstring of litestar.router.Router:1
 msgid "The Litestar Router class."

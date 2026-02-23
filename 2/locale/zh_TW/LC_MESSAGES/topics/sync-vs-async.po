@@ -47,7 +47,7 @@ msgstr ""
 
 #: ../../../topics/sync-vs-async.rst:17
 msgid "Blocking and non-blocking"
-msgstr ""
+msgstr "阻塞與非阻塞"
 
 #: ../../../topics/sync-vs-async.rst:19
 msgid ""

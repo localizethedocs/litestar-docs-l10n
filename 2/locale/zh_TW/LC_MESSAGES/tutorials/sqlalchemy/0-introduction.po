@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../tutorials/sqlalchemy/0-introduction.rst:2
 msgid "Introduction"
-msgstr ""
+msgstr "介紹"
 
 #: ../../../tutorials/sqlalchemy/0-introduction.rst:4
 msgid ""
@@ -516,7 +516,7 @@ msgstr ""
 
 #: ../../../tutorials/sqlalchemy/0-introduction.rst:71
 msgid "Application state"
-msgstr ""
+msgstr "應用程式狀態"
 
 #: ../../../tutorials/sqlalchemy/0-introduction.rst:73
 msgid ""
@@ -543,7 +543,7 @@ msgstr ""
 
 #: ../../../tutorials/sqlalchemy/0-introduction.rst:94
 msgid "Serialization"
-msgstr ""
+msgstr "序列化"
 
 #: ../../../tutorials/sqlalchemy/0-introduction.rst:96
 msgid ""

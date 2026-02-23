@@ -51,7 +51,7 @@ msgstr ""
 #: ../../../../litestar/plugins/htmx.py:docstring of
 #: litestar_htmx.plugin.HTMXConfig:1 litestar_htmx.request.HTMXDetails:1
 msgid "Bases: :py:class:`object`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../litestar/plugins/htmx.py:docstring of
 #: litestar_htmx.plugin.HTMXConfig:1
@@ -80,7 +80,7 @@ msgstr ""
 #: ../../../../litestar/plugins/htmx.py:docstring of
 #: litestar_htmx.request.HTMXDetails.__init__:1
 msgid "Initialize :class:`HTMXDetails`"
-msgstr ""
+msgstr "初始化 :class:`HTMXDetails`"
 
 #: ../../../../litestar/plugins/htmx.py:docstring of
 #: litestar.plugins.htmx.HTMXDetails.boosted:1
@@ -212,7 +212,7 @@ msgstr ""
 #: ../../../../litestar/plugins/htmx.py:docstring of
 #: litestar_htmx.request.HTMXRequest.__init__:1
 msgid "Initialize :class:`HTMXRequest`"
-msgstr ""
+msgstr "初始化 :class:`HTMXRequest`"
 
 #: ../../../../litestar/plugins/htmx.py:docstring of
 #: litestar_htmx.response.HTMXTemplate:1
@@ -286,13 +286,13 @@ msgstr ""
 #: ../../../../litestar/plugins/htmx.py:docstring of
 #: litestar_htmx.response.HXStopPolling.__init__:1
 msgid "Initialize"
-msgstr ""
+msgstr "初始化"
 
 #: ../../../../litestar/plugins/htmx.py:docstring of
 #: litestar_htmx.types.HtmxHeaderType:1 litestar_htmx.types.LocationType:1
 #: litestar_htmx.types.TriggerEventType:1
 msgid "Bases: :py:class:`~typing.TypedDict`"
-msgstr ""
+msgstr "基底類別：:py:class:`~typing.TypedDict`"
 
 #: ../../../../litestar/plugins/htmx.py:docstring of
 #: litestar_htmx.types.HtmxHeaderType:1
@@ -322,7 +322,7 @@ msgstr ""
 #: ../../../../litestar/plugins/htmx.py:docstring of
 #: litestar_htmx.response.PushUrl.__init__:1
 msgid "Initialize PushUrl."
-msgstr ""
+msgstr "初始化 PushUrl。"
 
 #: ../../../../litestar/plugins/htmx.py:docstring of
 #: litestar_htmx.response.ReplaceUrl:1
@@ -332,7 +332,7 @@ msgstr ""
 #: ../../../../litestar/plugins/htmx.py:docstring of
 #: litestar_htmx.response.ReplaceUrl.__init__:1
 msgid "Initialize ReplaceUrl."
-msgstr ""
+msgstr "初始化 ReplaceUrl。"
 
 #: ../../../../litestar/plugins/htmx.py:docstring of
 #: litestar_htmx.response.Reswap:1
@@ -342,7 +342,7 @@ msgstr ""
 #: ../../../../litestar/plugins/htmx.py:docstring of
 #: litestar_htmx.response.Reswap.__init__:1
 msgid "Initialize Reswap."
-msgstr ""
+msgstr "初始化 Reswap。"
 
 #: ../../../../litestar/plugins/htmx.py:docstring of
 #: litestar_htmx.response.Retarget:1
@@ -352,7 +352,7 @@ msgstr ""
 #: ../../../../litestar/plugins/htmx.py:docstring of
 #: litestar_htmx.response.Retarget.__init__:1
 msgid "Initialize Retarget."
-msgstr ""
+msgstr "初始化 Retarget。"
 
 #: ../../../../litestar/plugins/htmx.py:docstring of
 #: litestar_htmx.response.TriggerEvent:1
@@ -362,7 +362,7 @@ msgstr ""
 #: ../../../../litestar/plugins/htmx.py:docstring of
 #: litestar_htmx.response.TriggerEvent.__init__:1
 msgid "Initialize TriggerEvent."
-msgstr ""
+msgstr "初始化 TriggerEvent。"
 
 #: ../../../../litestar/plugins/htmx.py:docstring of
 #: litestar_htmx.types.TriggerEventType:1

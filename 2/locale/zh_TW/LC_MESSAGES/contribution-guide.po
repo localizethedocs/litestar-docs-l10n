@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../../CONTRIBUTING.rst:2
 msgid "Contribution Guide"
-msgstr ""
+msgstr "貢獻指南"
 
 #: ../../../../CONTRIBUTING.rst:5
 msgid "Getting Started"
@@ -47,6 +47,8 @@ msgid ""
 "Using `uv built-in <https://docs.astral.sh/uv/guides/install-python/>`_ "
 "Python version management."
 msgstr ""
+"使用 `uv 內建的 <https://docs.astral.sh/uv/guides/install-python/>`_ Python "
+"版本管理。"
 
 #: ../../../../CONTRIBUTING.rst:16
 msgid ""
@@ -100,7 +102,7 @@ msgstr ""
 #: ../../../../CONTRIBUTING.rst:34
 msgid ""
 "Install `uv <https://docs.astral.sh/uv/getting-started/installation/>`_:"
-msgstr ""
+msgstr "安裝 `uv <https://docs.astral.sh/uv/getting-started/installation/>`_："
 
 #: ../../../../CONTRIBUTING.rst:36
 msgid ""
@@ -108,14 +110,16 @@ msgid ""
 "org/3/tutorial/venv.html>`_ and install the required development "
 "dependencies or run the ``uv sync`` command manually:"
 msgstr ""
+"執行 ``make install`` 來建立一個\\ `虛擬環境 <https://docs.python.org/3/"
+"tutorial/venv.html>`_\\ 並安裝所需的開發依賴，或手動執行 ``uv sync`` 命令："
 
 #: ../../../../CONTRIBUTING.rst:39
 msgid "Installing the development dependencies"
-msgstr ""
+msgstr "安裝開發依賴"
 
 #: ../../../../CONTRIBUTING.rst:39
 msgid "uv sync"
-msgstr ""
+msgstr "uv sync"
 
 #: ../../../../CONTRIBUTING.rst:45
 msgid ""
@@ -142,7 +146,7 @@ msgstr ""
 
 #: ../../../../CONTRIBUTING.rst:57
 msgid "Code contributions"
-msgstr ""
+msgstr "程式碼貢獻"
 
 #: ../../../../CONTRIBUTING.rst:60
 msgid ""
@@ -178,13 +182,15 @@ msgstr ""
 
 #: ../../../../CONTRIBUTING.rst:68
 msgid "Workflow"
-msgstr ""
+msgstr "工作流程"
 
 #: ../../../../CONTRIBUTING.rst:70
 msgid ""
 "`Fork <https://github.com/litestar-org/litestar/fork>`_ the `Litestar "
 "repository <https://github.com/litestar-org/litestar>`_"
 msgstr ""
+"`分叉 <https://github.com/litestar-org/litestar/fork>`_ `Litestar 儲存庫 "
+"<https://github.com/litestar-org/litestar>`_"
 
 #: ../../../../CONTRIBUTING.rst:71
 msgid "Clone your fork locally with git"
@@ -213,7 +219,7 @@ msgstr ""
 
 #: ../../../../CONTRIBUTING.rst:78
 msgid "Push the changes to your fork"
-msgstr ""
+msgstr "將變更推送到您的分叉庫"
 
 #: ../../../../CONTRIBUTING.rst:79
 msgid ""
@@ -300,7 +306,7 @@ msgstr ""
 
 #: ../../../../CONTRIBUTING.rst:115
 msgid "Writing and running tests"
-msgstr ""
+msgstr "編寫並執行測試"
 
 #: ../../../../CONTRIBUTING.rst:117
 msgid ""
@@ -309,6 +315,9 @@ msgid ""
 "case, it should be located within the correct submodule of ``tests``. E.g., "
 "tests for ``litestar/utils/sync.py`` reside in ``tests/utils/test_sync.py``."
 msgstr ""
+"測試位於 ``tests`` 目錄中，並遵循與 ``litestar`` 模組相同的目錄結構。如果要增"
+"添測試案例，應將其放在 ``tests`` 的正確子模組中。例如，針對 ``litestar/utils/"
+"sync.py`` 的測試應放在 ``tests/utils/test_sync.py``。"
 
 #: ../../../../CONTRIBUTING.rst:121
 msgid "The ``Makefile`` includes several commands for running tests:"
@@ -343,7 +352,7 @@ msgstr ""
 
 #: ../../../../CONTRIBUTING.rst:135
 msgid "Running type checkers"
-msgstr ""
+msgstr "執行型別檢查器"
 
 #: ../../../../CONTRIBUTING.rst:137
 msgid ""
@@ -351,6 +360,9 @@ msgid ""
 "<https://github.com/microsoft/pyright/>`_ to enforce type safety. You can "
 "run them with:"
 msgstr ""
+"我們使用 `mypy <https://mypy.readthedocs.io/en/stable/>`_ 與 `pyright "
+"<https://github.com/microsoft/pyright/>`_ 來強制執行型別安全。你可以使用以下"
+"命令來執行它們："
 
 #: ../../../../CONTRIBUTING.rst:140
 msgid "``make mypy``"
@@ -391,7 +403,7 @@ msgstr ""
 
 #: ../../../../CONTRIBUTING.rst:157
 msgid "Docs theme and appearance"
-msgstr ""
+msgstr "文件主題與外觀"
 
 #: ../../../../CONTRIBUTING.rst:159
 msgid ""
@@ -401,6 +413,10 @@ msgid ""
 "of the box. If you wish to contribute to the docs style / setup, or static "
 "site generation, you should consult the theme docs as a first step."
 msgstr ""
+"我們歡迎任何能增強或改善文件外觀與易用性的貢獻。我們使用優秀的 `PyData "
+"Sphinx Theme <https://pydata-sphinx-theme.readthedocs.io/>` 主題，其內建了許"
+"多開箱即用的選項。如果您希望對文件的樣式、設定或靜態網站生成做出貢獻，應先參"
+"閱該主題的文件。"
 
 #: ../../../../CONTRIBUTING.rst:165
 msgid "Running the docs locally"
@@ -428,7 +444,7 @@ msgstr ""
 
 #: ../../../../CONTRIBUTING.rst:183
 msgid "Writing and editing docs"
-msgstr ""
+msgstr "撰寫與編輯文件"
 
 #: ../../../../CONTRIBUTING.rst:185
 msgid ""
@@ -521,7 +537,7 @@ msgstr ""
 
 #: ../../../../CONTRIBUTING.rst:218
 msgid "Automatically execute examples"
-msgstr ""
+msgstr "自動執行範例"
 
 #: ../../../../CONTRIBUTING.rst:220
 msgid ""
@@ -614,7 +630,7 @@ msgstr ""
 
 #: ../../../../CONTRIBUTING.rst:284
 msgid "Creating a New Release"
-msgstr ""
+msgstr "建立新的發行版"
 
 #: ../../../../CONTRIBUTING.rst:286
 msgid "Checkout the ``main`` branch:"
@@ -663,7 +679,7 @@ msgstr ""
 
 #: ../../../../CONTRIBUTING.rst:307
 msgid "Create a draft release on GitHub"
-msgstr ""
+msgstr "在 GitHub 上建立草稿發行版"
 
 #: ../../../../CONTRIBUTING.rst:309
 msgid ""
@@ -673,19 +689,19 @@ msgstr ""
 
 #: ../../../../CONTRIBUTING.rst:311
 msgid "Commit the changes to ``main``:"
-msgstr ""
+msgstr "將變更送交到 ``main``："
 
 #: ../../../../CONTRIBUTING.rst:313
 msgid "Committing the changes to the main branch"
-msgstr ""
+msgstr "將變更送交到 main 分支"
 
 #: ../../../../CONTRIBUTING.rst:313
 msgid "git commit -am \"chore(release): prepare release vX.Y.Z\""
-msgstr ""
+msgstr "git commit -am \"chore(release): prepare release vX.Y.Z\""
 
 #: ../../../../CONTRIBUTING.rst:318
 msgid "Replace ``vX.Y.Z`` with the actual version number."
-msgstr ""
+msgstr "將 ``vX.Y.Z`` 替換為實際的版本號。"
 
 #: ../../../../CONTRIBUTING.rst:320
 msgid "Create a new branch for the release:"
@@ -693,7 +709,7 @@ msgstr ""
 
 #: ../../../../CONTRIBUTING.rst:322
 msgid "Creating a new branch for the release"
-msgstr ""
+msgstr "為發行版建立新的分支"
 
 #: ../../../../CONTRIBUTING.rst:322
 msgid "git checkout -b vX.Y.Z"

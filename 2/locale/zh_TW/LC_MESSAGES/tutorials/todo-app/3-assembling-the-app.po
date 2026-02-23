@@ -273,7 +273,7 @@ msgstr ""
 
 #: ../../../tutorials/todo-app/3-assembling-the-app.rst:65
 msgid "app = Litestar([get_list, add_item, update_item])"
-msgstr ""
+msgstr "app = Litestar([get_list, add_item, update_item])"
 
 #: ../../../tutorials/todo-app/3-assembling-the-app.rst:71
 msgid ""

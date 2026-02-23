@@ -19,11 +19,11 @@ msgstr ""
 
 #: ../../../usage/debugging.rst:2
 msgid "Debugging"
-msgstr ""
+msgstr "除錯"
 
 #: ../../../usage/debugging.rst:5
 msgid "Using the Python debugger"
-msgstr ""
+msgstr "使用 Python 除錯器"
 
 #: ../../../usage/debugging.rst:7
 msgid ""
@@ -38,27 +38,27 @@ msgstr ""
 
 #: ../../../usage/debugging.rst:12
 msgid "app = Litestar(pdb_on_exception=True)"
-msgstr ""
+msgstr "app = Litestar(pdb_on_exception=True)"
 
 #: ../../../usage/debugging.rst:16
 msgid "Running your app with the CLI and using the ``--pdb`` flag"
-msgstr ""
+msgstr "使用 CLI 執行您的應用程式並搭配 ``--pdb`` 旗標"
 
 #: ../../../usage/debugging.rst:17
 msgid "litestar run --pdb"
-msgstr ""
+msgstr "litestar run --pdb"
 
 #: ../../../usage/debugging.rst:21
 msgid "Using the ``LITESTAR_PDB`` environment variable"
-msgstr ""
+msgstr "使用 ``LITESTAR_PDB`` 環境變數"
 
 #: ../../../usage/debugging.rst:22
 msgid "``LITESTAR_PDB=1``"
-msgstr ""
+msgstr "``LITESTAR_PDB=1``"
 
 #: ../../../usage/debugging.rst:26
 msgid "Debugging with an IDE"
-msgstr ""
+msgstr "使用 IDE 進行除錯"
 
 #: ../../../usage/debugging.rst:28
 msgid ""
@@ -73,7 +73,7 @@ msgstr ""
 
 #: ../../../usage/debugging.rst:35 ../../../usage/debugging.rst:77
 msgid "Using the CLI"
-msgstr ""
+msgstr "使用 CLI"
 
 #: ../../../usage/debugging.rst:37 ../../../usage/debugging.rst:60
 msgid "Create a new debug configuration via ``Run`` > ``Edit Configurations``"
@@ -104,7 +104,7 @@ msgstr ""
 
 #: ../../../usage/debugging.rst:58 ../../../usage/debugging.rst:105
 msgid "Using uvicorn"
-msgstr ""
+msgstr "使用 uvicorn"
 
 #: ../../../usage/debugging.rst:61
 msgid "Select ``Module name`` option and set it to ``uvicorn``"
@@ -189,3 +189,7 @@ msgid ""
 "\n"
 "app = Litestar(pdb_on_exception=True, debugger_module=ipdb)"
 msgstr ""
+"import ipdb\n"
+"\n"
+"\n"
+"app = Litestar(pdb_on_exception=True, debugger_module=ipdb)"

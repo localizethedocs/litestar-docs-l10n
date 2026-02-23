@@ -75,7 +75,7 @@ msgstr ""
 #: litestar.routes.http.HTTPRoute.handle:5
 #: litestar.routes.websocket.WebSocketRoute.handle:4
 msgid "The ASGI receive function."
-msgstr ""
+msgstr "ASGI 接收函式。"
 
 #: ../../../../litestar/routes/__init__.py:docstring of
 #: litestar.routes.asgi.ASGIRoute.handle:5
@@ -83,7 +83,7 @@ msgstr ""
 #: litestar.routes.http.HTTPRoute.handle:6
 #: litestar.routes.websocket.WebSocketRoute.handle:5
 msgid "The ASGI send function."
-msgstr ""
+msgstr "ASGI 發送函式。"
 
 #: ../../../reference/routes.rst:0
 msgid "Returns"
@@ -145,7 +145,7 @@ msgstr ""
 #: ../../../../litestar/routes/__init__.py:docstring of
 #: litestar.routes.http.HTTPRoute.__init__:1
 msgid "Initialize ``HTTPRoute``."
-msgstr ""
+msgstr "初始化 ``HTTPRoute``。"
 
 #: ../../../../litestar/routes/__init__.py:docstring of
 #: litestar.routes.http.HTTPRoute.__init__:4

@@ -24,7 +24,7 @@ msgstr ""
 #: ../../../../litestar/stores/registry.py:docstring of
 #: litestar.stores.registry.StoreRegistry:1
 msgid "Bases: :py:class:`object`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../litestar/stores/registry.py:docstring of
 #: litestar.stores.registry.StoreRegistry:1
@@ -34,7 +34,7 @@ msgstr ""
 #: ../../../../litestar/stores/registry.py:docstring of
 #: litestar.stores.registry.StoreRegistry.__init__:1
 msgid "Initialize ``StoreRegistry``."
-msgstr ""
+msgstr "初始化 ``StoreRegistry``。"
 
 #: ../../../reference/stores/registry.rst:0
 msgid "Parameters"

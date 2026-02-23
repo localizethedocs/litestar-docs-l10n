@@ -24,7 +24,7 @@ msgstr ""
 #: ../../../../litestar/response/streaming.py:docstring of
 #: litestar.response.streaming.ASGIStreamingResponse:1
 msgid "Bases: :py:class:`~litestar.response.base.ASGIResponse`"
-msgstr ""
+msgstr "基底類別：:py:class:`~litestar.response.base.ASGIResponse`"
 
 #: ../../../../litestar/response/streaming.py:docstring of
 #: litestar.response.streaming.ASGIStreamingResponse:1
@@ -101,12 +101,12 @@ msgstr ""
 #: ../../../../litestar/response/streaming.py:docstring of
 #: litestar.response.streaming.ASGIStreamingResponse.send_body:3
 msgid "The ASGI send function."
-msgstr ""
+msgstr "ASGI 發送函式。"
 
 #: ../../../../litestar/response/streaming.py:docstring of
 #: litestar.response.streaming.ASGIStreamingResponse.send_body:4
 msgid "The ASGI receive function."
-msgstr ""
+msgstr "ASGI 接收函式。"
 
 #: ../../../reference/response/streaming.rst:0
 msgid "Returns"

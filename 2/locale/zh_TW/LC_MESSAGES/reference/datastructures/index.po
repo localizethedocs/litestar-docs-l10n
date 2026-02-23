@@ -28,7 +28,7 @@ msgstr ""
 #: litestar.datastructures.upload_file.UploadFile:1
 #: litestar.datastructures.url.URL:1
 msgid "Bases: :py:class:`object`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../litestar/datastructures/__init__.py:docstring of
 #: litestar.datastructures.url.URL:1
@@ -94,13 +94,13 @@ msgstr ""
 #: litestar.datastructures.url.URL.from_components:3
 #: litestar.datastructures.url.URL.with_replacements:3
 msgid "URL scheme"
-msgstr ""
+msgstr "URL 方案"
 
 #: ../../../../litestar/datastructures/__init__.py:docstring of
 #: litestar.datastructures.url.URL.from_components:4
 #: litestar.datastructures.url.URL.with_replacements:4
 msgid "Network location"
-msgstr ""
+msgstr "網路位置"
 
 #: ../../../../litestar/datastructures/__init__.py:docstring of
 #: litestar.datastructures.url.URL.from_components:5
@@ -431,7 +431,7 @@ msgstr ""
 
 #: ../../../../docstring of litestar.datastructures.Cookie.path:3
 msgid "Defaults to ``/``."
-msgstr ""
+msgstr "預設值為 ``/``。"
 
 #: ../../../../docstring of litestar.datastructures.Cookie.samesite:1
 msgid "Controls whether or not a cookie is sent with cross-site requests."
@@ -543,7 +543,7 @@ msgstr ""
 #: ../../../../litestar/datastructures/__init__.py:docstring of
 #: litestar.datastructures.headers.Header:1
 msgid "Bases: :py:class:`~abc.ABC`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../litestar/datastructures/__init__.py:docstring of
 #: litestar.datastructures.headers.Header:1
@@ -588,12 +588,12 @@ msgstr ""
 #: ../../../../litestar/datastructures/__init__.py:docstring of
 #: litestar.datastructures.headers.Headers.__init__:1
 msgid "Initialize ``Headers``."
-msgstr ""
+msgstr "初始化 ``Headers``。"
 
 #: ../../../../litestar/datastructures/__init__.py:docstring of
 #: litestar.datastructures.headers.Headers.__init__:3
 msgid "Initial value."
-msgstr ""
+msgstr "初始值。"
 
 #: ../../../../litestar/datastructures/__init__.py:docstring of
 #: litestar.datastructures.headers.Headers.from_scope:1
@@ -1048,12 +1048,12 @@ msgstr ""
 #: ../../../../litestar/datastructures/__init__.py:docstring of
 #: litestar.datastructures.headers.MutableScopeHeaders.from_message:3
 msgid ":class:`Message <.types.Message>`."
-msgstr ""
+msgstr ":class:`Message <.types.Message>`。"
 
 #: ../../../../litestar/datastructures/__init__.py:docstring of
 #: litestar.datastructures.headers.MutableScopeHeaders.from_message:5
 msgid "MutableScopeHeaders."
-msgstr ""
+msgstr "MutableScopeHeaders。"
 
 #: ../../../../litestar/datastructures/__init__.py:docstring of
 #: litestar.datastructures.headers.MutableScopeHeaders.from_message:7

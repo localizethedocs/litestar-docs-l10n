@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../usage/middleware/index.rst:2
 msgid "Middleware"
-msgstr ""
+msgstr "中介軟體"
 
 #: ../../../usage/middleware/index.rst:4
 msgid ""

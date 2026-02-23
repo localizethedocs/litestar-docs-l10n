@@ -24,7 +24,7 @@ msgstr ""
 #: ../../../../litestar/contrib/opentelemetry/__init__.py:docstring of
 #: litestar.contrib.opentelemetry.config.OpenTelemetryConfig:1
 msgid "Bases: :py:class:`object`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../litestar/contrib/opentelemetry/__init__.py:docstring of
 #: litestar.contrib.opentelemetry.config.OpenTelemetryConfig:1
@@ -175,7 +175,7 @@ msgstr ""
 #: ../../../../litestar/contrib/opentelemetry/__init__.py:docstring of
 #: litestar.contrib.opentelemetry.middleware.OpenTelemetryInstrumentationMiddleware:1
 msgid "Bases: :py:class:`~litestar.middleware.base.AbstractMiddleware`"
-msgstr ""
+msgstr "基底類別：:py:class:`~litestar.middleware.base.AbstractMiddleware`"
 
 #: ../../../../litestar/contrib/opentelemetry/__init__.py:docstring of
 #: litestar.contrib.opentelemetry.middleware.OpenTelemetryInstrumentationMiddleware:1
@@ -202,7 +202,7 @@ msgstr ""
 #: ../../../../litestar/contrib/opentelemetry/__init__.py:docstring of
 #: litestar.contrib.opentelemetry.plugin.OpenTelemetryPlugin:1
 msgid "Bases: :py:class:`~litestar.plugins.base.InitPlugin`"
-msgstr ""
+msgstr "基底類別：:py:class:`~litestar.plugins.base.InitPlugin`"
 
 #: ../../../../litestar/contrib/opentelemetry/__init__.py:docstring of
 #: litestar.contrib.opentelemetry.plugin.OpenTelemetryPlugin:1

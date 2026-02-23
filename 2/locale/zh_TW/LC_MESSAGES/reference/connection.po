@@ -102,7 +102,7 @@ msgstr ""
 #: litestar.connection.websocket.WebSocket.receive_wrapper:3
 #: ../../../../docstring litestar.connection.ASGIConnection.receive:1
 msgid "The ASGI receive function."
-msgstr ""
+msgstr "ASGI 接收函式。"
 
 #: ../../../../docstring of litestar.connection.ASGIConnection.scope:1
 msgid "The ASGI scope attached to the connection."
@@ -115,12 +115,12 @@ msgstr ""
 #: litestar.connection.websocket.WebSocket.send_wrapper:3 ../../../../docstring
 #: litestar.connection.ASGIConnection.send:1
 msgid "The ASGI send function."
-msgstr ""
+msgstr "ASGI 發送函式。"
 
 #: ../../../../litestar/connection/__init__.py:docstring of
 #: litestar.connection.base.ASGIConnection.__init__:1
 msgid "Initialize ``ASGIConnection``."
-msgstr ""
+msgstr "初始化 ``ASGIConnection``。"
 
 #: ../../../reference/connection.rst:0
 msgid "Parameters"
@@ -433,7 +433,7 @@ msgstr ""
 #: ../../../../litestar/connection/__init__.py:docstring of
 #: litestar.connection.request.Request.__init__:1
 msgid "Initialize ``Request``."
-msgstr ""
+msgstr "初始化 ``Request``。"
 
 #: ../../../../litestar/connection/__init__.py:docstring of
 #: litestar.connection.Request.accept:1
@@ -571,7 +571,7 @@ msgstr ""
 #: ../../../../litestar/connection/__init__.py:docstring of
 #: litestar.connection.websocket.WebSocket.__init__:1
 msgid "Initialize ``WebSocket``."
-msgstr ""
+msgstr "初始化 ``WebSocket``。"
 
 #: ../../../../litestar/connection/__init__.py:docstring of
 #: litestar.connection.websocket.WebSocket.accept:1

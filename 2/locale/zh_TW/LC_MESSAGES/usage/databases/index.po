@@ -19,4 +19,4 @@ msgstr ""
 
 #: ../../../usage/databases/index.rst:2
 msgid "Databases"
-msgstr ""
+msgstr "資料庫"

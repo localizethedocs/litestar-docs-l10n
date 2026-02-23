@@ -25,7 +25,7 @@ msgstr ""
 #: litestar.data_extractors.ConnectionDataExtractor:1
 #: litestar.data_extractors.ResponseDataExtractor:1
 msgid "Bases: :py:class:`object`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../litestar/data_extractors.py:docstring of
 #: litestar.data_extractors.ConnectionDataExtractor:1
@@ -38,7 +38,7 @@ msgstr ""
 #: ../../../../litestar/data_extractors.py:docstring of
 #: litestar.data_extractors.ConnectionDataExtractor.__init__:1
 msgid "Initialize ``ConnectionDataExtractor``"
-msgstr ""
+msgstr "初始化 ``ConnectionDataExtractor``"
 
 #: ../../../reference/data_extractors.rst:0
 msgid "Parameters"
@@ -280,7 +280,7 @@ msgstr ""
 #: litestar.data_extractors.ExtractedRequestData:1
 #: litestar.data_extractors.ExtractedResponseData:1
 msgid "Bases: :py:class:`~typing.TypedDict`"
-msgstr ""
+msgstr "基底類別：:py:class:`~typing.TypedDict`"
 
 #: ../../../../litestar/data_extractors.py:docstring of
 #: litestar.data_extractors.ExtractedRequestData:1

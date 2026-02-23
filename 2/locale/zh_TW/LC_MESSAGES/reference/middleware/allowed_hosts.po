@@ -24,7 +24,7 @@ msgstr ""
 #: ../../../../litestar/middleware/allowed_hosts.py:docstring of
 #: litestar.middleware.allowed_hosts.AllowedHostsMiddleware:1
 msgid "Bases: :py:class:`~litestar.middleware.base.AbstractMiddleware`"
-msgstr ""
+msgstr "基底類別：:py:class:`~litestar.middleware.base.AbstractMiddleware`"
 
 #: ../../../../litestar/middleware/allowed_hosts.py:docstring of
 #: litestar.middleware.allowed_hosts.AllowedHostsMiddleware:1
@@ -34,7 +34,7 @@ msgstr ""
 #: ../../../../litestar/middleware/allowed_hosts.py:docstring of
 #: litestar.middleware.allowed_hosts.AllowedHostsMiddleware.__init__:1
 msgid "Initialize ``AllowedHostsMiddleware``."
-msgstr ""
+msgstr "初始化 ``AllowedHostsMiddleware``。"
 
 #: ../../../reference/middleware/allowed_hosts.rst:0
 msgid "Parameters"

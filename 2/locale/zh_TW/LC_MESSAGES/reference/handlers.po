@@ -224,7 +224,7 @@ msgstr ""
 #: ../../../../litestar/handlers/__init__.py:docstring of
 #: litestar.handlers.base.BaseRouteHandler:1
 msgid "Bases: :py:class:`object`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../litestar/handlers/__init__.py:docstring of
 #: litestar.handlers.base.BaseRouteHandler:1
@@ -246,7 +246,7 @@ msgstr ""
 #: litestar.handlers.base.BaseRouteHandler.__init__:1
 #: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:1
 msgid "Initialize ``HTTPRouteHandler``."
-msgstr ""
+msgstr "初始化 ``HTTPRouteHandler``。"
 
 #: ../../../../litestar/handlers/__init__.py:docstring of
 #: litestar.handlers.base.BaseRouteHandler.__init__:3
@@ -1159,7 +1159,7 @@ msgstr ""
 #: ../../../../litestar/handlers/__init__.py:docstring of
 #: litestar.handlers.websocket_handlers.listener.WebsocketListener:1
 msgid "Bases: :py:class:`~abc.ABC`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../litestar/handlers/__init__.py:docstring of
 #: litestar.handlers.websocket_handlers.listener.WebsocketListener.__init__:1
@@ -1285,7 +1285,7 @@ msgstr ""
 #: litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler.__init__:1
 #: litestar.handlers.websocket_handlers.route_handler.WebsocketRouteHandler.__init__:1
 msgid "Initialize ``WebsocketRouteHandler``"
-msgstr ""
+msgstr "初始化 ``WebsocketRouteHandler``"
 
 #: ../../../../litestar/handlers/__init__.py:docstring of
 #: litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler.__init__:5

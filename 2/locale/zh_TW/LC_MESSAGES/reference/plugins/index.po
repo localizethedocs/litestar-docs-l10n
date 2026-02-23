@@ -37,7 +37,7 @@ msgstr ""
 #: litestar.plugins.base.OpenAPISchemaPluginProtocol:1
 #: litestar.plugins.base.SerializationPluginProtocol:1
 msgid "Bases: :py:class:`~typing.Protocol`"
-msgstr ""
+msgstr "基底類別：:py:class:`~typing.Protocol`"
 
 #: ../../../../litestar/plugins/__init__.py:docstring of
 #: litestar.plugins.base.CLIPluginProtocol:1
@@ -91,7 +91,7 @@ msgstr ""
 #: ../../../../litestar/plugins/__init__.py:docstring of
 #: litestar.plugins.base.DIPlugin:1
 msgid "Bases: :py:class:`~abc.ABC`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../litestar/plugins/__init__.py:docstring of
 #: litestar.plugins.base.DIPlugin:1
@@ -313,7 +313,7 @@ msgstr ""
 #: ../../../../litestar/plugins/__init__.py:docstring of
 #: litestar.plugins.base.ReceiveRoutePlugin:1
 msgid "Bases: :py:class:`object`"
-msgstr ""
+msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../litestar/plugins/__init__.py:docstring of
 #: litestar.plugins.base.ReceiveRoutePlugin:1

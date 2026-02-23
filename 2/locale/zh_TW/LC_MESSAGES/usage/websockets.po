@@ -528,7 +528,7 @@ msgstr ""
 
 #: ../../../usage/websockets.rst:0
 msgid "Sync"
-msgstr ""
+msgstr "同步"
 
 #: ../../../usage/websockets.rst:253
 msgid ""
@@ -554,7 +554,7 @@ msgstr ""
 
 #: ../../../usage/websockets.rst:0
 msgid "Async"
-msgstr ""
+msgstr "異步"
 
 #: ../../../usage/websockets.rst:258
 msgid ""

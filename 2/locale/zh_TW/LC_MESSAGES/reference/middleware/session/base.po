@@ -178,7 +178,7 @@ msgstr ""
 #: ../../../../litestar/middleware/session/base.py:docstring of
 #: litestar.middleware.session.base.BaseSessionBackend.__init__:1
 msgid "Initialize ``BaseSessionBackend``"
-msgstr ""
+msgstr "初始化 ``BaseSessionBackend``"
 
 #: ../../../reference/middleware/session/base.rst:0
 msgid "Parameters"
@@ -313,7 +313,7 @@ msgstr ""
 #: ../../../../litestar/middleware/session/base.py:docstring of
 #: litestar.middleware.session.base.SessionMiddleware.__init__:1
 msgid "Initialize ``SessionMiddleware``"
-msgstr ""
+msgstr "初始化 ``SessionMiddleware``"
 
 #: ../../../../litestar/middleware/session/base.py:docstring of
 #: litestar.middleware.session.base.SessionMiddleware.__init__:3
@@ -337,4 +337,4 @@ msgstr ""
 #: ../../../../litestar/middleware/session/base.py:docstring of
 #: litestar.middleware.session.base.SessionMiddleware.create_send_wrapper:3
 msgid "ASGIConnection"
-msgstr ""
+msgstr "ASGIConnection"
