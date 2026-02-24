@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"POT-Creation-Date: 2026-02-24 12:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,23 +17,23 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../../index.rst:156
+#: ../../../index.rst:158
 msgid "Documentation"
 msgstr ""
 
-#: ../../../index.rst:166
+#: ../../../index.rst:168
 msgid "Guides"
 msgstr ""
 
-#: ../../../index.rst:175
+#: ../../../index.rst:177
 msgid "Available Issues"
 msgstr ""
 
-#: ../../../index.rst:175
+#: ../../../index.rst:177
 msgid "Code of Conduct"
 msgstr ""
 
-#: ../../../index.rst:175
+#: ../../../index.rst:177
 msgid "Contributing"
 msgstr ""
 
@@ -89,11 +89,13 @@ msgstr ""
 
 #: ../../../index.rst:54
 msgid ""
-":doc:`Get Started <getting-started>` `Usage Docs <usage>`_ `API Docs "
-"<reference>`_ `Blog <https://blog.litestar.dev>`_"
+"<a href=\"getting-started.html\" class=\"btn-no-wrap\">Get Started</a>\n"
+"<a href=\"usage/index.html\" class=\"btn-no-wrap\">Usage Docs</a>\n"
+"<a href=\"reference/index.html\" class=\"btn-no-wrap\">API Docs</a>\n"
+"<a href=\"https://blog.litestar.dev\" class=\"btn-no-wrap\">Blog</a>"
 msgstr ""
 
-#: ../../../index.rst:63
+#: ../../../index.rst:65
 msgid ""
 "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-"
 "octicon-repo\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M2 "
@@ -105,7 +107,7 @@ msgid ""
 "15.7a.25.25 0 0 1-.4-.2Z\"></path></svg> Tutorials"
 msgstr ""
 
-#: ../../../index.rst:63
+#: ../../../index.rst:65
 msgid ""
 "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-"
 "octicon-repo\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M2 "
@@ -117,12 +119,12 @@ msgid ""
 "15.7a.25.25 0 0 1-.4-.2Z\"></path></svg>"
 msgstr ""
 
-#: ../../../index.rst:67
+#: ../../../index.rst:69
 msgid ""
 "Step-by-step guides addressing common use cases and scenarios for Litestar"
 msgstr ""
 
-#: ../../../index.rst:69
+#: ../../../index.rst:71
 msgid ""
 "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-"
 "octicon-light-bulb\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M8 "
@@ -139,7 +141,7 @@ msgid ""
 "1-.75-.75Z\"></path></svg> Topics"
 msgstr ""
 
-#: ../../../index.rst:69
+#: ../../../index.rst:71
 msgid ""
 "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-"
 "octicon-light-bulb\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M8 "
@@ -156,13 +158,13 @@ msgid ""
 "1-.75-.75Z\"></path></svg>"
 msgstr ""
 
-#: ../../../index.rst:73
+#: ../../../index.rst:75
 msgid ""
 "Articles discussing technical concepts, design philosophy, and strategic "
 "decisions."
 msgstr ""
 
-#: ../../../index.rst:75
+#: ../../../index.rst:77
 msgid ""
 "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-"
 "octicon-versions\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path "
@@ -178,7 +180,7 @@ msgid ""
 "path></svg> Changelog"
 msgstr ""
 
-#: ../../../index.rst:75
+#: ../../../index.rst:77
 msgid ""
 "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-"
 "octicon-versions\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path "
@@ -194,11 +196,11 @@ msgid ""
 "path></svg>"
 msgstr ""
 
-#: ../../../index.rst:79
+#: ../../../index.rst:81
 msgid "The latest updates and enhancements to the Litestar framework."
 msgstr ""
 
-#: ../../../index.rst:81
+#: ../../../index.rst:83
 msgid ""
 "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-"
 "octicon-comment-discussion\" viewBox=\"0 0 16 16\" aria-"
@@ -214,7 +216,7 @@ msgid ""
 "path></svg> Discussions"
 msgstr ""
 
-#: ../../../index.rst:81
+#: ../../../index.rst:83
 msgid ""
 "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-"
 "octicon-comment-discussion\" viewBox=\"0 0 16 16\" aria-"
@@ -230,11 +232,11 @@ msgid ""
 "path></svg>"
 msgstr ""
 
-#: ../../../index.rst:84
+#: ../../../index.rst:86
 msgid "Join discussions, pose questions, or share insights."
 msgstr ""
 
-#: ../../../index.rst:86
+#: ../../../index.rst:88
 msgid ""
 "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-"
 "octicon-issue-opened\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path "
@@ -243,7 +245,7 @@ msgid ""
 "path></svg> Issues"
 msgstr ""
 
-#: ../../../index.rst:86
+#: ../../../index.rst:88
 msgid ""
 "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-"
 "octicon-issue-opened\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path "
@@ -252,11 +254,11 @@ msgid ""
 "path></svg>"
 msgstr ""
 
-#: ../../../index.rst:89
+#: ../../../index.rst:91
 msgid "Report issues or suggest new features."
 msgstr ""
 
-#: ../../../index.rst:91
+#: ../../../index.rst:93
 msgid ""
 "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-"
 "octicon-beaker\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M5 "
@@ -267,7 +269,7 @@ msgid ""
 "9h6.54L9.617 6.403A.746.746 0 0 1 9.5 6Z\"></path></svg> Contributing"
 msgstr ""
 
-#: ../../../index.rst:91
+#: ../../../index.rst:93
 msgid ""
 "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-"
 "octicon-beaker\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M5 "
@@ -278,15 +280,15 @@ msgid ""
 "9h6.54L9.617 6.403A.746.746 0 0 1 9.5 6Z\"></path></svg>"
 msgstr ""
 
-#: ../../../index.rst:95
+#: ../../../index.rst:97
 msgid "Contribute to Litestar's growth with code, docs, and more."
 msgstr ""
 
-#: ../../../index.rst:98
+#: ../../../index.rst:100
 msgid "Sponsors"
 msgstr ""
 
-#: ../../../index.rst:102
+#: ../../../index.rst:104
 msgid ""
 "Litestar is a community-driven, open-source initiative that thrives on the "
 "generous contributions of our sponsors, enabling us to pursue innovative "
@@ -294,35 +296,35 @@ msgid ""
 "resources to our users."
 msgstr ""
 
-#: ../../../index.rst:107
+#: ../../../index.rst:109
 msgid "A huge thank you to our current sponsors:"
 msgstr ""
 
-#: ../../../index.rst:120
+#: ../../../index.rst:122
 msgid "Scalar.com"
 msgstr ""
 
-#: ../../../index.rst:124
+#: ../../../index.rst:126
 msgid "`Scalar.com <https://github.com/scalar/scalar>`_"
 msgstr ""
 
-#: ../../../index.rst:129
+#: ../../../index.rst:131
 msgid "Telemetry Sports"
 msgstr ""
 
-#: ../../../index.rst:133
+#: ../../../index.rst:135
 msgid "`Telemetry Sports <https://telemetrysports.com/>`_"
 msgstr ""
 
-#: ../../../index.rst:138
+#: ../../../index.rst:140
 msgid "Stok"
 msgstr ""
 
-#: ../../../index.rst:142
+#: ../../../index.rst:144
 msgid "`Stok <https://www.stok.kr/>`_"
 msgstr ""
 
-#: ../../../index.rst:144
+#: ../../../index.rst:146
 msgid ""
 "We invite organizations and individuals to join our sponsorship program. By "
 "becoming a sponsor on platforms like `Polar <sponsor-polar_>`_, `GitHub "
@@ -330,7 +332,7 @@ msgid ""
 "pivotal role in our project's growth."
 msgstr ""
 
-#: ../../../index.rst:148
+#: ../../../index.rst:150
 msgid ""
 "On top of regular sponsorship, we engage in pledge-based sponsorship "
 "opportunities through `Polar <sponsor-polar_>`_, where you can pledge an "

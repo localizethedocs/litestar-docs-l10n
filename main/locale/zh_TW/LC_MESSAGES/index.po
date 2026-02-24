@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"POT-Creation-Date: 2026-02-24 12:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,23 +17,23 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../../index.rst:156
+#: ../../../index.rst:158
 msgid "Documentation"
 msgstr "文件"
 
-#: ../../../index.rst:166
+#: ../../../index.rst:168
 msgid "Guides"
 msgstr "指南"
 
-#: ../../../index.rst:175
+#: ../../../index.rst:177
 msgid "Available Issues"
 msgstr ""
 
-#: ../../../index.rst:175
+#: ../../../index.rst:177
 msgid "Code of Conduct"
 msgstr "行為守則"
 
-#: ../../../index.rst:175
+#: ../../../index.rst:177
 msgid "Contributing"
 msgstr "參與貢獻"
 
@@ -94,13 +94,13 @@ msgstr ""
 
 #: ../../../index.rst:54
 msgid ""
-":doc:`Get Started <getting-started>` `Usage Docs <usage>`_ `API Docs "
-"<reference>`_ `Blog <https://blog.litestar.dev>`_"
+"<a href=\"getting-started.html\" class=\"btn-no-wrap\">Get Started</a>\n"
+"<a href=\"usage/index.html\" class=\"btn-no-wrap\">Usage Docs</a>\n"
+"<a href=\"reference/index.html\" class=\"btn-no-wrap\">API Docs</a>\n"
+"<a href=\"https://blog.litestar.dev\" class=\"btn-no-wrap\">Blog</a>"
 msgstr ""
-":doc:`開始使用 <getting-started>` `使用文件 <usage>`_ `API 文件 "
-"<reference>`_ `網誌 <https://blog.litestar.dev>`_"
 
-#: ../../../index.rst:63
+#: ../../../index.rst:65
 msgid ""
 "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-"
 "octicon-repo\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M2 "
@@ -112,7 +112,7 @@ msgid ""
 "15.7a.25.25 0 0 1-.4-.2Z\"></path></svg> Tutorials"
 msgstr ":octicon:`repo` 教學"
 
-#: ../../../index.rst:63
+#: ../../../index.rst:65
 msgid ""
 "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-"
 "octicon-repo\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M2 "
@@ -124,12 +124,12 @@ msgid ""
 "15.7a.25.25 0 0 1-.4-.2Z\"></path></svg>"
 msgstr ""
 
-#: ../../../index.rst:67
+#: ../../../index.rst:69
 msgid ""
 "Step-by-step guides addressing common use cases and scenarios for Litestar"
 msgstr "針對 Litestar 常見使用案例與情境的逐步指南"
 
-#: ../../../index.rst:69
+#: ../../../index.rst:71
 msgid ""
 "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-"
 "octicon-light-bulb\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M8 "
@@ -146,7 +146,7 @@ msgid ""
 "1-.75-.75Z\"></path></svg> Topics"
 msgstr ":octicon:`light-bulb` 話題"
 
-#: ../../../index.rst:69
+#: ../../../index.rst:71
 msgid ""
 "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-"
 "octicon-light-bulb\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M8 "
@@ -163,13 +163,13 @@ msgid ""
 "1-.75-.75Z\"></path></svg>"
 msgstr ""
 
-#: ../../../index.rst:73
+#: ../../../index.rst:75
 msgid ""
 "Articles discussing technical concepts, design philosophy, and strategic "
 "decisions."
 msgstr "討論技術概念、設計理念與策略決策的文章。"
 
-#: ../../../index.rst:75
+#: ../../../index.rst:77
 msgid ""
 "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-"
 "octicon-versions\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path "
@@ -185,7 +185,7 @@ msgid ""
 "path></svg> Changelog"
 msgstr ":octicon:`versions` 變更日誌"
 
-#: ../../../index.rst:75
+#: ../../../index.rst:77
 msgid ""
 "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-"
 "octicon-versions\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path "
@@ -201,11 +201,11 @@ msgid ""
 "path></svg>"
 msgstr ""
 
-#: ../../../index.rst:79
+#: ../../../index.rst:81
 msgid "The latest updates and enhancements to the Litestar framework."
 msgstr "Litestar 框架最新的更新內容與增強功能。"
 
-#: ../../../index.rst:81
+#: ../../../index.rst:83
 msgid ""
 "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-"
 "octicon-comment-discussion\" viewBox=\"0 0 16 16\" aria-"
@@ -221,7 +221,7 @@ msgid ""
 "path></svg> Discussions"
 msgstr ":octicon:`comment-discussion` 討論"
 
-#: ../../../index.rst:81
+#: ../../../index.rst:83
 msgid ""
 "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-"
 "octicon-comment-discussion\" viewBox=\"0 0 16 16\" aria-"
@@ -237,11 +237,11 @@ msgid ""
 "path></svg>"
 msgstr ""
 
-#: ../../../index.rst:84
+#: ../../../index.rst:86
 msgid "Join discussions, pose questions, or share insights."
 msgstr "參與討論、提出問題或分享見解。"
 
-#: ../../../index.rst:86
+#: ../../../index.rst:88
 msgid ""
 "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-"
 "octicon-issue-opened\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path "
@@ -250,7 +250,7 @@ msgid ""
 "path></svg> Issues"
 msgstr ":octicon:`issue-opened` 議題"
 
-#: ../../../index.rst:86
+#: ../../../index.rst:88
 msgid ""
 "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-"
 "octicon-issue-opened\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path "
@@ -259,11 +259,11 @@ msgid ""
 "path></svg>"
 msgstr ""
 
-#: ../../../index.rst:89
+#: ../../../index.rst:91
 msgid "Report issues or suggest new features."
 msgstr "回報議題或建議新功能。"
 
-#: ../../../index.rst:91
+#: ../../../index.rst:93
 msgid ""
 "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-"
 "octicon-beaker\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M5 "
@@ -274,7 +274,7 @@ msgid ""
 "9h6.54L9.617 6.403A.746.746 0 0 1 9.5 6Z\"></path></svg> Contributing"
 msgstr ":octicon:`beaker` 參與貢獻"
 
-#: ../../../index.rst:91
+#: ../../../index.rst:93
 msgid ""
 "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-"
 "octicon-beaker\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M5 "
@@ -285,15 +285,15 @@ msgid ""
 "9h6.54L9.617 6.403A.746.746 0 0 1 9.5 6Z\"></path></svg>"
 msgstr ""
 
-#: ../../../index.rst:95
+#: ../../../index.rst:97
 msgid "Contribute to Litestar's growth with code, docs, and more."
 msgstr "透過程式碼、文件及其他方式參與貢獻 Litestar 的成長。"
 
-#: ../../../index.rst:98
+#: ../../../index.rst:100
 msgid "Sponsors"
 msgstr "贊助者"
 
-#: ../../../index.rst:102
+#: ../../../index.rst:104
 msgid ""
 "Litestar is a community-driven, open-source initiative that thrives on the "
 "generous contributions of our sponsors, enabling us to pursue innovative "
@@ -303,35 +303,35 @@ msgstr ""
 "Litestar 是一項由社群驅動的開源倡議，仰賴贊助者們慷慨的支援，使我們得以推動創"
 "新發展，並持續達成為使用者提供卓越工具與資源的使命。"
 
-#: ../../../index.rst:107
+#: ../../../index.rst:109
 msgid "A huge thank you to our current sponsors:"
 msgstr "非常感謝我們目前的贊助者："
 
-#: ../../../index.rst:120
+#: ../../../index.rst:122
 msgid "Scalar.com"
 msgstr "Scalar.com"
 
-#: ../../../index.rst:124
+#: ../../../index.rst:126
 msgid "`Scalar.com <https://github.com/scalar/scalar>`_"
 msgstr "`Scalar.com <https://github.com/scalar/scalar>`_"
 
-#: ../../../index.rst:129
+#: ../../../index.rst:131
 msgid "Telemetry Sports"
 msgstr "Telemetry Sports"
 
-#: ../../../index.rst:133
+#: ../../../index.rst:135
 msgid "`Telemetry Sports <https://telemetrysports.com/>`_"
 msgstr "`Telemetry Sports <https://telemetrysports.com/>`_"
 
-#: ../../../index.rst:138
+#: ../../../index.rst:140
 msgid "Stok"
 msgstr "Stok"
 
-#: ../../../index.rst:142
+#: ../../../index.rst:144
 msgid "`Stok <https://www.stok.kr/>`_"
 msgstr "`Stok <https://www.stok.kr/>`_"
 
-#: ../../../index.rst:144
+#: ../../../index.rst:146
 msgid ""
 "We invite organizations and individuals to join our sponsorship program. By "
 "becoming a sponsor on platforms like `Polar <sponsor-polar_>`_, `GitHub "
@@ -342,7 +342,7 @@ msgstr ""
 "polar_>`_\\ 、\\ `GitHub <sponsor-github_>`_ 或 `Open Collective <sponsor-"
 "oc_>`_ 等平臺的贊助者，在專案成長中扮演關鍵角色。"
 
-#: ../../../index.rst:148
+#: ../../../index.rst:150
 msgid ""
 "On top of regular sponsorship, we engage in pledge-based sponsorship "
 "opportunities through `Polar <sponsor-polar_>`_, where you can pledge an "
@@ -350,3 +350,10 @@ msgid ""
 msgstr ""
 "除了常態性贊助之外，我們也透過 `Polar <sponsor-polar_>`_ 提供基於承諾的贊助機"
 "會，讓您可針對希望實現的某項議題或功能，承諾捐贈特定金額。"
+
+#~ msgid ""
+#~ ":doc:`Get Started <getting-started>` `Usage Docs <usage>`_ `API Docs "
+#~ "<reference>`_ `Blog <https://blog.litestar.dev>`_"
+#~ msgstr ""
+#~ ":doc:`開始使用 <getting-started>` `使用文件 <usage>`_ `API 文件 "
+#~ "<reference>`_ `網誌 <https://blog.litestar.dev>`_"
