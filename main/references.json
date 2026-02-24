@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-02-19 11:36:52 +0300",
-      "hash" : "3dc350721e3db14c0f9a3849227e77fb44b42aa0",
-      "title" : "chore(deps): bump dawidd6/action-download-artifact from 14 to 15 (#4603)"
+      "date" : "2026-02-24 11:08:47 +0100",
+      "hash" : "f6600e39395161071aa69699aedd87f068659dec",
+      "title" : "style(docs): adapt buttons for mobile layout (#4608)"
     }
   },
   "type" : "branch",
