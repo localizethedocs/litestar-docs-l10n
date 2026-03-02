@@ -61,7 +61,7 @@ msgstr ""
 msgid ""
 "Test data has been randomly generated and is being imported from a shared "
 "module"
-msgstr ""
+msgstr "測試資料為隨機生成，並從共享模組匯入"
 
 #: ../../../benchmarks.rst:19
 msgid ""
@@ -76,7 +76,7 @@ msgstr ""
 
 #: ../../../benchmarks.rst:27
 msgid "If a result is missing for a specific framework that means either"
-msgstr ""
+msgstr "若某個特定框架缺少結果，則代表要麼"
 
 #: ../../../benchmarks.rst:29
 msgid ""
@@ -94,7 +94,7 @@ msgstr ""
 
 #: ../../../benchmarks.rst:36
 msgid "Serializing a dictionary into JSON"
-msgstr ""
+msgstr "將字典序列化成 JSON"
 
 #: ../../../benchmarks.rst:38 ../../../benchmarks.rst:41
 msgid "RPS JSON"
@@ -109,7 +109,7 @@ msgstr ""
 
 #: ../../../benchmarks.rst:50
 msgid "Serialization"
-msgstr ""
+msgstr "序列化"
 
 #: ../../../benchmarks.rst:52
 msgid "Serializing Pydantic models and dataclasses into JSON"
@@ -121,11 +121,11 @@ msgstr ""
 
 #: ../../../benchmarks.rst:61
 msgid "Files"
-msgstr ""
+msgstr "檔案"
 
 #: ../../../benchmarks.rst:63 ../../../benchmarks.rst:66
 msgid "RPS files"
-msgstr ""
+msgstr "RPS 檔案"
 
 #: ../../../benchmarks.rst:69
 msgid ""
