@@ -742,7 +742,7 @@ msgstr ""
 
 #: ../../../migration/flask.rst:531
 msgid "Serialization"
-msgstr ""
+msgstr "序列化"
 
 #: ../../../migration/flask.rst:533
 msgid ""
