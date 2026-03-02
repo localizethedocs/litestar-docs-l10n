@@ -691,7 +691,7 @@ msgstr ""
 
 #: ../../../usage/websockets.rst:296
 msgid "Serialization"
-msgstr ""
+msgstr "序列化"
 
 #: ../../../usage/websockets.rst:298
 msgid ""

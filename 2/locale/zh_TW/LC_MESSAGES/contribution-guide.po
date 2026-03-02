@@ -414,7 +414,7 @@ msgid ""
 "site generation, you should consult the theme docs as a first step."
 msgstr ""
 "我們歡迎任何能增強或改善文件外觀與易用性的貢獻。我們使用優秀的 `PyData "
-"Sphinx Theme <https://pydata-sphinx-theme.readthedocs.io/>` 主題，其內建了許"
+"Sphinx Theme <https://pydata-sphinx-theme.readthedocs.io/>`_ 主題，其內建了許"
 "多開箱即用的選項。如果您希望對文件的樣式、設定或靜態網站生成做出貢獻，應先參"
 "閱該主題的文件。"
 
