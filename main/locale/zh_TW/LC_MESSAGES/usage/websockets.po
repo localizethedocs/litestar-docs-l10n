@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"POT-Creation-Date: 2026-02-24 12:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -634,7 +634,7 @@ msgstr ""
 
 #: ../../../usage/websockets.rst:296
 msgid "Serialization"
-msgstr ""
+msgstr "序列化"
 
 #: ../../../usage/websockets.rst:298
 msgid ""

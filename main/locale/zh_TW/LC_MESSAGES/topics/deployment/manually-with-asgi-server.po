@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"POT-Creation-Date: 2026-02-24 12:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -62,7 +62,7 @@ msgstr ""
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:23
 msgid "`systemd <https://www.freedesktop.org/wiki/Software/systemd/>`_:"
-msgstr ""
+msgstr "`systemd <https://www.freedesktop.org/wiki/Software/systemd/>`_："
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:24
 msgid ""
@@ -109,7 +109,7 @@ msgstr ""
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:0
 msgid "Hypercorn"
-msgstr ""
+msgstr "Hypercorn"
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:45
 msgid ""
@@ -141,43 +141,43 @@ msgstr ""
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:62
 msgid "Install the ASGI Server"
-msgstr ""
+msgstr "安裝 ASGI 伺服器"
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:69
 msgid "Install Uvicorn with pip"
-msgstr ""
+msgstr "使用 pip 安裝 Uvicorn"
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:69
 msgid "pip install uvicorn"
-msgstr ""
+msgstr "pip install uvicorn"
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:77
 msgid "Install Hypercorn with pip"
-msgstr ""
+msgstr "使用 pip 安裝 Hypercorn"
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:77
 msgid "pip install hypercorn"
-msgstr ""
+msgstr "pip install hypercorn"
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:85
 msgid "Install Daphne with pip"
-msgstr ""
+msgstr "使用 pip 安裝 Daphne"
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:85
 msgid "pip install daphne"
-msgstr ""
+msgstr "pip install daphne"
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:93
 msgid "Install Granian with pip"
-msgstr ""
+msgstr "使用 pip 安裝 Granian"
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:93
 msgid "pip install granian"
-msgstr ""
+msgstr "pip install granian"
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:99
 msgid "Run the ASGI Server"
-msgstr ""
+msgstr "執行 ASGI 伺服器"
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:101
 msgid ""
@@ -198,7 +198,7 @@ msgstr ""
 #: ../../../topics/deployment/manually-with-asgi-server.rst:142
 #: ../../../topics/deployment/manually-with-asgi-server.rst:156
 msgid "Console Output"
-msgstr ""
+msgstr "主控臺輸出"
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:114
 msgid ""
@@ -243,7 +243,7 @@ msgstr ""
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:151
 msgid "granian --interface asgi app:app"
-msgstr ""
+msgstr "granian --interface asgi app:app"
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:156
 msgid ""
