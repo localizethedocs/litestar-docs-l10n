@@ -1,0 +1,141 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/dto/data_structures.rst:2
+msgid "data_structures"
+msgstr ""
+
+#: ../../../../litestar/dto/data_structures.py:docstring of
+#: litestar.dto.data_structures.DTOData:1
+msgid ""
+"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~litestar.dto.data_structures."
+"T`]"
+msgstr ""
+
+#: ../../../../litestar/dto/data_structures.py:docstring of
+#: litestar.dto.data_structures.DTOData:1
+msgid "DTO validated data and utility methods."
+msgstr ""
+
+#: ../../../../litestar/dto/data_structures.py:docstring of
+#: litestar.dto.data_structures.DTOData.create_instance:1
+msgid "Create an instance of the DTO validated data."
+msgstr ""
+
+#: ../../../reference/dto/data_structures.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../litestar/dto/data_structures.py:docstring of
+#: litestar.dto.data_structures.DTOData.create_instance:3
+msgid ""
+"Additional data to create the instance with. Takes precedence over DTO "
+"validated data."
+msgstr ""
+
+#: ../../../../litestar/dto/data_structures.py:docstring of
+#: litestar.dto.data_structures.DTOData.update_instance:1
+msgid "Update an instance with the DTO validated data."
+msgstr ""
+
+#: ../../../../litestar/dto/data_structures.py:docstring of
+#: litestar.dto.data_structures.DTOData.update_instance:3
+msgid "The instance to update."
+msgstr ""
+
+#: ../../../../litestar/dto/data_structures.py:docstring of
+#: litestar.dto.data_structures.DTOData.update_instance:4
+msgid ""
+"Additional data to update the instance with. Takes precedence over DTO "
+"validated data."
+msgstr ""
+
+#: ../../../../litestar/dto/data_structures.py:docstring of
+#: litestar.dto.data_structures.DTOData.as_builtins:1
+msgid "Return the DTO validated data as builtins."
+msgstr ""
+
+#: ../../../../litestar/dto/data_structures.py:docstring of
+#: litestar.dto.data_structures.DTOFieldDefinition:1
+msgid "Bases: :py:class:`~litestar.typing.FieldDefinition`"
+msgstr ""
+
+#: ../../../../litestar/dto/data_structures.py:docstring of
+#: litestar.dto.data_structures.DTOFieldDefinition:1
+msgid ""
+"A model field representation for purposes of generating a DTO backend model "
+"type."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.dto.data_structures.DTOFieldDefinition.model_name:1
+msgid "The name of the model for which the field is generated."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.dto.data_structures.DTOFieldDefinition.default_factory:1
+msgid "Default factory of the field."
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.dto.data_structures.DTOFieldDefinition.dto_field:1
+msgid "DTO field configuration."
+msgstr ""
+
+#: ../../../../litestar/dto/data_structures.py:docstring of
+#: litestar.dto.data_structures.DTOFieldDefinition.from_field_definition:7
+#: ../../../../docstring
+#: litestar.dto.data_structures.DTOFieldDefinition.passthrough_constraints:1
+msgid ""
+"Pass constraints of the source annotation to be validated by the DTO backend"
+msgstr ""
+
+#: ../../../../litestar/dto/data_structures.py:docstring of
+#: litestar.dto.data_structures.DTOFieldDefinition.from_field_definition:1
+msgid "Create a :class:`FieldDefinition` from a :class:`FieldDefinition`."
+msgstr ""
+
+#: ../../../../litestar/dto/data_structures.py:docstring of
+#: litestar.dto.data_structures.DTOFieldDefinition.from_field_definition:3
+msgid "A :class:`FieldDefinition` to create a :class:`FieldDefinition` from."
+msgstr ""
+
+#: ../../../../litestar/dto/data_structures.py:docstring of
+#: litestar.dto.data_structures.DTOFieldDefinition.from_field_definition:4
+msgid "The name of the model."
+msgstr ""
+
+#: ../../../../litestar/dto/data_structures.py:docstring of
+#: litestar.dto.data_structures.DTOFieldDefinition.from_field_definition:5
+msgid "Default factory function, if any."
+msgstr ""
+
+#: ../../../../litestar/dto/data_structures.py:docstring of
+#: litestar.dto.data_structures.DTOFieldDefinition.from_field_definition:6
+msgid "DTOField instance."
+msgstr ""
+
+#: ../../../reference/dto/data_structures.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/dto/data_structures.py:docstring of
+#: litestar.dto.data_structures.DTOFieldDefinition.from_field_definition:9
+msgid "A :class:`FieldDefinition` instance."
+msgstr ""

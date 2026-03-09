@@ -1,0 +1,89 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/plugins/attrs.rst:2
+msgid "attrs"
+msgstr ""
+
+#: ../../../../litestar/plugins/attrs.py:docstring of
+#: litestar.plugins.attrs.AttrsSchemaPlugin:1
+msgid "Bases: :py:class:`~litestar.plugins.base.OpenAPISchemaPluginProtocol`"
+msgstr ""
+
+#: ../../../../litestar/plugins/attrs.py:docstring of
+#: litestar.plugins.attrs.AttrsSchemaPlugin.is_plugin_supported_type:1
+msgid ""
+"Given a value of indeterminate type, determine if this value is supported by "
+"the plugin."
+msgstr ""
+
+#: ../../../reference/plugins/attrs.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../litestar/plugins/attrs.py:docstring of
+#: litestar.plugins.attrs.AttrsSchemaPlugin.is_plugin_supported_type:3
+msgid "An arbitrary value."
+msgstr ""
+
+#: ../../../reference/plugins/attrs.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/plugins/attrs.py:docstring of
+#: litestar.plugins.attrs.AttrsSchemaPlugin.is_plugin_supported_type:5
+msgid "A typeguard dictating whether the value is supported by the plugin."
+msgstr ""
+
+#: ../../../../litestar/plugins/attrs.py:docstring of
+#: litestar.plugins.attrs.AttrsSchemaPlugin.to_openapi_schema:1
+msgid "Given a type annotation, transform it into an OpenAPI schema class."
+msgstr ""
+
+#: ../../../../litestar/plugins/attrs.py:docstring of
+#: litestar.plugins.attrs.AttrsSchemaPlugin.to_openapi_schema:3
+msgid "FieldDefinition instance."
+msgstr ""
+
+#: ../../../../litestar/plugins/attrs.py:docstring of
+#: litestar.plugins.attrs.AttrsSchemaPlugin.to_openapi_schema:4
+msgid "An instance of the schema creator class"
+msgstr ""
+
+#: ../../../../litestar/plugins/attrs.py:docstring of
+#: litestar.plugins.attrs.AttrsSchemaPlugin.to_openapi_schema:6
+msgid "An :class:`OpenAPI <litestar.openapi.spec.schema.Schema>` instance."
+msgstr ""
+
+#: ../../../../litestar/plugins/attrs.py:docstring of
+#: litestar.plugins.attrs.is_attrs_class:1
+msgid ""
+"Given a type annotation determine if the annotation is a class that includes "
+"an attrs attribute."
+msgstr ""
+
+#: ../../../../litestar/plugins/attrs.py:docstring of
+#: litestar.plugins.attrs.is_attrs_class:3
+msgid "A type."
+msgstr ""
+
+#: ../../../../litestar/plugins/attrs.py:docstring of
+#: litestar.plugins.attrs.is_attrs_class:5
+msgid "A typeguard determining whether the type is an attrs class."
+msgstr ""

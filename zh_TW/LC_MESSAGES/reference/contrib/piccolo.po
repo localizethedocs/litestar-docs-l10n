@@ -1,0 +1,68 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/contrib/piccolo.rst:2
+msgid "piccolo_orm"
+msgstr ""
+
+#: ../../../../litestar/contrib/piccolo.py:docstring of
+#: litestar.contrib.piccolo.PiccoloDTO:1
+msgid ""
+"Bases: :py:class:`~litestar.dto.base_dto.AbstractDTO`, :py:class:`~typing."
+"Generic`\\ [:py:obj:`~litestar.contrib.piccolo.T`]"
+msgstr ""
+
+#: ../../../../litestar/contrib/piccolo.py:docstring of
+#: litestar.contrib.piccolo.PiccoloDTO.generate_field_definitions:1
+msgid "Generate ``FieldDefinition`` instances from ``model_type``."
+msgstr ""
+
+#: ../../../../litestar/contrib/piccolo.py:docstring of
+#: litestar.contrib.piccolo.PiccoloDTO.generate_field_definitions:0
+msgid "Yields"
+msgstr ""
+
+#: ../../../../litestar/contrib/piccolo.py:docstring of
+#: litestar.contrib.piccolo.PiccoloDTO.generate_field_definitions:3
+msgid "``FieldDefinition`` instances."
+msgstr ""
+
+#: ../../../../litestar/contrib/piccolo.py:docstring of
+#: litestar.contrib.piccolo.PiccoloDTO.detect_nested_field:1
+msgid ""
+"Return ``True`` if ``field_definition`` represents a nested model field."
+msgstr ""
+
+#: ../../../reference/contrib/piccolo.rst:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../litestar/contrib/piccolo.py:docstring of
+#: litestar.contrib.piccolo.PiccoloDTO.detect_nested_field:3
+msgid "inspect type to determine if field represents a nested model."
+msgstr ""
+
+#: ../../../reference/contrib/piccolo.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../litestar/contrib/piccolo.py:docstring of
+#: litestar.contrib.piccolo.PiccoloDTO.detect_nested_field:5
+msgid "``True`` if ``field_definition`` represents a nested model field."
+msgstr ""

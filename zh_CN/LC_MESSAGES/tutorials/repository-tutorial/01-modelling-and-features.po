@@ -1,0 +1,257 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../tutorials/repository-tutorial/01-modelling-and-features.rst:2
+msgid "Introduction to Database Modelling and Repository Features"
+msgstr ""
+
+#: ../../../tutorials/repository-tutorial/01-modelling-and-features.rst:3
+msgid ""
+"In this tutorial, we will cover the integrated repository features in "
+"Litestar, starting with database modelling using the included SQLAlchemy "
+"declarative model helpers. These are a series of classes and mixins that "
+"incorporate commonly used functions/column types to make working with models "
+"easier."
+msgstr ""
+
+#: ../../../tutorials/repository-tutorial/01-modelling-and-features.rst:8
+msgid ""
+"The full code for this tutorial can be found below in the :ref:`Full Code "
+"<01-repo-full-code>` section."
+msgstr ""
+
+#: ../../../tutorials/repository-tutorial/01-modelling-and-features.rst:11
+msgid "Modelling"
+msgstr ""
+
+#: ../../../tutorials/repository-tutorial/01-modelling-and-features.rst:13
+msgid ""
+"We'll begin by modelling the entities and relationships between authors and "
+"books. We'll start by creating the ``Author`` table, utilizing the :class:"
+"`UUIDBase <advanced_alchemy.base.UUIDBase>` class. To keep things simple, "
+"our first model will encompass only three fields: ``id``, ``name``, and "
+"``dob``."
+msgstr ""
+
+#: ../../../tutorials/repository-tutorial/01-modelling-and-features.rst:19
+#: ../../../tutorials/repository-tutorial/01-modelling-and-features.rst:32
+#: ../../../tutorials/repository-tutorial/01-modelling-and-features.rst:89
+msgid "``app.py``"
+msgstr ""
+
+#: ../../../tutorials/repository-tutorial/01-modelling-and-features.rst:19
+msgid ""
+"# The `UUIDBase` class includes a `UUID` based primary key (`id`)\n"
+"class Author(base.UUIDBase):\n"
+"    __tablename__ = \"author\"\n"
+"    name: Mapped[str]"
+msgstr ""
+
+#: ../../../tutorials/repository-tutorial/01-modelling-and-features.rst:24
+msgid ""
+"The book entity is not considered a \"strong\" entity and therefore always "
+"requires an author to be created.  We need to configure our SQLAlchemy "
+"classes so that it is aware of this relationship. We will extend the "
+"``Author`` model by incorporating a ``Book`` relationship. This allows each "
+"``Author`` record to possess multiple ``Book`` records. By configuring it "
+"this way, SQLAlchemy will automatically include the necessary foreign key "
+"constraints when using the ``author_id`` field in each ``Book`` record."
+msgstr ""
+
+#: ../../../tutorials/repository-tutorial/01-modelling-and-features.rst:32
+msgid ""
+"# The `UUIDBase` class includes a `UUID` based primary key (`id`)\n"
+"class Author(base.UUIDBase):\n"
+"    __tablename__ = \"author\"\n"
+"    name: Mapped[str]\n"
+"    dob: Mapped[date]\n"
+"    books: Mapped[List[Book]] = relationship(back_populates=\"author\", "
+"lazy=\"selectin\")\n"
+"# record created, and `updated_at` is the last time the record was "
+"modified.\n"
+"class Book(base.UUIDAuditBase):\n"
+"    __tablename__ = \"book\"\n"
+"    title: Mapped[str]"
+msgstr ""
+
+#: ../../../tutorials/repository-tutorial/01-modelling-and-features.rst:37
+msgid ""
+"By using the audit model, we can automatically record the time a record was "
+"created and last updated."
+msgstr ""
+
+#: ../../../tutorials/repository-tutorial/01-modelling-and-features.rst:40
+msgid ""
+"To implement this, we will define a new ``Book`` model via the :class:"
+"`UUIDAuditBase <advanced_alchemy.base.UUIDAuditBase>` class. Observe that "
+"the only modification here is the parent class from which we inherit. This "
+"minor change endows the `book` table with automatic timestamp columns "
+"(`created` and `updated`) upon deployment!"
+msgstr ""
+
+#: ../../../tutorials/repository-tutorial/01-modelling-and-features.rst:48
+msgid ""
+"If your application requires integer-based primary keys, equivalent base "
+"model and base audit model implementations can be found at :class:"
+"`BigIntBase <advanced_alchemy.base.BigIntAuditBase>` and :class:"
+"`BigIntAuditBase <advanced_alchemy.base.UUIDAuditBase>` respectively."
+msgstr ""
+
+#: ../../../tutorials/repository-tutorial/01-modelling-and-features.rst:55
+msgid "`Spanner <https://cloud.google.com/spanner>`_ only:"
+msgstr ""
+
+#: ../../../tutorials/repository-tutorial/01-modelling-and-features.rst:57
+msgid ""
+"Using monotonically changing primary keys is considered an anti-pattern in "
+"Spanner and leads to performance problems. Additionally, Spanner does not "
+"currently include an idiom comparable to the ``Sequence`` object.  This "
+"means the ``BigIntBase`` and ``BigIntAuditBase`` are not currently supported "
+"for Spanner."
+msgstr ""
+
+#: ../../../tutorials/repository-tutorial/01-modelling-and-features.rst:63
+msgid "Additional features provided by the built-in base models include:"
+msgstr ""
+
+#: ../../../tutorials/repository-tutorial/01-modelling-and-features.rst:65
+msgid ""
+"Synchronous and Asynchronous repository implementations have been tried and "
+"tested with various popular database engines. As of now, six database "
+"engines are supported: Postgres, SQLite, MySQL, DuckDB, Oracle, and Spanner."
+msgstr ""
+
+#: ../../../tutorials/repository-tutorial/01-modelling-and-features.rst:68
+msgid ""
+"Automatic table name deduction from model name. For instance, a model named "
+"``EventLog`` would correspond to the ``event_log`` database table."
+msgstr ""
+
+#: ../../../tutorials/repository-tutorial/01-modelling-and-features.rst:70
+msgid ""
+"A :class:`GUID <advanced_alchemy.types.GUID>` database type that establishes "
+"a native UUID in supported engines or a ``Binary(16)`` as a fallback."
+msgstr ""
+
+#: ../../../tutorials/repository-tutorial/01-modelling-and-features.rst:72
+msgid ""
+"A ``BigInteger`` variant :class:`BigIntIdentity <advanced_alchemy.types."
+"BigIntIdentity>` that reverts to an ``Integer`` for unsupported variants."
+msgstr ""
+
+#: ../../../tutorials/repository-tutorial/01-modelling-and-features.rst:75
+msgid ""
+"A custom :class:`JsonB <advanced_alchemy.types.JsonB>` type that uses native "
+"``JSONB`` where possible and ``Binary`` or ``Blob`` as an alternative."
+msgstr ""
+
+#: ../../../tutorials/repository-tutorial/01-modelling-and-features.rst:77
+msgid ""
+"A custom :class:`EncryptedString <advanced_alchemy.types.EncryptedString>` "
+"encrypted string that supports multiple cryptography backends."
+msgstr ""
+
+#: ../../../tutorials/repository-tutorial/01-modelling-and-features.rst:79
+msgid "Let's build on this as we look at the repository classes."
+msgstr ""
+
+#: ../../../tutorials/repository-tutorial/01-modelling-and-features.rst:84
+msgid "Full Code"
+msgstr ""
+
+#: ../../../tutorials/repository-tutorial/01-modelling-and-features.rst:0
+msgid "Full Code (click to toggle)"
+msgstr ""
+
+#: ../../../tutorials/repository-tutorial/01-modelling-and-features.rst:89
+msgid ""
+"from __future__ import annotations\n"
+"\n"
+"import uuid\n"
+"from datetime import date\n"
+"from uuid import UUID\n"
+"\n"
+"from sqlalchemy import ForeignKey, func, select\n"
+"from sqlalchemy.ext.asyncio import AsyncEngine, AsyncSession\n"
+"from sqlalchemy.orm import Mapped, mapped_column, relationship\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.plugins.sqlalchemy import AsyncSessionConfig, "
+"SQLAlchemyAsyncConfig, SQLAlchemyPlugin, base\n"
+"\n"
+"\n"
+"# The SQLAlchemy base includes a declarative model for you to use in your "
+"models.\n"
+"# The `UUIDBase` class includes a `UUID` based primary key (`id`)\n"
+"class Author(base.UUIDBase):\n"
+"    __tablename__ = \"author\"\n"
+"    name: Mapped[str]\n"
+"    dob: Mapped[date]\n"
+"    books: Mapped[list[Book]] = relationship(back_populates=\"author\", "
+"lazy=\"selectin\")\n"
+"\n"
+"\n"
+"# The `UUIDAuditBase` class includes the same UUID` based primary key (`id`) "
+"and 2\n"
+"# additional columns: `created_at` and `updated_at`. `created_at` is a "
+"timestamp of when the\n"
+"# record created, and `updated_at` is the last time the record was "
+"modified.\n"
+"class Book(base.UUIDAuditBase):\n"
+"    __tablename__ = \"book\"\n"
+"    title: Mapped[str]\n"
+"    author_id: Mapped[UUID] = mapped_column(ForeignKey(\"author.id\"))\n"
+"    author: Mapped[Author] = relationship(lazy=\"joined\", innerjoin=True, "
+"viewonly=True)\n"
+"\n"
+"\n"
+"session_config = AsyncSessionConfig(expire_on_commit=False)\n"
+"sqlalchemy_config = SQLAlchemyAsyncConfig(\n"
+"    connection_string=\"sqlite+aiosqlite:///test.sqlite\", "
+"session_config=session_config, create_all=True\n"
+")  # Create 'async_session' dependency.\n"
+"\n"
+"\n"
+"async def on_startup(app: Litestar) -> None:\n"
+"    \"\"\"Adds some dummy data if no data is present.\"\"\"\n"
+"    async with sqlalchemy_config.get_session() as session:\n"
+"        statement = select(func.count()).select_from(Author)\n"
+"        count = await session.execute(statement)\n"
+"        if not count.scalar():\n"
+"            author_id = uuid.uuid4()\n"
+"            session.add(Author(name=\"Stephen King\", dob=date(1954, 9, 21), "
+"id=author_id))\n"
+"            session.add(Book(title=\"It\", author_id=author_id))\n"
+"            await session.commit()\n"
+"\n"
+"\n"
+"@get(path=\"/authors\")\n"
+"async def get_authors(db_session: AsyncSession, db_engine: AsyncEngine) -> "
+"list[Author]:\n"
+"    \"\"\"Interact with SQLAlchemy engine and session.\"\"\"\n"
+"    return list(await db_session.scalars(select(Author)))\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[get_authors],\n"
+"    on_startup=[on_startup],\n"
+"    debug=True,\n"
+"    plugins=[SQLAlchemyPlugin(config=sqlalchemy_config)],\n"
+")"
+msgstr ""

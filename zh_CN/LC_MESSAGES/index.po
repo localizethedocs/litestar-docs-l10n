@@ -1,0 +1,742 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../index.rst:333
+msgid "Documentation"
+msgstr ""
+
+#: ../../../index.rst:342
+msgid "Guides"
+msgstr ""
+
+#: ../../../index.rst:351
+msgid "Available Issues"
+msgstr ""
+
+#: ../../../index.rst:351
+msgid "Code of Conduct"
+msgstr ""
+
+#: ../../../index.rst:351
+msgid "Contributing"
+msgstr ""
+
+#: ../../../index.rst:2
+msgid "Litestar library documentation"
+msgstr ""
+
+#: ../../../index.rst:4
+msgid ""
+"Litestar is a powerful, flexible, highly performant, and opinionated ASGI "
+"framework."
+msgstr ""
+
+#: ../../../index.rst:6
+msgid ""
+"The Litestar framework supports :doc:`/usage/plugins/index`, ships with :doc:"
+"`dependency injection </usage/dependency-injection>`, :doc:`security "
+"primitives </usage/security/index>`, :doc:`OpenAPI schema generation </usage/"
+"openapi/index>`, `MessagePack <https://msgpack.org/>`_, :doc:`middlewares </"
+"usage/middleware/index>`, a great :doc:`CLI </usage/cli>` experience, and "
+"much more."
+msgstr ""
+
+#: ../../../index.rst:12
+msgid "Installation"
+msgstr ""
+
+#: ../../../index.rst:14
+msgid "pip install litestar"
+msgstr ""
+
+#: ../../../index.rst:18
+msgid ""
+"``litestar[standard]`` includes commonly used extras like ``uvicorn`` and "
+"``jinja2`` (for templating)."
+msgstr ""
+
+#: ../../../index.rst:0
+msgid "Extras"
+msgstr ""
+
+#: ../../../index.rst:23
+msgid "`Pydantic <https://docs.pydantic.dev/latest/>`_"
+msgstr ""
+
+#: ../../../index.rst:24
+msgid ":code:`pip install 'litestar[pydantic]'`"
+msgstr ""
+
+#: ../../../index.rst:26
+msgid "`Attrs <https://www.attrs.org>`_"
+msgstr ""
+
+#: ../../../index.rst:27
+msgid ":code:`pip install 'litestar[attrs]'`"
+msgstr ""
+
+#: ../../../index.rst:29
+msgid ""
+":ref:`Brotli Compression Middleware <usage/middleware/builtin-middleware:"
+"brotli>`:"
+msgstr ""
+
+#: ../../../index.rst:30
+msgid ":code:`pip install 'litestar[brotli]'`"
+msgstr ""
+
+#: ../../../index.rst:32
+msgid ""
+":ref:`Cookie Based Sessions <usage/middleware/builtin-middleware:client-side "
+"sessions>`"
+msgstr ""
+
+#: ../../../index.rst:33
+msgid ":code:`pip install 'litestar[cryptography]'`"
+msgstr ""
+
+#: ../../../index.rst:35
+msgid ":doc:`JWT </usage/security/jwt>`"
+msgstr ""
+
+#: ../../../index.rst:36
+msgid ":code:`pip install 'litestar[jwt]'`"
+msgstr ""
+
+#: ../../../index.rst:38
+msgid ":doc:`RedisStore </usage/stores>`"
+msgstr ""
+
+#: ../../../index.rst:39
+msgid ":code:`pip install 'litestar[redis]'`"
+msgstr ""
+
+#: ../../../index.rst:41
+msgid ":ref:`Picologging <usage/logging:using picologging>`"
+msgstr ""
+
+#: ../../../index.rst:42
+msgid ":code:`pip install 'litestar[picologging]'`"
+msgstr ""
+
+#: ../../../index.rst:44
+msgid ":ref:`StructLog <usage/logging:using structlog>`"
+msgstr ""
+
+#: ../../../index.rst:45
+msgid ":code:`pip install 'litestar[structlog]'`"
+msgstr ""
+
+#: ../../../index.rst:47
+msgid ":doc:`Prometheus Instrumentation </usage/metrics/prometheus>`"
+msgstr ""
+
+#: ../../../index.rst:48
+msgid ":code:`pip install 'litestar[prometheus]'`"
+msgstr ""
+
+#: ../../../index.rst:50
+msgid ":doc:`Open Telemetry Instrumentation </usage/metrics/open-telemetry>`"
+msgstr ""
+
+#: ../../../index.rst:51
+msgid ":code:`pip install 'litestar[opentelemetry]'`"
+msgstr ""
+
+#: ../../../index.rst:53
+msgid ":doc:`SQLAlchemy </usage/databases/sqlalchemy/index>`"
+msgstr ""
+
+#: ../../../index.rst:54
+msgid ":code:`pip install 'litestar[sqlalchemy]'`"
+msgstr ""
+
+#: ../../../index.rst:56
+msgid ":doc:`CLI </usage/cli>`"
+msgstr ""
+
+#: ../../../index.rst:57
+msgid ""
+"The ``litestar`` base installation now includes the CLI dependencies and "
+"this group is no longer required to use the CLI. If you need the optional "
+"CLI dependencies, install the ``standard`` group instead. **Will be removed "
+"in 3.0**"
+msgstr ""
+
+#: ../../../index.rst:63
+msgid ":code:`pip install 'litestar[cli]'`"
+msgstr ""
+
+#: ../../../index.rst:65
+msgid ":doc:`Jinja Templating </usage/templating>`"
+msgstr ""
+
+#: ../../../index.rst:66
+msgid ":code:`pip install 'litestar[jinja]'`"
+msgstr ""
+
+#: ../../../index.rst:68
+msgid ":doc:`Mako Templating </usage/templating>`"
+msgstr ""
+
+#: ../../../index.rst:69
+msgid ":code:`pip install 'litestar[mako]'`"
+msgstr ""
+
+#: ../../../index.rst:71
+msgid "Standard Installation (includes Uvicorn and Jinja2 templating):"
+msgstr ""
+
+#: ../../../index.rst:72
+msgid ":code:`pip install 'litestar[standard]'`"
+msgstr ""
+
+#: ../../../index.rst:74
+msgid "All Extras:"
+msgstr ""
+
+#: ../../../index.rst:75
+msgid ":code:`pip install 'litestar[full]'`"
+msgstr ""
+
+#: ../../../index.rst:77
+msgid ""
+"The full extras is not recommended because it will add a lot of unnecessary "
+"extras."
+msgstr ""
+
+#: ../../../index.rst:82
+msgid "Minimal Example"
+msgstr ""
+
+#: ../../../index.rst:84
+msgid ""
+"At a minimum, make sure you have installed ``litestar[standard]``, which "
+"includes uvicorn."
+msgstr ""
+
+#: ../../../index.rst:86
+msgid "First, create a file named ``app.py`` with the following contents:"
+msgstr ""
+
+#: ../../../index.rst:89
+msgid ""
+"from litestar import Litestar, get\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"async def index() -> str:\n"
+"    return \"Hello, world!\"\n"
+"\n"
+"\n"
+"@get(\"/books/{book_id:int}\")\n"
+"async def get_book(book_id: int) -> dict[str, int]:\n"
+"    return {\"book_id\": book_id}\n"
+"\n"
+"\n"
+"app = Litestar([index, get_book])"
+msgstr ""
+
+#: ../../../index.rst:105
+msgid "Then, run the following command:"
+msgstr ""
+
+#: ../../../index.rst:107
+msgid ""
+"litestar run\n"
+"# Or you can run Uvicorn directly:\n"
+"uvicorn app:app --reload"
+msgstr ""
+
+#: ../../../index.rst:113
+msgid ""
+"You can now visit ``http://localhost:8000/`` and ``http://localhost:8000/"
+"books/1`` in your browser and you should see the responses of your two "
+"endpoints:"
+msgstr ""
+
+#: ../../../index.rst:116
+msgid "\"Hello, world!\""
+msgstr ""
+
+#: ../../../index.rst:120
+msgid "and"
+msgstr ""
+
+#: ../../../index.rst:122
+msgid "{\"book_id\": 1}"
+msgstr ""
+
+#: ../../../index.rst:126
+msgid ""
+"You can also check out the automatically generated OpenAPI-based "
+"documentation at:"
+msgstr ""
+
+#: ../../../index.rst:128
+msgid ""
+"``http://localhost:8000/schema`` (for `ReDoc <https://redocly.com/redoc>`_),"
+msgstr ""
+
+#: ../../../index.rst:129
+msgid ""
+"``http://localhost:8000/schema/swagger`` (for `Swagger UI <https://swagger."
+"io/>`_),"
+msgstr ""
+
+#: ../../../index.rst:130
+msgid ""
+"``http://localhost:8000/schema/elements`` (for `Stoplight Elements <https://"
+"stoplight.io/open-source/elements/>`_)"
+msgstr ""
+
+#: ../../../index.rst:131
+msgid ""
+"``http://localhost:8000/schema/rapidoc`` (for `RapiDoc <https://rapidocweb."
+"com/>`_)"
+msgstr ""
+
+#: ../../../index.rst:133
+msgid ""
+"You can check out a more in-depth tutorial in the :doc:`/tutorials/todo-app/"
+"index` section!"
+msgstr ""
+
+#: ../../../index.rst:136
+msgid "Sponsors"
+msgstr ""
+
+#: ../../../index.rst:138
+msgid ""
+"Litestar is a community-driven open-source initiative that thrives on the "
+"generous contributions of our sponsors, enabling us to pursue innovative "
+"developments."
+msgstr ""
+
+#: ../../../index.rst:141
+msgid "A huge thank you to our current sponsors:"
+msgstr ""
+
+#: ../../../index.rst:143
+msgid ""
+"<div style=\"display: flex; justify-content: center; align-items: center; "
+"gap: 8px;\">\n"
+"  <div>\n"
+"    <a href=\"https://github.com/scalar/scalar\">\n"
+"      <img src=\"https://raw.githubusercontent.com/litestar-org/branding/"
+"main/assets/sponsors/scalar.svg\" alt=\"Scalar.com\" style=\"border-radius: "
+"10px; width: auto; max-height: 150px;\"/>\n"
+"    </a>\n"
+"    <p style=\"text-align: center;\">Scalar.com</p>\n"
+"  </div>\n"
+"  <div>\n"
+"    <a href=\"https://telemetrysports.com/\">\n"
+"      <img src=\"https://raw.githubusercontent.com/litestar-org/branding/"
+"main/assets/sponsors/telemetry-sports/unofficial-telemetry-whitebg.svg\" "
+"alt=\"Telemetry Sports\" style=\"border-radius: 10px; width: auto; max-"
+"height: 150px;\"/>\n"
+"    </a>\n"
+"    <p style=\"text-align: center;\">Telemetry Sports</p>\n"
+"  </div>\n"
+"</div>"
+msgstr ""
+
+#: ../../../index.rst:160
+msgid ""
+"We invite organizations and individuals to join our sponsorship program. By "
+"becoming a sponsor on `Polar <sponsor-polar_>`_ (preferred), or other "
+"platforms like `GitHub <sponsor-github_>`_ and `Open Collective <sponsor-"
+"oc_>`_, you can play a pivotal role in our project's growth."
+msgstr ""
+
+#: ../../../index.rst:164
+msgid ""
+"Also, exclusively with `Polar <sponsor-polar_>`_, you can engage in pledge-"
+"based sponsorships."
+msgstr ""
+
+#: ../../../index.rst:171
+msgid "Expanded Example"
+msgstr ""
+
+#: ../../../index.rst:173
+msgid ""
+"**Define your data model** using pydantic or any library based on it (for "
+"example ormar, beanie, SQLModel):"
+msgstr ""
+
+#: ../../../index.rst:176
+msgid ""
+"from pydantic import BaseModel, UUID4\n"
+"\n"
+"\n"
+"class User(BaseModel):\n"
+"    first_name: str\n"
+"    last_name: str\n"
+"    id: UUID4"
+msgstr ""
+
+#: ../../../index.rst:188
+msgid ""
+"You can also use dataclasses (standard library and Pydantic), :class:`typing."
+"TypedDict`, or :class:`msgspec.Struct`."
+msgstr ""
+
+#: ../../../index.rst:192
+msgid ""
+"from uuid import UUID\n"
+"\n"
+"from dataclasses import dataclass\n"
+"from litestar.dto import DTOConfig, DataclassDTO\n"
+"\n"
+"\n"
+"@dataclass\n"
+"class User:\n"
+"    first_name: str\n"
+"    last_name: str\n"
+"    id: UUID\n"
+"\n"
+"\n"
+"class PartialUserDTO(DataclassDTO[User]):\n"
+"    config = DTOConfig(exclude={\"id\"}, partial=True)"
+msgstr ""
+
+#: ../../../index.rst:209
+msgid "**Define a Controller for your data model:**"
+msgstr ""
+
+#: ../../../index.rst:0
+msgid "Python 3.8+"
+msgstr ""
+
+#: ../../../index.rst:212
+msgid ""
+"from typing import List\n"
+"\n"
+"from litestar import Controller, get, post, put, patch, delete\n"
+"from litestar.dto import DTOData\n"
+"from pydantic import UUID4\n"
+"\n"
+"from my_app.models import User, PartialUserDTO\n"
+"\n"
+"\n"
+"class UserController(Controller):\n"
+"    path = \"/users\"\n"
+"\n"
+"    @post()\n"
+"    async def create_user(self, data: User) -> User: ...\n"
+"\n"
+"    @get()\n"
+"    async def list_users(self) -> List[User]: ...\n"
+"\n"
+"    @patch(path=\"/{user_id:uuid}\", dto=PartialUserDTO)\n"
+"    async def partial_update_user(\n"
+"        self, user_id: UUID4, data: DTOData[User]\n"
+"    ) -> User: ...\n"
+"\n"
+"    @put(path=\"/{user_id:uuid}\")\n"
+"    async def update_user(self, user_id: UUID4, data: User) -> User: ...\n"
+"\n"
+"    @get(path=\"/{user_id:uuid}\")\n"
+"    async def get_user(self, user_id: UUID4) -> User: ...\n"
+"\n"
+"    @delete(path=\"/{user_id:uuid}\")\n"
+"    async def delete_user(self, user_id: UUID4) -> None: ..."
+msgstr ""
+
+#: ../../../index.rst:0
+msgid "Python 3.9+"
+msgstr ""
+
+#: ../../../index.rst:212
+msgid ""
+"from litestar import Controller, get, post, put, patch, delete\n"
+"from litestar.dto import DTOData\n"
+"from pydantic import UUID4\n"
+"\n"
+"from my_app.models import User, PartialUserDTO\n"
+"\n"
+"\n"
+"class UserController(Controller):\n"
+"    path = \"/users\"\n"
+"\n"
+"    @post()\n"
+"    async def create_user(self, data: User) -> User: ...\n"
+"\n"
+"    @get()\n"
+"    async def list_users(self) -> list[User]: ...\n"
+"\n"
+"    @patch(path=\"/{user_id:uuid}\", dto=PartialUserDTO)\n"
+"    async def partial_update_user(\n"
+"        self, user_id: UUID4, data: DTOData[User]\n"
+"    ) -> User: ...\n"
+"\n"
+"    @put(path=\"/{user_id:uuid}\")\n"
+"    async def update_user(self, user_id: UUID4, data: User) -> User: ...\n"
+"\n"
+"    @get(path=\"/{user_id:uuid}\")\n"
+"    async def get_user(self, user_id: UUID4) -> User: ...\n"
+"\n"
+"    @delete(path=\"/{user_id:uuid}\")\n"
+"    async def delete_user(self, user_id: UUID4) -> None: ..."
+msgstr ""
+
+#: ../../../index.rst:246
+msgid ""
+"When instantiating your app, import your *controller* into your "
+"application's entry-point and pass it to Litestar:"
+msgstr ""
+
+#: ../../../index.rst:250
+msgid ""
+"from litestar import Litestar\n"
+"\n"
+"from my_app.controllers.user import UserController\n"
+"\n"
+"app = Litestar(route_handlers=[UserController])"
+msgstr ""
+
+#: ../../../index.rst:257
+msgid ""
+"To **run your application**, use an ASGI server such as `uvicorn <https://"
+"www.uvicorn.org/>`_ :"
+msgstr ""
+
+#: ../../../index.rst:259
+msgid "uvicorn my_app.main:app --reload"
+msgstr ""
+
+#: ../../../index.rst:265
+msgid "Philosophy"
+msgstr ""
+
+#: ../../../index.rst:267
+msgid ""
+"Litestar is a community-driven project. This means not a single author, but "
+"rather a core team of maintainers is leading the project, supported by a "
+"community of contributors. Litestar currently has 5 maintainers and is being "
+"very actively developed."
+msgstr ""
+
+#: ../../../index.rst:270
+msgid ""
+"Litestar draws inspiration from `NestJS <https://nestjs.com/>`_ - a "
+"contemporary TypeScript framework - which places opinions and patterns at "
+"its core."
+msgstr ""
+
+#: ../../../index.rst:272
+msgid ""
+"While still allowing for **function-based endpoints**, Litestar seeks to "
+"build on Python's powerful and versatile OOP, by placing **class-based "
+"controllers** at its core."
+msgstr ""
+
+#: ../../../index.rst:274
+msgid ""
+"Litestar is **not** a microframework. Unlike frameworks such as FastAPI, "
+"Starlette, or Flask, Litestar includes a lot of functionalities out of the "
+"box needed for a typical modern web application, such as ORM integration, "
+"client- and server-side sessions, caching, OpenTelemetry integration, and "
+"many more. It's not aiming to be \"the next Django\" (for example, it will "
+"never feature its own ORM), but its scope is not micro either."
+msgstr ""
+
+#: ../../../index.rst:281
+msgid "Feature comparison with similar frameworks"
+msgstr ""
+
+#: ../../../index.rst:284
+msgid "Litestar"
+msgstr ""
+
+#: ../../../index.rst:284
+msgid "FastAPI"
+msgstr ""
+
+#: ../../../index.rst:284
+msgid "Starlette"
+msgstr ""
+
+#: ../../../index.rst:284
+msgid "Sanic"
+msgstr ""
+
+#: ../../../index.rst:284
+msgid "Quart"
+msgstr ""
+
+#: ../../../index.rst:286
+msgid "OpenAPI"
+msgstr ""
+
+#: ../../../index.rst:286 ../../../index.rst:290 ../../../index.rst:292
+#: ../../../index.rst:294 ../../../index.rst:300 ../../../index.rst:302
+#: ../../../index.rst:304 ../../../index.rst:306 ../../../index.rst:308
+#: ../../../index.rst:310 ../../../index.rst:314
+msgid ":octicon:`check`"
+msgstr ""
+
+#: ../../../index.rst:287 ../../../index.rst:291 ../../../index.rst:293
+#: ../../../index.rst:295 ../../../index.rst:301 ../../../index.rst:303
+#: ../../../index.rst:305 ../../../index.rst:307 ../../../index.rst:309
+#: ../../../index.rst:311 ../../../index.rst:315
+msgid ""
+"<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-"
+"octicon-check\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M13.78 "
+"4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 "
+"0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 "
+"0Z\"></path></svg>"
+msgstr ""
+
+#: ../../../index.rst:286 ../../../index.rst:288 ../../../index.rst:290
+#: ../../../index.rst:292 ../../../index.rst:296 ../../../index.rst:300
+#: ../../../index.rst:304 ../../../index.rst:306 ../../../index.rst:308
+#: ../../../index.rst:310 ../../../index.rst:312 ../../../index.rst:314
+msgid ":octicon:`dash`"
+msgstr ""
+
+#: ../../../index.rst:287 ../../../index.rst:289 ../../../index.rst:291
+#: ../../../index.rst:293 ../../../index.rst:297 ../../../index.rst:301
+#: ../../../index.rst:305 ../../../index.rst:307 ../../../index.rst:309
+#: ../../../index.rst:311 ../../../index.rst:313 ../../../index.rst:315
+msgid ""
+"<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-"
+"octicon-dash\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M2 "
+"7.75A.75.75 0 0 1 2.75 7h10a.75.75 0 0 1 0 1.5h-10A.75.75 0 0 1 2 7.75Z\"></"
+"path></svg>"
+msgstr ""
+
+#: ../../../index.rst:288
+msgid "Automatic API documentation"
+msgstr ""
+
+#: ../../../index.rst:288
+msgid "Swagger, ReDoc, Stoplight Elements"
+msgstr ""
+
+#: ../../../index.rst:288
+msgid "Swagger, ReDoc"
+msgstr ""
+
+#: ../../../index.rst:290
+msgid "Data validation"
+msgstr ""
+
+#: ../../../index.rst:292
+msgid "Dependency Injection"
+msgstr ""
+
+#: ../../../index.rst:294
+msgid "Class based routing"
+msgstr ""
+
+#: ../../../index.rst:294 ../../../index.rst:296 ../../../index.rst:302
+#: ../../../index.rst:306
+msgid "(Through extension)"
+msgstr ""
+
+#: ../../../index.rst:296
+msgid "ORM integration"
+msgstr ""
+
+#: ../../../index.rst:296
+msgid "SQLAlchemy, Tortoise, Piccolo"
+msgstr ""
+
+#: ../../../index.rst:298
+msgid "Templating"
+msgstr ""
+
+#: ../../../index.rst:298
+msgid "Jinja, Mako"
+msgstr ""
+
+#: ../../../index.rst:298
+msgid "Jinja"
+msgstr ""
+
+#: ../../../index.rst:300
+msgid "MessagePack"
+msgstr ""
+
+#: ../../../index.rst:302
+msgid "CORS"
+msgstr ""
+
+#: ../../../index.rst:304
+msgid "CSRF"
+msgstr ""
+
+#: ../../../index.rst:306
+msgid "Rate-limiting"
+msgstr ""
+
+#: ../../../index.rst:308
+msgid "JWT"
+msgstr ""
+
+#: ../../../index.rst:310
+msgid "Sessions"
+msgstr ""
+
+#: ../../../index.rst:310
+msgid "Client-side"
+msgstr ""
+
+#: ../../../index.rst:312
+msgid "Authentication"
+msgstr ""
+
+#: ../../../index.rst:312
+msgid "JWT / Session based"
+msgstr ""
+
+#: ../../../index.rst:314
+msgid "Caching"
+msgstr ""
+
+#: ../../../index.rst:319
+msgid "Example Applications"
+msgstr ""
+
+#: ../../../index.rst:322
+msgid ""
+"`litestar-fullstack <https://github.com/litestar-org/litestar-fullstack>`_ : "
+"A fully-capable, production-ready fullstack Litestar web application "
+"configured with best practices. It includes SQLAlchemy 2.0, VueJS, `Vite "
+"<https://vitejs.dev/>`_, `SAQ job queue <https://saq-py.readthedocs.io/en/"
+"latest/>`_, ``Jinja`` templates and more. `Read more <https://litestar-org."
+"github.io/litestar-fullstack/latest/>`_. Like all Litestar projects, this "
+"application is open to contributions, big and small."
+msgstr ""
+
+#: ../../../index.rst:327
+msgid ""
+"`litestar-fullstack-inertia <https://github.com/litestar-org/litestar-"
+"fullstack-inertia>`_ : Similar to `Litestar Fullstack <https://litestar-org."
+"github.io/litestar-fullstack/latest/>`_ but uses `Inertia.js <https://"
+"inertiajs.com>`_."
+msgstr ""
+
+#: ../../../index.rst:329
+msgid ""
+"`litestar-hello-world <https://github.com/litestar-org/litestar-hello-"
+"world>`_: A bare-minimum application setup. Great for testing and POC work."
+msgstr ""
