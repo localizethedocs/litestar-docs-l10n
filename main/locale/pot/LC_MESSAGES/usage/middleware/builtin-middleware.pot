@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-03-09 09:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -534,95 +534,19 @@ msgid ""
 "how_to_guides/proxy_fix.html>`_ ."
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:291
+#: ../../../usage/middleware/builtin-middleware.rst:290
 msgid "Logging Middleware"
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:293
-msgid ""
-"Litestar ships with a robust logging middleware that allows logging HTTP "
-"request and responses while building on the Litestar's :ref:`logging "
-"configuration <logging-usage>`:"
+#: ../../../usage/middleware/builtin-middleware.rst:292
+msgid "This content has moved to :doc:`/usage/logging`"
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:297
-msgid ""
-"from litestar import Litestar, get\n"
-"from litestar.logging.config import LoggingConfig\n"
-"from litestar.middleware.logging import LoggingMiddlewareConfig\n"
-"\n"
-"logging_middleware_config = LoggingMiddlewareConfig()\n"
-"\n"
-"\n"
-"@get(\"/\", sync_to_thread=False)\n"
-"def my_handler() -> dict[str, str]:\n"
-"    return {\"hello\": \"world\"}\n"
-"\n"
-"\n"
-"app = Litestar(\n"
-"    route_handlers=[my_handler],\n"
-"    logging_config=LoggingConfig(),\n"
-"    middleware=[logging_middleware_config.middleware],\n"
-")"
-msgstr ""
-
-#: ../../../usage/middleware/builtin-middleware.rst:300
-msgid ""
-"The logging middleware uses the logger configuration defined on the "
-"application level, which allows for using any supported logging tool, "
-"depending on the configuration used (see :ref:`logging configuration "
-"<logging-usage>` for more details)."
-msgstr ""
-
-#: ../../../usage/middleware/builtin-middleware.rst:304
-msgid "Obfuscating Logging Output"
-msgstr ""
-
-#: ../../../usage/middleware/builtin-middleware.rst:306
-msgid ""
-"Sometimes certain data, e.g. request or response headers, needs to be "
-"obfuscated. This is supported by the middleware configuration:"
-msgstr ""
-
-#: ../../../usage/middleware/builtin-middleware.rst:310
-msgid ""
-"from litestar.middleware.logging import LoggingMiddlewareConfig\n"
-"\n"
-"logging_middleware_config = LoggingMiddlewareConfig(\n"
-"    request_cookies_to_obfuscate={\"my-custom-session-key\"},\n"
-"    response_cookies_to_obfuscate={\"my-custom-session-key\"},\n"
-"    request_headers_to_obfuscate={\"my-custom-header\"},\n"
-"    response_headers_to_obfuscate={\"my-custom-header\"},\n"
-")"
-msgstr ""
-
-#: ../../../usage/middleware/builtin-middleware.rst:320
-msgid ""
-"The middleware will obfuscate the headers ``Authorization`` and ``X-API-"
-"KEY`` , and the cookie ``session`` by default."
-msgstr ""
-
-#: ../../../usage/middleware/builtin-middleware.rst:324
-msgid "Compression and Logging of Response Body"
-msgstr ""
-
-#: ../../../usage/middleware/builtin-middleware.rst:326
-msgid ""
-"If both :class:`~litestar.config.compression.CompressionConfig` and :class:"
-"`~litestar.middleware.logging.LoggingMiddleware` have been defined for the "
-"application, the response body will be omitted from response logging if it "
-"has been compressed, even if ``\"body\"`` has been included in :class:"
-"`~litestar.middleware.logging.LoggingMiddlewareConfig.response_log_fields`. "
-"To force the body of compressed responses to be logged, set :attr:`~litestar."
-"middleware.logging.LoggingMiddlewareConfig.include_compressed_body` to "
-"``True`` , in addition to including ``\"body\"`` in ``response_log_fields``."
-msgstr ""
-
-#: ../../../usage/middleware/builtin-middleware.rst:335
+#: ../../../usage/middleware/builtin-middleware.rst:296
 msgid "Session Middleware"
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:337
+#: ../../../usage/middleware/builtin-middleware.rst:298
 msgid ""
 "Litestar includes a :class:`~litestar.middleware.session.base."
 "SessionMiddleware`, offering client- and server-side sessions. Server-side "
@@ -630,33 +554,33 @@ msgid ""
 "support for:"
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:341
+#: ../../../usage/middleware/builtin-middleware.rst:302
 msgid "In memory sessions"
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:342
+#: ../../../usage/middleware/builtin-middleware.rst:303
 msgid "File based sessions"
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:343
+#: ../../../usage/middleware/builtin-middleware.rst:304
 msgid "Redis based sessions"
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:344
+#: ../../../usage/middleware/builtin-middleware.rst:305
 msgid "Valkey based sessions"
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:345
+#: ../../../usage/middleware/builtin-middleware.rst:306
 msgid ""
 "Database based :ref:`advanced-alchemy:usage/frameworks/litestar:Session "
 "Middleware`"
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:348
+#: ../../../usage/middleware/builtin-middleware.rst:309
 msgid "Setting up the middleware"
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:350
+#: ../../../usage/middleware/builtin-middleware.rst:311
 msgid ""
 "To start using sessions in your application all you have to do is create an "
 "instance of a :class:`configuration <litestar.middleware.session.base."
@@ -664,11 +588,11 @@ msgid ""
 "middleware stack:"
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:355
+#: ../../../usage/middleware/builtin-middleware.rst:316
 msgid "Hello World"
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:355
+#: ../../../usage/middleware/builtin-middleware.rst:316
 msgid ""
 "from os import urandom\n"
 "\n"
@@ -709,7 +633,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:361
+#: ../../../usage/middleware/builtin-middleware.rst:322
 msgid ""
 "Since both client- and server-side sessions rely on cookies (one for storing "
 "the actual session data, the other for storing the session ID), they share "
@@ -718,29 +642,29 @@ msgid ""
 "BaseBackendConfig`."
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:366
+#: ../../../usage/middleware/builtin-middleware.rst:327
 msgid "Client-side sessions"
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:368
+#: ../../../usage/middleware/builtin-middleware.rst:329
 msgid ""
 "Client side sessions are available through the :class:`~litestar.middleware."
 "session.client_side.ClientSideSessionBackend`, which offers strong AES-CGM "
 "encryption security best practices while support cookie splitting."
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:373
+#: ../../../usage/middleware/builtin-middleware.rst:334
 msgid ""
 "``ClientSideSessionBackend`` requires the `cryptography <https://"
 "cryptography.io/en/latest/>`_ library, which can be installed together with "
 "litestar as an extra using ``pip install 'litestar[cryptography]'``"
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:377
+#: ../../../usage/middleware/builtin-middleware.rst:338
 msgid "``cookie_backend.py``"
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:377
+#: ../../../usage/middleware/builtin-middleware.rst:338
 msgid ""
 "from os import urandom\n"
 "\n"
@@ -752,15 +676,15 @@ msgid ""
 "app = Litestar(middleware=[session_config.middleware])"
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:383
+#: ../../../usage/middleware/builtin-middleware.rst:344
 msgid ":class:`~litestar.middleware.session.client_side.CookieBackendConfig`"
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:387
+#: ../../../usage/middleware/builtin-middleware.rst:348
 msgid "Server-side sessions"
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:389
+#: ../../../usage/middleware/builtin-middleware.rst:350
 msgid ""
 "Server side session store data - as the name suggests - on the server "
 "instead of the client. They use a cookie containing a session ID which is a "
@@ -768,7 +692,7 @@ msgid ""
 "from the store"
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:393
+#: ../../../usage/middleware/builtin-middleware.rst:354
 msgid ""
 "from pathlib import Path\n"
 "\n"
@@ -782,11 +706,11 @@ msgid ""
 ")\n"
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:398
+#: ../../../usage/middleware/builtin-middleware.rst:359
 msgid ":doc:`/usage/stores`"
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:399
+#: ../../../usage/middleware/builtin-middleware.rst:360
 msgid ""
 ":class:`~litestar.middleware.session.server_side.ServerSideSessionConfig`"
 msgstr ""

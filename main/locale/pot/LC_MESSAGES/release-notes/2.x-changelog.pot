@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-03-09 09:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -448,10 +448,9 @@ msgstr ""
 
 #: ../../../release-notes/2.x-changelog.rst:412
 msgid ""
-"The option :attr:`~litestar.logging.config.LoggingConfig."
-"configure_root_logger` was added to :class:`~litestar.logging.config."
-"LoggingConfig` attribute. It is enabled by default to not implement a "
-"breaking change."
+"The option ``litestar.logging.config.LoggingConfig.configure_root_logger`` "
+"was added to ``litestar.logging.config.LoggingConfig`` attribute. It is "
+"enabled by default to not implement a breaking change."
 msgstr ""
 
 #: ../../../release-notes/2.x-changelog.rst:416
@@ -937,10 +936,10 @@ msgstr ""
 
 #: ../../../release-notes/2.x-changelog.rst:846
 msgid ""
-"Using a method on :attr:`Request.logger <litestar.connection.ASGIConnection."
-"logger>` when not setting a ``logging_config`` on the application would "
-"result in a non-descriptive :exc:`TypeError`. An :exc:"
-"`ImproperlyConfiguredException` with an explanation is now raised instead."
+"Using a method on ``Request.logger`` when not setting a ``logging_config`` "
+"on the application would result in a non-descriptive :exc:`TypeError`. An :"
+"exc:`ImproperlyConfiguredException` with an explanation is now raised "
+"instead."
 msgstr ""
 
 #: ../../../release-notes/2.x-changelog.rst:861
