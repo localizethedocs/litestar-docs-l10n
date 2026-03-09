@@ -1,0 +1,462 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:2
+msgid "SQLAlchemy Plugin"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:4
+msgid ""
+"The :class:`SQLAlchemyPlugin <advanced_alchemy.extensions.litestar."
+"SQLAlchemyPlugin>` provides complete support for working with `SQLAlchemy "
+"<https://www.sqlalchemy.org/>`_ in Litestar applications."
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:9
+msgid "This plugin is only compatible with SQLAlchemy 2.0+."
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:11
+msgid ""
+"The :class:`SQLAlchemyPlugin <advanced_alchemy.extensions.litestar."
+"SQLAlchemyPlugin>` combines the functionality of :class:"
+"`SQLAlchemyInitPlugin <advanced_alchemy.extensions.litestar."
+"SQLAlchemyInitPlugin>` and :class:`SQLAlchemySerializationPlugin "
+"<advanced_alchemy.extensions.litestar.SQLAlchemySerializationPlugin>`, each "
+"of which are examined in detail in the following sections. As such, this "
+"section describes a complete example of using the :class:`SQLAlchemyPlugin "
+"<advanced_alchemy.extensions.litestar.SQLAlchemyPlugin>` with a Litestar "
+"application and a SQLite database."
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:18
+msgid ""
+"Or, skip ahead to :doc:`/usage/databases/sqlalchemy/plugins/"
+"sqlalchemy_init_plugin` or :doc:`/usage/databases/sqlalchemy/plugins/"
+"sqlalchemy_serialization_plugin` to learn more about the individual plugins."
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:23
+msgid ""
+"You can install SQLAlchemy alongside Litestar by running ``pip install "
+"'litestar[sqlalchemy]'``."
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:26
+msgid "Example"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:0
+msgid "Async"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:0
+msgid "Python 3.8+"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:33
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:55
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:76
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:102
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:123
+msgid "SQLAlchemy Async Plugin Example"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:33
+msgid ""
+"from __future__ import annotations\n"
+"\n"
+"from typing import TYPE_CHECKING, Sequence\n"
+"\n"
+"from sqlalchemy import select\n"
+"from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column\n"
+"\n"
+"from litestar import Litestar, post\n"
+"from litestar.plugins.sqlalchemy import SQLAlchemyAsyncConfig, "
+"SQLAlchemyPlugin\n"
+"\n"
+"if TYPE_CHECKING:\n"
+"    from sqlalchemy.ext.asyncio import AsyncSession\n"
+"\n"
+"\n"
+"class Base(DeclarativeBase): ...\n"
+"\n"
+"\n"
+"class TodoItem(Base):\n"
+"    __tablename__ = \"todo_item\"\n"
+"    title: Mapped[str] = mapped_column(primary_key=True)\n"
+"    done: Mapped[bool]\n"
+"\n"
+"\n"
+"@post(\"/\")\n"
+"async def add_item(data: TodoItem, db_session: AsyncSession) -> "
+"Sequence[TodoItem]:\n"
+"    async with db_session.begin():\n"
+"        db_session.add(data)\n"
+"    return (await db_session.execute(select(TodoItem))).scalars().all()\n"
+"\n"
+"\n"
+"config = SQLAlchemyAsyncConfig(\n"
+"    connection_string=\"sqlite+aiosqlite:///todo_async.sqlite\", "
+"create_all=True, metadata=Base.metadata\n"
+")\n"
+"plugin = SQLAlchemyPlugin(config=config)\n"
+"app = Litestar(route_handlers=[add_item], plugins=[plugin])"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:0
+msgid "Python 3.9+"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:33
+msgid ""
+"from __future__ import annotations\n"
+"\n"
+"from typing import TYPE_CHECKING\n"
+"from collections.abc import Sequence\n"
+"\n"
+"from sqlalchemy import select\n"
+"from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column\n"
+"\n"
+"from litestar import Litestar, post\n"
+"from litestar.plugins.sqlalchemy import SQLAlchemyAsyncConfig, "
+"SQLAlchemyPlugin\n"
+"\n"
+"if TYPE_CHECKING:\n"
+"    from sqlalchemy.ext.asyncio import AsyncSession\n"
+"\n"
+"\n"
+"class Base(DeclarativeBase): ...\n"
+"\n"
+"\n"
+"class TodoItem(Base):\n"
+"    __tablename__ = \"todo_item\"\n"
+"    title: Mapped[str] = mapped_column(primary_key=True)\n"
+"    done: Mapped[bool]\n"
+"\n"
+"\n"
+"@post(\"/\")\n"
+"async def add_item(data: TodoItem, db_session: AsyncSession) -> "
+"Sequence[TodoItem]:\n"
+"    async with db_session.begin():\n"
+"        db_session.add(data)\n"
+"    return (await db_session.execute(select(TodoItem))).scalars().all()\n"
+"\n"
+"\n"
+"config = SQLAlchemyAsyncConfig(\n"
+"    connection_string=\"sqlite+aiosqlite:///todo_async.sqlite\", "
+"create_all=True, metadata=Base.metadata\n"
+")\n"
+"plugin = SQLAlchemyPlugin(config=config)\n"
+"app = Litestar(route_handlers=[add_item], plugins=[plugin])"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:0
+msgid "Sync"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:40
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:62
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:83
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:109
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:130
+msgid "SQLAlchemy Sync Plugin Example"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:40
+msgid ""
+"from __future__ import annotations\n"
+"\n"
+"from typing import TYPE_CHECKING, Sequence\n"
+"\n"
+"from sqlalchemy import select\n"
+"from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column\n"
+"\n"
+"from litestar import Litestar, post\n"
+"from litestar.plugins.sqlalchemy import SQLAlchemyPlugin, "
+"SQLAlchemySyncConfig\n"
+"\n"
+"if TYPE_CHECKING:\n"
+"    from sqlalchemy.orm import Session\n"
+"\n"
+"\n"
+"class Base(DeclarativeBase): ...\n"
+"\n"
+"\n"
+"class TodoItem(Base):\n"
+"    __tablename__ = \"todo_item\"\n"
+"    title: Mapped[str] = mapped_column(primary_key=True)\n"
+"    done: Mapped[bool]\n"
+"\n"
+"\n"
+"@post(\"/\", sync_to_thread=True)\n"
+"def add_item(data: TodoItem, db_session: Session) -> Sequence[TodoItem]:\n"
+"    with db_session.begin():\n"
+"        db_session.add(data)\n"
+"    return db_session.execute(select(TodoItem)).scalars().all()\n"
+"\n"
+"\n"
+"config = SQLAlchemySyncConfig(connection_string=\"sqlite:///todo_sync."
+"sqlite\", create_all=True, metadata=Base.metadata)\n"
+"plugin = SQLAlchemyPlugin(config=config)\n"
+"app = Litestar(route_handlers=[add_item], plugins=[plugin])"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:40
+msgid ""
+"from __future__ import annotations\n"
+"\n"
+"from typing import TYPE_CHECKING\n"
+"from collections.abc import Sequence\n"
+"\n"
+"from sqlalchemy import select\n"
+"from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column\n"
+"\n"
+"from litestar import Litestar, post\n"
+"from litestar.plugins.sqlalchemy import SQLAlchemyPlugin, "
+"SQLAlchemySyncConfig\n"
+"\n"
+"if TYPE_CHECKING:\n"
+"    from sqlalchemy.orm import Session\n"
+"\n"
+"\n"
+"class Base(DeclarativeBase): ...\n"
+"\n"
+"\n"
+"class TodoItem(Base):\n"
+"    __tablename__ = \"todo_item\"\n"
+"    title: Mapped[str] = mapped_column(primary_key=True)\n"
+"    done: Mapped[bool]\n"
+"\n"
+"\n"
+"@post(\"/\", sync_to_thread=True)\n"
+"def add_item(data: TodoItem, db_session: Session) -> Sequence[TodoItem]:\n"
+"    with db_session.begin():\n"
+"        db_session.add(data)\n"
+"    return db_session.execute(select(TodoItem)).scalars().all()\n"
+"\n"
+"\n"
+"config = SQLAlchemySyncConfig(connection_string=\"sqlite:///todo_sync."
+"sqlite\", create_all=True, metadata=Base.metadata)\n"
+"plugin = SQLAlchemyPlugin(config=config)\n"
+"app = Litestar(route_handlers=[add_item], plugins=[plugin])"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:45
+msgid "Defining the Database Models"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:47
+msgid ""
+"We start by defining our base model class, and a ``TodoItem`` class which "
+"extends the base model. The ``TodoItem`` class represents a todo item in our "
+"SQLite database."
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:55
+msgid ""
+"from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column\n"
+"class Base(DeclarativeBase): ...\n"
+"\n"
+"\n"
+"class TodoItem(Base):\n"
+"    __tablename__ = \"todo_item\"\n"
+"    title: Mapped[str] = mapped_column(primary_key=True)\n"
+"    done: Mapped[bool]\n"
+"\n"
+"\n"
+"@post(\"/\")"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:62
+msgid ""
+"from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column\n"
+"class Base(DeclarativeBase): ...\n"
+"\n"
+"\n"
+"class TodoItem(Base):\n"
+"    __tablename__ = \"todo_item\"\n"
+"    title: Mapped[str] = mapped_column(primary_key=True)\n"
+"    done: Mapped[bool]\n"
+"\n"
+"\n"
+"@post(\"/\", sync_to_thread=True)"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:67
+msgid "Setting Up an API Endpoint"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:69
+msgid ""
+"Next, we set up an API endpoint at the root  (``\"/\"``)  that allows adding "
+"a ``TodoItem`` to the SQLite database."
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:76
+msgid ""
+"from typing import TYPE_CHECKING, Sequence\n"
+"\n"
+"from sqlalchemy import select\n"
+"from litestar import Litestar, post\n"
+"\n"
+"if TYPE_CHECKING:\n"
+"    from sqlalchemy.ext.asyncio import AsyncSession\n"
+"\n"
+"\n"
+"async def add_item(data: TodoItem, db_session: AsyncSession) -> "
+"Sequence[TodoItem]:\n"
+"    async with db_session.begin():\n"
+"        db_session.add(data)\n"
+"    return (await db_session.execute(select(TodoItem))).scalars().all()\n"
+"\n"
+"\n"
+"config = SQLAlchemyAsyncConfig("
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:83
+msgid ""
+"from typing import TYPE_CHECKING, Sequence\n"
+"\n"
+"from sqlalchemy import select\n"
+"\n"
+"if TYPE_CHECKING:\n"
+"    from sqlalchemy.orm import Session\n"
+"\n"
+"\n"
+"def add_item(data: TodoItem, db_session: Session) -> Sequence[TodoItem]:\n"
+"    with db_session.begin():\n"
+"        db_session.add(data)\n"
+"    return db_session.execute(select(TodoItem)).scalars().all()\n"
+"\n"
+"\n"
+"config = SQLAlchemySyncConfig(connection_string=\"sqlite:///todo_sync."
+"sqlite\", create_all=True, metadata=Base.metadata)"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:83
+msgid ""
+"from typing import TYPE_CHECKING\n"
+"from collections.abc import Sequence\n"
+"\n"
+"from sqlalchemy import select\n"
+"\n"
+"if TYPE_CHECKING:\n"
+"    from sqlalchemy.orm import Session\n"
+"\n"
+"\n"
+"def add_item(data: TodoItem, db_session: Session) -> Sequence[TodoItem]:\n"
+"    with db_session.begin():\n"
+"        db_session.add(data)\n"
+"    return db_session.execute(select(TodoItem)).scalars().all()\n"
+"\n"
+"\n"
+"config = SQLAlchemySyncConfig(connection_string=\"sqlite:///todo_sync."
+"sqlite\", create_all=True, metadata=Base.metadata)"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:88
+msgid "Initializing the Database"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:90
+msgid ""
+"We create a function ``init_db`` that we'll use to initialize the database "
+"when the app starts up."
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:94
+msgid ""
+"In this example we drop the database before creating it. This is done for "
+"the sake of repeatability, and should not be done in production."
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:102
+msgid ""
+"from litestar.plugins.sqlalchemy import SQLAlchemyAsyncConfig, "
+"SQLAlchemyPlugin\n"
+"config = SQLAlchemyAsyncConfig(\n"
+"    connection_string=\"sqlite+aiosqlite:///todo_async.sqlite\", "
+"create_all=True, metadata=Base.metadata\n"
+")\n"
+"plugin = SQLAlchemyPlugin(config=config)\n"
+"app = Litestar(route_handlers=[add_item], plugins=[plugin])"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:109
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:130
+msgid ""
+"from litestar.plugins.sqlalchemy import SQLAlchemyPlugin, "
+"SQLAlchemySyncConfig\n"
+"config = SQLAlchemySyncConfig(connection_string=\"sqlite:///todo_sync."
+"sqlite\", create_all=True, metadata=Base.metadata)\n"
+"plugin = SQLAlchemyPlugin(config=config)\n"
+"app = Litestar(route_handlers=[add_item], plugins=[plugin])"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:114
+msgid "Setting Up the Plugin and the App"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:116
+msgid "Finally, we set up the SQLAlchemy Plugin and the Litestar app."
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:123
+msgid ""
+"from litestar import Litestar\n"
+"config = SQLAlchemyAsyncConfig(\n"
+"    connection_string=\"sqlite+aiosqlite:///todo_async.sqlite\", "
+"create_all=True, metadata=Base.metadata\n"
+")\n"
+"plugin = SQLAlchemyPlugin(config=config)\n"
+"app = Litestar(route_handlers=[add_item], plugins=[plugin])"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:134
+msgid ""
+"This configures the app with the plugin, sets up a route handler for adding "
+"items, and specifies that the ``init_db`` function should be run when the "
+"app starts up."
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:138
+msgid "Running the App"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:140
+msgid "Run the app with the following command:"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:142
+msgid "$ litestar run"
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:146
+msgid ""
+"You can now add a todo item by sending a POST request to ``http://"
+"localhost:8000`` with a JSON body containing the ``\"title\"`` of the todo "
+"item."
+msgstr ""
+
+#: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_plugin.rst:149
+msgid ""
+"$ curl -X POST -H \"Content-Type: application/json\" -d '{\"title\": \"Your "
+"Todo Title\", \"done\": false}' http://localhost:8000/"
+msgstr ""

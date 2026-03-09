@@ -1,0 +1,434 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../usage/dto/0-basic-use.rst:2
+msgid "Basic Use"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:4
+msgid ""
+"Here we demonstrate how to declare DTO types to your route handlers. For "
+"demonstration purposes, we assume that we are working with a data model "
+"``User``, and already have two DTO types created in our application, "
+"``UserDTO``, and ``UserReturnDTO``."
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:9
+msgid "DTO layer parameters"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:11
+msgid ""
+"On every :ref:`Layer <layered-architecture>` of the Litestar application "
+"there are two parameters that control the DTOs that will take responsibility "
+"for the data received and returned from handlers:"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:14
+msgid ""
+"``dto``: This parameter describes the DTO that will be used to parse inbound "
+"data to be injected as the ``data`` keyword argument for a handler. "
+"Additionally, if no ``return_dto`` is declared on the handler, this will "
+"also be used to encode the return data for the handler."
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:17
+msgid ""
+"``return_dto``: This parameter describes the DTO that will be used to encode "
+"data returned from the handler. If not provided, the DTO described by the "
+"``dto`` parameter is used."
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:20
+msgid ""
+"The object provided to both of these parameters must be a class that "
+"conforms to the :class:`AbstractDTO <litestar.dto.base_dto.AbstractDTO>` "
+"protocol."
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:24
+msgid "Defining DTOs on handlers"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:27
+msgid "The ``dto`` parameter"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:30
+msgid "Using the ``dto`` Parameter"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:30
+msgid ""
+"from litestar import post\n"
+"\n"
+"from .models import User, UserDTO\n"
+"\n"
+"\n"
+"@post(dto=UserDTO)\n"
+"def create_user(data: User) -> User:\n"
+"    return data"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:33
+msgid ""
+"In this example, ``UserDTO`` performs decoding of client data into the "
+"``User`` type, and encoding of the returned ``User`` instance into a type "
+"that Litestar can encode into bytes."
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:37
+msgid "The ``return_dto`` parameter"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:40
+msgid "Using the ``return_dto`` Parameter"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:40
+msgid ""
+"from litestar import post\n"
+"\n"
+"from .models import User, UserDTO, UserReturnDTO\n"
+"\n"
+"\n"
+"@post(dto=UserDTO, return_dto=UserReturnDTO)\n"
+"def create_user(data: User) -> User:\n"
+"    return data"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:43
+msgid ""
+"In this example, ``UserDTO`` performs decoding of client data into the "
+"``User`` type, and ``UserReturnDTO`` is responsible for converting the "
+"``User`` instance into a type that Litestar can encode into bytes."
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:47
+msgid "Overriding implicit ``return_dto``"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:49
+msgid ""
+"If a ``return_dto`` type is not declared for a handler, the type declared "
+"for the ``dto`` parameter is used for both decoding and encoding request and "
+"response data. If this behavior is undesirable, it can be disabled by "
+"explicitly setting the ``return_dto`` to ``None``."
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:54
+msgid "Disable implicit ``return_dto`` behavior"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:54
+msgid ""
+"from dataclasses import dataclass, field\n"
+"from uuid import UUID, uuid4\n"
+"\n"
+"from litestar import Litestar, post\n"
+"from litestar.dto import DataclassDTO\n"
+"\n"
+"\n"
+"@dataclass\n"
+"class User:\n"
+"    name: str\n"
+"    email: str\n"
+"    age: int\n"
+"    id: UUID = field(default_factory=uuid4)\n"
+"\n"
+"\n"
+"UserDTO = DataclassDTO[User]\n"
+"\n"
+"\n"
+"@post(dto=UserDTO, return_dto=None, sync_to_thread=False)\n"
+"def create_user(data: User) -> bytes:\n"
+"    return data.name.encode(encoding=\"utf-8\")\n"
+"\n"
+"\n"
+"app = Litestar([create_user])"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:57
+msgid ""
+"In this example, we use ``UserDTO`` to decode request data, and convert it "
+"into the ``User`` type, but we want to manage encoding the response data "
+"ourselves, and so we explicitly declare the ``return_dto`` as ``None``."
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:61
+msgid "Defining DTOs on layers"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:63
+msgid ""
+"DTOs can be defined on any :ref:`Layer <layered-architecture>` of the "
+"application. The DTO type applied is the one defined in the ownership chain, "
+"closest to the handler in question."
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:67
+msgid "Controller defined DTOs"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:67
+msgid ""
+"from __future__ import annotations\n"
+"\n"
+"from dataclasses import dataclass, field\n"
+"from uuid import UUID, uuid4\n"
+"\n"
+"from litestar import Controller, delete, get, post, put\n"
+"from litestar.app import Litestar\n"
+"from litestar.dto import DataclassDTO\n"
+"from litestar.dto.config import DTOConfig\n"
+"\n"
+"\n"
+"@dataclass\n"
+"class User:\n"
+"    name: str\n"
+"    email: str\n"
+"    age: int\n"
+"    id: UUID = field(default_factory=uuid4)\n"
+"\n"
+"\n"
+"class UserWriteDTO(DataclassDTO[User]):\n"
+"    config = DTOConfig(exclude={\"id\"})\n"
+"\n"
+"\n"
+"class UserReadDTO(DataclassDTO[User]): ...\n"
+"\n"
+"\n"
+"class UserController(Controller):\n"
+"    dto = UserWriteDTO\n"
+"    return_dto = UserReadDTO\n"
+"\n"
+"    @post(\"/\", sync_to_thread=False)\n"
+"    def create_user(self, data: User) -> User:\n"
+"        return data\n"
+"\n"
+"    @get(\"/\", sync_to_thread=False)\n"
+"    def get_users(self) -> list[User]:\n"
+"        return [User(name=\"Mr Sunglass\", email=\"mr.sunglass@example."
+"com\", age=30)]\n"
+"\n"
+"    @get(\"/{user_id:uuid}\", sync_to_thread=False)\n"
+"    def get_user(self, user_id: UUID) -> User:\n"
+"        return User(id=user_id, name=\"Mr Sunglass\", email=\"mr."
+"sunglass@example.com\", age=30)\n"
+"\n"
+"    @put(\"/{user_id:uuid}\", sync_to_thread=False)\n"
+"    def update_user(self, data: User) -> User:\n"
+"        return data\n"
+"\n"
+"    @delete(\"/{user_id:uuid}\", return_dto=None, sync_to_thread=False)\n"
+"    def delete_user(self, user_id: UUID) -> None:\n"
+"        return None\n"
+"\n"
+"\n"
+"app = Litestar([UserController])"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:70
+msgid ""
+"In this example, the ``User`` instance received by any handler that declares "
+"a ``data`` kwarg, is converted by the ``UserDTO`` type, and all handler "
+"return values are converted into an encodable type by ``UserReturnDTO`` "
+"(except for the ``delete()`` route, which has the ``return_dto`` disabled)."
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:74
+msgid ""
+"DTOs can similarly be defined on :class:`Routers <litestar.router.Router>` "
+"and :class:`The application <litestar.app.Litestar>` itself."
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:79
+msgid "Improving performance with the codegen backend"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:83
+msgid ""
+"This feature was introduced in ``2.2.0`` and was hidden behind the "
+"``DTO_CODEGEN`` feature flag. As of ``2.8.0`` it is considered stable and is "
+"enabled by default. It can still be disabled selectively by using the "
+"``DTOConfig(experimental_codegen_backend=False)`` override."
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:88
+msgid ""
+"The DTO backend is the part that does the heavy lifting for all the DTO "
+"features. It is responsible for the transforming, validation and parsing. "
+"Because of this, it is also the part with the most significant performance "
+"impact. To reduce the overhead introduced by the DTOs, the DTO codegen "
+"backend was introduced; A DTO backend that increases efficiency by "
+"generating optimized Python code at runtime to perform all the necessary "
+"operations."
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:96
+msgid "Disabling the backend"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:98
+msgid ""
+"You can use ``experimental_codegen_backend=False`` to disable the codegen "
+"backend selectively:"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:102
+#: ../../../usage/dto/0-basic-use.rst:156
+msgid ""
+"from dataclasses import dataclass\n"
+"from litestar.dto import DTOConfig, DataclassDTO\n"
+"\n"
+"\n"
+"@dataclass\n"
+"class Foo:\n"
+"    name: str\n"
+"\n"
+"\n"
+"class FooDTO(DataclassDTO[Foo]):\n"
+"    config = DTOConfig(experimental_codegen_backend=False)"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:116
+msgid "Enabling the backend"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:118
+msgid ""
+"This is a historical document meant for Litestar versions prior to 2.8.0 "
+"This backend was enabled by default since 2.8.0"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:121
+msgid ""
+"``ExperimentalFeatures.DTO_CODEGEN`` is deprecated and will be removed in "
+"3.0.0"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:0
+msgid "Enabling DTO codegen backend"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:126
+msgid ""
+"You can enable this backend globally for all DTOs by passing the appropriate "
+"feature flag to your Litestar application:"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:130
+msgid ""
+"from litestar import Litestar\n"
+"from litestar.config.app import ExperimentalFeatures\n"
+"\n"
+"app = Litestar(experimental_features=[ExperimentalFeatures.DTO_CODEGEN])"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:137
+msgid "or selectively for individual DTOs:"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:140
+msgid ""
+"from dataclasses import dataclass\n"
+"from litestar.dto import DTOConfig, DataclassDTO\n"
+"\n"
+"\n"
+"@dataclass\n"
+"class Foo:\n"
+"    name: str\n"
+"\n"
+"\n"
+"class FooDTO(DataclassDTO[Foo]):\n"
+"    config = DTOConfig(experimental_codegen_backend=True)"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:153
+msgid "The same flag can be used to disable the backend selectively:"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:171
+msgid "Performance improvements"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:173
+msgid ""
+"These are some preliminary numbers showing the performance increase for "
+"certain operations:"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:177
+msgid "operation"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:177
+msgid "improvement"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:179
+msgid "JSON to Python"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:179
+#: ../../../usage/dto/0-basic-use.rst:181
+msgid "~2.5x"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:180
+msgid "JSON to Python (collection)"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:180
+msgid "~3.5x"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:181
+msgid "Python to Python"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:182
+msgid "Python to Python (collection)"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:182
+msgid "~5x"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:183
+msgid "Python to JSON"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:183
+msgid "~5.3x"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:184
+msgid "Python to JSON (collection)"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:184
+msgid "~5.4x"
+msgstr ""
+
+#: ../../../usage/dto/0-basic-use.rst:189
+msgid ""
+"If you are interested in technical details, check out https://github.com/"
+"litestar-org/litestar/pull/2388"
+msgstr ""

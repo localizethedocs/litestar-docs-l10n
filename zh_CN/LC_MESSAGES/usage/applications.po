@@ -1,0 +1,877 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../usage/applications.rst:2
+msgid "Applications"
+msgstr ""
+
+#: ../../../usage/applications.rst:5
+msgid "Application objects"
+msgstr ""
+
+#: ../../../usage/applications.rst:7
+msgid ""
+"At the root of every Litestar application is an instance of the :class:"
+"`~litestar.app.Litestar` class. Typically, this code will be placed in a "
+"file called ``main.py``, ``app.py``, ``asgi.py`` or similar at the project's "
+"root directory."
+msgstr ""
+
+#: ../../../usage/applications.rst:11
+msgid ""
+"These entry points are also used during :ref:`CLI autodiscovery <usage/cli:"
+"autodiscovery>`"
+msgstr ""
+
+#: ../../../usage/applications.rst:13
+msgid ""
+"Creating an app is straightforward – the only required :term:`args "
+"<argument>` is a :class:`list` of :class:`Controllers <.controller."
+"Controller>`, :class:`Routers <.router.Router>`, or :class:`Route handlers <."
+"handlers.BaseRouteHandler>`:"
+msgstr ""
+
+#: ../../../usage/applications.rst:0
+msgid "Python 3.8+"
+msgstr ""
+
+#: ../../../usage/applications.rst:18
+msgid "A simple Hello World Litestar app"
+msgstr ""
+
+#: ../../../usage/applications.rst:18
+msgid ""
+"from typing import Dict\n"
+"\n"
+"from litestar import Litestar, get\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"async def hello_world() -> Dict[str, str]:\n"
+"    \"\"\"Handler function that returns a greeting dictionary.\"\"\"\n"
+"    return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[hello_world])"
+msgstr ""
+
+#: ../../../usage/applications.rst:0
+msgid "Python 3.9+"
+msgstr ""
+
+#: ../../../usage/applications.rst:18
+msgid ""
+"from litestar import Litestar, get\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"async def hello_world() -> dict[str, str]:\n"
+"    \"\"\"Handler function that returns a greeting dictionary.\"\"\"\n"
+"    return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[hello_world])"
+msgstr ""
+
+#: ../../../usage/applications.rst:-1
+msgid ""
+"> curl http://127.0.0.1:8000/\n"
+"{\"hello\":\"world\"}"
+msgstr ""
+
+#: ../../../usage/applications.rst:21
+msgid ""
+"The app instance is the root level of the app - it has the base path of ``/"
+"`` and all root level :class:`Controllers <.controller.Controller>`, :class:"
+"`Routers <.router.Router>`, and :class:`Route handlers <.handlers."
+"BaseRouteHandler>` should be registered on it."
+msgstr ""
+
+#: ../../../usage/applications.rst:25
+msgid ""
+"To learn more about registering routes, check out this chapter in the "
+"documentation:"
+msgstr ""
+
+#: ../../../usage/applications.rst:27
+msgid ""
+":ref:`Routing - Registering Routes <usage/routing/overview:Registering "
+"Routes>`"
+msgstr ""
+
+#: ../../../usage/applications.rst:30 ../../../usage/applications.rst:53
+msgid "Startup and Shutdown"
+msgstr ""
+
+#: ../../../usage/applications.rst:32
+msgid ""
+"You can pass a list of :term:`callables <python:callable>` - either sync or "
+"async functions, methods, or class instances - to the :paramref:`~litestar."
+"app.Litestar.on_startup` / :paramref:`~litestar.app.Litestar.on_shutdown` :"
+"term:`kwargs <argument>` of the :class:`app <litestar.app.Litestar>` "
+"instance. Those will be called in order, once the ASGI server such as "
+"`uvicorn <https://www.uvicorn.org/>`_, `Hypercorn <https://hypercorn."
+"readthedocs.io/en/latest/#/>`_, `Granian <https://github.com/emmett-"
+"framework/granian/>`_, `Daphne <https://github.com/django/daphne/>`_, etc. "
+"emits the respective event."
+msgstr ""
+
+#: ../../../usage/applications.rst:45
+msgid ""
+"A classic use case for this is database connectivity. Often, we want to "
+"establish a database connection on application startup, and then close it "
+"gracefully upon shutdown."
+msgstr ""
+
+#: ../../../usage/applications.rst:48
+msgid ""
+"For example, let us create a database connection using the async engine from "
+"`SQLAlchemy <https://docs.sqlalchemy.org/en/latest/orm/extensions/asyncio."
+"html>`_. We create two functions, one to get or establish the connection, "
+"and another to close it, and then pass them to the :class:`~litestar.app."
+"Litestar` constructor:"
+msgstr ""
+
+#: ../../../usage/applications.rst:53
+msgid ""
+"import os\n"
+"from typing import cast\n"
+"\n"
+"from sqlalchemy.ext.asyncio import AsyncEngine, create_async_engine\n"
+"\n"
+"from litestar import Litestar\n"
+"\n"
+"DB_URI = os.environ.get(\"DATABASE_URI\", \"postgresql+asyncpg://postgres:"
+"mysecretpassword@pg.db:5432/db\")\n"
+"\n"
+"\n"
+"def get_db_connection(app: Litestar) -> AsyncEngine:\n"
+"    \"\"\"Returns the db engine.\n"
+"\n"
+"    If it doesn't exist, creates it and saves it in on the application state "
+"object\n"
+"    \"\"\"\n"
+"    if not getattr(app.state, \"engine\", None):\n"
+"        app.state.engine = create_async_engine(DB_URI)\n"
+"    return cast(\"AsyncEngine\", app.state.engine)\n"
+"\n"
+"\n"
+"async def close_db_connection(app: Litestar) -> None:\n"
+"    \"\"\"Closes the db connection stored in the application State object."
+"\"\"\"\n"
+"    if getattr(app.state, \"engine\", None):\n"
+"        await cast(\"AsyncEngine\", app.state.engine).dispose()\n"
+"\n"
+"\n"
+"app = Litestar(on_startup=[get_db_connection], "
+"on_shutdown=[close_db_connection])"
+msgstr ""
+
+#: ../../../usage/applications.rst:59
+msgid "Lifespan context managers"
+msgstr ""
+
+#: ../../../usage/applications.rst:61
+msgid ""
+"In addition to the lifespan hooks, Litestar also supports managing the "
+"lifespan of an application using an :term:`asynchronous context manager`. "
+"This can be useful when dealing with long running tasks, or those that need "
+"to keep a certain context object, such as a connection, around."
+msgstr ""
+
+#: ../../../usage/applications.rst:66
+msgid "Handling a database connection"
+msgstr ""
+
+#: ../../../usage/applications.rst:66
+msgid ""
+"from contextlib import asynccontextmanager\n"
+"from typing import AsyncGenerator\n"
+"\n"
+"from sqlalchemy.ext.asyncio import create_async_engine\n"
+"\n"
+"from litestar import Litestar\n"
+"\n"
+"\n"
+"@asynccontextmanager\n"
+"async def db_connection(app: Litestar) -> AsyncGenerator[None, None]:\n"
+"    engine = getattr(app.state, \"engine\", None)\n"
+"    if engine is None:\n"
+"        engine = create_async_engine(\"postgresql+asyncpg://postgres:"
+"mysecretpassword@pg.db:5432/db\")\n"
+"        app.state.engine = engine\n"
+"\n"
+"    try:\n"
+"        yield\n"
+"    finally:\n"
+"        await engine.dispose()\n"
+"\n"
+"\n"
+"app = Litestar(lifespan=[db_connection])"
+msgstr ""
+
+#: ../../../usage/applications.rst:66
+msgid ""
+"from contextlib import asynccontextmanager\n"
+"from collections.abc import AsyncGenerator\n"
+"\n"
+"from sqlalchemy.ext.asyncio import create_async_engine\n"
+"\n"
+"from litestar import Litestar\n"
+"\n"
+"\n"
+"@asynccontextmanager\n"
+"async def db_connection(app: Litestar) -> AsyncGenerator[None, None]:\n"
+"    engine = getattr(app.state, \"engine\", None)\n"
+"    if engine is None:\n"
+"        engine = create_async_engine(\"postgresql+asyncpg://postgres:"
+"mysecretpassword@pg.db:5432/db\")\n"
+"        app.state.engine = engine\n"
+"\n"
+"    try:\n"
+"        yield\n"
+"    finally:\n"
+"        await engine.dispose()\n"
+"\n"
+"\n"
+"app = Litestar(lifespan=[db_connection])"
+msgstr ""
+
+#: ../../../usage/applications.rst:70
+msgid "Order of execution"
+msgstr ""
+
+#: ../../../usage/applications.rst:72
+msgid ""
+"When multiple lifespan context managers and :paramref:`~litestar.app."
+"Litestar.on_shutdown`  hooks are specified, Litestar will invoke the :term:"
+"`context managers <asynchronous context manager>` in inverse order before "
+"the shutdown hooks are invoked."
+msgstr ""
+
+#: ../../../usage/applications.rst:76
+msgid ""
+"Consider the case where there are two lifespan context managers ``ctx_a`` "
+"and ``ctx_b`` as well as two shutdown hooks ``hook_a`` and ``hook_b`` as "
+"shown in the following code:"
+msgstr ""
+
+#: ../../../usage/applications.rst:80
+msgid ""
+"Example of multiple :term:`context managers <asynchronous context manager>` "
+"and shutdown hooks"
+msgstr ""
+
+#: ../../../usage/applications.rst:80
+msgid "app = Litestar(lifespan=[ctx_a, ctx_b], on_shutdown=[hook_a, hook_b])"
+msgstr ""
+
+#: ../../../usage/applications.rst:84
+msgid "During shutdown, they are executed in the following order:"
+msgstr ""
+
+#: ../../../usage/applications.rst:91
+msgid ""
+"As seen, the :term:`context managers <asynchronous context manager>` are "
+"invoked in inverse order. On the other hand, the shutdown hooks are invoked "
+"in their specified order."
+msgstr ""
+
+#: ../../../usage/applications.rst:97 ../../../usage/applications.rst:122
+#: ../../../usage/applications.rst:134
+msgid "Using Application State"
+msgstr ""
+
+#: ../../../usage/applications.rst:99
+msgid ""
+"As seen in the examples for the `on_startup / on_shutdown <#startup-and-"
+"shutdown>`_, :term:`callables <python:callable>` passed to these hooks can "
+"receive an optional :term:`kwarg <argument>` called ``app``, through which "
+"the application's state object and other properties can be accessed. The "
+"advantage of using application :paramref:`~.app.Litestar.state`, is that it "
+"can be accessed during multiple stages of the connection, and it can be "
+"injected into dependencies and route handlers."
+msgstr ""
+
+#: ../../../usage/applications.rst:105
+msgid ""
+"The Application State is an instance of the :class:`.datastructures.state."
+"State` datastructure, and it is accessible via the :paramref:`~.app.Litestar."
+"state` attribute. As such it can be accessed wherever the app instance is "
+"accessible."
+msgstr ""
+
+#: ../../../usage/applications.rst:109
+msgid ""
+":paramref:`~.app.Litestar.state` is one of the :ref:`reserved keyword "
+"arguments <usage/routing/handlers:\"reserved\" keyword arguments>`."
+msgstr ""
+
+#: ../../../usage/applications.rst:112
+msgid ""
+"It is important to understand in this context that the application instance "
+"is injected into the ASGI ``scope`` mapping for each connection (i.e. "
+"request or websocket connection) as ``scope[\"litestar_app\"]``, and can be "
+"retrieved using :meth:`~.Litestar.from_scope`. This makes the application "
+"accessible wherever the scope mapping is available, e.g. in middleware, on :"
+"class:`~.connection.request.Request` and :class:`~.connection.websocket."
+"WebSocket` instances (accessible as ``request.app`` / ``socket.app``), and "
+"many other places."
+msgstr ""
+
+#: ../../../usage/applications.rst:118
+msgid ""
+"Therefore, :paramref:`~.app.Litestar.state` offers an easy way to share "
+"contextual data between disparate parts of the application, as seen below:"
+msgstr ""
+
+#: ../../../usage/applications.rst:122
+msgid ""
+"import logging\n"
+"from typing import TYPE_CHECKING, Any\n"
+"\n"
+"from litestar import Litestar, Request, get\n"
+"from litestar.datastructures import State\n"
+"from litestar.di import Provide\n"
+"\n"
+"if TYPE_CHECKING:\n"
+"    from litestar.types import ASGIApp, Receive, Scope, Send\n"
+"\n"
+"logger = logging.getLogger(__name__)\n"
+"\n"
+"\n"
+"def set_state_on_startup(app: Litestar) -> None:\n"
+"    \"\"\"Startup and shutdown hooks can receive `State` as a keyword arg."
+"\"\"\"\n"
+"    app.state.value = \"abc123\"\n"
+"\n"
+"\n"
+"def middleware_factory(*, app: \"ASGIApp\") -> \"ASGIApp\":\n"
+"    \"\"\"A middleware can access application state via `scope`.\"\"\"\n"
+"\n"
+"    async def my_middleware(scope: \"Scope\", receive: \"Receive\", send: "
+"\"Send\") -> None:\n"
+"        state = Litestar.from_scope(scope).state\n"
+"        logger.info(\"state value in middleware: %s\", state.value)\n"
+"        await app(scope, receive, send)\n"
+"\n"
+"    return my_middleware\n"
+"\n"
+"\n"
+"async def my_dependency(state: State) -> Any:\n"
+"    \"\"\"Dependencies can receive state via injection.\"\"\"\n"
+"    logger.info(\"state value in dependency: %s\", state.value)\n"
+"\n"
+"\n"
+"@get(\"/\", dependencies={\"dep\": Provide(my_dependency)}, "
+"middleware=[middleware_factory], sync_to_thread=False)\n"
+"def get_handler(state: State, request: Request, dep: Any) -> None:\n"
+"    \"\"\"Handlers can receive state via injection.\"\"\"\n"
+"    logger.info(\"state value in handler from `State`: %s\", state.value)\n"
+"    logger.info(\"state value in handler from `Request`: %s\", request.app."
+"state.value)\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[get_handler], "
+"on_startup=[set_state_on_startup])"
+msgstr ""
+
+#: ../../../usage/applications.rst:128
+msgid "Initializing Application State"
+msgstr ""
+
+#: ../../../usage/applications.rst:130
+msgid ""
+"To seed application state, you can pass a :class:`~.datastructures.state."
+"State` object to the :paramref:`~.app.Litestar.state` parameter of the "
+"Litestar constructor:"
+msgstr ""
+
+#: ../../../usage/applications.rst:134
+msgid ""
+"from typing import Any, Dict\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.datastructures import State\n"
+"\n"
+"\n"
+"@get(\"/\", sync_to_thread=False)\n"
+"def handler(state: State) -> Dict[str, Any]:\n"
+"    return state.dict()\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[handler], state=State({\"count\": 100}))"
+msgstr ""
+
+#: ../../../usage/applications.rst:134
+msgid ""
+"from typing import Any\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.datastructures import State\n"
+"\n"
+"\n"
+"@get(\"/\", sync_to_thread=False)\n"
+"def handler(state: State) -> dict[str, Any]:\n"
+"    return state.dict()\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[handler], state=State({\"count\": 100}))"
+msgstr ""
+
+#: ../../../usage/applications.rst:137
+msgid ""
+":class:`~.datastructures.state.State` can be initialized with a :class:"
+"`dictionary <dict>`, an instance of :class:`~.datastructures.state."
+"ImmutableState` or :class:`~.datastructures.state.State`, or a :class:`list` "
+"of :class:`tuples <tuple>` containing key/value pairs."
+msgstr ""
+
+#: ../../../usage/applications.rst:141
+msgid ""
+"You may instruct :class:`~.datastructures.state.State` to deep copy "
+"initialized data to prevent mutation from outside the application context."
+msgstr ""
+
+#: ../../../usage/applications.rst:144
+msgid ""
+"To do this, set :paramref:`~.datastructures.state.State.deep_copy` to "
+"``True`` in the :class:`~.datastructures.state.State` constructor."
+msgstr ""
+
+#: ../../../usage/applications.rst:148
+msgid "Injecting Application State into Route Handlers and Dependencies"
+msgstr ""
+
+#: ../../../usage/applications.rst:150
+msgid ""
+"As seen in the above example, Litestar offers an easy way to inject state "
+"into route handlers and dependencies - simply by specifying ``state`` as a "
+"kwarg to the handler or dependency function. For example:"
+msgstr ""
+
+#: ../../../usage/applications.rst:154
+msgid ""
+"Accessing application :class:`~.datastructures.state.State` in a handler "
+"function"
+msgstr ""
+
+#: ../../../usage/applications.rst:154
+msgid ""
+"from litestar import get\n"
+"from litestar.datastructures import State\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"def handler(state: State) -> None: ..."
+msgstr ""
+
+#: ../../../usage/applications.rst:163
+msgid ""
+"When using this pattern you can specify the class to use for the state "
+"object. This type is not merely for type checkers, rather Litestar will "
+"instantiate a new ``state`` instance based on the type you set there. This "
+"allows users to use custom classes for :class:`~.datastructures.state.State`."
+msgstr ""
+
+#: ../../../usage/applications.rst:167
+msgid ""
+"While this is very powerful, it might encourage users to follow anti-"
+"patterns: it is important to emphasize that using state can lead to code "
+"that is hard to reason about and bugs that are difficult to understand, due "
+"to changes in different ASGI contexts. As such, this pattern should be used "
+"only when it is the best choice and in a limited fashion. To discourage its "
+"use, Litestar also offers a builtin :class:`~.datastructures.state."
+"ImmutableState` class. You can use this class to type state and ensure that "
+"no mutation of state is allowed:"
+msgstr ""
+
+#: ../../../usage/applications.rst:174
+msgid "Using Custom State to ensure immutability"
+msgstr ""
+
+#: ../../../usage/applications.rst:174
+msgid ""
+"from typing import Any, Dict\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.datastructures import ImmutableState\n"
+"\n"
+"\n"
+"@get(\"/\", sync_to_thread=False)\n"
+"def handler(state: ImmutableState) -> Dict[str, Any]:\n"
+"    setattr(state, \"count\", 1)  # raises AttributeError\n"
+"    return state.dict()\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[handler])"
+msgstr ""
+
+#: ../../../usage/applications.rst:174
+msgid ""
+"from typing import Any\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.datastructures import ImmutableState\n"
+"\n"
+"\n"
+"@get(\"/\", sync_to_thread=False)\n"
+"def handler(state: ImmutableState) -> dict[str, Any]:\n"
+"    setattr(state, \"count\", 1)  # raises AttributeError\n"
+"    return state.dict()\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[handler])"
+msgstr ""
+
+#: ../../../usage/applications.rst:178
+msgid "Application Hooks"
+msgstr ""
+
+#: ../../../usage/applications.rst:180
+msgid ""
+"Litestar includes several application level hooks that allow users to run "
+"their own sync or async :term:`callables <python:callable>`. While you are "
+"free to use these hooks as you see fit, the design intention behind them is "
+"to allow for easy instrumentation for observability (monitoring, tracing, "
+"logging, etc.)."
+msgstr ""
+
+#: ../../../usage/applications.rst:184
+msgid ""
+"All application hook kwargs detailed below receive either a single :term:"
+"`python:callable` or a :class:`list` of :term:`callables <python:callable>`. "
+"If a :class:`list` is provided, it is called in the order it is given."
+msgstr ""
+
+#: ../../../usage/applications.rst:189
+msgid "After Exception"
+msgstr ""
+
+#: ../../../usage/applications.rst:191
+msgid ""
+"The :paramref:`~litestar.app.Litestar.after_exception` hook takes a :class:"
+"`sync or async callable <litestar.types.AfterExceptionHookHandler>` that is "
+"called with two arguments: the ``exception`` that occurred and the ASGI "
+"``scope`` of the request or websocket connection."
+msgstr ""
+
+#: ../../../usage/applications.rst:196
+msgid "After Exception Hook"
+msgstr ""
+
+#: ../../../usage/applications.rst:196
+msgid ""
+"import logging\n"
+"from typing import TYPE_CHECKING\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.exceptions import HTTPException\n"
+"from litestar.status_codes import HTTP_400_BAD_REQUEST\n"
+"\n"
+"logger = logging.getLogger()\n"
+"\n"
+"if TYPE_CHECKING:\n"
+"    from litestar.types import Scope\n"
+"\n"
+"\n"
+"@get(\"/some-path\", sync_to_thread=False)\n"
+"def my_handler() -> None:\n"
+"    \"\"\"Route handler that raises an exception.\"\"\"\n"
+"    raise HTTPException(detail=\"bad request\", "
+"status_code=HTTP_400_BAD_REQUEST)\n"
+"\n"
+"\n"
+"async def after_exception_handler(exc: Exception, scope: \"Scope\") -> "
+"None:\n"
+"    \"\"\"Hook function that will be invoked after each exception.\"\"\"\n"
+"    state = Litestar.from_scope(scope).state\n"
+"    if not hasattr(state, \"error_count\"):\n"
+"        state.error_count = 1\n"
+"    else:\n"
+"        state.error_count += 1\n"
+"\n"
+"    logger.info(\n"
+"        \"an exception of type %s has occurred for requested path %s and the "
+"application error count is %d.\",\n"
+"        type(exc).__name__,\n"
+"        scope[\"path\"],\n"
+"        state.error_count,\n"
+"    )\n"
+"\n"
+"\n"
+"app = Litestar([my_handler], after_exception=[after_exception_handler])"
+msgstr ""
+
+#: ../../../usage/applications.rst:199
+msgid ""
+"This hook is not meant to handle exceptions - it just receives them to allow "
+"for side effects. To handle exceptions you should define :ref:`exception "
+"handlers <usage/exceptions:exception handling>`."
+msgstr ""
+
+#: ../../../usage/applications.rst:203
+msgid "Before Send"
+msgstr ""
+
+#: ../../../usage/applications.rst:205
+msgid ""
+"The :paramref:`~litestar.app.Litestar.before_send` hook takes a :class:`sync "
+"or async callable <litestar.types.BeforeMessageSendHookHandler>` that is "
+"called when an ASGI message is sent. The hook receives the message instance "
+"and the ASGI ``scope``."
+msgstr ""
+
+#: ../../../usage/applications.rst:210
+msgid "Before Send Hook"
+msgstr ""
+
+#: ../../../usage/applications.rst:210
+msgid ""
+"from __future__ import annotations\n"
+"\n"
+"from typing import TYPE_CHECKING\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.datastructures import MutableScopeHeaders\n"
+"\n"
+"if TYPE_CHECKING:\n"
+"\n"
+"    from litestar.types import Message, Scope\n"
+"\n"
+"\n"
+"@get(\"/test\", sync_to_thread=False)\n"
+"def handler() -> dict[str, str]:\n"
+"    \"\"\"Example Handler function.\"\"\"\n"
+"    return {\"key\": \"value\"}\n"
+"\n"
+"\n"
+"async def before_send_hook_handler(message: Message, scope: Scope) -> None:\n"
+"    \"\"\"The function will be called on each ASGI message.\n"
+"\n"
+"    We therefore ensure it runs only on the message start event.\n"
+"    \"\"\"\n"
+"    if message[\"type\"] == \"http.response.start\":\n"
+"        headers = MutableScopeHeaders.from_message(message=message)\n"
+"        headers[\"My-Header\"] = Litestar.from_scope(scope).state.message\n"
+"\n"
+"\n"
+"def on_startup(app: Litestar) -> None:\n"
+"    \"\"\"A function that will populate the app state before any requests "
+"are received.\"\"\"\n"
+"    app.state.message = \"value injected during send\"\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[handler], on_startup=[on_startup], "
+"before_send=[before_send_hook_handler])"
+msgstr ""
+
+#: ../../../usage/applications.rst:214
+msgid "Initialization"
+msgstr ""
+
+#: ../../../usage/applications.rst:216
+msgid ""
+"Litestar includes a hook for intercepting the arguments passed to the :class:"
+"`Litestar constructor <litestar.app.Litestar>`, before they are used to "
+"instantiate the application."
+msgstr ""
+
+#: ../../../usage/applications.rst:219
+msgid ""
+"Handlers can be passed to the :paramref:`~.app.Litestar.on_app_init` "
+"parameter on construction of the application, and in turn, each will receive "
+"an instance of :class:`~.config.app.AppConfig` and must return an instance "
+"of same."
+msgstr ""
+
+#: ../../../usage/applications.rst:222
+msgid ""
+"This hook is useful for applying common configuration between applications, "
+"and for use by developers who may wish to develop third-party application "
+"configuration systems."
+msgstr ""
+
+#: ../../../usage/applications.rst:225
+msgid ""
+":paramref:`~.app.Litestar.on_app_init` handlers cannot be :ref:`python:async "
+"def` functions, as they are called within :paramref:`~litestar.app.Litestar."
+"__init__`, outside of an async context."
+msgstr ""
+
+#: ../../../usage/applications.rst:229
+msgid ""
+"Example usage of the ``on_app_init`` hook to modify the application "
+"configuration."
+msgstr ""
+
+#: ../../../usage/applications.rst:229
+msgid ""
+"from typing import TYPE_CHECKING\n"
+"\n"
+"from litestar import Litestar\n"
+"\n"
+"if TYPE_CHECKING:\n"
+"    from litestar.config.app import AppConfig\n"
+"\n"
+"\n"
+"async def close_db_connection() -> None:\n"
+"    \"\"\"Closes the database connection on application shutdown.\"\"\"\n"
+"\n"
+"\n"
+"def receive_app_config(app_config: \"AppConfig\") -> \"AppConfig\":\n"
+"    \"\"\"Receives parameters from the application.\n"
+"\n"
+"    In reality, this would be a library of boilerplate that is carried from "
+"one application to another, or a third-party\n"
+"    developed application configuration tool.\n"
+"    \"\"\"\n"
+"    app_config.on_shutdown.append(close_db_connection)\n"
+"    return app_config\n"
+"\n"
+"\n"
+"app = Litestar([], on_app_init=[receive_app_config])"
+msgstr ""
+
+#: ../../../usage/applications.rst:235
+msgid "Layered architecture"
+msgstr ""
+
+#: ../../../usage/applications.rst:237
+msgid "Litestar has a layered architecture compromising of 4 layers:"
+msgstr ""
+
+#: ../../../usage/applications.rst:239
+msgid ":class:`The application object <litestar.app.Litestar>`"
+msgstr ""
+
+#: ../../../usage/applications.rst:240
+msgid ":class:`Routers <.router.Router>`"
+msgstr ""
+
+#: ../../../usage/applications.rst:241
+msgid ":class:`Controllers <.controller.Controller>`"
+msgstr ""
+
+#: ../../../usage/applications.rst:242
+msgid ":class:`Handlers <.handlers.BaseRouteHandler>`"
+msgstr ""
+
+#: ../../../usage/applications.rst:244
+msgid ""
+"There are many :term:`parameters <parameter>` that can be defined on every "
+"layer, in which case the :term:`parameter` defined on the layer **closest to "
+"the handler** takes precedence. This allows for maximum flexibility and "
+"simplicity when configuring complex applications and enables transparent "
+"overriding of parameters."
+msgstr ""
+
+#: ../../../usage/applications.rst:249
+msgid "Parameters that support layering are:"
+msgstr ""
+
+#: ../../../usage/applications.rst:251
+msgid ":ref:`after_request <after_request>`"
+msgstr ""
+
+#: ../../../usage/applications.rst:252
+msgid ":ref:`after_response <after_response>`"
+msgstr ""
+
+#: ../../../usage/applications.rst:253
+msgid ":ref:`before_request <before_request>`"
+msgstr ""
+
+#: ../../../usage/applications.rst:254
+msgid ":ref:`cache_control <usage/responses:cache control>`"
+msgstr ""
+
+#: ../../../usage/applications.rst:255
+msgid ":doc:`dependencies </usage/dependency-injection>`"
+msgstr ""
+
+#: ../../../usage/applications.rst:256
+msgid ":doc:`dto </usage/dto/0-basic-use>`"
+msgstr ""
+
+#: ../../../usage/applications.rst:257
+msgid ":ref:`etag <usage/responses:etag>`"
+msgstr ""
+
+#: ../../../usage/applications.rst:258
+msgid ":doc:`exception_handlers </usage/exceptions>`"
+msgstr ""
+
+#: ../../../usage/applications.rst:259
+msgid ":doc:`guards </usage/security/guards>`"
+msgstr ""
+
+#: ../../../usage/applications.rst:260
+msgid ""
+":ref:`include_in_schema <usage/openapi/schema_generation:configuring schema "
+"generation on a route handler>`"
+msgstr ""
+
+#: ../../../usage/applications.rst:261
+msgid ":doc:`middleware </usage/middleware/index>`"
+msgstr ""
+
+#: ../../../usage/applications.rst:262
+msgid ":ref:`opt <handler_opts>`"
+msgstr ""
+
+#: ../../../usage/applications.rst:263
+msgid ":ref:`request_class <usage/requests:custom request>`"
+msgstr ""
+
+#: ../../../usage/applications.rst:264
+msgid ":ref:`response_class <usage/responses:custom responses>`"
+msgstr ""
+
+#: ../../../usage/applications.rst:265
+msgid ":ref:`response_cookies <usage/responses:setting response cookies>`"
+msgstr ""
+
+#: ../../../usage/applications.rst:266
+msgid ":ref:`response_headers <usage/responses:setting response headers>`"
+msgstr ""
+
+#: ../../../usage/applications.rst:267
+msgid ":doc:`return_dto </usage/dto/0-basic-use>`"
+msgstr ""
+
+#: ../../../usage/applications.rst:268
+msgid "``security``"
+msgstr ""
+
+#: ../../../usage/applications.rst:269
+msgid "``tags``"
+msgstr ""
+
+#: ../../../usage/applications.rst:270
+msgid ":doc:`type_decoders </usage/custom-types>`"
+msgstr ""
+
+#: ../../../usage/applications.rst:271
+msgid ":doc:`type_encoders </usage/custom-types>`"
+msgstr ""
+
+#: ../../../usage/applications.rst:272
+msgid ":ref:`websocket_class <usage/websockets:custom websocket>`"
+msgstr ""

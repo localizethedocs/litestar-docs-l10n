@@ -1,0 +1,80 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../usage/metrics/open-telemetry.rst:2
+msgid "OpenTelemetry"
+msgstr ""
+
+#: ../../../usage/metrics/open-telemetry.rst:4
+msgid ""
+"Litestar includes optional OpenTelemetry instrumentation that is exported "
+"from ``litestar.contrib.opentelemetry``. To use this package, you should "
+"first install the required dependencies:"
+msgstr ""
+
+#: ../../../usage/metrics/open-telemetry.rst:7
+msgid "as separate package"
+msgstr ""
+
+#: ../../../usage/metrics/open-telemetry.rst:7
+msgid "pip install opentelemetry-instrumentation-asgi"
+msgstr ""
+
+#: ../../../usage/metrics/open-telemetry.rst:13
+msgid "as a Litestar extra"
+msgstr ""
+
+#: ../../../usage/metrics/open-telemetry.rst:13
+msgid "pip install 'litestar[opentelemetry]'"
+msgstr ""
+
+#: ../../../usage/metrics/open-telemetry.rst:18
+msgid ""
+"Once these requirements are satisfied, you can instrument your Litestar "
+"application by creating an instance of :class:`OpenTelemetryConfig <litestar."
+"contrib.opentelemetry.OpenTelemetryConfig>` and passing the middleware it "
+"creates to the Litestar constructor:"
+msgstr ""
+
+#: ../../../usage/metrics/open-telemetry.rst:23
+msgid ""
+"from litestar import Litestar\n"
+"from litestar.contrib.opentelemetry import OpenTelemetryConfig, "
+"OpenTelemetryPlugin\n"
+"\n"
+"open_telemetry_config = OpenTelemetryConfig()\n"
+"\n"
+"app = Litestar(plugins=[OpenTelemetryPlugin(open_telemetry_config)])"
+msgstr ""
+
+#: ../../../usage/metrics/open-telemetry.rst:31
+msgid ""
+"The above example will work out of the box if you configure a global "
+"``tracer_provider`` and/or ``metric_provider`` and an exporter to use these "
+"(see the `OpenTelemetry Exporter docs <https://opentelemetry.io/docs/"
+"instrumentation/python/exporters/>`_ for further details)."
+msgstr ""
+
+#: ../../../usage/metrics/open-telemetry.rst:35
+msgid ""
+"You can also pass con figuration to the ``OpenTelemetryConfig`` telling it "
+"which providers to use. Consult :class:`reference docs <litestar.contrib."
+"opentelemetry.OpenTelemetryConfig>` regarding the configuration options you "
+"can use."
+msgstr ""

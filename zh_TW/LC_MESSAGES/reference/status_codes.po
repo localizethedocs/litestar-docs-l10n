@@ -1,0 +1,354 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/status_codes.rst:2
+msgid "status_code"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_100_CONTINUE:1
+msgid "HTTP status code 'Continue'"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.status_codes.HTTP_101_SWITCHING_PROTOCOLS:1
+msgid "HTTP status code 'Switching Protocols'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_102_PROCESSING:1
+msgid "HTTP status code 'Processing'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_103_EARLY_HINTS:1
+msgid "HTTP status code 'Early Hints'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_200_OK:1
+msgid "HTTP status code 'OK'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_201_CREATED:1
+msgid "HTTP status code 'Created'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_202_ACCEPTED:1
+msgid "HTTP status code 'Accepted'"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.status_codes.HTTP_203_NON_AUTHORITATIVE_INFORMATION:1
+msgid "HTTP status code 'Non Authoritative Information'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_204_NO_CONTENT:1
+msgid "HTTP status code 'No Content'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_205_RESET_CONTENT:1
+msgid "HTTP status code 'Reset Content'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_206_PARTIAL_CONTENT:1
+msgid "HTTP status code 'Partial Content'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_207_MULTI_STATUS:1
+msgid "HTTP status code 'Multi Status'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_208_ALREADY_REPORTED:1
+msgid "HTTP status code 'Already Reported'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_226_IM_USED:1
+msgid "HTTP status code 'I'm Used'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_300_MULTIPLE_CHOICES:1
+msgid "HTTP status code 'Multiple Choices'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_301_MOVED_PERMANENTLY:1
+msgid "HTTP status code 'Moved Permanently'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_302_FOUND:1
+msgid "HTTP status code 'Found'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_303_SEE_OTHER:1
+msgid "HTTP status code 'See Other'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_304_NOT_MODIFIED:1
+msgid "HTTP status code 'Not Modified'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_305_USE_PROXY:1
+msgid "HTTP status code 'Use Proxy'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_306_RESERVED:1
+msgid "HTTP status code 'Reserved'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_307_TEMPORARY_REDIRECT:1
+msgid "HTTP status code 'Temporary Redirect'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_308_PERMANENT_REDIRECT:1
+msgid "HTTP status code 'Permanent Redirect'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_400_BAD_REQUEST:1
+msgid "HTTP status code 'Bad Request'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_401_UNAUTHORIZED:1
+msgid "HTTP status code 'Unauthorized'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_402_PAYMENT_REQUIRED:1
+msgid "HTTP status code 'Payment Required'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_403_FORBIDDEN:1
+msgid "HTTP status code 'Forbidden'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_404_NOT_FOUND:1
+msgid "HTTP status code 'Not Found'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_405_METHOD_NOT_ALLOWED:1
+msgid "HTTP status code 'Method Not Allowed'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_406_NOT_ACCEPTABLE:1
+msgid "HTTP status code 'Not Acceptable'"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.status_codes.HTTP_407_PROXY_AUTHENTICATION_REQUIRED:1
+msgid "HTTP status code 'Proxy Authentication Required'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_408_REQUEST_TIMEOUT:1
+msgid "HTTP status code 'Request Timeout'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_409_CONFLICT:1
+msgid "HTTP status code 'Conflict'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_410_GONE:1
+msgid "HTTP status code 'Gone'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_411_LENGTH_REQUIRED:1
+msgid "HTTP status code 'Length Required'"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.status_codes.HTTP_412_PRECONDITION_FAILED:1
+msgid "HTTP status code 'Precondition Failed'"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.status_codes.HTTP_413_REQUEST_ENTITY_TOO_LARGE:1
+msgid "HTTP status code 'Request Entity Too Large'"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.status_codes.HTTP_414_REQUEST_URI_TOO_LONG:1
+msgid "HTTP status code 'Request URI Too Long'"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.status_codes.HTTP_415_UNSUPPORTED_MEDIA_TYPE:1
+msgid "HTTP status code 'Unsupported Media Type'"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.status_codes.HTTP_416_REQUESTED_RANGE_NOT_SATISFIABLE:1
+msgid "HTTP status code 'Requested Range Not Satisfiable'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_417_EXPECTATION_FAILED:1
+msgid "HTTP status code 'Expectation Failed'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_418_IM_A_TEAPOT:1
+msgid "HTTP status code 'I'm A Teapot'"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.status_codes.HTTP_421_MISDIRECTED_REQUEST:1
+msgid "HTTP status code 'Misdirected Request'"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.status_codes.HTTP_422_UNPROCESSABLE_ENTITY:1
+msgid "HTTP status code 'Unprocessable Entity'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_423_LOCKED:1
+msgid "HTTP status code 'Locked'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_424_FAILED_DEPENDENCY:1
+msgid "HTTP status code 'Failed Dependency'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_425_TOO_EARLY:1
+msgid "HTTP status code 'Too Early'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_426_UPGRADE_REQUIRED:1
+msgid "HTTP status code 'Upgrade Required'"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.status_codes.HTTP_428_PRECONDITION_REQUIRED:1
+msgid "HTTP status code 'Precondition Required'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_429_TOO_MANY_REQUESTS:1
+msgid "HTTP status code 'Too Many Requests'"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.status_codes.HTTP_431_REQUEST_HEADER_FIELDS_TOO_LARGE:1
+msgid "HTTP status code 'Request Header Fields Too Large'"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.status_codes.HTTP_451_UNAVAILABLE_FOR_LEGAL_REASONS:1
+msgid "HTTP status code 'Unavailable For Legal Reasons'"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.status_codes.HTTP_500_INTERNAL_SERVER_ERROR:1
+msgid "HTTP status code 'Internal Server Error'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_501_NOT_IMPLEMENTED:1
+msgid "HTTP status code 'Not Implemented'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_502_BAD_GATEWAY:1
+msgid "HTTP status code 'Bad Gateway'"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.status_codes.HTTP_503_SERVICE_UNAVAILABLE:1
+msgid "HTTP status code 'Service Unavailable'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_504_GATEWAY_TIMEOUT:1
+msgid "HTTP status code 'Gateway Timeout'"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.status_codes.HTTP_505_HTTP_VERSION_NOT_SUPPORTED:1
+msgid "HTTP status code 'Http Version Not Supported'"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.status_codes.HTTP_506_VARIANT_ALSO_NEGOTIATES:1
+msgid "HTTP status code 'Variant Also Negotiates'"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.status_codes.HTTP_507_INSUFFICIENT_STORAGE:1
+msgid "HTTP status code 'Insufficient Storage'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_508_LOOP_DETECTED:1
+msgid "HTTP status code 'Loop Detected'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.HTTP_510_NOT_EXTENDED:1
+msgid "HTTP status code 'Not Extended'"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.status_codes.HTTP_511_NETWORK_AUTHENTICATION_REQUIRED:1
+msgid "HTTP status code 'Network Authentication Required'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.WS_1000_NORMAL_CLOSURE:1
+msgid "WebSocket status code 'Normal Closure'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.WS_1001_GOING_AWAY:1
+msgid "WebSocket status code 'Going Away'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.WS_1002_PROTOCOL_ERROR:1
+msgid "WebSocket status code 'Protocol Error'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.WS_1003_UNSUPPORTED_DATA:1
+msgid "WebSocket status code 'Unsupported Data'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.WS_1005_NO_STATUS_RECEIVED:1
+msgid "WebSocket status code 'No Status Received'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.WS_1006_ABNORMAL_CLOSURE:1
+msgid "WebSocket status code 'Abnormal Closure'"
+msgstr ""
+
+#: ../../../../docstring of
+#: litestar.status_codes.WS_1007_INVALID_FRAME_PAYLOAD_DATA:1
+msgid "WebSocket status code 'Invalid Frame Payload Data'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.WS_1008_POLICY_VIOLATION:1
+msgid "WebSocket status code 'Policy Violation'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.WS_1009_MESSAGE_TOO_BIG:1
+msgid "WebSocket status code 'Message Too Big'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.WS_1010_MANDATORY_EXT:1
+msgid "WebSocket status code 'Mandatory Ext.'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.WS_1011_INTERNAL_ERROR:1
+msgid "WebSocket status code 'Internal Error'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.WS_1012_SERVICE_RESTART:1
+msgid "WebSocket status code 'Service Restart'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.WS_1013_TRY_AGAIN_LATER:1
+msgid "WebSocket status code 'Try Again Later'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.WS_1014_BAD_GATEWAY:1
+msgid "WebSocket status code 'Bad Gateway'"
+msgstr ""
+
+#: ../../../../docstring of litestar.status_codes.WS_1015_TLS_HANDSHAKE:1
+msgid "WebSocket status code 'TLS Handshake'"
+msgstr ""
