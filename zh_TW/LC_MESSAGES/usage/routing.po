@@ -1,0 +1,476 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../usage/routing.rst:2
+msgid "Routing"
+msgstr ""
+
+#: ../../../usage/routing.rst:4
+msgid ""
+"Starlite implements its routing solution that is based on the concept of a "
+"`radix tree <https://en.wikipedia.org/wiki/Radix_tree>`_ or ``trie``."
+msgstr ""
+
+#: ../../../usage/routing.rst:8
+msgid "Why Radix Based Routing?"
+msgstr ""
+
+#: ../../../usage/routing.rst:10
+msgid ""
+"The regex matching used by Starlette (and FastAPI etc.) is very good at "
+"resolving path parameters fast, giving it an advantage when a URL has a lot "
+"of path parameters - what we can think of as ``vertical`` scaling. On the "
+"other hand, it is not good at scaling horizontally - the more routes, the "
+"less performant it becomes. Thus, there is an inverse relation between "
+"performance and application size with this approach that strongly favors "
+"very small microservices. The **trie** based approach used by Starlite is "
+"agnostic to the number of routes of the application giving it better "
+"horizontal scaling characteristics at the expense of somewhat slower "
+"resolution of path parameters."
+msgstr ""
+
+#: ../../../usage/routing.rst:20
+msgid ""
+"If you are interested in the technical aspects of the implementation, refer "
+"to `this GitHub issue <https://github.com/starlite-api/starlite/"
+"issues/177>`_ - it includes an indepth discussion of the pertinent code."
+msgstr ""
+
+#: ../../../usage/routing.rst:27
+msgid "Registering Routes"
+msgstr ""
+
+#: ../../../usage/routing.rst:29
+msgid ""
+"At the root of every Starlite application there is an instance of the :class:"
+"`Starlite <starlite.app.Starlite>` class, on which the root level "
+"controllers, routers and route handler functions are registered using the "
+"``route_handlers`` kwarg:"
+msgstr ""
+
+#: ../../../usage/routing.rst:33
+msgid ""
+"from starlite import Starlite, get\n"
+"\n"
+"\n"
+"@get(\"/sub-path\")\n"
+"def sub_path_handler() -> None: ...\n"
+"\n"
+"\n"
+"@get()\n"
+"def root_handler() -> None: ...\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[root_handler, sub_path_handler])"
+msgstr ""
+
+#: ../../../usage/routing.rst:47
+msgid ""
+"Components registered on the app are appended to the root path. Thus, the "
+"``root_handler`` function will be called for the path ``\"/\"``, whereas the "
+"``sub_path_handler`` will be called for ``\"/sub-path\"``. You can also "
+"declare a function to handle multiple paths, e.g.:"
+msgstr ""
+
+#: ../../../usage/routing.rst:52
+msgid ""
+"from starlite import get, Starlite\n"
+"\n"
+"\n"
+"@get([\"/\", \"/sub-path\"])\n"
+"def handler() -> None: ...\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[handler])"
+msgstr ""
+
+#: ../../../usage/routing.rst:62
+msgid ""
+"To handle more complex path schemas you should use `routers`_ and "
+"`controllers`_"
+msgstr ""
+
+#: ../../../usage/routing.rst:66
+msgid "Dynamic Route Registration"
+msgstr ""
+
+#: ../../../usage/routing.rst:68
+msgid ""
+"Occasionally there is a need for dynamic route registration. Starlite "
+"supports this via the ``.register`` method exposed by the Starlite app "
+"instance:"
+msgstr ""
+
+#: ../../../usage/routing.rst:72
+msgid ""
+"from starlite import Starlite, get\n"
+"\n"
+"\n"
+"@get()\n"
+"def root_handler() -> None: ...\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[root_handler])\n"
+"\n"
+"\n"
+"@get(\"/sub-path\")\n"
+"def sub_path_handler() -> None: ...\n"
+"\n"
+"\n"
+"app.register(sub_path_handler)"
+msgstr ""
+
+#: ../../../usage/routing.rst:89
+msgid ""
+"Since the app instance is attached to all instances of :class:"
+"`ASGIConnection <.connection.base.ASGIConnection>`, :class:`Request <."
+"connection.request.Request>` and :class:`WebSocket <.connection.websocket."
+"WebSocket>` objects, you can in effect call the :meth:`register <.router."
+"Router.register>` method inside route handler functions, middlewares and "
+"even injected dependencies. For example:"
+msgstr ""
+
+#: ../../../usage/routing.rst:95
+msgid ""
+"from typing import Any\n"
+"from starlite import Starlite, Request, get\n"
+"\n"
+"\n"
+"@get(\"/some-path\")\n"
+"def route_handler(request: Request[Any, Any]) -> None:\n"
+"    @get(\"/sub-path\")\n"
+"    def sub_path_handler() -> None: ...\n"
+"\n"
+"    request.app.register(sub_path_handler)\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[route_handler])"
+msgstr ""
+
+#: ../../../usage/routing.rst:110
+msgid ""
+"In the above we dynamically created the sub-path_handler and registered it "
+"inside the ``route_handler`` function."
+msgstr ""
+
+#: ../../../usage/routing.rst:114
+msgid ""
+"Although Starlite exposes the :meth:`register <.router.Router.register>` "
+"method, it should not be abused. Dynamic route registration increases the "
+"application complexity and makes it harder to reason about the code. It "
+"should therefore be used only when absolutely required."
+msgstr ""
+
+#: ../../../usage/routing.rst:120
+msgid "Routers"
+msgstr ""
+
+#: ../../../usage/routing.rst:122
+msgid ""
+"Routers are instances of :class:`starlite.router.Router <.router.Router>`, "
+"which is the base class for the :class:`Starlite app <.app.Starlite>` "
+"itself. A router can register Controllers, route handler functions and other "
+"routers, similarly to the Starlite constructor:"
+msgstr ""
+
+#: ../../../usage/routing.rst:127
+msgid ""
+"from starlite import Starlite, Router, get\n"
+"\n"
+"\n"
+"@get(\"/{order_id:int}\")\n"
+"def order_handler(order_id: int) -> None: ...\n"
+"\n"
+"\n"
+"order_router = Router(path=\"/orders\", route_handlers=[order_handler])\n"
+"base_router = Router(path=\"/base\", route_handlers=[order_router])\n"
+"app = Starlite(route_handlers=[base_router])"
+msgstr ""
+
+#: ../../../usage/routing.rst:139
+msgid ""
+"Once ``order_router`` is registered on ``base_router``\\ , the handler "
+"function registered on ``order_router`` will become available on ``/base/"
+"orders/{order_id}``."
+msgstr ""
+
+#: ../../../usage/routing.rst:145
+msgid "Controllers"
+msgstr ""
+
+#: ../../../usage/routing.rst:147
+msgid ""
+"Controllers are subclasses of the class :class:`Controller <.controller."
+"Controller>`. They are used to organize endpoints under a specific sub-path, "
+"which is the controller's path. Their purpose is to allow users to utilize "
+"python OOP for better code organization and organize code by logical "
+"concerns."
+msgstr ""
+
+#: ../../../usage/routing.rst:152
+msgid ""
+"from pydantic import BaseModel, UUID4\n"
+"from starlite.controller import Controller\n"
+"from starlite.handlers import get, post, patch, delete\n"
+"from starlite.types import Partial\n"
+"\n"
+"\n"
+"class UserOrder(BaseModel):\n"
+"    user_id: int\n"
+"    order: str\n"
+"\n"
+"\n"
+"class UserOrderController(Controller):\n"
+"    path = \"/user-order\"\n"
+"\n"
+"    @post()\n"
+"    async def create_user_order(self, data: UserOrder) -> UserOrder: ...\n"
+"\n"
+"    @get(path=\"/{order_id:uuid}\")\n"
+"    async def retrieve_user_order(self, order_id: UUID4) -> UserOrder: ...\n"
+"\n"
+"    @patch(path=\"/{order_id:uuid}\")\n"
+"    async def update_user_order(\n"
+"        self, order_id: UUID4, data: Partial[UserOrder]\n"
+"    ) -> UserOrder: ...\n"
+"\n"
+"    @delete(path=\"/{order_id:uuid}\")\n"
+"    async def delete_user_order(self, order_id: UUID4) -> None: ..."
+msgstr ""
+
+#: ../../../usage/routing.rst:181
+msgid ""
+"The above is a simple example of a \"CRUD\" controller for a model called "
+"``UserOrder``. You can place as many `route handler methods <usage/router-"
+"handlers:http route handlers>`_ on a controller, as long as the combination "
+"of path+http method is unique."
+msgstr ""
+
+#: ../../../usage/routing.rst:185
+msgid ""
+"The ``path`` that is defined on the Controller is appended before the path "
+"that is defined for the route handlers declared on it. Thus, in the above "
+"example, ``create_user_order`` has the path of the controller - ``/user-"
+"order/`` , while ``retrieve_user_order`` has the path ``/user-order/"
+"{order_id:uuid}\"``."
+msgstr ""
+
+#: ../../../usage/routing.rst:191
+msgid ""
+"If you do not declare a ``path`` class variable on the controller, it will "
+"default to the root path of ``\"/\"``."
+msgstr ""
+
+#: ../../../usage/routing.rst:196
+msgid "Registering components multiple times"
+msgstr ""
+
+#: ../../../usage/routing.rst:198
+msgid ""
+"You can register both standalone route handler functions and controllers "
+"multiple times."
+msgstr ""
+
+#: ../../../usage/routing.rst:201
+msgid "Registering controllers multiple times"
+msgstr ""
+
+#: ../../../usage/routing.rst:204
+msgid ""
+"from starlite import Router, Controller, get\n"
+"\n"
+"\n"
+"class MyController(Controller):\n"
+"    path = \"/controller\"\n"
+"\n"
+"    @get()\n"
+"    def handler(self) -> None: ...\n"
+"\n"
+"\n"
+"internal_router = Router(path=\"/internal\", route_handlers=[MyController])\n"
+"partner_router = Router(path=\"/partner\", route_handlers=[MyController])\n"
+"consumer_router = Router(path=\"/consumer\", route_handlers=[MyController])"
+msgstr ""
+
+#: ../../../usage/routing.rst:219
+msgid ""
+"In the above, the same ``MyController`` class has been registered on three "
+"different routers. This is possible because what is passed to the router is "
+"not a class instance but rather the class itself. The router creates its own "
+"instance of the controller, which ensures encapsulation."
+msgstr ""
+
+#: ../../../usage/routing.rst:223
+msgid ""
+"Therefore, in the above example, three different instances of "
+"``MyController`` will be created, each mounted on a different sub-path, e.g. "
+"``/internal/controller``\\ , ``/partner/controller`` and ``/consumer/"
+"controller``."
+msgstr ""
+
+#: ../../../usage/routing.rst:227
+msgid "Registering standalone route handlers multiple times"
+msgstr ""
+
+#: ../../../usage/routing.rst:229
+msgid "You can also register standalone route handlers multiple times:"
+msgstr ""
+
+#: ../../../usage/routing.rst:232
+msgid ""
+"from starlite import Starlite, Router, get\n"
+"\n"
+"\n"
+"@get(path=\"/handler\")\n"
+"def my_route_handler() -> None: ...\n"
+"\n"
+"\n"
+"internal_router = Router(path=\"/internal\", "
+"route_handlers=[my_route_handler])\n"
+"partner_router = Router(path=\"/partner\", "
+"route_handlers=[my_route_handler])\n"
+"consumer_router = Router(path=\"/consumer\", "
+"route_handlers=[my_route_handler])\n"
+"\n"
+"Starlite(route_handlers=[internal_router, partner_router, consumer_router])"
+msgstr ""
+
+#: ../../../usage/routing.rst:246
+msgid ""
+"When the handler function is registered, it's actually copied. Thus, each "
+"router has its own unique instance of the route handler. Path behaviour is "
+"identical to that of controllers above, namely, the route handler function "
+"will be accessible in the following paths: ``/internal/handler`` , ``/"
+"partner/handler`` and ``/consumer/handler``."
+msgstr ""
+
+#: ../../../usage/routing.rst:252
+msgid ""
+"You can nest routers as you see fit - but be aware that once a router has "
+"been registered it cannot be re-registered or an exception will be raised."
+msgstr ""
+
+#: ../../../usage/routing.rst:258
+msgid "Mounting ASGI Apps"
+msgstr ""
+
+#: ../../../usage/routing.rst:260
+msgid ""
+"Starlite support \"mounting\" ASGI applications on sub paths, that is - "
+"specifying a handler function that will handle all requests addressed to a "
+"given path."
+msgstr ""
+
+#: ../../../usage/routing.rst:264
+msgid "Mounting an ASGI App"
+msgstr ""
+
+#: ../../../usage/routing.rst:264
+msgid ""
+"from typing import TYPE_CHECKING\n"
+"\n"
+"from starlite import Response, Starlite, asgi\n"
+"\n"
+"if TYPE_CHECKING:\n"
+"    from starlite.types import Receive, Scope, Send\n"
+"\n"
+"\n"
+"@asgi(\"/some/sub-path\", is_mount=True)\n"
+"async def my_asgi_app(scope: \"Scope\", receive: \"Receive\", send: "
+"\"Send\") -> None:\n"
+"    \"\"\"\n"
+"    Args:\n"
+"        scope: The ASGI connection scope.\n"
+"        receive: The ASGI receive function.\n"
+"        send: The ASGI send function.\n"
+"\n"
+"    Returns:\n"
+"        None\n"
+"    \"\"\"\n"
+"    response = Response(content={\"forwarded_path\": scope[\"path\"]})\n"
+"    await response(scope, receive, send)\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[my_asgi_app])"
+msgstr ""
+
+#: ../../../usage/routing.rst:268
+msgid ""
+"The handler function will receive all requests with an url that begins with "
+"``/some/sub-path`` , e.g. ``/some/sub-path`` and ``/some/sub-path/abc`` and "
+"``/some/sub-path/123/another/sub-path`` etc."
+msgstr ""
+
+#: ../../../usage/routing.rst:271
+msgid "Technical Details"
+msgstr ""
+
+#: ../../../usage/routing.rst:274
+msgid ""
+"If we are sending a request to the above with the url ``/some/sub-path``, "
+"the handler will be invoked and the value of ``scope[\"path\"]`` will equal "
+"``\"/`\"``. If we send a request to ``/some/sub-path/abc``, it will also be "
+"invoked,and ``scope[\"path\"]`` will equal ``\"/abc\"``."
+msgstr ""
+
+#: ../../../usage/routing.rst:278
+msgid ""
+"Mounting is especially useful when you need to combine components of other "
+"ASGI applications - for example, for 3rd part libraries. The following "
+"example is identical in principle to the one above, but it uses `Starlette "
+"<https://www.starlette.io/>`_:"
+msgstr ""
+
+#: ../../../usage/routing.rst:282
+msgid "Mounting a Starlette App"
+msgstr ""
+
+#: ../../../usage/routing.rst:282
+msgid ""
+"from typing import TYPE_CHECKING\n"
+"\n"
+"from starlette.applications import Starlette\n"
+"from starlette.responses import JSONResponse\n"
+"from starlette.routing import Route\n"
+"\n"
+"from starlite import Starlite, asgi\n"
+"\n"
+"if TYPE_CHECKING:\n"
+"    from starlette.requests import Request\n"
+"\n"
+"\n"
+"async def index(request: \"Request\") -> JSONResponse:\n"
+"    \"\"\"A generic starlette handler.\"\"\"\n"
+"    return JSONResponse({\"forwarded_path\": request.url.path})\n"
+"\n"
+"\n"
+"starlette_app = asgi(path=\"/some/sub-path\", is_mount=True)(\n"
+"    Starlette(\n"
+"        debug=True,\n"
+"        routes=[\n"
+"            Route(\"/\", index),\n"
+"            Route(\"/abc/\", index),\n"
+"            Route(\"/123/another/sub-path/\", index),\n"
+"        ],\n"
+"    )\n"
+")\n"
+"\n"
+"\n"
+"app = Starlite(route_handlers=[starlette_app])"
+msgstr ""

@@ -1,0 +1,367 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/datastructures/state.rst:2
+msgid "state"
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.ImmutableState:1
+msgid ""
+"Bases: :py:class:`~typing.Mapping`\\ [:py:class:`str`, :py:obj:`~typing.Any`]"
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.ImmutableState:1
+#: starlite.datastructures.state.State:1
+msgid "An object meant to store arbitrary state."
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.ImmutableState:3
+#: starlite.datastructures.state.State:3
+msgid ""
+"It can be accessed using dot notation while exposing dict like "
+"functionalities."
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.ImmutableState.__init__:1
+msgid "Initialize an ``ImmutableState`` instance."
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.ImmutableState.__getattr__:0
+#: starlite.datastructures.state.ImmutableState.__getitem__:0
+#: starlite.datastructures.state.ImmutableState.__init__:0
+#: starlite.datastructures.state.ImmutableState.validate:0
+#: starlite.datastructures.state.State.__delattr__:0
+#: starlite.datastructures.state.State.__delitem__:0
+#: starlite.datastructures.state.State.__init__:0
+#: starlite.datastructures.state.State.__setattr__:0
+#: starlite.datastructures.state.State.__setitem__:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.ImmutableState.__init__:3
+#: starlite.datastructures.state.State.__init__:3
+msgid ""
+"An object to initialize the state from. Can be a dict, an instance of "
+"'ImmutableState', or a tuple of key value paris."
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.ImmutableState.__init__:4
+#: starlite.datastructures.state.State.__init__:4
+msgid "Whether to 'deepcopy' the passed in state."
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.ImmutableState.__init__:6
+msgid "Examples"
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.ImmutableState.__bool__:1
+msgid ""
+"Return a boolean indicating whether the wrapped dict instance has values."
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.ImmutableState.__getitem__:1
+msgid ""
+"Get the value for the corresponding key from the wrapped state object using "
+"subscription notation."
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.ImmutableState.__getitem__:3
+msgid "Key to access."
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.ImmutableState.__getattr__:0
+#: starlite.datastructures.state.ImmutableState.__getitem__:0
+#: starlite.datastructures.state.State.__delattr__:0
+#: starlite.datastructures.state.State.__delitem__:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.ImmutableState.__getattr__:0
+#: starlite.datastructures.state.ImmutableState.__getitem__:0
+#: starlite.datastructures.state.ImmutableState.__iter__:0
+#: starlite.datastructures.state.ImmutableState.__len__:0
+#: starlite.datastructures.state.ImmutableState.dict:0
+#: starlite.datastructures.state.ImmutableState.mutable_copy:0
+#: starlite.datastructures.state.ImmutableState.validate:0
+#: starlite.datastructures.state.State.__delattr__:0
+#: starlite.datastructures.state.State.__delitem__:0
+#: starlite.datastructures.state.State.__setattr__:0
+#: starlite.datastructures.state.State.__setitem__:0
+#: starlite.datastructures.state.State.copy:0
+#: starlite.datastructures.state.State.immutable_copy:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.ImmutableState.__getitem__:7
+msgid "A value from the wrapped state instance."
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.ImmutableState.__iter__:1
+msgid "Return an iterator iterating the wrapped state dict."
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.ImmutableState.__iter__:3
+msgid "An iterator of strings"
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.ImmutableState.__len__:1
+msgid "Return length of the wrapped state dict."
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.ImmutableState.__len__:3
+msgid "An integer"
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.ImmutableState.__getattr__:1
+msgid ""
+"Get the value for the corresponding key from the wrapped state object using "
+"attribute notation."
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.ImmutableState.__getattr__:3
+msgid "Key to retrieve"
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.ImmutableState.__getattr__:5
+#: starlite.datastructures.state.State.__delattr__:5
+#: starlite.datastructures.state.State.__delitem__:5
+msgid "if the given attribute is not set."
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.ImmutableState.__getattr__:7
+msgid "The retrieved value"
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.ImmutableState.__copy__:1
+msgid "Return a shallow copy of the given state object."
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.ImmutableState.__copy__:3
+msgid "Customizes how the builtin \"copy\" function will work."
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.ImmutableState.mutable_copy:1
+msgid "Return a mutable copy of the state object."
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.ImmutableState.mutable_copy:3
+#: starlite.datastructures.state.State.copy:3
+#: starlite.datastructures.state.State.immutable_copy:3
+msgid "A ``State``"
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.ImmutableState.dict:1
+msgid "Return a shallow copy of the wrapped dict."
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.ImmutableState.dict:3
+msgid "A dict"
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.ImmutableState.__get_validators__:1
+msgid ""
+"Pydantic compatible method to allow custom parsing of state instances in a "
+"SignatureModel."
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.ImmutableState.validate:1
+msgid ""
+"Parse a value and instantiate state inside a SignatureModel. This allows us "
+"to use custom subclasses of state, as well as allows users to decide whether "
+"state is mutable or immutable."
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.ImmutableState.validate:4
+msgid "The value from which to initialize the state instance."
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.ImmutableState.validate:6
+msgid "An ImmutableState instance"
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.State:1
+msgid ""
+"Bases: :py:class:`~starlite.datastructures.state.ImmutableState`, :py:class:"
+"`~typing.MutableMapping`\\ [:py:class:`str`, :py:obj:`~typing.Any`]"
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.State.__init__:1
+msgid "Initialize a ``State`` instance with an optional value."
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.State.__init__:6
+msgid "Examples: .. code-block: python"
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.State.__init__:9
+msgid "from starlite import State"
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.State.__init__:11
+msgid ""
+"state_dict = {\"first\": 1, \"second\": 2, \"third\": 3, \"fourth\": 4} "
+"state = State(state_dict)"
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.State.__init__:14
+msgid ""
+"# state can be accessed using '.' notation assert state.fourth == 4 del "
+"state.fourth"
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.State.__init__:18
+msgid ""
+"# state implements the Mapping type: assert len(state) == 3 assert \"first\" "
+"in state assert not \"fourth\" in state assert state[\"first\"] == 1 assert "
+"[(k, v) for k, v in state.items()] == [(\"first\", 1), (\"second\", 2), "
+"(\"third\", 3)]"
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.State.__init__:25
+msgid "state[\"fourth\"] = 4 assert \"fourth\" in state del state[\"fourth\"]"
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.State.__init__:29
+msgid ""
+"# state implements __bool__ assert state  # state is true when it has "
+"values. assert not State()  # state is empty when it has no values."
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.State.__init__:33
+msgid ""
+"# it has shallow copy copied_state = state.copy() del copied_state.first "
+"assert state.first"
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.State.__init__:38
+msgid ""
+"# it has a 'dict' method to retrieve a shallow copy of the underlying dict "
+"inner_dict = state.dict() assert inner_dict == state_dict"
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.State.__init__:42
+msgid ""
+"# you can get an immutable copy of the state by calling "
+"'immutable_immutable_copy' immutable_copy = state.immutable_copy() del "
+"immutable_copy.first  #  raises AttributeError"
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.State.__delitem__:1
+msgid ""
+"Delete the value from the key from the wrapped state object using "
+"subscription notation."
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.State.__delattr__:3
+#: starlite.datastructures.state.State.__delitem__:3
+msgid "Key to delete"
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.State.__delattr__:7
+#: starlite.datastructures.state.State.__delitem__:7
+#: starlite.datastructures.state.State.__setattr__:6
+#: starlite.datastructures.state.State.__setitem__:6
+msgid "None"
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.State.__setitem__:1
+msgid "Set an item in the state using subscription notation."
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.State.__setattr__:3
+#: starlite.datastructures.state.State.__setitem__:3
+msgid "Key to set."
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.State.__setattr__:4
+#: starlite.datastructures.state.State.__setitem__:4
+msgid "Value to set."
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.State.__setattr__:1
+msgid "Set an item in the state using attribute notation."
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.State.__delattr__:1
+msgid ""
+"Delete the value from the key from the wrapped state object using attribute "
+"notation."
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.State.copy:1
+msgid "Return a shallow copy of the state object."
+msgstr ""
+
+#: ../../../../starlite/datastructures/state.py:docstring of
+#: starlite.datastructures.state.State.immutable_copy:1
+msgid "Return a shallow copy of the state object, setting it to be frozen."
+msgstr ""
