@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:2
 msgid "Manually with ASGI server"
-msgstr ""
+msgstr "手動使用 ASGI 伺服器"
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:4
 msgid ""
@@ -27,6 +27,8 @@ msgid ""
 "standard interface between async Python web frameworks like Litestar, and "
 "async web servers."
 msgstr ""
+"ASGI（異步伺服器閘道介面）旨在為 Litestar 等異步 Python 網頁框架與異步網頁伺"
+"服器之間提供標準介面。"
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:7
 msgid ""
@@ -36,7 +38,7 @@ msgstr ""
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:10
 msgid "Use When"
-msgstr ""
+msgstr "使用時機"
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:12
 msgid ""
@@ -72,7 +74,7 @@ msgstr ""
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:26
 msgid "Official documentation coming soon"
-msgstr ""
+msgstr "官方文件即將推出"
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:27
 msgid ":doc:`Supervisor <supervisor>`:"
@@ -86,7 +88,7 @@ msgstr ""
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:29
 msgid ":doc:`Docker <docker>`:"
-msgstr ""
+msgstr ":doc:`Docker <docker>`："
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:30
 msgid ""
@@ -95,11 +97,11 @@ msgstr ""
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:33
 msgid "Choosing an ASGI Server"
-msgstr ""
+msgstr "選擇 ASGI 伺服器"
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:0
 msgid "Uvicorn"
-msgstr ""
+msgstr "Uvicorn"
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:40
 msgid ""
@@ -220,14 +222,16 @@ msgid ""
 "[2023-11-12 23:31:26 -0800] [16748] [INFO] Running on http://127.0.0.1:8000 "
 "(CTRL + C to quit)"
 msgstr ""
+"[2023-11-12 23:31:26 -0800] [16748] [INFO] Running on http://127.0.0.1:8000 "
+"(CTRL + C to quit)"
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:137
 msgid "Run Daphne with the default configuration"
-msgstr ""
+msgstr "使用預設組態執行 Daphne"
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:137
 msgid "daphne app:app"
-msgstr ""
+msgstr "daphne app:app"
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:142
 msgid ""
@@ -236,10 +240,14 @@ msgid ""
 "INFO - 2023-11-12 23:31:51,572 - daphne.server - server - Listening on TCP "
 "address 127.0.0.1:8000"
 msgstr ""
+"INFO - 2023-11-12 23:31:51,571 - daphne.cli - cli - Starting server at tcp:"
+"port=8000:interface=127.0.0.1\n"
+"INFO - 2023-11-12 23:31:51,572 - daphne.server - server - Listening on TCP "
+"address 127.0.0.1:8000"
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:151
 msgid "Run Granian with the default configuration"
-msgstr ""
+msgstr "使用預設組態執行 Granian"
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:151
 msgid "granian --interface asgi app:app"
@@ -250,6 +258,8 @@ msgid ""
 "[INFO] Starting granian\n"
 "[INFO] Listening at: 127.0.0.1:8000"
 msgstr ""
+"[INFO] Starting granian\n"
+"[INFO] Listening at: 127.0.0.1:8000"
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:163
 msgid "Gunicorn with Uvicorn workers"

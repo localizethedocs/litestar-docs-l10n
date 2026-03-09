@@ -38,7 +38,7 @@ msgstr ""
 
 #: ../../../topics/deployment/docker.rst:11
 msgid "Use When"
-msgstr ""
+msgstr "使用時機"
 
 #: ../../../topics/deployment/docker.rst:13
 msgid ""
@@ -93,7 +93,7 @@ msgstr ""
 
 #: ../../../topics/deployment/docker.rst:27
 msgid "`systemd <https://www.freedesktop.org/wiki/Software/systemd/>`_:"
-msgstr ""
+msgstr "`systemd <https://www.freedesktop.org/wiki/Software/systemd/>`_："
 
 #: ../../../topics/deployment/docker.rst:28
 msgid ""
@@ -103,7 +103,7 @@ msgstr ""
 
 #: ../../../topics/deployment/docker.rst:30
 msgid "Official documentation coming soon"
-msgstr ""
+msgstr "官方文件即將推出"
 
 #: ../../../topics/deployment/docker.rst:31
 msgid ":doc:`Supervisor <supervisor>`:"
@@ -117,7 +117,7 @@ msgstr ""
 
 #: ../../../topics/deployment/docker.rst:33
 msgid ":doc:`Manually with an ASGI server <manually-with-asgi-server>`:"
-msgstr ""
+msgstr ":doc:`手動使用 ASGI 伺服器 <manually-with-asgi-server>`："
 
 #: ../../../topics/deployment/docker.rst:34
 msgid ""
