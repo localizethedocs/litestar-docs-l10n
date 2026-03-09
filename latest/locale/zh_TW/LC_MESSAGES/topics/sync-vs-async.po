@@ -218,7 +218,7 @@ msgstr ""
 
 #: ../../../topics/sync-vs-async.rst:124
 msgid "Limitations"
-msgstr ""
+msgstr "限制"
 
 #: ../../../topics/sync-vs-async.rst:126
 msgid ""
