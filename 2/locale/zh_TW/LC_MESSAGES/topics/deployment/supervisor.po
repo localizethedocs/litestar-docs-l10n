@@ -32,7 +32,7 @@ msgstr ""
 
 #: ../../../topics/deployment/supervisor.rst:10
 msgid "Use When"
-msgstr ""
+msgstr "使用時機"
 
 #: ../../../topics/deployment/supervisor.rst:12
 msgid ""
@@ -68,7 +68,7 @@ msgstr ""
 
 #: ../../../topics/deployment/supervisor.rst:26
 msgid "`systemd <https://www.freedesktop.org/wiki/Software/systemd/>`_:"
-msgstr ""
+msgstr "`systemd <https://www.freedesktop.org/wiki/Software/systemd/>`_："
 
 #: ../../../topics/deployment/supervisor.rst:27
 msgid ""
@@ -78,11 +78,11 @@ msgstr ""
 
 #: ../../../topics/deployment/supervisor.rst:29
 msgid "Official documentation coming soon"
-msgstr ""
+msgstr "官方文件即將推出"
 
 #: ../../../topics/deployment/supervisor.rst:30
 msgid ":doc:`Manually with an ASGI server <manually-with-asgi-server>`:"
-msgstr ""
+msgstr ":doc:`手動使用 ASGI 伺服器 <manually-with-asgi-server>`："
 
 #: ../../../topics/deployment/supervisor.rst:31
 msgid ""
@@ -388,13 +388,13 @@ msgstr ""
 #: ../../../topics/deployment/supervisor.rst:237
 msgid ""
 "**Git Operations:** Ensures the latest code is pulled from the repository."
-msgstr ""
+msgstr "**Git 操作：** 確保從儲存庫拉取最新的程式碼。"
 
 #: ../../../topics/deployment/supervisor.rst:238
 msgid ""
 "**Configuration Symlinking:** Updates ``supervisor`` configuration and shell "
 "alias to reflect any changes."
-msgstr ""
+msgstr "**組態符號連結：** 更新 `supervisor` 組態檔與外殼別名來反映所有變更。"
 
 #: ../../../topics/deployment/supervisor.rst:239
 msgid ""
@@ -416,7 +416,7 @@ msgstr ""
 
 #: ../../../topics/deployment/supervisor.rst:244
 msgid "Execution"
-msgstr ""
+msgstr "執行"
 
 #: ../../../topics/deployment/supervisor.rst:246
 msgid ""
@@ -424,3 +424,5 @@ msgid ""
 "streamlines the deployment of new code and configuration changes, ensuring a "
 "smooth and consistent application update cycle."
 msgstr ""
+"執行 ``exampleapp update`` 命令來執行此更新過程。它簡化了新程式碼和組態變更的"
+"部署，確保應用程式更新週期能夠流暢且一致地進行。"
