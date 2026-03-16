@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-03-09 09:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -202,31 +202,78 @@ msgid "Exception handling"
 msgstr ""
 
 #: ../../../usage/exceptions.rst:74
-msgid ""
-"Litestar handles all errors by default by transforming them into **JSON "
-"responses**. If the errors are **instances of** :class:`~litestar.exceptions."
-"http_exceptions.HTTPException`, the responses will include the appropriate "
-"``status_code``. Otherwise, the responses will default to ``500 - \"Internal "
-"Server Error\"``."
+msgid "There are 2 layers of exception handling:"
 msgstr ""
 
-#: ../../../usage/exceptions.rst:79
+#: ../../../usage/exceptions.rst:76
+msgid ""
+"Built-in exception handlers, for all exceptions deriving from :exc:"
+"`LitestarException` and :exc:`HTTPException`"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:78
+msgid "User-defined exception handlers"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:80
+msgid ""
+"If an exception is raised, Litestar will first attempt to find a user-"
+"defined exception handler (traversing all application layers from route "
+"handler -> application), defaulting to the built-in ones."
+msgstr ""
+
+#: ../../../usage/exceptions.rst:84
+msgid ""
+"If no exception handler is found, the exception will be re-raised, to be "
+"handled by the ASGI server."
+msgstr ""
+
+#: ../../../usage/exceptions.rst:89
+msgid "Built-in exception handlers"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:91
+msgid ""
+"Exceptions derived from :exc:`LitestarException` and :exc:`HTTPException` "
+"will be handled by Litestar's built-in exception handlers. Error responses "
+"for these will include the ``detail`` passed to the exception."
+msgstr ""
+
+#: ../../../usage/exceptions.rst:95
+msgid ""
+"If a subclass the exception is an :exc:`HTTPException`, the response will "
+"have the status code set on that exception, and default to ``500 - "
+"\"Internal Server Error\"`` otherwise."
+msgstr ""
+
+#: ../../../usage/exceptions.rst:99
+msgid ""
+"The exception handlers will respect the handler's media type, and but fall "
+"back to JSON."
+msgstr ""
+
+#: ../../../usage/exceptions.rst:101
 msgid ""
 "The following handler for instance will default to ``MediaType.TEXT`` so the "
 "exception will be raised as text."
 msgstr ""
 
-#: ../../../usage/exceptions.rst:82
+#: ../../../usage/exceptions.rst:104
 msgid ""
 "from litestar import get\n"
+"from litestar.exceptions import HTTPException\n"
 "\n"
 "\n"
 "@get(sync_to_thread=False)\n"
 "def handler(q: int) -> str:\n"
-"    raise ValueError"
+"    raise HTTPException(\"nope\", status_code=400)"
 msgstr ""
 
-#: ../../../usage/exceptions.rst:84
+#: ../../../usage/exceptions.rst:108
+msgid "Custom exception handlers"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:110
 msgid ""
 "You can customize exception handling by passing a dictionary, mapping either "
 "status codes or exception classes to callables. For example, if you would "
@@ -234,7 +281,7 @@ msgid ""
 "plain-text responses you could do this:"
 msgstr ""
 
-#: ../../../usage/exceptions.rst:89
+#: ../../../usage/exceptions.rst:115
 msgid ""
 "from litestar import Litestar, MediaType, Request, Response, get\n"
 "from litestar.exceptions import HTTPException\n"
@@ -272,14 +319,14 @@ msgid ""
 "an error occurred"
 msgstr ""
 
-#: ../../../usage/exceptions.rst:92
+#: ../../../usage/exceptions.rst:118
 msgid ""
 "The above will define a top level exception handler that will apply the "
 "``plain_text_exception_handler`` function to all exceptions that inherit "
 "from ``HTTPException``. You could of course be more granular:"
 msgstr ""
 
-#: ../../../usage/exceptions.rst:96
+#: ../../../usage/exceptions.rst:123
 msgid ""
 "from litestar import Litestar, MediaType, Request, Response, get\n"
 "from litestar.exceptions import HTTPException, ValidationException\n"
@@ -348,17 +395,17 @@ msgid ""
 "value error: this is wrong"
 msgstr ""
 
-#: ../../../usage/exceptions.rst:99
+#: ../../../usage/exceptions.rst:126
 msgid ""
 "The choice whether to use a single function that has switching logic inside "
 "it, or multiple functions depends on your specific needs."
 msgstr ""
 
-#: ../../../usage/exceptions.rst:104
+#: ../../../usage/exceptions.rst:131
 msgid "Exception handling layers"
 msgstr ""
 
-#: ../../../usage/exceptions.rst:106
+#: ../../../usage/exceptions.rst:133
 msgid ""
 "Since Litestar allows users to define both exception handlers and "
 "middlewares in a layered fashion, i.e. on individual route handlers, "
@@ -366,11 +413,11 @@ msgid ""
 "handlers are required to ensure that exceptions are handled correctly:"
 msgstr ""
 
-#: ../../../usage/exceptions.rst:114
+#: ../../../usage/exceptions.rst:141
 msgid "Exception Handlers"
 msgstr ""
 
-#: ../../../usage/exceptions.rst:117
+#: ../../../usage/exceptions.rst:144
 msgid ""
 "As a result of the above structure, the exceptions raised by the ASGI Router "
 "itself, namely ``404 Not Found`` and ``405 Method Not Allowed`` are handled "
@@ -380,7 +427,7 @@ msgid ""
 "purpose."
 msgstr ""
 
-#: ../../../usage/exceptions.rst:122
+#: ../../../usage/exceptions.rst:149
 msgid ""
 "Litestar supports defining exception handlers on all layers of the app, with "
 "the lower layers overriding layer above them. In the following example, the "
@@ -388,7 +435,7 @@ msgid ""
 "``ValidationException`` occurring within that route handler:"
 msgstr ""
 
-#: ../../../usage/exceptions.rst:127
+#: ../../../usage/exceptions.rst:154
 msgid ""
 "from litestar import Litestar, Request, Response, get\n"
 "from litestar.exceptions import HTTPException, ValidationException\n"

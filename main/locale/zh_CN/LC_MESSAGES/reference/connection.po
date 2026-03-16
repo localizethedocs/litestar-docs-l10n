@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-03-09 09:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,67 +19,6 @@ msgstr ""
 
 #: ../../../reference/connection.rst:2
 msgid "connection"
-msgstr ""
-
-#: ../../../../litestar/connection/__init__.py:docstring of
-#: litestar.connection:1
-msgid ""
-"Some code in this module was adapted from https://github.com/encode/"
-"starlette/blob/master/starlette/requests.py and https://github.com/encode/"
-"starlette/blob/master/starlette/websockets.py."
-msgstr ""
-
-#: ../../../../litestar/connection/__init__.py:docstring of
-#: litestar.connection:4
-msgid ""
-"Copyright © 2018, [Encode OSS Ltd](https://www.encode.io/). All rights "
-"reserved."
-msgstr ""
-
-#: ../../../../litestar/connection/__init__.py:docstring of
-#: litestar.connection:7
-msgid ""
-"Redistribution and use in source and binary forms, with or without "
-"modification, are permitted provided that the following conditions are met:"
-msgstr ""
-
-#: ../../../../litestar/connection/__init__.py:docstring of
-#: litestar.connection:10
-msgid ""
-"Redistributions of source code must retain the above copyright notice, this "
-"list of conditions and the following disclaimer."
-msgstr ""
-
-#: ../../../../litestar/connection/__init__.py:docstring of
-#: litestar.connection:13
-msgid ""
-"Redistributions in binary form must reproduce the above copyright notice, "
-"this list of conditions and the following disclaimer in the documentation "
-"and/or other materials provided with the distribution."
-msgstr ""
-
-#: ../../../../litestar/connection/__init__.py:docstring of
-#: litestar.connection:17
-msgid ""
-"Neither the name of the copyright holder nor the names of its contributors "
-"may be used to endorse or promote products derived from this software "
-"without specific prior written permission."
-msgstr ""
-
-#: ../../../../litestar/connection/__init__.py:docstring of
-#: litestar.connection:21
-msgid ""
-"THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS "
-"IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, "
-"THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR "
-"PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR "
-"CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, "
-"EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, "
-"PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; "
-"OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, "
-"WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR "
-"OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF "
-"ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
 msgstr ""
 
 #: ../../../../litestar/connection/__init__.py:docstring of
@@ -226,21 +165,6 @@ msgstr ""
 #: ../../../../litestar/connection/__init__.py:docstring of
 #: litestar.connection.ASGIConnection.headers:3
 msgid "A Headers instance with the request's scope[\"headers\"] value."
-msgstr ""
-
-#: ../../../../litestar/connection/__init__.py:docstring of
-#: litestar.connection.ASGIConnection.logger:1
-msgid "Return the ``Logger`` instance for this connection."
-msgstr ""
-
-#: ../../../../litestar/connection/__init__.py:docstring of
-#: litestar.connection.ASGIConnection.logger:3
-msgid "A ``Logger`` instance."
-msgstr ""
-
-#: ../../../../litestar/connection/__init__.py:docstring of
-#: litestar.connection.ASGIConnection.logger:5
-msgid "if ``log_config`` has not been passed to the Litestar constructor."
 msgstr ""
 
 #: ../../../../litestar/connection/__init__.py:docstring of

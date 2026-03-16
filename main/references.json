@@ -16,9 +16,9 @@
       "branch" : "main",
       "commit" : 
       {
-        "date" : "2026-02-24 11:08:47 +0100",
-        "hash" : "f6600e39395161071aa69699aedd87f068659dec",
-        "title" : "style(docs): adapt buttons for mobile layout (#4608)"
+        "date" : "2026-03-07 15:14:21 +0100",
+        "hash" : "c31aa519bc26a357e595c9a522b9db06ea5a3136",
+        "title" : "feat(logging)!: Radically new logging experience (#4615)"
       }
     },
     "zh_TW" : 
@@ -26,9 +26,9 @@
       "branch" : "main",
       "commit" : 
       {
-        "date" : "2026-02-24 11:08:47 +0100",
-        "hash" : "f6600e39395161071aa69699aedd87f068659dec",
-        "title" : "style(docs): adapt buttons for mobile layout (#4608)"
+        "date" : "2026-03-07 15:14:21 +0100",
+        "hash" : "c31aa519bc26a357e595c9a522b9db06ea5a3136",
+        "title" : "feat(logging)!: Radically new logging experience (#4615)"
       }
     }
   },
