@@ -24,7 +24,7 @@ msgstr ""
 #: ../../../../litestar/middleware/logging.py:docstring of
 #: litestar.middleware.logging.LoggingMiddleware:1
 msgid "Bases: :py:class:`~litestar.middleware.base.AbstractMiddleware`"
-msgstr "基底類別：:py:class:`~litestar.middleware.base.AbstractMiddleware`"
+msgstr ""
 
 #: ../../../../litestar/middleware/logging.py:docstring of
 #: litestar.middleware.logging.LoggingMiddleware:1
@@ -34,7 +34,7 @@ msgstr ""
 #: ../../../../litestar/middleware/logging.py:docstring of
 #: litestar.middleware.logging.LoggingMiddleware.__init__:1
 msgid "Initialize ``LoggingMiddleware``."
-msgstr "初始化 ``LoggingMiddleware``。"
+msgstr ""
 
 #: ../../../reference/middleware/logging.rst:0
 msgid "Parameters"
@@ -133,7 +133,7 @@ msgstr ""
 #: ../../../../litestar/middleware/logging.py:docstring of
 #: litestar.middleware.logging.LoggingMiddlewareConfig:1
 msgid "Bases: :py:class:`object`"
-msgstr "基底類別：:py:class:`object`"
+msgstr ""
 
 #: ../../../../litestar/middleware/logging.py:docstring of
 #: litestar.middleware.logging.LoggingMiddlewareConfig:1
@@ -280,7 +280,7 @@ msgstr ""
 #: ../../../../litestar/middleware/logging.py:docstring of
 #: litestar.middleware.logging.LoggingMiddlewareConfig.middleware:3
 msgid "Examples"
-msgstr "範例"
+msgstr ""
 
 #: ../../../../litestar/middleware/logging.py:docstring of
 #: litestar.middleware.logging.LoggingMiddlewareConfig.middleware:6

@@ -31,7 +31,7 @@ msgstr ""
 
 #: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:8
 msgid "Example"
-msgstr ""
+msgstr "範例"
 
 #: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:0
 msgid "Async"
