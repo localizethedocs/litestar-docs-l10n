@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-09 09:38+0000\n"
+"POT-Creation-Date: 2026-03-23 09:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -100,10 +100,10 @@ msgstr ""
 
 #: ../../../usage/dto/1-abstract-dto.rst:-1
 msgid ""
-"> curl http://127.0.0.1:8000/users -H Content-Type: application/json -d "
-"{\"name\":\"Litestar User\",\"password\":\"xyz\",\"created_at\":"
-"\"2023-04-24T00:00:00Z\"}\n"
-"{\"id\":\"1e07df1d-b055-478d-8e8f-5a956e516fd2\",\"name\":\"Litestar User\","
+"> curl http://127.0.0.1:8000/users -H 'Content-Type: application/json' -d "
+"'{\"name\":\"Litestar User\",\"password\":\"xyz\",\"created_at\":"
+"\"2023-04-24T00:00:00Z\"}'\n"
+"{\"id\":\"07c3a469-2cf0-419c-b8fe-f64240e416d4\",\"name\":\"Litestar User\","
 "\"password\":\"xyz\",\"created_at\":\"2023-04-24T00:00:00Z\"}"
 msgstr ""
 
@@ -189,11 +189,11 @@ msgstr ""
 
 #: ../../../usage/dto/1-abstract-dto.rst:-1
 msgid ""
-"> curl http://127.0.0.1:8000/users -H Content-Type: application/json -d "
-"{\"name\":\"Litestar User\",\"password\":\"xyz\",\"created_at\":"
-"\"2023-04-24T00:00:00Z\"}\n"
-"{\"created_at\":\"0001-01-01T00:00:00\",\"id\":\"6f1c812d-65bd-4722-"
-"b55e-2fa3cd01fcc7\",\"name\":\"Litestar User\"}"
+"> curl http://127.0.0.1:8000/users -H 'Content-Type: application/json' -d "
+"'{\"name\":\"Litestar User\",\"password\":\"xyz\",\"created_at\":"
+"\"2023-04-24T00:00:00Z\"}'\n"
+"{\"created_at\":\"0001-01-01T00:00:00\",\"id\":\"85c95142-6cc9-4158-"
+"aa2b-4caa8179695c\",\"name\":\"Litestar User\"}"
 msgstr ""
 
 #: ../../../usage/dto/1-abstract-dto.rst:53
@@ -286,9 +286,9 @@ msgstr ""
 
 #: ../../../usage/dto/1-abstract-dto.rst:-1
 msgid ""
-"> curl http://127.0.0.1:8000/users -H Content-Type: application/json -d "
-"{\"name\":\"Litestar User\",\"password\":\"xyz\",\"created_at\":"
-"\"2023-04-24T00:00:00Z\"}\n"
+"> curl http://127.0.0.1:8000/users -H 'Content-Type: application/json' -d "
+"'{\"name\":\"Litestar User\",\"password\":\"xyz\",\"created_at\":"
+"\"2023-04-24T00:00:00Z\"}'\n"
 "{\"created_at\":\"0001-01-01T00:00:00\",\"address\":{\"city\":\"Anytown\","
 "\"state\":\"NY\",\"zip\":\"12345\"},\"pets\":[{\"name\":\"Fido\"},{\"name\":"
 "\"Spot\"}],\"name\":\"Litestar User\"}"
@@ -383,11 +383,11 @@ msgstr ""
 
 #: ../../../usage/dto/1-abstract-dto.rst:-1
 msgid ""
-"> curl http://127.0.0.1:8000/users -H Content-Type: application/json -d "
-"{\"userName\":\"Litestar User\",\"password\":\"xyz\",\"created_at\":"
-"\"2023-04-24T00:00:00Z\"}\n"
-"{\"created_at\":\"0001-01-01T00:00:00\",\"id\":\"d1784cdd-9ed0-4d31-ad31-"
-"d2c219fb9444\",\"userName\":\"Litestar User\"}"
+"> curl http://127.0.0.1:8000/users -H 'Content-Type: application/json' -d "
+"'{\"userName\":\"Litestar User\",\"password\":\"xyz\",\"created_at\":"
+"\"2023-04-24T00:00:00Z\"}'\n"
+"{\"created_at\":\"0001-01-01T00:00:00\",\"id\":"
+"\"638b7a66-4498-450e-8823-919503d2aeb1\",\"userName\":\"Litestar User\"}"
 msgstr ""
 
 #: ../../../usage/dto/1-abstract-dto.rst:113
@@ -436,11 +436,11 @@ msgstr ""
 
 #: ../../../usage/dto/1-abstract-dto.rst:-1
 msgid ""
-"> curl http://127.0.0.1:8000/users -H Content-Type: application/json -d "
-"{\"firstName\":\"Litestar User\",\"password\":\"xyz\",\"createdAt\":"
-"\"2023-04-24T00:00:00Z\"}\n"
-"{\"createdAt\":\"0001-01-01T00:00:00\",\"id\":\"3156a9e9-6bd0-4df6-9d66-"
-"bf99e82904a7\",\"firstName\":\"Litestar User\"}"
+"> curl http://127.0.0.1:8000/users -H 'Content-Type: application/json' -d "
+"'{\"firstName\":\"Litestar User\",\"password\":\"xyz\",\"createdAt\":"
+"\"2023-04-24T00:00:00Z\"}'\n"
+"{\"createdAt\":\"0001-01-01T00:00:00\",\"id\":\"64445c35-eab6-47b1-"
+"a9f8-0dd8d932a03b\",\"firstName\":\"Litestar User\"}"
 msgstr ""
 
 #: ../../../usage/dto/1-abstract-dto.rst:121
@@ -591,10 +591,10 @@ msgstr ""
 
 #: ../../../usage/dto/1-abstract-dto.rst:-1
 msgid ""
-"> curl http://127.0.0.1:8000/a -H Content-Type: application/json -X PUT -d "
-"{\"id\": \"6955e63c-c2bc-4707-8fa4-2144d1764746\", \"b_id\": "
+"> curl http://127.0.0.1:8000/a -H 'Content-Type: application/json' -X PUT -d "
+"'{\"id\": \"6955e63c-c2bc-4707-8fa4-2144d1764746\", \"b_id\": "
 "\"9cf3518d-7e19-4215-9ec2-e056cac55bf7\", \"b\": {\"id\": "
-"\"9cf3518d-7e19-4215-9ec2-e056cac55bf7\"}}\n"
+"\"9cf3518d-7e19-4215-9ec2-e056cac55bf7\"}}'\n"
 "{\"b_id\":\"9cf3518d-7e19-4215-9ec2-e056cac55bf7\",\"b\":{\"id\":"
 "\"9cf3518d-7e19-4215-9ec2-e056cac55bf7\"},\"id\":\"6955e63c-"
 "c2bc-4707-8fa4-2144d1764746\"}"
@@ -658,8 +658,8 @@ msgstr ""
 
 #: ../../../usage/dto/1-abstract-dto.rst:-1
 msgid ""
-"> curl http://127.0.0.1:8000/users -H Content-Type: application/json -d "
-"{\"id\": \"1\", \"name\": \"Peter\"}\n"
+"> curl http://127.0.0.1:8000/users -H 'Content-Type: application/json' -d "
+"'{\"id\": \"1\", \"name\": \"Peter\"}'\n"
 "{\"status_code\":400,\"detail\":\"Object contains unknown field `name`\"}"
 msgstr ""
 
@@ -727,10 +727,10 @@ msgstr ""
 
 #: ../../../usage/dto/1-abstract-dto.rst:-1
 msgid ""
-"> curl http://127.0.0.1:8000/users -H Content-Type: application/json -d "
-"{\"name\":\"Peter\",\"email\": \"peter@example.com\", \"age\":41}\n"
+"> curl http://127.0.0.1:8000/users -H 'Content-Type: application/json' -d "
+"'{\"name\":\"Peter\",\"email\": \"peter@example.com\", \"age\":41}'\n"
 "{\"name\":\"Peter\",\"email\":\"peter@example.com\",\"age\":41,\"id\":"
-"\"2341c7a2-a091-442e-9f0c-60e887e07ec3\"}"
+"\"823714e3-b184-4a3f-8667-bac8a97fa662\"}"
 msgstr ""
 
 #: ../../../usage/dto/1-abstract-dto.rst:198
@@ -795,10 +795,10 @@ msgstr ""
 
 #: ../../../usage/dto/1-abstract-dto.rst:-1
 msgid ""
-"> curl http://127.0.0.1:8000/users -H Content-Type: application/json -d "
-"{\"name\":\"Peter\", \"email\": \"peter@example.com\", \"age\":41}\n"
+"> curl http://127.0.0.1:8000/users -H 'Content-Type: application/json' -d "
+"'{\"name\":\"Peter\", \"email\": \"peter@example.com\", \"age\":41}'\n"
 "{\"name\":\"Peter\",\"email\":\"peter@example.com\",\"age\":41,\"id\":"
-"\"9d0b4f2b-fbd7-4b56-961c-36f1466d61bc\"}"
+"\"f51574a1-c42b-4992-bec3-7cf825b82c2e\"}"
 msgstr ""
 
 #: ../../../usage/dto/1-abstract-dto.rst:216
@@ -876,8 +876,9 @@ msgstr ""
 
 #: ../../../usage/dto/1-abstract-dto.rst:-1
 msgid ""
-"> curl http://127.0.0.1:8000/person -H Content-Type: application/json -d "
-"{\"name\":\"Peter\",\"age\":41, \"address\": {\"street\": \"Fake Street\"}}\n"
+"> curl http://127.0.0.1:8000/person -H 'Content-Type: application/json' -d "
+"'{\"name\":\"Peter\",\"age\":41, \"address\": {\"street\": \"Fake "
+"Street\"}}'\n"
 "{\"id\":1,\"name\":\"Peter\",\"age\":41,\"address\":{\"id\":2,\"street\":"
 "\"Fake Street\"}}"
 msgstr ""
@@ -960,7 +961,7 @@ msgstr ""
 #: ../../../usage/dto/1-abstract-dto.rst:-1
 msgid ""
 "> curl http://127.0.0.1:8000/person/f32ff2ce-e32f-4537-9dc0-26e7599f1380 -X "
-"PATCH -H Content-Type: application/json -d {\"name\":\"Peter Pan\"}\n"
+"PATCH -H 'Content-Type: application/json' -d '{\"name\":\"Peter Pan\"}'\n"
 "{\"id\":\"f32ff2ce-e32f-4537-9dc0-26e7599f1380\",\"name\":\"Peter Pan\","
 "\"age\":40}"
 msgstr ""
@@ -1023,8 +1024,8 @@ msgstr ""
 
 #: ../../../usage/dto/1-abstract-dto.rst:-1
 msgid ""
-"> curl http://127.0.0.1:8000/ -H Content-Type: application/json -d {\"bar\":"
-"\"stay\",\"_baz\":\"go_away!\"}\n"
+"> curl http://127.0.0.1:8000/ -H 'Content-Type: application/json' -d "
+"'{\"bar\":\"stay\",\"_baz\":\"go_away!\"}'\n"
 "{\"status_code\":400,\"detail\":\"Object missing required field "
 "`this_will`\"}"
 msgstr ""
@@ -1064,8 +1065,8 @@ msgstr ""
 
 #: ../../../usage/dto/1-abstract-dto.rst:-1
 msgid ""
-"> curl http://127.0.0.1:8000/ -H Content-Type: application/json -d "
-"{\"this_will\":\"stay\",\"_this_will\":\"not_go_away!\"}\n"
+"> curl http://127.0.0.1:8000/ -H 'Content-Type: application/json' -d "
+"'{\"this_will\":\"stay\",\"_this_will\":\"not_go_away!\"}'\n"
 "{\"this_will\":\"stay\",\"_this_will\":\"not_go_away!\"}"
 msgstr ""
 
