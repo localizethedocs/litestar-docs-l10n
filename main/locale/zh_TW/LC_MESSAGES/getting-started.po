@@ -195,7 +195,7 @@ msgstr ""
 
 #: ../../../getting-started.rst:73
 msgid "Minimal Example"
-msgstr ""
+msgstr "最小範例"
 
 #: ../../../getting-started.rst:75
 msgid ""
@@ -718,15 +718,3 @@ msgid ""
 "`litestar-hello-world <https://github.com/litestar-org/litestar-hello-"
 "world>`_: A bare-minimum application setup. Great for testing and POC work."
 msgstr ""
-
-#~ msgid ":ref:`Picologging <usage/logging:using picologging>`"
-#~ msgstr ":ref:`Picologging <usage/logging:using picologging>`"
-
-#~ msgid ":code:`pip install 'litestar[picologging]'`"
-#~ msgstr ":code:`pip install 'litestar[picologging]'`"
-
-#~ msgid ":ref:`StructLog <usage/logging:using structlog>`"
-#~ msgstr ":ref:`StructLog <usage/logging:using structlog>`"
-
-#~ msgid ":code:`pip install 'litestar[structlog]'`"
-#~ msgstr ":code:`pip install 'litestar[structlog]'`"

@@ -65,19 +65,19 @@ msgstr ""
 
 #: ../../../usage/logging.rst:20
 msgid ":attr:`~litestar.connection.Request.method`"
-msgstr ""
+msgstr ":attr:`~litestar.connection.Request.method`"
 
 #: ../../../usage/logging.rst:21
 msgid ":attr:`~litestar.connection.Request.content_type`"
-msgstr ""
+msgstr ":attr:`~litestar.connection.Request.content_type`"
 
 #: ../../../usage/logging.rst:22
 msgid ":attr:`~litestar.connection.ASGIConnection.query_params`"
-msgstr ""
+msgstr ":attr:`~litestar.connection.ASGIConnection.query_params`"
 
 #: ../../../usage/logging.rst:23
 msgid ":attr:`~litestar.connection.ASGIConnection.path_params`"
-msgstr ""
+msgstr ":attr:`~litestar.connection.ASGIConnection.path_params`"
 
 #: ../../../usage/logging.rst:26
 msgid "Default response log properties"
@@ -176,12 +176,3 @@ msgid ""
 "    ],\n"
 ")"
 msgstr ""
-
-#~ msgid "Using Python standard library"
-#~ msgstr "使用 Python 標準庫"
-
-#~ msgid "Using Picologging"
-#~ msgstr "使用 Picologging"
-
-#~ msgid "Using StructLog"
-#~ msgstr "使用 StructLog"

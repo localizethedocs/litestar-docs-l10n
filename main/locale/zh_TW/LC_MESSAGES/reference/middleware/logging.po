@@ -57,7 +57,7 @@ msgstr ""
 #: ../../../../litestar/middleware/logging.py:docstring of
 #: litestar.middleware.logging.LoggingMiddleware.handle:4
 msgid "The ASGI receive function."
-msgstr ""
+msgstr "ASGI 接收函式。"
 
 #: ../../../../litestar/middleware/logging.py:docstring of
 #: litestar.middleware.logging.LoggingMiddleware.handle:5
@@ -140,15 +140,3 @@ msgstr "ASGI 發送函式。"
 #: litestar.middleware.logging.LoggingMiddleware.create_send_wrapper:6
 msgid "An ASGI send function."
 msgstr ""
-
-#~ msgid "Bases: :py:class:`~litestar.middleware.base.AbstractMiddleware`"
-#~ msgstr "基底類別：:py:class:`~litestar.middleware.base.AbstractMiddleware`"
-
-#~ msgid "Initialize ``LoggingMiddleware``."
-#~ msgstr "初始化 ``LoggingMiddleware``。"
-
-#~ msgid "Bases: :py:class:`object`"
-#~ msgstr "基底類別：:py:class:`object`"
-
-#~ msgid "Examples"
-#~ msgstr "範例"

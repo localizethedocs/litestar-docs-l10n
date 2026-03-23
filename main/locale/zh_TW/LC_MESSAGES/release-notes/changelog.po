@@ -160,7 +160,7 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:129
 msgid "Use instead"
-msgstr ""
+msgstr "請改用"
 
 #: ../../../release-notes/changelog.rst:131
 msgid "``Litestar.openapi_schema_plugins``"
