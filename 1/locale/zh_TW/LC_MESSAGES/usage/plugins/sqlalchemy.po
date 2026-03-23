@@ -577,7 +577,7 @@ msgstr ""
 #: ../../../usage/plugins/sqlalchemy.rst:101
 #: ../../../usage/plugins/sqlalchemy.rst:132
 msgid "Example"
-msgstr ""
+msgstr "範例"
 
 #: ../../../usage/plugins/sqlalchemy.rst:104
 msgid ""

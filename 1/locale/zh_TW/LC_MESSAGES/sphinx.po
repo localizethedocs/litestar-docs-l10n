@@ -3192,7 +3192,7 @@ msgstr ""
 
 #: sphinx/ext/napoleon/docstring.py:672
 msgid "Example"
-msgstr ""
+msgstr "範例"
 
 #: sphinx/ext/napoleon/docstring.py:673
 msgid "Examples"

@@ -533,7 +533,7 @@ msgstr ""
 
 #: ../../../usage/the-starlite-app.rst:252
 msgid "Using Picologging"
-msgstr "使用 Picologging"
+msgstr ""
 
 #: ../../../usage/the-starlite-app.rst:254
 msgid ""
@@ -546,7 +546,7 @@ msgstr ""
 
 #: ../../../usage/the-starlite-app.rst:259
 msgid "Using StructLog"
-msgstr "使用 StructLog"
+msgstr ""
 
 #: ../../../usage/the-starlite-app.rst:261
 msgid ""

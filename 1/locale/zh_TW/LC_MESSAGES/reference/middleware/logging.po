@@ -34,7 +34,7 @@ msgstr ""
 #: ../../../../starlite/middleware/logging.py:docstring of
 #: starlite.middleware.logging.LoggingMiddleware.__init__:1
 msgid "Initialize ``LoggingMiddleware``."
-msgstr "初始化 ``LoggingMiddleware``。"
+msgstr ""
 
 #: ../../../../starlite/middleware/logging.py:docstring of
 #: starlite.middleware.logging.LoggingMiddleware.__init__:0
@@ -279,7 +279,7 @@ msgstr ""
 #: ../../../../starlite/middleware/logging.py:docstring of
 #: starlite.middleware.logging.LoggingMiddlewareConfig.middleware:3
 msgid "Examples"
-msgstr "範例"
+msgstr ""
 
 #: ../../../../starlite/middleware/logging.py:docstring of
 #: starlite.middleware.logging.LoggingMiddlewareConfig.middleware:26
