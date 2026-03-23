@@ -310,11 +310,11 @@ msgstr ""
 
 #: ../../../topics/deployment/supervisor.rst:0
 msgid "Update Script Example"
-msgstr ""
+msgstr "更新腳本範例"
 
 #: ../../../topics/deployment/supervisor.rst:176
 msgid "Example update command"
-msgstr ""
+msgstr "範例更新命令"
 
 #: ../../../topics/deployment/supervisor.rst:176
 msgid ""

@@ -1577,7 +1577,7 @@ msgstr ""
 #: litestar.handlers.websocket_handlers.stream.send_websocket_stream:3
 #: litestar.handlers.websocket_handlers.stream.websocket_stream:4
 msgid "Example"
-msgstr ""
+msgstr "範例"
 
 #: ../../../../litestar/handlers/__init__.py:docstring of
 #: litestar.handlers.websocket_handlers.stream.send_websocket_stream:5
