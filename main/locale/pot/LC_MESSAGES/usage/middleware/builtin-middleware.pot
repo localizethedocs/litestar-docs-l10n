@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-09 09:38+0000\n"
+"POT-Creation-Date: 2026-03-30 10:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -570,17 +570,11 @@ msgstr ""
 msgid "Valkey based sessions"
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:306
-msgid ""
-"Database based :ref:`advanced-alchemy:usage/frameworks/litestar:Session "
-"Middleware`"
-msgstr ""
-
-#: ../../../usage/middleware/builtin-middleware.rst:309
+#: ../../../usage/middleware/builtin-middleware.rst:308
 msgid "Setting up the middleware"
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:311
+#: ../../../usage/middleware/builtin-middleware.rst:310
 msgid ""
 "To start using sessions in your application all you have to do is create an "
 "instance of a :class:`configuration <litestar.middleware.session.base."
@@ -588,11 +582,11 @@ msgid ""
 "middleware stack:"
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:316
+#: ../../../usage/middleware/builtin-middleware.rst:315
 msgid "Hello World"
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:316
+#: ../../../usage/middleware/builtin-middleware.rst:315
 msgid ""
 "from os import urandom\n"
 "\n"
@@ -633,7 +627,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:322
+#: ../../../usage/middleware/builtin-middleware.rst:321
 msgid ""
 "Since both client- and server-side sessions rely on cookies (one for storing "
 "the actual session data, the other for storing the session ID), they share "
@@ -642,29 +636,29 @@ msgid ""
 "BaseBackendConfig`."
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:327
+#: ../../../usage/middleware/builtin-middleware.rst:326
 msgid "Client-side sessions"
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:329
+#: ../../../usage/middleware/builtin-middleware.rst:328
 msgid ""
 "Client side sessions are available through the :class:`~litestar.middleware."
 "session.client_side.ClientSideSessionBackend`, which offers strong AES-CGM "
 "encryption security best practices while support cookie splitting."
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:334
+#: ../../../usage/middleware/builtin-middleware.rst:333
 msgid ""
 "``ClientSideSessionBackend`` requires the `cryptography <https://"
 "cryptography.io/en/latest/>`_ library, which can be installed together with "
 "litestar as an extra using ``pip install 'litestar[cryptography]'``"
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:338
+#: ../../../usage/middleware/builtin-middleware.rst:337
 msgid "``cookie_backend.py``"
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:338
+#: ../../../usage/middleware/builtin-middleware.rst:337
 msgid ""
 "from os import urandom\n"
 "\n"
@@ -676,15 +670,15 @@ msgid ""
 "app = Litestar(middleware=[session_config.middleware])"
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:344
+#: ../../../usage/middleware/builtin-middleware.rst:343
 msgid ":class:`~litestar.middleware.session.client_side.CookieBackendConfig`"
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:348
+#: ../../../usage/middleware/builtin-middleware.rst:347
 msgid "Server-side sessions"
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:350
+#: ../../../usage/middleware/builtin-middleware.rst:349
 msgid ""
 "Server side session store data - as the name suggests - on the server "
 "instead of the client. They use a cookie containing a session ID which is a "
@@ -692,7 +686,7 @@ msgid ""
 "from the store"
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:354
+#: ../../../usage/middleware/builtin-middleware.rst:353
 msgid ""
 "from pathlib import Path\n"
 "\n"
@@ -706,11 +700,11 @@ msgid ""
 ")\n"
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:359
+#: ../../../usage/middleware/builtin-middleware.rst:358
 msgid ":doc:`/usage/stores`"
 msgstr ""
 
-#: ../../../usage/middleware/builtin-middleware.rst:360
+#: ../../../usage/middleware/builtin-middleware.rst:359
 msgid ""
 ":class:`~litestar.middleware.session.server_side.ServerSideSessionConfig`"
 msgstr ""

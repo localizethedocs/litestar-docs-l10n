@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-03-30 10:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,73 +32,12 @@ msgstr ""
 msgid "Final application"
 msgstr ""
 
-#: ../../../tutorials/todo-app/3-assembling-the-app.rst:0
-msgid "Python 3.8+"
-msgstr ""
-
 #: ../../../tutorials/todo-app/3-assembling-the-app.rst:12
 #: ../../../tutorials/todo-app/3-assembling-the-app.rst:22
 #: ../../../tutorials/todo-app/3-assembling-the-app.rst:35
 #: ../../../tutorials/todo-app/3-assembling-the-app.rst:50
 #: ../../../tutorials/todo-app/3-assembling-the-app.rst:65
 msgid "``app.py``"
-msgstr ""
-
-#: ../../../tutorials/todo-app/3-assembling-the-app.rst:12
-msgid ""
-"from dataclasses import dataclass\n"
-"from typing import Optional\n"
-"\n"
-"from litestar import Litestar, get, post, put\n"
-"from litestar.exceptions import NotFoundException\n"
-"\n"
-"\n"
-"@dataclass\n"
-"class TodoItem:\n"
-"    title: str\n"
-"    done: bool\n"
-"\n"
-"\n"
-"TODO_LIST: list[TodoItem] = [\n"
-"    TodoItem(title=\"Start writing TODO list\", done=True),\n"
-"    TodoItem(title=\"???\", done=False),\n"
-"    TodoItem(title=\"Profit\", done=False),\n"
-"]\n"
-"\n"
-"\n"
-"def get_todo_by_title(todo_name) -> TodoItem:\n"
-"    for item in TODO_LIST:\n"
-"        if item.title == todo_name:\n"
-"            return item\n"
-"    raise NotFoundException(detail=f\"TODO {todo_name!r} not found\")\n"
-"\n"
-"\n"
-"@get(\"/\")\n"
-"async def get_list(done: Optional[bool] = None) -> list[TodoItem]:\n"
-"    if done is None:\n"
-"        return TODO_LIST\n"
-"    return [item for item in TODO_LIST if item.done == done]\n"
-"\n"
-"\n"
-"@post(\"/\")\n"
-"async def add_item(data: TodoItem) -> list[TodoItem]:\n"
-"    TODO_LIST.append(data)\n"
-"    return TODO_LIST\n"
-"\n"
-"\n"
-"@put(\"/{item_title:str}\")\n"
-"async def update_item(item_title: str, data: TodoItem) -> list[TodoItem]:\n"
-"    todo_item = get_todo_by_title(item_title)\n"
-"    todo_item.title = data.title\n"
-"    todo_item.done = data.done\n"
-"    return TODO_LIST\n"
-"\n"
-"\n"
-"app = Litestar([get_list, add_item, update_item])"
-msgstr ""
-
-#: ../../../tutorials/todo-app/3-assembling-the-app.rst:0
-msgid "Python 3.10+"
 msgstr ""
 
 #: ../../../tutorials/todo-app/3-assembling-the-app.rst:12
@@ -159,8 +98,7 @@ msgstr ""
 
 #: ../../../tutorials/todo-app/3-assembling-the-app.rst:22
 msgid ""
-"@get(\"/\")\n"
-"async def get_list(done: Optional[bool] = None) -> list[TodoItem]:\n"
+"async def get_list(done: bool | None = None) -> list[TodoItem]:\n"
 "    if done is None:\n"
 "        return TODO_LIST\n"
 "    return [item for item in TODO_LIST if item.done == done]"
@@ -177,7 +115,6 @@ msgstr ""
 
 #: ../../../tutorials/todo-app/3-assembling-the-app.rst:35
 msgid ""
-"@post(\"/\")\n"
 "async def add_item(data: TodoItem) -> list[TodoItem]:\n"
 "    TODO_LIST.append(data)\n"
 "    return TODO_LIST"
@@ -195,7 +132,6 @@ msgstr ""
 
 #: ../../../tutorials/todo-app/3-assembling-the-app.rst:50
 msgid ""
-"@put(\"/{item_title:str}\")\n"
 "async def update_item(item_title: str, data: TodoItem) -> list[TodoItem]:\n"
 "    todo_item = get_todo_by_title(item_title)\n"
 "    todo_item.title = data.title\n"
@@ -218,7 +154,7 @@ msgstr ""
 msgid "app = Litestar([get_list, add_item, update_item])"
 msgstr ""
 
-#: ../../../tutorials/todo-app/3-assembling-the-app.rst:71
+#: ../../../tutorials/todo-app/3-assembling-the-app.rst:70
 msgid ""
 "An instance of ``Litestar`` is created, including the previously defined "
 "route handlers. This app can now be served using an ASGI server like "
@@ -226,11 +162,11 @@ msgid ""
 "Litestar's CLI by executing the ``litestar run`` command."
 msgstr ""
 
-#: ../../../tutorials/todo-app/3-assembling-the-app.rst:78
+#: ../../../tutorials/todo-app/3-assembling-the-app.rst:77
 msgid "Next steps"
 msgstr ""
 
-#: ../../../tutorials/todo-app/3-assembling-the-app.rst:80
+#: ../../../tutorials/todo-app/3-assembling-the-app.rst:79
 msgid ""
 "This tutorial covered some of the fundamental concepts of Litestar. For a "
 "more in-depth explanation of these topics, refer to the :doc:`Usage Guide </"
