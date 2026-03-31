@@ -249,8 +249,8 @@ if     (  ( VERSION MATCHES "^(main)$"        ) OR
     find_package(Uv MODULE REQUIRED)
 
 
-    message(STATUS "Running 'uv export' command to export 'requirements.txt' file from 'uv.lock' file...")
-    set(REQUIREMENTS_TXT_PATH "${PROJ_OUT_REPO_DIR}/requirements.txt")
+    message(STATUS "Running 'uv export' command to export 'pylock.toml' file from 'uv.lock' file...")
+    set(PYLOCK_TOML_PATH "${PROJ_OUT_REPO_DIR}/pylock.toml")
     remove_cmake_message_indent()
     message("")
     execute_process(
@@ -258,8 +258,9 @@ if     (  ( VERSION MATCHES "^(main)$"        ) OR
                 ${ENV_VARS_OF_SYSTEM}
                 ${Uv_EXECUTABLE} export
                 --python ${Python_EXECUTABLE}
-                --format requirements.txt
-                --output-file ${REQUIREMENTS_TXT_PATH}
+                --no-editable
+                --format pylock.toml
+                --output-file ${PYLOCK_TOML_PATH}
         WORKING_DIRECTORY ${PROJ_OUT_REPO_DIR}
         ECHO_OUTPUT_VARIABLE
         ECHO_ERROR_VARIABLE
@@ -285,7 +286,7 @@ if     (  ( VERSION MATCHES "^(main)$"        ) OR
     restore_cmake_message_indent()
 
 
-    message(STATUS "Running 'uv pip install' command to install 'requirements.txt'...")
+    message(STATUS "Running 'uv pip install' command to install requirements...")
     if (CMAKE_HOST_LINUX)
         set(ENV_PATH                "${PROJ_CONDA_DIR}/bin:$ENV{PATH}")
         set(ENV_LD_LIBRARY_PATH     "${PROJ_CONDA_DIR}/lib:$ENV{LD_LIBRARY_PATH}")
@@ -302,19 +303,19 @@ if     (  ( VERSION MATCHES "^(main)$"        ) OR
     else()
         message(FATAL_ERROR "Invalid OS platform. (${CMAKE_HOST_SYSTEM_NAME})")
     endif()
-    set(REQUIREMENTS_TXT_PATH "${PROJ_OUT_REPO_DIR}/requirements.txt")
-    file(READ "${REQUIREMENTS_TXT_PATH}" REQUIREMENTS_TXT_CNT)
+    set(PYLOCK_TOML_PATH "${PROJ_OUT_REPO_DIR}/pylock.toml")
+    file(READ "${PYLOCK_TOML_PATH}" PYLOCK_TOML_CNT)
     remove_cmake_message_indent()
     message("")
-    message("${REQUIREMENTS_TXT_PATH}")
-    message("${REQUIREMENTS_TXT_CNT}")
+    message("${PYLOCK_TOML_PATH}")
+    message("${PYLOCK_TOML_CNT}")
     message("")
     execute_process(
         COMMAND ${CMAKE_COMMAND} -E env
                 ${ENV_VARS_OF_SYSTEM}
                 ${Uv_EXECUTABLE} pip install
                 --python ${Python_EXECUTABLE}
-                --requirement ${REQUIREMENTS_TXT_PATH}
+                --requirement ${PYLOCK_TOML_PATH}
                 --no-progress
                 --verbose
         WORKING_DIRECTORY ${PROJ_OUT_REPO_DIR}
