@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-03-07 15:14:21 +0100",
-      "hash" : "c31aa519bc26a357e595c9a522b9db06ea5a3136",
-      "title" : "feat(logging)!: Radically new logging experience (#4615)"
+      "date" : "2026-03-27 09:55:34 +0300",
+      "hash" : "5875eac623a28c5143629e2ac1ef58e1ac25b85e",
+      "title" : "chore(deps): bump codecov/codecov-action from 5 to 6 (#4651)"
     }
   },
   "type" : "branch",
