@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-03-30 10:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -740,7 +740,7 @@ msgstr ""
 #: ../../../../litestar/openapi/spec/__init__.py:docstring of
 #: litestar.openapi.spec.enums.OpenAPIFormat:1
 #: litestar.openapi.spec.enums.OpenAPIType:1
-msgid "Bases: :py:class:`str`, :py:class:`~enum.Enum`"
+msgid "Bases: :py:class:`~enum.StrEnum`"
 msgstr ""
 
 #: ../../../../litestar/openapi/spec/__init__.py:docstring of

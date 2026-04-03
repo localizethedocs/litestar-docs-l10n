@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-03-30 10:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,6 +40,10 @@ msgid ""
 "Alternatively, the application can be specified explicitly via the '--app' "
 "option ('litestar --app=<module name>.<submodule>:<app instance or "
 "factory>') or the 'LITESTAR_APP' environment variable of the same name."
+msgstr ""
+
+#: ../../../reference/cli.rst:0
+msgid "Usage"
 msgstr ""
 
 #: ../../../../litestar:1

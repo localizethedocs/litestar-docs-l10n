@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-03-30 10:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,7 +38,7 @@ msgid "Mark the field as read-only, or private."
 msgstr ""
 
 #: ../../../../litestar/dto/field.py:docstring of litestar.dto.field.Mark:1
-msgid "Bases: :py:class:`str`, :py:class:`~enum.Enum`"
+msgid "Bases: :py:class:`~enum.StrEnum`"
 msgstr ""
 
 #: ../../../../litestar/dto/field.py:docstring of litestar.dto.field.Mark:1

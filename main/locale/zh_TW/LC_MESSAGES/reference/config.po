@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-09 09:38+0000\n"
+"POT-Creation-Date: 2026-03-30 10:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -434,7 +434,7 @@ msgstr ""
 
 #: ../../../../litestar/config/app.py:docstring of
 #: litestar.config.app.ExperimentalFeatures:1
-msgid "Bases: :py:class:`str`, :py:class:`~enum.Enum`"
+msgid "Bases: :py:class:`~enum.StrEnum`"
 msgstr ""
 
 #: ../../../../docstring of
