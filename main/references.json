@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-03-27 09:55:34 +0300",
-      "hash" : "5875eac623a28c5143629e2ac1ef58e1ac25b85e",
-      "title" : "chore(deps): bump codecov/codecov-action from 5 to 6 (#4651)"
+      "date" : "2026-04-04 16:49:37 +0200",
+      "hash" : "69a1ad9865e32b6a3feb572f5510e337319138db",
+      "title" : "fix(dto/msgspec_dto): Fix KeyError when ClassVar exists on msgspec dto struct (#4669)"
     }
   },
   "type" : "branch",
