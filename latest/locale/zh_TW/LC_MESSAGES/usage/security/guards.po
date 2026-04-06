@@ -58,9 +58,6 @@ msgid ""
 "    CONSUMER = \"consumer\"\n"
 "    ADMIN = \"admin\""
 msgstr ""
-"class UserRole(str, Enum):\n"
-"    CONSUMER = \"consumer\"\n"
-"    ADMIN = \"admin\""
 
 #: ../../../usage/security/guards.rst:21
 msgid "Our ``User`` model will now look like this:"

@@ -223,7 +223,7 @@ msgstr ""
 
 #: ../../../usage/dto/1-abstract-dto.rst:0
 msgid "Python 3.8+"
-msgstr "Python 3.8+"
+msgstr ""
 
 #: ../../../usage/dto/1-abstract-dto.rst:70
 msgid ""
@@ -1107,10 +1107,6 @@ msgid ""
 "{\"id\":1,\"name\":\"Peter\",\"age\":41,\"address\":{\"id\":2,\"street\":"
 "\"Fake Street\"}}"
 msgstr ""
-"> curl http://127.0.0.1:8000/person -H Content-Type: application/json -d "
-"{\"name\":\"Peter\",\"age\":41, \"address\": {\"street\": \"Fake Street\"}}\n"
-"{\"id\":1,\"name\":\"Peter\",\"age\":41,\"address\":{\"id\":2,\"street\":"
-"\"Fake Street\"}}"
 
 #: ../../../usage/dto/1-abstract-dto.rst:238
 msgid ""
@@ -1258,10 +1254,6 @@ msgid ""
 "{\"status_code\":400,\"detail\":\"Object missing required field "
 "`this_will`\"}"
 msgstr ""
-"> curl http://127.0.0.1:8000/ -H Content-Type: application/json -d {\"bar\":"
-"\"stay\",\"_baz\":\"go_away!\"}\n"
-"{\"status_code\":400,\"detail\":\"Object missing required field "
-"`this_will`\"}"
 
 #: ../../../usage/dto/1-abstract-dto.rst:281
 msgid ""
@@ -1324,9 +1316,6 @@ msgid ""
 "{\"this_will\":\"stay\",\"_this_will\":\"not_go_away!\"}\n"
 "{\"this_will\":\"stay\",\"_this_will\":\"not_go_away!\"}"
 msgstr ""
-"> curl http://127.0.0.1:8000/ -H Content-Type: application/json -d "
-"{\"this_will\":\"stay\",\"_this_will\":\"not_go_away!\"}\n"
-"{\"this_will\":\"stay\",\"_this_will\":\"not_go_away!\"}"
 
 #: ../../../usage/dto/1-abstract-dto.rst:291
 msgid "Wrapping Return Data"
