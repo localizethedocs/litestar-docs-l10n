@@ -209,9 +209,3 @@ msgid ""
 "Litestar includes several JWT security backends. Check out the :doc:`JWT "
 "documentation </usage/security/jwt>` for more details."
 msgstr ""
-
-#~ msgid "Python 3.8+"
-#~ msgstr "Python 3.8+"
-
-#~ msgid "Python 3.10+"
-#~ msgstr "Python 3.10+"

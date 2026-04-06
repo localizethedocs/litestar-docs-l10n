@@ -288,9 +288,3 @@ msgid ""
 "Next we'll look at how the :class:`SQLAlchemyInitPlugin <advanced_alchemy."
 "extensions.litestar.plugins.SQLAlchemyInitPlugin>` can help us."
 msgstr ""
-
-#~ msgid "Python 3.8+"
-#~ msgstr "Python 3.8+"
-
-#~ msgid "Python 3.10+"
-#~ msgstr "Python 3.10+"

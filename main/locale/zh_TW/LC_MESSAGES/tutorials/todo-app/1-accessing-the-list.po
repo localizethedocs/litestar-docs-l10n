@@ -34,7 +34,7 @@ msgstr ""
 
 #: ../../../tutorials/todo-app/1-accessing-the-list.rst:0
 msgid "Python 3.8+"
-msgstr "Python 3.8+"
+msgstr ""
 
 #: ../../../tutorials/todo-app/1-accessing-the-list.rst:12
 #: ../../../tutorials/todo-app/1-accessing-the-list.rst:44
@@ -90,7 +90,7 @@ msgstr ""
 
 #: ../../../tutorials/todo-app/1-accessing-the-list.rst:0
 msgid "Python 3.10+"
-msgstr "Python 3.10+"
+msgstr ""
 
 #: ../../../tutorials/todo-app/1-accessing-the-list.rst:12
 msgid ""

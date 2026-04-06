@@ -226,7 +226,7 @@ msgstr ""
 
 #: ../../../usage/responses.rst:0
 msgid "Python 3.8+"
-msgstr "Python 3.8+"
+msgstr ""
 
 #: ../../../usage/responses.rst:101
 msgid ""
@@ -2357,6 +2357,3 @@ msgid ""
 "instead of the :class:`AbstractSyncCursorPaginator <.pagination."
 "AbstractSyncCursorPaginator>`."
 msgstr ""
-
-#~ msgid "Python 3.10+"
-#~ msgstr "Python 3.10+"

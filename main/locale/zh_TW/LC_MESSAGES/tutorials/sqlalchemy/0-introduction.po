@@ -359,9 +359,3 @@ msgid ""
 "session in every handler. This is something that we can fix with dependency "
 "injection."
 msgstr ""
-
-#~ msgid "Python 3.8+"
-#~ msgstr "Python 3.8+"
-
-#~ msgid "Python 3.10+"
-#~ msgstr "Python 3.10+"

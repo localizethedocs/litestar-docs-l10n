@@ -179,9 +179,3 @@ msgid ""
 "Next up, we'll make one final change to our application, and then we'll be "
 "recap!"
 msgstr ""
-
-#~ msgid "Python 3.8+"
-#~ msgstr "Python 3.8+"
-
-#~ msgid "Python 3.10+"
-#~ msgstr "Python 3.10+"

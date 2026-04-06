@@ -523,7 +523,7 @@ msgstr ""
 
 #: ../../../usage/security/jwt.rst:0
 msgid "Python 3.8+"
-msgstr "Python 3.8+"
+msgstr ""
 
 #: ../../../usage/security/jwt.rst:101
 msgid "Customizing payload decoding"
@@ -564,7 +564,7 @@ msgstr ""
 
 #: ../../../usage/security/jwt.rst:0
 msgid "Python 3.10+"
-msgstr "Python 3.10+"
+msgstr ""
 
 #: ../../../usage/security/jwt.rst:101
 msgid ""
