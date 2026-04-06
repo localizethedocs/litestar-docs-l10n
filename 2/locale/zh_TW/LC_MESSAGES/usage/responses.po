@@ -184,7 +184,7 @@ msgstr ""
 
 #: ../../../usage/responses.rst:0
 msgid "Python 3.8+"
-msgstr "Python 3.8+"
+msgstr ""
 
 #: ../../../usage/responses.rst:89
 msgid ""
@@ -2751,7 +2751,7 @@ msgstr ""
 
 #: ../../../usage/responses.rst:0
 msgid "Python 3.10+"
-msgstr "Python 3.10+"
+msgstr ""
 
 #: ../../../usage/responses.rst:863
 msgid ""

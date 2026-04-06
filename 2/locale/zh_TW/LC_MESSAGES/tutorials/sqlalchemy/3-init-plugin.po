@@ -58,7 +58,7 @@ msgstr ""
 
 #: ../../../tutorials/sqlalchemy/3-init-plugin.rst:0
 msgid "Python 3.8+"
-msgstr "Python 3.8+"
+msgstr ""
 
 #: ../../../tutorials/sqlalchemy/3-init-plugin.rst:20
 msgid ""
@@ -263,7 +263,7 @@ msgstr ""
 
 #: ../../../tutorials/sqlalchemy/3-init-plugin.rst:0
 msgid "Python 3.10+"
-msgstr "Python 3.10+"
+msgstr ""
 
 #: ../../../tutorials/sqlalchemy/3-init-plugin.rst:20
 msgid ""
