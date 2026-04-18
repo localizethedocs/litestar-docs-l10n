@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-04-13 11:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -51,7 +51,7 @@ msgstr "參數"
 #: litestar.openapi.plugins.RedocRenderPlugin.__init__:6
 #: litestar.openapi.plugins.ScalarRenderPlugin.__init__:9
 #: litestar.openapi.plugins.StoplightRenderPlugin.__init__:8
-#: litestar.openapi.plugins.SwaggerRenderPlugin.__init__:13
+#: litestar.openapi.plugins.SwaggerRenderPlugin.__init__:17
 #: litestar.openapi.plugins.YamlRenderPlugin.__init__:3
 msgid "Path to serve the OpenAPI UI at."
 msgstr ""
@@ -192,7 +192,7 @@ msgstr ""
 #: litestar.openapi.plugins.RedocRenderPlugin.__init__:7
 #: litestar.openapi.plugins.ScalarRenderPlugin.__init__:12
 #: litestar.openapi.plugins.StoplightRenderPlugin.__init__:9
-#: litestar.openapi.plugins.SwaggerRenderPlugin.__init__:14
+#: litestar.openapi.plugins.SwaggerRenderPlugin.__init__:18
 #: litestar.openapi.plugins.YamlRenderPlugin.__init__:5
 msgid "Additional arguments to pass to the base class."
 msgstr ""
@@ -384,6 +384,16 @@ msgid ""
 "JSON to initialize Swagger UI OAuth2 by calling the ``initOAuth`` method. "
 "Refer to the following URL for details: `Swagger-UI <https://swagger.io/docs/"
 "open-source-tools/swagger-ui/usage/oauth2/>`_."
+msgstr ""
+
+#: ../../../../litestar/openapi/plugins.py:docstring of
+#: litestar.openapi.plugins.SwaggerRenderPlugin.__init__:13
+msgid ""
+"Absolute URL of the ``oauth2-redirect.html`` page served by Swagger UI. When "
+"set, this value is passed as ``oauth2RedirectUrl`` in the "
+"``SwaggerUIBundle`` configuration, overriding Swagger UI's default behaviour "
+"of computing the URL from the current page location. This is useful when the "
+"API is mounted under a sub-path where the auto-computed URL would be wrong."
 msgstr ""
 
 #: ../../../../litestar/openapi/plugins.py:docstring of

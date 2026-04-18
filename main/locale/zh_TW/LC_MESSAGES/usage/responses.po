@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-30 10:18+0000\n"
+"POT-Creation-Date: 2026-04-13 11:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1822,11 +1822,44 @@ msgid ""
 "with the appropriate keys."
 msgstr ""
 
-#: ../../../usage/responses.rst:726
+#: ../../../usage/responses.rst:724
+msgid ""
+"To prevent reverse proxies or clients from closing idle SSE connections, use "
+"the ``ping_interval`` parameter:"
+msgstr ""
+
+#: ../../../usage/responses.rst:727
+msgid ""
+"@get(\"/stream\")\n"
+"async def stream_handler() -> ServerSentEvent:\n"
+"    async def generator():\n"
+"        while True:\n"
+"            data = await get_data()\n"
+"            yield data\n"
+"\n"
+"    return ServerSentEvent(generator(), ping_interval=15)"
+msgstr ""
+
+#: ../../../usage/responses.rst:737
+msgid ""
+"The ``ping_interval`` value is in **seconds**. This sends an SSE comment "
+"(``: ping``) every 15 seconds to keep the connection alive. SSE comments are "
+"invisible to ``EventSource`` clients and will not trigger message events. "
+"Pings begin after the first interval elapses (no immediate ping on connect)."
+msgstr ""
+
+#: ../../../usage/responses.rst:743
+msgid ""
+"Common values are 15–30 seconds, depending on your reverse proxy's idle "
+"timeout (e.g., nginx defaults to 60 seconds, Telegram Mini Apps time out "
+"after 60 seconds)."
+msgstr ""
+
+#: ../../../usage/responses.rst:748
 msgid "Template Responses"
 msgstr ""
 
-#: ../../../usage/responses.rst:728
+#: ../../../usage/responses.rst:750
 msgid ""
 "Template responses are used to render templates into HTML. To use a template "
 "response you must first :ref:`register a template engine <usage/templating:"
@@ -1834,7 +1867,7 @@ msgid ""
 "in place, you can use a template response like so:"
 msgstr ""
 
-#: ../../../usage/responses.rst:733
+#: ../../../usage/responses.rst:755
 msgid ""
 "from litestar import Request, get\n"
 "from litestar.response import Template\n"
@@ -1846,31 +1879,31 @@ msgid ""
 "user})"
 msgstr ""
 
-#: ../../../usage/responses.rst:742
+#: ../../../usage/responses.rst:764
 msgid ""
 "In the above example, :class:`Template <.response.Template>` is passed the "
 "template name, which is a path like value, and a context dictionary that "
 "maps string keys into values that will be rendered in the template."
 msgstr ""
 
-#: ../../../usage/responses.rst:746
+#: ../../../usage/responses.rst:768
 msgid "Custom Responses"
 msgstr ""
 
-#: ../../../usage/responses.rst:748
+#: ../../../usage/responses.rst:770
 msgid ""
 "While Litestar supports the serialization of many types by default, "
 "sometimes you want to return something that's not supported. In those cases "
 "it's convenient to make use of a custom response class."
 msgstr ""
 
-#: ../../../usage/responses.rst:751
+#: ../../../usage/responses.rst:773
 msgid ""
 "The example below illustrates how to deal with :class:`MultiDict <."
 "datastructures.MultiDict>` instances."
 msgstr ""
 
-#: ../../../usage/responses.rst:755
+#: ../../../usage/responses.rst:777
 msgid ""
 "from litestar import Litestar, Response, get\n"
 "from litestar.datastructures import MultiDict\n"
@@ -1894,11 +1927,11 @@ msgid ""
 "{\"foo\":[\"bar\",\"baz\"]}"
 msgstr ""
 
-#: ../../../usage/responses.rst:757
+#: ../../../usage/responses.rst:779
 msgid "Layered architecture"
 msgstr ""
 
-#: ../../../usage/responses.rst:760
+#: ../../../usage/responses.rst:782
 msgid ""
 "Response classes are part of Litestar's layered architecture, which means "
 "you can set a response class on every layer of the application. If you have "
@@ -1906,17 +1939,17 @@ msgid ""
 "handler will take precedence."
 msgstr ""
 
-#: ../../../usage/responses.rst:764
+#: ../../../usage/responses.rst:786
 msgid ""
 "You can read more about this here: :ref:`usage/applications:layered "
 "architecture`"
 msgstr ""
 
-#: ../../../usage/responses.rst:767
+#: ../../../usage/responses.rst:789
 msgid "Background Tasks"
 msgstr ""
 
-#: ../../../usage/responses.rst:769
+#: ../../../usage/responses.rst:791
 msgid ""
 "All Litestar responses allow passing in a ``background`` kwarg. This kwarg "
 "accepts either an instance of :class:`BackgroundTask <.background_tasks."
@@ -1925,24 +1958,24 @@ msgid ""
 "`BackgroundTask <.background_tasks.BackgroundTask>` instances."
 msgstr ""
 
-#: ../../../usage/responses.rst:774
+#: ../../../usage/responses.rst:796
 msgid ""
 "A background task is a sync or async callable (function, method, or class "
 "that implements the :meth:`object.__call__` dunder method) that will be "
 "called after the response finishes sending the data."
 msgstr ""
 
-#: ../../../usage/responses.rst:777
+#: ../../../usage/responses.rst:799
 msgid ""
 "Thus, in the following example the passed in background task will be "
 "executed after the response sends:"
 msgstr ""
 
-#: ../../../usage/responses.rst:780
+#: ../../../usage/responses.rst:802
 msgid "Background Task Passed into Response"
 msgstr ""
 
-#: ../../../usage/responses.rst:780
+#: ../../../usage/responses.rst:802
 msgid ""
 "import logging\n"
 "\n"
@@ -1968,14 +2001,14 @@ msgid ""
 "app = Litestar(route_handlers=[greeter])"
 msgstr ""
 
-#: ../../../usage/responses.rst:783
+#: ../../../usage/responses.rst:805
 msgid ""
 "When the ``greeter`` handler is called, the logging task will be called with "
 "any ``*args`` and ``**kwargs`` passed into the :class:`BackgroundTask <."
 "background_tasks.BackgroundTask>`."
 msgstr ""
 
-#: ../../../usage/responses.rst:788
+#: ../../../usage/responses.rst:810
 msgid ""
 "In the above example ``\"greeter\"`` is an arg and ``message=f\"was called "
 "with name {name}\"`` is a kwarg. The function signature of ``logging_task`` "
@@ -1985,17 +2018,17 @@ msgid ""
 "arguments passed to it."
 msgstr ""
 
-#: ../../../usage/responses.rst:793
+#: ../../../usage/responses.rst:815
 msgid ""
 "Route decorators (e.g. ``@get``, ``@post``, etc.) also allow passing in a "
 "background task with the ``background`` kwarg:"
 msgstr ""
 
-#: ../../../usage/responses.rst:796
+#: ../../../usage/responses.rst:818
 msgid "Background Task Passed into Decorator"
 msgstr ""
 
-#: ../../../usage/responses.rst:796
+#: ../../../usage/responses.rst:818
 msgid ""
 "import logging\n"
 "\n"
@@ -2018,17 +2051,17 @@ msgid ""
 "app = Litestar(route_handlers=[greeter])"
 msgstr ""
 
-#: ../../../usage/responses.rst:802
+#: ../../../usage/responses.rst:824
 msgid ""
 "Route handler arguments cannot be passed into background tasks when they are "
 "passed into decorators."
 msgstr ""
 
-#: ../../../usage/responses.rst:805
+#: ../../../usage/responses.rst:827
 msgid "Executing Multiple Background Tasks"
 msgstr ""
 
-#: ../../../usage/responses.rst:807
+#: ../../../usage/responses.rst:829
 msgid ""
 "You can also use the :class:`BackgroundTasks <.background_tasks."
 "BackgroundTasks>` class and pass to it an iterable (:class:`list`, :class:"
@@ -2036,11 +2069,11 @@ msgid ""
 "instances:"
 msgstr ""
 
-#: ../../../usage/responses.rst:811
+#: ../../../usage/responses.rst:833
 msgid "Multiple Background Tasks"
 msgstr ""
 
-#: ../../../usage/responses.rst:811
+#: ../../../usage/responses.rst:833
 msgid ""
 "import logging\n"
 "\n"
@@ -2075,7 +2108,7 @@ msgid ""
 "app = Litestar(route_handlers=[greeter])"
 msgstr ""
 
-#: ../../../usage/responses.rst:815
+#: ../../../usage/responses.rst:837
 msgid ""
 ":class:`BackgroundTasks <.background_tasks.BackgroundTasks>` class accepts "
 "an optional keyword argument ``run_in_task_group`` with a default value of "
@@ -2084,16 +2117,16 @@ msgid ""
 "stable/tasks.html>`_."
 msgstr ""
 
-#: ../../../usage/responses.rst:821
+#: ../../../usage/responses.rst:843
 msgid ""
 "Setting ``run_in_task_group`` to ``True`` will not preserve execution order."
 msgstr ""
 
-#: ../../../usage/responses.rst:824
+#: ../../../usage/responses.rst:846
 msgid "Pagination"
 msgstr ""
 
-#: ../../../usage/responses.rst:826
+#: ../../../usage/responses.rst:848
 msgid ""
 "When you need to return a large number of items from an endpoint it is "
 "common practice to use pagination to ensure clients can request a specific "
@@ -2101,29 +2134,29 @@ msgid ""
 "pagination out of the box:"
 msgstr ""
 
-#: ../../../usage/responses.rst:830
+#: ../../../usage/responses.rst:852
 msgid "classic pagination"
 msgstr ""
 
-#: ../../../usage/responses.rst:831
+#: ../../../usage/responses.rst:853
 msgid "limit / offset pagination"
 msgstr ""
 
-#: ../../../usage/responses.rst:832
+#: ../../../usage/responses.rst:854
 msgid "cursor pagination"
 msgstr ""
 
-#: ../../../usage/responses.rst:835 ../../../usage/responses.rst:840
+#: ../../../usage/responses.rst:857 ../../../usage/responses.rst:862
 msgid "Classic Pagination"
 msgstr ""
 
-#: ../../../usage/responses.rst:837
+#: ../../../usage/responses.rst:859
 msgid ""
 "In classic pagination the dataset is divided into pages of a specific size "
 "and the consumer then requests a specific page."
 msgstr ""
 
-#: ../../../usage/responses.rst:840
+#: ../../../usage/responses.rst:862
 msgid ""
 "from polyfactory.factories.pydantic_factory import ModelFactory\n"
 "from pydantic import BaseModel\n"
@@ -2175,7 +2208,7 @@ msgid ""
 "app = Litestar(route_handlers=[people_handler])"
 msgstr ""
 
-#: ../../../usage/responses.rst:843
+#: ../../../usage/responses.rst:865
 msgid ""
 "The data container for this pagination is called :class:`ClassicPagination <."
 "pagination.ClassicPagination>`, which is what will be returned by the "
@@ -2183,7 +2216,7 @@ msgid ""
 "OpenAPI documentation."
 msgstr ""
 
-#: ../../../usage/responses.rst:847
+#: ../../../usage/responses.rst:869
 msgid ""
 "If you require async logic, you can implement the :class:"
 "`AbstractAsyncClassicPaginator <.pagination.AbstractAsyncClassicPaginator>` "
@@ -2191,11 +2224,11 @@ msgid ""
 "AbstractSyncClassicPaginator>`."
 msgstr ""
 
-#: ../../../usage/responses.rst:852 ../../../usage/responses.rst:858
+#: ../../../usage/responses.rst:874 ../../../usage/responses.rst:880
 msgid "Offset Pagination"
 msgstr ""
 
-#: ../../../usage/responses.rst:854
+#: ../../../usage/responses.rst:876
 msgid ""
 "In offset pagination the consumer requests a number of items specified by "
 "``limit`` and the ``offset`` from the beginning of the dataset. For example, "
@@ -2203,7 +2236,7 @@ msgid ""
 "request items 40-50."
 msgstr ""
 
-#: ../../../usage/responses.rst:858
+#: ../../../usage/responses.rst:880
 msgid ""
 "from itertools import islice\n"
 "\n"
@@ -2255,7 +2288,7 @@ msgid ""
 "app = Litestar(route_handlers=[people_handler])"
 msgstr ""
 
-#: ../../../usage/responses.rst:861
+#: ../../../usage/responses.rst:883
 msgid ""
 "The data container for this pagination is called :class:`OffsetPagination <."
 "pagination.OffsetPagination>`, which is what will be returned by the "
@@ -2263,7 +2296,7 @@ msgid ""
 "OpenAPI documentation."
 msgstr ""
 
-#: ../../../usage/responses.rst:865
+#: ../../../usage/responses.rst:887
 msgid ""
 "If you require async logic, you can implement the :class:"
 "`AbstractAsyncOffsetPaginator <.pagination.AbstractAsyncOffsetPaginator>` "
@@ -2271,22 +2304,22 @@ msgid ""
 "AbstractSyncOffsetPaginator>`."
 msgstr ""
 
-#: ../../../usage/responses.rst:870
+#: ../../../usage/responses.rst:892
 msgid "Offset Pagination With SQLAlchemy"
 msgstr ""
 
-#: ../../../usage/responses.rst:872
+#: ../../../usage/responses.rst:894
 msgid ""
 "When retrieving paginated data from the database using SQLAlchemy, the "
 "Paginator instance requires an SQLAlchemy session instance to make queries. "
 "This can be achieved with :doc:`/usage/dependency-injection`"
 msgstr ""
 
-#: ../../../usage/responses.rst:877 ../../../usage/responses.rst:883
+#: ../../../usage/responses.rst:899 ../../../usage/responses.rst:905
 msgid "Cursor Pagination"
 msgstr ""
 
-#: ../../../usage/responses.rst:879
+#: ../../../usage/responses.rst:901
 msgid ""
 "In cursor pagination the consumer requests a number of items specified by "
 "``results_per_page`` and a ``cursor`` after which results are given. Cursor "
@@ -2294,7 +2327,7 @@ msgid ""
 "starting position."
 msgstr ""
 
-#: ../../../usage/responses.rst:883
+#: ../../../usage/responses.rst:905
 msgid ""
 "from polyfactory.factories.pydantic_factory import ModelFactory\n"
 "from pydantic import BaseModel\n"
@@ -2342,7 +2375,7 @@ msgid ""
 "app = Litestar(route_handlers=[people_handler])"
 msgstr ""
 
-#: ../../../usage/responses.rst:886
+#: ../../../usage/responses.rst:908
 msgid ""
 "The data container for this pagination is called :class:`CursorPagination <."
 "pagination.CursorPagination>`, which is what will be returned by the "
@@ -2350,7 +2383,7 @@ msgid ""
 "OpenAPI documentation."
 msgstr ""
 
-#: ../../../usage/responses.rst:889
+#: ../../../usage/responses.rst:911
 msgid ""
 "If you require async logic, you can implement the :class:"
 "`AbstractAsyncCursorPaginator <.pagination.AbstractAsyncCursorPaginator>` "
