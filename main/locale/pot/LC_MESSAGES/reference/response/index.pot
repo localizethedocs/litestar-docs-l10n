@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-04-13 11:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -154,6 +154,7 @@ msgstr ""
 #: litestar.response.base.Response.to_asgi_response:3
 #: litestar.response.file.File.to_asgi_response:3
 #: litestar.response.redirect.Redirect.to_asgi_response:3
+#: litestar.response.sse.ServerSentEvent.to_asgi_response:7
 #: litestar.response.streaming.Stream.to_asgi_response:3
 #: litestar.response.template.Template.to_asgi_response:3
 msgid "Background task(s) to be executed after the response is sent."
@@ -163,6 +164,7 @@ msgstr ""
 #: litestar.response.base.Response.to_asgi_response:4
 #: litestar.response.file.File.to_asgi_response:4
 #: litestar.response.redirect.Redirect.to_asgi_response:4
+#: litestar.response.sse.ServerSentEvent.to_asgi_response:8
 #: litestar.response.streaming.Stream.to_asgi_response:4
 #: litestar.response.template.Template.to_asgi_response:4
 msgid "A list of cookies to be set on the response."
@@ -172,6 +174,7 @@ msgstr ""
 #: litestar.response.base.Response.to_asgi_response:5
 #: litestar.response.file.File.to_asgi_response:5
 #: litestar.response.redirect.Redirect.to_asgi_response:5
+#: litestar.response.sse.ServerSentEvent.to_asgi_response:9
 #: litestar.response.streaming.Stream.to_asgi_response:5
 #: litestar.response.template.Template.to_asgi_response:5
 msgid ""
@@ -183,6 +186,7 @@ msgstr ""
 #: litestar.response.base.Response.to_asgi_response:6
 #: litestar.response.file.File.to_asgi_response:6
 #: litestar.response.redirect.Redirect.to_asgi_response:6
+#: litestar.response.sse.ServerSentEvent.to_asgi_response:10
 #: litestar.response.streaming.Stream.to_asgi_response:6
 #: litestar.response.template.Template.to_asgi_response:6
 msgid "Whether the response is a HEAD response."
@@ -192,6 +196,7 @@ msgstr ""
 #: litestar.response.base.Response.to_asgi_response:7
 #: litestar.response.file.File.to_asgi_response:7
 #: litestar.response.redirect.Redirect.to_asgi_response:7
+#: litestar.response.sse.ServerSentEvent.to_asgi_response:11
 #: litestar.response.streaming.Stream.to_asgi_response:7
 #: litestar.response.template.Template.to_asgi_response:7
 msgid ""
@@ -203,6 +208,7 @@ msgstr ""
 #: litestar.response.base.Response.to_asgi_response:8
 #: litestar.response.file.File.to_asgi_response:8
 #: litestar.response.redirect.Redirect.to_asgi_response:8
+#: litestar.response.sse.ServerSentEvent.to_asgi_response:6
 #: litestar.response.streaming.Stream.to_asgi_response:8
 #: litestar.response.template.Template.to_asgi_response:8
 msgid "The :class:`Request <.connection.Request>` instance."
@@ -223,6 +229,7 @@ msgstr ""
 #: litestar.response.base.Response.to_asgi_response:10
 #: litestar.response.file.File.to_asgi_response:10
 #: litestar.response.redirect.Redirect.to_asgi_response:10
+#: litestar.response.sse.ServerSentEvent.to_asgi_response:14
 #: litestar.response.streaming.Stream.to_asgi_response:10
 #: litestar.response.template.Template.to_asgi_response:10
 msgid "A dictionary of type encoders to use for encoding the response content."
@@ -507,6 +514,42 @@ msgstr ""
 msgid ""
 "A comment message. This value is ignored by clients and is used mostly for "
 "pinging."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.sse.ServerSentEvent.__init__:17
+msgid ""
+"Interval in seconds between keepalive pings. When set, an SSE comment (``: "
+"ping``) is sent at the specified interval to prevent connection timeouts "
+"from reverse proxies or clients. Defaults to ``None`` (no pings)."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.sse.ServerSentEvent.to_asgi_response:1
+msgid ""
+"Create an ASGI streaming response, with optional keepalive ping support."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.sse.ServerSentEvent.to_asgi_response:3
+msgid ""
+"When ``ping_interval`` is set, returns an :class:`ASGIStreamingSSEResponse` "
+"that sends periodic SSE comment pings. Otherwise delegates to the parent "
+"implementation."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.sse.ServerSentEvent.to_asgi_response:12
+msgid ""
+"Status code for the response. If ``status_code`` is already set on the "
+"response, this is ignored."
+msgstr ""
+
+#: ../../../../litestar/response/__init__.py:docstring of
+#: litestar.response.sse.ServerSentEvent.to_asgi_response:16
+msgid ""
+"An ASGIStreamingResponse (or ASGIStreamingSSEResponse when ping_interval is "
+"set)."
 msgstr ""
 
 #: ../../../../litestar/response/__init__.py:docstring of
