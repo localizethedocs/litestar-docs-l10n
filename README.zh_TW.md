@@ -1,4 +1,12 @@
 <div align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/localizethedocs/static/logo/litestar-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/localizethedocs/static/logo/litestar-light.svg">
+  <img height="100" src="https://cdn.jsdelivr.net/gh/localizethedocs/static/logo/litestar-light.svg">
+</picture>
+</div>
+
+<div align="center">
 <h1 id="localization-of-the-litestar-documentation">Localization of The Litestar Documentation</h1>
 </div>
 
