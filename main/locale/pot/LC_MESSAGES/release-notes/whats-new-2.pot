@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-13 11:01+0000\n"
+"POT-Creation-Date: 2026-05-11 12:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1141,7 +1141,7 @@ msgid ":class:`advanced_alchemy.extensions.litestar.dto.SQLAlchemyDTO`"
 msgstr ""
 
 #: ../../../release-notes/whats-new-2.rst:442
-msgid ":class:`litestar.contrib.pydantic.PydanticDTO`"
+msgid "``litestar.contrib.pydantic.PydanticDTO``"
 msgstr ""
 
 #: ../../../release-notes/whats-new-2.rst:443
@@ -1231,8 +1231,8 @@ msgid ""
 "> curl http://127.0.0.1:8000/users -H 'Content-Type: application/json' -d "
 "'{\"userName\":\"Litestar User\",\"password\":\"xyz\",\"created_at\":"
 "\"2023-04-24T00:00:00Z\"}'\n"
-"{\"created_at\":\"0001-01-01T00:00:00\",\"id\":\"b15ff311-deae-4eb4-"
-"a59a-829f0f7a3f19\",\"userName\":\"Litestar User\"}"
+"{\"created_at\":\"0001-01-01T00:00:00\",\"id\":\"27055321-761f-4acd-99df-"
+"e70b3658f659\",\"userName\":\"Litestar User\"}"
 msgstr ""
 
 #: ../../../release-notes/whats-new-2.rst:478
@@ -1365,8 +1365,8 @@ msgid ""
 "> curl http://127.0.0.1:8000/users -H 'Content-Type: application/json' -d "
 "'{\"name\":\"Litestar User\",\"password\":\"xyz\",\"created_at\":"
 "\"2023-04-24T00:00:00Z\"}'\n"
-"{\"created_at\":\"0001-01-01T00:00:00\",\"id\":"
-"\"ec97d18a-7f35-417f-964a-1092844cf2dd\",\"name\":\"Litestar User\"}"
+"{\"created_at\":\"0001-01-01T00:00:00\",\"id\":\"3e7fc26b-191d-4358-"
+"bb3d-13a99f63e056\",\"name\":\"Litestar User\"}"
 msgstr ""
 
 #: ../../../release-notes/whats-new-2.rst:486

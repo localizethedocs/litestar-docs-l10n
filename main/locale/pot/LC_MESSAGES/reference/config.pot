@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-30 10:18+0000\n"
+"POT-Creation-Date: 2026-05-11 12:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -483,7 +483,9 @@ msgstr ""
 
 #: ../../../../docstring of
 #: litestar.config.compression.CompressionConfig.zstd_compress_level:1
-msgid "Range `[0-22]`, see `zstandard <https://pypi.org/project/zstandard/>`"
+msgid ""
+"Integer greater than or equal to 0. A value of 0 indicates use of default "
+"compression level set by the library."
 msgstr ""
 
 #: ../../../../docstring of
