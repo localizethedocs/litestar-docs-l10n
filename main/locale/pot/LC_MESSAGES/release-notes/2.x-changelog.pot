@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-09 09:38+0000\n"
+"POT-Creation-Date: 2026-05-11 12:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1631,11 +1631,10 @@ msgstr ""
 
 #: ../../../release-notes/2.x-changelog.rst:1603
 msgid ""
-"A new :class:`~litestar.contrib.pydantic.PydanticPlugin` has been added, "
-"which can be used to configure Pydantic behaviour. Currently it supports "
-"setting a ``prefer_alias`` option, which will pass the ``by_alias=True`` "
-"flag to Pydantic when exporting models, as well as generate schemas "
-"accordingly."
+"A new ``PydanticPlugin`` has been added, which can be used to configure "
+"Pydantic behaviour. Currently it supports setting a ``prefer_alias`` option, "
+"which will pass the ``by_alias=True`` flag to Pydantic when exporting "
+"models, as well as generate schemas accordingly."
 msgstr ""
 
 #: ../../../release-notes/2.x-changelog.rst:1612
@@ -2804,7 +2803,7 @@ msgstr ""
 
 #: ../../../release-notes/2.x-changelog.rst:2615
 msgid ""
-"When using the :class:`litestar.contrib.sqlalchemy.types.JsonB` type with an "
+"When using the ``litestar.contrib.sqlalchemy.types.JsonB`` type with an "
 "Oracle Database engine, a JSON check constraint will be created for that "
 "column."
 msgstr ""
@@ -2882,11 +2881,11 @@ msgid ""
 msgstr ""
 
 #: ../../../release-notes/2.x-changelog.rst:2706
-msgid ":class:`~litestar.contrib.msgspec.MsgspecDTO`"
+msgid ":class:`~litestar.dto.msgspec_dto.MsgspecDTO`"
 msgstr ""
 
 #: ../../../release-notes/2.x-changelog.rst:2707
-msgid ":class:`~litestar.contrib.pydantic.PydanticDTO`"
+msgid ":class:`~litestar.plugins.pydantic.PydanticDTO`"
 msgstr ""
 
 #: ../../../release-notes/2.x-changelog.rst:2774
@@ -3934,9 +3933,8 @@ msgstr ""
 
 #: ../../../release-notes/2.x-changelog.rst:3613
 msgid ""
-"A :class:`SQLAlchemyInitPlugin <litestar.contrib.sqlalchemy.plugins."
-"SQLAlchemyInitPlugin>` was added, providing support for managed synchronous "
-"and asynchronous sessions."
+"A ``SQLAlchemyInitPlugin`` was added, providing support for managed "
+"synchronous and asynchronous sessions."
 msgstr ""
 
 #: ../../../release-notes/2.x-changelog.rst:3617

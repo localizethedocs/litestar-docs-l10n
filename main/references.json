@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-04-12 22:18:28 -0400",
-      "hash" : "8b1aed58873d79f62063d00ae41dd298e1092066",
-      "title" : "chore: fix pyright type-ignore comments to use specific error codes (#4689)"
+      "date" : "2026-05-11 10:52:29 +0200",
+      "hash" : "cc598c4f11756e7b209b8bc7004a4484dadc0474",
+      "title" : "chore(deps): bump fuxingloh/multi-labeler from 4 to 5 (#4768)"
     }
   },
   "type" : "branch",

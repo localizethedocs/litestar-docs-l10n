@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-05-11 12:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,38 +46,42 @@ msgstr ""
 #: ../../../usage/security/excluding-and-including-endpoints.rst:15
 msgid ""
 "The ``exclude`` argument takes a :class:`string <str>` or :class:`list` of :"
-"class:`strings <str>` that are interpreted as regex patterns. For example, "
-"the configuration below would apply authentication to all endpoints except "
-"those where the route starts with ``/login``, ``/signup``, or ``/schema``. "
-"Thus, one does not have to exclude ``/schema/swagger`` as well - it is "
-"included in the ``/schema`` pattern."
+"class:`strings <str>` that are interpreted as regex patterns matched against "
+"the full path. Because the patterns are not implicitly anchored, a pattern "
+"like ``/schema`` would match *any* path containing ``/schema``, not just "
+"paths that start with it. To match only paths that start with a given "
+"prefix, anchor the pattern with ``^``. For example, the configuration below "
+"would apply authentication to all endpoints except those where the route "
+"starts with ``/login``, ``/signup``, or ``/schema``. Thus, one does not have "
+"to exclude ``/schema/swagger`` as well — it is covered by the ``^/schema`` "
+"pattern."
 msgstr ""
 
-#: ../../../usage/security/excluding-and-including-endpoints.rst:22
+#: ../../../usage/security/excluding-and-including-endpoints.rst:24
 msgid ""
 "Passing ``/`` will disable authentication for all routes, since, as a regex, "
 "it matches *every* path."
 msgstr ""
 
-#: ../../../usage/security/excluding-and-including-endpoints.rst:26
+#: ../../../usage/security/excluding-and-including-endpoints.rst:28
 msgid ""
 "session_auth = SessionAuth[User, ServerSideSessionBackend](\n"
-"retrieve_user_handler=retrieve_user_handler,\n"
-"# we must pass a config for a session backend.\n"
-"# all session backends are supported\n"
-"session_backend_config=ServerSideSessionConfig(),\n"
-"# exclude any URLs that should not have authentication.\n"
-"# We exclude the documentation URLs, signup and login.\n"
-"exclude=[\"/login\", \"/signup\", \"/schema\"],\n"
+"    retrieve_user_handler=retrieve_user_handler,\n"
+"    # we must pass a config for a session backend.\n"
+"    # all session backends are supported\n"
+"    session_backend_config=ServerSideSessionConfig(),\n"
+"    # exclude any URLs that should not have authentication.\n"
+"    # We exclude the documentation URLs, signup and login.\n"
+"    exclude=[r\"^/login\", r\"^/signup\", r\"^/schema\"],\n"
 ")\n"
 "..."
 msgstr ""
 
-#: ../../../usage/security/excluding-and-including-endpoints.rst:39
+#: ../../../usage/security/excluding-and-including-endpoints.rst:41
 msgid "Including routes"
 msgstr ""
 
-#: ../../../usage/security/excluding-and-including-endpoints.rst:41
+#: ../../../usage/security/excluding-and-including-endpoints.rst:43
 msgid ""
 "Since the exclusion rules are evaluated as regex, it is possible to pass a "
 "rule that inverts exclusion - meaning, no path but the one specified in the "
@@ -86,33 +90,33 @@ msgid ""
 "other routes do not."
 msgstr ""
 
-#: ../../../usage/security/excluding-and-including-endpoints.rst:46
+#: ../../../usage/security/excluding-and-including-endpoints.rst:48
 msgid ""
 "...\n"
 "session_auth = SessionAuth[User, ServerSideSessionBackend](\n"
-"retrieve_user_handler=retrieve_user_handler,\n"
-"# we must pass a config for a session backend.\n"
-"# all session backends are supported\n"
-"session_backend_config=ServerSideSessionConfig(),\n"
-"# exclude any URLs that should not have authentication.\n"
-"# We exclude the documentation URLs, signup and login.\n"
-"exclude=[r\"^(?!.*\\/secured$).*$\"],\n"
+"    retrieve_user_handler=retrieve_user_handler,\n"
+"    # we must pass a config for a session backend.\n"
+"    # all session backends are supported\n"
+"    session_backend_config=ServerSideSessionConfig(),\n"
+"    # exclude any URLs that should not have authentication.\n"
+"    # We exclude the documentation URLs, signup and login.\n"
+"    exclude=[r\"^(?!.*\\/secured$).*$\"],\n"
 ")\n"
 "..."
 msgstr ""
 
-#: ../../../usage/security/excluding-and-including-endpoints.rst:60
+#: ../../../usage/security/excluding-and-including-endpoints.rst:62
 msgid "Exclude from auth"
 msgstr ""
 
-#: ../../../usage/security/excluding-and-including-endpoints.rst:61
+#: ../../../usage/security/excluding-and-including-endpoints.rst:63
 msgid ""
 "Sometimes, you might want to apply authentication to all endpoints under a "
 "route but a few selected. In this case, you can pass "
 "``exclude_from_auth=True`` to the route handler as shown below."
 msgstr ""
 
-#: ../../../usage/security/excluding-and-including-endpoints.rst:65
+#: ../../../usage/security/excluding-and-including-endpoints.rst:67
 msgid ""
 "...\n"
 "@get(\"/secured\")\n"
@@ -125,13 +129,13 @@ msgid ""
 "..."
 msgstr ""
 
-#: ../../../usage/security/excluding-and-including-endpoints.rst:76
+#: ../../../usage/security/excluding-and-including-endpoints.rst:78
 msgid ""
 "You can set an alternative option key in the security configuration, e.g., "
 "you can use ``no_auth`` instead of ``exclude_from_auth``."
 msgstr ""
 
-#: ../../../usage/security/excluding-and-including-endpoints.rst:80
+#: ../../../usage/security/excluding-and-including-endpoints.rst:82
 msgid ""
 "...\n"
 "@get(\"/secured\")\n"
@@ -143,14 +147,14 @@ msgid ""
 "    ...\n"
 "\n"
 "session_auth = SessionAuth[User, ServerSideSessionBackend](\n"
-"retrieve_user_handler=retrieve_user_handler,\n"
-"# we must pass a config for a session backend.\n"
-"# all session backends are supported\n"
-"session_backend_config=ServerSideSessionConfig(),\n"
-"# exclude any URLs that should not have authentication.\n"
-"# We exclude the documentation URLs, signup and login.\n"
-"exclude=[\"/login\", \"/signup\", \"/schema\"],\n"
-"exclude_opt_key=\"no_auth\"  # default value is `exclude_from_auth`\n"
+"    retrieve_user_handler=retrieve_user_handler,\n"
+"    # we must pass a config for a session backend.\n"
+"    # all session backends are supported\n"
+"    session_backend_config=ServerSideSessionConfig(),\n"
+"    # exclude any URLs that should not have authentication.\n"
+"    # We exclude the documentation URLs, signup and login.\n"
+"    exclude=[r\"^/login\", r\"^/signup\", r\"^/schema\"],\n"
+"    exclude_opt_key=\"no_auth\"  # default value is `exclude_from_auth`\n"
 ")\n"
 "..."
 msgstr ""
