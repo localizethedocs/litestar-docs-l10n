@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../usage/applications.rst:2
 msgid "Applications"
-msgstr ""
+msgstr "应用程序"
 
 #: ../../../usage/applications.rst:5
 msgid "Application objects"

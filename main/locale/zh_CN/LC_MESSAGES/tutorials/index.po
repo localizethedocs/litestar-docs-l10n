@@ -19,4 +19,4 @@ msgstr ""
 
 #: ../../../tutorials/index.rst:2
 msgid "Tutorials"
-msgstr ""
+msgstr "教程"
