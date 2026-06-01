@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../usage/route-handlers.rst:2
 msgid "Route handlers"
-msgstr ""
+msgstr "路由处理函数"
 
 #: ../../../usage/route-handlers.rst:4
 msgid ""
