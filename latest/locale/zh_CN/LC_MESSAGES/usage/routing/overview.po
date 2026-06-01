@@ -349,7 +349,7 @@ msgstr ""
 
 #: ../../../usage/routing/overview.rst:218
 msgid "Route handlers"
-msgstr ""
+msgstr "路由处理函数"
 
 #: ../../../usage/routing/overview.rst:220
 msgid "You can also register standalone route handlers multiple times:"
