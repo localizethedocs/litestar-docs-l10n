@@ -1,0 +1,156 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/utils/sync.rst:2
+msgid "sync"
+msgstr ""
+
+#: ../../../../starlite/utils/sync.py:docstring of
+#: starlite.utils.sync.is_async_callable:1
+msgid ""
+"Extend :func:`asyncio.iscoroutinefunction` to additionally detect async :"
+"func:`functools.partial` objects and class instances with ``async def "
+"__call__()`` defined."
+msgstr ""
+
+#: ../../../../starlite/utils/sync.py:docstring of
+#: starlite.utils.sync.AsyncCallable.__call__:0
+#: starlite.utils.sync.AsyncCallable.__init__:0
+#: starlite.utils.sync.AsyncIteratorWrapper.__init__:0
+#: starlite.utils.sync.as_async_callable_list:0
+#: starlite.utils.sync.async_partial:0 starlite.utils.sync.is_async_callable:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../starlite/utils/sync.py:docstring of
+#: starlite.utils.sync.is_async_callable:4
+msgid "Any"
+msgstr ""
+
+#: ../../../../starlite/utils/sync.py:docstring of
+#: starlite.utils.sync.AsyncCallable.__call__:0
+#: starlite.utils.sync.as_async_callable_list:0
+#: starlite.utils.sync.async_partial:0 starlite.utils.sync.is_async_callable:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/utils/sync.py:docstring of
+#: starlite.utils.sync.is_async_callable:6
+msgid "Bool determining if type of ``value`` is an awaitable."
+msgstr ""
+
+#: ../../../../starlite/utils/sync.py:docstring of
+#: starlite.utils.sync.AsyncCallable:1
+msgid ""
+"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~starlite.utils.sync.P`, :py:"
+"obj:`~starlite.utils.sync.T`]"
+msgstr ""
+
+#: ../../../../starlite/utils/sync.py:docstring of
+#: starlite.utils.sync.AsyncCallable:1
+msgid "Wrap a callable into an asynchronous callable."
+msgstr ""
+
+#: ../../../../starlite/utils/sync.py:docstring of
+#: starlite.utils.sync.AsyncCallable.__init__:1
+msgid "Initialize the wrapper from any callable."
+msgstr ""
+
+#: ../../../../starlite/utils/sync.py:docstring of
+#: starlite.utils.sync.AsyncCallable.__init__:3
+msgid "Callable to wrap - can be any sync or async callable."
+msgstr ""
+
+#: ../../../../starlite/utils/sync.py:docstring of
+#: starlite.utils.sync.AsyncCallable.__call__:1
+msgid "Proxy the wrapped function's call method."
+msgstr ""
+
+#: ../../../../starlite/utils/sync.py:docstring of
+#: starlite.utils.sync.AsyncCallable.__call__:3
+msgid "Args of the wrapped function."
+msgstr ""
+
+#: ../../../../starlite/utils/sync.py:docstring of
+#: starlite.utils.sync.AsyncCallable.__call__:4
+msgid "Kwargs of the wrapper function."
+msgstr ""
+
+#: ../../../../starlite/utils/sync.py:docstring of
+#: starlite.utils.sync.AsyncCallable.__call__:6
+msgid "The return value of the wrapped function."
+msgstr ""
+
+#: ../../../../starlite/utils/sync.py:docstring of
+#: starlite.utils.sync.as_async_callable_list:1
+msgid "Wrap callables in ``AsyncCallable`` s."
+msgstr ""
+
+#: ../../../../starlite/utils/sync.py:docstring of
+#: starlite.utils.sync.as_async_callable_list:3
+msgid "A callable or list of callables."
+msgstr ""
+
+#: ../../../../starlite/utils/sync.py:docstring of
+#: starlite.utils.sync.as_async_callable_list:5
+msgid "A list of AsyncCallable instances"
+msgstr ""
+
+#: ../../../../starlite/utils/sync.py:docstring of
+#: starlite.utils.sync.async_partial:1
+msgid "Wrap a given sync function making it async."
+msgstr ""
+
+#: ../../../../starlite/utils/sync.py:docstring of
+#: starlite.utils.sync.async_partial:3
+msgid ""
+"In difference to the :func:`asyncio.run_sync` function, it allows for "
+"passing kwargs."
+msgstr ""
+
+#: ../../../../starlite/utils/sync.py:docstring of
+#: starlite.utils.sync.async_partial:5
+msgid "A sync callable to wrap."
+msgstr ""
+
+#: ../../../../starlite/utils/sync.py:docstring of
+#: starlite.utils.sync.async_partial:7
+msgid "A wrapper"
+msgstr ""
+
+#: ../../../../starlite/utils/sync.py:docstring of
+#: starlite.utils.sync.AsyncIteratorWrapper:1
+msgid "Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~starlite.utils.sync.T`]"
+msgstr ""
+
+#: ../../../../starlite/utils/sync.py:docstring of
+#: starlite.utils.sync.AsyncIteratorWrapper:1
+msgid "Asynchronous generator, wrapping an iterable or iterator."
+msgstr ""
+
+#: ../../../../starlite/utils/sync.py:docstring of
+#: starlite.utils.sync.AsyncIteratorWrapper.__init__:1
+msgid ""
+"Take a sync iterator or iterable and yields values from it asynchronously."
+msgstr ""
+
+#: ../../../../starlite/utils/sync.py:docstring of
+#: starlite.utils.sync.AsyncIteratorWrapper.__init__:3
+msgid "A sync iterator or iterable."
+msgstr ""

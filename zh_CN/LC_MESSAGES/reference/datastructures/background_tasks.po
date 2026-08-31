@@ -1,0 +1,112 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/datastructures/background_tasks.rst:3
+msgid "background_tasks"
+msgstr ""
+
+#: ../../../../starlite/datastructures/background_tasks.py:docstring of
+#: starlite.datastructures.background_tasks.BackgroundTask:1
+#: starlite.datastructures.background_tasks.BackgroundTasks:1
+msgid "Bases: :py:class:`object`"
+msgstr ""
+
+#: ../../../../starlite/datastructures/background_tasks.py:docstring of
+#: starlite.datastructures.background_tasks.BackgroundTask:1
+msgid "A container for a 'background' task function."
+msgstr ""
+
+#: ../../../../starlite/datastructures/background_tasks.py:docstring of
+#: starlite.datastructures.background_tasks.BackgroundTask:3
+#: starlite.datastructures.background_tasks.BackgroundTasks:3
+msgid "Background tasks are called once a Response finishes."
+msgstr ""
+
+#: ../../../../starlite/datastructures/background_tasks.py:docstring of
+#: starlite.datastructures.background_tasks.BackgroundTask.__init__:1
+msgid "Initialize ``BackgroundTask``."
+msgstr ""
+
+#: ../../../../starlite/datastructures/background_tasks.py:docstring of
+#: starlite.datastructures.background_tasks.BackgroundTask.__init__:0
+#: starlite.datastructures.background_tasks.BackgroundTasks.__init__:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../starlite/datastructures/background_tasks.py:docstring of
+#: starlite.datastructures.background_tasks.BackgroundTask.__init__:3
+msgid "A sync or async function to call as the background task."
+msgstr ""
+
+#: ../../../../starlite/datastructures/background_tasks.py:docstring of
+#: starlite.datastructures.background_tasks.BackgroundTask.__init__:4
+msgid "Args to pass to the func."
+msgstr ""
+
+#: ../../../../starlite/datastructures/background_tasks.py:docstring of
+#: starlite.datastructures.background_tasks.BackgroundTask.__init__:5
+msgid "Kwargs to pass to the func"
+msgstr ""
+
+#: ../../../../starlite/datastructures/background_tasks.py:docstring of
+#: starlite.datastructures.background_tasks.BackgroundTask.__call__:1
+msgid "Call the wrapped function with the passed in arguments."
+msgstr ""
+
+#: ../../../../starlite/datastructures/background_tasks.py:docstring of
+#: starlite.datastructures.background_tasks.BackgroundTask.__call__:0
+#: starlite.datastructures.background_tasks.BackgroundTasks.__call__:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/datastructures/background_tasks.py:docstring of
+#: starlite.datastructures.background_tasks.BackgroundTask.__call__:3
+#: starlite.datastructures.background_tasks.BackgroundTasks.__call__:3
+msgid "None"
+msgstr ""
+
+#: ../../../../starlite/datastructures/background_tasks.py:docstring of
+#: starlite.datastructures.background_tasks.BackgroundTasks:1
+msgid "A container for multiple 'background' task functions."
+msgstr ""
+
+#: ../../../../starlite/datastructures/background_tasks.py:docstring of
+#: starlite.datastructures.background_tasks.BackgroundTasks.__init__:1
+msgid "Initialize ``BackgroundTasks``."
+msgstr ""
+
+#: ../../../../starlite/datastructures/background_tasks.py:docstring of
+#: starlite.datastructures.background_tasks.BackgroundTasks.__init__:3
+msgid ""
+"An iterable of :class:`BackgroundTask <starlite.datastructures."
+"BackgroundTask>` instances."
+msgstr ""
+
+#: ../../../../starlite/datastructures/background_tasks.py:docstring of
+#: starlite.datastructures.background_tasks.BackgroundTasks.__init__:4
+msgid ""
+"If you set this value to ``True`` than the tasks will run concurrently, "
+"using an [anyio.task_group](https://anyio.readthedocs.io/en/stable/tasks."
+"html). Note: this will not preserve execution order."
+msgstr ""
+
+#: ../../../../starlite/datastructures/background_tasks.py:docstring of
+#: starlite.datastructures.background_tasks.BackgroundTasks.__call__:1
+msgid "Call the wrapped background tasks."
+msgstr ""

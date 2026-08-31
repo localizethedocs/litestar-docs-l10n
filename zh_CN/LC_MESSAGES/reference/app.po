@@ -1,0 +1,517 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/app.rst:2
+msgid "starlite.app"
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite:1
+msgid "Bases: :py:class:`~starlite.router.Router`"
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite:1
+msgid "The Starlite application."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite:3
+msgid ""
+"``Starlite`` is the root level of the app - it has the base path of \"/\" "
+"and all root level Controllers, Routers and Route Handlers should be "
+"registered on it."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite:6
+msgid "Inherits from the :class:`Router <starlite.router.Router>` class"
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:1
+msgid "Initialize a ``Starlite`` application."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__call__:0
+#: starlite.app.Starlite.__init__:0
+#: starlite.app.Starlite.get_handler_index_by_name:0
+#: starlite.app.Starlite.register:0 starlite.app.Starlite.route_reverse:0
+#: starlite.app.Starlite.url_for_static_asset:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:3
+msgid ""
+"An application level :class:`exception hook handler <starlite.types."
+"AfterExceptionHookHandler>` or list thereof.This hook is called after an "
+"exception occurs. In difference to exception handlers, it is not meant to "
+"return a response - only to process the exception (e.g. log it, send it to "
+"Sentry etc.)."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:6
+msgid ""
+"A sync or async function executed after the route handler function returned "
+"and the response object has been resolved. Receives the response object."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:8
+msgid ""
+"A sync or async function called after the response has been awaited. It "
+"receives the :class:`Request <starlite.connection.Request>` object and "
+"should not return any values."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:10
+msgid ""
+"An application level :class:`life-span hook handler <starlite.types."
+"LifeSpanHookHandler>` or list thereof. This hook is called during the ASGI "
+"shutdown, after all callables in the 'on_shutdown' list have been called."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:13
+msgid ""
+"An application level :class:`life-span hook handler <starlite.types."
+"LifeSpanHookHandler>` or list thereof. This hook is called during the ASGI "
+"startup, after all callables in the 'on_startup' list have been called."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:16
+msgid "A list of allowed hosts - enables the builtin allowed hosts middleware."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:17
+msgid ""
+"A sync or async function called immediately before calling the route "
+"handler. Receives the :class:`Request <starlite.connection.Request>` "
+"instance and any non-``None`` return value is used for the response, "
+"bypassing the route handler."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:20
+msgid ""
+"An application level :class:`before send hook handler <starlite.types."
+"BeforeMessageSendHookHandler>` or list thereof. This hook is called when the "
+"ASGI send function is called."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:22
+msgid ""
+"An application level :class:`life-span hook handler <starlite.types."
+"LifeSpanHookHandler>` or list thereof. This hook is called during the ASGI "
+"shutdown, before any callables in the 'on_shutdown' list have been called."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:25
+msgid ""
+"An application level :class:`life-span hook handler <starlite.types."
+"LifeSpanHookHandler>` or list thereof. This hook is called during the ASGI "
+"startup, before any callables in the 'on_startup' list have been called."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:28
+msgid "Configures caching behavior of the application."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:29
+msgid ""
+"A ``cache-control`` header of type :class:`CacheControlHeader <starlite."
+"datastructures.CacheControlHeader>` to add to route handlers of this app. "
+"Can be overridden by route handlers."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:32
+msgid ""
+"Configures compression behaviour of the application, this enabled a builtin "
+"or user defined Compression middleware."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:34
+msgid "If set this enables the builtin CORS middleware."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:35
+msgid "If set this enables the builtin CSRF middleware."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:36
+msgid "If ``True``, app errors rendered as HTML with a stack trace."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:37
+msgid ""
+"A string keyed dictionary of dependency :class:`Provider <starlite."
+"datastructures.Provide>` instances."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:38
+msgid ""
+"An ``etag`` header of type :class:`ETag <datastructures.ETag>` to add to "
+"route handlers of this app. Can be overridden by route handlers."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:40
+msgid ""
+"A dictionary that maps handler functions to status codes and/or exception "
+"types."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:41
+msgid "A list of :class:`Guard <starlite.types.Guard>` callables."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:42
+msgid "An object from which to initialize the app state."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:43
+msgid ""
+"A subclass of :class:`BaseLoggingConfig <starlite.config.logging."
+"BaseLoggingConfig>`."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:44
+msgid "A list of :class:`Middleware <starlite.types.Middleware>`."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:45
+msgid ""
+"The maximal number of allowed parts in a multipart/formdata request. This "
+"limit is intended to protect from DoS attacks."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:47
+msgid ""
+"A sequence of :class:`OnAppInitHandler <starlite.types.OnAppInitHandler>` "
+"instances. Handlers receive an instance of :class:`AppConfig <starlite."
+"config.app.AppConfig>` that will have been initially populated with the "
+"parameters passed to :class:`Starlite <starlite.app.Starlite>`, and must "
+"return an instance of same. If more than one handler is registered they are "
+"called in the order they are provided."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:51
+msgid ""
+"A list of :class:`LifeSpanHandler <starlite.types.LifeSpanHandler>` called "
+"during application shutdown."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:53
+msgid ""
+"A list of :class:`LifeSpanHandler <starlite.types.LifeSpanHandler>` called "
+"during application startup."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:55
+msgid "Defaults to :attr:`DEFAULT_OPENAPI_CONFIG`"
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:56
+msgid ""
+"A string keyed dictionary of arbitrary values that can be accessed in :class:"
+"`Guards <starlite.types.Guard>` or wherever you have access to :class:"
+"`Request <starlite.connection.request.Request>` or :class:`ASGI Scope "
+"<starlite.types.Scope>`."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:58
+msgid ""
+"A mapping of :class:`Parameter <starlite.params.Parameter>` definitions "
+"available to all application paths."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:60
+msgid "List of plugins."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:61
+msgid ""
+"An optional subclass of :class:`Request <starlite.connection.request."
+"Request>` to use for http connections."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:63
+msgid ""
+"A custom subclass of [starlite.response.Response] to be used as the app's "
+"default response."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:64
+msgid "A list of [Cookie](starlite.datastructures.Cookie] instances."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:65
+msgid ""
+"A string keyed dictionary mapping :class:`ResponseHeader <starlite."
+"datastructures.ResponseHeader>` instances."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:67
+msgid ""
+"A required list of route handlers, which can include instances of :class:"
+"`Router <starlite.router.Router>`, subclasses of :class:`Controller "
+"<starlite.controller.Controller>` or any function decorated by the route "
+"handler decorators."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:70
+msgid ""
+"A list of dictionaries that will be added to the schema of all route "
+"handlers in the application. See :class:`SecurityRequirement "
+"<pydantic_openapi_schema.v3_1_0.security_requirement.SecurityRequirement>` "
+"for details."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:72
+msgid ""
+"An instance or list of :class:`StaticFilesConfig <starlite.config."
+"StaticFilesConfig>`"
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:73
+msgid ""
+"A list of string tags that will be appended to the schema of all route "
+"handlers under the application."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:74
+msgid "An instance of :class:`TemplateConfig <starlite.config.TemplateConfig>`"
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:75
+msgid ""
+"A mapping of types to callables that transform them into types supported for "
+"serialization."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:76
+msgid ""
+"An optional subclass of :class:`WebSocket <starlite.connection.websocket."
+"WebSocket>` to use for websocket connections."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__call__:1
+msgid "Application entry point."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__call__:3
+msgid ""
+"Lifespan events (startup / shutdown) are sent to the lifespan handler, "
+"otherwise the ASGI handler is used"
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__call__:5
+msgid "The ASGI connection scope."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__call__:6
+msgid "The ASGI receive function."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__call__:7
+msgid "The ASGI send function."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__call__:0
+#: starlite.app.Starlite.get_handler_index_by_name:0
+#: starlite.app.Starlite.register:0
+#: starlite.app.Starlite.route_handler_method_view:0
+#: starlite.app.Starlite.route_reverse:0
+#: starlite.app.Starlite.update_openapi_schema:0
+#: starlite.app.Starlite.url_for_static_asset:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__call__:9
+#: starlite.app.Starlite.register:10
+#: starlite.app.Starlite.update_openapi_schema:3
+msgid "None"
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.register:1
+msgid "Register a route handler on the app."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.register:3
+msgid "This method can be used to dynamically add endpoints to an application."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.register:5
+msgid ""
+"an instance of :class:`Router <starlite.router.Router>`, a subclass of :"
+"class:`Controller <starlite.controller.Controller>` or any function "
+"decorated by the route handler decorators."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.Starlite.register:7
+msgid ""
+"Whether to add the registered route to the OpenAPI Schema. This affects only "
+"HTTP route handlers."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of
+#: starlite.app.Starlite.get_handler_index_by_name:1
+msgid ""
+"Receives a route handler name and returns an optional dictionary containing "
+"the route handler instance and list of paths sorted lexically."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of
+#: starlite.app.Starlite.get_handler_index_by_name:4
+#: starlite.app.Starlite.route_reverse:4
+#: starlite.app.Starlite.url_for_static_asset:3
+msgid "Examples"
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of
+#: starlite.app.Starlite.get_handler_index_by_name:22
+#: starlite.app.Starlite.route_reverse:22
+msgid "A route handler unique name."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of
+#: starlite.app.Starlite.get_handler_index_by_name:24
+msgid "A :class:`HandlerIndex <starlite.app.HandlerIndex>` instance or None."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of
+#: starlite.app.Starlite.route_reverse:1
+msgid ""
+"Receives a route handler name, path parameter values and returns url path to "
+"the handler with filled path parameters."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of
+#: starlite.app.Starlite.route_reverse:23
+msgid "Actual values for path parameters in the route."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of
+#: starlite.app.Starlite.route_reverse:0
+#: starlite.app.Starlite.url_for_static_asset:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of
+#: starlite.app.Starlite.route_reverse:25
+msgid ""
+"If route with 'name' does not exist, path parameters are missing in     "
+"``**path_parameters or have wrong type``."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of
+#: starlite.app.Starlite.route_reverse:27
+msgid "A fully formatted url path."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of
+#: starlite.app.Starlite.url_for_static_asset:1
+msgid ""
+"Receives a static files handler name, an asset file path and returns "
+"resolved url path to the asset."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of
+#: starlite.app.Starlite.url_for_static_asset:17
+msgid "A static handler unique name."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of
+#: starlite.app.Starlite.url_for_static_asset:18
+msgid "a string containing path to an asset."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of
+#: starlite.app.Starlite.url_for_static_asset:20
+msgid "If static files handler with 'name' does not exist."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of
+#: starlite.app.Starlite.url_for_static_asset:22
+msgid "A url path to the asset."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of
+#: starlite.app.Starlite.route_handler_method_view:1
+msgid "Map route handlers to paths."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of
+#: starlite.app.Starlite.route_handler_method_view:3
+msgid "A dictionary of router handlers and lists of paths as strings"
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of
+#: starlite.app.Starlite.update_openapi_schema:1
+msgid ""
+"Update the OpenAPI schema to reflect the route handlers registered on the "
+"app."
+msgstr ""
+
+#: ../../../../docstring of starlite.app.DEFAULT_CACHE_CONFIG:1
+#: starlite.app.DEFAULT_OPENAPI_CONFIG:1
+msgid "`Starlite <starlite.app.Starlite>` instance constructor."
+msgstr ""
+
+#: ../../../../docstring of starlite.app.DEFAULT_CACHE_CONFIG:0
+#: starlite.app.DEFAULT_OPENAPI_CONFIG:0
+msgid "type"
+msgstr ""
+
+#: ../../../../docstring of starlite.app.DEFAULT_OPENAPI_CONFIG:4
+msgid ""
+"The default OpenAPI config used if not configuration is explicitly passed to "
+"the"
+msgstr ""
+
+#: ../../../../docstring of starlite.app.DEFAULT_CACHE_CONFIG:6
+#: starlite.app.DEFAULT_OPENAPI_CONFIG:6
+msgid "class"
+msgstr ""
+
+#: ../../../../docstring of starlite.app.DEFAULT_CACHE_CONFIG:4
+msgid ""
+"The default cache config used if not configuration is explicitly passed to "
+"the"
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.HandlerIndex:1
+msgid "Bases: :py:class:`~typing_extensions.TypedDict`"
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.HandlerIndex:1
+msgid "Map route handler names to a mapping of paths + route handler."
+msgstr ""
+
+#: ../../../../starlite/app.py:docstring of starlite.app.HandlerIndex:3
+msgid "It's returned from the 'get_handler_index_by_name' utility method."
+msgstr ""
+
+#: ../../../../docstring of starlite.app.HandlerIndex.paths:1
+msgid "Full route paths to the route handler."
+msgstr ""
+
+#: ../../../../docstring of starlite.app.HandlerIndex.handler:1
+msgid "Route handler instance."
+msgstr ""
+
+#: ../../../../docstring of starlite.app.HandlerIndex.identifier:1
+msgid "Unique identifier of the handler."
+msgstr ""
+
+#: ../../../../docstring of starlite.app.HandlerIndex.identifier:3
+msgid ""
+"Either equal to the 'name' attribute or the ``__str__`` value of the handler."
+msgstr ""

@@ -1,0 +1,265 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/security/base.rst:2
+msgid "base"
+msgstr ""
+
+#: ../../../../starlite/security/base.py:docstring of
+#: starlite.security.base.AbstractSecurityConfig:1
+msgid ""
+"Bases: :py:class:`~abc.ABC`, :py:class:`~typing.Generic`\\ [:py:obj:"
+"`~starlite.security.base.UserType`, :py:obj:`~starlite.security.base."
+"AuthType`], :py:class:`~pydantic.generics.GenericModel`"
+msgstr ""
+
+#: ../../../../starlite/security/base.py:docstring of
+#: starlite.security.base.AbstractSecurityConfig:1
+msgid ""
+"A base class for Security Configs - this class can be used on the "
+"application level or be manually configured on the router / controller level "
+"to provide auth."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.security.base.AbstractSecurityConfig.authentication_middleware_class:1
+msgid "The authentication middleware class to use."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.security.base.AbstractSecurityConfig.authentication_middleware_class:3
+msgid ""
+"Must inherit from :class:`AbstractAuthenticationMiddleware <starlite."
+"middleware.authentication.AbstractAuthenticationMiddleware>`"
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.security.base.AbstractSecurityConfig.guards:1
+msgid ""
+"An iterable of guards to call for requests, providing authorization "
+"functionalities."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.security.base.AbstractSecurityConfig.exclude:1
+msgid "A pattern or list of patterns to skip in the authentication middleware."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.security.base.AbstractSecurityConfig.exclude_opt_key:1
+msgid ""
+"An identifier to use on routes to disable authentication and authorization "
+"checks for a particular route."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.security.base.AbstractSecurityConfig.scopes:1
+msgid ""
+"ASGI scopes processed by the authentication middleware, if ``None``, both "
+"``http`` and ``websocket`` will be processed."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.security.base.AbstractSecurityConfig.route_handlers:1
+msgid "An optional iterable of route handlers to register."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.security.base.AbstractSecurityConfig.dependencies:1
+msgid "An optional dictionary of dependency providers."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.security.base.AbstractSecurityConfig.retrieve_user_handler:1
+msgid ""
+"Callable that receives the ``auth`` value from the authentication middleware "
+"and returns a ``user`` value."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.security.base.AbstractSecurityConfig.retrieve_user_handler:3
+msgid "Notes"
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.security.base.AbstractSecurityConfig.retrieve_user_handler:5
+msgid ""
+"User and Auth can be any arbitrary values specified by the security backend."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.security.base.AbstractSecurityConfig.retrieve_user_handler:6
+msgid ""
+"The User and Auth values will be set by the middleware as "
+"``scope[\"user\"]`` and ``scope[\"auth\"]`` respectively. Once provided, "
+"they can access via the ``connection.user`` and ``connection.auth`` "
+"properties."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.security.base.AbstractSecurityConfig.retrieve_user_handler:8
+msgid ""
+"The callable can be sync or async. If it is sync, it will be wrapped to "
+"support async."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.security.base.AbstractSecurityConfig.type_encoders:1
+msgid ""
+"A mapping of types to callables that transform them into types supported for "
+"serialization."
+msgstr ""
+
+#: ../../../../starlite/security/base.py:docstring of
+#: starlite.security.base.AbstractSecurityConfig.on_app_init:1
+msgid ""
+"Handle app init by injecting middleware, guards etc. into the app. This "
+"method can be used only on the app level."
+msgstr ""
+
+#: ../../../../starlite/security/base.py:docstring of
+#: starlite.security.base.AbstractSecurityConfig.create_response:0
+#: starlite.security.base.AbstractSecurityConfig.on_app_init:0
+#: starlite.security.base.AbstractSecurityConfig.validate_retrieve_user_handler:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../starlite/security/base.py:docstring of
+#: starlite.security.base.AbstractSecurityConfig.on_app_init:4
+msgid "An instance of :class:`AppConfig <starlite.config.AppConfig>`"
+msgstr ""
+
+#: ../../../../starlite/security/base.py:docstring of
+#: starlite.security.base.AbstractSecurityConfig.create_response:0
+#: starlite.security.base.AbstractSecurityConfig.middleware:0
+#: starlite.security.base.AbstractSecurityConfig.on_app_init:0
+#: starlite.security.base.AbstractSecurityConfig.openapi_components:0
+#: starlite.security.base.AbstractSecurityConfig.security_requirement:0
+#: starlite.security.base.AbstractSecurityConfig.validate_retrieve_user_handler:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/security/base.py:docstring of
+#: starlite.security.base.AbstractSecurityConfig.on_app_init:6
+msgid "The :class:`AppConfig <starlite.config.AppConfig>`."
+msgstr ""
+
+#: ../../../../starlite/security/base.py:docstring of
+#: starlite.security.base.AbstractSecurityConfig.create_response:1
+msgid "Create a response object."
+msgstr ""
+
+#: ../../../../starlite/security/base.py:docstring of
+#: starlite.security.base.AbstractSecurityConfig.create_response:3
+msgid "Handles setting the type encoders mapping on the response."
+msgstr ""
+
+#: ../../../../starlite/security/base.py:docstring of
+#: starlite.security.base.AbstractSecurityConfig.create_response:5
+msgid "A value for the response body that will be rendered into bytes string."
+msgstr ""
+
+#: ../../../../starlite/security/base.py:docstring of
+#: starlite.security.base.AbstractSecurityConfig.create_response:6
+msgid "An HTTP status code."
+msgstr ""
+
+#: ../../../../starlite/security/base.py:docstring of
+#: starlite.security.base.AbstractSecurityConfig.create_response:7
+msgid "A value for the response 'Content-Type' header."
+msgstr ""
+
+#: ../../../../starlite/security/base.py:docstring of
+#: starlite.security.base.AbstractSecurityConfig.create_response:8
+msgid ""
+"A string keyed dictionary of response headers. Header keys are insensitive."
+msgstr ""
+
+#: ../../../../starlite/security/base.py:docstring of
+#: starlite.security.base.AbstractSecurityConfig.create_response:9
+msgid ""
+"A list of :class:`Cookie <starlite.datastructures.Cookie>` instances to be "
+"set under the response 'Set-Cookie' header."
+msgstr ""
+
+#: ../../../../starlite/security/base.py:docstring of
+#: starlite.security.base.AbstractSecurityConfig.create_response:12
+msgid "A response object."
+msgstr ""
+
+#: ../../../../starlite/security/base.py:docstring of
+#: starlite.security.base.AbstractSecurityConfig.validate_retrieve_user_handler:1
+msgid "Ensure that the passed in value does not get bound."
+msgstr ""
+
+#: ../../../../starlite/security/base.py:docstring of
+#: starlite.security.base.AbstractSecurityConfig.validate_retrieve_user_handler:3
+msgid "A callable fulfilling the RetrieveUserHandler type."
+msgstr ""
+
+#: ../../../../starlite/security/base.py:docstring of
+#: starlite.security.base.AbstractSecurityConfig.validate_retrieve_user_handler:5
+msgid "An instance of AsyncCallable wrapping the callable."
+msgstr ""
+
+#: ../../../../starlite/security/base.py:docstring of
+#: starlite.security.base.AbstractSecurityConfig.openapi_components:1
+msgid "Create OpenAPI documentation for the JWT auth schema used."
+msgstr ""
+
+#: ../../../../starlite/security/base.py:docstring of
+#: starlite.security.base.AbstractSecurityConfig.openapi_components:3
+msgid ""
+"An :class:`Components <pydantic_openapi_schema.v3_1_0.components."
+"Components>` instance."
+msgstr ""
+
+#: ../../../../starlite/security/base.py:docstring of
+#: starlite.security.base.AbstractSecurityConfig.security_requirement:1
+msgid "Return OpenAPI 3.1."
+msgstr ""
+
+#: ../../../../starlite/security/base.py:docstring of
+#: starlite.security.base.AbstractSecurityConfig.security_requirement:3
+msgid ""
+":class:`SecurityRequirement <pydantic_openapi_schema.v3_1_0."
+"security_requirement.SecurityRequirement>` for the auth backend."
+msgstr ""
+
+#: ../../../../starlite/security/base.py:docstring of
+#: starlite.security.base.AbstractSecurityConfig.security_requirement:6
+msgid ""
+"An OpenAPI 3.1 :class:`SecurityRequirement <pydantic_openapi_schema.v3_1_0."
+"security_requirement.SecurityRequirement>` dictionary."
+msgstr ""
+
+#: ../../../../starlite/security/base.py:docstring of
+#: starlite.security.base.AbstractSecurityConfig.middleware:1
+msgid ""
+"Create an instance of the config's ``authentication_middleware_class`` "
+"attribute and any required kwargs, wrapping it in Starlite's "
+"``DefineMiddleware``."
+msgstr ""
+
+#: ../../../../starlite/security/base.py:docstring of
+#: starlite.security.base.AbstractSecurityConfig.middleware:4
+msgid ""
+"An instance of :class:`DefineMiddleware <starlite.middleware.base."
+"DefineMiddleware>`."
+msgstr ""

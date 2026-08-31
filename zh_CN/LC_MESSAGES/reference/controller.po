@@ -1,0 +1,224 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/controller.rst:2
+msgid "starlite.controller"
+msgstr ""
+
+#: ../../../../starlite/controller.py:docstring of
+#: starlite.controller.Controller:1
+msgid "Bases: :py:class:`object`"
+msgstr ""
+
+#: ../../../../starlite/controller.py:docstring of
+#: starlite.controller.Controller:1
+msgid "The Starlite Controller class."
+msgstr ""
+
+#: ../../../../starlite/controller.py:docstring of
+#: starlite.controller.Controller:3
+msgid "Subclass this class to create 'view' like components and utilize OOP."
+msgstr ""
+
+#: ../../../../docstring of starlite.controller.Controller.after_request:1
+msgid ""
+"A sync or async function executed before a :class:`Request <starlite."
+"connection.Request>` is passed to any route handler."
+msgstr ""
+
+#: ../../../../docstring of starlite.controller.Controller.after_request:3
+msgid ""
+"If this function returns a value, the request will not reach the route "
+"handler, and instead this value will be used."
+msgstr ""
+
+#: ../../../../docstring of starlite.controller.Controller.after_response:1
+msgid "A sync or async function called after the response has been awaited."
+msgstr ""
+
+#: ../../../../docstring of starlite.controller.Controller.after_response:3
+msgid ""
+"It receives the :class:`Request <starlite.connection.Request>` instance and "
+"should not return any values."
+msgstr ""
+
+#: ../../../../docstring of starlite.controller.Controller.before_request:1
+msgid ""
+"A sync or async function called immediately before calling the route handler."
+msgstr ""
+
+#: ../../../../docstring of starlite.controller.Controller.before_request:3
+msgid ""
+"It receives the :class:`Request <starlite.connection.Request>` instance and "
+"any non-``None`` return value is used for the response, bypassing the route "
+"handler."
+msgstr ""
+
+#: ../../../../docstring of starlite.controller.Controller.cache_control:1
+msgid ""
+"A :class:`CacheControlHeader <starlite.datastructures.CacheControlHeader>` "
+"header to add to route handlers of this controller."
+msgstr ""
+
+#: ../../../../docstring of starlite.controller.Controller.cache_control:4
+#: starlite.controller.Controller.etag:3
+msgid "Can be overridden by route handlers."
+msgstr ""
+
+#: ../../../../docstring of starlite.controller.Controller.dependencies:1
+msgid ""
+"A string keyed dictionary of dependency :class:`Provider <starlite."
+"datastructures.Provide>` instances."
+msgstr ""
+
+#: ../../../../docstring of starlite.controller.Controller.dependencies:0
+msgid "type"
+msgstr ""
+
+#: ../../../../docstring of starlite.controller.Controller.dependencies:3
+msgid "dependencies"
+msgstr ""
+
+#: ../../../../docstring of starlite.controller.Controller.etag:1
+msgid ""
+"An ``etag`` header of type :class:`ETag <starlite.datastructures.ETag>` to "
+"add to route handlers of this controller."
+msgstr ""
+
+#: ../../../../docstring of starlite.controller.Controller.exception_handlers:1
+msgid ""
+"A dictionary that maps handler functions to status codes and/or exception "
+"types."
+msgstr ""
+
+#: ../../../../docstring of starlite.controller.Controller.guards:1
+msgid "A list of :class:`Guard <starlite.types.Guard>` callables."
+msgstr ""
+
+#: ../../../../docstring of starlite.controller.Controller.middleware:1
+msgid "A list of :class:`Middleware <starlite.types.Middleware>`."
+msgstr ""
+
+#: ../../../../docstring of starlite.controller.Controller.opt:1
+msgid ""
+"A string key dictionary of arbitrary values that can be accessed in :class:"
+"`Guards <starlite.types.Guard>` or wherever you have access to :class:"
+"`Request <starlite.connection.request.Request>` or :class:`ASGI Scope "
+"<starlite.types.Scope>`."
+msgstr ""
+
+#: ../../../../docstring of starlite.controller.Controller.parameters:1
+msgid ""
+"A mapping of :class:`Parameter <starlite.params.Parameter>` definitions "
+"available to all application paths."
+msgstr ""
+
+#: ../../../../docstring of starlite.controller.Controller.response_class:1
+msgid ""
+"A custom subclass of [starlite.response.Response] to be used as the default "
+"response for all route handlers under the controller."
+msgstr ""
+
+#: ../../../../docstring of starlite.controller.Controller.response_cookies:1
+msgid "A list of [Cookie](starlite.datastructures.Cookie] instances."
+msgstr ""
+
+#: ../../../../docstring of starlite.controller.Controller.response_headers:1
+msgid ""
+"A string keyed dictionary mapping :class:`ResponseHeader <starlite."
+"datastructures.ResponseHeader>` instances."
+msgstr ""
+
+#: ../../../../docstring of starlite.controller.Controller.tags:1
+msgid ""
+"A list of string tags that will be appended to the schema of all route "
+"handlers under the controller."
+msgstr ""
+
+#: ../../../../docstring of starlite.controller.Controller.security:1
+msgid ""
+"A list of dictionaries that to the schema of all route handlers under the "
+"controller."
+msgstr ""
+
+#: ../../../../docstring of starlite.controller.Controller.type_encoders:1
+msgid ""
+"A mapping of types to callables that transform them into types supported for "
+"serialization."
+msgstr ""
+
+#: ../../../../starlite/controller.py:docstring of
+#: starlite.controller.Controller.__init__:1
+msgid "Initialize a controller."
+msgstr ""
+
+#: ../../../../starlite/controller.py:docstring of
+#: starlite.controller.Controller.__init__:3
+msgid "Should only be called by routers as part of controller registration."
+msgstr ""
+
+#: ../../../../starlite/controller.py:docstring of
+#: starlite.controller.Controller.__init__:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../starlite/controller.py:docstring of
+#: starlite.controller.Controller.__init__:5
+msgid "An instance of 'Router'"
+msgstr ""
+
+#: ../../../../docstring of starlite.controller.Controller.path:1
+msgid "A path fragment for the controller."
+msgstr ""
+
+#: ../../../../docstring of starlite.controller.Controller.path:3
+msgid ""
+"All route handlers under the controller will have the fragment appended to "
+"them. If not set it defaults to '/'."
+msgstr ""
+
+#: ../../../../docstring of starlite.controller.Controller.owner:1
+msgid ""
+"The :class:`Router <starlite.router.Router>` or :class:`Starlite <starlite."
+"app.Starlite>` app that owns the controller."
+msgstr ""
+
+#: ../../../../docstring of starlite.controller.Controller.owner:3
+msgid ""
+"This value is set internally by Starlite and it should not be set when "
+"subclassing the controller."
+msgstr ""
+
+#: ../../../../starlite/controller.py:docstring of
+#: starlite.controller.Controller.get_route_handlers:1
+msgid ""
+"Get a controller's route handlers and set the controller as the handlers' "
+"owner."
+msgstr ""
+
+#: ../../../../starlite/controller.py:docstring of
+#: starlite.controller.Controller.get_route_handlers:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/controller.py:docstring of
+#: starlite.controller.Controller.get_route_handlers:3
+msgid ""
+"A list containing a copy of the route handlers defined on the controller"
+msgstr ""
