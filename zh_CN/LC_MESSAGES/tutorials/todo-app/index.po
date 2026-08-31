@@ -1,0 +1,63 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../tutorials/todo-app/index.rst:2
+msgid "Developing a basic TODO application"
+msgstr "开发一个基础的 TODO 应用程序"
+
+#: ../../../tutorials/todo-app/index.rst:4
+msgid "Who is this tutorial for?"
+msgstr "本教程适合哪些人？"
+
+#: ../../../tutorials/todo-app/index.rst:7
+msgid ""
+"This tutorial is intended to familiarize you with the basic concepts of "
+"Litestar. If you have no prior experience with Litestar or web frameworks in "
+"general, this is the right place to start."
+msgstr ""
+"本教程旨在帮助你熟悉 Litestar 的基本概念。如果你此前没有使用过 Litestar，或者"
+"对 Web 框架整体上还不熟悉，那么这里将是一个很好的起点。"
+
+#: ../../../tutorials/todo-app/index.rst:12
+msgid "Basic knowledge of Python and web development concepts are required."
+msgstr "需要具备 Python 基础知识以及 Web 开发的基本概念。"
+
+#: ../../../tutorials/todo-app/index.rst:15
+msgid ""
+"The goal of this tutorial is to develop a TODO application with the "
+"following functionalities:"
+msgstr "本教程的目标是开发一个具备以下功能的 TODO 应用程序："
+
+#: ../../../tutorials/todo-app/index.rst:18
+msgid "Retrieve a TODO list"
+msgstr "获取 TODO 列表"
+
+#: ../../../tutorials/todo-app/index.rst:19
+msgid "Add items to a TODO list"
+msgstr "向 TODO 列表添加条目"
+
+#: ../../../tutorials/todo-app/index.rst:20
+msgid "Mark TODO items as *done*"
+msgstr "将 TODO 条目标记为*已完成*"
+
+#: ../../../tutorials/todo-app/index.rst:22
+msgid ""
+"This is not a whole lot of functionality, but enough to learn most of the "
+"fundamental building blocks of Litestar."
+msgstr "虽然功能并不算多，但已经足以帮助你学习 Litestar 的大部分核心基础组件。"
