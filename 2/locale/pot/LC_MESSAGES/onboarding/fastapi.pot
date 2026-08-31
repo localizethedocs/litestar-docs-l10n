@@ -1,0 +1,1592 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-31 15:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../onboarding/fastapi.rst:0 ../../../onboarding/fastapi.rst:2
+msgid "FastAPI"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:6
+msgid "Layered configuration"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:8
+msgid ""
+"Litestar uses a layered architecture. The parts used to group routes can "
+"also be used to hierarchically organize an application. Settings and "
+"configuration like dependencies, exception handlers, guards, middleware, "
+"response cookies and headers, lifecycle hooks, OpenAPI configuration and "
+"many more can be defined on any layer, and will be merged upon registration."
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:14
+msgid "The layers in hierarchical order are"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:16
+msgid "Application (``Litestar``)"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:17
+msgid ""
+"``Router`` / ``Controller`` (these are on the same level and can be "
+"arbitrarily nested)"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:18
+msgid "Handler (``BaseRouteHandler``)"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:20
+msgid ""
+"When the same configuration is set on multiple layers, the value set closest "
+"to the handler takes precedence."
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:25
+msgid "Pydantic support"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:27
+msgid ""
+"Litestar does support Pydantic, but other than FastAPI, it is mostly "
+"agnostic about the modelling library you use. Litestar internally uses "
+"`msgspec <https://msgspec.dev>`_, but also ships with support for Pydantic, "
+"attrs and all builtin container types such as dataclasses or ``TypedDict``\\ "
+"s."
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:32
+msgid ""
+"These, as well as ``msgspec``, are supported through its plugin system ( :"
+"class:`~litestar.plugins.SerializationPlugin` and :class:`~litestar.plugins."
+"OpenAPISchemaPlugin`) so it's easy to add first-class support for any "
+"library."
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:39
+msgid "Route handlers"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:41
+msgid ""
+"Litestar does not expose decorators on the application or router. A route is "
+"declared by a :doc:`route handler </usage/routing/handlers>` (function with "
+"one of the method decorators, or a method on a :class:`Controller`) and then "
+"registered on a :class:`Litestar` or :class:`Router` instance."
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:52
+msgid ""
+"from fastapi import FastAPI\n"
+"\n"
+"app = FastAPI()\n"
+"\n"
+"@app.get(\"/\")\n"
+"async def index() -> dict[str, str]: ..."
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:0
+msgid "Starlette"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:64
+msgid ""
+"from starlette.applications import Starlette\n"
+"from starlette.routing import Route\n"
+"\n"
+"async def index(request): ...\n"
+"\n"
+"routes = [Route(\"/\", endpoint=index)]\n"
+"app = Starlette(routes=routes)"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:0 ../../../onboarding/fastapi.rst:864
+msgid "Litestar"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:77
+msgid ""
+"from litestar import Litestar, get\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"async def index() -> dict[str, str]:\n"
+"    return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[index])"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:81
+msgid ""
+":ref:`Routing - Registering Routes <usage/routing/overview:registering "
+"routes>`"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:85
+msgid "Routers"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:87
+msgid ""
+"A few small differences between Litestar's :class:`Router` and FastAPI / "
+"Starlette's:"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:89
+msgid ""
+"A Litestar ``Router`` is not itself an ASGI application. It groups handlers "
+"and options. Routers are \"flattened\" into simple handlers during "
+"registration"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:91
+msgid "A Litestar ``Router`` does not expose decorators"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:92
+msgid ""
+"A Litestar ``Router`` does not run lifecycle hooks. Lifecycle hooks can only "
+"be registered on the application. See :doc:`/usage/lifecycle-hooks` for more "
+"information"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:97
+msgid "Host-based routing"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:99
+msgid ""
+"Litestar does not support dispatching requests by the ``Host`` header. Run "
+"each host as its own application behind a reverse proxy such as `nginx "
+"<https://www.nginx.com>`_ or `traefik <https://traefik.io>`_."
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:105 ../../../onboarding/fastapi.rst:874
+msgid "Lifespan"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:107
+msgid "Litestar uses the async context manager pattern as Starlette/FastAPI:"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:115
+msgid ""
+"from contextlib import asynccontextmanager\n"
+"\n"
+"@asynccontextmanager\n"
+"async def lifespan(app: FastAPI):\n"
+"    # setup\n"
+"    yield\n"
+"    # teardown\n"
+"\n"
+"app = FastAPI(lifespan=lifespan)"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:130
+msgid ""
+"from collections.abc import AsyncIterator\n"
+"from contextlib import asynccontextmanager\n"
+"\n"
+"from litestar import Litestar, get\n"
+"\n"
+"\n"
+"@asynccontextmanager\n"
+"async def lifespan(app: Litestar) -> AsyncIterator[None]:\n"
+"    # Setup code runs before the application starts accepting requests.\n"
+"    yield\n"
+"    # Teardown code runs after the application has stopped.\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"async def index() -> dict[str, str]:\n"
+"    return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[index], lifespan=[lifespan])"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:134 ../../../onboarding/fastapi.rst:872
+msgid "Application state"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:136
+msgid ""
+"Application-scoped data lives on :class:`~litestar.datastructures.State`, "
+"the equivalent of FastAPI's ``app.state``. State seeded on the application "
+"is available to dependencies through the ``state`` parameter and to handlers "
+"through ``request.app.state``. Per-request data lives on ``request.state`` "
+"instead, and is wiped between requests."
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:147
+msgid ""
+"from fastapi import Request\n"
+"\n"
+"async def get_arq_redis(request: Request) -> ArqRedis:\n"
+"    return request.state.arq_redis"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:157
+msgid ""
+"from litestar import Litestar, get\n"
+"from litestar.datastructures import State\n"
+"from litestar.di import Provide\n"
+"\n"
+"\n"
+"class ArqRedis:\n"
+"    \"\"\"Stand-in for an ``arq`` Redis client.\"\"\"\n"
+"\n"
+"\n"
+"async def get_arq_redis(state: State) -> ArqRedis:\n"
+"    return state.arq_redis\n"
+"\n"
+"\n"
+"@get(\"/\", dependencies={\"arq_redis\": Provide(get_arq_redis)})\n"
+"async def handler(arq_redis: ArqRedis) -> dict[str, str]:\n"
+"    return {\"type\": type(arq_redis).__name__}\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[handler],\n"
+"    state=State({\"arq_redis\": ArqRedis()}),\n"
+")"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:161
+msgid "Handlers and request data"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:164
+msgid "Path and query parameters"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:166
+msgid ""
+"FastAPI allows declaring path and query parameters implicitly; If a function "
+"parameter of the same name is detected, the path / query parameter will be "
+"injected into it. Litestar uses the same mechanism but makes it explicit: "
+"The corresponding parameters must be marked with :data:`~litestar.params."
+"FromPath` and :data:`~litestar.params.FromQuery` respectively:"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:178
+msgid ""
+"@app.get(\"/{some_path}\")\n"
+"async def handler(some_path: str, some_query: int) -> None:\n"
+"    return None"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:187
+msgid ""
+"from litestar import get\n"
+"from litestar.params import FromPath, FromQuery\n"
+"\n"
+"\n"
+"@get(\"/{some_path:str}\")\n"
+"async def handler(some_path: FromPath[str], some_query: FromQuery[int]) -> "
+"None:\n"
+"    return None"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:190
+msgid ""
+"To define constraints or extend the OpenAPI schema for parameters, use their "
+"``Annotated`` shapes :class:`~litestar.params.PathParameter` and :class:"
+"`~litestar.params.QueryParameter`:"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:200
+msgid ""
+"@app.get(\"/{some_path}\")\n"
+"async def handler(\n"
+"    some_path: str,\n"
+"    some_query: Annotated[int, Query(gt=1)],\n"
+") -> None:\n"
+"    return None"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:212
+msgid ""
+"from typing import Annotated\n"
+"\n"
+"from litestar import get\n"
+"from litestar.params import CookieParameter, HeaderParameter\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"async def handler(\n"
+"    some_cookie: Annotated[int, CookieParameter(lt=10)],\n"
+"    some_header: Annotated[int, HeaderParameter(name=\"some-header\", "
+"gt=1)],\n"
+") -> None:\n"
+"    return None"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:214
+msgid "See :doc:`/usage/routing/parameters` for more details."
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:219
+msgid "Header and cookie parameters"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:221
+msgid ""
+"These take the same shape as :ref:`onboarding/fastapi:Path and query "
+"parameters`, with their generic forms :data:`~litestar.params.FromHeader` "
+"and :data:`~litestar.params.FromCookie`. One important difference between "
+"FastAPI and Litestar is, that FastAPI automatically matches snake case "
+"parameter names to cookie / header names (e.g. ``some_header: Annotated[str, "
+"Header()]`` will match the header ``Some-Header``). Litestar requires "
+"specifying the name explicitly if it does not match the function parameter "
+"name."
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:235
+msgid ""
+"@app.get(\"/\")\n"
+"async def handler(\n"
+"    some_cookie: Annotated[int, Cookie(lt=10)],\n"
+"    some_header: Annotated[int, Header(gt=1)],\n"
+") -> None:\n"
+"    return None"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:247
+msgid ""
+"from typing import Annotated\n"
+"\n"
+"from litestar import get\n"
+"from litestar.params import PathParameter, QueryParameter\n"
+"\n"
+"\n"
+"@get(\"/{some_path:str}\")\n"
+"async def handler(\n"
+"    some_path: Annotated[str, PathParameter(description=\"This is the path "
+"parameter\")],\n"
+"    some_query: Annotated[int, QueryParameter(gt=1)],\n"
+") -> None:\n"
+"    return None"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:251
+msgid "JSON request body"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:253
+msgid ""
+"The JSON body binds is injected into the handler via the ``data`` parameter. "
+"Its type can be any type supported by Litestar or a validation extension. "
+"The data will be validated against this type before it is passed to the "
+"handler."
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:257
+msgid ""
+"Litestar natively supports builtin types, dataclasses, Pydantic models, "
+"msgspec ``Struct``\\ s and attrs classes."
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:266
+msgid ""
+"class Item(BaseModel):\n"
+"    name: str\n"
+"\n"
+"@app.post(\"/items/\")\n"
+"async def create_item(item: Item) -> dict[str, str]:\n"
+"    return {\"name\": item.name}"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:278
+msgid ""
+"from pydantic import BaseModel\n"
+"\n"
+"from litestar import Litestar, post\n"
+"\n"
+"\n"
+"class Item(BaseModel):\n"
+"    name: str\n"
+"\n"
+"\n"
+"@post(\"/items/\")\n"
+"async def create_item(data: Item) -> dict[str, str]:\n"
+"    return {\"name\": data.name}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[create_item])"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:282 ../../../onboarding/fastapi.rst:878
+msgid "Form data"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:284
+msgid ""
+"Form-encoded bodies use the same ``data`` parameter, annotated with :func:"
+"`~litestar.params.Body` and a ``media_type`` of :class:`RequestEncodingType."
+"URL_ENCODED <litestar.enums.RequestEncodingType>` or :class:"
+"`RequestEncodingType.MULTI_PART <litestar.enums.RequestEncodingType>`"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:289
+msgid "One ``data`` declaration replaces FastAPI's per-field ``Form()`` calls."
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:297
+msgid ""
+"from fastapi import Form\n"
+"\n"
+"@app.post(\"/login\")\n"
+"async def login(\n"
+"    username: str = Form(...),\n"
+"    password: str = Form(...),\n"
+") -> dict[str, str]:\n"
+"    return {\"user\": username}"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:311
+msgid ""
+"from typing import Annotated\n"
+"\n"
+"from litestar import Litestar, post\n"
+"from litestar.enums import RequestEncodingType\n"
+"from litestar.params import Body\n"
+"\n"
+"\n"
+"@post(\"/login\")\n"
+"async def login(\n"
+"    data: Annotated[dict[str, str], Body(media_type=RequestEncodingType."
+"URL_ENCODED)],\n"
+") -> dict[str, str]:\n"
+"    return {\"user\": data[\"username\"]}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[login])"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:315
+msgid "File uploads"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:317
+msgid ""
+"Multipart bodies use the same ``data`` parameter with ``media_type`` set to :"
+"class:`RequestEncodingType.MULTI_PART <litestar.enums.RequestEncodingType>`. "
+"Uploaded files arrive as :class:`~litestar.datastructures.UploadFile` "
+"instances. To receive multiple files, you can simply use "
+"``list[UploadFile]``. For mixed form data (i.e. plain fields + uploads), you "
+"can simply annotate any field of a supported model type with ``UploadData``."
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:330
+msgid ""
+"from fastapi import UploadFile\n"
+"\n"
+"@app.post(\"/upload/\")\n"
+"async def upload(files: list[UploadFile]) -> dict[str, list[str]]:\n"
+"    return {\"file_names\": [f.filename for f in files]}"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:341
+msgid ""
+"from typing import Annotated\n"
+"\n"
+"from litestar import Litestar, post\n"
+"from litestar.datastructures import UploadFile\n"
+"from litestar.enums import RequestEncodingType\n"
+"from litestar.params import Body\n"
+"\n"
+"\n"
+"@post(\"/upload/\")\n"
+"async def upload_file(\n"
+"    data: Annotated[list[UploadFile], Body(media_type=RequestEncodingType."
+"MULTI_PART)],\n"
+") -> dict[str, list[str | None]]:\n"
+"    return {\"file_names\": [file.filename for file in data]}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[upload_file])"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:345
+msgid "Synchronous handlers"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:347
+msgid ""
+"FastAPI inspects the handler at registration and runs synchronous callables "
+"on a threadpool. Litestar has the same mechanism, but it must be explicitly "
+"enabled by setting ``sync_to_thread=True``. A synchronous handler without "
+"``sync_to_thread`` will emit a warning at startup. If you intentionally do "
+"not want to run a synchronous handler inside a thread pool, set "
+"``sync_to_thread=False``."
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:359
+msgid ""
+"@app.get(\"/\")\n"
+"def slow_handler() -> dict[str, str]:\n"
+"    # implicitly run in a threadpool\n"
+"    return {\"hello\": \"world\"}"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:369
+msgid ""
+"import time\n"
+"\n"
+"from litestar import Litestar, get\n"
+"\n"
+"\n"
+"@get(\"/\", sync_to_thread=True)\n"
+"def slow_handler() -> dict[str, str]:\n"
+"    time.sleep(0.01)\n"
+"    return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"@get(\"/fast\", sync_to_thread=False)\n"
+"def fast_handler() -> dict[str, str]:\n"
+"    return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[slow_handler, fast_handler])"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:374
+msgid "Producing responses"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:377
+msgid "Default status codes"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:379
+msgid ""
+"FastAPI returns ``200`` for every method by default. Litestar picks the "
+"status code from the HTTP method: ``POST`` defaults to ``201 Created``, "
+"``DELETE`` to ``204 No Content``, and everything else to ``200``. You can "
+"pass ``status_code=`` to the handler to override the default status code."
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:385
+msgid "Cookies and headers"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:387
+msgid ""
+"FastAPI defaults to setting headers directly on a ``Response`` . Litestar "
+"offers two paths: declare static values on the decorator with "
+"``response_cookies`` and ``response_headers``, or return a :class:`~litestar."
+"response.Response` with ``cookies=`` and ``headers=`` when the values depend "
+"on the request."
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:398
+msgid ""
+"from fastapi import Response\n"
+"\n"
+"@app.get(\"/\")\n"
+"async def index(response: Response) -> dict[str, str]:\n"
+"    response.set_cookie(key=\"my-cookie\", value=\"cookie-value\")\n"
+"    return {}"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:410
+msgid ""
+"from litestar import Litestar, get\n"
+"from litestar.datastructures import Cookie\n"
+"\n"
+"\n"
+"@get(\"/\", response_cookies=[Cookie(key=\"my-cookie\", value=\"cookie-"
+"value\")])\n"
+"async def handler() -> str:\n"
+"    return \"hello\"\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[handler])"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:414
+msgid ""
+":ref:`Responses - Setting Response Cookies <usage/responses:setting response "
+"cookies>`"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:418
+msgid "Serialization"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:420
+msgid ""
+"The handler's return annotation drives serialization. Structured types "
+"serialise to JSON; ``str`` returns ``text/plain``; a typed response "
+"(``Stream``, ``Template``, ``Redirect``, ``File``) picks its own media type. "
+"``media_type=`` on the decorator overrides the default."
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:427 ../../../onboarding/fastapi.rst:888
+msgid "Templates"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:429
+msgid ""
+"FastAPI renders templates through Starlette's ``Jinja2Templates`` helper and "
+"returns a ``TemplateResponse``. In Litestar the engine is configured once on "
+"the application through :class:`~litestar.template.config.TemplateConfig`, "
+"and each handler returns a :class:`~litestar.response.Template`."
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:440
+msgid ""
+"from fastapi.templating import Jinja2Templates\n"
+"\n"
+"templates = Jinja2Templates(directory=\"templates\")\n"
+"\n"
+"@app.get(\"/uploads\")\n"
+"async def get_uploads(request: Request):\n"
+"    return templates.TemplateResponse(\n"
+"        \"uploads.html\", {\"request\": request, \"debug\": True}\n"
+"    )"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:455
+msgid ""
+"from pathlib import Path\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.plugins.jinja import JinjaTemplateEngine\n"
+"from litestar.response import Template\n"
+"from litestar.template.config import TemplateConfig\n"
+"\n"
+"\n"
+"@get(\"/uploads\")\n"
+"async def get_uploads() -> Template:\n"
+"    return Template(\n"
+"        template_str=\"<p>debug={{ debug }}</p>\",\n"
+"        context={\"debug\": True},\n"
+"    )\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[get_uploads],\n"
+"    template_config=TemplateConfig(\n"
+"        directory=Path(__file__).parent,\n"
+"        engine=JinjaTemplateEngine,\n"
+"    ),\n"
+")"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:459
+msgid ":doc:`/usage/templating`"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:463
+msgid "Streaming responses"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:465
+msgid ""
+"FastAPI uses ``StreamingResponse``; Litestar uses :class:`~litestar.response."
+"Stream`. Both wrap a sync or async iterator."
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:474
+msgid ""
+"from fastapi.responses import StreamingResponse\n"
+"\n"
+"@app.get(\"/numbers\")\n"
+"async def stream_numbers() -> StreamingResponse:\n"
+"    async def numbers():\n"
+"        for i in range(5):\n"
+"            yield f\"{i}\\n\".encode()\n"
+"\n"
+"    return StreamingResponse(numbers())"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:489
+msgid ""
+"from collections.abc import AsyncIterator\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.response import Stream\n"
+"\n"
+"\n"
+"async def numbers() -> AsyncIterator[bytes]:\n"
+"    for i in range(5):\n"
+"        yield f\"{i}\\n\".encode()\n"
+"\n"
+"\n"
+"@get(\"/numbers\")\n"
+"async def stream_numbers() -> Stream:\n"
+"    return Stream(numbers())\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[stream_numbers])"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:493 ../../../onboarding/fastapi.rst:870
+msgid "Dependency injection"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:495
+msgid ""
+"FastAPI declares a dependency at the call site, either as a default value or "
+"inside the parameter annotation via ``Depends(fn)``, or in a list on the "
+"path operation. Litestar declares dependencies as a mapping from parameter "
+"name to provider, attached to the ``dependencies`` keyword on any layer. "
+"Async callables can be used as dependency providers natively, sync callables "
+"must be wrapped in :class:`~litestar.di.Provide`."
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:507
+msgid ""
+"from fastapi import FastAPI, Depends, APIRouter\n"
+"\n"
+"async def route_dependency() -> bool: ...\n"
+"async def nested_dependency() -> str: ...\n"
+"async def router_dependency() -> int: ...\n"
+"async def app_dependency(data: str = Depends(nested_dependency)) -> "
+"int: ...\n"
+"\n"
+"router = APIRouter(dependencies=[Depends(router_dependency)])\n"
+"app = FastAPI(dependencies=[Depends(nested_dependency)])\n"
+"app.include_router(router)\n"
+"\n"
+"@app.get(\"/\")\n"
+"async def handler(\n"
+"    val_route: bool = Depends(route_dependency),\n"
+"    val_router: int = Depends(router_dependency),\n"
+"    val_nested: str = Depends(nested_dependency),\n"
+"    val_app: int = Depends(app_dependency),\n"
+") -> None: ..."
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:531
+msgid ""
+"from litestar import Litestar, Router, get\n"
+"from litestar.di import NamedDependency\n"
+"\n"
+"\n"
+"async def route_dependency() -> bool:\n"
+"    return True\n"
+"\n"
+"\n"
+"async def nested_dependency() -> str:\n"
+"    return \"nested\"\n"
+"\n"
+"\n"
+"async def router_dependency() -> int:\n"
+"    return 1\n"
+"\n"
+"\n"
+"async def app_dependency(val_nested: NamedDependency[str]) -> int:\n"
+"    return len(val_nested)\n"
+"\n"
+"\n"
+"@get(\"/\", dependencies={\"val_route\": route_dependency})\n"
+"async def handler(\n"
+"    val_route: NamedDependency[bool],\n"
+"    val_router: NamedDependency[int],\n"
+"    val_nested: NamedDependency[str],\n"
+"    val_app: NamedDependency[int],\n"
+") -> dict[str, object]:\n"
+"    return {\n"
+"        \"val_route\": val_route,\n"
+"        \"val_router\": val_router,\n"
+"        \"val_nested\": val_nested,\n"
+"        \"val_app\": val_app,\n"
+"    }\n"
+"\n"
+"\n"
+"router = Router(\n"
+"    path=\"/\",\n"
+"    route_handlers=[handler],\n"
+"    dependencies={\"val_router\": router_dependency},\n"
+")\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[router],\n"
+"    dependencies={\n"
+"        \"val_app\": app_dependency,\n"
+"        \"val_nested\": nested_dependency,\n"
+"    },\n"
+")"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:535
+msgid ""
+"As most configuration in Litestar, dependencies are layered. Inner layers "
+"override outer ones, so a router-scoped dependency replaces an application-"
+"scoped one of the same name, and a handler-scoped one replaces both."
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:542
+msgid ":doc:`/usage/dependency-injection`"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:546
+msgid "Dependency overrides in tests"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:548
+msgid ""
+"FastAPI exposes ``app.dependency_overrides`` for swapping dependencies on a "
+"live application. Litestar does not. The omission is deliberate: an override "
+"that mutates a hared application is hard to reason about under parallel "
+"tests, and Litestar is of the opinion that it's better to structure the "
+"application in such a way that overrides are not necessary."
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:554
+msgid "Alternative strategies are, order of preference:"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:556
+msgid ""
+"Build the application from a factory that takes the dependencies your tests "
+"need to swap. Natural choice when the override exists to replace a real "
+"database with a test one"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:559
+msgid ""
+"Construct a fresh application per test with :func:`~litestar.testing."
+"create_test_client`, passing the overridden dependency through the same "
+"``dependencies=`` keyword the production application uses"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:562
+msgid ""
+"Patch the dependency callable with a mocking library: A last resort reserved "
+"for cases where first two are impractical reach"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:567
+msgid "Exceptions and error responses"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:569
+msgid ""
+"Both frameworks export an ``HTTPException``. The FastAPI one takes the "
+"status code as a positional argument; the Litestar one uses the keyword "
+"argument ``status_code``. A positional argument to Litestar's :class:"
+"`~litestar.exceptions.HTTPException` is appended to ``detail``, which is "
+"rendered in the JSON response."
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:580
+msgid ""
+"from fastapi import HTTPException\n"
+"\n"
+"@app.get(\"/\")\n"
+"async def index() -> None:\n"
+"    raise HTTPException(400, detail=\"can't find that\")"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:591
+msgid ""
+"from litestar import Litestar, get\n"
+"from litestar.exceptions import HTTPException\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"async def index() -> None:\n"
+"    response_fields = {\"array\": \"value\"}\n"
+"    raise HTTPException(\n"
+"        status_code=400,\n"
+"        detail=f\"can't get that field: {response_fields.get('missing')}\",\n"
+"    )\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[index])"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:595
+msgid "Custom exception handlers"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:597
+msgid ""
+"FastAPI registers exception handlers through ``@app.exception_handler``. "
+"Litestar accepts a mapping from exception class or status code to a handler "
+"callable."
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:601
+msgid ""
+"Exception handling is part of Litestar's layered architecture, so these can "
+"be declared on applications, routers, controller or route handlers"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:610
+msgid ""
+"class ItemNotFound(Exception): ...\n"
+"\n"
+"@app.exception_handler(ItemNotFound)\n"
+"async def handle(request, exc) -> JSONResponse:\n"
+"    return JSONResponse({\"detail\": \"item not found\"}, status_code=404)"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:621
+msgid ""
+"from litestar import Litestar, Request, Response, get\n"
+"\n"
+"\n"
+"class ItemNotFoundError(Exception):\n"
+"    pass\n"
+"\n"
+"\n"
+"def handle_item_not_found(request: Request, exception: ItemNotFoundError) -> "
+"Response[dict[str, str]]:\n"
+"    return Response({\"detail\": \"item not found\"}, status_code=404)\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"async def index() -> None:\n"
+"    raise ItemNotFoundError\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[index],\n"
+"    exception_handlers={ItemNotFoundError: handle_item_not_found},\n"
+")"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:625
+msgid ":ref:`usage/exceptions:exception handling`"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:629 ../../../onboarding/fastapi.rst:894
+msgid "Authentication"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:631
+msgid ""
+"FastAPI usually handles authentication through dependency injection. The "
+"same approach work in Litestar, but the more idiomatic choice is a guard or "
+"a custom :doc:`/usage/security/abstract-authentication-middleware`."
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:635
+msgid "Info"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:637
+msgid ""
+"A guard is a callable that receives the :class:`~litestar.connection."
+"ASGIConnection` and the :class:`~litestar.handlers.BaseRouteHandler`; "
+"raising an exception here aborts the request."
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:642
+msgid ""
+"Guards are part of Litestar's layered architecture, so these can be declared "
+"on applications, routers, controller or route handlers"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:651
+msgid ""
+"from fastapi import Depends\n"
+"\n"
+"async def authenticate(request: Request) -> None: ...\n"
+"\n"
+"@app.get(\"/\", dependencies=[Depends(authenticate)])\n"
+"async def index() -> dict[str, str]: ..."
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:663
+msgid ""
+"from litestar import Litestar, get\n"
+"from litestar.connection import ASGIConnection\n"
+"from litestar.exceptions import NotAuthorizedException\n"
+"from litestar.handlers import BaseRouteHandler\n"
+"\n"
+"\n"
+"async def require_token(connection: ASGIConnection, route_handler: "
+"BaseRouteHandler) -> None:\n"
+"    if connection.headers.get(\"authorization\") != \"Bearer secret\":\n"
+"        raise NotAuthorizedException\n"
+"\n"
+"\n"
+"@get(\"/\", guards=[require_token])\n"
+"async def index() -> dict[str, str]:\n"
+"    return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[index])"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:667
+msgid ":doc:`/usage/security/index`"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:671 ../../../onboarding/fastapi.rst:898
+msgid "Middleware"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:673
+msgid ""
+"Pure ASGI middleware - a callable that wraps an ASGI app and returns another "
+"- works the same in both frameworks. Middleware built on Starlette's "
+"``BaseHTTPMiddleware`` does not port directly: use :class:`~litestar."
+"middleware.ASGIMiddleware` instead. Subclass it and implement :meth:"
+"`~litestar.middleware.ASGIMiddleware.handle`, which receives ``scope``, "
+"``receive``, ``send``, and a ``next_app`` callable (the equivalent of "
+"``call_next``)."
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:686
+msgid ""
+"from starlette.middleware.base import BaseHTTPMiddleware\n"
+"\n"
+"class ProcessTimeMiddleware(BaseHTTPMiddleware):\n"
+"    async def dispatch(self, request, call_next):\n"
+"        start = time.monotonic()\n"
+"        response = await call_next(request)\n"
+"        response.headers[\"x-process-time\"] = f\"{time.monotonic() - "
+"start:.4f}\"\n"
+"        return response\n"
+"\n"
+"app.add_middleware(ProcessTimeMiddleware)"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:702
+msgid ""
+"import time\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.datastructures import MutableScopeHeaders\n"
+"from litestar.middleware import ASGIMiddleware\n"
+"from litestar.types import ASGIApp, Message, Receive, Scope, Send\n"
+"\n"
+"\n"
+"class ProcessTimeMiddleware(ASGIMiddleware):\n"
+"    async def handle(self, scope: Scope, receive: Receive, send: Send, "
+"next_app: ASGIApp) -> None:\n"
+"        start_time = time.monotonic()\n"
+"\n"
+"        async def send_wrapper(message: Message) -> None:\n"
+"            if message[\"type\"] == \"http.response.start\":\n"
+"                headers = MutableScopeHeaders.from_message(message=message)\n"
+"                headers[\"x-process-time\"] = f\"{time.monotonic() - "
+"start_time:.4f}\"\n"
+"            await send(message)\n"
+"\n"
+"        await next_app(scope, receive, send_wrapper)\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"async def index() -> dict[str, str]:\n"
+"    return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[index], middleware=[ProcessTimeMiddleware()])"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:706
+msgid ":doc:`/usage/middleware/creating-middleware`"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:710
+msgid "Background tasks"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:712
+msgid ""
+"FastAPI injects a ``BackgroundTasks`` object into the handler. In Litestar, "
+"a :class:`~litestar.background_tasks.BackgroundTask` (or a :class:`~litestar."
+"background_tasks.BackgroundTasks` collection) can be passed directly to the "
+"response. These tasks run after the response body has been sent."
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:723
+msgid ""
+"from fastapi import BackgroundTasks\n"
+"\n"
+"@app.get(\"/\")\n"
+"async def greeter(tasks: BackgroundTasks) -> dict[str, str]:\n"
+"    tasks.add_task(log_visit, \"world\")\n"
+"    return {\"hello\": \"world\"}"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:735
+msgid ""
+"import logging\n"
+"\n"
+"from litestar import Litestar, Response, get\n"
+"from litestar.background_tasks import BackgroundTask\n"
+"\n"
+"logger = logging.getLogger(__name__)\n"
+"\n"
+"\n"
+"async def log_visit(name: str) -> None:\n"
+"    logger.info(\"greeted %s\", name)\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"async def greeter() -> Response[dict[str, str]]:\n"
+"    return Response(\n"
+"        {\"hello\": \"world\"},\n"
+"        background=BackgroundTask(log_visit, \"world\"),\n"
+"    )\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[greeter])"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:739
+msgid "WebSockets"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:741
+msgid ""
+"FastAPI exposes a single ``@app.websocket`` decorator for direct connection "
+"handling. Litestar offers three handler styles for the three patterns that "
+"recur in WebSocket code:"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:744
+msgid ""
+":func:`~litestar.handlers.websocket`: Raw `ASGI WebSocket <https://asgi."
+"readthedocs.io/en/latest/specs/www.html#websocket>`_ handling, same "
+"semantics as ``@app.websocket``"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:747
+msgid ""
+":func:`~litestar.handlers.websocket_listener`: Per-message callback style "
+"that takes and returns typed values; the framework handles accept, the "
+"receive loop, and serialisation."
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:750
+msgid ""
+":func:`~litestar.handlers.websocket_stream`: Async generator to produce "
+"messages that are pushed to the WebSocket;  the framework handles accept, "
+"the receive loop, and serialisation."
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:760
+msgid ""
+"from fastapi import WebSocket\n"
+"\n"
+"@app.websocket(\"/ws\")\n"
+"async def echo(socket: WebSocket) -> None:\n"
+"    await socket.accept()\n"
+"    while True:\n"
+"        data = await socket.receive_json()\n"
+"        await socket.send_json({\"echo\": data[\"message\"]})"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:774
+msgid ""
+"from litestar import Litestar, websocket_listener\n"
+"\n"
+"\n"
+"@websocket_listener(\"/ws\")\n"
+"async def echo(data: dict[str, str]) -> dict[str, str]:\n"
+"    return {\"echo\": data[\"message\"]}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[echo])"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:776
+msgid ""
+"For broadcast and pub/sub patterns, pair these handlers with the :doc:"
+"`channels </usage/channels>` plugin. Channels handles per-channel "
+"subscriptions, history, and inter-process fan-out through a pluggable "
+"broker, and can generate WebSocket route handlers that publish incoming "
+"events to subscribed clients."
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:783
+msgid ":doc:`/usage/websockets`"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:787
+msgid "Testing"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:789
+msgid ""
+"Both frameworks ship an ``httpx``-based ``TestClient``. The Litestar one is :"
+"class:`~litestar.testing.TestClient`. For unit testing, Litestar also "
+"provides :func:`~litestar.testing.create_test_client` and :func:`~litestar."
+"testing.create_async_test_client`, which take the same arguments as :class:"
+"`Litestar` and return a configured client."
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:801
+msgid ""
+"from fastapi.testclient import TestClient\n"
+"\n"
+"def test_index() -> None:\n"
+"    with TestClient(app) as client:\n"
+"        response = client.get(\"/\")\n"
+"    assert response.status_code == 200"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:0
+msgid "Python 3.8+"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:813
+msgid ""
+"from typing import Dict\n"
+"\n"
+"from litestar import get\n"
+"from litestar.status_codes import HTTP_200_OK\n"
+"from litestar.testing import create_test_client\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"async def hello() -> Dict[str, str]:\n"
+"    return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"def test_hello() -> None:\n"
+"    with create_test_client(route_handlers=[hello]) as client:\n"
+"        response = client.get(\"/\")\n"
+"    assert response.status_code == HTTP_200_OK\n"
+"    assert response.json() == {\"hello\": \"world\"}"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:0
+msgid "Python 3.9+"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:813
+msgid ""
+"from litestar import get\n"
+"from litestar.status_codes import HTTP_200_OK\n"
+"from litestar.testing import create_test_client\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"async def hello() -> dict[str, str]:\n"
+"    return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"def test_hello() -> None:\n"
+"    with create_test_client(route_handlers=[hello]) as client:\n"
+"        response = client.get(\"/\")\n"
+"    assert response.status_code == HTTP_200_OK\n"
+"    assert response.json() == {\"hello\": \"world\"}"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:817
+msgid ":doc:`/usage/testing`"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:821 ../../../onboarding/fastapi.rst:908
+msgid "OpenAPI customisation"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:823
+msgid ""
+"Per-route OpenAPI metadata (``tags``, ``summary``, ``description``,"
+"``operation_id``, etc.) sits on the handler decorator in both frameworks. "
+"Application-wide options live on :class:`~litestar.openapi.config."
+"OpenAPIConfig`, passed as ``openapi_config=`` to the application."
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:834
+msgid ""
+"@app.get(\n"
+"    \"/items/{item_id}\",\n"
+"    tags=[\"items\"],\n"
+"    summary=\"Retrieve an item\",\n"
+"    description=\"Look up a single item by its numeric identifier.\",\n"
+"    operation_id=\"get_item_by_id\",\n"
+")\n"
+"async def get_item(item_id: int) -> dict[str, int]:\n"
+"    return {\"id\": item_id}"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:849
+msgid ""
+"from litestar import Litestar, get\n"
+"from litestar.openapi.config import OpenAPIConfig\n"
+"from litestar.params import FromPath\n"
+"\n"
+"\n"
+"@get(\n"
+"    \"/items/{item_id:int}\",\n"
+"    tags=[\"items\"],\n"
+"    summary=\"Retrieve an item\",\n"
+"    description=\"Look up a single item by its numeric identifier.\",\n"
+"    operation_id=\"get_item_by_id\",\n"
+")\n"
+"async def get_item(item_id: FromPath[int]) -> dict[str, int]:\n"
+"    return {\"id\": item_id}\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[get_item],\n"
+"    openapi_config=OpenAPIConfig(title=\"Items API\", version=\"1.0.0\"),\n"
+")"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:853
+msgid ":doc:`/usage/openapi/index`"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:859
+msgid "Quick reference"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:861
+msgid "A lookup table for the most common translations."
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:864
+msgid "Concept"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:864
+msgid "FastAPI / Starlette"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:866
+msgid "Route declaration"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:866
+msgid "``@app.get(\"/\")``"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:866
+msgid "``@get(\"/\")`` + ``Litestar([handler])``"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:868
+msgid "Synchronous handler"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:868
+msgid "implicit threadpool"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:868
+msgid "``@get(sync_to_thread=True)``"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:870
+msgid "``Depends(fn)``"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:870
+msgid "``dependencies={\"name\": Provide(fn)}``"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:872
+msgid "``request.app.state``"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:872
+msgid "``state: State`` + ``request.app.state``"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:874
+msgid "``@asynccontextmanager``"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:874
+msgid "``lifespan=[ctx_mgr]``"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:876
+msgid "JSON body"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:876
+msgid "``item: Item``"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:876
+msgid "``data: Item``"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:878
+msgid "``Form()``"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:878
+msgid "``Body(media_type=URL_ENCODED)``"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:880
+msgid "File upload"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:880
+msgid "``UploadFile``"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:880
+msgid "``UploadFile`` + ``Body(MULTI_PART)``"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:882
+msgid "Default POST status"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:882 ../../../onboarding/fastapi.rst:884
+msgid "``200``"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:882
+msgid "``201``"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:884
+msgid "Default DELETE status"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:884
+msgid "``204``"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:886
+msgid "Cookies"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:886
+msgid "``response.set_cookie``"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:886
+msgid "``response_cookies=[Cookie(...)]``"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:888
+msgid "``Jinja2Templates``"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:888
+msgid "``Template()`` + ``TemplateConfig``"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:890
+msgid "HTTPException"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:890
+msgid "``HTTPException(400, ...)``"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:890
+msgid "``HTTPException(status_code=400, ...)``"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:892
+msgid "Exception handler"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:892
+msgid "``@app.exception_handler``"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:892
+msgid "``exception_handlers={Exc: handler}``"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:894
+msgid "``Depends`` chain"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:894
+msgid "guard or auth middleware"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:896
+msgid "Dependency overrides"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:896
+msgid "``app.dependency_overrides``"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:896
+msgid "factory + ``create_test_client``"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:898
+msgid "``BaseHTTPMiddleware``"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:898
+msgid "``ASGIMiddleware`` subclass"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:900
+msgid "Background task"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:900
+msgid "``BackgroundTasks`` injection"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:900
+msgid "``Response(background=BackgroundTask)``"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:902
+msgid "Streaming response"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:902
+msgid "``StreamingResponse``"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:902
+msgid "``Stream(iterator)``"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:904
+msgid "WebSocket"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:904
+msgid "``@app.websocket(\"/ws\")``"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:904
+msgid "``@websocket_listener(\"/ws\")``"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:906
+msgid "Test client"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:906
+msgid "``TestClient(app)``"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:906
+msgid "``TestClient`` / ``create_test_client``"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:908
+msgid "per-decorator keywords"
+msgstr ""
+
+#: ../../../onboarding/fastapi.rst:908
+msgid "per-decorator keywords + OpenAPIConfig"
+msgstr ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-09 08:37+0000\n"
+"POT-Creation-Date: 2026-08-31 15:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,9 @@ msgstr ""
 msgid "handlers"
 msgstr ""
 
-#: ../../../../litestar/repository/handlers.py:docstring of
-#: litestar.repository.handlers.on_app_init:1
-msgid "Add custom filters for the application during signature modelling."
+#: ../../../reference/repository/handlers.rst:4
+msgid ""
+"No direct replacement. Wire the filter signature namespace yourself, or use :"
+"class:`advanced_alchemy.extensions.litestar.SQLAlchemyPlugin` which "
+"registers it for you. This module is removed before 3.0.0."
 msgstr ""

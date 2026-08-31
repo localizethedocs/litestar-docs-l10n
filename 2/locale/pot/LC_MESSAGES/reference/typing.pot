@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-09 08:37+0000\n"
+"POT-Creation-Date: 2026-08-31 15:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -107,6 +107,16 @@ msgid "Field name."
 msgstr ""
 
 #: ../../../../litestar/typing.py:docstring of
+#: litestar.typing.FieldDefinition.get_from_metadata:1
+msgid "Return the next instance of ``type_`` in the field's metadata"
+msgstr ""
+
+#: ../../../../litestar/typing.py:docstring of
+#: litestar.typing.FieldDefinition.has_metadata:1
+msgid "Whether the field has any ``type_`` in its metadata"
+msgstr ""
+
+#: ../../../../litestar/typing.py:docstring of
 #: litestar.typing.FieldDefinition.has_default:1
 msgid "Check if the field has a default value."
 msgstr ""
@@ -162,6 +172,18 @@ msgstr ""
 #: ../../../../litestar/typing.py:docstring of
 #: litestar.typing.FieldDefinition.is_parameter_field:1
 msgid "Check if the field type is a parameter kwarg value."
+msgstr ""
+
+#: ../../../../litestar/typing.py:docstring of
+#: litestar.typing.FieldDefinition.is_non_marker_parameter_field:1
+msgid "Check if the field type is a ParameterKwarg that's not a marker only."
+msgstr ""
+
+#: ../../../../litestar/typing.py:docstring of
+#: litestar.typing.FieldDefinition.is_non_marker_parameter_field:3
+msgid ""
+"A marker is considered an instance of 'ParameterKwarg' without any "
+"constraints applied, usually produced by 'FromQuery[]', 'FromPath[]', etc."
 msgstr ""
 
 #: ../../../../litestar/typing.py:docstring of
