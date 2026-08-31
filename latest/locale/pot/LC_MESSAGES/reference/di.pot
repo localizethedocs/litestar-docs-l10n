@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-09 09:36+0000\n"
+"POT-Creation-Date: 2026-08-31 17:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,6 +19,16 @@ msgstr ""
 
 #: ../../../reference/di.rst:2
 msgid "di"
+msgstr ""
+
+#: ../../../../docstring of typing.Annotated:1
+msgid "Mark a parameter for name-based dependency injection."
+msgstr ""
+
+#: ../../../../docstring of typing.Annotated:3
+msgid ""
+"The name of the function parameter will be used as the name for the "
+"dependency to inject."
 msgstr ""
 
 #: ../../../../litestar/di.py:docstring of litestar.di.Provide:1

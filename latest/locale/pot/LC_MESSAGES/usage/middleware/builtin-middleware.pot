@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-09 09:36+0000\n"
+"POT-Creation-Date: 2026-08-31 17:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -625,8 +625,8 @@ msgstr ""
 
 #: ../../../usage/middleware/builtin-middleware.rst:321
 msgid ""
-"Database based :ref:`advanced-alchemy:usage/frameworks/litestar:Session "
-"Middleware`"
+"Database based :ref:`advanced-alchemy:usage/frameworks/litestar:server-side "
+"session backend`"
 msgstr ""
 
 #: ../../../usage/middleware/builtin-middleware.rst:324

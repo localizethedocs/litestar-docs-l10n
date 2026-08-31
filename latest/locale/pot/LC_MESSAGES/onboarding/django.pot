@@ -1,0 +1,3002 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-31 17:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../onboarding/django.rst:2
+msgid "For Django and Django REST Framework users"
+msgstr ""
+
+#: ../../../onboarding/django.rst:6
+msgid "General concepts"
+msgstr ""
+
+#: ../../../onboarding/django.rst:9
+msgid "Layered configuration"
+msgstr ""
+
+#: ../../../onboarding/django.rst:11
+msgid ""
+"Litestar uses a layered architecture. The parts used to group routes can "
+"also be used to hierarchically organize an application. Settings and "
+"configuration like dependencies, exception handlers, guards, middleware, "
+"response cookies and headers, lifecycle hooks, OpenAPI configuration and "
+"many more can be defined on any layer, and will be merged upon registration."
+msgstr ""
+
+#: ../../../onboarding/django.rst:17
+msgid ""
+"The layers in hierarchical order are 1. Application (``Litestar``) 2. "
+"``Router`` / ``Controller`` (these are on the same level and can be "
+"arbitrarily nested) 3. Handler (``BaseRouteHandler``)"
+msgstr ""
+
+#: ../../../onboarding/django.rst:22
+msgid ""
+"When the same configuration is set on multiple layers, the value set closest "
+"to the handler takes precedence. Django has no direct equivalent: settings "
+"are global, middleware is global, and DRF's ``permission_classes`` / "
+"``authentication_classes`` / ``throttle_classes`` are configured per view. "
+"In Litestar these are configurable at every layer."
+msgstr ""
+
+#: ../../../onboarding/django.rst:29
+msgid "Library-agnostic modelling"
+msgstr ""
+
+#: ../../../onboarding/django.rst:31
+msgid ""
+"DRF uses ``Serializer`` and ``ModelSerializer`` for request validation, "
+"response rendering, and database-to-response mapping; Django uses ``Form`` "
+"for HTML form workflows. Litestar is mostly agnostic about the modelling "
+"library. Internally it uses `msgspec <https://msgspec.dev>`_, and ships "
+"first-class support for Pydantic, attrs, dataclasses, and ``TypedDict``\\ s "
+"through its plugin system (:class:`~litestar.plugins.SerializationPlugin` "
+"and :class:`~litestar.plugins.OpenAPISchemaPlugin`). The body of a request "
+"is bound to a ``data`` parameter; the return annotation drives the response "
+"shape. DTOs sit on top when the wire shape needs to diverge from the model "
+"(see :ref:`onboarding/django:Serializers and DTOs`)."
+msgstr ""
+
+#: ../../../onboarding/django.rst:44
+msgid "Application configuration"
+msgstr ""
+
+#: ../../../onboarding/django.rst:46
+msgid ""
+"Django reads ``DJANGO_SETTINGS_MODULE`` and loads a ``settings.py`` module; "
+"DRF reads the ``REST_FRAMEWORK`` dict from the same module. Litestar is "
+"configured through keyword arguments on the :class:`~litestar.app.Litestar` "
+"constructor. There is no settings-module convention, but usually the factory "
+"pattern is used, allowing to configure applications dynamically."
+msgstr ""
+
+#: ../../../onboarding/django.rst:0 ../../../onboarding/django.rst:1560
+msgid "Django / DRF"
+msgstr ""
+
+#: ../../../onboarding/django.rst:58
+msgid ""
+"# settings.py\n"
+"DEBUG = True\n"
+"INSTALLED_APPS = [\"django.contrib.contenttypes\", \"rest_framework\", "
+"\"myapp\"]\n"
+"MIDDLEWARE = [\"django.middleware.common.CommonMiddleware\"]\n"
+"ROOT_URLCONF = \"myapp.urls\"\n"
+"DATABASES = {\"default\": {\"ENGINE\": \"django.db.backends.sqlite3\", "
+"\"NAME\": \"db.sqlite3\"}}\n"
+"\n"
+"REST_FRAMEWORK = {\n"
+"    \"DEFAULT_AUTHENTICATION_CLASSES\": [\"rest_framework.authentication."
+"SessionAuthentication\"],\n"
+"    \"DEFAULT_PERMISSION_CLASSES\": [\"rest_framework.permissions."
+"IsAuthenticated\"],\n"
+"}"
+msgstr ""
+
+#: ../../../onboarding/django.rst:0 ../../../onboarding/django.rst:1560
+msgid "Litestar"
+msgstr ""
+
+#: ../../../onboarding/django.rst:75
+msgid ""
+"from litestar import Litestar\n"
+"\n"
+"def create_app(debug: bool = False) -> Litestar:\n"
+"    return Litestar(\n"
+"        route_handlers=[...],\n"
+"        middleware=[...],\n"
+"        plugins=[...],\n"
+"        openapi_config=...,\n"
+"        debug=debug,\n"
+"    )"
+msgstr ""
+
+#: ../../../onboarding/django.rst:87
+msgid ""
+"Plugins replace ``INSTALLED_APPS``: an ORM integration, a metrics "
+"integration, or a custom feature ships as a plugin and is registered on the "
+"application through the ``plugins`` keyword. See :ref:`onboarding/django:"
+"Concepts without a direct equivalent` for the broader mapping."
+msgstr ""
+
+#: ../../../onboarding/django.rst:94
+msgid "Route handlers"
+msgstr ""
+
+#: ../../../onboarding/django.rst:96
+msgid ""
+"Django wires URL patterns through ``urls.py`` and references view callables "
+"or class-based views; DRF adds ``APIView``, ``GenericAPIView``, and "
+"``ViewSet`` on top. Litestar uses an HTTP-method decorator on a function - "
+"or a method on a :class:`~litestar.controller.Controller` - and registers "
+"handlers on a :class:`~litestar.app.Litestar` or :class:`~litestar.router."
+"Router` instance. The URL pattern lives on the decorator, not in a separate "
+"file."
+msgstr ""
+
+#: ../../../onboarding/django.rst:0
+msgid "Django"
+msgstr ""
+
+#: ../../../onboarding/django.rst:109
+msgid ""
+"# views.py\n"
+"from django.http import JsonResponse\n"
+"\n"
+"def index(request):\n"
+"    return JsonResponse({\"hello\": \"world\"})\n"
+"\n"
+"# urls.py\n"
+"from django.urls import path\n"
+"from . import views\n"
+"\n"
+"urlpatterns = [path(\"\", views.index)]"
+msgstr ""
+
+#: ../../../onboarding/django.rst:0
+msgid "DRF"
+msgstr ""
+
+#: ../../../onboarding/django.rst:126
+msgid ""
+"# views.py\n"
+"from rest_framework.decorators import api_view\n"
+"from rest_framework.response import Response\n"
+"\n"
+"@api_view([\"GET\"])\n"
+"def index(request):\n"
+"    return Response({\"hello\": \"world\"})\n"
+"\n"
+"# urls.py same as above"
+msgstr ""
+
+#: ../../../onboarding/django.rst:141
+msgid ""
+"from litestar import Litestar, get\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"async def index() -> dict[str, str]:\n"
+"    return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[index])"
+msgstr ""
+
+#: ../../../onboarding/django.rst:144
+msgid ""
+"Router and Controllers can be arbitrarily nested, but disappear at runtime. "
+"When you register a controller or router on an application, they get reduced "
+"to standard, independent route handlers."
+msgstr ""
+
+#: ../../../onboarding/django.rst:148
+msgid "For example"
+msgstr ""
+
+#: ../../../onboarding/django.rst:151
+msgid ""
+"class UserController(Controller):\n"
+"    path = \"/user\"\n"
+"    guards = [can_read_user]\n"
+"\n"
+"    @get(\"{user_id:str}\", guards=[can_read_user])\n"
+"    async def get_user(self, user_id: FromPath[str]) -> User:\n"
+"        ..."
+msgstr ""
+
+#: ../../../onboarding/django.rst:160
+msgid "is functionally equivalent to"
+msgstr ""
+
+#: ../../../onboarding/django.rst:163
+msgid ""
+"@get(\"/user/{user_id:str}\", guards=[can_read_user])\n"
+"async def get_user(user_id: FromPath[str]) -> User:\n"
+"    ..."
+msgstr ""
+
+#: ../../../onboarding/django.rst:172
+msgid ""
+":ref:`Routing - Registering Routes <usage/routing/overview:registering "
+"routes>`"
+msgstr ""
+
+#: ../../../onboarding/django.rst:176
+msgid "Controllers"
+msgstr ""
+
+#: ../../../onboarding/django.rst:178
+msgid ""
+"DRF's ``APIView``, ``GenericAPIView`` and ``ViewSet`` group HTTP methods on "
+"a single class. Litestar's :class:`~litestar.controller.Controller` does the "
+"same. Subclass ``Controller``, set ``path``, and decorate methods with the "
+"HTTP method decorators. The difference is that DRF views dispatch by method "
+"name, while Litestar uses the same decorator patterns as for standalone "
+"routes:"
+msgstr ""
+
+#: ../../../onboarding/django.rst:190
+msgid ""
+"from rest_framework.views import APIView\n"
+"from rest_framework.response import Response\n"
+"\n"
+"class ItemView(APIView):\n"
+"    def get(self, request, item_id):\n"
+"        return Response({\"id\": item_id})\n"
+"\n"
+"    def post(self, request):\n"
+"        return Response(request.data, status=201)"
+msgstr ""
+
+#: ../../../onboarding/django.rst:205
+msgid ""
+"from litestar import Controller, Litestar, delete, get, patch, post\n"
+"from litestar.params import FromPath\n"
+"\n"
+"\n"
+"class ItemController(Controller):\n"
+"    path = \"/items\"\n"
+"\n"
+"    @get(\"/\")\n"
+"    async def list_items(self) -> list[dict[str, int]]:\n"
+"        return [{\"id\": 1}, {\"id\": 2}]\n"
+"\n"
+"    @post(\"/\")\n"
+"    async def create_item(self, data: dict[str, str]) -> dict[str, str]:\n"
+"        return data\n"
+"\n"
+"    @get(\"/{item_id:int}\")\n"
+"    async def get_item(self, item_id: FromPath[int]) -> dict[str, int]:\n"
+"        return {\"id\": item_id}\n"
+"\n"
+"    @patch(\"/{item_id:int}\")\n"
+"    async def update_item(self, item_id: FromPath[int], data: dict[str, "
+"str]) -> dict[str, object]:\n"
+"        return {\"id\": item_id, **data}\n"
+"\n"
+"    @delete(\"/{item_id:int}\")\n"
+"    async def delete_item(self, item_id: FromPath[int]) -> None:\n"
+"        return None\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[ItemController])"
+msgstr ""
+
+#: ../../../onboarding/django.rst:207
+msgid ""
+"A ``Controller`` carries the same layered configuration as a ``Router``: "
+"dependencies, guards, middleware, exception handlers, and OpenAPI tags can "
+"all be declared on the class and inherited by its methods."
+msgstr ""
+
+#: ../../../onboarding/django.rst:212
+msgid ""
+"Controllers are just a cosmetic layers on top of a router. Under the hood, a "
+"controller instance will be converted into a router when it's registered on "
+"the application"
+msgstr ""
+
+#: ../../../onboarding/django.rst:219
+msgid ":doc:`/usage/routing/handlers`"
+msgstr ""
+
+#: ../../../onboarding/django.rst:223
+msgid "Routers"
+msgstr ""
+
+#: ../../../onboarding/django.rst:225
+msgid ""
+"Django's ``include(\"app.urls\")`` and DRF's ``SimpleRouter()."
+"register(...)`` mount a sub-tree of URLs under a prefix. Litestar's :class:"
+"`~litestar.router.Router` takes a ``path`` and a list of ``route_handlers``, "
+"which can themselves be handlers, controllers, or other routers. Routers "
+"nest arbitrarily."
+msgstr ""
+
+#: ../../../onboarding/django.rst:236
+msgid ""
+"# myapp/urls.py\n"
+"from django.urls import path\n"
+"from . import views\n"
+"\n"
+"urlpatterns = [\n"
+"    path(\"items/\", views.list_items),\n"
+"    path(\"items/<int:item_id>/\", views.get_item),\n"
+"]\n"
+"\n"
+"# project/urls.py\n"
+"from django.urls import include, path\n"
+"\n"
+"urlpatterns = [path(\"api/v1/\", include(\"myapp.urls\"))]"
+msgstr ""
+
+#: ../../../onboarding/django.rst:255
+msgid ""
+"from rest_framework.routers import SimpleRouter\n"
+"\n"
+"router = SimpleRouter()\n"
+"router.register(r\"items\", ItemViewSet, basename=\"item\")\n"
+"\n"
+"urlpatterns = [path(\"api/v1/\", include(router.urls))]"
+msgstr ""
+
+#: ../../../onboarding/django.rst:267
+msgid ""
+"from litestar import Litestar, Router, get\n"
+"from litestar.params import FromPath\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"async def list_items() -> list[dict[str, int]]:\n"
+"    return [{\"id\": 1}]\n"
+"\n"
+"\n"
+"@get(\"/{item_id:int}\")\n"
+"async def get_item(item_id: FromPath[int]) -> dict[str, int]:\n"
+"    return {\"id\": item_id}\n"
+"\n"
+"\n"
+"items_router = Router(path=\"/items\", route_handlers=[list_items, "
+"get_item])\n"
+"api_router = Router(path=\"/api/v1\", route_handlers=[items_router])\n"
+"\n"
+"app = Litestar(route_handlers=[api_router])"
+msgstr ""
+
+#: ../../../onboarding/django.rst:272
+msgid "Application state"
+msgstr ""
+
+#: ../../../onboarding/django.rst:274
+msgid ""
+"Django stores process-global state in module-level variables or on ``django."
+"apps.apps``. Litestar exposes :class:`~litestar.datastructures.State`, "
+"seeded on the application and available to dependencies through the "
+"``state`` parameter and to handlers through ``request.app.state``. Per-"
+"request state lives on ``request.state`` instead and inherits from the "
+"application state"
+msgstr ""
+
+#: ../../../onboarding/django.rst:286
+msgid ""
+"# myapp/apps.py\n"
+"from django.apps import AppConfig\n"
+"\n"
+"class MyAppConfig(AppConfig):\n"
+"    def ready(self):\n"
+"        from .clients import init_redis\n"
+"        init_redis()\n"
+"\n"
+"# services.py"
+msgstr ""
+
+#: ../../../onboarding/django.rst:302
+msgid ""
+"from litestar import Litestar, get\n"
+"from litestar.datastructures import State\n"
+"\n"
+"\n"
+"class RedisClient:\n"
+"    \"\"\"Stand-in for a configured Redis client.\"\"\"\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"async def handler(state: State) -> dict[str, str]:\n"
+"    redis: RedisClient = state.redis\n"
+"    return {\"client\": type(redis).__name__}\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[handler],\n"
+"    state=State({\"redis\": RedisClient()}),\n"
+")"
+msgstr ""
+
+#: ../../../onboarding/django.rst:307
+msgid "Sync and async handlers"
+msgstr ""
+
+#: ../../../onboarding/django.rst:309
+msgid ""
+"Django views and DRF views are synchronous by default; Django 4+ supports "
+"``async def`` views through an in-process sync-to-async bridge. The bridge "
+"cuts both ways: a sync view runs on a thread pool from the ASGI worker, an "
+"``async def`` view runs on the event loop, and ORM / cache / middleware "
+"calls made from an async view are wrapped in ``sync_to_async`` to bounce "
+"back to a thread. DRF itself is still sync-only: serializers, throttles, and "
+"the ``APIView`` dispatch loop do not have async equivalents."
+msgstr ""
+
+#: ../../../onboarding/django.rst:317
+msgid ""
+"Litestar inverts the default. Handlers are ``async def`` and run directly on "
+"the event loop. There is no implicit thread bridge: a blocking call in an "
+"async handler blocks the worker. A ``def`` handler must declare which side "
+"it runs on:"
+msgstr ""
+
+#: ../../../onboarding/django.rst:322
+msgid ""
+"``sync_to_thread=True`` offloads the call to a thread pool; Use when porting "
+"blocking ORM code, file I/O, or a third-party library without async support."
+msgstr ""
+
+#: ../../../onboarding/django.rst:325
+msgid ""
+"``sync_to_thread=False`` runs the call inline on the event loop: reserved "
+"for short, non-blocking work where the offload would cost more than the call "
+"itself."
+msgstr ""
+
+#: ../../../onboarding/django.rst:329
+msgid ""
+"A bare ``def`` handler with neither flag emits a deprecation warning at "
+"startup: the choice is load-bearing enough that the framework asks you to be "
+"explicit."
+msgstr ""
+
+#: ../../../onboarding/django.rst:339
+msgid ""
+"def slow_view(request):\n"
+"    time.sleep(0.01)  # implicitly runs in the request thread\n"
+"    return JsonResponse({\"hello\": \"world\"})"
+msgstr ""
+
+#: ../../../onboarding/django.rst:348
+msgid ""
+"import time\n"
+"\n"
+"from litestar import Litestar, get\n"
+"\n"
+"\n"
+"@get(\"/\", sync_to_thread=True)\n"
+"def slow_handler() -> dict[str, str]:\n"
+"    time.sleep(0.01)\n"
+"    return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"@get(\"/fast\", sync_to_thread=False)\n"
+"def fast_handler() -> dict[str, str]:\n"
+"    return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[slow_handler, fast_handler])"
+msgstr ""
+
+#: ../../../onboarding/django.rst:352
+msgid "Handlers and request data"
+msgstr ""
+
+#: ../../../onboarding/django.rst:354
+msgid ""
+"DRF deserialises the body once on the view level and exposes ``request."
+"data``, ``request.query_params``, ``request.GET``, ``request.POST``, "
+"``request.FILES``, and ``request.COOKIES``; Django's ``HttpRequest`` exposes "
+"the lower-level versions of the same. Litestar injects each piece through "
+"typed handler parameters using :class:`~typing.Annotated` and ``From*`` "
+"markers, so the handler signature describes the contract."
+msgstr ""
+
+#: ../../../onboarding/django.rst:363
+msgid "Path and query parameters"
+msgstr ""
+
+#: ../../../onboarding/django.rst:365
+msgid ""
+"Django converts path parameters with the path-converter syntax (``<int:"
+"item_id>``) and exposes them as positional arguments; query parameters come "
+"from ``request.GET.get(...)``. DRF exposes them through ``self.kwargs`` and "
+"``request.query_params``. Litestar uses path-converter syntax in the "
+"decorator and binds the values through :data:`~litestar.params.FromPath` "
+"and :data:`~litestar.params.FromQuery`."
+msgstr ""
+
+#: ../../../onboarding/django.rst:378
+msgid ""
+"# urls.py\n"
+"path(\"items/<int:item_id>/\", views.get_item)\n"
+"\n"
+"# views.py\n"
+"def get_item(request, item_id):\n"
+"    limit = int(request.GET.get(\"limit\", \"10\"))\n"
+"    return JsonResponse({\"id\": item_id, \"limit\": limit})"
+msgstr ""
+
+#: ../../../onboarding/django.rst:391
+msgid ""
+"class ItemView(APIView):\n"
+"    def get(self, request, item_id):\n"
+"        limit = int(request.query_params.get(\"limit\", \"10\"))\n"
+"        return Response({\"id\": item_id, \"limit\": limit})"
+msgstr ""
+
+#: ../../../onboarding/django.rst:401
+msgid ""
+"from litestar import Litestar, get\n"
+"from litestar.params import FromPath, FromQuery\n"
+"\n"
+"\n"
+"@get(\"/items/{item_id:int}\")\n"
+"async def get_item(item_id: FromPath[int], limit: FromQuery[int]) -> "
+"dict[str, int]:\n"
+"    return {\"id\": item_id, \"limit\": limit}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[get_item])"
+msgstr ""
+
+#: ../../../onboarding/django.rst:403
+msgid ""
+"To attach validation constraints or OpenAPI metadata, use the :class:"
+"`~typing.Annotated` form with :class:`~litestar.params.PathParameter` and :"
+"class:`~litestar.params.QueryParameter`:"
+msgstr ""
+
+#: ../../../onboarding/django.rst:413
+msgid ""
+"class LimitSerializer(serializers.Serializer):\n"
+"    limit = serializers.IntegerField(min_value=1, max_value=100)\n"
+"\n"
+"class ItemView(APIView):\n"
+"    def get(self, request, item_id):\n"
+"        serializer = LimitSerializer(data=request.query_params)\n"
+"        serializer.is_valid(raise_exception=True)\n"
+"        ..."
+msgstr ""
+
+#: ../../../onboarding/django.rst:427
+msgid ""
+"from typing import Annotated\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.params import PathParameter, QueryParameter\n"
+"\n"
+"\n"
+"@get(\"/items/{item_id:int}\")\n"
+"async def get_item(\n"
+"    item_id: Annotated[int, PathParameter(gt=0)],\n"
+"    limit: Annotated[int, QueryParameter(gt=0, le=100)],\n"
+") -> dict[str, int]:\n"
+"    return {\"id\": item_id, \"limit\": limit}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[get_item])"
+msgstr ""
+
+#: ../../../onboarding/django.rst:431
+msgid ":doc:`/usage/routing/parameters`"
+msgstr ""
+
+#: ../../../onboarding/django.rst:435
+msgid "Header and cookie parameters"
+msgstr ""
+
+#: ../../../onboarding/django.rst:437
+msgid ""
+"DRF reads headers from ``request.headers`` and cookies from ``request."
+"COOKIES``. Litestar binds them through :class:`~litestar.params."
+"HeaderParameter` and :class:`~litestar.params.CookieParameter` (or their "
+"generic forms :data:`~litestar.params.FromHeader` and :data:`~litestar."
+"params.FromCookie`). When the cookie or header name does not match the "
+"Python parameter name, pass ``name=`` explicitly."
+msgstr ""
+
+#: ../../../onboarding/django.rst:450
+msgid ""
+"class SecureView(APIView):\n"
+"    def get(self, request):\n"
+"        session_id = request.COOKIES[\"sessionid\"]\n"
+"        api_key = request.headers[\"X-API-Key\"]\n"
+"        return Response({\"session\": session_id, \"api_key\": api_key})"
+msgstr ""
+
+#: ../../../onboarding/django.rst:461
+msgid ""
+"from typing import Annotated\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.params import CookieParameter, HeaderParameter\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"async def handler(\n"
+"    session_id: Annotated[str, CookieParameter(name=\"sessionid\")],\n"
+"    api_key: Annotated[str, HeaderParameter(name=\"X-API-Key\")],\n"
+") -> dict[str, str]:\n"
+"    return {\"session\": session_id, \"api_key\": api_key}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[handler])"
+msgstr ""
+
+#: ../../../onboarding/django.rst:465
+msgid "JSON request body"
+msgstr ""
+
+#: ../../../onboarding/django.rst:467
+msgid ""
+"DRF's parser populates ``request.data`` and a ``Serializer`` validates the "
+"dict into a Python object. Litestar injects the validated body through a "
+"``data`` parameter typed against any supported model (dataclasses , msgspec :"
+"class:`msgspec.Struct`, Pydantic model, attrs class). Validation runs before "
+"the handler is called; an invalid body raises :class:`~litestar.exceptions."
+"ValidationException` which produces a `400 - Bad Request` response."
+msgstr ""
+
+#: ../../../onboarding/django.rst:480
+msgid ""
+"class ItemSerializer(serializers.Serializer):\n"
+"    name = serializers.CharField()\n"
+"    price = serializers.FloatField()\n"
+"\n"
+"class ItemView(APIView):\n"
+"    def post(self, request):\n"
+"        serializer = ItemSerializer(data=request.data)\n"
+"        serializer.is_valid(raise_exception=True)\n"
+"        return Response(serializer.validated_data, status=201)"
+msgstr ""
+
+#: ../../../onboarding/django.rst:495
+msgid ""
+"from dataclasses import dataclass\n"
+"\n"
+"from litestar import Litestar, post\n"
+"from litestar.params import JSONBody\n"
+"\n"
+"\n"
+"@dataclass\n"
+"class Item:\n"
+"    name: str\n"
+"    price: float\n"
+"\n"
+"\n"
+"@post(\"/items\")\n"
+"async def create_item(data: JSONBody[Item]) -> Item:\n"
+"    return data\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[create_item])"
+msgstr ""
+
+#: ../../../onboarding/django.rst:497
+msgid ""
+"Field-level renaming, partial updates, and write-vs-read separation move to "
+"the DTO layer. See :ref:`onboarding/django:Serializers and DTOs`."
+msgstr ""
+
+#: ../../../onboarding/django.rst:502 ../../../onboarding/django.rst:1578
+msgid "Form data"
+msgstr ""
+
+#: ../../../onboarding/django.rst:504
+msgid ""
+"Django's ``Form`` and DRF's ``MultiPartParser`` / ``FormParser`` populate "
+"``request.POST``. Litestar uses the same ``data`` parameter with the :data:"
+"`~litestar.params.URLEncodedBody` marker for form-encoded bodies, or :data:"
+"`~litestar.params.MultipartBody` for multipart."
+msgstr ""
+
+#: ../../../onboarding/django.rst:515
+msgid ""
+"from django.views.decorators.http import require_POST\n"
+"\n"
+"@require_POST\n"
+"def login(request):\n"
+"    username = request.POST[\"username\"]\n"
+"    password = request.POST[\"password\"]\n"
+"    return JsonResponse({\"user\": username})"
+msgstr ""
+
+#: ../../../onboarding/django.rst:528
+msgid ""
+"from dataclasses import dataclass\n"
+"\n"
+"from litestar import Litestar, post\n"
+"from litestar.params import URLEncodedBody\n"
+"\n"
+"\n"
+"@dataclass\n"
+"class LoginForm:\n"
+"    username: str\n"
+"    password: str\n"
+"\n"
+"\n"
+"@post(\"/login\")\n"
+"async def login(data: URLEncodedBody[LoginForm]) -> dict[str, str]:\n"
+"    return {\"user\": data.username}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[login])"
+msgstr ""
+
+#: ../../../onboarding/django.rst:532
+msgid "File uploads"
+msgstr ""
+
+#: ../../../onboarding/django.rst:534
+msgid ""
+"Django exposes uploaded files through ``request.FILES`` (an ``UploadedFile`` "
+"per field). Litestar uses :class:`~litestar.datastructures.UploadFile`, or "
+"``list[UploadFile]`` for multiple files under the same field name, with a :"
+"data:`~litestar.params.MultipartBody` marker:"
+msgstr ""
+
+#: ../../../onboarding/django.rst:545
+msgid ""
+"def upload(request):\n"
+"    files = request.FILES.getlist(\"data\")\n"
+"    return JsonResponse({\"file_names\": [f.name for f in files]})"
+msgstr ""
+
+#: ../../../onboarding/django.rst:0
+msgid "Python 3.8+"
+msgstr ""
+
+#: ../../../onboarding/django.rst:554
+msgid ""
+"from typing import Dict, List, Optional\n"
+"\n"
+"from litestar import Litestar, post\n"
+"from litestar.datastructures import UploadFile\n"
+"from litestar.params import MultipartBody\n"
+"\n"
+"\n"
+"@post(\"/upload\")\n"
+"async def upload_files(data: MultipartBody[List[UploadFile]]) -> Dict[str, "
+"List[Optional[str]]]:\n"
+"    return {\"file_names\": [file.filename for file in data]}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[upload_files])"
+msgstr ""
+
+#: ../../../onboarding/django.rst:0
+msgid "Python 3.9+"
+msgstr ""
+
+#: ../../../onboarding/django.rst:554
+msgid ""
+"from typing import Optional\n"
+"\n"
+"from litestar import Litestar, post\n"
+"from litestar.datastructures import UploadFile\n"
+"from litestar.params import MultipartBody\n"
+"\n"
+"\n"
+"@post(\"/upload\")\n"
+"async def upload_files(data: MultipartBody[list[UploadFile]]) -> dict[str, "
+"list[Optional[str]]]:\n"
+"    return {\"file_names\": [file.filename for file in data]}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[upload_files])"
+msgstr ""
+
+#: ../../../onboarding/django.rst:0
+msgid "Python 3.10+"
+msgstr ""
+
+#: ../../../onboarding/django.rst:554
+msgid ""
+"from litestar import Litestar, post\n"
+"from litestar.datastructures import UploadFile\n"
+"from litestar.params import MultipartBody\n"
+"\n"
+"\n"
+"@post(\"/upload\")\n"
+"async def upload_files(data: MultipartBody[list[UploadFile]]) -> dict[str, "
+"list[str | None]]:\n"
+"    return {\"file_names\": [file.filename for file in data]}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[upload_files])"
+msgstr ""
+
+#: ../../../onboarding/django.rst:558
+msgid "Producing responses"
+msgstr ""
+
+#: ../../../onboarding/django.rst:560
+msgid ""
+"Django returns ``HttpResponse``, ``JsonResponse``, ``HttpResponseRedirect`` "
+"and so on, with status and headers set explicitly. DRF wraps the body in "
+"``Response(data, status=...)`` and renders through the configured renderer. "
+"Litestar infers the response from the handler's return annotation; a "
+"returned dict, dataclass, or model serialises to JSON, ``str`` returns "
+"``text/plain``, and typed response classes (:class:`~litestar.response."
+"Response`, :class:`~litestar.response.Stream`, :class:`~litestar.response."
+"Template`, :class:`~litestar.response.Redirect`, :class:`~litestar.response."
+"File`) pick their own media type."
+msgstr ""
+
+#: ../../../onboarding/django.rst:571
+msgid "Default status codes"
+msgstr ""
+
+#: ../../../onboarding/django.rst:573
+msgid ""
+"Django defaults to ``200`` for every method; DRF defaults to ``200`` unless "
+"``status=`` is passed. Litestar picks the default from the HTTP method: "
+"``POST`` defaults to ``201 Created``, ``DELETE`` to ``204 No Content``, and "
+"everything else to ``200``. Pass ``status_code=`` to the decorator to "
+"override."
+msgstr ""
+
+#: ../../../onboarding/django.rst:580
+msgid "Cookies and headers"
+msgstr ""
+
+#: ../../../onboarding/django.rst:582
+msgid ""
+"Django sets cookies and headers on the response object (``response."
+"set_cookie(...)``, ``response[\"X-Foo\"] = \"bar\"``). DRF works the same. "
+"Litestar offers two paths: declare static values on the decorator with "
+"``response_cookies=`` and ``response_headers=``, or return a :class:"
+"`~litestar.response.Response` with ``cookies=`` and ``headers=`` when the "
+"values depend on the request."
+msgstr ""
+
+#: ../../../onboarding/django.rst:590
+msgid ""
+"Setting a static response header or cookie will automatically render it in "
+"the OpenAPI schema"
+msgstr ""
+
+#: ../../../onboarding/django.rst:599
+msgid ""
+"def view(request):\n"
+"    response = JsonResponse({\"set\": \"dynamic\"})\n"
+"    response.set_cookie(\"my-cookie\", \"cookie-value\")\n"
+"    return response"
+msgstr ""
+
+#: ../../../onboarding/django.rst:609
+msgid ""
+"from litestar import Litestar, Response, get\n"
+"from litestar.datastructures import Cookie\n"
+"\n"
+"\n"
+"@get(\"/static\", response_cookies=[Cookie(key=\"my-cookie\", value=\"cookie-"
+"value\")])\n"
+"async def static_cookie() -> dict[str, str]:\n"
+"    return {\"set\": \"static\"}\n"
+"\n"
+"\n"
+"@get(\"/dynamic\")\n"
+"async def dynamic_cookie() -> Response[dict[str, str]]:\n"
+"    return Response(\n"
+"        {\"set\": \"dynamic\"},\n"
+"        cookies=[Cookie(key=\"my-cookie\", value=\"cookie-value\")],\n"
+"    )\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[static_cookie, dynamic_cookie])"
+msgstr ""
+
+#: ../../../onboarding/django.rst:613
+msgid ""
+":ref:`Responses - Setting Response Cookies <usage/responses:setting response "
+"cookies>`"
+msgstr ""
+
+#: ../../../onboarding/django.rst:617
+msgid "Serialization"
+msgstr ""
+
+#: ../../../onboarding/django.rst:619
+msgid ""
+"DRF's ``Response(serializer.data)`` round-trips through the configured "
+"renderer (JSON by default), with a separate HTML \"browsable API\" renderer "
+"for browsers. Litestar drives serialisation off the handler return "
+"annotation. Structured types serialise to JSON; ``str`` returns ``text/"
+"plain``; a typed response class picks its own media type. ``media_type=`` on "
+"the decorator overrides the default."
+msgstr ""
+
+#: ../../../onboarding/django.rst:627 ../../../onboarding/django.rst:1590
+msgid "Templates"
+msgstr ""
+
+#: ../../../onboarding/django.rst:629
+msgid ""
+"Django's ``render(request, \"template.html\", context)`` and DRF's "
+"``TemplateHTMLRenderer`` are the common cases. Litestar configures the "
+"engine once on the application through :class:`~litestar.template.config."
+"TemplateConfig` and each handler returns a :class:`~litestar.response."
+"Template`. The bundled engines are Jinja, Mako, and MiniJinja; the engine "
+"slot accepts any implementation of the template-engine protocol."
+msgstr ""
+
+#: ../../../onboarding/django.rst:642
+msgid ""
+"# settings.py\n"
+"TEMPLATES = [{\n"
+"    \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n"
+"    \"DIRS\": [BASE_DIR / \"templates\"],\n"
+"}]\n"
+"\n"
+"# views.py\n"
+"from django.shortcuts import render\n"
+"\n"
+"def hello(request, name):\n"
+"    return render(request, \"hello.html\", {\"name\": name})"
+msgstr ""
+
+#: ../../../onboarding/django.rst:659
+msgid ""
+"from pathlib import Path\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.contrib.jinja import JinjaTemplateEngine\n"
+"from litestar.params import FromPath\n"
+"from litestar.response import Template\n"
+"from litestar.template.config import TemplateConfig\n"
+"\n"
+"\n"
+"@get(\"/hello/{name:str}\")\n"
+"async def hello(name: FromPath[str]) -> Template:\n"
+"    return Template(\n"
+"        template_str=\"<p>Hello, {{ name }}!</p>\",\n"
+"        context={\"name\": name},\n"
+"    )\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[hello],\n"
+"    template_config=TemplateConfig(\n"
+"        directory=Path(__file__).parent,\n"
+"        engine=JinjaTemplateEngine,\n"
+"    ),\n"
+")"
+msgstr ""
+
+#: ../../../onboarding/django.rst:663
+msgid ":doc:`/usage/templating`"
+msgstr ""
+
+#: ../../../onboarding/django.rst:667
+msgid "Streaming responses"
+msgstr ""
+
+#: ../../../onboarding/django.rst:669
+msgid ""
+"Django uses ``StreamingHttpResponse(iterator)``; Litestar uses :class:"
+"`~litestar.response.Stream`. Both wrap a sync or async iterator."
+msgstr ""
+
+#: ../../../onboarding/django.rst:678
+msgid ""
+"from django.http import StreamingHttpResponse\n"
+"\n"
+"def stream_numbers(request):\n"
+"    def numbers():\n"
+"        for i in range(5):\n"
+"            yield f\"{i}\\n\"\n"
+"    return StreamingHttpResponse(numbers())"
+msgstr ""
+
+#: ../../../onboarding/django.rst:691
+msgid ""
+"from collections.abc import AsyncIterator\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.response import Stream\n"
+"\n"
+"\n"
+"async def numbers() -> AsyncIterator[bytes]:\n"
+"    for i in range(5):\n"
+"        yield f\"{i}\\n\".encode()\n"
+"\n"
+"\n"
+"@get(\"/numbers\")\n"
+"async def stream_numbers() -> Stream:\n"
+"    return Stream(numbers())\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[stream_numbers])"
+msgstr ""
+
+#: ../../../onboarding/django.rst:695
+msgid "URL lookup"
+msgstr ""
+
+#: ../../../onboarding/django.rst:697
+msgid ""
+"Django's ``reverse(\"view-name\", kwargs=...)`` and the ``{% url %}`` "
+"template tag build URLs from named patterns; DRF adds ``reverse(\"api-"
+"detail\", request=request)`` to include the absolute URL. Litestar exposes :"
+"meth:`~litestar.app.Litestar.route_reverse` on the application and :meth:"
+"`~litestar.connection.ASGIConnection.url_for` on the request. Handlers name "
+"themselves through ``name=`` on the decorator."
+msgstr ""
+
+#: ../../../onboarding/django.rst:710
+msgid ""
+"# urls.py\n"
+"path(\"\", views.index, name=\"index\")\n"
+"\n"
+"# views.py\n"
+"from django.shortcuts import redirect\n"
+"from django.urls import reverse\n"
+"\n"
+"def go_home(request):\n"
+"    return redirect(reverse(\"index\"))"
+msgstr ""
+
+#: ../../../onboarding/django.rst:725
+msgid ""
+"from litestar import Litestar, Request, get\n"
+"from litestar.params import FromPath\n"
+"from litestar.response import Redirect\n"
+"\n"
+"\n"
+"@get(\"/\", name=\"index\")\n"
+"async def index() -> dict[str, str]:\n"
+"    return {\"page\": \"index\"}\n"
+"\n"
+"\n"
+"@get(\"/{item_id:int}\", name=\"item-detail\")\n"
+"async def item_detail(item_id: FromPath[int]) -> dict[str, int]:\n"
+"    return {\"id\": item_id}\n"
+"\n"
+"\n"
+"@get(\"/redirect\")\n"
+"async def to_index(request: Request) -> Redirect:\n"
+"    return Redirect(path=request.url_for(\"index\"))\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[index, item_detail, to_index])"
+msgstr ""
+
+#: ../../../onboarding/django.rst:729
+msgid "Serializers and DTOs"
+msgstr ""
+
+#: ../../../onboarding/django.rst:731
+msgid ""
+"DRF's ``Serializer`` and ``ModelSerializer`` carry three concerns: "
+"validating inbound data, rendering outbound data, and mapping between the "
+"wire shape and the ORM model. Litestar splits these. Model libraries "
+"(dataclasses, msgspec, Pydantic, attrs) handle validation and basic shape, "
+"applied through the ``data`` parameter and the return annotation. **DTOs** "
+"decouple the wire shape from the internal model when the two should differ: "
+"an inbound payload that excludes server-managed fields, a response that "
+"renames fields, a partial update that accepts a subset of the model. "
+"Litestar ships :class:`~litestar.dto.dataclass_dto.DataclassDTO`, :class:"
+"`~litestar.dto.msgspec_dto.MsgspecDTO`, ``PydanticDTO``, and "
+"``SQLAlchemyDTO`` (for ORM models)."
+msgstr ""
+
+#: ../../../onboarding/django.rst:742
+msgid "The basic case: excluding a server-set field from inbound payloads:"
+msgstr ""
+
+#: ../../../onboarding/django.rst:750
+msgid ""
+"class UserSerializer(serializers.ModelSerializer):\n"
+"    class Meta:\n"
+"        model = User\n"
+"        fields = [\"id\", \"name\", \"email\"]\n"
+"        read_only_fields = [\"id\"]"
+msgstr ""
+
+#: ../../../onboarding/django.rst:761
+msgid ""
+"from dataclasses import dataclass\n"
+"from uuid import UUID, uuid4\n"
+"\n"
+"from litestar import Litestar, post\n"
+"from litestar.dto import DataclassDTO, DTOConfig, DTOData\n"
+"\n"
+"\n"
+"@dataclass\n"
+"class User:\n"
+"    id: UUID\n"
+"    name: str\n"
+"    email: str\n"
+"\n"
+"\n"
+"class UserWriteDTO(DataclassDTO[User]):\n"
+"    \"\"\"Inbound payloads cannot set the server-managed ``id`` field."
+"\"\"\"\n"
+"\n"
+"    config = DTOConfig(exclude={\"id\"})\n"
+"\n"
+"\n"
+"@post(\"/users\", dto=UserWriteDTO, return_dto=None)\n"
+"async def create_user(data: DTOData[User]) -> User:\n"
+"    return data.create_instance(id=uuid4())\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[create_user])"
+msgstr ""
+
+#: ../../../onboarding/django.rst:763
+msgid ""
+"The :class:`~litestar.dto.data_structures.DTOData` wrapper holds the parsed-"
+"and-validated input; ``create_instance(**overrides)`` materialises it into "
+"the model with server-managed fields filled in."
+msgstr ""
+
+#: ../../../onboarding/django.rst:767
+msgid ""
+"For ORM-backed models, ``SQLAlchemyDTO`` understands the mapped class and "
+"lets the same configuration drive both the inbound and outbound shape. The "
+"DTO is attached to the handler through ``dto=`` (for the request body) and "
+"``return_dto=`` (for the response):"
+msgstr ""
+
+#: ../../../onboarding/django.rst:778
+msgid ""
+"class ItemSerializer(serializers.ModelSerializer):\n"
+"    class Meta:\n"
+"        model = Item\n"
+"        fields = [\"id\", \"name\", \"price\"]\n"
+"        read_only_fields = [\"id\"]\n"
+"\n"
+"class ItemView(generics.CreateAPIView):\n"
+"    serializer_class = ItemSerializer"
+msgstr ""
+
+#: ../../../onboarding/django.rst:792
+msgid ""
+"from typing import Annotated\n"
+"\n"
+"from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column\n"
+"\n"
+"from litestar import Litestar, post\n"
+"from litestar.dto import DTOConfig\n"
+"from litestar.plugins.sqlalchemy import SQLAlchemyDTO\n"
+"\n"
+"\n"
+"class Base(DeclarativeBase):\n"
+"    pass\n"
+"\n"
+"\n"
+"class Item(Base):\n"
+"    __tablename__ = \"items\"\n"
+"    id: Mapped[int] = mapped_column(primary_key=True)\n"
+"    name: Mapped[str]\n"
+"    price: Mapped[float]\n"
+"\n"
+"\n"
+"WriteItemDTO = SQLAlchemyDTO[Annotated[Item, DTOConfig(exclude={\"id\"})]]\n"
+"ReadItemDTO = SQLAlchemyDTO[Item]\n"
+"\n"
+"\n"
+"@post(\"/items\", dto=WriteItemDTO, return_dto=ReadItemDTO)\n"
+"async def create_item(data: Item) -> Item:\n"
+"    data.id = 1\n"
+"    return data\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[create_item])"
+msgstr ""
+
+#: ../../../onboarding/django.rst:794
+msgid ""
+"DRF's ``partial=True`` on the serializer is mirrored by "
+"``DTOConfig(partial=True)`` on a write DTO: optional fields become "
+"permitted, required fields become optional."
+msgstr ""
+
+#: ../../../onboarding/django.rst:798
+msgid ""
+"The same shape used for input is rarely the right shape for output; the DTO "
+"lets one model definition produce both, with the differences declared as "
+"configuration rather than written twice."
+msgstr ""
+
+#: ../../../onboarding/django.rst:802
+msgid "info"
+msgstr ""
+
+#: ../../../onboarding/django.rst:804
+msgid ""
+"DTOs also serve as the adapter for types Litestar would not otherwise know "
+"how to serialise, and do not offer serialization methods by themselves; A "
+"SQLAlchemy ``DeclarativeBase`` subclass is not a dataclass and has no "
+"msgspec or Pydantic schema, but ``SQLAlchemyDTO`` reads the mapped columns "
+"and produces a wire schema from them, by representing the model as an "
+"abstract shape Litestar *can* understand. The same pattern extends to other "
+"libraries: any DTO subclass that understands a model type can adopt it. This "
+"is how Litestar stays modelling-library-agnostic while still letting you "
+"return an ORM instance directly from a handler."
+msgstr ""
+
+#: ../../../onboarding/django.rst:816 ../../../onboarding/django.rst:1545
+msgid ":doc:`/usage/dto/index`"
+msgstr ""
+
+#: ../../../onboarding/django.rst:820
+msgid "Dependency injection"
+msgstr ""
+
+#: ../../../onboarding/django.rst:822
+msgid ""
+"DRF threads request-scoped state through ``self.request``, ``self.kwargs``, "
+"and ``self.get_serializer_context()``; everything else (database clients, "
+"service classes, configuration) is typically reached through module-level "
+"imports. Litestar has a first-class dependency-injection container. "
+"Dependencies are declared as a mapping from parameter name to provider, "
+"attached to the ``dependencies`` keyword on any layer. Async callables work "
+"directly as providers; synchronous callables are wrapped in :class:"
+"`~litestar.di.Provide`."
+msgstr ""
+
+#: ../../../onboarding/django.rst:830
+msgid ""
+"Inner layers override outer ones, so a router-scoped dependency replaces an "
+"application-scoped one of the same name, and a handler-scoped one replaces "
+"both."
+msgstr ""
+
+#: ../../../onboarding/django.rst:839
+msgid ""
+"# services.py\n"
+"payments = PaymentService()\n"
+"\n"
+"# views.py\n"
+"from .services import payments\n"
+"\n"
+"class ChargeView(APIView):\n"
+"    def get(self, request):\n"
+"        user_id = request.user.id\n"
+"        return Response({\"user_id\": user_id, \"result\": payments."
+"charge(100)})"
+msgstr ""
+
+#: ../../../onboarding/django.rst:855
+msgid ""
+"from typing import Dict\n"
+"\n"
+"from litestar import Litestar, Router, get\n"
+"from litestar.di import NamedDependency\n"
+"\n"
+"\n"
+"class PaymentService:\n"
+"    def charge(self, amount: int) -> str:\n"
+"        return f\"charged {amount}\"\n"
+"\n"
+"\n"
+"async def provide_payments() -> PaymentService:\n"
+"    return PaymentService()\n"
+"\n"
+"\n"
+"async def provide_current_user_id() -> int:\n"
+"    return 42\n"
+"\n"
+"\n"
+"@get(\"/charge\")\n"
+"async def charge_handler(payments: NamedDependency[PaymentService], user_id: "
+"int) -> Dict[str, object]:\n"
+"    return {\"user_id\": user_id, \"result\": payments.charge(100)}\n"
+"\n"
+"\n"
+"router = Router(\n"
+"    path=\"/api\",\n"
+"    route_handlers=[charge_handler],\n"
+"    dependencies={\"user_id\": provide_current_user_id},\n"
+")\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[router],\n"
+"    dependencies={\"payments\": provide_payments},\n"
+")"
+msgstr ""
+
+#: ../../../onboarding/django.rst:855
+msgid ""
+"from litestar import Litestar, Router, get\n"
+"from litestar.di import NamedDependency\n"
+"\n"
+"\n"
+"class PaymentService:\n"
+"    def charge(self, amount: int) -> str:\n"
+"        return f\"charged {amount}\"\n"
+"\n"
+"\n"
+"async def provide_payments() -> PaymentService:\n"
+"    return PaymentService()\n"
+"\n"
+"\n"
+"async def provide_current_user_id() -> int:\n"
+"    return 42\n"
+"\n"
+"\n"
+"@get(\"/charge\")\n"
+"async def charge_handler(payments: NamedDependency[PaymentService], user_id: "
+"int) -> dict[str, object]:\n"
+"    return {\"user_id\": user_id, \"result\": payments.charge(100)}\n"
+"\n"
+"\n"
+"router = Router(\n"
+"    path=\"/api\",\n"
+"    route_handlers=[charge_handler],\n"
+"    dependencies={\"user_id\": provide_current_user_id},\n"
+")\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[router],\n"
+"    dependencies={\"payments\": provide_payments},\n"
+")"
+msgstr ""
+
+#: ../../../onboarding/django.rst:858
+msgid ""
+"Dependencies are part of Litestar's layered architecture, so these can be "
+"declared on applications, routers, controllers or route handlers."
+msgstr ""
+
+#: ../../../onboarding/django.rst:863
+msgid ":doc:`/usage/dependency-injection`"
+msgstr ""
+
+#: ../../../onboarding/django.rst:867
+msgid "Exceptions and error responses"
+msgstr ""
+
+#: ../../../onboarding/django.rst:869
+msgid ""
+"Django raises ``Http404``, ``PermissionDenied``, and "
+"``SuspiciousOperation``; DRF adds ``APIException``, ``NotFound``, "
+"``ValidationError``, ``PermissionDenied``, and the ``EXCEPTION_HANDLER`` "
+"setting that maps them to JSON responses. Litestar exports :class:`~litestar."
+"exceptions.HTTPException` and concrete subclasses (:class:`~litestar."
+"exceptions.NotFoundException`, :class:`~litestar.exceptions."
+"PermissionDeniedException`, :class:`~litestar.exceptions."
+"ValidationException`, :class:`~litestar.exceptions.NotAuthorizedException`). "
+"The status code is a keyword argument (``status_code=``), and a positional "
+"argument to ``HTTPException`` is appended to ``detail``."
+msgstr ""
+
+#: ../../../onboarding/django.rst:886
+msgid ""
+"from rest_framework.exceptions import NotFound\n"
+"\n"
+"class ItemView(APIView):\n"
+"    def get(self, request, item_id):\n"
+"        if item_id != 1:\n"
+"            raise NotFound(detail=f\"item {item_id} does not exist\")\n"
+"        return Response({\"id\": item_id})"
+msgstr ""
+
+#: ../../../onboarding/django.rst:899
+msgid ""
+"from litestar import Litestar, get\n"
+"from litestar.exceptions import NotFoundException\n"
+"from litestar.params import FromPath\n"
+"\n"
+"\n"
+"@get(\"/items/{item_id:int}\")\n"
+"async def get_item(item_id: FromPath[int]) -> dict[str, int]:\n"
+"    if item_id != 1:\n"
+"        raise NotFoundException(detail=f\"item {item_id} does not exist\")\n"
+"    return {\"id\": item_id}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[get_item])"
+msgstr ""
+
+#: ../../../onboarding/django.rst:903
+msgid "Custom exception handlers"
+msgstr ""
+
+#: ../../../onboarding/django.rst:905
+msgid ""
+"DRF replaces the global exception handler through the ``EXCEPTION_HANDLER`` "
+"setting that points to a single callable. Django's ``handler404`` and "
+"``handler500`` project-level variables point to views for two status codes. "
+"Litestar accepts a mapping from exception class or status code to a handler "
+"callable through ``exception_handlers={...}`` on any layer."
+msgstr ""
+
+#: ../../../onboarding/django.rst:912
+msgid ""
+"Exception handling is part of Litestar's layered architecture, so these can "
+"be declared on applications, routers, controllers or route handlers."
+msgstr ""
+
+#: ../../../onboarding/django.rst:921
+msgid ""
+"# settings.py\n"
+"REST_FRAMEWORK = {\"EXCEPTION_HANDLER\": \"myapp.exceptions.handler\"}\n"
+"\n"
+"# exceptions.py\n"
+"from rest_framework.views import exception_handler\n"
+"\n"
+"def handler(exc, context):\n"
+"    if isinstance(exc, ItemNotFoundError):\n"
+"        return Response({\"detail\": \"item not found\"}, status=404)\n"
+"    return exception_handler(exc, context)"
+msgstr ""
+
+#: ../../../onboarding/django.rst:937
+msgid ""
+"from litestar import Litestar, Request, Response, get\n"
+"\n"
+"\n"
+"class ItemNotFoundError(Exception):\n"
+"    pass\n"
+"\n"
+"\n"
+"def handle_item_not_found(request: Request, exception: ItemNotFoundError) -> "
+"Response[dict[str, str]]:\n"
+"    return Response({\"detail\": \"item not found\"}, status_code=404)\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"async def index() -> None:\n"
+"    raise ItemNotFoundError\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[index],\n"
+"    exception_handlers={ItemNotFoundError: handle_item_not_found},\n"
+")"
+msgstr ""
+
+#: ../../../onboarding/django.rst:941
+msgid ":ref:`usage/exceptions:exception handling`"
+msgstr ""
+
+#: ../../../onboarding/django.rst:945
+msgid "Authentication and authorization"
+msgstr ""
+
+#: ../../../onboarding/django.rst:947
+msgid ""
+"DRF separates *authentication* (who is the caller) from *permissions* (is "
+"the caller allowed to perform this action). Litestar separates them the same "
+"way: authentication middleware sets ``connection.user`` and ``connection."
+"auth``; **guards** decide whether a request reaches the handler."
+msgstr ""
+
+#: ../../../onboarding/django.rst:954 ../../../onboarding/django.rst:1598
+msgid "Authentication"
+msgstr ""
+
+#: ../../../onboarding/django.rst:956
+msgid ""
+"DRF's authentication classes (``SessionAuthentication``, "
+"``TokenAuthentication``, ``JWTAuthentication``) inspect each request and "
+"populate ``request.user``. Litestar uses authentication middleware. "
+"Subclass :class:`~litestar.middleware.authentication."
+"AbstractAuthenticationMiddleware` for custom schemes, or use the bundled "
+"``JWTAuth`` / :class:`~litestar.security.session_auth.SessionAuth` configs "
+"that ship a middleware and OpenAPI security scheme together."
+msgstr ""
+
+#: ../../../onboarding/django.rst:970
+msgid ""
+"class BearerAuthentication(BaseAuthentication):\n"
+"    def authenticate(self, request):\n"
+"        header = request.headers.get(\"Authorization\", \"\")\n"
+"        if header != \"Bearer secret\":\n"
+"            raise AuthenticationFailed()\n"
+"        return (AnonymousUser(), header)\n"
+"\n"
+"class IndexView(APIView):\n"
+"    authentication_classes = [BearerAuthentication]\n"
+"\n"
+"    def get(self, request):\n"
+"        return Response({\"hello\": \"world\"})"
+msgstr ""
+
+#: ../../../onboarding/django.rst:988
+msgid ""
+"from typing import Dict\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.connection import ASGIConnection\n"
+"from litestar.exceptions import NotAuthorizedException\n"
+"from litestar.handlers import BaseRouteHandler\n"
+"\n"
+"\n"
+"async def require_token(connection: ASGIConnection, route_handler: "
+"BaseRouteHandler) -> None:\n"
+"    if connection.headers.get(\"authorization\") != \"Bearer secret\":\n"
+"        raise NotAuthorizedException\n"
+"\n"
+"\n"
+"@get(\"/\", guards=[require_token])\n"
+"async def index() -> Dict[str, str]:\n"
+"    return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[index])"
+msgstr ""
+
+#: ../../../onboarding/django.rst:988
+msgid ""
+"from litestar import Litestar, get\n"
+"from litestar.connection import ASGIConnection\n"
+"from litestar.exceptions import NotAuthorizedException\n"
+"from litestar.handlers import BaseRouteHandler\n"
+"\n"
+"\n"
+"async def require_token(connection: ASGIConnection, route_handler: "
+"BaseRouteHandler) -> None:\n"
+"    if connection.headers.get(\"authorization\") != \"Bearer secret\":\n"
+"        raise NotAuthorizedException\n"
+"\n"
+"\n"
+"@get(\"/\", guards=[require_token])\n"
+"async def index() -> dict[str, str]:\n"
+"    return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[index])"
+msgstr ""
+
+#: ../../../onboarding/django.rst:990
+msgid ""
+"For session-cookie auth or JWT, register the corresponding config through "
+"``on_app_init``; see :doc:`/usage/security/index`."
+msgstr ""
+
+#: ../../../onboarding/django.rst:995 ../../../onboarding/django.rst:1546
+msgid ":doc:`/usage/security/index`"
+msgstr ""
+
+#: ../../../onboarding/django.rst:996
+msgid ":doc:`/usage/security/jwt`"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1000
+msgid "Guards"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1002
+msgid ""
+"DRF's ``permission_classes = [IsAuthenticated, IsOwnerOrReadOnly]`` runs a "
+"list of permission callables that return ``True`` / ``False`` per request. "
+"Litestar's *guards* are callables that receive the :class:`~litestar."
+"connection.ASGIConnection` and the :class:`~litestar.handlers."
+"BaseRouteHandler`; raising an exception aborts the request."
+msgstr ""
+
+#: ../../../onboarding/django.rst:1008
+msgid "Info"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1010
+msgid ""
+"A guard is a callable that receives the :class:`~litestar.connection."
+"ASGIConnection` and the :class:`~litestar.handlers.BaseRouteHandler`; "
+"raising an exception here aborts the request."
+msgstr ""
+
+#: ../../../onboarding/django.rst:1015
+msgid ""
+"Guards are part of Litestar's layered architecture, so these can be declared "
+"on applications, routers, controllers or route handlers."
+msgstr ""
+
+#: ../../../onboarding/django.rst:1024
+msgid ""
+"class IsAdmin(BasePermission):\n"
+"    def has_permission(self, request, view):\n"
+"        return request.headers.get(\"X-Role\") == \"admin\"\n"
+"\n"
+"class AdminViewSet(viewsets.ViewSet):\n"
+"    permission_classes = [IsAdmin]\n"
+"    ..."
+msgstr ""
+
+#: ../../../onboarding/django.rst:1037
+msgid ""
+"from typing import Dict\n"
+"\n"
+"from litestar import Controller, Litestar, get\n"
+"from litestar.connection import ASGIConnection\n"
+"from litestar.exceptions import NotAuthorizedException\n"
+"from litestar.handlers import BaseRouteHandler\n"
+"\n"
+"\n"
+"def require_admin(connection: ASGIConnection, route_handler: "
+"BaseRouteHandler) -> None:\n"
+"    if connection.headers.get(\"x-role\") != \"admin\":\n"
+"        raise NotAuthorizedException(detail=\"admin only\")\n"
+"\n"
+"\n"
+"class AdminController(Controller):\n"
+"    path = \"/admin\"\n"
+"    guards = [require_admin]\n"
+"\n"
+"    @get(\"/stats\")\n"
+"    async def stats(self) -> Dict[str, int]:\n"
+"        return {\"users\": 100}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[AdminController])"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1037
+msgid ""
+"from litestar import Controller, Litestar, get\n"
+"from litestar.connection import ASGIConnection\n"
+"from litestar.exceptions import NotAuthorizedException\n"
+"from litestar.handlers import BaseRouteHandler\n"
+"\n"
+"\n"
+"def require_admin(connection: ASGIConnection, route_handler: "
+"BaseRouteHandler) -> None:\n"
+"    if connection.headers.get(\"x-role\") != \"admin\":\n"
+"        raise NotAuthorizedException(detail=\"admin only\")\n"
+"\n"
+"\n"
+"class AdminController(Controller):\n"
+"    path = \"/admin\"\n"
+"    guards = [require_admin]\n"
+"\n"
+"    @get(\"/stats\")\n"
+"    async def stats(self) -> dict[str, int]:\n"
+"        return {\"users\": 100}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[AdminController])"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1041 ../../../onboarding/django.rst:1602
+msgid "CSRF"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1043
+msgid ""
+"Django's ``CsrfViewMiddleware`` reads the ``csrftoken`` cookie and validates "
+"the ``X-CSRFToken`` header on unsafe methods. DRF inherits this behavior for "
+"session-authenticated views. Litestar provides :class:`~litestar.config.csrf."
+"CSRFConfig` passed through ``csrf_config=`` on the application; the default "
+"cookie and header names match Django's convention."
+msgstr ""
+
+#: ../../../onboarding/django.rst:1055
+msgid ""
+"from litestar import Litestar, post\n"
+"from litestar.config.csrf import CSRFConfig\n"
+"\n"
+"\n"
+"@post(\"/transfer\")\n"
+"async def transfer(data: dict[str, int]) -> dict[str, int]:\n"
+"    return data\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[transfer],\n"
+"    csrf_config=CSRFConfig(secret=\"change-me\"),\n"
+")"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1059 ../../../onboarding/django.rst:1604
+msgid "Middleware"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1061
+msgid ""
+"Django's ``MIDDLEWARE`` setting lists dotted-path classes implementing "
+"``__init__(get_response)`` and ``__call__(request)``. Litestar middleware is "
+"ASGI-based: subclass :class:`~litestar.middleware.ASGIMiddleware` and "
+"implement :meth:`~litestar.middleware.ASGIMiddleware.handle`, which receives "
+"``scope``, ``receive``, ``send``, and a ``next_app`` callable. ``next_app`` "
+"is the rest of the ASGI stack. Calling it dispatches to the next middleware "
+"or the route handler."
+msgstr ""
+
+#: ../../../onboarding/django.rst:1068
+msgid ""
+"Pure ASGI middleware (a callable wrapping an ASGI app and returning a "
+"wrapped ASGI app) works in any ASGI framework, so existing ASGI middleware "
+"ports over without change."
+msgstr ""
+
+#: ../../../onboarding/django.rst:1078
+msgid ""
+"# middleware.py\n"
+"import time\n"
+"\n"
+"class ProcessTimeMiddleware:\n"
+"    def __init__(self, get_response):\n"
+"        self.get_response = get_response\n"
+"\n"
+"    def __call__(self, request):\n"
+"        start = time.monotonic()\n"
+"        response = self.get_response(request)\n"
+"        response[\"X-Process-Time\"] = f\"{time.monotonic() - start:.4f}\"\n"
+"        return response\n"
+"\n"
+"# settings.py\n"
+"MIDDLEWARE = [..., \"myapp.middleware.ProcessTimeMiddleware\"]"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1099
+msgid ""
+"import time\n"
+"from typing import Dict\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.datastructures import MutableScopeHeaders\n"
+"from litestar.middleware import ASGIMiddleware\n"
+"from litestar.types import ASGIApp, Message, Receive, Scope, Send\n"
+"\n"
+"\n"
+"class ProcessTimeMiddleware(ASGIMiddleware):\n"
+"    async def handle(self, scope: Scope, receive: Receive, send: Send, "
+"next_app: ASGIApp) -> None:\n"
+"        start_time = time.monotonic()\n"
+"\n"
+"        async def send_wrapper(message: Message) -> None:\n"
+"            if message[\"type\"] == \"http.response.start\":\n"
+"                headers = MutableScopeHeaders.from_message(message=message)\n"
+"                headers[\"x-process-time\"] = f\"{time.monotonic() - "
+"start_time:.4f}\"\n"
+"            await send(message)\n"
+"\n"
+"        await next_app(scope, receive, send_wrapper)\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"async def index() -> Dict[str, str]:\n"
+"    return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[index], middleware=[ProcessTimeMiddleware()])"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1099
+msgid ""
+"import time\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.datastructures import MutableScopeHeaders\n"
+"from litestar.middleware import ASGIMiddleware\n"
+"from litestar.types import ASGIApp, Message, Receive, Scope, Send\n"
+"\n"
+"\n"
+"class ProcessTimeMiddleware(ASGIMiddleware):\n"
+"    async def handle(self, scope: Scope, receive: Receive, send: Send, "
+"next_app: ASGIApp) -> None:\n"
+"        start_time = time.monotonic()\n"
+"\n"
+"        async def send_wrapper(message: Message) -> None:\n"
+"            if message[\"type\"] == \"http.response.start\":\n"
+"                headers = MutableScopeHeaders.from_message(message=message)\n"
+"                headers[\"x-process-time\"] = f\"{time.monotonic() - "
+"start_time:.4f}\"\n"
+"            await send(message)\n"
+"\n"
+"        await next_app(scope, receive, send_wrapper)\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"async def index() -> dict[str, str]:\n"
+"    return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[index], middleware=[ProcessTimeMiddleware()])"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1101
+msgid ""
+"Django middleware applies to every request that enters the WSGI / ASGI "
+"stack; opting routes out means restructuring the middleware itself or "
+"splitting URL patterns. Litestar middleware can be excluded per route, in "
+"two ways:"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1105
+msgid ""
+"By setting ``scopes`` on the middleware, it can restricted to ``http`` or "
+"``websocket`` requests"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1106
+msgid ""
+"By setting ``exclude_path_pattern`` on the middleware, it can be excluded "
+"from any handler matching"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1107
+msgid ""
+"``exclude_opt_key`` names a key in the handler's ``opt`` dict; handlers that "
+"set that key to a truthy value skip the middleware"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1111
+msgid ""
+"class AuthMiddleware(ASGIMiddleware):\n"
+"    exclude = [\"/health\", \"^/internal/\"]\n"
+"    exclude_opt_key = \"no_auth\"\n"
+"\n"
+"@get(\"/login\", no_auth=True)\n"
+"async def login() -> dict[str, str]:\n"
+"    ..."
+msgstr ""
+
+#: ../../../onboarding/django.rst:1122
+msgid ":doc:`/usage/middleware/creating-middleware`"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1126
+msgid "Signals and lifecycle hooks"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1128
+msgid ""
+"Django signals (``pre_save``, ``post_save``, ``request_started``, "
+"``request_finished``, and custom ``Signal`` instances) are an in-process "
+"publish/subscribe bus that mixes request lifecycle with domain events. "
+"Litestar exposes the request-lifecycle slice as **per-request hooks**: "
+"``before_request``, ``after_request``, ``after_response``, and "
+"``after_exception``, declared on any layer. They run on the request task and "
+"can read or mutate the request and response."
+msgstr ""
+
+#: ../../../onboarding/django.rst:1136
+msgid "The request-finished case maps to ``after_response``:"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1144
+msgid ""
+"from django.core.signals import request_finished\n"
+"from django.dispatch import receiver\n"
+"\n"
+"@receiver(request_finished)\n"
+"def log_request(sender, **kwargs):\n"
+"    ..."
+msgstr ""
+
+#: ../../../onboarding/django.rst:1156
+msgid ""
+"import logging\n"
+"\n"
+"from litestar import Litestar, Request, get\n"
+"\n"
+"logger = logging.getLogger(__name__)\n"
+"\n"
+"\n"
+"def attach_user(request: Request) -> None:\n"
+"    request.state[\"user\"] = request.headers.get(\"x-user\", "
+"\"anonymous\")\n"
+"\n"
+"\n"
+"def log_status(request: Request) -> None:\n"
+"    \"\"\"``after_response`` runs after the response body is sent — good for "
+"logging.\"\"\"\n"
+"    logger.info(\"request to %s by %s\", request.url.path, request.state."
+"get(\"user\"))\n"
+"\n"
+"\n"
+"@get(\"/hello\")\n"
+"async def hello(request: Request) -> dict[str, str]:\n"
+"    return {\"user\": request.state[\"user\"]}\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[hello],\n"
+"    before_request=attach_user,\n"
+"    after_response=log_status,\n"
+")"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1158
+msgid ""
+"Domain events (``post_save``, custom ``Signal`` instances) have no first-"
+"party Litestar equivalent. For in-process fan-out, call the service function "
+"directly from the handler (or from a dependency it injects). For cross-"
+"process fan-out, publish to a message broker (Redis pub/sub, NATS, RabbitMQ) "
+"through a client wired up on the application."
+msgstr ""
+
+#: ../../../onboarding/django.rst:1166
+msgid "Background tasks"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1168
+msgid ""
+"Django 6 ships ``django.tasks``, a first-party task-queue interface with a "
+"pluggable backend (in-memory, immediate, database, and third-party Celery / "
+"RQ adapters). Tasks are declared with the ``@task`` decorator and submitted "
+"through ``.enqueue(...)``. On earlier versions there was no first-party "
+"option; Celery, RQ, django-q, and Huey covered the same ground."
+msgstr ""
+
+#: ../../../onboarding/django.rst:1174
+msgid ""
+"Litestar's :class:`~litestar.background_tasks.BackgroundTask` (or :class:"
+"`~litestar.background_tasks.BackgroundTasks` collection) runs a callable "
+"after the response body has been sent, attached to a :class:`~litestar."
+"response.Response` through ``background=``. The two address different needs: "
+"``django.tasks`` is a durable queue, ``BackgroundTask`` is in-process work "
+"that should not block the response."
+msgstr ""
+
+#: ../../../onboarding/django.rst:1187
+msgid ""
+"# tasks.py\n"
+"from django.tasks import task\n"
+"\n"
+"@task()\n"
+"def send_welcome_email(email: str) -> None:\n"
+"    ...\n"
+"\n"
+"# views.py\n"
+"from .tasks import send_welcome_email\n"
+"\n"
+"def signup(request):\n"
+"    email = request.POST[\"email\"]\n"
+"    send_welcome_email.enqueue(email)\n"
+"    return JsonResponse({\"status\": \"queued\"}, status=201)"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1207
+msgid ""
+"import logging\n"
+"\n"
+"from litestar import Litestar, Response, post\n"
+"from litestar.background_tasks import BackgroundTask\n"
+"\n"
+"logger = logging.getLogger(__name__)\n"
+"\n"
+"\n"
+"async def send_welcome_email(address: str) -> None:\n"
+"    logger.info(\"sending welcome email to %s\", address)\n"
+"\n"
+"\n"
+"@post(\"/signup\")\n"
+"async def signup(data: dict[str, str]) -> Response[dict[str, str]]:\n"
+"    return Response(\n"
+"        {\"status\": \"queued\"},\n"
+"        background=BackgroundTask(send_welcome_email, data[\"email\"]),\n"
+"    )\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[signup])"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1209
+msgid ""
+"A ``BackgroundTask`` is not a job queue: it has no durability, no "
+"scheduling, no retries, and no cross-process fan-out. If the worker process "
+"dies before the task finishes, the task is lost. For durable jobs reach for "
+"an external queue."
+msgstr ""
+
+#: ../../../onboarding/django.rst:1216
+msgid ":ref:`usage/responses:background tasks`"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1220
+msgid "Database access"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1222
+msgid ""
+"Litestar is ORM-agnostic. There is no built-in ORM and no required "
+"integration: SQLAlchemy, Tortoise, Piccolo, Peewee, an async driver, or raw "
+"SQL all work without framework cooperation. A handler that opens a "
+"connection, runs a query, and returns a dict is a complete Litestar handler."
+msgstr ""
+
+#: ../../../onboarding/django.rst:1227
+msgid ""
+"The fullest first-party integration is the optional :class:"
+"`~advanced_alchemy.extensions.litestar.SQLAlchemyPlugin`, built on `advanced-"
+"alchemy <https://docs.advanced-alchemy.litestar.dev>`_. The plugin manages "
+"the engine and session lifecycle, injects an ``AsyncSession`` per request "
+"through the ``db_session`` dependency, ships a repository, and, through :"
+"class:`~advanced_alchemy.extensions.litestar.SQLAlchemyDTO`, serialises "
+"mapped models to JSON natively. Returning an ORM instance directly from a "
+"handler works because the DTO reads the mapped columns and emits the schema "
+"that Litestar uses for OpenAPI and the response body. No ``ModelSerializer`` "
+"equivalent is needed."
+msgstr ""
+
+#: ../../../onboarding/django.rst:1238
+msgid ""
+"Other ORMs follow the same shape minus the plugin: register a startup hook "
+"that opens the engine, provide a session-yielding dependency, and either "
+"return data the model library already serialises (dataclasses, msgspec, "
+"Pydantic) or write a thin DTO for the model type."
+msgstr ""
+
+#: ../../../onboarding/django.rst:0
+msgid "Django + DRF"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1249
+msgid ""
+"# models.py\n"
+"from django.db import models\n"
+"\n"
+"class Item(models.Model):\n"
+"    name = models.CharField(max_length=100)\n"
+"\n"
+"# serializers.py\n"
+"class ItemSerializer(serializers.ModelSerializer):\n"
+"    class Meta:\n"
+"        model = Item\n"
+"        fields = [\"id\", \"name\"]\n"
+"\n"
+"# views.py\n"
+"class ItemViewSet(viewsets.ModelViewSet):\n"
+"    queryset = Item.objects.all()\n"
+"    serializer_class = ItemSerializer"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1271
+msgid ""
+"from collections.abc import Sequence\n"
+"from typing import Annotated\n"
+"\n"
+"from sqlalchemy import select\n"
+"from sqlalchemy.ext.asyncio import AsyncSession\n"
+"from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column\n"
+"\n"
+"from litestar import Litestar, get, post\n"
+"from litestar.dto import DTOConfig\n"
+"from litestar.plugins.sqlalchemy import (\n"
+"    AsyncSessionConfig,\n"
+"    SQLAlchemyAsyncConfig,\n"
+"    SQLAlchemyDTO,\n"
+"    SQLAlchemyPlugin,\n"
+")\n"
+"\n"
+"\n"
+"class Base(DeclarativeBase):\n"
+"    pass\n"
+"\n"
+"\n"
+"class Item(Base):\n"
+"    __tablename__ = \"migration_items\"\n"
+"    id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)\n"
+"    name: Mapped[str]\n"
+"\n"
+"\n"
+"WriteItemDTO = SQLAlchemyDTO[Annotated[Item, DTOConfig(exclude={\"id\"})]]\n"
+"ReadItemDTO = SQLAlchemyDTO[Item]\n"
+"\n"
+"\n"
+"@post(\"/items\", dto=WriteItemDTO, return_dto=ReadItemDTO)\n"
+"async def create_item(data: Item, db_session: AsyncSession) -> Item:\n"
+"    async with db_session.begin():\n"
+"        db_session.add(data)\n"
+"    return data\n"
+"\n"
+"\n"
+"@get(\"/items\", return_dto=ReadItemDTO)\n"
+"async def list_items(db_session: AsyncSession) -> Sequence[Item]:\n"
+"    return (await db_session.execute(select(Item))).scalars().all()\n"
+"\n"
+"\n"
+"config = SQLAlchemyAsyncConfig(\n"
+"    connection_string=\"sqlite+aiosqlite:///:memory:\",\n"
+"    create_all=True,\n"
+"    metadata=Base.metadata,\n"
+"    session_config=AsyncSessionConfig(expire_on_commit=False),\n"
+")\n"
+"app = Litestar(\n"
+"    route_handlers=[create_item, list_items],\n"
+"    plugins=[SQLAlchemyPlugin(config=config)],\n"
+")"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1273
+msgid ""
+"Schema migrations move to Alembic (a SQLAlchemy project) rather than "
+"``manage.py makemigrations`` / ``migrate``. The plugin can run Alembic from "
+"the Litestar CLI."
+msgstr ""
+
+#: ../../../onboarding/django.rst:1279
+msgid ":doc:`/usage/databases/sqlalchemy/index`"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1283 ../../../onboarding/django.rst:1616
+msgid "Sessions"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1285
+msgid ""
+"Django's ``django.contrib.sessions`` writes a session cookie and stores data "
+"in a configurable backend (database, cache, file, or signed cookie). "
+"Litestar's :class:`~litestar.middleware.session.server_side."
+"ServerSideSessionConfig` writes the session through a pluggable :class:"
+"`~litestar.stores.base.Store` (memory, file, redis, valkey); :class:"
+"`~litestar.middleware.session.client_side.CookieBackendConfig` keeps the "
+"data in a signed cookie. The middleware exposes ``request.session`` as a "
+"dict."
+msgstr ""
+
+#: ../../../onboarding/django.rst:1299
+msgid ""
+"def login(request):\n"
+"    request.session[\"user\"] = \"alice\"\n"
+"\n"
+"def whoami(request):\n"
+"    return JsonResponse({\"user\": request.session.get(\"user\")})"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1310
+msgid ""
+"from typing import Any\n"
+"\n"
+"from litestar import Litestar, Request, get, post\n"
+"from litestar.middleware.session.server_side import ServerSideSessionConfig\n"
+"\n"
+"session_config = ServerSideSessionConfig()\n"
+"\n"
+"\n"
+"@post(\"/login\", sync_to_thread=False)\n"
+"def login(request: Request) -> None:\n"
+"    request.set_session({\"user\": \"alice\"})\n"
+"\n"
+"\n"
+"@get(\"/whoami\", sync_to_thread=False)\n"
+"def whoami(request: Request) -> dict[str, Any]:\n"
+"    return {\"user\": request.session.get(\"user\")}\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[login, whoami],\n"
+"    middleware=[session_config.middleware],\n"
+")"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1314 ../../../onboarding/django.rst:1618
+msgid "Static files"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1316
+msgid ""
+"Django needs ``django.contrib.staticfiles`` in ``INSTALLED_APPS``, a "
+"``STATICFILES_DIRS`` setting, and a ``collectstatic`` step before "
+"deployment. Litestar registers a static-file router through :func:`~litestar."
+"static_files.create_static_files_router`. The same configuration serves "
+"files in development and production; there is no separate collection step."
+msgstr ""
+
+#: ../../../onboarding/django.rst:1328
+msgid ""
+"# settings.py\n"
+"STATIC_URL = \"/static/\"\n"
+"STATICFILES_DIRS = [BASE_DIR / \"assets\"]"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1337
+msgid ""
+"from pathlib import Path\n"
+"\n"
+"from litestar import Litestar\n"
+"from litestar.static_files import create_static_files_router\n"
+"\n"
+"ASSETS_DIR = Path(__file__).parent / \"assets\"\n"
+"\n"
+"\n"
+"def ensure_assets() -> None:\n"
+"    ASSETS_DIR.mkdir(exist_ok=True)\n"
+"    ASSETS_DIR.joinpath(\"hello.txt\").write_text(\"Hello, world!\")\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[\n"
+"        create_static_files_router(path=\"/static\", "
+"directories=[ASSETS_DIR]),\n"
+"    ],\n"
+"    on_startup=[ensure_assets],\n"
+")"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1341
+msgid "WebSockets and channels"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1343
+msgid ""
+"Django has no first-party WebSocket support; Django Channels adds an ASGI "
+"worker, a routing system, consumer classes, and a ``channel_layer`` for pub/"
+"sub. Litestar offers WebSockets as a built-in primitive. There are three "
+"handler styles:"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1347
+msgid ""
+":func:`~litestar.handlers.websocket`: raw `ASGI WebSocket <https://asgi."
+"readthedocs.io/en/latest/specs/www.html#websocket>`_ handling; same "
+"semantics as a Channels ``AsyncWebsocketConsumer``."
+msgstr ""
+
+#: ../../../onboarding/django.rst:1350
+msgid ""
+":func:`~litestar.handlers.websocket_listener`: per-message callback that "
+"takes and returns typed values; the framework handles accept, the receive "
+"loop, and serialisation."
+msgstr ""
+
+#: ../../../onboarding/django.rst:1353
+msgid ""
+":func:`~litestar.handlers.websocket_stream`: async generator that pushes "
+"messages to the WebSocket; the framework handles accept, the receive loop, "
+"and serialisation."
+msgstr ""
+
+#: ../../../onboarding/django.rst:0
+msgid "Django Channels"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1363
+msgid ""
+"from channels.generic.websocket import AsyncJsonWebsocketConsumer\n"
+"\n"
+"class EchoConsumer(AsyncJsonWebsocketConsumer):\n"
+"    async def connect(self):\n"
+"        await self.accept()\n"
+"\n"
+"    async def receive_json(self, content):\n"
+"        await self.send_json({\"echo\": content[\"message\"]})"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1377
+msgid ""
+"from litestar import Litestar, websocket_listener\n"
+"\n"
+"\n"
+"@websocket_listener(\"/ws\")\n"
+"async def echo(data: dict[str, str]) -> dict[str, str]:\n"
+"    return {\"echo\": data[\"message\"]}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[echo])"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1379
+msgid ""
+"For broadcast and pub/sub patterns (the ``channel_layer.group_send`` case) "
+"Litestar provides the :doc:`channels </usage/channels>` plugin. It handles "
+"per-channel subscriptions, message history, and inter-process fan-out "
+"through a pluggable backend (memory, redis, asyncpg, psycopg), and can "
+"generate WebSocket route handlers that publish incoming events to subscribed "
+"clients."
+msgstr ""
+
+#: ../../../onboarding/django.rst:1391
+msgid ""
+"from litestar import Litestar\n"
+"from litestar.channels import ChannelsPlugin\n"
+"from litestar.channels.backends.memory import MemoryChannelsBackend\n"
+"\n"
+"channels_plugin = ChannelsPlugin(\n"
+"    backend=MemoryChannelsBackend(),\n"
+"    channels=[\"chat\"],\n"
+"    create_ws_route_handlers=True,\n"
+")\n"
+"\n"
+"app = Litestar(plugins=[channels_plugin])"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1395
+msgid ":doc:`/usage/websockets`"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1396 ../../../onboarding/django.rst:1547
+msgid ":doc:`/usage/channels`"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1400
+msgid "Rate limiting"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1402
+msgid ""
+"DRF's ``throttle_classes`` (``UserRateThrottle``, ``AnonRateThrottle``, "
+"``ScopedRateThrottle``) limits per user, IP, or named scope through a cache "
+"backend. Litestar's :class:`~litestar.middleware.rate_limit.RateLimitConfig` "
+"installs :class:`~litestar.middleware.rate_limit.RateLimitMiddleware` with a "
+"pluggable store."
+msgstr ""
+
+#: ../../../onboarding/django.rst:1413
+msgid ""
+"# settings.py\n"
+"REST_FRAMEWORK = {\n"
+"    \"DEFAULT_THROTTLE_CLASSES\": [\"rest_framework.throttling."
+"UserRateThrottle\"],\n"
+"    \"DEFAULT_THROTTLE_RATES\": {\"user\": \"60/minute\"},\n"
+"}"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1424
+msgid ""
+"from litestar import Litestar, MediaType, get\n"
+"from litestar.middleware.rate_limit import RateLimitConfig\n"
+"\n"
+"rate_limit_config = RateLimitConfig(rate_limit=(\"minute\", 60), exclude=[\"/"
+"schema\"])\n"
+"\n"
+"\n"
+"@get(\"/\", media_type=MediaType.TEXT)\n"
+"async def handler() -> str:\n"
+"    return \"ok\"\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[handler],\n"
+"    middleware=[rate_limit_config.middleware],\n"
+")"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1428
+msgid "Testing"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1430
+msgid ""
+"Django's ``TestCase`` + ``Client`` and DRF's ``APITestCase`` + ``APIClient`` "
+"send requests to the WSGI app in-process. Litestar ships :class:`~litestar."
+"testing.TestClient` (sync) and :class:`~litestar.testing.AsyncTestClient` "
+"(async), both built on ``httpx``. For unit-level handler tests, :func:"
+"`~litestar.testing.create_test_client` and :func:`~litestar.testing."
+"create_async_test_client` take the same arguments as :class:`Litestar` and "
+"return a configured client."
+msgstr ""
+
+#: ../../../onboarding/django.rst:1444
+msgid ""
+"from rest_framework.test import APITestCase\n"
+"\n"
+"class HelloTests(APITestCase):\n"
+"    def test_index(self):\n"
+"        response = self.client.get(\"/\")\n"
+"        self.assertEqual(response.status_code, 200)\n"
+"        self.assertEqual(response.json(), {\"hello\": \"world\"})"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1457
+msgid ""
+"from typing import Dict\n"
+"\n"
+"from litestar import get\n"
+"from litestar.status_codes import HTTP_200_OK\n"
+"from litestar.testing import create_test_client\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"async def hello() -> Dict[str, str]:\n"
+"    return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"def test_hello() -> None:\n"
+"    with create_test_client(route_handlers=[hello]) as client:\n"
+"        response = client.get(\"/\")\n"
+"    assert response.status_code == HTTP_200_OK\n"
+"    assert response.json() == {\"hello\": \"world\"}"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1457
+msgid ""
+"from litestar import get\n"
+"from litestar.status_codes import HTTP_200_OK\n"
+"from litestar.testing import create_test_client\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"async def hello() -> dict[str, str]:\n"
+"    return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"def test_hello() -> None:\n"
+"    with create_test_client(route_handlers=[hello]) as client:\n"
+"        response = client.get(\"/\")\n"
+"    assert response.status_code == HTTP_200_OK\n"
+"    assert response.json() == {\"hello\": \"world\"}"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1461
+msgid ":doc:`/usage/testing`"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1465
+msgid "OpenAPI and the browsable API"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1467
+msgid ""
+"DRF generates an OpenAPI schema from view-and-serializer introspection and "
+"renders an HTML \"browsable API\" for sessioned users. Litestar generates "
+"OpenAPI from handler signatures and return types and serves multiple UIs out "
+"of the box: Swagger, ReDoc, Scalar, RapiDoc, Stoplight Elements. Per-handler "
+"metadata sits on the decorator (``tags``, ``summary``, ``description``, "
+"``operation_id``); application-wide options live on :class:`~litestar."
+"openapi.config.OpenAPIConfig`, passed as ``openapi_config=`` to the "
+"application."
+msgstr ""
+
+#: ../../../onboarding/django.rst:1481
+msgid ""
+"from drf_spectacular.utils import extend_schema\n"
+"\n"
+"class ItemView(APIView):\n"
+"    @extend_schema(\n"
+"        tags=[\"items\"],\n"
+"        summary=\"Retrieve an item\",\n"
+"        description=\"Look up a single item by its numeric identifier.\",\n"
+"        operation_id=\"get_item_by_id\",\n"
+"    )\n"
+"    def get(self, request, item_id):\n"
+"        return Response({\"id\": item_id})"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1498
+msgid ""
+"from litestar import Litestar, get\n"
+"from litestar.openapi.config import OpenAPIConfig\n"
+"from litestar.params import FromPath\n"
+"\n"
+"\n"
+"@get(\n"
+"    \"/items/{item_id:int}\",\n"
+"    tags=[\"items\"],\n"
+"    summary=\"Retrieve an item\",\n"
+"    description=\"Look up a single item by its numeric identifier.\",\n"
+"    operation_id=\"get_item_by_id\",\n"
+")\n"
+"async def get_item(item_id: FromPath[int]) -> dict[str, int]:\n"
+"    return {\"id\": item_id}\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[get_item],\n"
+"    openapi_config=OpenAPIConfig(title=\"Items API\", version=\"1.0.0\"),\n"
+")"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1502 ../../../onboarding/django.rst:1549
+msgid ":doc:`/usage/openapi/index`"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1507
+msgid "Concepts without a direct equivalent"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1509
+msgid "A handful of Django features have no first-party Litestar counterpart."
+msgstr ""
+
+#: ../../../onboarding/django.rst:1511
+msgid ""
+"**Django admin.** Litestar does not ship an admin interface. Community "
+"projects such as `Starlette-Admin <https://jowilf.github.io/starlette-admin/"
+">`_ and `SQLAdmin <https://aminalaee.dev/sqladmin/>`_ work with any ASGI "
+"framework and can be mounted on a Litestar app."
+msgstr ""
+
+#: ../../../onboarding/django.rst:1516
+msgid ""
+"**Management commands (** ``manage.py`` **).** Litestar has no equivalent of "
+"``django-admin`` / ``manage.py``, but plugins can register subcommands on "
+"the ``litestar`` CLI through the :class:`~litestar.plugins."
+"CLIPluginProtocol`; for one-off scripts, a plain ``click`` or ``typer`` "
+"script is the idiomatic choice."
+msgstr ""
+
+#: ../../../onboarding/django.rst:1521
+msgid ""
+"**Apps and** ``AppConfig`` **.** Litestar has no per-app module system. The "
+"plugin protocols (:class:`~litestar.plugins.InitPluginProtocol`, :class:"
+"`~litestar.plugins.SerializationPluginProtocol`, :class:`~litestar.plugins."
+"OpenAPISchemaPluginProtocol`, :class:`~litestar.plugins.CLIPluginProtocol`, :"
+"class:`~litestar.plugins.DIPlugin`) cover the same ground: package up a "
+"feature set (handlers, middleware, dependencies, CLI commands, schema "
+"customisations) and register it on the application."
+msgstr ""
+
+#: ../../../onboarding/django.rst:1530
+msgid ""
+"**Django Forms (HTML).** Litestar does not include HTML-rendering form "
+"scaffolding. For HTML-form-driven UIs, render forms with the template engine "
+"and validate the posted body with a DTO or model library."
+msgstr ""
+
+#: ../../../onboarding/django.rst:1534
+msgid ""
+"**``get_object_or_404`` and model managers.** No first-party equivalent. The "
+"SQLAlchemy repository's ``get_one_or_none`` paired with a raised :class:"
+"`~litestar.exceptions.NotFoundException` is the typical pattern."
+msgstr ""
+
+#: ../../../onboarding/django.rst:1540
+msgid "Further reading"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1542
+msgid ""
+"These are not the only differences. The following pages cover features the "
+"guide did not explore in depth:"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1548
+msgid ":doc:`/usage/plugins/index`"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1555
+msgid "Quick reference"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1557
+msgid "A lookup table for the most common translations."
+msgstr ""
+
+#: ../../../onboarding/django.rst:1560
+msgid "Concept"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1562
+msgid "Route declaration"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1562
+msgid "``path(\"\", views.index)`` in urls.py"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1562
+msgid "``@get(\"/\")`` + ``Litestar([handler])``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1564
+msgid "Class-based view"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1564
+msgid "``APIView`` / ``ViewSet``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1564
+msgid "``Controller`` subclass"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1566
+msgid "URL include"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1566
+msgid "``include(\"app.urls\")``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1566
+msgid "``Router(path=..., route_handlers=[...])``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1568
+msgid "Application config"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1568
+msgid "``settings.py``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1568
+msgid "``Litestar(...)`` constructor"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1570
+msgid "Synchronous handler"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1570
+msgid "sync by default"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1570
+msgid "``@get(sync_to_thread=True)``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1572
+msgid "Path parameter"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1572
+msgid "``<int:item_id>`` + view kwarg"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1572
+msgid "``{item_id:int}`` + ``FromPath[int]``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1574
+msgid "Query parameter"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1574
+msgid "``request.GET.get(\"x\")``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1574
+msgid "``FromQuery[T]``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1576
+msgid "JSON body"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1576
+msgid "``serializer = S(data=request.data)``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1576
+msgid "``data: Item``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1578
+msgid "``request.POST``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1578
+msgid "``Body(media_type=URL_ENCODED)``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1580
+msgid "File upload"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1580
+msgid "``request.FILES[\"data\"]``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1580
+msgid "``UploadFile`` + ``Body(MULTI_PART)``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1582
+msgid "Serializer"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1582
+msgid "``ModelSerializer``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1582
+msgid "DTO (``SQLAlchemyDTO``, ``DataclassDTO``)"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1584
+msgid "Default POST status"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1584 ../../../onboarding/django.rst:1586
+msgid "``200``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1584
+msgid "``201``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1586
+msgid "Default DELETE status"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1586
+msgid "``204``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1588
+msgid "Cookies"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1588
+msgid "``response.set_cookie(...)``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1588
+msgid "``response_cookies=[Cookie(...)]``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1590
+msgid "``render(request, \"...\", ctx)``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1590
+msgid "``Template()`` + ``TemplateConfig``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1592
+msgid "URL reverse"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1592
+msgid "``reverse(\"name\", kwargs={...})``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1592
+msgid "``request.url_for(\"name\", ...)``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1594
+msgid "Exception"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1594
+msgid "``Http404``, ``raise NotFound(...)``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1594
+msgid "``raise NotFoundException(...)``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1596
+msgid "Exception handler"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1596
+msgid "``EXCEPTION_HANDLER`` setting"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1596
+msgid "``exception_handlers={Exc: handler}``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1598
+msgid "``authentication_classes = [...]``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1598
+msgid "auth middleware or ``JWTAuth``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1600
+msgid "Permissions"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1600
+msgid "``permission_classes = [...]``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1600
+msgid "``guards=[...]``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1602
+msgid "``CsrfViewMiddleware``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1602
+msgid "``csrf_config=CSRFConfig(...)``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1604
+msgid "``MIDDLEWARE = [...]``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1604
+msgid "``ASGIMiddleware`` subclass"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1606
+msgid "Per-request hook"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1606
+msgid "``request_finished`` signal"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1606
+msgid "``after_response=fn``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1608
+msgid "Domain event"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1608
+msgid "``post_save`` signal"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1608
+msgid "``@listener`` + ``app.emit``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1610
+msgid "Background task"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1610
+msgid "Celery ``task.delay(...)``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1610
+msgid "``Response(background=BackgroundTask)``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1612
+msgid "ORM"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1612
+msgid "Django ORM"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1612
+msgid "SQLAlchemy + ``SQLAlchemyPlugin``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1614
+msgid "Migrations"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1614
+msgid "``manage.py makemigrations``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1614
+msgid "Alembic"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1616
+msgid "``django.contrib.sessions``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1616
+msgid "``ServerSideSessionConfig`` + store"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1618
+msgid "``staticfiles`` + ``collectstatic``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1618
+msgid "``create_static_files_router(...)``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1620
+msgid "WebSockets"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1620
+msgid "Django Channels consumer"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1620
+msgid "``@websocket_listener(\"/ws\")``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1622
+msgid "Pub/sub"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1622
+msgid "Channels ``channel_layer.group_send``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1622
+msgid "``ChannelsPlugin``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1624
+msgid "Throttling"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1624
+msgid "``throttle_classes = [...]``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1624
+msgid "``RateLimitConfig(...)``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1626
+msgid "Test client"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1626
+msgid "``APIClient`` / ``Client``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1626
+msgid "``TestClient`` / ``create_test_client``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1628
+msgid "OpenAPI schema"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1628
+msgid "drf-spectacular / ``@extend_schema``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1628
+msgid "per-decorator keywords + ``OpenAPIConfig``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1630
+msgid "Browsable API"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1630
+msgid "DRF HTML renderer"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1630
+msgid "Swagger / ReDoc / Scalar / RapiDoc"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1632
+msgid "Pagination"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1632
+msgid "``pagination_class = ...``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1632
+msgid "``OffsetPagination[T]`` return type"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1634
+msgid "Admin"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1634
+msgid "``django.contrib.admin``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1634
+msgid "no equivalent (Starlette-Admin, SQLAdmin)"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1636
+msgid "Management commands"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1636
+msgid "``manage.py``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1636
+msgid "no equivalent (Click / Typer scripts)"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1638
+msgid "Apps"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1638
+msgid "``AppConfig`` / ``INSTALLED_APPS``"
+msgstr ""
+
+#: ../../../onboarding/django.rst:1638
+msgid "plugins"
+msgstr ""
