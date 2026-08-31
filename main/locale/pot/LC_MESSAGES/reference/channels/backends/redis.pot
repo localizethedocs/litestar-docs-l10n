@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-08-31 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,13 +19,6 @@ msgstr ""
 
 #: ../../../reference/channels/backends/redis.rst:2
 msgid "redis"
-msgstr ""
-
-#: ../../../../litestar/channels/backends/redis.py:docstring of
-#: litestar.channels.backends.redis.RedisChannelsBackend:1
-msgid ""
-"Bases: :py:class:`~litestar.channels.backends.base.ChannelsBackend`, :py:"
-"class:`~abc.ABC`"
 msgstr ""
 
 #: ../../../../litestar/channels/backends/redis.py:docstring of
@@ -57,13 +50,6 @@ msgstr ""
 msgid ""
 "Amount of time in milliseconds to pause the :meth:`stream_events` generator, "
 "should no subscribers exist"
-msgstr ""
-
-#: ../../../../litestar/channels/backends/redis.py:docstring of
-#: litestar.channels.backends.redis.RedisChannelsPubSubBackend:1
-#: litestar.channels.backends.redis.RedisChannelsStreamBackend:1
-msgid ""
-"Bases: :py:class:`~litestar.channels.backends.redis.RedisChannelsBackend`"
 msgstr ""
 
 #: ../../../../litestar/channels/backends/redis.py:docstring of

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-08-31 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,20 +23,16 @@ msgstr ""
 
 #: ../../../../litestar/dto/base_dto.py:docstring of
 #: litestar.dto.base_dto.AbstractDTO:1
-msgid ""
-"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~litestar.dto.base_dto.T`]"
-msgstr ""
-
-#: ../../../../litestar/dto/base_dto.py:docstring of
-#: litestar.dto.base_dto.AbstractDTO:1
 msgid "Base class for DTO types."
 msgstr ""
 
-#: ../../../../docstring of litestar.dto.base_dto.AbstractDTO.config:1
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO.config:1
 msgid "Config objects to define properties of the DTO."
 msgstr ""
 
-#: ../../../../docstring of litestar.dto.base_dto.AbstractDTO.model_type:1
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO.model_type:1
 msgid ""
 "If ``annotation`` is an iterable, this is the inner type, otherwise will be "
 "the same as ``annotation``."

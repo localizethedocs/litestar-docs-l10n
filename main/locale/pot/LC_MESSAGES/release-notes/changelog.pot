@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-13 11:01+0000\n"
+"POT-Creation-Date: 2026-08-31 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,18 +21,287 @@ msgstr ""
 msgid "3.x Changelog"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:13
+#: ../../../release-notes/changelog.rst:25
+msgid ""
+"Exceeding the configured multipart form part limit now returns ``413 Request "
+"Entity Too Large`` instead of ``400 Bad Request``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:33
+msgid ""
+"The ``RapidocRenderPlugin`` has been removed due to lack of upstream "
+"maintenance."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:35
+msgid ""
+"Applications using ``RapidocRenderPlugin`` should migrate to another bundled "
+"UI plugin, such as ``ScalarRenderPlugin`` (the default), "
+"``SwaggerRenderPlugin``, ``RedocRenderPlugin`` or ``StoplightRenderPlugin``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:45
+msgid ""
+"``ResponseCacheMiddleware`` has been moved from the legacy "
+"``AbstractMiddleware`` base to :class:`~litestar.middleware.ASGIMiddleware`, "
+"as part of migrating all built-in middleware off the legacy bases. It now "
+"lives in ``litestar.middleware._internal``, removing it from the public API."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:51
+msgid ""
+"The move into ``litestar.middleware._internal`` does not affect usage: the "
+"middleware was only ever applied internally by Litestar to begin with."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:54
+msgid ""
+"Applications that configure response caching through :class:`~litestar."
+"config.response_cache.ResponseCacheConfig` and the handler-level ``cache`` "
+"argument are unaffected -- Litestar constructs the middleware itself."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:58
+msgid ""
+"Code composing the middleware directly into an ASGI stack must drop the "
+"``app`` argument, pass the settings as keyword arguments rather than a "
+"``ResponseCacheConfig``, and apply the instance to the next ASGI app:"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:63
+msgid ""
+"# before\n"
+"middleware = ResponseCacheMiddleware(app=next_app, "
+"config=response_cache_config)\n"
+"\n"
+"# after\n"
+"middleware = ResponseCacheMiddleware(\n"
+"    default_expiration=response_cache_config.default_expiration,\n"
+"    key_builder=response_cache_config.key_builder,\n"
+"    store=response_cache_config.store,\n"
+"    cache_response_filter=response_cache_config.cache_response_filter,\n"
+")\n"
+"asgi_app = middleware(next_app)"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:76
+#: ../../../release-notes/changelog.rst:113
+msgid ""
+"Since ``ASGIMiddleware.__call__`` returns a closure rather than the "
+"middleware instance, a middleware stack can no longer be introspected by "
+"walking the ``.app`` attribute of each layer."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:81
+#: ../../../release-notes/changelog.rst:118
+msgid ":ref:`asgi-middleware-migration`"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:89
+msgid ""
+"``CORSMiddleware`` has been moved from the legacy ``AbstractMiddleware`` "
+"base to :class:`~litestar.middleware.ASGIMiddleware`, as part of migrating "
+"all built-in middleware off the legacy bases."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:93
+msgid ""
+"Applications that configure CORS through :class:`~litestar.config.cors."
+"CORSConfig` are unaffected -- Litestar constructs the middleware itself."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:97
+msgid ""
+"Code instantiating the middleware directly must drop the ``app`` argument, "
+"pass the settings as keyword arguments rather than a ``CORSConfig``, and "
+"apply the instance to the next ASGI app:"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:102
+msgid ""
+"# before\n"
+"middleware = CORSMiddleware(app=next_app, config=cors_config)\n"
+"\n"
+"# after\n"
+"middleware = CORSMiddleware(allow_origins=cors_config.allow_origins, ...)\n"
+"asgi_app = middleware(next_app)"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:110
+msgid ""
+"The settings are copied on construction, so mutating ``CORSConfig`` after "
+"the application has been created no longer affects the middleware."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:144
+msgid ""
+"``httpx``, used by the test clients, has been moved from the default "
+"dependencies to the ``litestar[testing]`` extra. It remains included in "
+"``litestar[full]``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:147
+msgid ""
+"Importing anything from ``litestar.testing`` without the extra installed now "
+"raises a ``MissingDependencyException`` naming the extra to install."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:151
+msgid ":doc:`/usage/testing`"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:158
+msgid ""
+"The ``litestar[cli]`` extra now requires ``rich-click>=1.9``. ``rich-click`` "
+"was previously capped at ``<1.9``, which silently disabled the CLI's ``star-"
+"box`` theme: the underlying ``theme`` option only exists from 1.9 onwards, "
+"and assigning an unknown setting is ignored rather than raising."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:163
+msgid ""
+"The CLI configuration has been migrated off the options 1.9 deprecates "
+"(``use_markdown`` / ``use_rich_markup`` in favour of ``text_markup``, and "
+"``show_metavars_column`` / ``append_metavars_help`` in favour of "
+"``options_table_column_types`` / ``options_table_help_sections``)."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:168
+msgid ""
+"The layout of the help output is preserved: option tables keep the long form "
+"in the first column, the ``*`` marker on required parameters, and the "
+"metavar appended directly after the help text. Colours do change, as the "
+"``star-box`` theme now takes effect for the first time."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:173
+msgid ""
+"This only affects applications that additionally pin ``rich-click<1.9`` "
+"themselves."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:177
+#: ../../../release-notes/changelog.rst:193
+msgid ":doc:`/usage/cli`"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:184
+msgid ""
+"``click``, ``rich`` and ``rich-click``, which power the CLI, have been moved "
+"from the default dependencies to the ``litestar[cli]`` extra. They remain "
+"included in ``litestar[standard]`` and ``litestar[full]``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:188
+msgid ""
+"Installing ``litestar`` on its own therefore no longer provides the "
+"``litestar`` command. Invoking it without the extra now raises a "
+"``MissingDependencyException`` naming the extra to install."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:200
+msgid ""
+"Remove the deprecated ``litestar.contrib`` namespace. Integrations "
+"previously available from this namespace have moved to their replacement "
+"modules."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:208
+msgid ""
+"Remove declaring parameter and body metadata through default values and "
+"setting defaults inside markers."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:211
+msgid ""
+"The ``default`` keyword has been removed from ``Parameter`` and ``Body``, "
+"along with the underlying ``KwargDefinition.default`` field. Passing it now "
+"raises a ``TypeError``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:214
+msgid ""
+"Using a ``QueryParameter`` / ``HeaderParameter`` / ``PathParameter`` / "
+"``CookieParameter`` or ``Body`` marker as a parameter *default value* (for "
+"example ``data: Foo = Body(...)`` or ``param: int = QueryParameter(...)``) "
+"now raises an exception"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:219
+#: ../../../release-notes/changelog.rst:246
+msgid "**Migration**"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:221
+msgid ""
+"If metadata is declared on the marker, move the marker into ``Annotated``:"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:223
+msgid ""
+"``data: Foo = Body(min_items=2)`` becomes ``data: Annotated[Foo, "
+"Body(min_items=2)]``"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:224
+msgid ""
+"``param: int = QueryParameter(gt=1)`` becomes ``param: Annotated[int, "
+"QueryParameter(gt=1)]``"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:226
+msgid ""
+"For the unconstrained case the dedicated markers can be used as a shorthand, "
+"e.g. ``JSONBody[Foo]``, ``MsgPackBody[Foo]``, ``MultipartBody[Foo]`` or "
+"``URLEncodedBody[Foo]`` for bodies, and ``FromQuery[int]``, "
+"``FromHeader[int]``, ``FromCookie[int]`` or ``FromPath[int]`` for parameters."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:231
+msgid ""
+"Hoist defaults set inside ``Annotated`` into the parameter default: ``param: "
+"Annotated[int, QueryParameter(default=5)]`` becomes ``param: Annotated[int, "
+"QueryParameter(...)] = 5``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:236
+msgid ":doc:`/usage/routing/parameters`"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:243
+msgid ""
+"Remove ``params.Dependency`` and ``params.DependencyKwarg`` that were "
+"deprecated in ``2.23.0``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:248
+msgid "Replace ``foo: int = Dependency()`` with ``foo: NamedDependency[int]``"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:249
+msgid ""
+"Replace ``foo: Annotated[int, Dependency(default=1)]`` by hoisting the "
+"default into the parameter default: ``foo: NamedDependency[int] = 1``"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:251
+msgid ""
+"Replace ``foo: Annotated[int, Dependency(skip_validation=True)`` with ``foo: "
+"NamedDependency[SkipValidation[int]]``"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:275
 msgid "Drop support for Pydantic 1."
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:15
+#: ../../../release-notes/changelog.rst:277
 msgid ""
 "Pydantic 1 is no longer supported or tested against. No changes required for "
 "applications already using Pydantic 2. Applications using Pydantic 1 or a "
 "mix between 1 and 2 should upgrade to Pydantic 2."
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:24
+#: ../../../release-notes/changelog.rst:286
 msgid ""
 "Added optional ``ping_interval`` parameter to :class:`ServerSentEvent "
 "<litestar.response.ServerSentEvent>` that sends SSE comment keepalive pings "
@@ -40,45 +309,45 @@ msgid ""
 "proxies or clients."
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:34
+#: ../../../release-notes/changelog.rst:296
 msgid ""
 "Remove Litestar's logging configuration, and related modules. In particular, "
 "the following have been removed:"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:37
+#: ../../../release-notes/changelog.rst:299
 msgid "``Litestar.logging_config`` parameter"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:38
+#: ../../../release-notes/changelog.rst:300
 msgid "``Litestar.logger`` attribute"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:39
+#: ../../../release-notes/changelog.rst:301
 msgid "``Litestar.get_logger`` method"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:40
+#: ../../../release-notes/changelog.rst:302
 msgid "``AppConfig.logging_config`` attribute"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:41
+#: ../../../release-notes/changelog.rst:303
 msgid "``ASGIConnection.logger`` property"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:42
+#: ../../../release-notes/changelog.rst:304
 msgid "``litestar.logging`` module"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:43
+#: ../../../release-notes/changelog.rst:305
 msgid "``litestar.plugins.structlog`` module"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:44
+#: ../../../release-notes/changelog.rst:306
 msgid "``litestar.middleware.lgging.LoggingMiddlewareConfig`` class"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:46
+#: ../../../release-notes/changelog.rst:308
 msgid ""
 "Aside from debugging, there is only one place where Litestar logs, which is :"
 "class:`~litestar.middleware.logging.LoggingMiddleware`, which has been "
@@ -87,18 +356,18 @@ msgid ""
 "now accepting all configuration arguments directly."
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:52
+#: ../../../release-notes/changelog.rst:314
 msgid ""
 "Users that have previously relied on Litestar to configure logging, can "
 "simply use the standard logging configuration provided by their logging "
 "library of choice."
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:57
+#: ../../../release-notes/changelog.rst:319
 msgid ":doc:`/usage/logging`"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:65
+#: ../../../release-notes/changelog.rst:327
 msgid ""
 "Remove the default exception handler for all unhandled exceptions. Unhandled "
 "exceptions will now be re-raised, for the server to handle. \"Unhandled "
@@ -107,7 +376,7 @@ msgid ""
 "`LitestarException` or :exc:`HTTPException`."
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:73
+#: ../../../release-notes/changelog.rst:335
 msgid ""
 "Your application's runtime behaviour won't change in terms of *if* "
 "exceptions get handled. The main difference will be that, for an unhandled "
@@ -115,7 +384,7 @@ msgid ""
 "Error`` response, instead of Litestar"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:100
+#: ../../../release-notes/changelog.rst:362
 msgid ""
 "Remove all SQLAlchemy functionality from Litestar. Both ``litestar.contrib."
 "sqlalchemy`` and ``litestar.plugins.sqlalchemy`` modules have been "
@@ -123,7 +392,7 @@ msgid ""
 "extensions.litestar``."
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:104
+#: ../../../release-notes/changelog.rst:366
 msgid ""
 "Migration: - ``from litestar.contrib.sqlalchemy import X`` → ``from "
 "advanced_alchemy.extensions.litestar import X`` - ``from litestar.plugins."
@@ -131,20 +400,20 @@ msgid ""
 "Y``"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:108
+#: ../../../release-notes/changelog.rst:370
 msgid ""
 "This completes the separation of concerns, with advanced-alchemy being the "
 "sole provider of SQLAlchemy integration for Litestar."
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:117
+#: ../../../release-notes/changelog.rst:379
 msgid ""
 "Remove the deprecated ``litestar.contrib.prometheus`` module. Code still "
 "using imports from this module should switch to using ``litestar.plugins."
 "prometheus``."
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:127
+#: ../../../release-notes/changelog.rst:389
 msgid ""
 "Re-implement :class:`~litestar.testing.AsyncTestClient` to be async-native, "
 "i.e. use the currently running event loop to run the application, instead of "
@@ -153,7 +422,7 @@ msgid ""
 "an async testing utility for WebSockets."
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:132
+#: ../../../release-notes/changelog.rst:394
 msgid ""
 "To ensure consisten behaviour across ``TestClient`` and ``AsyncTestClient``, "
 "all testing utilities have been rewritten to be async first, with their "
@@ -161,58 +430,58 @@ msgid ""
 "they run internally within a dedicated thread + event loop."
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:137
+#: ../../../release-notes/changelog.rst:399
 msgid ""
 ":ref:`usage/testing:Test Clients` :ref:`usage/testing:Deciding which test "
 "client to use`"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:145
+#: ../../../release-notes/changelog.rst:407
 msgid ""
 "Remove deprecated ``<plugin_type>_plugins`` properties from :class:"
 "`Litestar`."
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:148
+#: ../../../release-notes/changelog.rst:410
 msgid "Removed"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:148
+#: ../../../release-notes/changelog.rst:410
 msgid "Use instead"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:150
+#: ../../../release-notes/changelog.rst:412
 msgid "``Litestar.openapi_schema_plugins``"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:150
+#: ../../../release-notes/changelog.rst:412
 msgid "``Litestar.plugins.openapi_schema``"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:151
+#: ../../../release-notes/changelog.rst:413
 msgid "``Litestar.cli_plugins``"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:151
+#: ../../../release-notes/changelog.rst:413
 msgid "``Litestar.plugins.cli``"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:152
+#: ../../../release-notes/changelog.rst:414
 msgid "``Litestar.serialization_plugins``"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:152
+#: ../../../release-notes/changelog.rst:414
 msgid "``Litestar.serialization.cli``"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:160
+#: ../../../release-notes/changelog.rst:422
 msgid ""
 "Remove the deprecated properties ``allow_reserved`` and "
 "``allow_empty_value`` from :class:`~litestar.datastructures.ResponseHeader` "
 "and :class:`~litestar.openapi.spec.OpenAPIHeader`."
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:168
+#: ../../../release-notes/changelog.rst:430
 msgid ""
 "The ``traceback_line_limit`` parameter of ``litestar.logging.config."
 "LoggingConfig`` has been removed. This parameter had no effect since version "
@@ -220,155 +489,182 @@ msgid ""
 "in behaviour."
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:177
+#: ../../../release-notes/changelog.rst:439
 msgid ""
 "Remove the deprecated ``litestar.middleware.cors`` module and ``litestar."
 "middleware.cors.CORSMiddleware``. To configure the CORS middleware, use :"
 "class:`~litestar.config.cors.CORSConfig`."
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:185
+#: ../../../release-notes/changelog.rst:447
 msgid ""
 "The deprecated ``encoded_headers`` parameter has been removed from the "
 "following clases:"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:187
+#: ../../../release-notes/changelog.rst:449
 msgid ":class:`~litestar.response.base.ASGIResponse`"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:188
+#: ../../../release-notes/changelog.rst:450
 msgid ":meth:`~litestar.response.Response.to_asgi_response`"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:189
+#: ../../../release-notes/changelog.rst:451
 msgid ":class:`~litestar.response.file.ASGIFileResponse`"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:190
+#: ../../../release-notes/changelog.rst:452
 msgid ":meth:`~litestar.response.File.to_asgi_response`"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:191
+#: ../../../release-notes/changelog.rst:453
 msgid ":class:`~litestar.response.redirect.ASGIRedirectResponse`"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:192
+#: ../../../release-notes/changelog.rst:454
 msgid ":meth:`~litestar.response.Redirect.to_asgi_response`"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:193
+#: ../../../release-notes/changelog.rst:455
 msgid ":class:`~litestar.response.streaming.ASGIStreamingResponse`"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:194
+#: ../../../release-notes/changelog.rst:456
 msgid ":meth:`~litestar.response.Stream.to_asgi_response`"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:195
+#: ../../../release-notes/changelog.rst:457
 msgid ":meth:`~litestar.response.Template.to_asgi_response`"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:197
+#: ../../../release-notes/changelog.rst:459
 msgid ""
 "Existing code still using ``encoded_headers`` should be migrated to using "
 "the ``headers`` parameter instead."
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:205
+#: ../../../release-notes/changelog.rst:467
 msgid ""
 "Remove the deprecated ``litestar.contrib.htmx`` module. Code still using "
 "imports from this module should switch to using ``litestar_htmx``."
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:208
+#: ../../../release-notes/changelog.rst:470
 msgid "Install it via ``litestar[htmx]`` extra."
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:215
+#: ../../../release-notes/changelog.rst:477
 msgid ""
 "Remove the deprecated ``litestar.types.internal_types.LitestarType`` type "
 "alias. In its stead, ``type[Litestar]`` can be used."
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:223
+#: ../../../release-notes/changelog.rst:485
 msgid ""
 "Remove the deprecated ``litestar.template.base.TemplateContext`` type. Its "
 "usages should be replaced with :class:`collections.abc.Mapping`."
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:231
+#: ../../../release-notes/changelog.rst:493
 msgid ""
 "Remove the deprecated ``ASGIResponse.encoded_headers`` property. Instead, :"
 "meth:`~litestar.response.base.ASGIResponse.encode_headers` should be used."
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:239
+#: ../../../release-notes/changelog.rst:501
 msgid ""
 "Remove the deprecated ``pydantic_get_unwrapped_annotation_and_type_hints`` "
 "function."
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:247
+#: ../../../release-notes/changelog.rst:509
 msgid ""
 "Remove the deprecated ``litestar.contrib.attrs`` module. Code still using "
 "imports from this module should switch to using ``litestar.plugins.attrs``."
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:256
+#: ../../../release-notes/changelog.rst:518
 msgid ""
 "Remove the deprecated ``litestar.contrib.jwt`` module. Code still using "
 "imports from this module should switch to using ``litestar.security.jwt``."
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:265
+#: ../../../release-notes/changelog.rst:527
 msgid ""
 "Remove the deprecated ``litestar.contrib.repository`` module. Code still "
 "using imports from this module should switch to using ``litestar."
 "repository``."
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:274
+#: ../../../release-notes/changelog.rst:536
 msgid ""
 "Remove the deprecated ``litestar.contrib.pydantic`` module. Code still using "
 "imports from this module should switch to using ``litestar.plugins."
 "pydantic``."
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:283
+#: ../../../release-notes/changelog.rst:545
 msgid ""
 "Remove the deprecated module ``litestar.contrib.minijnja``. This module was "
 "created with a typo in its name (`minijnja` instead of `minijinja`). Instead "
 "``litestar.contrib.minijinja`` should be used."
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:291
+#: ../../../release-notes/changelog.rst:553
 msgid ""
-"New ``round_trip: bool`` parameter to :class:`~litestar.contrib.pydantic."
-"PydanticPlugin` allows serializing types like ``pydanctic.Json`` correctly."
+"New ``round_trip: bool`` parameter to ``PydanticPlugin`` allows serializing "
+"types like ``pydanctic.Json`` correctly."
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:301
+#: ../../../release-notes/changelog.rst:563
 msgid ""
 "Remove the deprecated ``litestar.contrib.minijinja.minijinja_from_state`` "
 "function. Instead use a callable that receives the minijinja ``State`` "
 "object as first argument."
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:310
+#: ../../../release-notes/changelog.rst:572
 msgid ""
 "Use ``litestar[piccolo]`` extra installation target and ``litestar_piccolo`` "
 "plugin instead: https://github.com/litestar-org/litestar-piccolo"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:326
+#: ../../../release-notes/changelog.rst:582
+msgid ""
+"Move the OpenTelemetry integration from ``litestar.contrib.opentelemetry`` "
+"to ``litestar.plugins.opentelemetry``. Code still using imports from the old "
+"module should switch to the new path."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:586
+msgid ""
+":class:`~litestar.plugins.opentelemetry.OpenTelemetryConfig` has been "
+"brought in line with the upstream ``opentelemetry.instrumentation.asgi."
+"OpenTelemetryMiddleware`` configuration, adding "
+"``client_request_hook_handler``, ``client_response_hook_handler``, "
+"``tracer``, ``exclude``, ``exclude_opt_key``, ``exclude_urls_env_key``, "
+"``exclude_spans``, ``http_capture_headers_server_request``, "
+"``http_capture_headers_server_response``, and "
+"``http_capture_headers_sanitize_fields``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:595
+msgid ""
+"Also fixes a ``KeyError: 'route_handler'`` raised on every request when "
+"``exclude_opt_key`` was set, and corrects the ``OpenTelemetryHookHandler`` "
+"signature to accept the span, ASGI scope, and ASGI message as documented by "
+"upstream."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:612
 msgid ""
 "Middlewares inheriting from :class:`~litestar.middleware.base."
 "ASGIMiddleware` will now have zero runtime cost when they are excluded e.g. "
 "via the ``scope`` or ``exclude_opt_key`` options."
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:330
+#: ../../../release-notes/changelog.rst:616
 msgid ""
 "Previously, the base middleware was always being invoked for every request, "
 "evaluating the exclusion criteria, and then calling the user defined "
@@ -378,11 +674,11 @@ msgid ""
 "user's function."
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:337
+#: ../../../release-notes/changelog.rst:623
 msgid "This behaviour is still true for the legacy ``AbstractMiddleware``"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:339
+#: ../../../release-notes/changelog.rst:625
 msgid ""
 "With *zero cost exclusion*, the exclusion is being evaluated statically. At "
 "app creation time, when route handlers are registered and their middleware "
@@ -390,7 +686,7 @@ msgid ""
 "be included in the stack."
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:345
+#: ../../../release-notes/changelog.rst:631
 msgid ""
 "Even though this change is marked as breaking, no runtime behaviour "
 "difference is expected. Some test cases may break though if they relied on "
@@ -398,11 +694,11 @@ msgid ""
 "always being called"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:355
+#: ../../../release-notes/changelog.rst:641
 msgid "Support unwrapping ``ReadOnly`` type in schemas like:"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:357
+#: ../../../release-notes/changelog.rst:643
 msgid ""
 "from typing import ReadOnly, TypedDict\n"
 "\n"
@@ -410,12 +706,12 @@ msgid ""
 "    id: ReadOnly[int]"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:364
+#: ../../../release-notes/changelog.rst:650
 msgid ""
 "``typing_extensions.ReadOnly`` should be used for python versions <3.13."
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:371
+#: ../../../release-notes/changelog.rst:657
 msgid ""
 "Add a new attribute :attr:`~litestar.middleware.ASGIMiddleware."
 "should_bypass_for_scope`; A callable which takes in a :class:`~litestar."
@@ -423,14 +719,68 @@ msgid ""
 "middleware for the current request."
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:82
+#: ../../../release-notes/changelog.rst:13
+msgid ""
+"Annotating a handler with a union whose members are all enums (e.g. ``Color "
+"| Size``) crashed schema generation with ``TypeError: issubclass() arg 1 "
+"must be a class``, as the union was dispatched to the enum schema handler. "
+"Such unions are now documented as a ``oneOf`` with a component schema per "
+"enum."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:124
+msgid ""
+"``ResponseCacheMiddleware`` is applied per route, so a handler that never "
+"set ``cache`` still had its responses written to the store when it shared a "
+"path with a handler that did -- for example a ``POST`` handler on a path "
+"whose ``GET`` handler sets ``cache=True``. Those entries were written on "
+"every request, without an expiry, and were never read back, since responses "
+"are only served from the cache for handlers that enable it."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:131
+msgid "The middleware now passes such requests through untouched."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:135
+msgid ""
+"Serialize subscription changes and consume notifications in a background "
+"task so dynamic ``LISTEN`` and ``UNLISTEN`` operations no longer contend "
+"with the listener. Psycopg 3.2.4 or newer is now required for development "
+"and documentation builds."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:259
+msgid ""
+"Fields typed as ``T | None`` (nullable) without a default value are now "
+"correctly included in the OpenAPI schema's ``required`` array. Previously, "
+"Litestar conflated nullability (the type can be ``None``) with optionality "
+"(having a default value), causing the generated schema to diverge from the "
+"OpenAPI 3.1.0 specification."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:264
+msgid ""
+"This affected all model types: dataclasses, msgspec Structs, attrs classes, "
+"and Pydantic models. For example, a field ``name: int | None`` with no "
+"default was previously excluded from ``required``; it is now correctly "
+"included."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:268
+msgid ""
+"Runtime request validation behavior is unchanged — nullable parameters "
+"without defaults were already enforced as required at the validation layer."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:344
 msgid ""
 "Fix the ``raise_server_exceptions``. This flag has been non-functional (i.e. "
 "did not change the behaviour at all) since version 1. This is now fixed, and "
 "unhandled exceptions will be re-raised by the test client"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:90
+#: ../../../release-notes/changelog.rst:352
 msgid ""
 "Fix a bug that could lead to unhandled exceptions raised within websocket "
 "handlers, and not derived from :exc:`LitestarException` or :exc:"
@@ -438,14 +788,14 @@ msgid ""
 "the WebSocket connection without any indication of an exception"
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:319
+#: ../../../release-notes/changelog.rst:605
 msgid ""
 "Now, in the OpenAPI schema, ``pydantic`` fields with ``default_factory`` are "
 "displayed as non-null and not required. Previously, this fields was nullable "
 "and not required."
 msgstr ""
 
-#: ../../../release-notes/changelog.rst:379
+#: ../../../release-notes/changelog.rst:665
 msgid ""
 "Fix a bug in :class:`MsgspecDTO` where a KeyError was raised if a :class:"
 "`msgspec.Struct` contained a :class:`~typing.ClassVar`. ClassVars are now "

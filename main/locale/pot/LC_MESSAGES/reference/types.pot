@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-08-31 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,7 +25,8 @@ msgstr ""
 msgid "Callable types"
 msgstr ""
 
-#: ../../../../docstring of litestar.types.AfterExceptionHookHandler:1
+#: ../../../../litestar/types/__init__.py:docstring of
+#: litestar.types.AfterExceptionHookHandler:1
 #: litestar.types.AfterRequestHookHandler:1
 #: litestar.types.AfterResponseHookHandler:1
 #: litestar.types.BeforeMessageSendHookHandler:1
@@ -36,7 +37,8 @@ msgstr ""
 msgid "str(object='') -> str str(bytes_or_buffer[, encoding[, errors]]) -> str"
 msgstr ""
 
-#: ../../../../docstring of litestar.types.AfterExceptionHookHandler:4
+#: ../../../../litestar/types/__init__.py:docstring of
+#: litestar.types.AfterExceptionHookHandler:4
 #: litestar.types.AfterRequestHookHandler:4
 #: litestar.types.AfterResponseHookHandler:4
 #: litestar.types.BeforeMessageSendHookHandler:4
@@ -70,48 +72,12 @@ msgstr ""
 
 #: ../../../../litestar/types/asgi_types.py:docstring of
 #: litestar.types.asgi_types.ASGIVersion:1
-#: litestar.types.asgi_types.HTTPDisconnectEvent:1
-#: litestar.types.asgi_types.HTTPRequestEvent:1
-#: litestar.types.asgi_types.HTTPResponseBodyEvent:1
-#: litestar.types.asgi_types.LifeSpanScope:1
-#: litestar.types.asgi_types.LifeSpanShutdownCompleteEvent:1
-#: litestar.types.asgi_types.LifeSpanShutdownEvent:1
-#: litestar.types.asgi_types.LifeSpanShutdownFailedEvent:1
-#: litestar.types.asgi_types.LifeSpanStartupCompleteEvent:1
-#: litestar.types.asgi_types.LifeSpanStartupEvent:1
-#: litestar.types.asgi_types.LifeSpanStartupFailedEvent:1
-#: litestar.types.asgi_types.WebSocketCloseEvent:1
-#: litestar.types.asgi_types.WebSocketConnectEvent:1
-#: litestar.types.asgi_types.WebSocketDisconnectEvent:1
-#: litestar.types.asgi_types.WebSocketReceiveEvent:1
-#: litestar.types.asgi_types.WebSocketResponseBodyEvent:1
-#: litestar.types.asgi_types.WebSocketSendEvent:1
-msgid "Bases: :py:class:`~typing.TypedDict`"
-msgstr ""
-
-#: ../../../../litestar/types/asgi_types.py:docstring of
-#: litestar.types.asgi_types.ASGIVersion:1
 msgid "ASGI spec version."
 msgstr ""
 
 #: ../../../../litestar/types/asgi_types.py:docstring of
 #: litestar.types.asgi_types.BaseScope:1
-#: litestar.types.asgi_types.HTTPResponseStartEvent:1
-#: litestar.types.asgi_types.HTTPServerPushEvent:1
-#: litestar.types.asgi_types.WebSocketAcceptEvent:1
-#: litestar.types.asgi_types.WebSocketResponseStartEvent:1
-msgid "Bases: :py:class:`~litestar.types.asgi_types.HeaderScope`"
-msgstr ""
-
-#: ../../../../litestar/types/asgi_types.py:docstring of
-#: litestar.types.asgi_types.BaseScope:1
 msgid "Base ASGI-scope."
-msgstr ""
-
-#: ../../../../litestar/types/asgi_types.py:docstring of
-#: litestar.types.asgi_types.HTTPScope:1
-#: litestar.types.asgi_types.WebSocketScope:1
-msgid "Bases: :py:class:`~litestar.types.asgi_types.BaseScope`"
 msgstr ""
 
 #: ../../../../litestar/types/asgi_types.py:docstring of
@@ -246,11 +212,6 @@ msgstr ""
 
 #: ../../../reference/types.rst:154
 msgid "Protocols"
-msgstr ""
-
-#: ../../../../litestar/types/protocols.py:docstring of
-#: litestar.types.protocols.Logger:1
-msgid "Bases: :py:class:`~typing.Protocol`"
 msgstr ""
 
 #: ../../../../litestar/types/protocols.py:docstring of

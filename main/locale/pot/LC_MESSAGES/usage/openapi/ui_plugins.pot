@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-08-31 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,8 +31,8 @@ msgstr ""
 
 #: ../../../usage/openapi/ui_plugins.rst:10
 msgid ""
-"Litestar maintains and ships with UI plugins for a range of popular popular "
-"OpenAPI documentation tools:"
+"Litestar maintains and ships with UI plugins for a range of popular OpenAPI "
+"documentation tools:"
 msgstr ""
 
 #: ../../../usage/openapi/ui_plugins.rst:12
@@ -40,36 +40,32 @@ msgid "`Scalar <https://github.com/scalar/scalar/>`_"
 msgstr ""
 
 #: ../../../usage/openapi/ui_plugins.rst:13
-msgid "`RapiDoc <https://rapidocweb.com/>`_"
-msgstr ""
-
-#: ../../../usage/openapi/ui_plugins.rst:14
 msgid "`ReDoc <https://redocly.com/>`_"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:15
+#: ../../../usage/openapi/ui_plugins.rst:14
 msgid "`Stoplight Elements <https://stoplight.io/open-source/elements>`_"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:16
+#: ../../../usage/openapi/ui_plugins.rst:15
 msgid "`Swagger UI <https://swagger.io/tools/swagger-ui/>`_"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:17
+#: ../../../usage/openapi/ui_plugins.rst:16
 msgid "`YAML <https://yaml.org/>`_"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:19
+#: ../../../usage/openapi/ui_plugins.rst:18
 msgid ""
 "Each plugin is easily configurable, allowing developers to customize aspects "
 "like version, paths, CSS and JavaScript resources."
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:24
+#: ../../../usage/openapi/ui_plugins.rst:23
 msgid "Using OpenAPI UI Plugins"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:26
+#: ../../../usage/openapi/ui_plugins.rst:25
 msgid ""
 "Using OpenAPI UI Plugins is as simple as importing the plugin, instantiating "
 "it, and adding it to the OpenAPIConfig."
@@ -79,7 +75,7 @@ msgstr ""
 msgid "scalar"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:34
+#: ../../../usage/openapi/ui_plugins.rst:33
 msgid ""
 "from litestar import Litestar, get\n"
 "from litestar.openapi.config import OpenAPIConfig\n"
@@ -103,37 +99,10 @@ msgid ""
 msgstr ""
 
 #: ../../../usage/openapi/ui_plugins.rst:0
-msgid "rapidoc"
-msgstr ""
-
-#: ../../../usage/openapi/ui_plugins.rst:40
-msgid ""
-"from litestar import Litestar, get\n"
-"from litestar.openapi.config import OpenAPIConfig\n"
-"from litestar.openapi.plugins import RapidocRenderPlugin\n"
-"\n"
-"\n"
-"@get(\"/\", sync_to_thread=False)\n"
-"def hello_world() -> dict[str, str]:\n"
-"    return {\"message\": \"Hello World\"}\n"
-"\n"
-"\n"
-"app = Litestar(\n"
-"    route_handlers=[hello_world],\n"
-"    openapi_config=OpenAPIConfig(\n"
-"        title=\"Litestar Example\",\n"
-"        description=\"Example of litestar\",\n"
-"        version=\"0.0.1\",\n"
-"        render_plugins=[RapidocRenderPlugin()],\n"
-"    ),\n"
-")"
-msgstr ""
-
-#: ../../../usage/openapi/ui_plugins.rst:0
 msgid "redoc"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:46
+#: ../../../usage/openapi/ui_plugins.rst:39
 msgid ""
 "from litestar import Litestar, get\n"
 "from litestar.openapi.config import OpenAPIConfig\n"
@@ -160,7 +129,7 @@ msgstr ""
 msgid "stoplight"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:52
+#: ../../../usage/openapi/ui_plugins.rst:45
 msgid ""
 "from litestar import Litestar, get\n"
 "from litestar.openapi.config import OpenAPIConfig\n"
@@ -187,7 +156,7 @@ msgstr ""
 msgid "swagger"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:58
+#: ../../../usage/openapi/ui_plugins.rst:51
 msgid ""
 "from litestar import Litestar, get\n"
 "from litestar.openapi.config import OpenAPIConfig\n"
@@ -214,7 +183,7 @@ msgstr ""
 msgid "yaml"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:64
+#: ../../../usage/openapi/ui_plugins.rst:57
 msgid ""
 "from litestar import Litestar, get\n"
 "from litestar.openapi.config import OpenAPIConfig\n"
@@ -237,7 +206,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:67
+#: ../../../usage/openapi/ui_plugins.rst:60
 msgid ""
 "Rendering YAML requires the `PyYAML <https://pyyaml.org/wiki/"
 "PyYAMLDocumentation>`_ library, which can be installed via the "
@@ -248,15 +217,15 @@ msgstr ""
 msgid "multiple"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:74
+#: ../../../usage/openapi/ui_plugins.rst:67
 msgid "Any combination of UIs can be served."
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:74
+#: ../../../usage/openapi/ui_plugins.rst:67
 msgid ""
 "from litestar import Litestar, get\n"
 "from litestar.openapi.config import OpenAPIConfig\n"
-"from litestar.openapi.plugins import RapidocRenderPlugin, "
+"from litestar.openapi.plugins import ScalarRenderPlugin, "
 "SwaggerRenderPlugin\n"
 "\n"
 "\n"
@@ -271,78 +240,79 @@ msgid ""
 "        title=\"Litestar Example\",\n"
 "        description=\"Example of litestar\",\n"
 "        version=\"0.0.1\",\n"
-"        render_plugins=[RapidocRenderPlugin(), SwaggerRenderPlugin()],\n"
+"        render_plugins=[ScalarRenderPlugin(), SwaggerRenderPlugin()],\n"
 "    ),\n"
 ")"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:79
+#: ../../../usage/openapi/ui_plugins.rst:72
 msgid "Configuring OpenAPI UI Plugins"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:81
+#: ../../../usage/openapi/ui_plugins.rst:74
 msgid ""
 "Each plugin can be tailored to meet your unique requirements by passing "
 "options at instantiation. For full details on each plugin's options, see "
 "the :doc:`API Reference </reference/openapi/plugins>`."
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:84
+#: ../../../usage/openapi/ui_plugins.rst:77
 msgid "All plugins support:"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:86
+#: ../../../usage/openapi/ui_plugins.rst:79
 msgid ""
-"``path``: Each plugin has its own default, e.g., ``/rapidoc`` for RapiDoc. "
+"``path``: Each plugin has its own default, e.g., ``/scalar`` for Scalar. "
 "This can be overridden to serve the UI at a different path."
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:88
+#: ../../../usage/openapi/ui_plugins.rst:81
 msgid ""
 "``media_type``: The default media type for the plugin, typically the default "
 "is ``text/html``."
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:89
+#: ../../../usage/openapi/ui_plugins.rst:82
 msgid ""
 "``favicon``: A string that should be a valid ``<link>`` tag, e.g., ``<link "
 "rel=\"icon\" href=\"https://example.com/favicon.ico\">``."
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:91
+#: ../../../usage/openapi/ui_plugins.rst:84
 msgid ""
 "``style``: A string that should be a valid ``<style>`` tag, e.g., "
 "``<style>body { margin: 0; padding: 0; }``</style>.``"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:93
+#: ../../../usage/openapi/ui_plugins.rst:86
 msgid "Most plugins support the following additional options:"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:95
+#: ../../../usage/openapi/ui_plugins.rst:88
 msgid ""
 "``version``: The version of the UIs JS and (in some cases) CSS bundle to "
 "use. We use the ``version`` to construct the URL to retrieve the bundle from "
-"``unpkg``, e.g., ``https://unpkg.com/rapidoc@<version>/dist/rapidoc-min.js``"
+"``unpkg``, e.g., ``https://unpkg.com/@stoplight/elements@<version>/web-"
+"components.min.js``"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:97
+#: ../../../usage/openapi/ui_plugins.rst:90
 msgid ""
 "``js_url``: The URL to the JS bundle. If provided, this will override the "
 "``version`` option."
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:98
+#: ../../../usage/openapi/ui_plugins.rst:91
 msgid ""
 "``css_url``: The URL to the CSS bundle. If provided, this will override the "
 "``version`` option."
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:100
+#: ../../../usage/openapi/ui_plugins.rst:93
 msgid "Here's some example plugin configurations:"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:108
+#: ../../../usage/openapi/ui_plugins.rst:101
 msgid ""
 "from litestar.openapi.plugins import ScalarRenderPlugin\n"
 "\n"
@@ -359,14 +329,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:114
-msgid ""
-"from litestar.openapi.plugins import RapidocRenderPlugin\n"
-"\n"
-"rapidoc_plugin = RapidocRenderPlugin(version=\"9.3.4\", path=\"/rapidoc\")"
-msgstr ""
-
-#: ../../../usage/openapi/ui_plugins.rst:120
+#: ../../../usage/openapi/ui_plugins.rst:107
 msgid ""
 "from litestar.openapi.plugins import RedocRenderPlugin\n"
 "\n"
@@ -378,7 +341,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:124
+#: ../../../usage/openapi/ui_plugins.rst:111
 msgid ""
 "Setting ``js_url`` lets you point the ReDoc bundle to any CDN or internal "
 "host. In ``redoc_config.py`` we override it to ``https://cdn.company."
@@ -386,7 +349,7 @@ msgid ""
 "over ``version``."
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:132
+#: ../../../usage/openapi/ui_plugins.rst:119
 msgid ""
 "from litestar.openapi.plugins import StoplightRenderPlugin\n"
 "\n"
@@ -394,36 +357,36 @@ msgid ""
 "elements\")"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:138
+#: ../../../usage/openapi/ui_plugins.rst:125
 msgid ""
 "from litestar.openapi.plugins import SwaggerRenderPlugin\n"
 "\n"
 "swagger_plugin = SwaggerRenderPlugin(version=\"5.18.2\", path=\"/swagger\")"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:141
+#: ../../../usage/openapi/ui_plugins.rst:128
 msgid "Configuring the OpenAPI Root Path"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:143
+#: ../../../usage/openapi/ui_plugins.rst:130
 msgid ""
 "The OpenAPI root path is the path at which the OpenAPI representations are "
 "served. By default, this is ``/schema``. This can be changed by setting the :"
 "attr:`OpenAPIConfig.path` attribute."
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:146
+#: ../../../usage/openapi/ui_plugins.rst:133
 msgid ""
 "In the following example, we configure the OpenAPI root path to be ``/docs``:"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:149
+#: ../../../usage/openapi/ui_plugins.rst:136
 msgid ""
 "from litestar import Litestar, get\n"
 "from litestar.openapi.config import OpenAPIConfig\n"
 "\n"
 "\n"
-"@get(\"/\")\n"
+"@get(\"/\", sync_to_thread=False)\n"
 "def hello_world() -> dict[str, str]:\n"
 "    return {\"message\": \"Hello World\"}\n"
 "\n"
@@ -439,17 +402,17 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:151
+#: ../../../usage/openapi/ui_plugins.rst:138
 msgid ""
 "This will result in any of the OpenAPI endpoints being served at ``/docs`` "
 "instead of ``/schema``, e.g., ``/docs/openapi.json``."
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:155
+#: ../../../usage/openapi/ui_plugins.rst:142
 msgid "Building your own OpenAPI UI Plugin"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:157
+#: ../../../usage/openapi/ui_plugins.rst:144
 msgid ""
 "If Litestar does not have built-in support for your OpenAPI UI framework of "
 "choice, you can easily create your own plugin by subclassing :class:"
@@ -457,14 +420,14 @@ msgid ""
 "render` method."
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:160
+#: ../../../usage/openapi/ui_plugins.rst:147
 msgid ""
 "To demonstrate building a custom plugin, we'll look at a plugin very similar "
 "to the :class:`ScalarRenderPlugin` that is maintained by Litestar. Here's "
 "the finished product:"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:164
+#: ../../../usage/openapi/ui_plugins.rst:151
 msgid ""
 "from __future__ import annotations\n"
 "\n"
@@ -523,24 +486,24 @@ msgid ""
 "                \"\"\".encode()"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:167
+#: ../../../usage/openapi/ui_plugins.rst:154
 msgid "Class definition"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:169
+#: ../../../usage/openapi/ui_plugins.rst:156
 msgid ""
 "The class ``ScalarRenderPlugin`` inherits from :class:`OpenAPIRenderPlugin`:"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:172
+#: ../../../usage/openapi/ui_plugins.rst:159
 msgid "class ScalarRenderPlugin(OpenAPIRenderPlugin):"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:176
+#: ../../../usage/openapi/ui_plugins.rst:163
 msgid "``__init__`` Constructor"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:179
+#: ../../../usage/openapi/ui_plugins.rst:166
 msgid ""
 "    def __init__(\n"
 "        self,\n"
@@ -557,73 +520,73 @@ msgid ""
 "        super().__init__(path=path, **kwargs)"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:182
+#: ../../../usage/openapi/ui_plugins.rst:169
 msgid "We support configuration via the following arguments:"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:184
-msgid "``version``: Specifies the version of RapiDoc to use."
+#: ../../../usage/openapi/ui_plugins.rst:171
+msgid "``version``: Specifies the version of Scalar to use."
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:185
-msgid "``js_url``: Custom URL to the RapiDoc JavaScript bundle."
+#: ../../../usage/openapi/ui_plugins.rst:172
+msgid "``js_url``: Custom URL to the Scalar JavaScript bundle."
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:186
-msgid "``css_url``: Custom URL to the RapiDoc CSS bundle."
+#: ../../../usage/openapi/ui_plugins.rst:173
+msgid "``css_url``: Custom URL to the Scalar CSS bundle."
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:187
-msgid "``path``: The URL path where the RapiDoc UI will be served."
+#: ../../../usage/openapi/ui_plugins.rst:174
+msgid "``path``: The URL path where the Scalar UI will be served."
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:188
+#: ../../../usage/openapi/ui_plugins.rst:175
 msgid "``**kwargs``: Captures additional arguments to pass to the superclass."
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:190
+#: ../../../usage/openapi/ui_plugins.rst:177
 msgid ""
 "And we construct a url for the Scalar JavaScript bundle if one is not "
 "provided:"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:193
+#: ../../../usage/openapi/ui_plugins.rst:180
 msgid ""
 "        self.js_url = js_url or f\"https://cdn.jsdelivr.net/npm/@scalar/api-"
 "reference@{version}\""
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:197
+#: ../../../usage/openapi/ui_plugins.rst:184
 msgid "``render()``"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:200
+#: ../../../usage/openapi/ui_plugins.rst:187
 msgid ""
 "    def render(self, request: Request, openapi_schema: dict[str, Any]) -> "
 "bytes:"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:203
+#: ../../../usage/openapi/ui_plugins.rst:190
 msgid ""
 "Finally we define the ``render`` method, which is called by Litestar to "
 "render the UI. It receives the a :class:`Request` object and the "
 "``openapi_schema`` as a dictionary."
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:206
+#: ../../../usage/openapi/ui_plugins.rst:193
 msgid ""
 "Inside the ``render`` method, we construct the HTML to render the UI, and "
 "return it as a string."
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:208
+#: ../../../usage/openapi/ui_plugins.rst:195
 msgid ""
 "``head``: Defines the HTML ``<head>`` section, including the title from "
 "``openapi_schema``, any additional styles (``self.style``), the favicon and "
 "custom style sheet if one is provided:"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:212
+#: ../../../usage/openapi/ui_plugins.rst:199
 msgid ""
 "        style_sheet_link = f'<link rel=\"stylesheet\" type=\"text/css\" "
 "href=\"{self.css_url}\">' if self.css_url else \"\"\n"
@@ -640,13 +603,13 @@ msgid ""
 "                \"\"\""
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:215
+#: ../../../usage/openapi/ui_plugins.rst:202
 msgid ""
 "``body``: Constructs the HTML ``<body>``, including a link to the OpenAPI "
 "JSON, and the JavaScript bundle:"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:218
+#: ../../../usage/openapi/ui_plugins.rst:205
 msgid ""
 "        body = f\"\"\"\n"
 "                <script\n"
@@ -657,13 +620,13 @@ msgid ""
 "                \"\"\""
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:221
+#: ../../../usage/openapi/ui_plugins.rst:208
 msgid ""
 "Finally, returns a complete HTML document (as a byte string), combining head "
 "and body."
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:224
+#: ../../../usage/openapi/ui_plugins.rst:211
 msgid ""
 "        return f\"\"\"\n"
 "                <!DOCTYPE html>\n"
@@ -674,24 +637,24 @@ msgid ""
 "                \"\"\".encode()"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:228
+#: ../../../usage/openapi/ui_plugins.rst:215
 msgid "Interacting with the ``Router``"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:230
+#: ../../../usage/openapi/ui_plugins.rst:217
 msgid ""
 "An instance of :class:`Router` is used to serve the OpenAPI endpoints and is "
 "made available to plugins via the :meth:`OpenAPIRenderPlugin.receive_router` "
 "method."
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:233
+#: ../../../usage/openapi/ui_plugins.rst:220
 msgid ""
 "This can be used for a variety of purposes, including adding additional "
 "routes to the ``Router``."
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:236
+#: ../../../usage/openapi/ui_plugins.rst:223
 msgid ""
 "from __future__ import annotations\n"
 "\n"
@@ -719,11 +682,11 @@ msgid ""
 "        router.register(something)"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:239
+#: ../../../usage/openapi/ui_plugins.rst:226
 msgid "OAuth2 in Swagger UI"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:241
+#: ../../../usage/openapi/ui_plugins.rst:228
 msgid ""
 "When using Swagger, OAuth2 settings can be configured via the :paramref:`~."
 "openapi.plugins.SwaggerRenderPlugin.init_oauth` param of :meth:"
@@ -733,11 +696,11 @@ msgid ""
 "io/docs/open-source-tools/swagger-ui/usage/oauth2/>`_."
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:246
+#: ../../../usage/openapi/ui_plugins.rst:233
 msgid "With that, you can preset your clientId or enable PKCE support."
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:249
+#: ../../../usage/openapi/ui_plugins.rst:236
 msgid ""
 "from litestar import Litestar, get\n"
 "from litestar.openapi.config import OpenAPIConfig\n"
@@ -771,11 +734,11 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:252
+#: ../../../usage/openapi/ui_plugins.rst:239
 msgid "CDN and offline file support"
 msgstr ""
 
-#: ../../../usage/openapi/ui_plugins.rst:254
+#: ../../../usage/openapi/ui_plugins.rst:241
 msgid ""
 "Each plugin supports ``js_url`` and ``css_url`` attributes, which can be "
 "used to specify a custom URL to the JavaScript. These can be used to serve "

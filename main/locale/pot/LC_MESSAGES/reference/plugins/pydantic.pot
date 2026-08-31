@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-30 10:18+0000\n"
+"POT-Creation-Date: 2026-08-31 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,19 +21,7 @@ msgstr ""
 msgid "pydantic"
 msgstr ""
 
-#: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
-#: litestar.plugins.pydantic.plugins.di.PydanticDIPlugin:1
-msgid "Bases: :py:class:`~litestar.plugins.base.DIPlugin`"
-msgstr ""
-
-#: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
-#: litestar.plugins.pydantic.plugins.di.PydanticDIPlugin.get_typed_init:1
-msgid ""
-"Return signature and type information about the ``type_``\\ s :func:"
-"`__init__` method."
-msgstr ""
-
-#: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
+#: ../../../../litestar/plugins/pydantic/plugins/di.py:docstring of
 #: litestar.plugins.pydantic.plugins.di.PydanticDIPlugin.has_typed_init:1
 msgid ""
 "Return ``True`` if ``type_`` has type information available for its :func:"
@@ -42,29 +30,44 @@ msgid ""
 "get_typed_init` supports extraction of these annotations."
 msgstr ""
 
-#: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
-#: litestar.plugins.pydantic.dto.PydanticDTO:1
+#: ../../../../litestar/plugins/pydantic/plugins/di.py:docstring of
+#: litestar.plugins.pydantic.plugins.di.PydanticDIPlugin.get_typed_init:1
 msgid ""
-"Bases: :py:class:`~litestar.dto.base_dto.AbstractDTO`, :py:class:`~typing."
-"Generic`\\ [:py:obj:`~litestar.plugins.pydantic.dto.T`]"
+"Return signature and type information about the ``type_``\\ s :func:"
+"`__init__` method."
 msgstr ""
 
-#: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
+#: ../../../../litestar/plugins/pydantic/dto.py:docstring of
 #: litestar.plugins.pydantic.dto.PydanticDTO:1
 msgid "Support for domain modelling with Pydantic."
 msgstr ""
 
-#: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
+#: ../../../../litestar/plugins/pydantic/dto.py:docstring of
 #: litestar.plugins.pydantic.dto.PydanticDTO.decode_builtins:1
 msgid "Decode a dictionary of Python values into an the DTO's datatype."
 msgstr ""
 
-#: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
+#: ../../../../litestar/plugins/pydantic/dto.py:docstring of
 #: litestar.plugins.pydantic.dto.PydanticDTO.decode_bytes:1
 msgid "Decode a byte string into an the DTO's datatype."
 msgstr ""
 
-#: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
+#: ../../../../litestar/plugins/pydantic/dto.py:docstring of
+#: litestar.plugins.pydantic.dto.PydanticDTO.generate_field_definitions:1
+msgid "Generate ``FieldDefinition`` instances from ``model_type``."
+msgstr ""
+
+#: ../../../../litestar/plugins/pydantic/dto.py:docstring of
+#: litestar.plugins.pydantic.dto.PydanticDTO.generate_field_definitions:0
+msgid "Yields"
+msgstr ""
+
+#: ../../../../litestar/plugins/pydantic/dto.py:docstring of
+#: litestar.plugins.pydantic.dto.PydanticDTO.generate_field_definitions:3
+msgid "``FieldDefinition`` instances."
+msgstr ""
+
+#: ../../../../litestar/plugins/pydantic/dto.py:docstring of
 #: litestar.plugins.pydantic.dto.PydanticDTO.detect_nested_field:1
 msgid ""
 "Return ``True`` if ``field_definition`` represents a nested model field."
@@ -74,7 +77,7 @@ msgstr ""
 msgid "Parameters"
 msgstr ""
 
-#: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
+#: ../../../../litestar/plugins/pydantic/dto.py:docstring of
 #: litestar.plugins.pydantic.dto.PydanticDTO.detect_nested_field:3
 msgid "inspect type to determine if field represents a nested model."
 msgstr ""
@@ -83,34 +86,19 @@ msgstr ""
 msgid "Returns"
 msgstr ""
 
-#: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
+#: ../../../../litestar/plugins/pydantic/dto.py:docstring of
 #: litestar.plugins.pydantic.dto.PydanticDTO.detect_nested_field:5
 msgid "``True`` if ``field_definition`` represents a nested model field."
 msgstr ""
 
-#: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
-#: litestar.plugins.pydantic.dto.PydanticDTO.generate_field_definitions:1
-msgid "Generate ``FieldDefinition`` instances from ``model_type``."
-msgstr ""
-
-#: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
-#: litestar.plugins.pydantic.dto.PydanticDTO.generate_field_definitions:0
-msgid "Yields"
-msgstr ""
-
-#: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
-#: litestar.plugins.pydantic.dto.PydanticDTO.generate_field_definitions:3
-msgid "``FieldDefinition`` instances."
-msgstr ""
-
-#: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
+#: ../../../../litestar/plugins/pydantic/dto.py:docstring of
 #: litestar.plugins.pydantic.dto.PydanticDTO.get_config_for_model_type:1
 msgid ""
 "Create a new configuration for this specific ``model_type``, during the "
 "creation of the factory."
 msgstr ""
 
-#: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
+#: ../../../../litestar/plugins/pydantic/dto.py:docstring of
 #: litestar.plugins.pydantic.dto.PydanticDTO.get_config_for_model_type:4
 msgid ""
 "The returned config object will be set as the ``config`` attribute on the "
@@ -118,13 +106,8 @@ msgid ""
 msgstr ""
 
 #: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
-#: litestar.plugins.pydantic.PydanticPlugin:1
-#: litestar.plugins.pydantic.plugins.init.PydanticInitPlugin:1
-msgid "Bases: :py:class:`~litestar.plugins.base.InitPlugin`"
-msgstr ""
-
-#: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
 #: litestar.plugins.pydantic.PydanticPlugin.__init__:1
+#: ../../../../litestar/plugins/pydantic/plugins/init.py:docstring
 #: litestar.plugins.pydantic.plugins.init.PydanticInitPlugin.__init__:1
 msgid ""
 "Pydantic Plugin to support serialization / validation of Pydantic types / "
@@ -134,6 +117,7 @@ msgstr ""
 #: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
 #: litestar.plugins.pydantic.PydanticPlugin.__init__:3
 #: litestar.plugins.pydantic.PydanticPlugin.__init__:7
+#: ../../../../litestar/plugins/pydantic/plugins/init.py:docstring
 #: litestar.plugins.pydantic.plugins.init.PydanticInitPlugin.__init__:3
 #: litestar.plugins.pydantic.plugins.init.PydanticInitPlugin.__init__:7
 msgid "Fields to exclude during serialization"
@@ -141,6 +125,7 @@ msgstr ""
 
 #: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
 #: litestar.plugins.pydantic.PydanticPlugin.__init__:4
+#: ../../../../litestar/plugins/pydantic/plugins/init.py:docstring
 #: litestar.plugins.pydantic.plugins.init.PydanticInitPlugin.__init__:4
 msgid ""
 "Fields to exclude during serialization when they are set to their default "
@@ -149,24 +134,28 @@ msgstr ""
 
 #: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
 #: litestar.plugins.pydantic.PydanticPlugin.__init__:5
+#: ../../../../litestar/plugins/pydantic/plugins/init.py:docstring
 #: litestar.plugins.pydantic.plugins.init.PydanticInitPlugin.__init__:5
 msgid "Fields to exclude during serialization when they are set to ``None``"
 msgstr ""
 
 #: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
 #: litestar.plugins.pydantic.PydanticPlugin.__init__:6
+#: ../../../../litestar/plugins/pydantic/plugins/init.py:docstring
 #: litestar.plugins.pydantic.plugins.init.PydanticInitPlugin.__init__:6
 msgid "Fields to exclude during serialization when they arenot set"
 msgstr ""
 
 #: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
 #: litestar.plugins.pydantic.PydanticPlugin.__init__:8
+#: ../../../../litestar/plugins/pydantic/plugins/init.py:docstring
 #: litestar.plugins.pydantic.plugins.init.PydanticInitPlugin.__init__:8
 msgid "Use the ``by_alias=True`` flag when dumping models"
 msgstr ""
 
 #: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
 #: litestar.plugins.pydantic.PydanticPlugin.__init__:9
+#: ../../../../litestar/plugins/pydantic/plugins/init.py:docstring
 #: litestar.plugins.pydantic.plugins.init.PydanticInitPlugin.__init__:9
 msgid ""
 "Use ``strict=True`` when calling ``.model_validate`` on Pydantic 2.x models"
@@ -174,25 +163,26 @@ msgstr ""
 
 #: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
 #: litestar.plugins.pydantic.PydanticPlugin.__init__:10
+#: ../../../../litestar/plugins/pydantic/plugins/init.py:docstring
 #: litestar.plugins.pydantic.plugins.init.PydanticInitPlugin.__init__:10
 msgid ""
 "use ``round_trip=True`` when calling ``.model_dump`` and ``."
 "model_dump_json`` on Pydantic 2.x models"
 msgstr ""
 
-#: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
+#: ../../../../litestar/plugins/pydantic/plugins/init.py:docstring of
 #: litestar.plugins.pydantic.plugins.init.PydanticInitPlugin.on_app_init:1
 msgid ""
 "Receive the :class:`AppConfig<.config.app.AppConfig>` instance after "
 "`on_app_init` hooks have been called."
 msgstr ""
 
-#: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
+#: ../../../../litestar/plugins/pydantic/plugins/init.py:docstring of
 #: litestar.plugins.pydantic.plugins.init.PydanticInitPlugin.on_app_init:3
 msgid "Examples"
 msgstr ""
 
-#: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
+#: ../../../../litestar/plugins/pydantic/plugins/init.py:docstring of
 #: litestar.plugins.pydantic.plugins.init.PydanticInitPlugin.on_app_init:6
 msgid ""
 "from litestar import Litestar, get\n"
@@ -219,12 +209,12 @@ msgid ""
 "app = Litestar(plugins=[MyPlugin()])"
 msgstr ""
 
-#: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
+#: ../../../../litestar/plugins/pydantic/plugins/init.py:docstring of
 #: litestar.plugins.pydantic.plugins.init.PydanticInitPlugin.on_app_init:30
 msgid "The :class:`AppConfig <litestar.config.app.AppConfig>` instance."
 msgstr ""
 
-#: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
+#: ../../../../litestar/plugins/pydantic/plugins/init.py:docstring of
 #: litestar.plugins.pydantic.plugins.init.PydanticInitPlugin.on_app_init:32
 msgid "The app config object."
 msgstr ""
@@ -244,41 +234,14 @@ msgstr ""
 msgid "The :class:`AppConfig <.config.app.AppConfig>` instance."
 msgstr ""
 
-#: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
-#: litestar.plugins.pydantic.plugins.schema.PydanticSchemaPlugin:1
-msgid "Bases: :py:class:`~litestar.plugins.base.OpenAPISchemaPlugin`"
-msgstr ""
-
-#: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
-#: litestar.plugins.pydantic.plugins.schema.PydanticSchemaPlugin.for_pydantic_model:1
-msgid "Create a schema object for a given pydantic model class."
-msgstr ""
-
-#: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
-#: litestar.plugins.pydantic.plugins.schema.PydanticSchemaPlugin.for_pydantic_model:3
-#: litestar.plugins.pydantic.plugins.schema.PydanticSchemaPlugin.to_openapi_schema:3
-msgid "FieldDefinition instance."
-msgstr ""
-
-#: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
-#: litestar.plugins.pydantic.plugins.schema.PydanticSchemaPlugin.for_pydantic_model:4
-#: litestar.plugins.pydantic.plugins.schema.PydanticSchemaPlugin.to_openapi_schema:4
-msgid "An instance of the schema creator class"
-msgstr ""
-
-#: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
-#: litestar.plugins.pydantic.plugins.schema.PydanticSchemaPlugin.for_pydantic_model:6
-msgid "A schema instance."
-msgstr ""
-
-#: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
+#: ../../../../litestar/plugins/pydantic/plugins/schema.py:docstring of
 #: litestar.plugins.pydantic.plugins.schema.PydanticSchemaPlugin.is_plugin_supported_type:1
 msgid ""
 "Given a value of indeterminate type, determine if this value is supported by "
 "the plugin."
 msgstr ""
 
-#: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
+#: ../../../../litestar/plugins/pydantic/plugins/schema.py:docstring of
 #: litestar.plugins.pydantic.plugins.schema.PydanticSchemaPlugin.is_plugin_supported_type:3
 msgid ""
 "This is called by the default implementation of :meth:"
@@ -286,27 +249,49 @@ msgid ""
 "prefer to override that method instead."
 msgstr ""
 
-#: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
+#: ../../../../litestar/plugins/pydantic/plugins/schema.py:docstring of
 #: litestar.plugins.pydantic.plugins.schema.PydanticSchemaPlugin.is_plugin_supported_type:6
 msgid "An arbitrary value."
 msgstr ""
 
-#: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
+#: ../../../../litestar/plugins/pydantic/plugins/schema.py:docstring of
 #: litestar.plugins.pydantic.plugins.schema.PydanticSchemaPlugin.is_plugin_supported_type:8
 msgid "A bool indicating whether the value is supported by the plugin."
 msgstr ""
 
-#: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
+#: ../../../../litestar/plugins/pydantic/plugins/schema.py:docstring of
 #: litestar.plugins.pydantic.plugins.schema.PydanticSchemaPlugin.is_undefined_sentinel:1
 msgid "Return ``True`` if ``value`` should be treated as an undefined field"
 msgstr ""
 
-#: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
+#: ../../../../litestar/plugins/pydantic/plugins/schema.py:docstring of
 #: litestar.plugins.pydantic.plugins.schema.PydanticSchemaPlugin.to_openapi_schema:1
 msgid "Given a type annotation, transform it into an OpenAPI schema class."
 msgstr ""
 
-#: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
+#: ../../../../litestar/plugins/pydantic/plugins/schema.py:docstring of
+#: litestar.plugins.pydantic.plugins.schema.PydanticSchemaPlugin.for_pydantic_model:3
+#: litestar.plugins.pydantic.plugins.schema.PydanticSchemaPlugin.to_openapi_schema:3
+msgid "FieldDefinition instance."
+msgstr ""
+
+#: ../../../../litestar/plugins/pydantic/plugins/schema.py:docstring of
+#: litestar.plugins.pydantic.plugins.schema.PydanticSchemaPlugin.for_pydantic_model:4
+#: litestar.plugins.pydantic.plugins.schema.PydanticSchemaPlugin.to_openapi_schema:4
+msgid "An instance of the schema creator class"
+msgstr ""
+
+#: ../../../../litestar/plugins/pydantic/plugins/schema.py:docstring of
 #: litestar.plugins.pydantic.plugins.schema.PydanticSchemaPlugin.to_openapi_schema:6
 msgid "An :class:`OpenAPI <litestar.openapi.spec.schema.Schema>` instance."
+msgstr ""
+
+#: ../../../../litestar/plugins/pydantic/plugins/schema.py:docstring of
+#: litestar.plugins.pydantic.plugins.schema.PydanticSchemaPlugin.for_pydantic_model:1
+msgid "Create a schema object for a given pydantic model class."
+msgstr ""
+
+#: ../../../../litestar/plugins/pydantic/plugins/schema.py:docstring of
+#: litestar.plugins.pydantic.plugins.schema.PydanticSchemaPlugin.for_pydantic_model:6
+msgid "A schema instance."
 msgstr ""

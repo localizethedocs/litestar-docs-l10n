@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-08-31 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,11 +24,6 @@ msgstr ""
 #: ../../../../litestar/plugins/problem_details.py:docstring of
 #: litestar.plugins.problem_details:1
 msgid "Plugin for converting exceptions into a problem details response."
-msgstr ""
-
-#: ../../../../litestar/plugins/problem_details.py:docstring of
-#: litestar.plugins.problem_details.ProblemDetailsException:1
-msgid "Bases: :py:class:`~litestar.exceptions.http_exceptions.HTTPException`"
 msgstr ""
 
 #: ../../../../litestar/plugins/problem_details.py:docstring of
@@ -92,11 +87,6 @@ msgstr ""
 
 #: ../../../../litestar/plugins/problem_details.py:docstring of
 #: litestar.plugins.problem_details.ProblemDetailsConfig:1
-msgid "Bases: :py:class:`object`"
-msgstr ""
-
-#: ../../../../litestar/plugins/problem_details.py:docstring of
-#: litestar.plugins.problem_details.ProblemDetailsConfig:1
 msgid "The configuration object for ``ProblemDetailsPlugin.``"
 msgstr ""
 
@@ -105,30 +95,25 @@ msgstr ""
 msgid "The exception handler used for ``ProblemdetailsException.``"
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/plugins/problem_details.py:docstring of
 #: litestar.plugins.problem_details.ProblemDetailsConfig.enable_for_all_http_exceptions:1
 msgid ""
 "Flag indicating whether to convert all :exc:`HTTPException` into "
 "``ProblemDetailsException.``"
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/plugins/problem_details.py:docstring of
 #: litestar.plugins.problem_details.ProblemDetailsConfig.exception_to_problem_detail_map:1
 msgid "A mapping to convert exceptions into ``ProblemDetailsException.``"
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/plugins/problem_details.py:docstring of
 #: litestar.plugins.problem_details.ProblemDetailsConfig.exception_to_problem_detail_map:3
 msgid ""
 "All exceptions provided in this will get a custom exception handler where "
 "these exceptions are converted into ``ProblemDetailException`` before "
 "handling them. This can be used to override the handler for "
 "``HTTPException`` as well."
-msgstr ""
-
-#: ../../../../litestar/plugins/problem_details.py:docstring of
-#: litestar.plugins.problem_details.ProblemDetailsPlugin:1
-msgid "Bases: :py:class:`~litestar.plugins.base.InitPlugin`"
 msgstr ""
 
 #: ../../../../litestar/plugins/problem_details.py:docstring of

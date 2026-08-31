@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-08-31 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,23 +17,23 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../../index.rst:158
+#: ../../../index.rst:149
 msgid "Documentation"
 msgstr ""
 
-#: ../../../index.rst:168
+#: ../../../index.rst:159
 msgid "Guides"
 msgstr ""
 
-#: ../../../index.rst:177
+#: ../../../index.rst:168
 msgid "Available Issues"
 msgstr ""
 
-#: ../../../index.rst:177
+#: ../../../index.rst:168
 msgid "Code of Conduct"
 msgstr ""
 
-#: ../../../index.rst:177
+#: ../../../index.rst:168
 msgid "Contributing"
 msgstr ""
 
@@ -316,15 +316,7 @@ msgstr ""
 msgid "`Telemetry Sports <https://telemetrysports.com/>`_"
 msgstr ""
 
-#: ../../../index.rst:140
-msgid "Stok"
-msgstr ""
-
-#: ../../../index.rst:144
-msgid "`Stok <https://www.stok.kr/>`_"
-msgstr ""
-
-#: ../../../index.rst:146
+#: ../../../index.rst:137
 msgid ""
 "We invite organizations and individuals to join our sponsorship program. By "
 "becoming a sponsor on platforms like `Polar <sponsor-polar_>`_, `GitHub "
@@ -332,7 +324,7 @@ msgid ""
 "pivotal role in our project's growth."
 msgstr ""
 
-#: ../../../index.rst:150
+#: ../../../index.rst:141
 msgid ""
 "On top of regular sponsorship, we engage in pledge-based sponsorship "
 "opportunities through `Polar <sponsor-polar_>`_, where you can pledge an "

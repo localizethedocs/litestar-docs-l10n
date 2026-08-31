@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-08-31 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,13 +19,6 @@ msgstr ""
 
 #: ../../../reference/channels/plugin.rst:2
 msgid "plugin"
-msgstr ""
-
-#: ../../../../litestar/channels/plugin.py:docstring of
-#: litestar.channels.plugin.ChannelsPlugin:1
-msgid ""
-"Bases: :py:class:`~litestar.plugins.base.InitPlugin`, :py:class:`~contextlib."
-"AbstractAsyncContextManager`"
 msgstr ""
 
 #: ../../../../litestar/channels/plugin.py:docstring of
@@ -232,10 +225,4 @@ msgstr ""
 msgid ""
 "Fetch the history of ``channels`` from the backend and put them in the "
 "subscriber's stream"
-msgstr ""
-
-#: ../../../../litestar/channels/plugin.py:docstring of
-#: litestar.channels.plugin.ChannelsException:1
-msgid ""
-"Bases: :py:class:`~litestar.exceptions.base_exceptions.LitestarException`"
 msgstr ""

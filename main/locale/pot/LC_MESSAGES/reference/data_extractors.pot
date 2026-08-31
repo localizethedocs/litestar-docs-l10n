@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-08-31 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,12 +19,6 @@ msgstr ""
 
 #: ../../../reference/data_extractors.rst:2
 msgid "data_extractors"
-msgstr ""
-
-#: ../../../../litestar/data_extractors.py:docstring of
-#: litestar.data_extractors.ConnectionDataExtractor:1
-#: litestar.data_extractors.ResponseDataExtractor:1
-msgid "Bases: :py:class:`object`"
 msgstr ""
 
 #: ../../../../litestar/data_extractors.py:docstring of
@@ -274,12 +268,6 @@ msgstr ""
 #: ../../../../litestar/data_extractors.py:docstring of
 #: litestar.data_extractors.ConnectionDataExtractor.extract_body:5
 msgid "Either the parsed request body or the raw byte-string."
-msgstr ""
-
-#: ../../../../litestar/data_extractors.py:docstring of
-#: litestar.data_extractors.ExtractedRequestData:1
-#: litestar.data_extractors.ExtractedResponseData:1
-msgid "Bases: :py:class:`~typing.TypedDict`"
 msgstr ""
 
 #: ../../../../litestar/data_extractors.py:docstring of

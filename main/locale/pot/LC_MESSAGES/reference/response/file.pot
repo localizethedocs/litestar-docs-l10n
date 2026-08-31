@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-08-31 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,11 +19,6 @@ msgstr ""
 
 #: ../../../reference/response/file.rst:2
 msgid "file"
-msgstr ""
-
-#: ../../../../litestar/response/file.py:docstring of
-#: litestar.response.file.ASGIFileResponse:1
-msgid "Bases: :py:class:`~litestar.response.streaming.ASGIStreamingResponse`"
 msgstr ""
 
 #: ../../../../litestar/response/file.py:docstring of
@@ -152,11 +147,6 @@ msgstr ""
 msgid ""
 "Emit the start event of the response. This event includes the headers and "
 "status codes."
-msgstr ""
-
-#: ../../../../litestar/response/file.py:docstring of
-#: litestar.response.file.File:1
-msgid "Bases: :py:class:`~litestar.response.base.Response`"
 msgstr ""
 
 #: ../../../../litestar/response/file.py:docstring of

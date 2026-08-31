@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-08-31 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,13 +23,6 @@ msgstr ""
 
 #: ../../../reference/middleware/session/server_side.rst:0
 msgid "members"
-msgstr ""
-
-#: ../../../../litestar/middleware/session/server_side.py:docstring of
-#: litestar.middleware.session.server_side.ServerSideSessionBackend:1
-msgid ""
-"Bases: :py:class:`~litestar.middleware.session.base.BaseSessionBackend`\\ [:"
-"py:class:`ServerSideSessionConfig`]"
 msgstr ""
 
 #: ../../../../litestar/middleware/session/server_side.py:docstring of
@@ -220,96 +213,89 @@ msgstr ""
 
 #: ../../../../litestar/middleware/session/server_side.py:docstring of
 #: litestar.middleware.session.server_side.ServerSideSessionConfig:1
-msgid ""
-"Bases: :py:class:`~litestar.middleware.session.base.BaseBackendConfig`\\ [:"
-"py:class:`~litestar.middleware.session.server_side.ServerSideSessionBackend`]"
-msgstr ""
-
-#: ../../../../litestar/middleware/session/server_side.py:docstring of
-#: litestar.middleware.session.server_side.ServerSideSessionConfig:1
 msgid "Base configuration for server side backends."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/server_side.py:docstring of
 #: litestar.middleware.session.server_side.ServerSideSessionConfig.session_id_bytes:1
 msgid "Number of bytes used to generate a random session-ID."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/server_side.py:docstring of
 #: litestar.middleware.session.server_side.ServerSideSessionConfig.renew_on_access:1
 msgid "Renew expiry times of sessions when they're being accessed"
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/server_side.py:docstring of
 #: litestar.middleware.session.server_side.ServerSideSessionConfig.key:1
 msgid ""
 "Key to use for the cookie inside the header, e.g. ``session=<data>`` where "
 "``session`` is the cookie key and ``<data>`` is the session data."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/server_side.py:docstring of
 #: litestar.middleware.session.server_side.ServerSideSessionConfig.key:4
 msgid "Notes"
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/server_side.py:docstring of
 #: litestar.middleware.session.server_side.ServerSideSessionConfig.key:6
 msgid ""
 "If a session cookie exceeds 4KB in size it is split. In this case the key "
 "will be of the format ``session-{segment number}``."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/server_side.py:docstring of
 #: litestar.middleware.session.server_side.ServerSideSessionConfig.max_age:1
 msgid "Maximal age of the cookie before its invalidated."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/server_side.py:docstring of
 #: litestar.middleware.session.server_side.ServerSideSessionConfig.path:1
 msgid ""
 "Path fragment that must exist in the request url for the cookie to be valid."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/server_side.py:docstring of
 #: litestar.middleware.session.server_side.ServerSideSessionConfig.path:3
 msgid "Defaults to ``'/'``."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/server_side.py:docstring of
 #: litestar.middleware.session.server_side.ServerSideSessionConfig.domain:1
 msgid "Domain for which the cookie is valid."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/server_side.py:docstring of
 #: litestar.middleware.session.server_side.ServerSideSessionConfig.secure:1
 msgid "Https is required for the cookie."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/server_side.py:docstring of
 #: litestar.middleware.session.server_side.ServerSideSessionConfig.httponly:1
 msgid "Forbids javascript to access the cookie via 'Document.cookie'."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/server_side.py:docstring of
 #: litestar.middleware.session.server_side.ServerSideSessionConfig.samesite:1
 msgid ""
 "Controls whether or not a cookie is sent with cross-site requests. Defaults "
 "to ``lax``."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/server_side.py:docstring of
 #: litestar.middleware.session.server_side.ServerSideSessionConfig.exclude:1
 msgid "A pattern or list of patterns to skip in the session middleware."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/server_side.py:docstring of
 #: litestar.middleware.session.server_side.ServerSideSessionConfig.exclude_opt_key:1
 msgid ""
 "An identifier to use on routes to disable the session middleware for a "
 "particular route."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/server_side.py:docstring of
 #: litestar.middleware.session.server_side.ServerSideSessionConfig.store:1
 msgid "Name of the :class:`Store <.stores.base.Store>` to use"
 msgstr ""

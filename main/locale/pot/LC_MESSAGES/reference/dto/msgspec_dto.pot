@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-08-31 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,13 +19,6 @@ msgstr ""
 
 #: ../../../reference/dto/msgspec_dto.rst:2
 msgid "msgspec_dto"
-msgstr ""
-
-#: ../../../../litestar/dto/msgspec_dto.py:docstring of
-#: litestar.dto.msgspec_dto.MsgspecDTO:1
-msgid ""
-"Bases: :py:class:`~litestar.dto.base_dto.AbstractDTO`, :py:class:`~typing."
-"Generic`\\ [:py:obj:`~litestar.dto.msgspec_dto.T`]"
 msgstr ""
 
 #: ../../../../litestar/dto/msgspec_dto.py:docstring of

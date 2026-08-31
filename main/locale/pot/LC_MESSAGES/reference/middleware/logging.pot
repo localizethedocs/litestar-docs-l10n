@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-09 09:38+0000\n"
+"POT-Creation-Date: 2026-08-31 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,15 +23,10 @@ msgstr ""
 
 #: ../../../../litestar/middleware/logging.py:docstring of
 #: litestar.middleware.logging.LoggingMiddleware:1
-msgid "Bases: :py:class:`~litestar.middleware.base.ASGIMiddleware`"
-msgstr ""
-
-#: ../../../../litestar/middleware/logging.py:docstring of
-#: litestar.middleware.logging.LoggingMiddleware:1
 msgid "Logging middleware."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/logging.py:docstring of
 #: litestar.middleware.logging.LoggingMiddleware.scopes:1
 msgid "Scope types this middleware should be applied to"
 msgstr ""

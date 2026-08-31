@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-08-31 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,8 +53,8 @@ msgstr ""
 
 #: ../../../benchmarks.rst:16
 msgid ""
-"Each application is run using `uvicorn <https://www.uvicorn.org/>`__ with "
-"**one worker** and `uvloop <https://uvloop.readthedocs.io/>`__"
+"Each application is run using `uvicorn <https://uvicorn.dev/>`__ with **one "
+"worker** and `uvloop <https://uvloop.readthedocs.io/>`__"
 msgstr ""
 
 #: ../../../benchmarks.rst:18
@@ -103,8 +103,8 @@ msgstr ""
 #: ../../../benchmarks.rst:44
 msgid ""
 "Because all frameworks are being used in their \"stock\" configuration, "
-"Litestar will run the data through `msgspec <https://jcristharif.com/msgspec/"
-">`_ and FastAPI through `Pydantic <https://docs.pydantic.dev/latest/>`_"
+"Litestar will run the data through `msgspec <https://msgspec.dev>`_ and "
+"FastAPI through `Pydantic <https://docs.pydantic.dev/latest/>`_"
 msgstr ""
 
 #: ../../../benchmarks.rst:50

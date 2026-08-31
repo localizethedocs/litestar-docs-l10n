@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-08-31 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,13 +19,6 @@ msgstr ""
 
 #: ../../../reference/dto/data_structures.rst:2
 msgid "data_structures"
-msgstr ""
-
-#: ../../../../litestar/dto/data_structures.py:docstring of
-#: litestar.dto.data_structures.DTOData:1
-msgid ""
-"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~litestar.dto.data_structures."
-"T`]"
 msgstr ""
 
 #: ../../../../litestar/dto/data_structures.py:docstring of
@@ -73,34 +66,28 @@ msgstr ""
 
 #: ../../../../litestar/dto/data_structures.py:docstring of
 #: litestar.dto.data_structures.DTOFieldDefinition:1
-msgid "Bases: :py:class:`~litestar.typing.FieldDefinition`"
-msgstr ""
-
-#: ../../../../litestar/dto/data_structures.py:docstring of
-#: litestar.dto.data_structures.DTOFieldDefinition:1
 msgid ""
 "A model field representation for purposes of generating a DTO backend model "
 "type."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/dto/data_structures.py:docstring of
 #: litestar.dto.data_structures.DTOFieldDefinition.model_name:1
 msgid "The name of the model for which the field is generated."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/dto/data_structures.py:docstring of
 #: litestar.dto.data_structures.DTOFieldDefinition.default_factory:1
 msgid "Default factory of the field."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/dto/data_structures.py:docstring of
 #: litestar.dto.data_structures.DTOFieldDefinition.dto_field:1
 msgid "DTO field configuration."
 msgstr ""
 
 #: ../../../../litestar/dto/data_structures.py:docstring of
 #: litestar.dto.data_structures.DTOFieldDefinition.from_field_definition:7
-#: ../../../../docstring
 #: litestar.dto.data_structures.DTOFieldDefinition.passthrough_constraints:1
 msgid ""
 "Pass constraints of the source annotation to be validated by the DTO backend"
