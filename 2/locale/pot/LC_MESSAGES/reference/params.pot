@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-09 08:37+0000\n"
+"POT-Creation-Date: 2026-08-31 15:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -209,6 +209,30 @@ msgstr ""
 msgid "A hash"
 msgstr ""
 
+#: ../../../../litestar/params.py:docstring of
+#: litestar.params.CookieParameter:1 litestar.params.HeaderParameter:1
+#: litestar.params.PathParameter:1 litestar.params.QueryParameter:1
+msgid "Bases: :py:class:`~litestar.params.ParameterKwarg`"
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of
+#: litestar.params.CookieParameter:1
+msgid "Describes a cookie parameter."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of
+#: litestar.params.CookieParameter:3
+msgid "In the OpenAPI, this maps to a parameter ``in: cookie``."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.CookieParameter.param_type:1
+#: litestar.params.HeaderParameter.param_type:1
+#: litestar.params.ParameterKwarg.param_type:1
+#: litestar.params.PathParameter.param_type:1
+#: litestar.params.QueryParameter.param_type:1
+msgid "Type of the parameter"
+msgstr ""
+
 #: ../../../../litestar/params.py:docstring of litestar.params.Dependency:1
 msgid "Create a dependency kwarg definition."
 msgstr ""
@@ -224,6 +248,7 @@ msgstr ""
 
 #: ../../../../litestar/params.py:docstring of
 #: litestar.params.DependencyKwarg:1 litestar.params.KwargDefinition:1
+#: litestar.params.SkipValidationMarker:1
 msgid "Bases: :py:class:`object`"
 msgstr ""
 
@@ -239,6 +264,36 @@ msgstr ""
 
 #: ../../../../docstring of litestar.params.DependencyKwarg.skip_validation:1
 msgid "Flag dictating whether to skip validation."
+msgstr ""
+
+#: ../../../../docstring of typing.Annotated:1
+msgid "Declare a cookie parameter"
+msgstr ""
+
+#: ../../../../docstring of typing.Annotated:1
+msgid "Declare a header parameter"
+msgstr ""
+
+#: ../../../../docstring of typing.Annotated:1
+msgid "Declare a path parameter"
+msgstr ""
+
+#: ../../../../docstring of typing.Annotated:1
+msgid "Declare a query parameter"
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of
+#: litestar.params.HeaderParameter:1
+msgid "Describes a header parameter."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of
+#: litestar.params.HeaderParameter:3
+msgid "In the OpenAPI, this maps to a parameter ``in: header``."
+msgstr ""
+
+#: ../../../../docstring of typing.Annotated:1
+msgid "Declare a 'application/json request body"
 msgstr ""
 
 #: ../../../../litestar/params.py:docstring of
@@ -396,6 +451,14 @@ msgstr ""
 msgid "Return True if any of the constraints are set."
 msgstr ""
 
+#: ../../../../docstring of typing.Annotated:1
+msgid "Declare a 'application/x-msgpack' request body"
+msgstr ""
+
+#: ../../../../docstring of typing.Annotated:1
+msgid "Declare a 'multipart/form-data' request body"
+msgstr ""
+
 #: ../../../../litestar/params.py:docstring of litestar.params.Parameter:1
 msgid "Create an extended parameter kwarg definition."
 msgstr ""
@@ -405,12 +468,10 @@ msgid "`Empty` by default."
 msgstr ""
 
 #: ../../../../litestar/params.py:docstring of litestar.params.Parameter:9
-#: ../../../../docstring litestar.params.ParameterKwarg.cookie:1
 msgid "The cookie parameter key - required for cookie parameters."
 msgstr ""
 
 #: ../../../../litestar/params.py:docstring of litestar.params.Parameter:18
-#: ../../../../docstring litestar.params.ParameterKwarg.header:1
 msgid "The header parameter key - required for header parameters."
 msgstr ""
 
@@ -421,7 +482,6 @@ msgid ""
 msgstr ""
 
 #: ../../../../litestar/params.py:docstring of litestar.params.Parameter:35
-#: ../../../../docstring litestar.params.ParameterKwarg.query:1
 msgid "The query parameter key for this parameter."
 msgstr ""
 
@@ -441,8 +501,26 @@ msgstr ""
 msgid "Data container representing a parameter."
 msgstr ""
 
+#: ../../../../docstring of litestar.params.ParameterKwarg.name:1
+msgid ""
+"Name of the parameter. If 'None', and used in a function annotation, the "
+"name will be inferred from the annotated parameter's name."
+msgstr ""
+
 #: ../../../../docstring of litestar.params.ParameterKwarg.annotation:1
 msgid "The field value - `Empty` by default."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.ParameterKwarg.header:1
+msgid "The header name - required for header parameters."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.ParameterKwarg.cookie:1
+msgid "The cookie name - required for cookie parameters."
+msgstr ""
+
+#: ../../../../docstring of litestar.params.ParameterKwarg.query:1
+msgid "The query parameter name - required for query parameters"
 msgstr ""
 
 #: ../../../../docstring of litestar.params.ParameterKwarg.required:1
@@ -451,4 +529,35 @@ msgstr ""
 
 #: ../../../../docstring of litestar.params.ParameterKwarg.required:3
 msgid "If set to False, None values will be allowed. Defaults to True."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.PathParameter:1
+msgid "Describes a path parameter."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.PathParameter:3
+msgid "In the OpenAPI, this maps to a parameter ``in: path``."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.QueryParameter:1
+msgid "Describes a query parameter."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.QueryParameter:3
+msgid "In the OpenAPI, this maps to a parameter ``in: query``."
+msgstr ""
+
+#: ../../../../docstring of typing.Annotated:1
+msgid "Exclude 'T' from validation, effectively treating it as 'Any'"
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of
+#: litestar.params.SkipValidationMarker:1
+msgid ""
+"Indicate that a type annotated with this as metadata should be treated as "
+"'Any'"
+msgstr ""
+
+#: ../../../../docstring of typing.Annotated:1
+msgid "Declare a 'application/x-www-form-urlencoded' request body"
 msgstr ""

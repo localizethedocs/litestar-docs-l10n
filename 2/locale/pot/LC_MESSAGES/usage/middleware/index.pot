@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-09 08:37+0000\n"
+"POT-Creation-Date: 2026-08-31 15:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,12 +36,12 @@ msgstr ""
 
 #: ../../../usage/middleware/index.rst:12
 msgid ""
-"If you're coming from Starlette / FastAPI, take a look at the migration "
+"If you're coming from Starlette / FastAPI, take a look at the onboarding "
 "guide:"
 msgstr ""
 
 #: ../../../usage/middleware/index.rst:14
 msgid ""
-":ref:`Migration - FastAPI/Starlette - Middlewares <migration/fastapi:"
+":ref:`Migration - FastAPI/Starlette - Middlewares <onboarding/fastapi:"
 "Middleware>`"
 msgstr ""
