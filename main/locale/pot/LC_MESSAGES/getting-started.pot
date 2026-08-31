@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-09 09:38+0000\n"
+"POT-Creation-Date: 2026-08-31 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -109,7 +109,7 @@ msgid ":code:`pip install 'litestar[prometheus]'`"
 msgstr ""
 
 #: ../../../getting-started.rst:41
-msgid ":doc:`Open Telemetry Instrumentation </usage/metrics/open-telemetry>`"
+msgid ":doc:`OpenTelemetry Instrumentation </usage/metrics/opentelemetry>`"
 msgstr ""
 
 #: ../../../getting-started.rst:42
@@ -282,29 +282,23 @@ msgid ""
 "stoplight.io/open-source/elements/>`_)"
 msgstr ""
 
-#: ../../../getting-started.rst:123
-msgid ""
-"``http://localhost:8000/schema/rapidoc`` (for `RapiDoc <https://rapidocweb."
-"com/>`_)"
-msgstr ""
-
-#: ../../../getting-started.rst:125
+#: ../../../getting-started.rst:124
 msgid ""
 "You can check out a more in-depth tutorial in the :doc:`/tutorials/todo-app/"
 "index` section!"
 msgstr ""
 
-#: ../../../getting-started.rst:128
+#: ../../../getting-started.rst:127
 msgid "Expanded Example"
 msgstr ""
 
-#: ../../../getting-started.rst:130
+#: ../../../getting-started.rst:129
 msgid ""
 "**Define your data model** using pydantic or any library based on it (for "
 "example ormar, beanie, SQLModel):"
 msgstr ""
 
-#: ../../../getting-started.rst:133
+#: ../../../getting-started.rst:132
 msgid ""
 "from pydantic import BaseModel, UUID4\n"
 "\n"
@@ -315,13 +309,13 @@ msgid ""
 "    id: UUID4"
 msgstr ""
 
-#: ../../../getting-started.rst:145
+#: ../../../getting-started.rst:144
 msgid ""
 "You can also use dataclasses (standard library and Pydantic), :class:`typing."
 "TypedDict`, or :class:`msgspec.Struct`."
 msgstr ""
 
-#: ../../../getting-started.rst:149
+#: ../../../getting-started.rst:148
 msgid ""
 "from uuid import UUID\n"
 "\n"
@@ -340,7 +334,7 @@ msgid ""
 "    config = DTOConfig(exclude={\"id\"}, partial=True)"
 msgstr ""
 
-#: ../../../getting-started.rst:166
+#: ../../../getting-started.rst:165
 msgid "**Define a Controller for your data model:**"
 msgstr ""
 
@@ -348,7 +342,7 @@ msgstr ""
 msgid "Python 3.8+"
 msgstr ""
 
-#: ../../../getting-started.rst:169
+#: ../../../getting-started.rst:168
 msgid ""
 "from typing import List\n"
 "\n"
@@ -387,7 +381,7 @@ msgstr ""
 msgid "Python 3.9+"
 msgstr ""
 
-#: ../../../getting-started.rst:169
+#: ../../../getting-started.rst:168
 msgid ""
 "from litestar import Controller, get, post, put, patch, delete\n"
 "from litestar.dto import DTOData\n"
@@ -420,13 +414,13 @@ msgid ""
 "    async def delete_user(self, user_id: UUID4) -> None: ..."
 msgstr ""
 
-#: ../../../getting-started.rst:203
+#: ../../../getting-started.rst:202
 msgid ""
 "When instantiating your app, import your *controller* into your "
 "application's entry-point and pass it to Litestar:"
 msgstr ""
 
-#: ../../../getting-started.rst:207
+#: ../../../getting-started.rst:206
 msgid ""
 "from litestar import Litestar\n"
 "\n"
@@ -435,21 +429,21 @@ msgid ""
 "app = Litestar(route_handlers=[UserController])"
 msgstr ""
 
-#: ../../../getting-started.rst:214
+#: ../../../getting-started.rst:213
 msgid ""
 "To **run your application**, use an ASGI server such as `uvicorn <https://"
-"www.uvicorn.org/>`_ :"
+"uvicorn.dev/>`_ :"
 msgstr ""
 
-#: ../../../getting-started.rst:216
+#: ../../../getting-started.rst:215
 msgid "uvicorn my_app.main:app --reload"
 msgstr ""
 
-#: ../../../getting-started.rst:222
+#: ../../../getting-started.rst:221
 msgid "Philosophy"
 msgstr ""
 
-#: ../../../getting-started.rst:224
+#: ../../../getting-started.rst:223
 msgid ""
 "Litestar is a community-driven project. This means not a single author, but "
 "rather a core team of maintainers is leading the project, supported by a "
@@ -457,21 +451,21 @@ msgid ""
 "very actively developed."
 msgstr ""
 
-#: ../../../getting-started.rst:227
+#: ../../../getting-started.rst:226
 msgid ""
 "Litestar draws inspiration from `NestJS <https://nestjs.com/>`_ - a "
 "contemporary TypeScript framework - which places opinions and patterns at "
 "its core."
 msgstr ""
 
-#: ../../../getting-started.rst:229
+#: ../../../getting-started.rst:228
 msgid ""
 "While still allowing for **function-based endpoints**, Litestar seeks to "
 "build on Python's powerful and versatile OOP, by placing **class-based "
 "controllers** at its core."
 msgstr ""
 
-#: ../../../getting-started.rst:231
+#: ../../../getting-started.rst:230
 msgid ""
 "Litestar is **not** a microframework. Unlike frameworks such as FastAPI, "
 "Starlette, or Flask, Litestar includes a lot of functionalities out of the "
@@ -481,11 +475,11 @@ msgid ""
 "never feature its own ORM), but its scope is not micro either."
 msgstr ""
 
-#: ../../../getting-started.rst:238
+#: ../../../getting-started.rst:237
 msgid "Feature comparison with similar frameworks"
 msgstr ""
 
-#: ../../../getting-started.rst:240
+#: ../../../getting-started.rst:239
 msgid "Litestar vs. other frameworks"
 msgstr ""
 
@@ -521,7 +515,7 @@ msgstr ""
 msgid ":octicon:`check`"
 msgstr ""
 
-#: ../../../getting-started.rst:245
+#: ../../../getting-started.rst:244
 msgid ""
 "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-"
 "octicon-check\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M13.78 "
@@ -618,11 +612,11 @@ msgstr ""
 msgid "Caching"
 msgstr ""
 
-#: ../../../getting-started.rst:246
+#: ../../../getting-started.rst:245
 msgid "Example Applications"
 msgstr ""
 
-#: ../../../getting-started.rst:248
+#: ../../../getting-started.rst:247
 msgid ""
 "`litestar-pg-redis-docker <https://github.com/litestar-org/litestar-pg-redis-"
 "docker>`_ : In addition to Litestar, this demonstrates a pattern of "
@@ -631,7 +625,7 @@ msgid ""
 "big and small."
 msgstr ""
 
-#: ../../../getting-started.rst:251
+#: ../../../getting-started.rst:250
 msgid ""
 "`litestar-fullstack <https://github.com/litestar-org/litestar-fullstack>`_ : "
 "A fully-capable, production-ready fullstack Litestar web application "
@@ -641,7 +635,7 @@ msgid ""
 "github.io/litestar-fullstack/latest/>`_."
 msgstr ""
 
-#: ../../../getting-started.rst:255
+#: ../../../getting-started.rst:254
 msgid ""
 "`litestar-hello-world <https://github.com/litestar-org/litestar-hello-"
 "world>`_: A bare-minimum application setup. Great for testing and POC work."

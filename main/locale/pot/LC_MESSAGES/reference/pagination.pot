@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-08-31 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,16 +19,6 @@ msgstr ""
 
 #: ../../../reference/pagination.rst:2
 msgid "pagination"
-msgstr ""
-
-#: ../../../../litestar/pagination.py:docstring of
-#: litestar.pagination.AbstractAsyncClassicPaginator:1
-#: litestar.pagination.AbstractAsyncOffsetPaginator:1
-#: litestar.pagination.AbstractSyncClassicPaginator:1
-#: litestar.pagination.AbstractSyncOffsetPaginator:1
-msgid ""
-"Bases: :py:class:`~abc.ABC`, :py:class:`~typing.Generic`\\ [:py:obj:"
-"`~litestar.pagination.T`]"
 msgstr ""
 
 #: ../../../../litestar/pagination.py:docstring of
@@ -122,14 +112,6 @@ msgstr ""
 #: litestar.pagination.AbstractSyncCursorPaginator.__call__:6
 #: litestar.pagination.AbstractSyncOffsetPaginator.__call__:6
 msgid "A paginated result set."
-msgstr ""
-
-#: ../../../../litestar/pagination.py:docstring of
-#: litestar.pagination.AbstractAsyncCursorPaginator:1
-#: litestar.pagination.AbstractSyncCursorPaginator:1
-msgid ""
-"Bases: :py:class:`~abc.ABC`, :py:class:`~typing.Generic`\\ [:py:obj:"
-"`~litestar.pagination.C`, :py:obj:`~litestar.pagination.T`]"
 msgstr ""
 
 #: ../../../../litestar/pagination.py:docstring of
@@ -230,41 +212,34 @@ msgstr ""
 msgid "Base paginator class for sync cursor pagination."
 msgstr ""
 
-#: ../../../../litestar/pagination.py:docstring of
-#: litestar.pagination.ClassicPagination:1
-msgid "Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~litestar.pagination.T`]"
-msgstr ""
-
-#: ../../../../litestar/pagination.py:docstring of
-#: advanced_alchemy.service.pagination.OffsetPagination:1
+#: ../../../../../../.conda/lib/python3.12/site-packages/advanced_alchemy/service/pagination.py:docstring
+#: of advanced_alchemy.service.pagination.OffsetPagination:1
+#: ../../../../litestar/pagination.py:docstring
 #: litestar.pagination.ClassicPagination:1
 msgid "Container for data returned using limit/offset pagination."
 msgstr ""
 
-#: ../../../../docstring of litestar.pagination.ClassicPagination.items:1
+#: ../../../../../../.conda/lib/python3.12/site-packages/advanced_alchemy/service/pagination.py:docstring
+#: of litestar.pagination.OffsetPagination.items:1
+#: ../../../../litestar/pagination.py:docstring
+#: litestar.pagination.ClassicPagination.items:1
 #: litestar.pagination.CursorPagination.items:1
-#: litestar.pagination.OffsetPagination.items:1
 msgid "List of data being sent as part of the response."
 msgstr ""
 
-#: ../../../../docstring of litestar.pagination.ClassicPagination.page_size:1
+#: ../../../../litestar/pagination.py:docstring of
+#: litestar.pagination.ClassicPagination.page_size:1
 msgid "Number of items per page."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/pagination.py:docstring of
 #: litestar.pagination.ClassicPagination.current_page:1
 msgid "Current page number."
 msgstr ""
 
-#: ../../../../docstring of litestar.pagination.ClassicPagination.total_pages:1
-msgid "Total number of pages."
-msgstr ""
-
 #: ../../../../litestar/pagination.py:docstring of
-#: litestar.pagination.CursorPagination:1
-msgid ""
-"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~litestar.pagination.C`, :py:"
-"obj:`~litestar.pagination.T`]"
+#: litestar.pagination.ClassicPagination.total_pages:1
+msgid "Total number of pages."
 msgstr ""
 
 #: ../../../../litestar/pagination.py:docstring of
@@ -272,35 +247,34 @@ msgstr ""
 msgid "Container for data returned using cursor pagination."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../../../.conda/lib/python3.12/site-packages/advanced_alchemy/service/pagination.py:docstring
+#: of litestar.pagination.OffsetPagination.limit:1
+#: ../../../../litestar/pagination.py:docstring
 #: litestar.pagination.CursorPagination.results_per_page:1
-#: litestar.pagination.OffsetPagination.limit:1
 msgid "Maximal number of items to send."
 msgstr ""
 
-#: ../../../../docstring of litestar.pagination.CursorPagination.cursor:1
+#: ../../../../litestar/pagination.py:docstring of
+#: litestar.pagination.CursorPagination.cursor:1
 msgid "Unique ID, designating the last identifier in the given data set."
 msgstr ""
 
-#: ../../../../docstring of litestar.pagination.CursorPagination.cursor:3
+#: ../../../../litestar/pagination.py:docstring of
+#: litestar.pagination.CursorPagination.cursor:3
 msgid "This value can be used to request the \"next\" batch of records."
 msgstr ""
 
-#: ../../../../litestar/pagination.py:docstring of
-#: advanced_alchemy.service.pagination.OffsetPagination:1
-msgid ""
-"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~advanced_alchemy.service."
-"pagination.T`]"
-msgstr ""
-
-#: ../../../../docstring of litestar.pagination.OffsetPagination.offset:1
+#: ../../../../../../.conda/lib/python3.12/site-packages/advanced_alchemy/service/pagination.py:docstring
+#: of litestar.pagination.OffsetPagination.offset:1
 msgid "Offset from the beginning of the query."
 msgstr ""
 
-#: ../../../../docstring of litestar.pagination.OffsetPagination.offset:3
+#: ../../../../../../.conda/lib/python3.12/site-packages/advanced_alchemy/service/pagination.py:docstring
+#: of litestar.pagination.OffsetPagination.offset:3
 msgid "Identical to an index."
 msgstr ""
 
-#: ../../../../docstring of litestar.pagination.OffsetPagination.total:1
+#: ../../../../../../.conda/lib/python3.12/site-packages/advanced_alchemy/service/pagination.py:docstring
+#: of litestar.pagination.OffsetPagination.total:1
 msgid "Total number of items."
 msgstr ""

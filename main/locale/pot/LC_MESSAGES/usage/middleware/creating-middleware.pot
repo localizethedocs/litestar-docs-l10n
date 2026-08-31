@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-08-31 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -275,11 +275,11 @@ msgid ""
 "MyCustomMiddleware())`` so that it is the first middleware in the stack."
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:150
+#: ../../../usage/middleware/creating-middleware.rst:152
 msgid "Migrating from ``MiddlewareProtocol`` / ``AbstractMiddleware``"
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:152
+#: ../../../usage/middleware/creating-middleware.rst:154
 msgid ""
 ":class:`~litestar.middleware.ASGIMiddleware` was introduced in Litestar "
 "2.15. If you've been using ``MiddlewareProtocol`` / ``AbstractMiddleware`` "
@@ -287,7 +287,7 @@ msgid ""
 "using ``ASGIMiddleware``."
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:156
+#: ../../../usage/middleware/creating-middleware.rst:158
 msgid "**From MiddlewareProtocol**"
 msgstr ""
 
@@ -295,7 +295,7 @@ msgstr ""
 msgid "MiddlewareProtocol"
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:163
+#: ../../../usage/middleware/creating-middleware.rst:165
 msgid ""
 "from litestar.middleware import MiddlewareProtocol\n"
 "from litestar.types import ASGIApp, Receive, Scope, Send\n"
@@ -315,7 +315,7 @@ msgstr ""
 msgid "ASGIMiddleware"
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:168
+#: ../../../usage/middleware/creating-middleware.rst:170
 msgid ""
 "from litestar.middleware import ASGIMiddleware\n"
 "from litestar.types import ASGIApp, Receive, Scope, Send\n"
@@ -328,11 +328,11 @@ msgid ""
 "        await next_app(scope, receive, send)"
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:172
+#: ../../../usage/middleware/creating-middleware.rst:174
 msgid "**From AbstractMiddleware**"
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:179
+#: ../../../usage/middleware/creating-middleware.rst:181
 msgid ""
 "import anyio\n"
 "\n"
@@ -370,7 +370,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:184
+#: ../../../usage/middleware/creating-middleware.rst:186
 msgid ""
 "import anyio\n"
 "\n"
@@ -392,18 +392,18 @@ msgid ""
 "app = Litestar(middleware=[TimeoutMiddleware(timeout=5)])"
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:192
+#: ../../../usage/middleware/creating-middleware.rst:194
 msgid "Using MiddlewareProtocol"
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:194
+#: ../../../usage/middleware/creating-middleware.rst:196
 msgid ""
 "The :class:`~litestar.middleware.base.MiddlewareProtocol` class is a `PEP "
 "544 Protocol <https://peps.python.org/pep-0544/>`_ that specifies the "
 "minimal implementation of a middleware as follows:"
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:199
+#: ../../../usage/middleware/creating-middleware.rst:201
 msgid ""
 "from typing import Protocol, Any\n"
 "from litestar.types import ASGIApp, Scope, Receive, Send\n"
@@ -416,14 +416,14 @@ msgid ""
 "None: ..."
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:209
+#: ../../../usage/middleware/creating-middleware.rst:211
 msgid ""
 "The ``__init__`` method receives and sets \"app\". *It's important to "
 "understand* that app is not an instance of Litestar in this case, but rather "
 "the next middleware in the stack, which is also an ASGI app."
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:212
+#: ../../../usage/middleware/creating-middleware.rst:214
 msgid ""
 "The ``__call__`` method makes this class into a ``callable``, i.e. once "
 "instantiated this class acts like a function, that has the signature of an "
@@ -433,13 +433,13 @@ msgid ""
 "``uvicorn``\\ ) used to run Litestar."
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:217
+#: ../../../usage/middleware/creating-middleware.rst:219
 msgid ""
 "To use this protocol as a basis, simply subclass it - as you would any other "
 "class, and implement the two methods it specifies:"
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:221
+#: ../../../usage/middleware/creating-middleware.rst:223
 msgid ""
 "import logging\n"
 "\n"
@@ -464,7 +464,7 @@ msgid ""
 "        await self.app(scope, receive, send)"
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:243
+#: ../../../usage/middleware/creating-middleware.rst:245
 msgid ""
 "Although ``scope`` is used to create an instance of request by passing it to "
 "the :class:`~litestar.connection.Request` constructor, which makes it "
@@ -474,11 +474,11 @@ msgid ""
 "request objects created as in the above."
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:250
+#: ../../../usage/middleware/creating-middleware.rst:252
 msgid "Responding using the MiddlewareProtocol"
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:252
+#: ../../../usage/middleware/creating-middleware.rst:254
 msgid ""
 "Once a middleware finishes doing whatever its doing, it should pass "
 "``scope``, ``receive``, and ``send`` to an ASGI app and await it. This is "
@@ -487,7 +487,7 @@ msgid ""
 "different url from a middleware:"
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:257
+#: ../../../usage/middleware/creating-middleware.rst:259
 msgid ""
 "from litestar.types import ASGIApp, Receive, Scope, Send\n"
 "\n"
@@ -509,18 +509,18 @@ msgid ""
 "            await self.app(scope, receive, send)"
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:276
+#: ../../../usage/middleware/creating-middleware.rst:278
 msgid ""
 "As you can see in the above, given some condition (``request.session`` being "
 "``None``) we create a :class:`~litestar.response.redirect."
 "ASGIRedirectResponse` and then await it. Otherwise, we await ``self.app``"
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:280
+#: ../../../usage/middleware/creating-middleware.rst:282
 msgid "Modifying ASGI Requests and Responses using the MiddlewareProtocol"
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:284
+#: ../../../usage/middleware/creating-middleware.rst:286
 msgid ""
 "If you'd like to modify a :class:`~litestar.response.Response` object after "
 "it was created for a route handler function but before the actual response "
@@ -530,21 +530,21 @@ msgid ""
 "itself, which is a step further in the response process."
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:289
+#: ../../../usage/middleware/creating-middleware.rst:291
 msgid ""
 "Using the :class:`~litestar.middleware.base.MiddlewareProtocol` you can "
-"intercept and modifying both the incoming and outgoing data in a request / "
+"intercept and modify both the incoming and outgoing data in a request / "
 "response cycle by \"wrapping\" that respective ``receive`` and ``send`` ASGI "
 "functions."
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:293
+#: ../../../usage/middleware/creating-middleware.rst:295
 msgid ""
 "To demonstrate this, let's say we want to append a header with a timestamp "
 "to all outgoing responses. We could achieve this by doing the following:"
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:297
+#: ../../../usage/middleware/creating-middleware.rst:299
 msgid ""
 "import time\n"
 "\n"
@@ -577,17 +577,17 @@ msgid ""
 "            await self.app(scope, receive, send)"
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:327
+#: ../../../usage/middleware/creating-middleware.rst:329
 msgid "Inheriting AbstractMiddleware"
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:329
+#: ../../../usage/middleware/creating-middleware.rst:331
 msgid ""
 "Litestar offers an :class:`~litestar.middleware.base.AbstractMiddleware` "
 "class that can be extended to create middleware:"
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:333
+#: ../../../usage/middleware/creating-middleware.rst:335
 msgid ""
 "import time\n"
 "\n"
@@ -616,39 +616,39 @@ msgid ""
 "        await self.app(scope, receive, send_wrapper)"
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:359
+#: ../../../usage/middleware/creating-middleware.rst:361
 msgid ""
-"The three class variables defined in the above example ``scopes``, "
+"The three class variables defined in the above example ``scope``, "
 "``exclude``, and ``exclude_opt_key`` can be used to fine-tune for which "
 "routes and request types the middleware is called:"
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:363
+#: ../../../usage/middleware/creating-middleware.rst:365
 msgid ""
-"The scopes variable is a set that can include either or both : ``ScopeType."
+"The scope variable is a set that can include either or both : ``ScopeType."
 "HTTP`` and ``ScopeType.WEBSOCKET`` , with the default being both."
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:364
+#: ../../../usage/middleware/creating-middleware.rst:366
 msgid ""
 "``exclude`` accepts either a single string or list of strings that are "
 "compiled into a regex against which the request's ``path`` is checked."
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:365
+#: ../../../usage/middleware/creating-middleware.rst:367
 msgid ""
 "``exclude_opt_key`` is the key to use for in a route handler's :class:"
 "`Router.opt <litestar.router.Router>` dict for a boolean, whether to omit "
 "from the middleware."
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:367
+#: ../../../usage/middleware/creating-middleware.rst:369
 msgid ""
 "Thus, in the following example, the middleware will only run against the "
 "handler called ``not_excluded_handler`` for ``/greet`` route:"
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:370
+#: ../../../usage/middleware/creating-middleware.rst:372
 msgid ""
 "import time\n"
 "\n"
@@ -731,17 +731,17 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:374
+#: ../../../usage/middleware/creating-middleware.rst:376
 msgid ""
 "Using ``/`` as an exclude pattern, will disable this middleware for all "
 "routes, since, as a regex, it matches *every* path"
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:379
+#: ../../../usage/middleware/creating-middleware.rst:381
 msgid "Using DefineMiddleware to pass arguments"
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:381
+#: ../../../usage/middleware/creating-middleware.rst:383
 msgid ""
 "Litestar offers a simple way to pass positional arguments (``*args``) and "
 "keyword arguments (``**kwargs``) to middleware using the :class:`~litestar."
@@ -750,7 +750,7 @@ msgid ""
 "``DefineMiddleware`` to pass these values to our middleware:"
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:387
+#: ../../../usage/middleware/creating-middleware.rst:389
 msgid ""
 "from litestar.types import ASGIApp, Scope, Receive, Send\n"
 "from litestar import Litestar\n"
@@ -774,10 +774,10 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../../usage/middleware/creating-middleware.rst:407
+#: ../../../usage/middleware/creating-middleware.rst:409
 msgid ""
 "The ``DefineMiddleware`` is a simple container - it takes a middleware "
 "callable as a first parameter, and then any positional arguments, followed "
-"by key word arguments. The middleware callable will be called with these "
+"by keyword arguments. The middleware callable will be called with these "
 "values as well as the kwarg ``app`` as mentioned above."
 msgstr ""

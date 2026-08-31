@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-08-31 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,43 +23,33 @@ msgstr ""
 
 #: ../../../../litestar/security/session_auth/auth.py:docstring of
 #: litestar.security.session_auth.auth.SessionAuth:1
-msgid ""
-"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~litestar.security.base."
-"UserType`, :py:obj:`~litestar.middleware.session.base."
-"BaseSessionBackendT`], :py:class:`~litestar.security.base."
-"AbstractSecurityConfig`\\ [:py:obj:`~litestar.security.base.UserType`, :py:"
-"class:`dict`\\ [:py:class:`str`, :py:obj:`~typing.Any`]]"
-msgstr ""
-
-#: ../../../../litestar/security/session_auth/auth.py:docstring of
-#: litestar.security.session_auth.auth.SessionAuth:1
 msgid "Session Based Security Backend."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/security/session_auth/auth.py:docstring of
 #: litestar.security.session_auth.SessionAuth.session_backend_config:1
 msgid "A session backend config."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/security/session_auth/auth.py:docstring of
 #: litestar.security.session_auth.SessionAuth.retrieve_user_handler:1
 msgid ""
 "Callable that receives the ``auth`` value from the authentication middleware "
 "and returns a ``user`` value."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/security/session_auth/auth.py:docstring of
 #: litestar.security.session_auth.SessionAuth.retrieve_user_handler:3
 msgid "Notes"
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/security/session_auth/auth.py:docstring of
 #: litestar.security.session_auth.SessionAuth.retrieve_user_handler:5
 msgid ""
 "User and Auth can be any arbitrary values specified by the security backend."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/security/session_auth/auth.py:docstring of
 #: litestar.security.session_auth.SessionAuth.retrieve_user_handler:6
 msgid ""
 "The User and Auth values will be set by the middleware as "
@@ -68,51 +58,54 @@ msgid ""
 "properties."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/security/session_auth/auth.py:docstring of
 #: litestar.security.session_auth.SessionAuth.retrieve_user_handler:8
 msgid ""
 "The callable can be sync or async. If it is sync, it will be wrapped to "
 "support async."
 msgstr ""
 
-#: ../../../../docstring of litestar.security.session_auth.SessionAuth.guards:1
+#: ../../../../litestar/security/session_auth/auth.py:docstring of
+#: litestar.security.session_auth.SessionAuth.guards:1
 msgid ""
 "An iterable of guards to call for requests, providing authorization "
 "functionalities."
 msgstr ""
 
-#: ../../../../litestar/security/session_auth/middleware.py:docstring of
+#: ../../../../litestar/security/session_auth/auth.py:docstring of
+#: litestar.security.session_auth.SessionAuth.exclude:1
+#: ../../../../litestar/security/session_auth/middleware.py:docstring
 #: litestar.security.session_auth.middleware.SessionAuthMiddleware.__init__:4
-#: ../../../../docstring litestar.security.session_auth.SessionAuth.exclude:1
 msgid "A pattern or list of patterns to skip in the authentication middleware."
 msgstr ""
 
-#: ../../../../litestar/security/session_auth/middleware.py:docstring of
-#: litestar.security.session_auth.middleware.SessionAuthMiddleware.__init__:6
-#: ../../../../docstring
+#: ../../../../litestar/security/session_auth/auth.py:docstring of
 #: litestar.security.session_auth.SessionAuth.exclude_opt_key:1
+#: ../../../../litestar/security/session_auth/middleware.py:docstring
+#: litestar.security.session_auth.middleware.SessionAuthMiddleware.__init__:6
 msgid ""
 "An identifier to use on routes to disable authentication and authorization "
 "checks for a particular route."
 msgstr ""
 
-#: ../../../../docstring of litestar.security.session_auth.SessionAuth.scopes:1
+#: ../../../../litestar/security/session_auth/auth.py:docstring of
+#: litestar.security.session_auth.SessionAuth.scopes:1
 msgid ""
 "ASGI scopes processed by the authentication middleware, if ``None``, both "
 "``http`` and ``websocket`` will be processed."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/security/session_auth/auth.py:docstring of
 #: litestar.security.session_auth.SessionAuth.route_handlers:1
 msgid "An optional iterable of route handlers to register."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/security/session_auth/auth.py:docstring of
 #: litestar.security.session_auth.SessionAuth.dependencies:1
 msgid "An optional dictionary of dependency providers."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/security/session_auth/auth.py:docstring of
 #: litestar.security.session_auth.SessionAuth.type_encoders:1
 msgid ""
 "A mapping of types to callables that transform them into types supported for "
@@ -212,13 +205,6 @@ msgstr ""
 msgid ""
 "An OpenAPI 3.1 :data:`SecurityRequirement <.openapi.spec."
 "SecurityRequirement>` dictionary."
-msgstr ""
-
-#: ../../../../litestar/security/session_auth/middleware.py:docstring of
-#: litestar.security.session_auth.middleware.SessionAuthMiddleware:1
-msgid ""
-"Bases: :py:class:`~litestar.middleware.authentication."
-"AbstractAuthenticationMiddleware`"
 msgstr ""
 
 #: ../../../../litestar/security/session_auth/middleware.py:docstring of

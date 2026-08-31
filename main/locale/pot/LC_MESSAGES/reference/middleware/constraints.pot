@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-08-31 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,68 +22,49 @@ msgid "constraints"
 msgstr ""
 
 #: ../../../../litestar/middleware/constraints.py:docstring of
-#: litestar.middleware.constraints.ConstraintViolationError:1
-#: litestar.middleware.constraints.CycleError:1
-msgid ""
-"Bases: :py:class:`~litestar.middleware.constraints.MiddlewareConstraintError`"
-msgstr ""
-
-#: ../../../../litestar/middleware/constraints.py:docstring of
-#: litestar.middleware.constraints.MiddlewareConstraintError:1
-msgid ""
-"Bases: :py:class:`~litestar.exceptions.base_exceptions.LitestarException`"
-msgstr ""
-
-#: ../../../../litestar/middleware/constraints.py:docstring of
-#: litestar.middleware.constraints.MiddlewareConstraints:1
-#: litestar.middleware.constraints.MiddlewareForwardRef:1
-msgid "Bases: :py:class:`object`"
-msgstr ""
-
-#: ../../../../litestar/middleware/constraints.py:docstring of
 #: litestar.middleware.constraints.MiddlewareConstraints:1
 msgid "Constraints for a middleware."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/constraints.py:docstring of
 #: litestar.middleware.constraints.MiddlewareConstraints.before:1
 msgid ""
 "Tuple of middlewares that, if present, need to appear *before* the "
 "middleware this constraint is applied to (i.e. closer to the application)"
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/constraints.py:docstring of
 #: litestar.middleware.constraints.MiddlewareConstraints.after:1
 msgid ""
 "Tuple of middlewares that, if present, need to appear *after* the middleware "
 "this constraint is applied to (i.e. closer to the handler)"
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/constraints.py:docstring of
 #: litestar.middleware.constraints.MiddlewareConstraints.first:1
 msgid ""
 "If ``True``, require the middleware to be the first (i.e. the first "
 "middleware on the application)."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/constraints.py:docstring of
 #: litestar.middleware.constraints.MiddlewareConstraints.first:4
 msgid "Mutually exclusive with ``last=True``. Implicitly sets ``unique=True``"
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/constraints.py:docstring of
 #: litestar.middleware.constraints.MiddlewareConstraints.last:1
 msgid ""
 "If ``True``, require the middleware to be the last (i.e. the last middleware "
 "on the handler)."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/constraints.py:docstring of
 #: litestar.middleware.constraints.MiddlewareConstraints.last:4
 msgid "Mutually exclusive with ``first=True``. Implicitly sets ``unique=True``"
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/constraints.py:docstring of
 #: litestar.middleware.constraints.MiddlewareConstraints.unique:1
 msgid "If ``True``, require the middleware to be the only one of its type"
 msgstr ""
@@ -143,12 +124,12 @@ msgstr ""
 msgid "Forward reference to a middleware"
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/constraints.py:docstring of
 #: litestar.middleware.constraints.MiddlewareForwardRef.target:1
 msgid "Absolute path to an importable name of the middleware"
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/constraints.py:docstring of
 #: litestar.middleware.constraints.MiddlewareForwardRef.ignore_import_error:1
 msgid ""
 "If 'True', ignore :exc:`ImportError`\\ s will be ignored when resolving the "

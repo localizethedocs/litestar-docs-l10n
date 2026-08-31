@@ -1,0 +1,1637 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-31 17:20+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../onboarding/flask.rst:0 ../../../onboarding/flask.rst:2
+#: ../../../onboarding/flask.rst:207 ../../../onboarding/flask.rst:814
+msgid "Flask"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:5
+msgid "Layered configuration"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:7
+msgid ""
+"Litestar uses a layered architecture. The parts used to group routes can "
+"also be used to hierarchically organize an application. Settings and "
+"configuration like dependencies, exception handlers, guards, middleware, "
+"response cookies and headers, lifecycle hooks, OpenAPI configuration and "
+"many more can be defined on any layer, and will be merged upon registration."
+msgstr ""
+
+#: ../../../onboarding/flask.rst:13
+msgid "The layers in hierarchical order are"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:15
+msgid "Application (``Litestar``)"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:16
+msgid ""
+"``Router`` / ``Controller`` (these are on the same level and can be "
+"arbitrarily nested)"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:17
+msgid "Handler (``BaseRouteHandler``)"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:19
+msgid ""
+"When the same configuration is set on multiple layers, the value set closest "
+"to the handler takes precedence."
+msgstr ""
+
+#: ../../../onboarding/flask.rst:24
+msgid "Route handlers"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:26
+msgid ""
+"Routes are declared with method-specific decorators (:func:`~litestar."
+"handlers.get`, :func:`~litestar.handlers.post`, ...) and registered on an "
+"application, router or controller:"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:36
+msgid ""
+"from flask import Flask\n"
+"\n"
+"app = Flask(__name__)\n"
+"\n"
+"@app.route(\"/\")\n"
+"def index():\n"
+"    return \"Index Page\"\n"
+"\n"
+"@app.route(\"/hello\")\n"
+"def hello():\n"
+"    return \"Hello, World\""
+msgstr ""
+
+#: ../../../onboarding/flask.rst:0 ../../../onboarding/flask.rst:207
+#: ../../../onboarding/flask.rst:814
+msgid "Litestar"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:53
+msgid ""
+"from litestar import Litestar, get\n"
+"\n"
+"\n"
+"@get(\"/\", sync_to_thread=False)\n"
+"def index() -> str:\n"
+"    return \"Index Page\"\n"
+"\n"
+"\n"
+"@get(\"/hello\", sync_to_thread=False)\n"
+"def hello() -> str:\n"
+"    return \"Hello, World\"\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[index, hello])"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:55
+msgid ""
+":class:`Routers <litestar.router.Router>` and :class:`controllers <litestar."
+"controller.Controller>` group handlers and bind them with a shared set of "
+"configuration. They are part of Litestar's *layered architecture*."
+msgstr ""
+
+#: ../../../onboarding/flask.rst:61
+msgid ""
+":ref:`Routing - Registering Routes <usage/routing/overview:registering "
+"routes>`"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:65
+msgid "Path parameters"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:67
+msgid ""
+"Flask declares converters inline: ``<int:post_id>``. Litestar calls these "
+"\"path parameters\", which are declared like ``/post/{post_id:int}``. The "
+"handler can request a path parameter by annotating a function parameter "
+"with :data:`~litestar.params.FromPath`. By default, Litestar will try to "
+"inject a path parameter matching the function parameter name, but you can "
+"also specify an alias (see :ref:`usage/routing/parameters:aliasing`)."
+msgstr ""
+
+#: ../../../onboarding/flask.rst:75
+msgid ""
+"The type defined in the path parameter does not have to match the function "
+"parameter. The path parameter is what defines the input type, and what's "
+"reflected in the OpenAPI schema. The function parameter is what will be "
+"validated against."
+msgstr ""
+
+#: ../../../onboarding/flask.rst:85
+msgid ""
+"from flask import Flask\n"
+"\n"
+"app = Flask(__name__)\n"
+"\n"
+"@app.route(\"/user/<username>\")\n"
+"def show_user_profile(username):\n"
+"    return f\"User {username}\"\n"
+"\n"
+"@app.route(\"/post/<int:post_id>\")\n"
+"def show_post(post_id):\n"
+"    return f\"Post {post_id}\"\n"
+"\n"
+"@app.route(\"/path/<path:subpath>\")\n"
+"def show_subpath(subpath):\n"
+"    return f\"Subpath {subpath}\""
+msgstr ""
+
+#: ../../../onboarding/flask.rst:106
+msgid ""
+"import pathlib\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.params import FromPath\n"
+"\n"
+"\n"
+"@get(\"/user/{username:str}\", sync_to_thread=False)\n"
+"def show_user_profile(username: FromPath[str]) -> str:\n"
+"    return f\"User {username}\"\n"
+"\n"
+"\n"
+"@get(\"/post/{post_id:int}\", sync_to_thread=False)\n"
+"def show_post(post_id: FromPath[int]) -> str:\n"
+"    return f\"Post {post_id}\"\n"
+"\n"
+"\n"
+"@get(\"/path/{subpath:path}\", sync_to_thread=False)\n"
+"def show_subpath(subpath: FromPath[pathlib.Path]) -> str:\n"
+"    return f\"Subpath {subpath}\"\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[show_user_profile, show_post, show_subpath])"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:110
+msgid ":doc:`/usage/routing/parameters`"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:114
+msgid "Sync and async handlers"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:116
+msgid ""
+"Both Flask and Litestar support synchronous and asynchronous functions, but "
+"they are handled differently. Flask implements the `WSGI <https://peps."
+"python.org/pep-3333/>`_ protocol, which is synchronous by nature, while "
+"Litestar implements `ASGI <https://asgi.readthedocs.io>`_, an asynchronous "
+"protocol."
+msgstr ""
+
+#: ../../../onboarding/flask.rst:121
+msgid ""
+"When Flask runs asynchronous endpoints, they run isolated from another. The "
+"handling of requests is still synchronous. Litestar is asynchronous "
+"throughout, meaning one worker can handle many asynchronous requests "
+"concurrently."
+msgstr ""
+
+#: ../../../onboarding/flask.rst:125
+msgid ""
+"Litestar can also handle synchronous endpoints without blocking, by running "
+"them in a thread pool. To enable this, set ``sync_to_thread=True`` on the "
+"handler decorator."
+msgstr ""
+
+#: ../../../onboarding/flask.rst:129
+msgid ""
+"A sync handler without ``sync_to_thread`` set emits a runtime warning, since "
+"Litestar cannot tell whether the function blocks. Pass "
+"``sync_to_thread=False`` to suppress the warning when the body genuinely "
+"does not block."
+msgstr ""
+
+#: ../../../onboarding/flask.rst:139
+msgid ""
+"@app.get(\"/\")\n"
+"def slow_handler():\n"
+"    # blocking I/O on the worker\n"
+"    time.sleep(1)\n"
+"    return {\"hello\": \"world\"}"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:150
+msgid ""
+"from litestar import get\n"
+"\n"
+"@get(\"/\", sync_to_thread=True)\n"
+"def slow_handler() -> dict[str, str]:\n"
+"    # blocking on a thread, event loop remains free\n"
+"    time.sleep(1)\n"
+"    return {\"hello\": \"world\"}"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:161 ../../../onboarding/flask.rst:854
+msgid "Lifespan"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:163
+msgid ""
+"Flask has ``@before_first_request`` for startup work and no matching hook "
+"for shutdown. Litestar accepts one or more async context managers through :"
+"paramref:`~litestar.app.Litestar.lifespan`; setup goes before the ``yield``, "
+"teardown after."
+msgstr ""
+
+#: ../../../onboarding/flask.rst:169
+msgid ""
+"from collections.abc import AsyncIterator\n"
+"from contextlib import asynccontextmanager\n"
+"\n"
+"from litestar import Litestar, get\n"
+"\n"
+"\n"
+"@asynccontextmanager\n"
+"async def lifespan(app: Litestar) -> AsyncIterator[None]:\n"
+"    # Setup: open database pool, warm caches, etc.\n"
+"    yield\n"
+"    # Teardown: close resources.\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"async def index() -> dict[str, str]:\n"
+"    return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[index], lifespan=[lifespan])"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:173
+msgid "Accessing the request"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:175
+msgid ""
+"Flask exposes the current request through ``flask.request``, a thread-local "
+"proxy. In Litestar a handler that needs the request asks for it by name; the "
+"parameter is typed as :class:`~litestar.connection.Request`."
+msgstr ""
+
+#: ../../../onboarding/flask.rst:185
+msgid ""
+"from flask import Flask, request\n"
+"\n"
+"app = Flask(__name__)\n"
+"\n"
+"@app.get(\"/\")\n"
+"def index():\n"
+"    return {\"method\": request.method}"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:198
+msgid ""
+"from litestar import Litestar, Request, get\n"
+"\n"
+"\n"
+"@get(\"/\", sync_to_thread=False)\n"
+"def index(request: Request) -> dict[str, str]:\n"
+"    return {\"method\": request.method}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[index])"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:202
+msgid "Request attribute reference"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:204
+msgid ""
+"The table maps each ``flask.Request`` attribute to its Litestar counterpart"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:209
+msgid "``request.args``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:209
+msgid ""
+"Injected via function parameters marked with ``FromQuery``. Direct access "
+"through ``request.query_params``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:211
+msgid "``request.base_url``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:213
+msgid "``request.authorization``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:213
+msgid "``request.auth``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:215
+msgid "``request.cache_control``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:215
+msgid "``request.headers.get(\"cache-control\")``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:217
+msgid "``request.content_encoding``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:217
+msgid "``request.headers.get(\"content-encoding\")``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:219
+msgid "``request.content_length``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:219
+msgid "``request.headers.get(\"content-length\")``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:221
+msgid "``request.content_type``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:223
+msgid "``request.cookies``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:225
+msgid "``request.data``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:225
+msgid "``await request.body()``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:227
+msgid "``request.date``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:227
+msgid "``request.headers.get(\"date\")``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:229
+msgid "``request.endpoint``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:229
+msgid "``request.route_handler.name``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:231
+msgid "``request.environ``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:231
+msgid "``request.scope``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:233 ../../../onboarding/flask.rst:848
+msgid "``request.files``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:233
+msgid ""
+"Injected via :class:`~litestar.datastructures.UploadFile`; see :ref:`usage/"
+"requests:Content-type`"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:235
+msgid "``request.form``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:235
+msgid ""
+"Injected via the ``data`` parameter, marked with ``Body``, see :ref:`usage/"
+"requests:Content-type`"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:237
+msgid "``request.get_json``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:237
+msgid "Injected via the ``data`` parameter"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:239
+msgid "``request.headers``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:241
+msgid "``request.host``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:241
+msgid ":octicon:`dash`"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:242
+msgid ""
+"<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-"
+"octicon-dash\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M2 "
+"7.75A.75.75 0 0 1 2.75 7h10a.75.75 0 0 1 0 1.5h-10A.75.75 0 0 1 2 7.75Z\"></"
+"path></svg>"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:243
+msgid "``request.if_match``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:243
+msgid "``request.headers.get(\"if-match\")``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:245
+msgid "``request.if_modified_since``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:245
+msgid "``request.headers.get(\"if-modified-since\")``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:247
+msgid "``request.if_none_match``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:247
+msgid "``request.headers.get(\"if-none-match\")``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:249
+msgid "``request.if_range``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:249
+msgid "``request.headers.get(\"if-range\")``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:251
+msgid "``request.if_unmodified_since``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:251
+msgid "``request.headers.get(\"if-unmodified-since\")``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:253
+msgid "``request.method``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:255
+msgid "``request.path``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:255
+msgid "``request.scope[\"path\"]``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:257
+msgid "``request.query_string``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:257
+msgid "``request.scope[\"query_string\"]``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:259
+msgid "``request.range``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:259
+msgid "``request.headers.get(\"range\")``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:261
+msgid "``request.referer``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:261
+msgid "``request.headers.get(\"referer\")``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:263
+msgid "``request.remote_addr``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:263
+msgid "``request.client.host``  / ``request.client.port``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:265
+msgid "``request.root_path``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:265
+msgid "``request.scope[\"root_path\"]``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:267
+msgid "``request.server``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:267
+msgid "``request.scope[\"server\"]``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:269
+msgid "``request.url``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:271
+msgid "``request.user_agent``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:271
+msgid "``request.headers.get(\"user-agent\")``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:276
+msgid ":doc:`/usage/requests`"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:277
+msgid ":doc:`/reference/connection`"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:281
+msgid "Per-request state"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:283
+msgid ""
+"Flask uses ``flask.g`` for values that should live for the duration of a "
+"single request. Litestar uses ``request.state``, a mutable mapping attached "
+"to the request."
+msgstr ""
+
+#: ../../../onboarding/flask.rst:292
+msgid ""
+"from flask import Flask, g, request\n"
+"\n"
+"app = Flask(__name__)\n"
+"\n"
+"@app.before_request\n"
+"def set_user() -> None:\n"
+"    g.user = request.headers.get(\"x-user\", \"anonymous\")\n"
+"\n"
+"@app.get(\"/\")\n"
+"def index():\n"
+"    return {\"user\": g.user}"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:309
+msgid ""
+"from litestar import Litestar, Request, get\n"
+"\n"
+"\n"
+"def set_user_on_request(request: Request) -> None:\n"
+"    request.state[\"user\"] = request.headers.get(\"x-user\", "
+"\"anonymous\")\n"
+"\n"
+"\n"
+"@get(\"/\", sync_to_thread=False)\n"
+"def index(request: Request) -> dict[str, str | None]:\n"
+"    return {\"user\": request.state[\"user\"]}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[index], before_request=set_user_on_request)"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:313
+msgid "The current application"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:315
+msgid ""
+"``flask.current_app`` is a thread-local proxy. Litestar exposes the "
+"application as ``request.app``, or as an ``app`` parameter on lifecycle "
+"hooks and middleware factories."
+msgstr ""
+
+#: ../../../onboarding/flask.rst:320
+msgid "File uploads"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:322
+msgid ""
+"Flask exposes uploaded files through ``request.files``. Litestar binds them "
+"to a ``data`` parameter typed as :class:`~litestar.datastructures."
+"UploadFile` (or a list of them), with ``media_type`` set to :class:"
+"`RequestEncodingType.URL_ENCODED <litestar.enums.RequestEncodingType>` or :"
+"class:`RequestEncodingType.MULTI_PART <litestar.enums.RequestEncodingType>`"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:334
+msgid ""
+"from flask import Flask, request\n"
+"\n"
+"app = Flask(__name__)\n"
+"\n"
+"@app.post(\"/upload\")\n"
+"def upload():\n"
+"    f = request.files[\"data\"]\n"
+"    return {\"filename\": f.filename}"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:348
+msgid ""
+"from typing import Annotated\n"
+"\n"
+"from litestar import Litestar, post\n"
+"from litestar.datastructures import UploadFile\n"
+"from litestar.enums import RequestEncodingType\n"
+"from litestar.params import Body\n"
+"\n"
+"\n"
+"@post(\"/upload\")\n"
+"async def upload(\n"
+"    data: Annotated[UploadFile, Body(media_type=RequestEncodingType."
+"MULTI_PART)],\n"
+") -> dict[str, str | None]:\n"
+"    return {\"filename\": data.filename}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[upload])"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:352
+msgid "Producing responses"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:355
+msgid "Status codes"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:357
+msgid ""
+"Flask overrides the default ``200`` by returning a ``(body, status)`` tuple. "
+"Litestar declares the status code on the decorator with ``status_code=`` "
+"when it is fixed for the handler, and on the :class:`~litestar.response."
+"Response` instance when it depends on the request."
+msgstr ""
+
+#: ../../../onboarding/flask.rst:362
+msgid ""
+"Litestar picks the status code from the HTTP method by default: ``POST`` "
+"defaults to ``201 Created``, ``DELETE`` to ``204 No Content``, everything "
+"else to ``200 OK``."
+msgstr ""
+
+#: ../../../onboarding/flask.rst:371
+msgid ""
+"from flask import Flask\n"
+"\n"
+"app = Flask(__name__)\n"
+"\n"
+"@app.get(\"/\")\n"
+"def index():\n"
+"    return \"not found\", 404"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:384
+msgid ""
+"from litestar import Litestar, Response, get\n"
+"\n"
+"\n"
+"@get(\"/static\", status_code=404, sync_to_thread=False)\n"
+"def static_status() -> str:\n"
+"    return \"not found\"\n"
+"\n"
+"\n"
+"@get(\"/dynamic\", sync_to_thread=False)\n"
+"def dynamic_status() -> Response[str]:\n"
+"    return Response(\"not found\", status_code=404)\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[static_status, dynamic_status])"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:388
+msgid "Cookies and headers"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:390
+msgid ""
+"Flask builds a response with ``make_response`` and mutates it. Litestar "
+"offers two paths: declare static values on the decorator with "
+"``response_cookies`` and ``response_headers``, or return a :class:`~litestar."
+"response.Response` with ``cookies=`` and ``headers=`` when the values depend "
+"on the request."
+msgstr ""
+
+#: ../../../onboarding/flask.rst:401
+msgid ""
+"from flask import Flask, make_response\n"
+"\n"
+"app = Flask(__name__)\n"
+"\n"
+"@app.get(\"/\")\n"
+"def index():\n"
+"    response = make_response(\"hello\")\n"
+"    response.set_cookie(\"my-cookie\", \"cookie-value\")\n"
+"    response.headers[\"my-header\"] = \"header-value\"\n"
+"    return response"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:417
+msgid ""
+"from litestar import Litestar, Response, get\n"
+"from litestar.datastructures import Cookie\n"
+"\n"
+"\n"
+"@get(\n"
+"    \"/static\",\n"
+"    response_headers={\"my-header\": \"header-value\"},\n"
+"    response_cookies=[Cookie(key=\"my-cookie\", value=\"cookie-value\")],\n"
+"    sync_to_thread=False,\n"
+")\n"
+"def static() -> str:\n"
+"    return \"hello\"\n"
+"\n"
+"\n"
+"@get(\"/dynamic\", sync_to_thread=False)\n"
+"def dynamic() -> Response[str]:\n"
+"    return Response(\n"
+"        \"hello\",\n"
+"        headers={\"my-header\": \"header-value\"},\n"
+"        cookies=[Cookie(key=\"my-cookie\", value=\"cookie-value\")],\n"
+"    )\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[static, dynamic])"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:421
+msgid ""
+":ref:`Responses - Setting Response Headers <usage/responses:setting response "
+"headers>`"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:422
+msgid ""
+":ref:`Responses - Setting Response Cookies <usage/responses:setting response "
+"cookies>`"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:426 ../../../onboarding/flask.rst:840
+msgid "Serialization"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:428
+msgid ""
+"Flask mixes explicit ``jsonify`` calls with inference from the return value. "
+"Litestar infers content encoding type from a handler's return annotation. "
+"Structured types (``dict``, ``list``, dataclasses, Pydantic models, msgspec "
+"``Struct``\\ s, attrs classes, :class:`typing.TypedDict`, etc.) default to "
+"JSON, ``str`` returns ``text/plain``. You can set a ``media_type=`` on the "
+"handler decorator to override these defaults."
+msgstr ""
+
+#: ../../../onboarding/flask.rst:441
+msgid ""
+"from flask import Flask, Response\n"
+"\n"
+"app = Flask(__name__)\n"
+"\n"
+"@app.get(\"/json\")\n"
+"def get_json():\n"
+"    return {\"hello\": \"world\"}\n"
+"\n"
+"@app.get(\"/text\")\n"
+"def get_text():\n"
+"    return \"hello, world\"\n"
+"\n"
+"@app.get(\"/html\")\n"
+"def get_html():\n"
+"    return Response(\"<strong>hello, world</strong>\", mimetype=\"text/"
+"html\")"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:462
+msgid ""
+"from litestar import Litestar, MediaType, get\n"
+"\n"
+"\n"
+"@get(\"/json\", sync_to_thread=False)\n"
+"def get_json() -> dict[str, str]:\n"
+"    return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"@get(\"/text\", media_type=MediaType.TEXT, sync_to_thread=False)\n"
+"def get_text() -> str:\n"
+"    return \"hello, world\"\n"
+"\n"
+"\n"
+"@get(\"/html\", media_type=MediaType.HTML, sync_to_thread=False)\n"
+"def get_html() -> str:\n"
+"    return \"<strong>hello, world</strong>\"\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[get_json, get_text, get_html])"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:466
+msgid ":ref:`usage/responses:media type`"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:471
+msgid "URL lookup"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:473
+msgid ""
+"Flask exposes ``url_for(endpoint, **params)`` as a module-level function. "
+"Litestar exposes :meth:`request.url_for <litestar.connection.ASGIConnection."
+"url_for>` on the request instead. The endpoint name comes from an explicit "
+"``name=`` keyword on the handler decorator, the equivalent of Flask's view-"
+"function name."
+msgstr ""
+
+#: ../../../onboarding/flask.rst:484
+msgid ""
+"from flask import url_for\n"
+"\n"
+"url_for(\"index\")"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:493
+msgid ""
+"from litestar import Litestar, Request, get\n"
+"from litestar.response import Redirect\n"
+"\n"
+"\n"
+"@get(\"/\", name=\"index\", sync_to_thread=False)\n"
+"def index() -> str:\n"
+"    return \"hello\"\n"
+"\n"
+"\n"
+"@get(\"/hello\", sync_to_thread=False)\n"
+"def hello(request: Request) -> Redirect:\n"
+"    return Redirect(path=request.url_for(\"index\"))\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[index, hello])"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:497 ../../../onboarding/flask.rst:828
+msgid "Templates"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:499
+msgid ""
+"Flask ships Jinja2 and renders templates with ``render_template``. Litestar "
+"treats templating as opt-in: Jinja2 is available through the "
+"``litestar[jinja]`` extra, Mako through ``litestar[mako]``. The engine is "
+"configured on the application through :class:`~litestar.template.config."
+"TemplateConfig`, and each handler returns a :class:`~litestar.response."
+"Template` — the equivalent of ``render_template``'s return value."
+msgstr ""
+
+#: ../../../onboarding/flask.rst:512
+msgid ""
+"from flask import Flask, render_template\n"
+"\n"
+"app = Flask(__name__)\n"
+"\n"
+"@app.route(\"/hello/<name>\")\n"
+"def hello(name):\n"
+"    return render_template(\"hello.html\", name=name)"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:525
+msgid ""
+"from pathlib import Path\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.params import FromPath\n"
+"from litestar.plugins.jinja import JinjaTemplateEngine\n"
+"from litestar.response import Template\n"
+"from litestar.template.config import TemplateConfig\n"
+"\n"
+"\n"
+"@get(\"/hello/{name:str}\", sync_to_thread=False)\n"
+"def hello(name: FromPath[str]) -> Template:\n"
+"    return Template(\n"
+"        template_str=\"<p>Hello, {{ name }}!</p>\",\n"
+"        context={\"name\": name},\n"
+"    )\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[hello],\n"
+"    template_config=TemplateConfig(\n"
+"        directory=Path(__file__).parent,\n"
+"        engine=JinjaTemplateEngine,\n"
+"    ),\n"
+")"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:529
+msgid ":doc:`/usage/templating`"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:533
+msgid "Streaming responses"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:535
+msgid ""
+"Flask streams by returning a generator wrapped in ``flask.Response``. In "
+"Litestar, you can return a :class:`~litestar.response.Stream` built from a "
+"sync or async iterator."
+msgstr ""
+
+#: ../../../onboarding/flask.rst:544
+msgid ""
+"from flask import Flask, Response\n"
+"\n"
+"app = Flask(__name__)\n"
+"\n"
+"@app.get(\"/stream\")\n"
+"def stream():\n"
+"    def gen():\n"
+"        for i in range(3):\n"
+"            yield f\"data: {i}\\n\\n\"\n"
+"\n"
+"    return Response(gen(), mimetype=\"text/event-stream\")"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:561
+msgid ""
+"from collections.abc import AsyncIterator\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.response import Stream\n"
+"\n"
+"\n"
+"async def event_source() -> AsyncIterator[bytes]:\n"
+"    for i in range(3):\n"
+"        yield f\"data: {i}\\n\\n\".encode()\n"
+"\n"
+"\n"
+"@get(\"/stream\")\n"
+"async def stream() -> Stream:\n"
+"    return Stream(event_source(), media_type=\"text/event-stream\")\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[stream])"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:565
+msgid "Exceptions and error responses"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:567
+msgid ""
+"Flask aborts with ``abort(code, description)``. Litestar raises an :class:"
+"`~litestar.exceptions.HTTPException` (or a subclass) directly."
+msgstr ""
+
+#: ../../../onboarding/flask.rst:576
+msgid ""
+"from flask import Flask, abort\n"
+"\n"
+"app = Flask(__name__)\n"
+"\n"
+"@app.get(\"/\")\n"
+"def index():\n"
+"    abort(400, \"this did not work\")"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:589
+msgid ""
+"from litestar import Litestar, get\n"
+"from litestar.exceptions import HTTPException\n"
+"\n"
+"\n"
+"@get(\"/\", sync_to_thread=False)\n"
+"def index() -> None:\n"
+"    raise HTTPException(status_code=400, detail=\"this did not work\")\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[index])"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:593
+msgid ":doc:`/usage/exceptions`"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:597
+msgid "Custom exception handlers"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:599
+msgid ""
+"Flask registers handlers through ``@app.errorhandler``. Litestar accepts a "
+"mapping from an exception class or status code to a handler callable."
+msgstr ""
+
+#: ../../../onboarding/flask.rst:603
+msgid ""
+"Exception handling is part of Litestar's layered architecture, so these can "
+"be declared on applications, routers, controllers or route handlers."
+msgstr ""
+
+#: ../../../onboarding/flask.rst:612
+msgid ""
+"from flask import Flask\n"
+"from werkzeug.exceptions import HTTPException\n"
+"\n"
+"app = Flask(__name__)\n"
+"\n"
+"@app.errorhandler(HTTPException)\n"
+"def handle_exception(e):\n"
+"    return {\"detail\": e.description}, e.code"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:626
+msgid ""
+"from litestar import Litestar, Request, Response, get\n"
+"from litestar.exceptions import HTTPException\n"
+"\n"
+"\n"
+"def handle_http_exception(request: Request, exception: HTTPException) -> "
+"Response[dict[str, str]]:\n"
+"    return Response(\n"
+"        {\"detail\": exception.detail},\n"
+"        status_code=exception.status_code,\n"
+"    )\n"
+"\n"
+"\n"
+"@get(\"/\", sync_to_thread=False)\n"
+"def index() -> None:\n"
+"    raise HTTPException(status_code=400, detail=\"this did not work\")\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[index],\n"
+"    exception_handlers={HTTPException: handle_http_exception},\n"
+")"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:630
+msgid ":ref:`usage/exceptions:exception handling`"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:634
+msgid "Before and after request hooks"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:636
+msgid ""
+"Flask uses ``@app.before_request`` and ``@app.after_request``. Litestar "
+"accepts the same callables through the ``before_request`` and "
+"``after_request`` keyword arguments on any layer."
+msgstr ""
+
+#: ../../../onboarding/flask.rst:641
+msgid ""
+"Lifecycle hooks are part of Litestar's layered architecture, so these can be "
+"declared on applications, routers, controllers or route handlers"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:650
+msgid ""
+"from flask import Flask, g\n"
+"\n"
+"app = Flask(__name__)\n"
+"\n"
+"@app.before_request\n"
+"def attach_user() -> None:\n"
+"    g.user = \"alice\"\n"
+"\n"
+"@app.after_request\n"
+"def wrap_text(response):\n"
+"    if response.mimetype == \"text/plain\":\n"
+"        return {\"value\": response.get_data(as_text=True)}\n"
+"    return response"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:669
+msgid ""
+"from litestar import Litestar, MediaType, Request, Response, get\n"
+"\n"
+"\n"
+"def attach_user(request: Request) -> None:\n"
+"    request.state[\"user\"] = \"alice\"\n"
+"\n"
+"\n"
+"def wrap_text_responses(response: Response) -> Response:\n"
+"    if response.media_type == MediaType.TEXT:\n"
+"        return Response({\"value\": response.content})\n"
+"    return response\n"
+"\n"
+"\n"
+"@get(\"/hello\", sync_to_thread=False)\n"
+"def hello(request: Request) -> str:\n"
+"    return f\"hello, {request.state['user']}\"\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[hello],\n"
+"    before_request=attach_user,\n"
+"    after_request=wrap_text_responses,\n"
+")"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:673
+msgid ":doc:`/usage/lifecycle-hooks`"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:677 ../../../onboarding/flask.rst:846
+msgid "Sessions"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:679
+msgid ""
+"Flask exposes ``flask.session`` as a thread-local dictionary backed by a "
+"signed cookie. Litestar provides sessions via a session middleware, and "
+"exposes ``request.session`` as a mutable mapping. Two backends are "
+"available: :class:`~litestar.middleware.session.server_side."
+"ServerSideSessionConfig` keeps the data on the server and a session id in "
+"the cookie; :class:`~litestar.middleware.session.client_side."
+"CookieBackendConfig` stores encrypted data in the cookie itself (closest to "
+"Flask's default)."
+msgstr ""
+
+#: ../../../onboarding/flask.rst:693
+msgid ""
+"from flask import Flask, session\n"
+"\n"
+"app = Flask(__name__)\n"
+"app.secret_key = \"...\"\n"
+"\n"
+"@app.post(\"/login\")\n"
+"def login():\n"
+"    session[\"user\"] = \"alice\"\n"
+"    return \"\"\n"
+"\n"
+"@app.get(\"/whoami\")\n"
+"def whoami():\n"
+"    return {\"user\": session.get(\"user\")}"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:712
+msgid ""
+"from typing import Any\n"
+"\n"
+"from litestar import Litestar, Request, get, post\n"
+"from litestar.middleware.session.server_side import ServerSideSessionConfig\n"
+"\n"
+"session_config = ServerSideSessionConfig()\n"
+"\n"
+"\n"
+"@post(\"/login\", sync_to_thread=False)\n"
+"def login(request: Request) -> None:\n"
+"    request.set_session({\"user\": \"alice\"})\n"
+"\n"
+"\n"
+"@get(\"/whoami\", sync_to_thread=False)\n"
+"def whoami(request: Request) -> dict[str, Any]:\n"
+"    return {\"user\": request.session.get(\"user\")}\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[login, whoami],\n"
+"    middleware=[session_config.middleware],\n"
+")"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:716
+msgid ":doc:`/usage/middleware/builtin-middleware`"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:720 ../../../onboarding/flask.rst:826
+msgid "Static files"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:722
+msgid ""
+"Flask serves files from a folder named ``static`` automatically. Litestar "
+"offers an equivalent in :func:`~litestar.static_files."
+"create_static_files_router`, which can be registered to serve files from a "
+"configured directory:"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:727
+msgid ""
+"from pathlib import Path\n"
+"\n"
+"from litestar import Litestar\n"
+"from litestar.static_files import create_static_files_router\n"
+"\n"
+"ASSETS_DIR = Path(__file__).parent / \"assets\"\n"
+"\n"
+"\n"
+"def ensure_assets() -> None:\n"
+"    ASSETS_DIR.mkdir(exist_ok=True)\n"
+"    ASSETS_DIR.joinpath(\"hello.txt\").write_text(\"Hello, world!\")\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[\n"
+"        create_static_files_router(path=\"/static\", "
+"directories=[ASSETS_DIR]),\n"
+"    ],\n"
+"    on_startup=[ensure_assets],\n"
+")"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:731
+msgid ":doc:`/usage/static-files`"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:735
+msgid "WebSockets"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:737
+msgid ""
+"Flask does not include WebSocket support natively, but `flask-sock`` and "
+"``flask-socketio`` are popular extensions from the ecosystem. Litestar does "
+"include native WebSocket support, coming in three different shapes:"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:741
+msgid ""
+":func:`~litestar.handlers.websocket`: direct connection handling via raw "
+"`ASGI WebSockets <https://asgi.readthedocs.io/en/latest/specs/www."
+"html#websocket>`_"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:742
+msgid ""
+":func:`~litestar.handlers.websocket_listener`: Per-message callback style "
+"that takes and returns typed values; the framework handles accept, the "
+"receive loop, and serialisation."
+msgstr ""
+
+#: ../../../onboarding/flask.rst:745
+msgid ""
+":func:`~litestar.handlers.websocket_stream`: Async generator to produce "
+"messages that are pushed to the WebSocket;  the framework handles accept, "
+"the receive loop, and serialisation."
+msgstr ""
+
+#: ../../../onboarding/flask.rst:750
+msgid ""
+"from litestar import Litestar, websocket_listener\n"
+"\n"
+"\n"
+"@websocket_listener(\"/ws\")\n"
+"async def chat(data: str) -> str:\n"
+"    return f\"you said: {data}\"\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[chat])"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:752
+msgid ""
+"For broadcast and pub/sub patterns, pair these handlers with the :doc:"
+"`channels </usage/channels>` plugin. Channels handles per-channel "
+"subscriptions, history, and inter-process fan-out through a pluggable "
+"broker, and can generate WebSocket route handlers that publish incoming "
+"events to subscribed clients."
+msgstr ""
+
+#: ../../../onboarding/flask.rst:759
+msgid ":doc:`/usage/websockets`"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:763
+msgid "Testing"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:765
+msgid ""
+"Flask exposes ``app.test_client()``. Litestar offers :class:`~litestar."
+"testing.TestClient` (which wraps an existing app) and :func:`~litestar."
+"testing.create_test_client` (which builds a fresh app from the same options "
+"as :class:`~litestar.app.Litestar`)."
+msgstr ""
+
+#: ../../../onboarding/flask.rst:776
+msgid ""
+"def test_index() -> None:\n"
+"    client = app.test_client()\n"
+"    response = client.get(\"/\")\n"
+"    assert response.status_code == 200\n"
+"    assert response.text == \"Index Page\""
+msgstr ""
+
+#: ../../../onboarding/flask.rst:787
+msgid ""
+"from litestar import get\n"
+"from litestar.status_codes import HTTP_200_OK\n"
+"from litestar.testing import create_test_client\n"
+"\n"
+"\n"
+"@get(\"/\", sync_to_thread=False)\n"
+"def index() -> str:\n"
+"    return \"Index Page\"\n"
+"\n"
+"\n"
+"def test_index() -> None:\n"
+"    with create_test_client(route_handlers=[index]) as client:\n"
+"        response = client.get(\"/\")\n"
+"    assert response.status_code == HTTP_200_OK\n"
+"    assert response.text == \"Index Page\""
+msgstr ""
+
+#: ../../../onboarding/flask.rst:791
+msgid ":doc:`/usage/testing`"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:795
+msgid "Further reading"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:797
+msgid ""
+"These are not the only differences between Flask and Litestar, so if you "
+"want to keep reading about features, here's a select list:"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:800
+msgid ":doc:`/usage/openapi/index`"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:801
+msgid ":doc:`/usage/dependency-injection`"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:802
+msgid ":doc:`/usage/plugins/index`"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:803
+msgid ":doc:`/usage/middleware/index`"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:809
+msgid "Quick reference"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:811
+msgid "A lookup table for the most common translations."
+msgstr ""
+
+#: ../../../onboarding/flask.rst:814
+msgid "Concept"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:816
+msgid "Route declaration"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:816
+msgid "``@app.route(\"/\")``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:816
+msgid "``@get(\"/\")`` + ``Litestar([handler])``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:818
+msgid "Path parameter"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:818
+msgid "``/items/<int:id>``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:818
+msgid "``/items/{id:int}`` + ``FromPath[int]``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:820
+msgid "Request access"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:820
+msgid "global ``request``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:820
+msgid "``request: Request`` parameter"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:822
+msgid "Request-scoped state"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:822
+msgid "``flask.g``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:822
+msgid "``request.state``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:824
+msgid "Current application"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:824
+msgid "``flask.current_app``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:824
+msgid "``request.app``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:826
+msgid "automatic ``static/``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:826
+msgid "``create_static_files_router``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:828
+msgid "``render_template``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:828
+msgid "``Template()`` + ``TemplateConfig``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:830
+msgid "Cookies / headers"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:830
+msgid "``make_response`` + ``.set_cookie``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:830
+msgid "``response_cookies=`` / ``Response(...)``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:832
+msgid "Redirect"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:832
+msgid "``redirect`` + ``url_for``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:832
+msgid "``Redirect`` + ``request.url_for``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:834
+msgid "URL generation"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:834
+msgid "``url_for``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:834
+msgid "``request.url_for(handler_name)``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:836
+msgid "HTTPException"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:836
+msgid "``abort(400, ...)``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:836
+msgid "``HTTPException(status_code=400, ...)``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:838
+msgid "Status code"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:838
+msgid "``return body, status``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:838
+msgid "``status_code=`` / ``Response(...)``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:840
+msgid "``jsonify`` / inference"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:840
+msgid "return type annotation"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:842
+msgid "Exception handler"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:842
+msgid "``@app.errorhandler``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:842
+msgid "``exception_handlers={Exc: handler}``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:844
+msgid "Before/after request"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:844
+msgid "``@before_request`` / ``@after_*``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:844
+msgid "``before_request=`` / ``after_request=``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:846
+msgid "``flask.session``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:846
+msgid "``ServerSideSessionConfig``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:848
+msgid "File upload"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:848
+msgid "``UploadFile`` + ``Body(MULTI_PART)``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:850
+msgid "Streaming response"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:850
+msgid "``Response(generator, ...)``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:850
+msgid "``Stream(iterator)``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:852
+msgid "WebSocket"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:852
+msgid "not built-in"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:852
+msgid "``@websocket(\"/ws\")``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:854
+msgid "``@before_first_request``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:854
+msgid "``lifespan=[ctx_mgr]``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:856
+msgid "Test client"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:856
+msgid "``app.test_client()``"
+msgstr ""
+
+#: ../../../onboarding/flask.rst:856
+msgid "``TestClient`` / ``create_test_client``"
+msgstr ""

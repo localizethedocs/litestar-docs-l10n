@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-08-31 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,11 +19,6 @@ msgstr ""
 
 #: ../../../reference/file_system.rst:2
 msgid "file_system"
-msgstr ""
-
-#: ../../../../litestar/file_system.py:docstring of
-#: litestar.file_system.BaseFileSystem:1
-msgid "Bases: :py:class:`~abc.ABC`"
 msgstr ""
 
 #: ../../../../litestar/file_system.py:docstring of
@@ -98,11 +93,6 @@ msgstr ""
 
 #: ../../../../litestar/file_system.py:docstring of
 #: litestar.file_system.BaseLocalFileSystem:1
-msgid "Bases: :py:class:`~litestar.file_system.LinkableFileSystem`"
-msgstr ""
-
-#: ../../../../litestar/file_system.py:docstring of
-#: litestar.file_system.BaseLocalFileSystem:1
 msgid "Base class for a local file system."
 msgstr ""
 
@@ -114,39 +104,34 @@ msgstr ""
 
 #: ../../../../litestar/file_system.py:docstring of
 #: litestar.file_system.FileInfo:1
-msgid "Bases: :py:class:`~typing_extensions.TypedDict`"
-msgstr ""
-
-#: ../../../../litestar/file_system.py:docstring of
-#: litestar.file_system.FileInfo:1
 msgid "File information gathered from a file system."
 msgstr ""
 
-#: ../../../../docstring of litestar.file_system.FileInfo.is_symlink:1
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.FileInfo.is_symlink:1
 msgid ""
 "'True' if the file is a symbolic link. 'None' if the file system does not "
 "support symlinks"
 msgstr ""
 
-#: ../../../../docstring of litestar.file_system.FileInfo.mtime:1
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.FileInfo.mtime:1
 msgid "Modified time stamp."
 msgstr ""
 
-#: ../../../../docstring of litestar.file_system.FileInfo.name:1
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.FileInfo.name:1
 msgid "The path of the file."
 msgstr ""
 
-#: ../../../../docstring of litestar.file_system.FileInfo.size:1
+#: ../../../../litestar/file_system.py:docstring of
+#: litestar.file_system.FileInfo.size:1
 msgid "Total size, in bytes."
 msgstr ""
 
-#: ../../../../docstring of litestar.file_system.FileInfo.type:1
-msgid "The type of the file system object."
-msgstr ""
-
 #: ../../../../litestar/file_system.py:docstring of
-#: litestar.file_system.FileSystemRegistry:1
-msgid "Bases: :py:class:`~litestar.plugins.base.InitPlugin`"
+#: litestar.file_system.FileInfo.type:1
+msgid "The type of the file system object."
 msgstr ""
 
 #: ../../../../litestar/file_system.py:docstring of
@@ -183,12 +168,6 @@ msgstr ""
 msgid ""
 "Register a file system ``fs`` under ``name``. If a file system was "
 "previously registered under this name, it will be overwritten"
-msgstr ""
-
-#: ../../../../litestar/file_system.py:docstring of
-#: litestar.file_system.FsspecAsyncWrapper:1
-#: litestar.file_system.FsspecSyncWrapper:1
-msgid "Bases: :py:class:`~litestar.file_system.BaseFileSystem`"
 msgstr ""
 
 #: ../../../../litestar/file_system.py:docstring of
@@ -264,12 +243,6 @@ msgstr ""
 #: litestar.file_system.FsspecSyncWrapper.iter:1
 msgid ""
 "Stream bytes from ``path`` using :meth:`fsspec.spec.AbstractFileSystem.open`"
-msgstr ""
-
-#: ../../../../litestar/file_system.py:docstring of
-#: litestar.file_system.LinkableFileSystem:1
-msgid ""
-"Bases: :py:class:`~litestar.file_system.BaseFileSystem`, :py:class:`~abc.ABC`"
 msgstr ""
 
 #: ../../../../litestar/file_system.py:docstring of

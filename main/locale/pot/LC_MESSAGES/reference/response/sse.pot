@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-13 11:01+0000\n"
+"POT-Creation-Date: 2026-08-31 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,11 +19,6 @@ msgstr ""
 
 #: ../../../reference/response/sse.rst:2
 msgid "SSE (Server Sent Events)"
-msgstr ""
-
-#: ../../../../litestar/response/sse.py:docstring of
-#: litestar.response.sse.ASGIStreamingSSEResponse:1
-msgid "Bases: :py:class:`~litestar.response.streaming.ASGIStreamingResponse`"
 msgstr ""
 
 #: ../../../../litestar/response/sse.py:docstring of
@@ -90,11 +85,6 @@ msgstr ""
 #: ../../../../litestar/response/sse.py:docstring of
 #: litestar.response.sse.ASGIStreamingSSEResponse.send_body:1
 msgid "Emit the response body, with optional keepalive pings."
-msgstr ""
-
-#: ../../../../litestar/response/sse.py:docstring of
-#: litestar.response.sse.ServerSentEvent:1
-msgid "Bases: :py:class:`~litestar.response.streaming.Stream`"
 msgstr ""
 
 #: ../../../../litestar/response/sse.py:docstring of
@@ -239,11 +229,6 @@ msgstr ""
 msgid ""
 "An ASGIStreamingResponse (or ASGIStreamingSSEResponse when ping_interval is "
 "set)."
-msgstr ""
-
-#: ../../../../litestar/response/sse.py:docstring of
-#: litestar.response.sse.ServerSentEventMessage:1
-msgid "Bases: :py:class:`object`"
 msgstr ""
 
 #: ../../../../litestar/response/sse.py:docstring of

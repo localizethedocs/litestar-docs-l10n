@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-30 10:18+0000\n"
+"POT-Creation-Date: 2026-08-31 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,34 +26,30 @@ msgid "DTO domain types."
 msgstr ""
 
 #: ../../../../litestar/dto/field.py:docstring of litestar.dto.field.DTOField:1
-msgid "Bases: :py:class:`object`"
-msgstr ""
-
-#: ../../../../litestar/dto/field.py:docstring of litestar.dto.field.DTOField:1
 msgid "For configuring DTO behavior on model fields."
 msgstr ""
 
-#: ../../../../docstring of litestar.dto.field.DTOField.mark:1
+#: ../../../../litestar/dto/field.py:docstring of
+#: litestar.dto.field.DTOField.mark:1
 msgid "Mark the field as read-only, or private."
-msgstr ""
-
-#: ../../../../litestar/dto/field.py:docstring of litestar.dto.field.Mark:1
-msgid "Bases: :py:class:`~enum.StrEnum`"
 msgstr ""
 
 #: ../../../../litestar/dto/field.py:docstring of litestar.dto.field.Mark:1
 msgid "For marking field definitions on domain models."
 msgstr ""
 
-#: ../../../../docstring of litestar.dto.field.Mark.READ_ONLY:1
+#: ../../../../litestar/dto/field.py:docstring of
+#: litestar.dto.field.Mark.READ_ONLY:1
 msgid "To mark a field that can be read, but not updated by clients."
 msgstr ""
 
-#: ../../../../docstring of litestar.dto.field.Mark.WRITE_ONLY:1
+#: ../../../../litestar/dto/field.py:docstring of
+#: litestar.dto.field.Mark.WRITE_ONLY:1
 msgid "To mark a field that can be written to, but not read by clients."
 msgstr ""
 
-#: ../../../../docstring of litestar.dto.field.Mark.PRIVATE:1
+#: ../../../../litestar/dto/field.py:docstring of
+#: litestar.dto.field.Mark.PRIVATE:1
 msgid "To mark a field that can neither be read or updated by clients."
 msgstr ""
 

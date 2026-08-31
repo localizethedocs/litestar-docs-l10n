@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-08-31 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,17 +23,10 @@ msgstr ""
 
 #: ../../../../litestar/middleware/session/base.py:docstring of
 #: litestar.middleware.session.base.BaseBackendConfig:1
-msgid ""
-"Bases: :py:class:`~abc.ABC`, :py:class:`~typing.Generic`\\ [:py:obj:"
-"`~litestar.middleware.session.base.BaseSessionBackendT`]"
-msgstr ""
-
-#: ../../../../litestar/middleware/session/base.py:docstring of
-#: litestar.middleware.session.base.BaseBackendConfig:1
 msgid "Configuration for Session middleware backends."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/base.py:docstring of
 #: litestar.middleware.session.base.BaseBackendConfig.key:1
 msgid ""
 "Key to use for the cookie inside the header, e.g. ``session=<data>`` where "
@@ -41,74 +34,73 @@ msgid ""
 msgstr ""
 
 #: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.BaseBackendConfig.key:4
 #: litestar.middleware.session.base.BaseSessionBackend.load_from_connection:8
 #: litestar.middleware.session.base.BaseSessionBackend.serialize_data:6
-#: ../../../../docstring
-#: litestar.middleware.session.base.BaseBackendConfig.key:4
 msgid "Notes"
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/base.py:docstring of
 #: litestar.middleware.session.base.BaseBackendConfig.key:6
 msgid ""
 "If a session cookie exceeds 4KB in size it is split. In this case the key "
 "will be of the format ``session-{segment number}``."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/base.py:docstring of
 #: litestar.middleware.session.base.BaseBackendConfig.max_age:1
 msgid "Maximal age of the cookie before its invalidated."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/base.py:docstring of
 #: litestar.middleware.session.base.BaseBackendConfig.scopes:1
 msgid ""
 "Scopes for the middleware - options are ``http`` and ``websocket`` with the "
 "default being both"
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/base.py:docstring of
 #: litestar.middleware.session.base.BaseBackendConfig.path:1
 msgid ""
 "Path fragment that must exist in the request url for the cookie to be valid."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/base.py:docstring of
 #: litestar.middleware.session.base.BaseBackendConfig.path:3
 msgid "Defaults to ``'/'``."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/base.py:docstring of
 #: litestar.middleware.session.base.BaseBackendConfig.domain:1
 msgid "Domain for which the cookie is valid."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/base.py:docstring of
 #: litestar.middleware.session.base.BaseBackendConfig.secure:1
 msgid "Https is required for the cookie."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/base.py:docstring of
 #: litestar.middleware.session.base.BaseBackendConfig.httponly:1
 msgid "Forbids javascript to access the cookie via 'Document.cookie'."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/base.py:docstring of
 #: litestar.middleware.session.base.BaseBackendConfig.samesite:1
 msgid "Controls whether or not a cookie is sent with cross-site requests."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/base.py:docstring of
 #: litestar.middleware.session.base.BaseBackendConfig.samesite:3
 msgid "Defaults to ``lax``."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/base.py:docstring of
 #: litestar.middleware.session.base.BaseBackendConfig.exclude:1
 msgid "A pattern or list of patterns to skip in the session middleware."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/base.py:docstring of
 #: litestar.middleware.session.base.BaseBackendConfig.exclude_opt_key:1
 msgid ""
 "An identifier to use on routes to disable the session middleware for a "
@@ -154,13 +146,6 @@ msgstr ""
 #: litestar.middleware.session.base.BaseBackendConfig.middleware:21
 msgid ""
 "An instance of DefineMiddleware including ``self`` as the config kwarg value."
-msgstr ""
-
-#: ../../../../litestar/middleware/session/base.py:docstring of
-#: litestar.middleware.session.base.BaseSessionBackend:1
-msgid ""
-"Bases: :py:class:`~abc.ABC`, :py:class:`~typing.Generic`\\ [:py:obj:"
-"`~litestar.middleware.session.base.ConfigT`]"
 msgstr ""
 
 #: ../../../../litestar/middleware/session/base.py:docstring of
@@ -295,14 +280,6 @@ msgstr ""
 msgid ""
 "This should not modify the connection's scope. The data returned by this "
 "method will be stored in the application scope by the middleware"
-msgstr ""
-
-#: ../../../../litestar/middleware/session/base.py:docstring of
-#: litestar.middleware.session.base.SessionMiddleware:1
-msgid ""
-"Bases: :py:class:`~litestar.middleware.base.AbstractMiddleware`, :py:class:"
-"`~typing.Generic`\\ [:py:obj:`~litestar.middleware.session.base."
-"BaseSessionBackendT`]"
 msgstr ""
 
 #: ../../../../litestar/middleware/session/base.py:docstring of

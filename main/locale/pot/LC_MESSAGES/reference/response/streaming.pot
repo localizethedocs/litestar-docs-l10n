@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-08-31 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,11 +19,6 @@ msgstr ""
 
 #: ../../../reference/response/streaming.rst:2
 msgid "streaming"
-msgstr ""
-
-#: ../../../../litestar/response/streaming.py:docstring of
-#: litestar.response.streaming.ASGIStreamingResponse:1
-msgid "Bases: :py:class:`~litestar.response.base.ASGIResponse`"
 msgstr ""
 
 #: ../../../../litestar/response/streaming.py:docstring of
@@ -114,17 +109,6 @@ msgstr ""
 #: ../../../../litestar/response/streaming.py:docstring of
 #: litestar.response.streaming.Stream:1
 msgid ""
-"Bases: :py:class:`~litestar.response.base.Response`\\ [:py:class:"
-"`~collections.abc.Iterable`\\ [:py:class:`str` | :py:class:`bytes`] | :py:"
-"class:`~collections.abc.Iterator`\\ [:py:class:`str` | :py:class:`bytes`] | :"
-"py:class:`~collections.abc.AsyncIterable`\\ [:py:class:`str` | :py:class:"
-"`bytes`] | :py:class:`~collections.abc.AsyncIterator`\\ [:py:class:`str` | :"
-"py:class:`bytes`]]"
-msgstr ""
-
-#: ../../../../litestar/response/streaming.py:docstring of
-#: litestar.response.streaming.Stream:1
-msgid ""
 "An HTTP response that streams the response data as a series of ASGI ``http."
 "response.body`` events."
 msgstr ""
@@ -177,7 +161,7 @@ msgstr ""
 
 #: ../../../../litestar/response/streaming.py:docstring of
 #: litestar.response.streaming.Stream.to_asgi_response:1
-msgid "Create an ASGIStreamingResponse from a StremaingResponse instance."
+msgid "Create an ASGIStreamingResponse from a StreamingResponse instance."
 msgstr ""
 
 #: ../../../../litestar/response/streaming.py:docstring of

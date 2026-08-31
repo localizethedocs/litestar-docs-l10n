@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-08-31 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,11 +19,6 @@ msgstr ""
 
 #: ../../../reference/response/base.rst:2
 msgid "base"
-msgstr ""
-
-#: ../../../../litestar/response/base.py:docstring of
-#: litestar.response.base.ASGIResponse:1
-msgid "Bases: :py:class:`object`"
 msgstr ""
 
 #: ../../../../litestar/response/base.py:docstring of
@@ -158,12 +153,6 @@ msgstr ""
 #: ../../../../litestar/response/base.py:docstring of
 #: litestar.response.base.ASGIResponse.__call__:3
 msgid "The ASGI connection scope."
-msgstr ""
-
-#: ../../../../litestar/response/base.py:docstring of
-#: litestar.response.base.Response:1
-msgid ""
-"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~litestar.response.base.T`]"
 msgstr ""
 
 #: ../../../../litestar/response/base.py:docstring of

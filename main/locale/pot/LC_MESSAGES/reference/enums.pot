@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-30 10:18+0000\n"
+"POT-Creation-Date: 2026-08-31 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,14 +19,6 @@ msgstr ""
 
 #: ../../../reference/enums.rst:2
 msgid "enums"
-msgstr ""
-
-#: ../../../../litestar/enums.py:docstring of
-#: litestar.enums.CompressionEncoding:1 litestar.enums.HttpMethod:1
-#: litestar.enums.MediaType:1 litestar.enums.OpenAPIMediaType:1
-#: litestar.enums.ParamType:1 litestar.enums.RequestEncodingType:1
-#: litestar.enums.ScopeType:1
-msgid "Bases: :py:class:`~enum.StrEnum`"
 msgstr ""
 
 #: ../../../../litestar/enums.py:docstring of

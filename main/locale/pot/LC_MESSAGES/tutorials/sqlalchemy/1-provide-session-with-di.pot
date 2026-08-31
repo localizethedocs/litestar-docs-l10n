@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-30 10:18+0000\n"
+"POT-Creation-Date: 2026-08-31 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -101,7 +101,8 @@ msgid ""
 "    return {\"title\": todo.title, \"done\": todo.done}\n"
 "\n"
 "\n"
-"async def get_todo_by_title(todo_name, session: AsyncSession) -> TodoItem:\n"
+"async def get_todo_by_title(todo_name: str, session: AsyncSession) -> "
+"TodoItem:\n"
 "    query = select(TodoItem).where(TodoItem.title == todo_name)\n"
 "    result = await session.execute(query)\n"
 "    try:\n"
@@ -167,10 +168,7 @@ msgid ""
 msgstr ""
 
 #: ../../../tutorials/sqlalchemy/1-provide-session-with-di.rst:23
-#: ../../../tutorials/sqlalchemy/1-provide-session-with-di.rst:51
 msgid ""
-"async def provide_transaction(state: State) -> AsyncGenerator[AsyncSession, "
-"None]:\n"
 "    async with sessionmaker(bind=state.engine) as session:\n"
 "        try:\n"
 "            async with session.begin():\n"
@@ -193,17 +191,20 @@ msgid ""
 "app = Litestar(\n"
 "    [get_list, add_item, update_item],\n"
 "    dependencies={\"transaction\": provide_transaction},\n"
-"    lifespan=[db_connection],"
+"    lifespan=[db_connection],\n"
+")"
 msgstr ""
 
 #: ../../../tutorials/sqlalchemy/1-provide-session-with-di.rst:35
 msgid ""
-"In the route handlers, the database session is injected by declaring the "
-"``transaction`` name as a function argument. This is automatically provided "
-"by Litestar's dependency injection system at runtime."
+"In the route handlers, the database session is injected by adding a "
+"parameter named ``transaction`` and marking it with :data:`~litestar.di."
+"NamedDependency`. The marker tells Litestar to supply the value from the "
+"``transaction`` dependency at runtime, matching the parameter name against "
+"the dependency key."
 msgstr ""
 
-#: ../../../tutorials/sqlalchemy/1-provide-session-with-di.rst:40
+#: ../../../tutorials/sqlalchemy/1-provide-session-with-di.rst:41
 msgid ""
 "@get(\"/\")\n"
 "async def get_list(transaction: AsyncSession, done: bool | None = None) -> "
@@ -212,7 +213,7 @@ msgid ""
 "transaction)]"
 msgstr ""
 
-#: ../../../tutorials/sqlalchemy/1-provide-session-with-di.rst:45
+#: ../../../tutorials/sqlalchemy/1-provide-session-with-di.rst:46
 msgid ""
 "One final improvement in this script is exception handling. In the previous "
 "version, a :class:`litestar.exceptions.ClientException` is raised inside the "
@@ -222,17 +223,32 @@ msgid ""
 "function."
 msgstr ""
 
-#: ../../../tutorials/sqlalchemy/1-provide-session-with-di.rst:56
+#: ../../../tutorials/sqlalchemy/1-provide-session-with-di.rst:52
+msgid ""
+"async def provide_transaction(state: State) -> AsyncGenerator[AsyncSession, "
+"None]:\n"
+"    async with sessionmaker(bind=state.engine) as session:\n"
+"        try:\n"
+"            async with session.begin():\n"
+"                yield session\n"
+"        except IntegrityError as exc:\n"
+"            raise ClientException(\n"
+"                status_code=HTTP_409_CONFLICT,\n"
+"                detail=str(exc),\n"
+"            ) from exc"
+msgstr ""
+
+#: ../../../tutorials/sqlalchemy/1-provide-session-with-di.rst:57
 msgid ""
 "This change broadens the scope of exception handling to any operation that "
 "uses the database session, not just the insertion of new items."
 msgstr ""
 
-#: ../../../tutorials/sqlalchemy/1-provide-session-with-di.rst:60
+#: ../../../tutorials/sqlalchemy/1-provide-session-with-di.rst:61
 msgid "Compare handlers before and after DI"
 msgstr ""
 
-#: ../../../tutorials/sqlalchemy/1-provide-session-with-di.rst:62
+#: ../../../tutorials/sqlalchemy/1-provide-session-with-di.rst:63
 msgid ""
 "Just for fun, lets compare the sets of application handlers before and after "
 "we introduced dependency injection for our session object:"
@@ -242,7 +258,7 @@ msgstr ""
 msgid "After"
 msgstr ""
 
-#: ../../../tutorials/sqlalchemy/1-provide-session-with-di.rst:70
+#: ../../../tutorials/sqlalchemy/1-provide-session-with-di.rst:71
 msgid ""
 "@get(\"/\")\n"
 "async def get_list(transaction: AsyncSession, done: bool | None = None) -> "
@@ -270,14 +286,15 @@ msgid ""
 "app = Litestar(\n"
 "    [get_list, add_item, update_item],\n"
 "    dependencies={\"transaction\": provide_transaction},\n"
-"    lifespan=[db_connection],"
+"    lifespan=[db_connection],\n"
+")"
 msgstr ""
 
 #: ../../../tutorials/sqlalchemy/1-provide-session-with-di.rst:0
 msgid "Before"
 msgstr ""
 
-#: ../../../tutorials/sqlalchemy/1-provide-session-with-di.rst:77
+#: ../../../tutorials/sqlalchemy/1-provide-session-with-di.rst:78
 msgid ""
 "@get(\"/\")\n"
 "async def get_list(state: State, done: bool | None = None) -> "
@@ -313,15 +330,15 @@ msgid ""
 "    return serialize_todo(todo_item)"
 msgstr ""
 
-#: ../../../tutorials/sqlalchemy/1-provide-session-with-di.rst:81
+#: ../../../tutorials/sqlalchemy/1-provide-session-with-di.rst:82
 msgid "Much better!"
 msgstr ""
 
-#: ../../../tutorials/sqlalchemy/1-provide-session-with-di.rst:84
+#: ../../../tutorials/sqlalchemy/1-provide-session-with-di.rst:85
 msgid "Next steps"
 msgstr ""
 
-#: ../../../tutorials/sqlalchemy/1-provide-session-with-di.rst:86
+#: ../../../tutorials/sqlalchemy/1-provide-session-with-di.rst:87
 msgid ""
 "One of the niceties that we've lost is the ability to receive and return "
 "data to/from our handlers as instances of our data model. In the original "

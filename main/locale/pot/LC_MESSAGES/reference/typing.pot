@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-08-31 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,87 +23,100 @@ msgstr ""
 
 #: ../../../../litestar/typing.py:docstring of
 #: litestar.typing.FieldDefinition:1
-msgid "Bases: :py:class:`object`"
-msgstr ""
-
-#: ../../../../litestar/typing.py:docstring of
-#: litestar.typing.FieldDefinition:1
 msgid "Represents a function parameter or type annotation."
 msgstr ""
 
-#: ../../../../docstring of litestar.typing.FieldDefinition.raw:1
+#: ../../../../litestar/typing.py:docstring of
+#: litestar.typing.FieldDefinition.raw:1
 msgid "The annotation exactly as received."
 msgstr ""
 
-#: ../../../../docstring of litestar.typing.FieldDefinition.annotation:1
+#: ../../../../litestar/typing.py:docstring of
+#: litestar.typing.FieldDefinition.annotation:1
 msgid "The annotation with any \"wrapper\" types removed, e.g. Annotated."
 msgstr ""
 
-#: ../../../../docstring of litestar.typing.FieldDefinition.type_wrappers:1
+#: ../../../../litestar/typing.py:docstring of
+#: litestar.typing.FieldDefinition.type_wrappers:1
 msgid "A set of all \"wrapper\" types, e.g. Annotated."
 msgstr ""
 
-#: ../../../../docstring of litestar.typing.FieldDefinition.origin:1
+#: ../../../../litestar/typing.py:docstring of
+#: litestar.typing.FieldDefinition.origin:1
 msgid ""
 "The result of calling ``get_origin(annotation)`` after unwrapping Annotated, "
 "e.g. list."
 msgstr ""
 
-#: ../../../../docstring of litestar.typing.FieldDefinition.args:1
+#: ../../../../litestar/typing.py:docstring of
+#: litestar.typing.FieldDefinition.args:1
 msgid ""
 "The result of calling ``get_args(annotation)`` after unwrapping Annotated, e."
 "g. (int,)."
 msgstr ""
 
-#: ../../../../docstring of litestar.typing.FieldDefinition.metadata:1
+#: ../../../../litestar/typing.py:docstring of
+#: litestar.typing.FieldDefinition.metadata:1
 msgid "Any metadata associated with the annotation via ``Annotated``."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/typing.py:docstring of
 #: litestar.typing.FieldDefinition.instantiable_origin:1
 msgid ""
 "An equivalent type to ``origin`` that can be safely instantiated. E.g., "
 "``Sequence`` -> ``list``."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/typing.py:docstring of
 #: litestar.typing.FieldDefinition.safe_generic_origin:1
 msgid ""
 "An equivalent type to ``origin`` that can be safely used as a generic type "
 "across all supported Python versions."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/typing.py:docstring of
 #: litestar.typing.FieldDefinition.safe_generic_origin:3
 msgid ""
 "This is to serve safely rebuilding a generic outer type with different args "
 "at runtime."
 msgstr ""
 
-#: ../../../../docstring of litestar.typing.FieldDefinition.inner_types:1
+#: ../../../../litestar/typing.py:docstring of
+#: litestar.typing.FieldDefinition.inner_types:1
 msgid "The type's generic args parsed as ``FieldDefinition``, if applicable."
 msgstr ""
 
-#: ../../../../docstring of litestar.typing.FieldDefinition.default:1
+#: ../../../../litestar/typing.py:docstring of
+#: litestar.typing.FieldDefinition.default:1
 msgid "Default value of the field."
 msgstr ""
 
 #: ../../../../litestar/typing.py:docstring of
-#: litestar.typing.FieldDefinition.from_kwarg:8 ../../../../docstring
 #: litestar.typing.FieldDefinition.extra:1
+#: litestar.typing.FieldDefinition.from_kwarg:8
 msgid "A mapping of extra values."
 msgstr ""
 
 #: ../../../../litestar/typing.py:docstring of
-#: litestar.typing.FieldDefinition.from_kwarg:7 ../../../../docstring
+#: litestar.typing.FieldDefinition.from_kwarg:7
 #: litestar.typing.FieldDefinition.kwarg_definition:1
 msgid "Kwarg Parameter."
 msgstr ""
 
 #: ../../../../litestar/typing.py:docstring of
-#: litestar.typing.FieldDefinition.from_kwarg:4 ../../../../docstring
+#: litestar.typing.FieldDefinition.from_kwarg:4
 #: litestar.typing.FieldDefinition.name:1
 msgid "Field name."
+msgstr ""
+
+#: ../../../../litestar/typing.py:docstring of
+#: litestar.typing.FieldDefinition.get_from_metadata:1
+msgid "Return the next instance of ``type_`` in the field's metadata"
+msgstr ""
+
+#: ../../../../litestar/typing.py:docstring of
+#: litestar.typing.FieldDefinition.has_metadata:1
+msgid "Whether the field has any ``type_`` in its metadata"
 msgstr ""
 
 #: ../../../../litestar/typing.py:docstring of
@@ -162,6 +175,18 @@ msgstr ""
 #: ../../../../litestar/typing.py:docstring of
 #: litestar.typing.FieldDefinition.is_parameter_field:1
 msgid "Check if the field type is a parameter kwarg value."
+msgstr ""
+
+#: ../../../../litestar/typing.py:docstring of
+#: litestar.typing.FieldDefinition.is_non_marker_parameter_field:1
+msgid "Check if the field type is a ParameterKwarg that's not a marker only."
+msgstr ""
+
+#: ../../../../litestar/typing.py:docstring of
+#: litestar.typing.FieldDefinition.is_non_marker_parameter_field:3
+msgid ""
+"A marker is considered an instance of 'ParameterKwarg' without any "
+"constraints applied, usually produced by 'FromQuery[]', 'FromPath[]', etc."
 msgstr ""
 
 #: ../../../../litestar/typing.py:docstring of
@@ -321,7 +346,12 @@ msgid ""
 msgstr ""
 
 #: ../../../../litestar/typing.py:docstring of
-#: litestar.typing.FieldDefinition.get_type_hints:6
+#: litestar.typing.FieldDefinition.get_type_hints:5
+msgid "Additional names to use when resolving forward references."
+msgstr ""
+
+#: ../../../../litestar/typing.py:docstring of
+#: litestar.typing.FieldDefinition.get_type_hints:7
 msgid "The type hints."
 msgstr ""
 

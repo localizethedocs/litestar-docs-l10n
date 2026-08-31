@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-08-31 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,13 +23,6 @@ msgstr ""
 
 #: ../../../reference/middleware/session/client_side.rst:0
 msgid "members"
-msgstr ""
-
-#: ../../../../litestar/middleware/session/client_side.py:docstring of
-#: litestar.middleware.session.client_side.ClientSideSessionBackend:1
-msgid ""
-"Bases: :py:class:`~litestar.middleware.session.base.BaseSessionBackend`\\ [:"
-"py:class:`CookieBackendConfig`]"
 msgstr ""
 
 #: ../../../../litestar/middleware/session/client_side.py:docstring of
@@ -71,7 +64,6 @@ msgstr ""
 
 #: ../../../../litestar/middleware/session/client_side.py:docstring of
 #: litestar.middleware.session.client_side.ClientSideSessionBackend.dump_data:7
-#: ../../../../docstring
 #: litestar.middleware.session.client_side.CookieBackendConfig.key:4
 msgid "Notes"
 msgstr ""
@@ -201,89 +193,82 @@ msgstr ""
 
 #: ../../../../litestar/middleware/session/client_side.py:docstring of
 #: litestar.middleware.session.client_side.CookieBackendConfig:1
-msgid ""
-"Bases: :py:class:`~litestar.middleware.session.base.BaseBackendConfig`\\ [:"
-"py:class:`~litestar.middleware.session.client_side.ClientSideSessionBackend`]"
-msgstr ""
-
-#: ../../../../litestar/middleware/session/client_side.py:docstring of
-#: litestar.middleware.session.client_side.CookieBackendConfig:1
 msgid "Configuration for [SessionMiddleware] middleware."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/client_side.py:docstring of
 #: litestar.middleware.session.client_side.CookieBackendConfig.secret:1
 msgid "A secret key to use for generating an encryption key."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/client_side.py:docstring of
 #: litestar.middleware.session.client_side.CookieBackendConfig.secret:3
 msgid ""
 "Must have a length of 16 (128 bits), 24 (192 bits) or 32 (256 bits) "
 "characters."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/client_side.py:docstring of
 #: litestar.middleware.session.client_side.CookieBackendConfig.key:1
 msgid ""
 "Key to use for the cookie inside the header, e.g. ``session=<data>`` where "
 "``session`` is the cookie key and ``<data>`` is the session data."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/client_side.py:docstring of
 #: litestar.middleware.session.client_side.CookieBackendConfig.key:6
 msgid ""
 "If a session cookie exceeds 4KB in size it is split. In this case the key "
 "will be of the format ``session-{segment number}``."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/client_side.py:docstring of
 #: litestar.middleware.session.client_side.CookieBackendConfig.max_age:1
 msgid "Maximal age of the cookie before its invalidated."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/client_side.py:docstring of
 #: litestar.middleware.session.client_side.CookieBackendConfig.path:1
 msgid ""
 "Path fragment that must exist in the request url for the cookie to be valid."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/client_side.py:docstring of
 #: litestar.middleware.session.client_side.CookieBackendConfig.path:3
 msgid "Defaults to ``'/'``."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/client_side.py:docstring of
 #: litestar.middleware.session.client_side.CookieBackendConfig.domain:1
 msgid "Domain for which the cookie is valid."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/client_side.py:docstring of
 #: litestar.middleware.session.client_side.CookieBackendConfig.secure:1
 msgid "Https is required for the cookie."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/client_side.py:docstring of
 #: litestar.middleware.session.client_side.CookieBackendConfig.httponly:1
 msgid "Forbids javascript to access the cookie via 'Document.cookie'."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/client_side.py:docstring of
 #: litestar.middleware.session.client_side.CookieBackendConfig.samesite:1
 msgid "Controls whether or not a cookie is sent with cross-site requests."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/client_side.py:docstring of
 #: litestar.middleware.session.client_side.CookieBackendConfig.samesite:3
 msgid "Defaults to ``lax``."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/client_side.py:docstring of
 #: litestar.middleware.session.client_side.CookieBackendConfig.exclude:1
 msgid "A pattern or list of patterns to skip in the session middleware."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/session/client_side.py:docstring of
 #: litestar.middleware.session.client_side.CookieBackendConfig.exclude_opt_key:1
 msgid ""
 "An identifier to use on routes to disable the session middleware for a "

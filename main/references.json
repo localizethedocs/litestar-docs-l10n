@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-04-12 22:18:28 -0400",
-      "hash" : "8b1aed58873d79f62063d00ae41dd298e1092066",
-      "title" : "chore: fix pyright type-ignore comments to use specific error codes (#4689)"
+      "date" : "2026-08-24 20:19:58 +0000",
+      "hash" : "cbc0c51abd59b11e7b429be0aba6639e38488e2c",
+      "title" : "docs: use absolute URL for contribution guide link in PyPI README (#5016)"
     }
   },
   "type" : "branch",

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-08-31 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,11 +31,6 @@ msgstr ""
 
 #: ../../../../litestar/stores/base.py:docstring of
 #: litestar.stores.base.NamespacedStore:1
-msgid "Bases: :py:class:`~litestar.stores.base.Store`"
-msgstr ""
-
-#: ../../../../litestar/stores/base.py:docstring of
-#: litestar.stores.base.NamespacedStore:1
 msgid "A subclass of :class:`Store`, offering hierarchical namespacing."
 msgstr ""
 
@@ -53,11 +48,6 @@ msgid ""
 "namespace of the current namespace. Bulk actions on the parent namespace "
 "should affect all child namespaces, whereas other operations on all "
 "namespaces should be isolated."
-msgstr ""
-
-#: ../../../../litestar/stores/base.py:docstring of
-#: litestar.stores.base.StorageObject:1
-msgid "Bases: :py:class:`~msgspec.Struct`"
 msgstr ""
 
 #: ../../../../litestar/stores/base.py:docstring of
@@ -92,11 +82,6 @@ msgstr ""
 #: ../../../../litestar/stores/base.py:docstring of
 #: litestar.stores.base.StorageObject.from_bytes:1
 msgid "Load a previously encoded with :meth:`StorageObject.to_bytes`"
-msgstr ""
-
-#: ../../../../litestar/stores/base.py:docstring of
-#: litestar.stores.base.Store:1
-msgid "Bases: :py:class:`~abc.ABC`"
 msgstr ""
 
 #: ../../../../litestar/stores/base.py:docstring of

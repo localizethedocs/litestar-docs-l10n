@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-09 09:38+0000\n"
+"POT-Creation-Date: 2026-08-31 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,14 +21,11 @@ msgstr ""
 msgid "app"
 msgstr ""
 
-#: ../../../../docstring of litestar.app.DEFAULT_OPENAPI_CONFIG:1
+#: ../../../../litestar/app.py:docstring of
+#: litestar.app.DEFAULT_OPENAPI_CONFIG:1
 msgid ""
 "The default OpenAPI config used if not configuration is explicitly passed to "
 "the :class:`Litestar <.app.Litestar>` instance constructor."
-msgstr ""
-
-#: ../../../../litestar/app.py:docstring of litestar.app.HandlerIndex:1
-msgid "Bases: :py:class:`~typing.TypedDict`"
 msgstr ""
 
 #: ../../../../litestar/app.py:docstring of litestar.app.HandlerIndex:1
@@ -39,25 +36,23 @@ msgstr ""
 msgid "It's returned from the 'get_handler_index_by_name' utility method."
 msgstr ""
 
-#: ../../../../docstring of litestar.app.HandlerIndex.paths:1
+#: ../../../../litestar/app.py:docstring of litestar.app.HandlerIndex.paths:1
 msgid "Full route paths to the route handler."
 msgstr ""
 
-#: ../../../../docstring of litestar.app.HandlerIndex.handler:1
+#: ../../../../litestar/app.py:docstring of litestar.app.HandlerIndex.handler:1
 msgid "Route handler instance."
 msgstr ""
 
-#: ../../../../docstring of litestar.app.HandlerIndex.identifier:1
+#: ../../../../litestar/app.py:docstring of
+#: litestar.app.HandlerIndex.identifier:1
 msgid "Unique identifier of the handler."
 msgstr ""
 
-#: ../../../../docstring of litestar.app.HandlerIndex.identifier:3
+#: ../../../../litestar/app.py:docstring of
+#: litestar.app.HandlerIndex.identifier:3
 msgid ""
 "Either equal to ``__name__`` attribute or ``__str__`` value of the handler."
-msgstr ""
-
-#: ../../../../litestar/app.py:docstring of litestar.app.Litestar:1
-msgid "Bases: :py:class:`~litestar.router.Router`"
 msgstr ""
 
 #: ../../../../litestar/app.py:docstring of litestar.app.Litestar:1

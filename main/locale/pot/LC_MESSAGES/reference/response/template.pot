@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-08-31 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,12 +19,6 @@ msgstr ""
 
 #: ../../../reference/response/template.rst:2
 msgid "template"
-msgstr ""
-
-#: ../../../../litestar/response/template.py:docstring of
-#: litestar.response.template.Template:1
-msgid ""
-"Bases: :py:class:`~litestar.response.base.Response`\\ [:py:class:`bytes`]"
 msgstr ""
 
 #: ../../../../litestar/response/template.py:docstring of
@@ -50,8 +44,8 @@ msgstr ""
 #: ../../../../litestar/response/template.py:docstring of
 #: litestar.response.template.Template.__init__:4
 msgid ""
-"A string representing the template, e.g. ``tmpl = \"Hello <strong>World</"
-"strong>\"``."
+"A string representing the template, e.g. ``template_str = \"Hello "
+"<strong>World</strong>\"``."
 msgstr ""
 
 #: ../../../../litestar/response/template.py:docstring of

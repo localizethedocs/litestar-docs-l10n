@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-08-31 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,11 +19,6 @@ msgstr ""
 
 #: ../../../reference/middleware/authentication.rst:2
 msgid "authentication"
-msgstr ""
-
-#: ../../../../litestar/middleware/authentication.py:docstring of
-#: litestar.middleware.authentication.AbstractAuthenticationMiddleware:1
-msgid "Bases: :py:class:`~abc.ABC`"
 msgstr ""
 
 #: ../../../../litestar/middleware/authentication.py:docstring of
@@ -141,21 +136,16 @@ msgstr ""
 
 #: ../../../../litestar/middleware/authentication.py:docstring of
 #: litestar.middleware.authentication.AuthenticationResult:1
-msgid "Bases: :py:class:`object`"
-msgstr ""
-
-#: ../../../../litestar/middleware/authentication.py:docstring of
-#: litestar.middleware.authentication.AuthenticationResult:1
 msgid "Dataclass for authentication result."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/authentication.py:docstring of
 #: litestar.middleware.authentication.AuthenticationResult.user:1
 msgid ""
 "The user model, this can be any value corresponding to a user of the API."
 msgstr ""
 
-#: ../../../../docstring of
+#: ../../../../litestar/middleware/authentication.py:docstring of
 #: litestar.middleware.authentication.AuthenticationResult.auth:1
 msgid "The auth value, this can for example be a JWT token."
 msgstr ""

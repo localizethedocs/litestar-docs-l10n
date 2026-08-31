@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-08-31 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -626,7 +626,7 @@ msgstr ""
 
 #: ../../../usage/channels.rst:330
 msgid ""
-"The same can be achieve by passing :meth:`Websocket.send_text() <litestar."
+"The same can be achieved by passing :meth:`Websocket.send_text() <litestar."
 "connection.WebSocket.send_text>` as the callback to :meth:`~Subscriber."
 "run_in_background`. This will cause the WebSocket's method to be invoked "
 "every time a new :term:`event` becomes available in the :term:`stream <event "
@@ -779,7 +779,7 @@ msgstr ""
 #: ../../../usage/channels.rst:401
 msgid ""
 "A Redis based backend, using `Pub/Sub <https://redis.io/docs/manual/pubsub/"
-">`_ to delivery messages. This Redis backend has a low latency and overhead "
+">`_ to deliver messages. This Redis backend has a low latency and overhead "
 "and is generally recommended if :term:`history` is not needed"
 msgstr ""
 
@@ -811,32 +811,32 @@ msgstr ""
 
 #: ../../../usage/channels.rst:415
 msgid ""
-"A postgres backend using the `psycopg3 <https://www.psycopg.org/psycopg3/"
-"docs/>`_ async driver"
+"A postgres backend using version 3.2.4 or newer of the `psycopg3 <https://"
+"www.psycopg.org/psycopg3/docs/>`_ async driver"
 msgstr ""
 
-#: ../../../usage/channels.rst:418
+#: ../../../usage/channels.rst:419
 msgid "Integrating with websocket handlers"
 msgstr ""
 
-#: ../../../usage/channels.rst:421
+#: ../../../usage/channels.rst:422
 msgid "Generating route handlers"
 msgstr ""
 
-#: ../../../usage/channels.rst:423
+#: ../../../usage/channels.rst:424
 msgid ""
 "A common pattern is to create a route handler per :term:`channel`, sending "
 "data to the connected client from that channel. This can be fully automated, "
 "using the plugin to create these route handlers."
 msgstr ""
 
-#: ../../../usage/channels.rst:427
+#: ../../../usage/channels.rst:428
 msgid ""
 "Setting ``create_ws_route_handlers=True`` will create route handlers for all "
 "``channels``"
 msgstr ""
 
-#: ../../../usage/channels.rst:427
+#: ../../../usage/channels.rst:428
 msgid ""
 "from litestar import Litestar\n"
 "from litestar.channels import ChannelsPlugin\n"
@@ -851,17 +851,17 @@ msgid ""
 "app = Litestar(plugins=[channels_plugin])"
 msgstr ""
 
-#: ../../../usage/channels.rst:430
+#: ../../../usage/channels.rst:431
 msgid ""
 "The generated route handlers can optionally be configured to send the :term:"
 "`channel`'s :term:`history` after a client has connected:"
 msgstr ""
 
-#: ../../../usage/channels.rst:433
+#: ../../../usage/channels.rst:434
 msgid "Sending the first 10 :term:`history` entries after a client connects"
 msgstr ""
 
-#: ../../../usage/channels.rst:433
+#: ../../../usage/channels.rst:434
 msgid ""
 "from litestar import Litestar\n"
 "from litestar.channels import ChannelsPlugin\n"
@@ -880,7 +880,7 @@ msgid ""
 "app = Litestar(plugins=[channels_plugin])\n"
 msgstr ""
 
-#: ../../../usage/channels.rst:436
+#: ../../../usage/channels.rst:437
 msgid ""
 "When using the :paramref:`~litestar.channels.plugin.ChannelsPlugin."
 "arbitrary_channels_allowed` parameter on the :class:`ChannelsPlugin`, a "
