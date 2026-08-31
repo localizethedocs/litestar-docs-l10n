@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-09 09:36+0000\n"
+"POT-Creation-Date: 2026-08-31 17:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -148,6 +148,11 @@ msgstr ""
 #: ../../../../litestar/exceptions/__init__.py:docstring of
 #: litestar.exceptions.dto_exceptions.InvalidAnnotationException:1
 msgid "Unexpected DTO type argument."
+msgstr ""
+
+#: ../../../../litestar/exceptions/__init__.py:docstring of
+#: litestar.exceptions.base_exceptions.LitestarDeprecationWarning:1
+msgid "Bases: :py:class:`DeprecationWarning`"
 msgstr ""
 
 #: ../../../../litestar/exceptions/__init__.py:docstring of

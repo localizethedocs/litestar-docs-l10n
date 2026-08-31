@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-09 09:36+0000\n"
+"POT-Creation-Date: 2026-08-31 17:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,15 +38,15 @@ msgstr ""
 
 #: ../../../tutorials/todo-app/1-accessing-the-list.rst:12
 #: ../../../tutorials/todo-app/1-accessing-the-list.rst:44
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:75
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:100
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:107
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:118
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:131
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:161
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:180
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:200
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:230
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:74
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:99
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:106
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:117
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:130
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:160
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:179
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:199
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:229
 msgid "``app.py``"
 msgstr ""
 
@@ -243,20 +243,21 @@ msgstr ""
 
 #: ../../../tutorials/todo-app/1-accessing-the-list.rst:67
 msgid ""
-"For this you can employ query parameters; to define a query parameter, all "
-"that's needed is to add an otherwise unused parameter to the function. "
-"Litestar will recognize this and infer that it's going to be used as a query "
-"parameter. When a request is being made, the query parameter will be "
-"extracted from the URL, and passed to the function parameter of the same "
-"name."
+"For this you can employ query parameters; to define a query parameter, add a "
+"parameter to the handler function and annotate it with :data:`~.params."
+"FromQuery`, parameterised by the type you expect the value to have. When a "
+"request is being made, the query parameter will be extracted from the URL, "
+"converted to the declared type, and passed to the function parameter of the "
+"same name."
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:75
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:74
 msgid ""
 "from dataclasses import dataclass\n"
 "from typing import List\n"
 "\n"
 "from litestar import Litestar, get\n"
+"from litestar.params import FromQuery\n"
 "\n"
 "\n"
 "@dataclass\n"
@@ -273,7 +274,7 @@ msgid ""
 "\n"
 "\n"
 "@get(\"/\")\n"
-"async def get_list(done: str) -> List[TodoItem]:\n"
+"async def get_list(done: FromQuery[str]) -> List[TodoItem]:\n"
 "    if done == \"1\":\n"
 "        return [item for item in TODO_LIST if item.done]\n"
 "    return [item for item in TODO_LIST if not item.done]\n"
@@ -282,11 +283,12 @@ msgid ""
 "app = Litestar([get_list])"
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:75
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:74
 msgid ""
 "from dataclasses import dataclass\n"
 "\n"
 "from litestar import Litestar, get\n"
+"from litestar.params import FromQuery\n"
 "\n"
 "\n"
 "@dataclass\n"
@@ -303,7 +305,7 @@ msgid ""
 "\n"
 "\n"
 "@get(\"/\")\n"
-"async def get_list(done: str) -> list[TodoItem]:\n"
+"async def get_list(done: FromQuery[str]) -> list[TodoItem]:\n"
 "    if done == \"1\":\n"
 "        return [item for item in TODO_LIST if item.done]\n"
 "    return [item for item in TODO_LIST if not item.done]\n"
@@ -312,17 +314,17 @@ msgid ""
 "app = Litestar([get_list])"
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:82
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:81
 msgid ""
 "Visiting http://127.0.0.1:8000?done=1 will give you all the TODOs that have "
 "been marked as *done*"
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:88
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:87
 msgid "while http://127.0.0.1:8000?done=0 will return only those not yet done"
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:91
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:90
 msgid ""
 "At first glance this seems to work just fine, but you might be able to spot "
 "a problem: If you input anything other than ``?done=1``, it would still "
@@ -330,20 +332,21 @@ msgid ""
 "same result as ``?done=0``."
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:95
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:94
 msgid ""
 "An easy solution for this would be to simply check if the query parameter is "
 "either ``1`` or ``0``, and return a response with an HTTP status code that "
 "indicates an error if it's something else:"
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:100
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:99
 msgid ""
 "from dataclasses import dataclass\n"
 "from typing import List\n"
 "\n"
 "from litestar import Litestar, get\n"
 "from litestar.exceptions import HTTPException\n"
+"from litestar.params import FromQuery\n"
 "\n"
 "\n"
 "@dataclass\n"
@@ -360,7 +363,7 @@ msgid ""
 "\n"
 "\n"
 "@get(\"/\")\n"
-"async def get_list(done: str) -> List[TodoItem]:\n"
+"async def get_list(done: FromQuery[str]) -> List[TodoItem]:\n"
 "    if done == \"1\":\n"
 "        return [item for item in TODO_LIST if item.done]\n"
 "    if done == \"0\":\n"
@@ -372,12 +375,13 @@ msgid ""
 "app = Litestar([get_list])"
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:100
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:99
 msgid ""
 "from dataclasses import dataclass\n"
 "\n"
 "from litestar import Litestar, get\n"
 "from litestar.exceptions import HTTPException\n"
+"from litestar.params import FromQuery\n"
 "\n"
 "\n"
 "@dataclass\n"
@@ -394,7 +398,7 @@ msgid ""
 "\n"
 "\n"
 "@get(\"/\")\n"
-"async def get_list(done: str) -> list[TodoItem]:\n"
+"async def get_list(done: FromQuery[str]) -> list[TodoItem]:\n"
 "    if done == \"1\":\n"
 "        return [item for item in TODO_LIST if item.done]\n"
 "    if done == \"0\":\n"
@@ -406,31 +410,31 @@ msgid ""
 "app = Litestar([get_list])"
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:104
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:103
 msgid ""
 "If the query parameter equals ``1``, return all items that have "
 "``done=True``:"
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:107
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:106
 msgid ""
 "if done == \"1\":\n"
 "    return [item for item in TODO_LIST if item.done]"
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:115
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:114
 msgid ""
 "If the query parameter equals ``0``, return all items that have "
 "``done=False``:"
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:118
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:117
 msgid ""
 "if done == \"0\":\n"
 "    return [item for item in TODO_LIST if not item.done]"
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:125
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:124
 msgid ""
 "Finally, if the query parameter has any other value, an :exc:`HTTPException` "
 "will be raised. Raising an ``HTTPException`` tells Litestar that something "
@@ -439,19 +443,19 @@ msgid ""
 "error message supplied."
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:131
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:130
 msgid ""
 "raise HTTPException(f\"Invalid query parameter value: {done!r}\", "
 "status_code=400)"
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:141
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:140
 msgid ""
 "Try to access http://127.0.0.1:8000?done=john now and you will get this "
 "error message"
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:144
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:143
 msgid ""
 "Now we've got that out of the way, but your code has grown to be quite "
 "complex for such a simple task. You're probably thinking `\"there must be a "
@@ -460,11 +464,11 @@ msgid ""
 "Litestar handle them for you!"
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:152
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:151
 msgid "Converting and validating query parameters"
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:154
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:153
 msgid ""
 "As mentioned earlier, type annotations can be used for more than static type "
 "checking in Litestar; they can also define and configure behaviour. In this "
@@ -474,12 +478,13 @@ msgid ""
 "value not be a valid boolean."
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:161
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:160
 msgid ""
 "from dataclasses import dataclass\n"
 "from typing import List\n"
 "\n"
 "from litestar import Litestar, get\n"
+"from litestar.params import FromQuery\n"
 "\n"
 "\n"
 "@dataclass\n"
@@ -496,18 +501,19 @@ msgid ""
 "\n"
 "\n"
 "@get(\"/\")\n"
-"async def get_list(done: bool) -> List[TodoItem]:\n"
+"async def get_list(done: FromQuery[bool]) -> List[TodoItem]:\n"
 "    return [item for item in TODO_LIST if item.done == done]\n"
 "\n"
 "\n"
 "app = Litestar([get_list])"
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:161
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:160
 msgid ""
 "from dataclasses import dataclass\n"
 "\n"
 "from litestar import Litestar, get\n"
+"from litestar.params import FromQuery\n"
 "\n"
 "\n"
 "@dataclass\n"
@@ -524,93 +530,97 @@ msgid ""
 "\n"
 "\n"
 "@get(\"/\")\n"
-"async def get_list(done: bool) -> list[TodoItem]:\n"
+"async def get_list(done: FromQuery[bool]) -> list[TodoItem]:\n"
 "    return [item for item in TODO_LIST if item.done == done]\n"
 "\n"
 "\n"
 "app = Litestar([get_list])"
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:168
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:167
 msgid ""
 "Browse to http://127.0.0.1:8000?done=john from our earlier example, and you "
 "will see it now results in this descriptive error message"
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:172
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:171
 msgid "**What's happening here?**"
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:174
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:173
 msgid ""
-"Since :class:`bool` is being used as the type annotation for the ``done`` "
-"parameter, Litestar will try to convert the value into a :class:`bool` "
-"first. Since ``john`` (arguably) is not a representation of a boolean value, "
-"it will return an error response instead."
+"The parameter is now declared as ``done: FromQuery[bool]``. The ``bool`` "
+"inside the brackets tells Litestar to convert the incoming string into a :"
+"class:`bool` before passing it to the handler. Since ``john`` (arguably) is "
+"not a representation of a boolean value, it will return an error response "
+"instead."
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:180
-msgid "async def get_list(done: bool) -> List[TodoItem]:"
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:179
+msgid "async def get_list(done: FromQuery[bool]) -> List[TodoItem]:"
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:187
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:186
 msgid ""
 "It is important to note that this conversion is not the result of calling :"
 "class:`bool` on the raw value. ``bool(\"john\")`` would be :obj:`True`, "
 "since Python considers all non-empty strings to be truthy."
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:191
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:190
 msgid ""
 "Litestar however supports customary boolean representation commonly used in "
 "the HTTP world; ``true`` and ``1`` are both converted to :obj:`True`, while "
 "``false`` and ``0`` are converted to be :obj:`False`."
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:196
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:195
 msgid ""
-"If the conversion is successful however, ``done`` is now a :class:`bool`, "
-"which can then be compared against the ``TodoItem.done`` attribute:"
+"If the conversion is successful however, ``done`` is now a :class:`bool` "
+"(extracted from the ``FromQuery[bool]`` declaration), which can then be "
+"compared against the ``TodoItem.done`` attribute:"
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:200
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:199
 msgid "return [item for item in TODO_LIST if item.done == done]"
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:210
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:209
 msgid ""
 ":ref:`Routing - Parameters - Type coercion <usage/routing/parameters:type "
 "coercion>`"
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:214
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:213
 msgid "Making the query parameter optional"
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:216
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:215
 msgid ""
 "There is one problem left to solve though, and that is, what happens when "
 "you want to get **all** items, done or not, and omit the query parameter?"
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:221
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:220
 msgid "Omitting the ``?done`` query parameter will result in an error"
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:223
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:222
 msgid ""
-"Because the query parameter has been defined as ``done: bool`` without "
-"giving it a default value, it will be treated as a required parameter - just "
-"like a regular function parameter. If instead you want this to be optional, "
-"a default value needs to be supplied."
+"Because the query parameter has been defined as ``done: FromQuery[bool]`` "
+"without giving it a default value, it will be treated as a required "
+"parameter - just like a regular function parameter. If instead you want this "
+"to be optional, a default value needs to be supplied (e.g. ``done: "
+"FromQuery[Optional[bool]] = None``)."
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:230
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:229
 msgid ""
 "from dataclasses import dataclass\n"
 "from typing import List, Optional\n"
 "\n"
 "from litestar import Litestar, get\n"
+"from litestar.params import FromQuery\n"
 "\n"
 "\n"
 "@dataclass\n"
@@ -627,7 +637,8 @@ msgid ""
 "\n"
 "\n"
 "@get(\"/\")\n"
-"async def get_list(done: Optional[bool] = None) -> List[TodoItem]:\n"
+"async def get_list(done: FromQuery[Optional[bool]] = None) -> "
+"List[TodoItem]:\n"
 "    if done is None:\n"
 "        return TODO_LIST\n"
 "    return [item for item in TODO_LIST if item.done == done]\n"
@@ -636,12 +647,13 @@ msgid ""
 "app = Litestar([get_list])"
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:230
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:229
 msgid ""
 "from dataclasses import dataclass\n"
 "from typing import Optional\n"
 "\n"
 "from litestar import Litestar, get\n"
+"from litestar.params import FromQuery\n"
 "\n"
 "\n"
 "@dataclass\n"
@@ -658,7 +670,8 @@ msgid ""
 "\n"
 "\n"
 "@get(\"/\")\n"
-"async def get_list(done: Optional[bool] = None) -> list[TodoItem]:\n"
+"async def get_list(done: FromQuery[Optional[bool]] = None) -> "
+"list[TodoItem]:\n"
 "    if done is None:\n"
 "        return TODO_LIST\n"
 "    return [item for item in TODO_LIST if item.done == done]\n"
@@ -667,11 +680,12 @@ msgid ""
 "app = Litestar([get_list])"
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:230
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:229
 msgid ""
 "from dataclasses import dataclass\n"
 "\n"
 "from litestar import Litestar, get\n"
+"from litestar.params import FromQuery\n"
 "\n"
 "\n"
 "@dataclass\n"
@@ -688,7 +702,7 @@ msgid ""
 "\n"
 "\n"
 "@get(\"/\")\n"
-"async def get_list(done: bool | None = None) -> list[TodoItem]:\n"
+"async def get_list(done: FromQuery[bool | None] = None) -> list[TodoItem]:\n"
 "    if done is None:\n"
 "        return TODO_LIST\n"
 "    return [item for item in TODO_LIST if item.done == done]\n"
@@ -697,13 +711,13 @@ msgid ""
 "app = Litestar([get_list])"
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:237
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:236
 msgid ""
 "Browsing to http://localhost:8000 once more, you will now see it does not "
 "return an error if the query parameter is omitted"
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:242
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:241
 msgid ""
 "In this instance, the default has been set to :obj:`None`, since we don't "
 "want to do any filtering if no ``done`` status is specified. If instead you "
@@ -711,17 +725,17 @@ msgid ""
 "to :obj:`False` instead."
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:249
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:248
 msgid ""
 ":ref:`Routing - Parameters - Query Parameters <usage/routing/parameters:"
 "query parameters>`"
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:253
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:252
 msgid "Interactive documentation"
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:255
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:254
 msgid ""
 "So far we have explored our TODO application by navigating to it manually, "
 "but there is another way: Litestar comes with interactive API documentation, "
@@ -729,23 +743,23 @@ msgid ""
 "(``litestar run``) and visit http://127.0.0.1:8000/schema/swagger"
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:262
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:261
 msgid ""
 "The route handler set up earlier will show up in the interactive "
 "documentation"
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:265
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:264
 msgid ""
 "This documentation not only gives an overview of the API you have "
 "constructed, but also allows you to send requests to it."
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:270
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:269
 msgid "Executing the same requests we did earlier"
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:274
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:273
 msgid ""
 "This is made possible by `Swagger <https://swagger.io/>`_ and `OpenAPI "
 "<https://www.openapis.org/>`_. Litestar generates an OpenAPI schema based on "
@@ -753,7 +767,7 @@ msgid ""
 "interactive documentation."
 msgstr ""
 
-#: ../../../tutorials/todo-app/1-accessing-the-list.rst:280
+#: ../../../tutorials/todo-app/1-accessing-the-list.rst:279
 msgid ""
 "In addition to Swagger, Litestar serves the documentation from the generated "
 "OpenAPI schema with `ReDoc <https://redocly.com/>`_ and `Stoplight Elements "

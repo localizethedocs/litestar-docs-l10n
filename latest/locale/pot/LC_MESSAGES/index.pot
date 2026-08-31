@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-09 09:36+0000\n"
+"POT-Creation-Date: 2026-08-31 17:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -152,7 +152,7 @@ msgid ":code:`pip install 'litestar[prometheus]'`"
 msgstr ""
 
 #: ../../../index.rst:50
-msgid ":doc:`Open Telemetry Instrumentation </usage/metrics/open-telemetry>`"
+msgid ":doc:`Open Telemetry Instrumentation </usage/metrics/opentelemetry>`"
 msgstr ""
 
 #: ../../../index.rst:51
