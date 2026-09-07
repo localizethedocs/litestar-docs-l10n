@@ -1,0 +1,426 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/datastructures/response_containers.rst:2
+msgid "response_containers"
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.ResponseContainer:1
+msgid ""
+"Bases: :py:class:`~abc.ABC`, :py:class:`~pydantic.generics.GenericModel`, :"
+"py:class:`~typing.Generic`\\ [:py:obj:`~starlite.datastructures."
+"response_containers.R`]"
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.ResponseContainer:1
+msgid "Generic response container."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.response_containers.ResponseContainer.background:1
+msgid ""
+"A :class:`BackgroundTask <starlite.datastructures.BackgroundTask>` instance "
+"or."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.response_containers.ResponseContainer.background:3
+msgid ""
+":class:`BackgroundTasks <starlite.datastructures.BackgroundTasks>` to "
+"execute after the response is finished. Defaults to None."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.response_containers.ResponseContainer.headers:1
+msgid "A string/string dictionary of response headers."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.response_containers.ResponseContainer.headers:3
+msgid "Header keys are insensitive. Defaults to None."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.response_containers.ResponseContainer.cookies:1
+msgid ""
+"A list of Cookie instances to be set under the response 'Set-Cookie' header."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.response_containers.ResponseContainer.cookies:3
+#: starlite.datastructures.response_containers.Template.context:3
+msgid "Defaults to None."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.response_containers.ResponseContainer.media_type:1
+msgid "If defined, overrides the media type configured in the route decorator."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.response_containers.ResponseContainer.encoding:1
+msgid "The encoding to be used for the response headers."
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.ResponseContainer.to_response:1
+msgid "Abstract method that should be implemented by subclasses."
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.File.to_response:0
+#: starlite.datastructures.response_containers.File.validate_file_system:0
+#: starlite.datastructures.response_containers.File.validate_status_code:0
+#: starlite.datastructures.response_containers.Redirect.to_response:0
+#: starlite.datastructures.response_containers.ResponseContainer.to_response:0
+#: starlite.datastructures.response_containers.Stream.to_response:0
+#: starlite.datastructures.response_containers.Stream.validate_iterator:0
+#: starlite.datastructures.response_containers.Template.create_template_context:0
+#: starlite.datastructures.response_containers.Template.to_response:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.File.to_response:3
+#: starlite.datastructures.response_containers.Redirect.to_response:3
+#: starlite.datastructures.response_containers.ResponseContainer.to_response:3
+#: starlite.datastructures.response_containers.Stream.to_response:3
+#: starlite.datastructures.response_containers.Template.to_response:3
+msgid "A dictionary of headers."
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.File.to_response:4
+#: starlite.datastructures.response_containers.Redirect.to_response:4
+#: starlite.datastructures.response_containers.ResponseContainer.to_response:4
+#: starlite.datastructures.response_containers.Stream.to_response:4
+#: starlite.datastructures.response_containers.Template.to_response:4
+msgid ""
+"A string or member of the :class:`MediaType <starlite.enums.MediaType>` enum."
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.File.to_response:5
+#: starlite.datastructures.response_containers.Redirect.to_response:5
+#: starlite.datastructures.response_containers.ResponseContainer.to_response:5
+#: starlite.datastructures.response_containers.Stream.to_response:5
+#: starlite.datastructures.response_containers.Template.to_response:5
+msgid "A response status code."
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.File.to_response:6
+#: starlite.datastructures.response_containers.Redirect.to_response:6
+#: starlite.datastructures.response_containers.ResponseContainer.to_response:6
+#: starlite.datastructures.response_containers.Stream.to_response:6
+#: starlite.datastructures.response_containers.Template.to_response:6
+msgid "The :class:`Starlite <starlite.app.Starlite>` application instance."
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.File.to_response:7
+#: starlite.datastructures.response_containers.Redirect.to_response:7
+#: starlite.datastructures.response_containers.ResponseContainer.to_response:7
+#: starlite.datastructures.response_containers.Stream.to_response:7
+#: starlite.datastructures.response_containers.Template.create_template_context:3
+#: starlite.datastructures.response_containers.Template.to_response:7
+msgid "A :class:`Request <starlite.connection.request.Request>` instance."
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.File.to_response:0
+#: starlite.datastructures.response_containers.File.validate_file_system:0
+#: starlite.datastructures.response_containers.File.validate_status_code:0
+#: starlite.datastructures.response_containers.Redirect.to_response:0
+#: starlite.datastructures.response_containers.ResponseContainer.to_response:0
+#: starlite.datastructures.response_containers.Stream.to_response:0
+#: starlite.datastructures.response_containers.Stream.validate_iterator:0
+#: starlite.datastructures.response_containers.Template.create_template_context:0
+#: starlite.datastructures.response_containers.Template.to_response:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.ResponseContainer.to_response:9
+msgid "A Response Object"
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.File:1
+msgid ""
+"Bases: :py:class:`~starlite.datastructures.response_containers."
+"ResponseContainer[FileResponse]`"
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.File:1
+msgid "Container type for returning File responses."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.response_containers.File.path:1
+msgid "Path to the file to send."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.response_containers.File.filename:1
+msgid "An optional filename to set in the header."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.response_containers.File.stat_result:1
+msgid "An optional result of calling 'os.stat'."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.response_containers.File.stat_result:3
+msgid "If not provided, this will be done by the response constructor."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.response_containers.File.chunk_size:1
+msgid "The size of chunks to use when streaming the file."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.response_containers.File.content_disposition_type:1
+msgid "The type of the 'Content-Disposition'."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.response_containers.File.content_disposition_type:3
+msgid "Either 'inline' or 'attachment'."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.response_containers.File.etag:1
+msgid "An optional :class:`ETag <starlite.datastructures.ETag>` instance."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.response_containers.File.etag:3
+msgid "If not provided, an etag will be automatically generated."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.response_containers.File.file_system:1
+msgid "The file_system spec to use loading the file."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.response_containers.File.file_system:3
+msgid "Notes"
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.response_containers.File.file_system:5
+msgid "A file_system is a class that adheres to the"
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.response_containers.File.file_system:6
+msgid ":class:`FileSystemProtocol <starlite.types.FileSystemProtocol>`."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.response_containers.File.file_system:7
+msgid "You can use any of the file systems exported from the"
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.response_containers.File.file_system:8
+msgid ""
+"[fsspec](https://filesystem-spec.readthedocs.io/en/latest/) library for this "
+"purpose."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.response_containers.File.file_info:1
+msgid ""
+"The output of calling `file_system.info(..)`, equivalent to providing a "
+"``stat_result``."
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.File.validate_status_code:1
+msgid "Set the stat_result value for the given filepath."
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.File.validate_status_code:3
+msgid "An optional result :func:`stat <os.stat>` result."
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.File.validate_status_code:4
+msgid "The dict of values."
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.File.validate_status_code:6
+msgid "A stat_result"
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.File.validate_file_system:1
+msgid "Ensure the value is a file system spec."
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.File.validate_file_system:3
+#: starlite.datastructures.response_containers.File.validate_file_system:5
+msgid "A file system spec."
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.File.to_response:1
+msgid "Create a FileResponse instance."
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.File.to_response:9
+msgid "A FileResponse instance"
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.Redirect:1
+msgid ""
+"Bases: :py:class:`~starlite.datastructures.response_containers."
+"ResponseContainer[RedirectResponse]`"
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.Redirect:1
+msgid "Container type for returning Redirect responses."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.response_containers.Redirect.path:1
+msgid "Redirection path."
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.Redirect.to_response:1
+msgid "Create a RedirectResponse instance."
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.Redirect.to_response:9
+msgid "A RedirectResponse instance"
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.Stream:1
+msgid ""
+"Bases: :py:class:`~starlite.datastructures.response_containers."
+"ResponseContainer[StreamingResponse]`"
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.Stream:1
+msgid "Container type for returning Stream responses."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.response_containers.Stream.iterator:1
+msgid ""
+"Iterator, Iterable,Generator or async Iterator, Iterable or Generator "
+"returning chunks to stream."
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.Stream.validate_iterator:1
+msgid "Set the iterator value by ensuring that the return value is iterable."
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.Stream.validate_iterator:3
+msgid "An iterable or callable returning an iterable."
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.Stream.validate_iterator:5
+msgid "A sync or async iterable."
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.Stream.to_response:1
+msgid "Create a StreamingResponse instance."
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.Stream.to_response:9
+msgid "A StreamingResponse instance"
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.Template:1
+msgid ""
+"Bases: :py:class:`~starlite.datastructures.response_containers."
+"ResponseContainer[TemplateResponse]`"
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.Template:1
+msgid "Container type for returning Template responses."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.response_containers.Template.name:1
+msgid "Path-like name for the template to be rendered, e.g. \"index.html\"."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.response_containers.Template.context:1
+msgid ""
+"A dictionary of key/value pairs to be passed to the temple engine's render "
+"method."
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.Template.to_response:1
+msgid "Create a TemplateResponse instance."
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.Template.to_response:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.Template.to_response:9
+msgid "if app.template_engine     is not configured."
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.Template.to_response:11
+msgid "A TemplateResponse instance"
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.Template.create_template_context:1
+msgid "Create a context object for the template."
+msgstr ""
+
+#: ../../../../starlite/datastructures/response_containers.py:docstring of
+#: starlite.datastructures.response_containers.Template.create_template_context:5
+msgid "A dictionary holding the template context"
+msgstr ""

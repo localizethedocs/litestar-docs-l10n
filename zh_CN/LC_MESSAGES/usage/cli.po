@@ -1,0 +1,405 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../usage/cli.rst:2
+msgid "CLI"
+msgstr ""
+
+#: ../../../usage/cli.rst:4
+msgid ""
+"Starlite optionally provides a simple command line interface, for running "
+"and managing Starlite applications, powered by `click <https://click."
+"palletsprojects.com/>`_ and `rich <https://rich.readthedocs.io>`_."
+msgstr ""
+
+#: ../../../usage/cli.rst:9
+msgid "Enabling the CLI"
+msgstr ""
+
+#: ../../../usage/cli.rst:11
+msgid ""
+"Dependencies for the CLI are not included by default, to keep the packages "
+"needed to install Starlite to a minimum. To enable the CLI, Starlite has to "
+"be installed with the ``cli`` or ``standard`` extra:"
+msgstr ""
+
+#: ../../../usage/cli.rst:15
+msgid "pip install starlite[cli]"
+msgstr ""
+
+#: ../../../usage/cli.rst:19
+msgid "pip install starlite[standard]"
+msgstr ""
+
+#: ../../../usage/cli.rst:23
+msgid ""
+"After installing any of these two, the ``starlite`` command will be "
+"available as the entrypoint to the CLI."
+msgstr ""
+
+#: ../../../usage/cli.rst:27
+msgid "Autodiscovery"
+msgstr ""
+
+#: ../../../usage/cli.rst:29
+msgid ""
+"Starlite will automatically discover Starlite applications and application "
+"factories in certain places:"
+msgstr ""
+
+#: ../../../usage/cli.rst:32
+msgid "``app.py``"
+msgstr ""
+
+#: ../../../usage/cli.rst:33
+msgid "``application.py``"
+msgstr ""
+
+#: ../../../usage/cli.rst:34
+msgid "``asgi.py``"
+msgstr ""
+
+#: ../../../usage/cli.rst:35
+msgid "``app/__init__.py``"
+msgstr ""
+
+#: ../../../usage/cli.rst:37
+msgid ""
+"If any of these files contains an instance of the :class:`Starlite <.app."
+"Starlite>` class, a function named ``create_app``, or a function annotated "
+"as returning a :class:`Starlite <.app.Starlite>` instance, the CLI will pick "
+"it up."
+msgstr ""
+
+#: ../../../usage/cli.rst:41
+msgid "Commands"
+msgstr ""
+
+#: ../../../usage/cli.rst:44
+msgid "Starlite"
+msgstr ""
+
+#: ../../../usage/cli.rst:46
+msgid ""
+"The ``starlite`` command is the main entrypoint to the CLI. If the ``--app`` "
+"flag is not passed, the app will be automatically discovered as described in "
+"`the section above <autodiscovery>`_"
+msgstr ""
+
+#: ../../../usage/cli.rst:50 ../../../usage/cli.rst:76
+msgid "Options"
+msgstr ""
+
+#: ../../../usage/cli.rst:53
+msgid "Flag"
+msgstr ""
+
+#: ../../../usage/cli.rst:53
+msgid "Environment variable"
+msgstr ""
+
+#: ../../../usage/cli.rst:53
+msgid "Description"
+msgstr ""
+
+#: ../../../usage/cli.rst:55
+msgid "``--app``"
+msgstr ""
+
+#: ../../../usage/cli.rst:55
+msgid "``STARLITE_APP``"
+msgstr ""
+
+#: ../../../usage/cli.rst:55
+msgid "``<modulename>.<submodule>:<app instance>``"
+msgstr ""
+
+#: ../../../usage/cli.rst:60
+msgid "Run"
+msgstr ""
+
+#: ../../../usage/cli.rst:62
+msgid ""
+"The ``run`` command runs a Starlite application using `uvicorn <https://www."
+"uvicorn.org/>`_."
+msgstr ""
+
+#: ../../../usage/cli.rst:64
+msgid "starlite run"
+msgstr ""
+
+#: ../../../usage/cli.rst:70
+msgid ""
+"This feature is intended for development purposes only and should not be "
+"used to deploy production applications"
+msgstr ""
+
+#: ../../../usage/cli.rst:79
+msgid "Flag                  | Environment variable      | Description"
+msgstr ""
+
+#: ../../../usage/cli.rst:81
+msgid "``-r``\\ , ``--reload``"
+msgstr ""
+
+#: ../../../usage/cli.rst:81
+msgid ""
+"``STARLITE_RELOAD``       |  Reload the application when files in its "
+"directory are changed"
+msgstr ""
+
+#: ../../../usage/cli.rst:83
+msgid "``-p``\\ , ``--port``"
+msgstr ""
+
+#: ../../../usage/cli.rst:83 ../../../usage/cli.rst:85
+msgid "``STARLITE_PORT``"
+msgstr ""
+
+#: ../../../usage/cli.rst:83
+msgid "Bind the the server to this port [default: 8000]"
+msgstr ""
+
+#: ../../../usage/cli.rst:85
+msgid "``--host``"
+msgstr ""
+
+#: ../../../usage/cli.rst:85
+msgid "Bind the server to this host [default: 127.0.0.1]"
+msgstr ""
+
+#: ../../../usage/cli.rst:87 ../../../usage/cli.rst:89
+msgid "``--debug``"
+msgstr ""
+
+#: ../../../usage/cli.rst:87 ../../../usage/cli.rst:89
+msgid "``STARLITE_DEBUG``"
+msgstr ""
+
+#: ../../../usage/cli.rst:87 ../../../usage/cli.rst:89
+msgid "Run the application in debug mode"
+msgstr ""
+
+#: ../../../usage/cli.rst:94
+msgid "Info"
+msgstr ""
+
+#: ../../../usage/cli.rst:96
+msgid ""
+"The ``info`` command displays useful information about the selected "
+"application and its configuration"
+msgstr ""
+
+#: ../../../usage/cli.rst:-1 ../../../usage/cli.rst:98
+msgid "starlite info"
+msgstr ""
+
+#: ../../../usage/cli.rst:108
+msgid "Routes"
+msgstr ""
+
+#: ../../../usage/cli.rst:110
+msgid "The ``routes`` command displays a tree view of the routing table"
+msgstr ""
+
+#: ../../../usage/cli.rst:112
+msgid "starlite routes"
+msgstr ""
+
+#: ../../../usage/cli.rst:122
+msgid "Sessions"
+msgstr ""
+
+#: ../../../usage/cli.rst:124
+msgid ""
+"This command and its subcommands provide management utilities for :ref:"
+"`server-side session backends <usage/middleware/builtin-middleware:server-"
+"side sessions>`."
+msgstr ""
+
+#: ../../../usage/cli.rst:128
+msgid "Delete"
+msgstr ""
+
+#: ../../../usage/cli.rst:130
+msgid "The ``delete`` subcommand deletes a specific session from the backend."
+msgstr ""
+
+#: ../../../usage/cli.rst:132
+msgid "starlite sessions delete cc3debc7-1ab6-4dc8-a220-91934a473717"
+msgstr ""
+
+#: ../../../usage/cli.rst:137
+msgid "Clear"
+msgstr ""
+
+#: ../../../usage/cli.rst:139
+msgid "The ``clear`` subcommand clears all sessions from the backend."
+msgstr ""
+
+#: ../../../usage/cli.rst:141
+msgid "starlite sessions clear"
+msgstr ""
+
+#: ../../../usage/cli.rst:146
+msgid "OpenAPI"
+msgstr ""
+
+#: ../../../usage/cli.rst:148
+msgid ""
+"This command provides utilities to generate OpenAPI schema and TypeScript "
+"types."
+msgstr ""
+
+#: ../../../usage/cli.rst:151
+msgid "Schema"
+msgstr ""
+
+#: ../../../usage/cli.rst:153
+msgid ""
+"The ``schema`` subcommand generates OpenAPI specs from the Starlite "
+"application, serializing these as either JSON or YAML. The serialization "
+"format depends on the filename, which is by default ``openapi_schema.json``. "
+"You can specify a different filename using the ``--output`` flag. For "
+"example:"
+msgstr ""
+
+#: ../../../usage/cli.rst:157
+msgid "starlite openapi schema --output my-specs.yaml"
+msgstr ""
+
+#: ../../../usage/cli.rst:162
+msgid "TypeScript"
+msgstr ""
+
+#: ../../../usage/cli.rst:164
+msgid ""
+"The ``typescript`` subcommand generates TypeScript definitions from the "
+"Starlite application's OpenAPI specs.  For example:"
+msgstr ""
+
+#: ../../../usage/cli.rst:166
+msgid "starlite openapi typescript"
+msgstr ""
+
+#: ../../../usage/cli.rst:170
+msgid ""
+"By default, this command will output a file called ``api-specs.ts``. You can "
+"change this using the ``--output`` option:"
+msgstr ""
+
+#: ../../../usage/cli.rst:172
+msgid "starlite openapi typescript --output my-types.ts"
+msgstr ""
+
+#: ../../../usage/cli.rst:176
+msgid ""
+"You can also specify the top level TypeScript namespace that will be "
+"created, which by default will be called API:"
+msgstr ""
+
+#: ../../../usage/cli.rst:178
+msgid ""
+"export namespace API {\n"
+"    // ...\n"
+"}"
+msgstr ""
+
+#: ../../../usage/cli.rst:184
+msgid "To do this use the ``--namespace`` option:"
+msgstr ""
+
+#: ../../../usage/cli.rst:186
+msgid "starlite openapi typescript --namespace MyNamespace"
+msgstr ""
+
+#: ../../../usage/cli.rst:190
+msgid "Which will result in:"
+msgstr ""
+
+#: ../../../usage/cli.rst:192
+msgid ""
+"export namespace MyNamespace {\n"
+"    // ...\n"
+"}"
+msgstr ""
+
+#: ../../../usage/cli.rst:199
+msgid "Extending the CLI"
+msgstr ""
+
+#: ../../../usage/cli.rst:201
+msgid ""
+"Starlite's CLI is built with `click <https://click.palletsprojects.com/"
+">`_\\ , and can be easily extended. All that's needed to add subcommands "
+"under the ``starlite`` command is adding an `entry point <https://packaging."
+"python.org/en/latest/specifications/entry-points/>`_\\ , pointing to a :"
+"class:`click.Command <click.Command>` or :class:`click.Group <click.Group>`, "
+"under the ``starlite.commands`` group."
+msgstr ""
+
+#: ../../../usage/cli.rst:0
+msgid "setup.py"
+msgstr ""
+
+#: ../../../usage/cli.rst:212
+msgid ""
+"from setuptools import setup\n"
+"\n"
+"setup(\n"
+"    name=\"my-starlite-plugin\",\n"
+"    ...,\n"
+"    entry_points={\n"
+"        \"starlite.commands\": [\"my_command=my_starlite_plugin.cli:"
+"main\"],\n"
+"    },\n"
+")"
+msgstr ""
+
+#: ../../../usage/cli.rst:0
+msgid "poetry"
+msgstr ""
+
+#: ../../../usage/cli.rst:227
+msgid ""
+"[tool.poetry.plugins.\"starlite.commands\"]\n"
+"my_command = \"my_starlite_plugin.cli:main\""
+msgstr ""
+
+#: ../../../usage/cli.rst:235
+msgid "Accessing the app instance"
+msgstr ""
+
+#: ../../../usage/cli.rst:237
+msgid ""
+"When extending the Starlite CLI, you most likely need access to the loaded "
+"``Starlite`` instance. This can be achieved by adding the special ``app`` "
+"parameter to your CLI functions. This will cause ``Starlite`` instance to be "
+"injected into the function whenever it is being called from a click-context."
+msgstr ""
+
+#: ../../../usage/cli.rst:242
+msgid ""
+"import click\n"
+"from starlite import Starlite\n"
+"\n"
+"\n"
+"@click.command()\n"
+"def my_command(app: Starlite) -> None: ..."
+msgstr ""
