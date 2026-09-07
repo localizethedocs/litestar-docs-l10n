@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-04-12 22:18:28 -0400",
-      "hash" : "8b1aed58873d79f62063d00ae41dd298e1092066",
-      "title" : "chore: fix pyright type-ignore comments to use specific error codes (#4689)"
+      "date" : "2026-09-07 11:45:19 +0200",
+      "hash" : "e19da9aaa396c65d6aaab31c8e70f9d559d80f3a",
+      "title" : "docs(cli): fix autodiscovery paths in CLI help text (#5030)"
     }
   },
   "type" : "branch",
