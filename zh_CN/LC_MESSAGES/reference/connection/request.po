@@ -1,0 +1,180 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/connection/request.rst:2
+msgid "request"
+msgstr ""
+
+#: ../../../../starlite/connection/request.py:docstring of
+#: starlite.connection.request.Request:1
+msgid ""
+"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~starlite.connection.base."
+"User`, :py:obj:`~starlite.connection.base.Auth`], :py:class:`~starlite."
+"connection.base.ASGIConnection`\\ [:py:class:`HTTPRouteHandler`, :py:obj:"
+"`~starlite.connection.base.User`, :py:obj:`~starlite.connection.base.Auth`]"
+msgstr ""
+
+#: ../../../../starlite/connection/request.py:docstring of
+#: starlite.connection.request.Request:1
+msgid "The Starlite Request class."
+msgstr ""
+
+#: ../../../../starlite/connection/request.py:docstring of
+#: starlite.connection.request.Request.__init__:1
+msgid "Initialize ``Request``."
+msgstr ""
+
+#: ../../../../starlite/connection/request.py:docstring of
+#: starlite.connection.request.Request.__init__:0
+#: starlite.connection.request.Request.send_push_promise:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../starlite/connection/request.py:docstring of
+#: starlite.connection.request.Request.__init__:3
+msgid "The ASGI connection scope."
+msgstr ""
+
+#: ../../../../starlite/connection/request.py:docstring of
+#: starlite.connection.request.Request.__init__:4
+msgid "The ASGI receive function."
+msgstr ""
+
+#: ../../../../starlite/connection/request.py:docstring of
+#: starlite.connection.request.Request.__init__:5
+msgid "The ASGI send function."
+msgstr ""
+
+#: ../../../../starlite/connection/request.py:docstring of
+#: starlite.connection.request.Request.method:1
+msgid "Return the request method."
+msgstr ""
+
+#: ../../../../starlite/connection/request.py:docstring of
+#: starlite.connection.request.Request.body:0
+#: starlite.connection.request.Request.content_type:0
+#: starlite.connection.request.Request.form:0
+#: starlite.connection.request.Request.json:0
+#: starlite.connection.request.Request.method:0
+#: starlite.connection.request.Request.msgpack:0
+#: starlite.connection.request.Request.send_push_promise:0
+#: starlite.connection.request.Request.stream:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/connection/request.py:docstring of
+#: starlite.connection.request.Request.method:3
+msgid "The request :class:`Method <starlite.types.Method>`"
+msgstr ""
+
+#: ../../../../starlite/connection/request.py:docstring of
+#: starlite.connection.request.Request.content_type:1
+msgid ""
+"Parse the request's 'Content-Type' header, returning the header value and "
+"any options as a dictionary."
+msgstr ""
+
+#: ../../../../starlite/connection/request.py:docstring of
+#: starlite.connection.request.Request.content_type:3
+msgid ""
+"A tuple with the parsed value and a dictionary containing any options send "
+"in it."
+msgstr ""
+
+#: ../../../../starlite/connection/request.py:docstring of
+#: starlite.connection.request.Request.json:1
+msgid "Retrieve the json request body from the request."
+msgstr ""
+
+#: ../../../../starlite/connection/request.py:docstring of
+#: starlite.connection.request.Request.json:3
+#: starlite.connection.request.Request.msgpack:3
+msgid "An arbitrary value"
+msgstr ""
+
+#: ../../../../starlite/connection/request.py:docstring of
+#: starlite.connection.request.Request.msgpack:1
+msgid "Retrieve the MessagePack request body from the request."
+msgstr ""
+
+#: ../../../../starlite/connection/request.py:docstring of
+#: starlite.connection.request.Request.stream:1
+msgid "Return an async generator that streams chunks of bytes."
+msgstr ""
+
+#: ../../../../starlite/connection/request.py:docstring of
+#: starlite.connection.request.Request.stream:3
+msgid "An async generator."
+msgstr ""
+
+#: ../../../../starlite/connection/request.py:docstring of
+#: starlite.connection.request.Request.stream:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../starlite/connection/request.py:docstring of
+#: starlite.connection.request.Request.stream:5
+msgid "if the stream is already consumed"
+msgstr ""
+
+#: ../../../../starlite/connection/request.py:docstring of
+#: starlite.connection.request.Request.body:1
+msgid "Return the body of the request."
+msgstr ""
+
+#: ../../../../starlite/connection/request.py:docstring of
+#: starlite.connection.request.Request.body:3
+msgid "A byte-string representing the body of the request."
+msgstr ""
+
+#: ../../../../starlite/connection/request.py:docstring of
+#: starlite.connection.request.Request.form:1
+msgid ""
+"Retrieve form data from the request. If the request is either a 'multipart/"
+"form-data' or an 'application/x-www-form- urlencoded', return a "
+"FormMultiDict instance populated with the values sent in the request, "
+"otherwise, an empty instance."
+msgstr ""
+
+#: ../../../../starlite/connection/request.py:docstring of
+#: starlite.connection.request.Request.form:5
+msgid "A FormMultiDict instance"
+msgstr ""
+
+#: ../../../../starlite/connection/request.py:docstring of
+#: starlite.connection.request.Request.send_push_promise:1
+msgid "Send a push promise."
+msgstr ""
+
+#: ../../../../starlite/connection/request.py:docstring of
+#: starlite.connection.request.Request.send_push_promise:3
+msgid ""
+"This method requires the `http.response.push` extension to be sent from the "
+"ASGI server."
+msgstr ""
+
+#: ../../../../starlite/connection/request.py:docstring of
+#: starlite.connection.request.Request.send_push_promise:5
+msgid "Path to send the promise to."
+msgstr ""
+
+#: ../../../../starlite/connection/request.py:docstring of
+#: starlite.connection.request.Request.send_push_promise:7
+msgid "None"
+msgstr ""

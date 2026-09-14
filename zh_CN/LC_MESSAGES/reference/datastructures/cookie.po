@@ -1,0 +1,164 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/datastructures/cookie.rst:2
+msgid "cookie"
+msgstr ""
+
+#: ../../../../starlite/datastructures/cookie.py:docstring of
+#: starlite.datastructures.cookie.Cookie:1
+msgid "Bases: :py:class:`object`"
+msgstr ""
+
+#: ../../../../starlite/datastructures/cookie.py:docstring of
+#: starlite.datastructures.cookie.Cookie:1
+msgid "Container class for defining a cookie using the 'Set-Cookie' header."
+msgstr ""
+
+#: ../../../../starlite/datastructures/cookie.py:docstring of
+#: starlite.datastructures.cookie.Cookie:3
+msgid ""
+"See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie "
+"for more details regarding this header."
+msgstr ""
+
+#: ../../../../docstring of starlite.datastructures.cookie.Cookie.key:1
+msgid "Key for the cookie."
+msgstr ""
+
+#: ../../../../docstring of starlite.datastructures.cookie.Cookie.path:1
+msgid ""
+"Path fragment that must exist in the request url for the cookie to be valid."
+msgstr ""
+
+#: ../../../../docstring of starlite.datastructures.cookie.Cookie.path:3
+msgid "Defaults to '/'."
+msgstr ""
+
+#: ../../../../docstring of starlite.datastructures.cookie.Cookie.value:1
+msgid "Value for the cookie, if none given defaults to empty string."
+msgstr ""
+
+#: ../../../../docstring of starlite.datastructures.cookie.Cookie.max_age:1
+msgid "Maximal age of the cookie before its invalidated."
+msgstr ""
+
+#: ../../../../docstring of starlite.datastructures.cookie.Cookie.expires:1
+msgid "Expiration date as unix MS timestamp."
+msgstr ""
+
+#: ../../../../docstring of starlite.datastructures.cookie.Cookie.domain:1
+msgid "Domain for which the cookie is valid."
+msgstr ""
+
+#: ../../../../docstring of starlite.datastructures.cookie.Cookie.secure:1
+msgid "Https is required for the cookie."
+msgstr ""
+
+#: ../../../../docstring of starlite.datastructures.cookie.Cookie.httponly:1
+msgid "Forbids javascript to access the cookie via 'Document.cookie'."
+msgstr ""
+
+#: ../../../../docstring of starlite.datastructures.cookie.Cookie.samesite:1
+msgid "Controls whether or not a cookie is sent with cross-site requests."
+msgstr ""
+
+#: ../../../../docstring of starlite.datastructures.cookie.Cookie.samesite:3
+msgid "Defaults to 'lax'."
+msgstr ""
+
+#: ../../../../docstring of starlite.datastructures.cookie.Cookie.description:1
+msgid "Description of the response cookie header for OpenAPI documentation."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.datastructures.cookie.Cookie.documentation_only:1
+msgid "Defines the Cookie instance as for OpenAPI documentation purpose only."
+msgstr ""
+
+#: ../../../../starlite/datastructures/cookie.py:docstring of
+#: starlite.datastructures.cookie.Cookie.simple_cookie:1
+msgid "Get a simple cookie object from the values."
+msgstr ""
+
+#: ../../../../starlite/datastructures/cookie.py:docstring of
+#: starlite.datastructures.cookie.Cookie.__eq__:0
+#: starlite.datastructures.cookie.Cookie.dict:0
+#: starlite.datastructures.cookie.Cookie.simple_cookie:0
+#: starlite.datastructures.cookie.Cookie.to_encoded_header:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/datastructures/cookie.py:docstring of
+#: starlite.datastructures.cookie.Cookie.simple_cookie:3
+msgid "A SimpleCookie instance."
+msgstr ""
+
+#: ../../../../starlite/datastructures/cookie.py:docstring of
+#: starlite.datastructures.cookie.Cookie.to_header:1
+msgid "Return a string representation suitable to be sent as HTTP headers."
+msgstr ""
+
+#: ../../../../starlite/datastructures/cookie.py:docstring of
+#: starlite.datastructures.cookie.Cookie.__eq__:0
+#: starlite.datastructures.cookie.Cookie.to_header:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../starlite/datastructures/cookie.py:docstring of
+#: starlite.datastructures.cookie.Cookie.to_header:3
+msgid "Any kwargs to pass to the simple cookie output method."
+msgstr ""
+
+#: ../../../../starlite/datastructures/cookie.py:docstring of
+#: starlite.datastructures.cookie.Cookie.to_encoded_header:1
+msgid "Create encoded header for ASGI send."
+msgstr ""
+
+#: ../../../../starlite/datastructures/cookie.py:docstring of
+#: starlite.datastructures.cookie.Cookie.to_encoded_header:3
+msgid "A two tuple of bytes."
+msgstr ""
+
+#: ../../../../starlite/datastructures/cookie.py:docstring of
+#: starlite.datastructures.cookie.Cookie.dict:1
+msgid "Get the cookie as a dict."
+msgstr ""
+
+#: ../../../../starlite/datastructures/cookie.py:docstring of
+#: starlite.datastructures.cookie.Cookie.dict:3
+msgid "A dict of values"
+msgstr ""
+
+#: ../../../../starlite/datastructures/cookie.py:docstring of
+#: starlite.datastructures.cookie.Cookie.__eq__:1
+msgid ""
+"Determine whether two cookie instances are equal according to the cookie "
+"spec, i.e. hey have a similar path, domain and key."
+msgstr ""
+
+#: ../../../../starlite/datastructures/cookie.py:docstring of
+#: starlite.datastructures.cookie.Cookie.__eq__:4
+msgid "An arbitrary value"
+msgstr ""
+
+#: ../../../../starlite/datastructures/cookie.py:docstring of
+#: starlite.datastructures.cookie.Cookie.__eq__:6
+msgid "A boolean"
+msgstr ""

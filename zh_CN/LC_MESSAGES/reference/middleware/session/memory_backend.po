@@ -1,0 +1,131 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/middleware/session/memory_backend.rst:2
+msgid "memory_backend"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/memory_backend.py:docstring of
+#: starlite.middleware.session.memory_backend.MemoryBackend:1
+msgid ""
+"Bases: :py:class:`~starlite.middleware.session.base.ServerSideBackend`\\ [:"
+"py:class:`MemoryBackendConfig`]"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/memory_backend.py:docstring of
+#: starlite.middleware.session.memory_backend.MemoryBackend:1
+msgid "Session backend to store data in memory."
+msgstr ""
+
+#: ../../../../starlite/middleware/session/memory_backend.py:docstring of
+#: starlite.middleware.session.memory_backend.MemoryBackend.__init__:1
+msgid "Initialize ``MemoryBackend``."
+msgstr ""
+
+#: ../../../../starlite/middleware/session/memory_backend.py:docstring of
+#: starlite.middleware.session.memory_backend.MemoryBackend.__init__:0
+#: starlite.middleware.session.memory_backend.MemoryBackend.delete:0
+#: starlite.middleware.session.memory_backend.MemoryBackend.get:0
+#: starlite.middleware.session.memory_backend.MemoryBackend.set:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/memory_backend.py:docstring of
+#: starlite.middleware.session.memory_backend.MemoryBackend.__init__:3
+msgid "An instance of ``MemoryBackendConfig``"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/memory_backend.py:docstring of
+#: starlite.middleware.session.memory_backend.MemoryBackend.__init__:7
+msgid ""
+"This should not be used in production and serves mainly as a dummy backend "
+"for easy testing. It is not process-safe, and data won't be persisted"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/memory_backend.py:docstring of
+#: starlite.middleware.session.memory_backend.MemoryBackend.get:1
+msgid "Retrieve data associated with ``session_id``."
+msgstr ""
+
+#: ../../../../starlite/middleware/session/memory_backend.py:docstring of
+#: starlite.middleware.session.memory_backend.MemoryBackend.delete:3
+#: starlite.middleware.session.memory_backend.MemoryBackend.get:3
+#: starlite.middleware.session.memory_backend.MemoryBackend.set:6
+msgid "The session-ID"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/memory_backend.py:docstring of
+#: starlite.middleware.session.memory_backend.MemoryBackend.delete:0
+#: starlite.middleware.session.memory_backend.MemoryBackend.delete_all:0
+#: starlite.middleware.session.memory_backend.MemoryBackend.get:0
+#: starlite.middleware.session.memory_backend.MemoryBackend.set:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/memory_backend.py:docstring of
+#: starlite.middleware.session.memory_backend.MemoryBackend.get:5
+msgid "The session data, if existing, otherwise ``None``."
+msgstr ""
+
+#: ../../../../starlite/middleware/session/memory_backend.py:docstring of
+#: starlite.middleware.session.memory_backend.MemoryBackend.set:1
+msgid "Store ``data`` under the ``session_id`` for later retrieval."
+msgstr ""
+
+#: ../../../../starlite/middleware/session/memory_backend.py:docstring of
+#: starlite.middleware.session.memory_backend.MemoryBackend.set:3
+msgid ""
+"If there is already data associated with ``session_id``, replace it with "
+"``data`` and reset its expiry time"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/memory_backend.py:docstring of
+#: starlite.middleware.session.memory_backend.MemoryBackend.set:7
+msgid "Serialized session data"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/memory_backend.py:docstring of
+#: starlite.middleware.session.memory_backend.MemoryBackend.delete:5
+#: starlite.middleware.session.memory_backend.MemoryBackend.delete_all:3
+#: starlite.middleware.session.memory_backend.MemoryBackend.set:9
+msgid "None"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/memory_backend.py:docstring of
+#: starlite.middleware.session.memory_backend.MemoryBackend.delete:1
+msgid ""
+"Delete the data associated with ``session_id``. Fails silently if no such "
+"session-ID exists."
+msgstr ""
+
+#: ../../../../starlite/middleware/session/memory_backend.py:docstring of
+#: starlite.middleware.session.memory_backend.MemoryBackend.delete_all:1
+msgid "Delete all session data."
+msgstr ""
+
+#: ../../../../starlite/middleware/session/memory_backend.py:docstring of
+#: starlite.middleware.session.memory_backend.MemoryBackendConfig:1
+msgid ""
+"Bases: :py:class:`~starlite.middleware.session.base.ServerSideSessionConfig`"
+msgstr ""
+
+#: ../../../../starlite/middleware/session/memory_backend.py:docstring of
+#: starlite.middleware.session.memory_backend.MemoryBackendConfig:1
+msgid "Configuration for ``MemoryBackend``"
+msgstr ""
