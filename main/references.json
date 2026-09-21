@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-04-12 22:18:28 -0400",
-      "hash" : "8b1aed58873d79f62063d00ae41dd298e1092066",
-      "title" : "chore: fix pyright type-ignore comments to use specific error codes (#4689)"
+      "date" : "2026-09-21 09:35:51 +0300",
+      "hash" : "bfcaffd011d320ad9d2eba179b7677e1f8cf97e6",
+      "title" : "chore(deps): bump codecov/codecov-action from 7.0.0 to 7.1.0 (#5087)"
     }
   },
   "type" : "branch",
