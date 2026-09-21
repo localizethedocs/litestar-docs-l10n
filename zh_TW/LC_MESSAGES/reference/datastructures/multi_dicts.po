@@ -1,0 +1,212 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/datastructures/multi_dicts.rst:2
+msgid "multi_dicts"
+msgstr ""
+
+#: ../../../../starlite/datastructures/multi_dicts.py:docstring of
+#: starlite.datastructures.multi_dicts.MultiMixin:1
+msgid ""
+"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~starlite.datastructures."
+"multi_dicts.T`], :py:class:`~multidict._abc.MultiMapping`\\ [:py:obj:"
+"`~starlite.datastructures.multi_dicts.T`], :py:class:`~abc.ABC`"
+msgstr ""
+
+#: ../../../../starlite/datastructures/multi_dicts.py:docstring of
+#: starlite.datastructures.multi_dicts.MultiMixin:1
+msgid "Mixin providing common methods for multi dicts, used by."
+msgstr ""
+
+#: ../../../../starlite/datastructures/multi_dicts.py:docstring of
+#: starlite.datastructures.multi_dicts.MultiMixin:3
+msgid ""
+":class:`ImmutableMultiDict <starlite.datastructures.multi_dicts."
+"ImmutableMultiDict>` and :class:`MultiDict <starlite.datastructures."
+"multi_dicts.MultiDict>`"
+msgstr ""
+
+#: ../../../../starlite/datastructures/multi_dicts.py:docstring of
+#: starlite.datastructures.multi_dicts.MultiMixin.dict:1
+msgid "Return the multi-dict as a dict of lists."
+msgstr ""
+
+#: ../../../../starlite/datastructures/multi_dicts.py:docstring of
+#: starlite.datastructures.multi_dicts.FormMultiDict.close:0
+#: starlite.datastructures.multi_dicts.ImmutableMultiDict.mutable_copy:0
+#: starlite.datastructures.multi_dicts.MultiDict.immutable:0
+#: starlite.datastructures.multi_dicts.MultiMixin.dict:0
+#: starlite.datastructures.multi_dicts.MultiMixin.getlist:0
+#: starlite.datastructures.multi_dicts.MultiMixin.multi_items:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/datastructures/multi_dicts.py:docstring of
+#: starlite.datastructures.multi_dicts.MultiMixin.dict:3
+msgid "A dict of lists"
+msgstr ""
+
+#: ../../../../starlite/datastructures/multi_dicts.py:docstring of
+#: starlite.datastructures.multi_dicts.MultiMixin.multi_items:1
+msgid "Get all keys and values, including duplicates."
+msgstr ""
+
+#: ../../../../starlite/datastructures/multi_dicts.py:docstring of
+#: starlite.datastructures.multi_dicts.MultiMixin.multi_items:3
+msgid "A list of tuples containing key-value pairs"
+msgstr ""
+
+#: ../../../../starlite/datastructures/multi_dicts.py:docstring of
+#: starlite.datastructures.multi_dicts.MultiMixin.getlist:1
+msgid "Get all values."
+msgstr ""
+
+#: ../../../../starlite/datastructures/multi_dicts.py:docstring of
+#: starlite.datastructures.multi_dicts.ImmutableMultiDict.__init__:0
+#: starlite.datastructures.multi_dicts.MultiDict.__init__:0
+#: starlite.datastructures.multi_dicts.MultiMixin.getlist:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../starlite/datastructures/multi_dicts.py:docstring of
+#: starlite.datastructures.multi_dicts.MultiMixin.getlist:3
+msgid "The key"
+msgstr ""
+
+#: ../../../../starlite/datastructures/multi_dicts.py:docstring of
+#: starlite.datastructures.multi_dicts.MultiMixin.getlist:5
+msgid "A list of values"
+msgstr ""
+
+#: ../../../../starlite/datastructures/multi_dicts.py:docstring of
+#: starlite.datastructures.multi_dicts.MultiDict:1
+msgid ""
+"Bases: :py:class:`~multidict._multidict.MultiDict`\\ [:py:obj:`~starlite."
+"datastructures.multi_dicts.T`], :py:class:`~starlite.datastructures."
+"multi_dicts.MultiMixin`\\ [:py:obj:`~starlite.datastructures.multi_dicts."
+"T`], :py:class:`~typing.Generic`\\ [:py:obj:`~starlite.datastructures."
+"multi_dicts.T`]"
+msgstr ""
+
+#: ../../../../starlite/datastructures/multi_dicts.py:docstring of
+#: starlite.datastructures.multi_dicts.MultiDict:1
+msgid "MultiDict, using :class:`MultiDict <multidict.MultiDictProxy>`."
+msgstr ""
+
+#: ../../../../starlite/datastructures/multi_dicts.py:docstring of
+#: starlite.datastructures.multi_dicts.MultiDict.__init__:1
+msgid "Initialize ``MultiDict`` from a."
+msgstr ""
+
+#: ../../../../starlite/datastructures/multi_dicts.py:docstring of
+#: starlite.datastructures.multi_dicts.ImmutableMultiDict.__init__:3
+#: starlite.datastructures.multi_dicts.MultiDict.__init__:3
+msgid ""
+":class:`MultiMapping <multidict.MultiMapping>`, ``Mapping`` or an iterable "
+"of tuples."
+msgstr ""
+
+#: ../../../../starlite/datastructures/multi_dicts.py:docstring of
+#: starlite.datastructures.multi_dicts.MultiDict.__init__:6
+msgid "Mapping-like structure to create the ``MultiDict`` from"
+msgstr ""
+
+#: ../../../../starlite/datastructures/multi_dicts.py:docstring of
+#: starlite.datastructures.multi_dicts.MultiDict.immutable:1
+msgid "Create an."
+msgstr ""
+
+#: ../../../../starlite/datastructures/multi_dicts.py:docstring of
+#: starlite.datastructures.multi_dicts.MultiDict.immutable:3
+msgid ""
+":class:`ImmutableMultiDict <starlite.datastructures.multi_dicts."
+"ImmutableMultiDict>` view."
+msgstr ""
+
+#: ../../../../starlite/datastructures/multi_dicts.py:docstring of
+#: starlite.datastructures.multi_dicts.MultiDict.immutable:5
+msgid "An immutable multi dict"
+msgstr ""
+
+#: ../../../../starlite/datastructures/multi_dicts.py:docstring of
+#: starlite.datastructures.multi_dicts.ImmutableMultiDict:1
+msgid ""
+"Bases: :py:class:`~multidict._multidict.MultiDictProxy`\\ [:py:obj:"
+"`~starlite.datastructures.multi_dicts.T`], :py:class:`~starlite."
+"datastructures.multi_dicts.MultiMixin`\\ [:py:obj:`~starlite.datastructures."
+"multi_dicts.T`], :py:class:`~typing.Generic`\\ [:py:obj:`~starlite."
+"datastructures.multi_dicts.T`]"
+msgstr ""
+
+#: ../../../../starlite/datastructures/multi_dicts.py:docstring of
+#: starlite.datastructures.multi_dicts.ImmutableMultiDict:1
+msgid "Immutable MultiDict, using."
+msgstr ""
+
+#: ../../../../starlite/datastructures/multi_dicts.py:docstring of
+#: starlite.datastructures.multi_dicts.ImmutableMultiDict:3
+msgid ":class:`MultiDictProxy <multidict.MultiDictProxy>`."
+msgstr ""
+
+#: ../../../../starlite/datastructures/multi_dicts.py:docstring of
+#: starlite.datastructures.multi_dicts.ImmutableMultiDict.__init__:1
+msgid "Initialize ``ImmutableMultiDict`` from a."
+msgstr ""
+
+#: ../../../../starlite/datastructures/multi_dicts.py:docstring of
+#: starlite.datastructures.multi_dicts.ImmutableMultiDict.__init__:6
+msgid "Mapping-like structure to create the ``ImmutableMultiDict`` from"
+msgstr ""
+
+#: ../../../../starlite/datastructures/multi_dicts.py:docstring of
+#: starlite.datastructures.multi_dicts.ImmutableMultiDict.mutable_copy:1
+msgid "Create a mutable copy as a."
+msgstr ""
+
+#: ../../../../starlite/datastructures/multi_dicts.py:docstring of
+#: starlite.datastructures.multi_dicts.ImmutableMultiDict.mutable_copy:3
+msgid ":class:`MultiDict <starlite.datastructures.multi_dicts.MultiDict>`"
+msgstr ""
+
+#: ../../../../starlite/datastructures/multi_dicts.py:docstring of
+#: starlite.datastructures.multi_dicts.ImmutableMultiDict.mutable_copy:5
+msgid "A mutable multi dict"
+msgstr ""
+
+#: ../../../../starlite/datastructures/multi_dicts.py:docstring of
+#: starlite.datastructures.multi_dicts.FormMultiDict:1
+msgid ""
+"Bases: :py:class:`~starlite.datastructures.multi_dicts.ImmutableMultiDict`\\ "
+"[:py:obj:`~typing.Any`]"
+msgstr ""
+
+#: ../../../../starlite/datastructures/multi_dicts.py:docstring of
+#: starlite.datastructures.multi_dicts.FormMultiDict:1
+msgid "MultiDict for form data."
+msgstr ""
+
+#: ../../../../starlite/datastructures/multi_dicts.py:docstring of
+#: starlite.datastructures.multi_dicts.FormMultiDict.close:1
+msgid "Close all files in the multi-dict."
+msgstr ""
+
+#: ../../../../starlite/datastructures/multi_dicts.py:docstring of
+#: starlite.datastructures.multi_dicts.FormMultiDict.close:3
+msgid "None"
+msgstr ""
