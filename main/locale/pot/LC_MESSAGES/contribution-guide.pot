@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-09-28 17:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,9 +31,9 @@ msgstr ""
 
 #: ../../../../CONTRIBUTING.rst:10
 msgid ""
-"The lowest currently supported version is Python 3.9. At a minimum you will "
-"need Python 3.9 for code changes and 3.13 if you plan on doing documentation "
-"building / changes."
+"The lowest currently supported version is Python 3.11. At a minimum you will "
+"need Python 3.11 for code changes and 3.13 if you plan on doing "
+"documentation building / changes."
 msgstr ""
 
 #: ../../../../CONTRIBUTING.rst:13
@@ -370,7 +370,7 @@ msgstr ""
 
 #: ../../../../CONTRIBUTING.rst:145
 msgid ""
-"Our type checkers are run on Python 3.9 in CI, so you should make sure to "
+"Our type checkers are run on Python 3.11 in CI, so you should make sure to "
 "run them on the same version locally as well."
 msgstr ""
 
@@ -380,9 +380,9 @@ msgstr ""
 
 #: ../../../../CONTRIBUTING.rst:150
 msgid ""
-"The documentation is located in the ``/docs`` directory and is written  in "
+"The documentation is located in the ``/docs`` directory and is written in "
 "`reStructuredText <https://docutils.sourceforge.io/rst.html>`_ with the "
-"`Sphinx <https://www.sphinx-doc.org/en/master/>`_. library. If you're "
+"`Sphinx <https://www.sphinx-doc.org/en/master/>`_ library. If you're "
 "unfamiliar with any of those, `reStructuredText primer <https://www.sphinx-"
 "doc.org/en/master/usage/restructuredtext/basics.html>`_ and `Sphinx "
 "quickstart <https://www.sphinx-doc.org/en/master/usage/quickstart.html>`_ "
@@ -527,7 +527,7 @@ msgstr ""
 msgid ""
 "Our docs include a Sphinx extension that can automatically run requests "
 "against example apps and include their result in the documentation page when "
-"its being built. This only requires 2 steps:"
+"it's being built. This only requires 2 steps:"
 msgstr ""
 
 #: ../../../../CONTRIBUTING.rst:223
