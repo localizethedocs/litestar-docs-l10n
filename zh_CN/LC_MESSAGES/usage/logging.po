@@ -1,0 +1,178 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Litestar Organization
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar main\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-09 09:38+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../usage/logging.rst:4
+msgid "Request logging"
+msgstr ""
+
+#: ../../../usage/logging.rst:6
+msgid ""
+"Litestar can be configured to log information about requests / responses, "
+"via :class:`~litestar.middleware.logging.LoggingMiddleware`. In that, it is "
+"agnostic about the logging set up, or which logging library is used. You can "
+"pass in any object that conforms to the :class:`logging.Logger` interface, "
+"or a callable that returns such a logger."
+msgstr ""
+
+#: ../../../usage/logging.rst:13
+msgid ""
+"import logging\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.middleware.logging import LoggingMiddleware\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"async def my_handler() -> dict[str, str]:\n"
+"    return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[my_handler],\n"
+"    middleware=[\n"
+"        LoggingMiddleware(\n"
+"            logging.getLogger(\"my.app\"),\n"
+"            request_log_fields=(\"query\", \"body\"),  # only log query and "
+"body fields\n"
+"        )\n"
+"    ],\n"
+")"
+msgstr ""
+
+#: ../../../usage/logging.rst:17
+msgid "Default request log properties"
+msgstr ""
+
+#: ../../../usage/logging.rst:19
+msgid "``path``"
+msgstr ""
+
+#: ../../../usage/logging.rst:20
+msgid ":attr:`~litestar.connection.Request.method`"
+msgstr ""
+
+#: ../../../usage/logging.rst:21
+msgid ":attr:`~litestar.connection.Request.content_type`"
+msgstr ""
+
+#: ../../../usage/logging.rst:22
+msgid ":attr:`~litestar.connection.ASGIConnection.query_params`"
+msgstr ""
+
+#: ../../../usage/logging.rst:23
+msgid ":attr:`~litestar.connection.ASGIConnection.path_params`"
+msgstr ""
+
+#: ../../../usage/logging.rst:26
+msgid "Default response log properties"
+msgstr ""
+
+#: ../../../usage/logging.rst:28
+msgid "``status_code``"
+msgstr ""
+
+#: ../../../usage/logging.rst:32
+msgid "Obfuscating Logging Output"
+msgstr ""
+
+#: ../../../usage/logging.rst:34
+msgid ""
+"Sometimes certain data, e.g. request or response headers, needs to be "
+"obfuscated:"
+msgstr ""
+
+#: ../../../usage/logging.rst:37
+msgid ""
+"from litestar.middleware.logging import LoggingMiddleware\n"
+"\n"
+"logging_middleware_config = LoggingMiddleware(\n"
+"    request_cookies_to_obfuscate={\"my-custom-session-key\"},\n"
+"    response_cookies_to_obfuscate={\"my-custom-session-key\"},\n"
+"    request_headers_to_obfuscate={\"my-custom-header\"},\n"
+"    response_headers_to_obfuscate={\"my-custom-header\"},\n"
+")"
+msgstr ""
+
+#: ../../../usage/logging.rst:48
+msgid ""
+"The middleware will obfuscate the headers ``Authorization`` and ``X-API-"
+"KEY`` , and the cookie ``session`` by default."
+msgstr ""
+
+#: ../../../usage/logging.rst:53
+msgid "Compression and Logging of Response Body"
+msgstr ""
+
+#: ../../../usage/logging.rst:55
+msgid ""
+"If both :class:`~litestar.config.compression.CompressionConfig` and :class:"
+"`~litestar.middleware.logging.LoggingMiddleware` have been defined for the "
+"application, the response body will be omitted from response logging if it "
+"has been compressed, even if ``\"body\"`` has been included in :paramref:"
+"`~litestar.middleware.logging.LoggingMiddleware.response_log_fields`. To "
+"force the body of compressed responses to be logged, set :paramref:"
+"`~litestar.middleware.logging.LoggingMiddleware.include_compressed_body` to "
+"``True`` , in addition to including ``\"body\"`` in ``response_log_fields``."
+msgstr ""
+
+#: ../../../usage/logging.rst:65
+msgid "Structured logging"
+msgstr ""
+
+#: ../../../usage/logging.rst:67
+msgid ""
+"The middleware can be configured to log information in a structured way, by "
+"setting ``log_structured=True``. In this mode, Litestar will expect a logger "
+"that accept arbitrary data as keyword arguments."
+msgstr ""
+
+#: ../../../usage/logging.rst:73
+msgid "Integration with third party logging libraries"
+msgstr ""
+
+#: ../../../usage/logging.rst:75
+msgid ""
+"To integrate with a third party logging library, simply pass in the logger "
+"directly:"
+msgstr ""
+
+#: ../../../usage/logging.rst:78
+msgid ""
+"import structlog\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.middleware.logging import LoggingMiddleware\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"async def my_handler() -> dict[str, str]:\n"
+"    return {\"hello\": \"world\"}\n"
+"\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[my_handler],\n"
+"    middleware=[\n"
+"        LoggingMiddleware(\n"
+"            structlog.get_logger(\"my.app\"),\n"
+"            request_log_fields=(\"query\", \"body\"),  # only log query and "
+"body fields\n"
+"        )\n"
+"    ],\n"
+")"
+msgstr ""
