@@ -1,0 +1,893 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/testing.rst:2
+msgid "starlite.testing"
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient:1
+msgid ""
+"Bases: :py:class:`~httpx.Client`, :py:class:`~starlite.testing.client.base."
+"BaseTestClient`, :py:class:`~typing.Generic`\\ [:py:obj:`~starlite.testing."
+"client.sync_client.T`]"
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.__init__:1
+msgid ""
+"A client implementation providing a context manager for testing applications."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:0
+#: ../../../../starlite/testing/client/sync_client.py:docstring
+#: starlite.testing.client.sync_client.TestClient.__init__:0
+#: starlite.testing.client.sync_client.TestClient.create_session_cookies:0
+#: starlite.testing.client.sync_client.TestClient.delete:0
+#: starlite.testing.client.sync_client.TestClient.get:0
+#: starlite.testing.client.sync_client.TestClient.head:0
+#: starlite.testing.client.sync_client.TestClient.options:0
+#: starlite.testing.client.sync_client.TestClient.patch:0
+#: starlite.testing.client.sync_client.TestClient.post:0
+#: starlite.testing.client.sync_client.TestClient.put:0
+#: starlite.testing.client.sync_client.TestClient.request:0
+#: starlite.testing.client.sync_client.TestClient.set_session_data:0
+#: starlite.testing.client.sync_client.TestClient.websocket_connect:0
+#: ../../../../starlite/testing/request_factory.py:docstring
+#: starlite.testing.request_factory.RequestFactory.__init__:0
+#: starlite.testing.request_factory.RequestFactory.delete:0
+#: starlite.testing.request_factory.RequestFactory.get:0
+#: starlite.testing.request_factory.RequestFactory.patch:0
+#: starlite.testing.request_factory.RequestFactory.post:0
+#: starlite.testing.request_factory.RequestFactory.put:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.__init__:3
+msgid "The instance of :class:`Starlite <starlite.app.Starlite>` under test."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:47
+#: ../../../../starlite/testing/client/sync_client.py:docstring
+#: starlite.testing.client.sync_client.TestClient.__init__:4
+msgid "URL scheme and domain for test request paths, e.g. 'http://testserver'."
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.__init__:5
+msgid ""
+"Flag for the underlying test client to raise server exceptions instead of "
+"wrapping them in an HTTP response."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:87
+#: ../../../../starlite/testing/client/sync_client.py:docstring
+#: starlite.testing.client.sync_client.TestClient.__init__:7
+msgid "Path prefix for requests."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:45
+#: ../../../../starlite/testing/client/sync_client.py:docstring
+#: starlite.testing.client.sync_client.TestClient.__init__:8
+msgid "The async backend to use, options are \"asyncio\" or \"trio\"."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:46
+#: ../../../../starlite/testing/client/sync_client.py:docstring
+#: starlite.testing.client.sync_client.TestClient.__init__:9
+msgid "``anyio`` options."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:89
+#: ../../../../starlite/testing/client/sync_client.py:docstring
+#: starlite.testing.client.sync_client.TestClient.__init__:10
+msgid ""
+"Configuration for Session Middleware class to create raw session cookies for "
+"request to the route handlers."
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.__init__:12
+msgid "Cookies to set on the client."
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.request:1
+msgid "Sends a request."
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.request:3
+msgid "An HTTP method."
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.delete:3
+#: starlite.testing.client.sync_client.TestClient.get:3
+#: starlite.testing.client.sync_client.TestClient.head:3
+#: starlite.testing.client.sync_client.TestClient.options:3
+#: starlite.testing.client.sync_client.TestClient.patch:3
+#: starlite.testing.client.sync_client.TestClient.post:3
+#: starlite.testing.client.sync_client.TestClient.put:3
+#: starlite.testing.client.sync_client.TestClient.request:4
+msgid "URL or path for the request."
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.patch:4
+#: starlite.testing.client.sync_client.TestClient.post:4
+#: starlite.testing.client.sync_client.TestClient.put:4
+#: starlite.testing.client.sync_client.TestClient.request:5
+msgid "Request content."
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.patch:5
+#: starlite.testing.client.sync_client.TestClient.post:5
+#: starlite.testing.client.sync_client.TestClient.put:5
+#: starlite.testing.client.sync_client.TestClient.request:6
+msgid "Form encoded data."
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.patch:6
+#: starlite.testing.client.sync_client.TestClient.post:6
+#: starlite.testing.client.sync_client.TestClient.put:6
+#: starlite.testing.client.sync_client.TestClient.request:7
+msgid "Multipart files to send."
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.patch:7
+#: starlite.testing.client.sync_client.TestClient.post:7
+#: starlite.testing.client.sync_client.TestClient.put:7
+#: starlite.testing.client.sync_client.TestClient.request:8
+msgid "JSON data to send."
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.delete:4
+#: starlite.testing.client.sync_client.TestClient.get:4
+#: starlite.testing.client.sync_client.TestClient.head:4
+#: starlite.testing.client.sync_client.TestClient.options:4
+#: starlite.testing.client.sync_client.TestClient.patch:8
+#: starlite.testing.client.sync_client.TestClient.post:8
+#: starlite.testing.client.sync_client.TestClient.put:8
+#: starlite.testing.client.sync_client.TestClient.request:9
+#: starlite.testing.client.sync_client.TestClient.websocket_connect:5
+msgid "Query parameters."
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.delete:5
+#: starlite.testing.client.sync_client.TestClient.get:5
+#: starlite.testing.client.sync_client.TestClient.head:5
+#: starlite.testing.client.sync_client.TestClient.options:5
+#: starlite.testing.client.sync_client.TestClient.patch:9
+#: starlite.testing.client.sync_client.TestClient.post:9
+#: starlite.testing.client.sync_client.TestClient.put:9
+#: starlite.testing.client.sync_client.TestClient.request:10
+#: starlite.testing.client.sync_client.TestClient.websocket_connect:6
+msgid "Request headers."
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.delete:6
+#: starlite.testing.client.sync_client.TestClient.get:6
+#: starlite.testing.client.sync_client.TestClient.head:6
+#: starlite.testing.client.sync_client.TestClient.options:6
+#: starlite.testing.client.sync_client.TestClient.patch:10
+#: starlite.testing.client.sync_client.TestClient.post:10
+#: starlite.testing.client.sync_client.TestClient.put:10
+#: starlite.testing.client.sync_client.TestClient.request:11
+#: starlite.testing.client.sync_client.TestClient.websocket_connect:7
+msgid "Request cookies."
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.delete:7
+#: starlite.testing.client.sync_client.TestClient.get:7
+#: starlite.testing.client.sync_client.TestClient.head:7
+#: starlite.testing.client.sync_client.TestClient.options:7
+#: starlite.testing.client.sync_client.TestClient.patch:11
+#: starlite.testing.client.sync_client.TestClient.post:11
+#: starlite.testing.client.sync_client.TestClient.put:11
+#: starlite.testing.client.sync_client.TestClient.request:12
+#: starlite.testing.client.sync_client.TestClient.websocket_connect:8
+msgid "Auth headers."
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.delete:8
+#: starlite.testing.client.sync_client.TestClient.get:8
+#: starlite.testing.client.sync_client.TestClient.head:8
+#: starlite.testing.client.sync_client.TestClient.options:8
+#: starlite.testing.client.sync_client.TestClient.patch:12
+#: starlite.testing.client.sync_client.TestClient.post:12
+#: starlite.testing.client.sync_client.TestClient.put:12
+#: starlite.testing.client.sync_client.TestClient.request:13
+#: starlite.testing.client.sync_client.TestClient.websocket_connect:9
+msgid "Whether to follow redirects."
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.delete:9
+#: starlite.testing.client.sync_client.TestClient.get:9
+#: starlite.testing.client.sync_client.TestClient.head:9
+#: starlite.testing.client.sync_client.TestClient.options:9
+#: starlite.testing.client.sync_client.TestClient.patch:13
+#: starlite.testing.client.sync_client.TestClient.post:13
+#: starlite.testing.client.sync_client.TestClient.put:13
+#: starlite.testing.client.sync_client.TestClient.request:14
+#: starlite.testing.client.sync_client.TestClient.websocket_connect:10
+msgid "Request timeout."
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.delete:10
+#: starlite.testing.client.sync_client.TestClient.get:10
+#: starlite.testing.client.sync_client.TestClient.head:10
+#: starlite.testing.client.sync_client.TestClient.options:10
+#: starlite.testing.client.sync_client.TestClient.patch:14
+#: starlite.testing.client.sync_client.TestClient.post:14
+#: starlite.testing.client.sync_client.TestClient.put:14
+#: starlite.testing.client.sync_client.TestClient.request:15
+#: starlite.testing.client.sync_client.TestClient.websocket_connect:11
+msgid "Dictionary of ASGI extensions."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:0
+#: ../../../../starlite/testing/client/sync_client.py:docstring
+#: starlite.testing.client.sync_client.TestClient.create_session_cookies:0
+#: starlite.testing.client.sync_client.TestClient.delete:0
+#: starlite.testing.client.sync_client.TestClient.get:0
+#: starlite.testing.client.sync_client.TestClient.get_session_data:0
+#: starlite.testing.client.sync_client.TestClient.get_session_from_cookies:0
+#: starlite.testing.client.sync_client.TestClient.head:0
+#: starlite.testing.client.sync_client.TestClient.options:0
+#: starlite.testing.client.sync_client.TestClient.patch:0
+#: starlite.testing.client.sync_client.TestClient.post:0
+#: starlite.testing.client.sync_client.TestClient.put:0
+#: starlite.testing.client.sync_client.TestClient.request:0
+#: starlite.testing.client.sync_client.TestClient.set_session_data:0
+#: starlite.testing.client.sync_client.TestClient.websocket_connect:0
+#: ../../../../starlite/testing/request_factory.py:docstring
+#: starlite.testing.request_factory.RequestFactory.delete:0
+#: starlite.testing.request_factory.RequestFactory.get:0
+#: starlite.testing.request_factory.RequestFactory.patch:0
+#: starlite.testing.request_factory.RequestFactory.post:0
+#: starlite.testing.request_factory.RequestFactory.put:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.delete:12
+#: starlite.testing.client.sync_client.TestClient.get:12
+#: starlite.testing.client.sync_client.TestClient.head:12
+#: starlite.testing.client.sync_client.TestClient.options:12
+#: starlite.testing.client.sync_client.TestClient.patch:16
+#: starlite.testing.client.sync_client.TestClient.post:16
+#: starlite.testing.client.sync_client.TestClient.put:16
+#: starlite.testing.client.sync_client.TestClient.request:17
+msgid "An HTTPX Response."
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.get:1
+msgid "Sends a GET request."
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.options:1
+msgid "Sends an OPTIONS request."
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.head:1
+msgid "Sends a HEAD request."
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.post:1
+msgid "Sends a POST request."
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.put:1
+msgid "Sends a PUT request."
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.patch:1
+msgid "Sends a PATCH request."
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.delete:1
+msgid "Sends a DELETE request."
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.websocket_connect:1
+msgid "Sends a GET request to establish a websocket connection."
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.websocket_connect:3
+msgid "Request URL."
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.websocket_connect:4
+msgid "Websocket subprotocols."
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.websocket_connect:13
+msgid ""
+"An :class:`WebSocketTestSession <starlite.testing.test_client."
+"WebSocketTestSession>` instance."
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.create_session_cookies:1
+msgid ""
+"Creates raw session cookies that are loaded into the session by the Session "
+"Middleware. It creates cookies the same way as if they are coming from the "
+"browser. Your tests must set up session middleware to load raw session "
+"cookies into the session."
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.create_session_cookies:5
+msgid "Dictionary to create raw session cookies from."
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.create_session_cookies:7
+msgid "A dictionary with cookie name as key and cookie value as value."
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.create_session_cookies:11
+msgid "Use the explicit :meth:`TestClient.set_session_data` method"
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:10
+#: ../../../../starlite/testing/client/sync_client.py:docstring
+#: starlite.testing.client.sync_client.TestClient.create_session_cookies:13
+#: starlite.testing.client.sync_client.TestClient.get_session_data:5
+#: starlite.testing.client.sync_client.TestClient.get_session_from_cookies:11
+#: starlite.testing.client.sync_client.TestClient.set_session_data:7
+#: ../../../../starlite/testing/request_factory.py:docstring
+#: starlite.testing.request_factory.RequestFactory.__init__:9
+msgid "Examples"
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.get_session_from_cookies:1
+msgid ""
+"Raw session cookies are a serialized image of session which are created by "
+"session middleware and sent with the response. To assert data in session, "
+"this method deserializes the raw session cookies and creates session from "
+"them."
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.get_session_data:3
+#: starlite.testing.client.sync_client.TestClient.get_session_from_cookies:5
+msgid "A dictionary containing session data."
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.get_session_from_cookies:9
+msgid "Use the explicit :meth:`TestClient.get_session_data` method"
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.set_session_data:1
+msgid "Set session data."
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.set_session_data:3
+msgid "Session data"
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.set_session_data:5
+msgid "None"
+msgstr ""
+
+#: ../../../../starlite/testing/client/sync_client.py:docstring of
+#: starlite.testing.client.sync_client.TestClient.get_session_data:1
+msgid "Get session data."
+msgstr ""
+
+#: ../../../../starlite/testing/request_factory.py:docstring of
+#: starlite.testing.request_factory.RequestFactory:1
+msgid "Bases: :py:class:`object`"
+msgstr ""
+
+#: ../../../../starlite/testing/request_factory.py:docstring of
+#: starlite.testing.request_factory.RequestFactory:1
+msgid ""
+"Factory to create :class:`Request <starlite.connection.Request>` instances."
+msgstr ""
+
+#: ../../../../starlite/testing/request_factory.py:docstring of
+#: starlite.testing.request_factory.RequestFactory.__init__:1
+msgid "Initialize ``RequestFactory``"
+msgstr ""
+
+#: ../../../../starlite/testing/request_factory.py:docstring of
+#: starlite.testing.request_factory.RequestFactory.__init__:3
+msgid ""
+"An instance of :class:`Starlite <starlite.app.Starlite>` to set as ``request."
+"scope[\"app\"]``."
+msgstr ""
+
+#: ../../../../starlite/testing/request_factory.py:docstring of
+#: starlite.testing.request_factory.RequestFactory.__init__:4
+msgid "The server's domain."
+msgstr ""
+
+#: ../../../../starlite/testing/request_factory.py:docstring of
+#: starlite.testing.request_factory.RequestFactory.__init__:5
+msgid "The server's port."
+msgstr ""
+
+#: ../../../../starlite/testing/request_factory.py:docstring of
+#: starlite.testing.request_factory.RequestFactory.__init__:6
+msgid "Root path for the server."
+msgstr ""
+
+#: ../../../../starlite/testing/request_factory.py:docstring of
+#: starlite.testing.request_factory.RequestFactory.__init__:7
+msgid "Scheme for the server."
+msgstr ""
+
+#: ../../../../starlite/testing/request_factory.py:docstring of
+#: starlite.testing.request_factory.RequestFactory.get:1
+msgid "Create a GET :class:`Request <starlite.connection.Request>` instance."
+msgstr ""
+
+#: ../../../../starlite/testing/request_factory.py:docstring of
+#: starlite.testing.request_factory.RequestFactory.delete:3
+#: starlite.testing.request_factory.RequestFactory.get:3
+#: starlite.testing.request_factory.RequestFactory.patch:3
+#: starlite.testing.request_factory.RequestFactory.post:3
+#: starlite.testing.request_factory.RequestFactory.put:3
+msgid "The request's path."
+msgstr ""
+
+#: ../../../../starlite/testing/request_factory.py:docstring of
+#: starlite.testing.request_factory.RequestFactory.delete:4
+#: starlite.testing.request_factory.RequestFactory.get:4
+#: starlite.testing.request_factory.RequestFactory.patch:4
+#: starlite.testing.request_factory.RequestFactory.post:4
+#: starlite.testing.request_factory.RequestFactory.put:4
+msgid "A dictionary of headers."
+msgstr ""
+
+#: ../../../../starlite/testing/request_factory.py:docstring of
+#: starlite.testing.request_factory.RequestFactory.delete:5
+#: starlite.testing.request_factory.RequestFactory.get:5
+#: starlite.testing.request_factory.RequestFactory.patch:5
+#: starlite.testing.request_factory.RequestFactory.post:5
+#: starlite.testing.request_factory.RequestFactory.put:5
+msgid ""
+"A string representing the cookie header or a list of \"Cookie\" instances. "
+"This value can include multiple cookies."
+msgstr ""
+
+#: ../../../../starlite/testing/request_factory.py:docstring of
+#: starlite.testing.request_factory.RequestFactory.delete:7
+#: starlite.testing.request_factory.RequestFactory.get:7
+#: starlite.testing.request_factory.RequestFactory.patch:7
+#: starlite.testing.request_factory.RequestFactory.post:7
+#: starlite.testing.request_factory.RequestFactory.put:7
+msgid "A dictionary of session data."
+msgstr ""
+
+#: ../../../../starlite/testing/request_factory.py:docstring of
+#: starlite.testing.request_factory.RequestFactory.delete:8
+#: starlite.testing.request_factory.RequestFactory.get:8
+#: starlite.testing.request_factory.RequestFactory.patch:8
+#: starlite.testing.request_factory.RequestFactory.post:8
+#: starlite.testing.request_factory.RequestFactory.put:8
+msgid "A value for `request.scope[\"user\"]`."
+msgstr ""
+
+#: ../../../../starlite/testing/request_factory.py:docstring of
+#: starlite.testing.request_factory.RequestFactory.delete:9
+#: starlite.testing.request_factory.RequestFactory.get:9
+#: starlite.testing.request_factory.RequestFactory.patch:9
+#: starlite.testing.request_factory.RequestFactory.post:9
+#: starlite.testing.request_factory.RequestFactory.put:9
+msgid "A value for `request.scope[\"auth\"]`."
+msgstr ""
+
+#: ../../../../starlite/testing/request_factory.py:docstring of
+#: starlite.testing.request_factory.RequestFactory.delete:10
+#: starlite.testing.request_factory.RequestFactory.get:10
+#: starlite.testing.request_factory.RequestFactory.patch:13
+#: starlite.testing.request_factory.RequestFactory.post:13
+#: starlite.testing.request_factory.RequestFactory.put:13
+msgid ""
+"A dictionary of values from which the request's query will be generated."
+msgstr ""
+
+#: ../../../../starlite/testing/request_factory.py:docstring of
+#: starlite.testing.request_factory.RequestFactory.delete:11
+#: starlite.testing.request_factory.RequestFactory.get:11
+#: starlite.testing.request_factory.RequestFactory.patch:14
+#: starlite.testing.request_factory.RequestFactory.post:14
+#: starlite.testing.request_factory.RequestFactory.put:14
+msgid "Arbitrary request state."
+msgstr ""
+
+#: ../../../../starlite/testing/request_factory.py:docstring of
+#: starlite.testing.request_factory.RequestFactory.delete:12
+#: starlite.testing.request_factory.RequestFactory.get:12
+#: starlite.testing.request_factory.RequestFactory.patch:15
+#: starlite.testing.request_factory.RequestFactory.post:15
+#: starlite.testing.request_factory.RequestFactory.put:15
+msgid "A string keyed dictionary of path parameter values."
+msgstr ""
+
+#: ../../../../starlite/testing/request_factory.py:docstring of
+#: starlite.testing.request_factory.RequestFactory.delete:13
+#: starlite.testing.request_factory.RequestFactory.get:13
+#: starlite.testing.request_factory.RequestFactory.patch:16
+#: starlite.testing.request_factory.RequestFactory.post:16
+#: starlite.testing.request_factory.RequestFactory.put:16
+msgid "HTTP version. Defaults to \"1.1\"."
+msgstr ""
+
+#: ../../../../starlite/testing/request_factory.py:docstring of
+#: starlite.testing.request_factory.RequestFactory.delete:14
+#: starlite.testing.request_factory.RequestFactory.get:14
+#: starlite.testing.request_factory.RequestFactory.patch:17
+#: starlite.testing.request_factory.RequestFactory.post:17
+#: starlite.testing.request_factory.RequestFactory.put:17
+msgid ""
+"A route handler instance or method. If not provided a default handler is set."
+msgstr ""
+
+#: ../../../../starlite/testing/request_factory.py:docstring of
+#: starlite.testing.request_factory.RequestFactory.delete:16
+#: starlite.testing.request_factory.RequestFactory.get:16
+#: starlite.testing.request_factory.RequestFactory.patch:19
+#: starlite.testing.request_factory.RequestFactory.post:19
+#: starlite.testing.request_factory.RequestFactory.put:19
+msgid "A :class:`Request <starlite.connection.Request>` instance"
+msgstr ""
+
+#: ../../../../starlite/testing/request_factory.py:docstring of
+#: starlite.testing.request_factory.RequestFactory.delete:1
+#: starlite.testing.request_factory.RequestFactory.post:1
+msgid "Create a POST :class:`Request <starlite.connection.Request>` instance."
+msgstr ""
+
+#: ../../../../starlite/testing/request_factory.py:docstring of
+#: starlite.testing.request_factory.RequestFactory.patch:10
+#: starlite.testing.request_factory.RequestFactory.post:10
+#: starlite.testing.request_factory.RequestFactory.put:10
+msgid "The 'Content-Type' header of the request."
+msgstr ""
+
+#: ../../../../starlite/testing/request_factory.py:docstring of
+#: starlite.testing.request_factory.RequestFactory.patch:11
+#: starlite.testing.request_factory.RequestFactory.post:11
+#: starlite.testing.request_factory.RequestFactory.put:11
+msgid ""
+"A value for the request's body. Can be either a pydantic model instance or a "
+"string keyed dictionary."
+msgstr ""
+
+#: ../../../../starlite/testing/request_factory.py:docstring of
+#: starlite.testing.request_factory.RequestFactory.put:1
+msgid "Create a PUT :class:`Request <starlite.connection.Request>` instance."
+msgstr ""
+
+#: ../../../../starlite/testing/request_factory.py:docstring of
+#: starlite.testing.request_factory.RequestFactory.patch:1
+msgid "Create a PATCH :class:`Request <starlite.connection.Request>` instance."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:1
+msgid "Create a Starlite app instance and initializes it."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:3
+msgid ":class:`TestClient <starlite.testing.TestClient>` with it."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:5
+msgid "Notes"
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:7
+msgid ""
+"This function should be called as a context manager to ensure async startup "
+"and shutdown are"
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:8
+msgid "handled correctly."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:27
+msgid ""
+"A single handler or a list of route handlers, which can include instances "
+"of :class:`Router <starlite.router.Router>`, subclasses of :class:"
+"`Controller <starlite.controller.Controller>` or any function decorated by "
+"the route handler decorators."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:30
+msgid ""
+"An application level :class:`exception event handler <starlite.types."
+"AfterExceptionHookHandler>`. This hook is called after an exception occurs. "
+"In difference to exception handlers, it is not meant to return a response - "
+"only to process the exception (e.g. log it, send it to Sentry etc.)."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:33
+msgid ""
+"A sync or async function executed after the route handler function returned "
+"and the response object has been resolved. Receives the response object "
+"which may be any subclass of :class:`Response <starlite.response.Response>`."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:36
+msgid ""
+"A sync or async function called after the response has been awaited. It "
+"receives the :class:`Request <starlite.connection.Request>` object and "
+"should not return any values."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:38
+msgid ""
+"An application level :class:`LifeSpan hook handler <starlite.types."
+"LifeSpanHookHandler>`. This hook is called during the ASGI shutdown, after "
+"all callables in the ``on_shutdown`` list have been called."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:41
+msgid ""
+"An application level :class:`LifeSpan hook handler <starlite.types."
+"LifeSpanHookHandler>`. This hook is called during the ASGI startup, after "
+"all callables in the ``on_startup`` list have been called."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:44
+msgid "A list of allowed hosts - enables the builtin allowed hosts middleware."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:48
+msgid ""
+"A sync or async function called immediately before calling the route "
+"handler. Receives the :class:`Request <starlite.connection.Request>` "
+"instance and any non-``None`` return value is used for the response, "
+"bypassing the route handler."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:51
+msgid ""
+"An application level :class:`before send hook handler <starlite.types."
+"BeforeMessageSendHookHandler>` or list thereof. This hook is called when the "
+"ASGI send function is called."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:53
+msgid ""
+"An application level :class:`LifeSpan hook handler <starlite.types."
+"LifeSpanHookHandler>`. This hook is called during the ASGI shutdown, before "
+"any callables in the ``on_shutdown`` list have been called."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:55
+msgid ""
+"An application level :class:`LifeSpan hook handler <starlite.types."
+"LifeSpanHookHandler>`. This hook is called during the ASGI startup, before "
+"any callables in the ``on_startup`` list have been called."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:57
+msgid "Configures caching behavior of the application."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:58
+msgid ""
+"Configures compression behaviour of the application, this enabled a builtin "
+"or user defined Compression middleware."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:60
+msgid "If set this enables the builtin CORS middleware."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:61
+msgid "If set this enables the builtin CSRF middleware."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:62
+msgid ""
+"A string keyed dictionary of dependency :class:`Provider <starlite."
+"datastructures.Provide>` instances."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:63
+msgid ""
+"A dictionary that maps handler functions to status codes and/or exception "
+"types."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:64
+msgid "A list of :class:`Guard <starlite.types.Guard>` callables."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:65
+msgid "An object from which to initialize the app state."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:66
+msgid ""
+"A subclass of :class:`BaseLoggingConfig <starlite.config.logging."
+"BaseLoggingConfig>`."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:67
+msgid "A list of :class:`Middleware <starlite.types.Middleware>`."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:68
+msgid ""
+"The maximal number of allowed parts in a multipart/formdata request. This "
+"limit is intended to protect from DoS attacks."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:70
+msgid ""
+"A sequence of :class:`OnAppInitHandler <starlite.types.OnAppInitHandler>` "
+"instances. Handlers receive an instance of :class:`AppConfig <starlite."
+"config.app.AppConfig>` that will have been initially populated with the "
+"parameters passed to :class:`Starlite <starlite.app.Starlite>`, and must "
+"return an instance of same. If more than one handler is registered they are "
+"called in the order they are provided."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:74
+msgid ""
+"A list of :class:`LifeSpanHandler <starlite.types.LifeSpanHandler>` called "
+"during application shutdown."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:76
+msgid ""
+"A list of :class:`LifeSpanHandler <starlite.types.LifeSpanHandler>` called "
+"during application startup."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:78
+msgid ""
+"Defaults to :attr:`DEFAULT_OPENAPI_CONFIG <starlite.app."
+"DEFAULT_OPENAPI_CONFIG>`"
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:79
+msgid ""
+"A mapping of :class:`Parameter <starlite.params.Parameter>` definitions "
+"available to all application paths."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:81
+msgid "List of plugins."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:82
+msgid ""
+"An optional subclass of :class:`Request <starlite.connection.request."
+"Request>` to use for http connections."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:84
+msgid ""
+"Flag for underlying the test client to raise server exceptions instead of "
+"wrapping them in an HTTP response."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:86
+msgid ""
+"A custom subclass of [starlite.response.Response] to be used as the app's "
+"default response."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:88
+msgid ""
+"An instance or list of :class:`StaticFilesConfig <starlite.config."
+"StaticFilesConfig>`"
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:91
+msgid "An instance of :class:`TemplateConfig <starlite.config.TemplateConfig>`"
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:92
+msgid ""
+"An optional subclass of :class:`WebSocket <starlite.connection.websocket."
+"WebSocket>` to use for websocket connections."
+msgstr ""
+
+#: ../../../../starlite/testing/__init__.py:docstring of
+#: starlite.testing.create_test_client.create_test_client:95
+msgid ""
+"An instance of :class:`TestClient <starlite.testing.TestClient>` with a "
+"created app instance."
+msgstr ""
