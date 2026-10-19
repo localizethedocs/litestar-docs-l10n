@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-09 08:37+0000\n"
+"POT-Creation-Date: 2026-10-19 15:22+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,6 +34,7 @@ msgid ""
 "from litestar import Request, post\n"
 "from litestar.events import listener\n"
 "from litestar import Litestar\n"
+"from litestar.params import JSONBody\n"
 "\n"
 "from db import user_repository\n"
 "from utils.email import send_welcome_mail\n"
@@ -53,7 +54,8 @@ msgid ""
 "\n"
 "\n"
 "@post(\"/users\")\n"
-"async def create_user_handler(data: UserDTO, request: Request) -> None:\n"
+"async def create_user_handler(data: JSONBody[UserDTO], request: Request) -> "
+"None:\n"
 "    # do something here to create a new user\n"
 "    # e.g. insert the user into a database\n"
 "    await user_repository.insert(data)\n"
@@ -73,22 +75,22 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../../usage/events.rst:48
+#: ../../../usage/events.rst:49
 msgid ""
 "The above example illustrates the power of this pattern - it allows us to "
 "perform async operations without blocking, and without slowing down the "
 "response cycle."
 msgstr ""
 
-#: ../../../usage/events.rst:52
+#: ../../../usage/events.rst:53
 msgid "Listening to Multiple Events"
 msgstr ""
 
-#: ../../../usage/events.rst:54
+#: ../../../usage/events.rst:55
 msgid "Event listeners can listen to multiple events:"
 msgstr ""
 
-#: ../../../usage/events.rst:57
+#: ../../../usage/events.rst:58
 msgid ""
 "from litestar.events import listener\n"
 "\n"
@@ -100,20 +102,21 @@ msgid ""
 "    await send_email(email, message)"
 msgstr ""
 
-#: ../../../usage/events.rst:71
+#: ../../../usage/events.rst:72
 msgid "Using Multiple Listeners"
 msgstr ""
 
-#: ../../../usage/events.rst:73
+#: ../../../usage/events.rst:74
 msgid "You can also listen to the same events using multiple listeners:"
 msgstr ""
 
-#: ../../../usage/events.rst:76
+#: ../../../usage/events.rst:77
 msgid ""
 "from dataclasses import dataclass\n"
 "\n"
 "from litestar import Request, post\n"
 "from litestar.events import listener\n"
+"from litestar.params import JSONBody\n"
 "\n"
 "from db import user_repository\n"
 "from utils.client import client\n"
@@ -139,33 +142,34 @@ msgid ""
 "\n"
 "\n"
 "@post(\"/users\")\n"
-"async def delete_user_handler(data: UserDTO, request: Request) -> None:\n"
+"async def delete_user_handler(data: JSONBody[UserDTO], request: Request) -> "
+"None:\n"
 "    await user_repository.delete({\"email\": email})\n"
 "    request.app.emit(\"user_deleted\", email=data.email, reason=\"deleted\")"
 msgstr ""
 
-#: ../../../usage/events.rst:113
+#: ../../../usage/events.rst:115
 msgid ""
 "In the above example we are performing two side effect for the same event, "
 "one sends the user an email, and the other sending an HTTP request to a "
 "service management system to create an issue."
 msgstr ""
 
-#: ../../../usage/events.rst:117
+#: ../../../usage/events.rst:119
 msgid "Passing Arguments to Listeners"
 msgstr ""
 
-#: ../../../usage/events.rst:119
+#: ../../../usage/events.rst:121
 msgid ""
 "The method :meth:`emit <litestar.events.BaseEventEmitterBackend.emit>` has "
 "the following signature:"
 msgstr ""
 
-#: ../../../usage/events.rst:122
+#: ../../../usage/events.rst:124
 msgid "def emit(self, event_id: str, *args: Any, **kwargs: Any) -> None: ..."
 msgstr ""
 
-#: ../../../usage/events.rst:127
+#: ../../../usage/events.rst:129
 msgid ""
 "This means that it expects a string for ``event_id`` following by any number "
 "of positional and keyword arguments. While this is highly flexible, it also "
@@ -173,11 +177,11 @@ msgid ""
 "expected args and kwargs."
 msgstr ""
 
-#: ../../../usage/events.rst:131
+#: ../../../usage/events.rst:133
 msgid "For example, the following would raise an exception in python:"
 msgstr ""
 
-#: ../../../usage/events.rst:134
+#: ../../../usage/events.rst:136
 msgid ""
 "@listener(\"user_deleted\")\n"
 "async def send_farewell_email_handler(email: str) -> None:\n"
@@ -197,19 +201,20 @@ msgid ""
 "\n"
 "\n"
 "@post(\"/users\")\n"
-"async def delete_user_handler(data: UserDTO, request: Request) -> None:\n"
+"async def delete_user_handler(data: JSONBody[UserDTO], request: Request) -> "
+"None:\n"
 "    await user_repository.delete({\"email\": email})\n"
 "    request.app.emit(\"user_deleted\", email=data.email, reason=\"deleted\")"
 msgstr ""
 
-#: ../../../usage/events.rst:159
+#: ../../../usage/events.rst:161
 msgid ""
 "The reason for this is that both listeners will receive two kwargs - "
 "``email`` and ``reason``. To avoid this, the previous example had "
 "``**kwargs`` in both:"
 msgstr ""
 
-#: ../../../usage/events.rst:163
+#: ../../../usage/events.rst:165
 msgid ""
 "@listener(\"user_deleted\")\n"
 "async def send_farewell_email_handler(email: str, **kwargs) -> None:\n"
@@ -221,37 +226,37 @@ msgid ""
 "    await client.post(\"some-url\", reason)"
 msgstr ""
 
-#: ../../../usage/events.rst:176
+#: ../../../usage/events.rst:178
 msgid "Creating Event Emitters"
 msgstr ""
 
-#: ../../../usage/events.rst:178
+#: ../../../usage/events.rst:180
 msgid ""
 "An \"event emitter\" is a class that inherits from :class:"
 "`BaseEventEmitterBackend <litestar.events.BaseEventEmitterBackend>`, which "
 "itself inherits from :obj:`contextlib.AbstractAsyncContextManager`."
 msgstr ""
 
-#: ../../../usage/events.rst:182
+#: ../../../usage/events.rst:184
 msgid ""
 ":meth:`emit <litestar.events.BaseEventEmitterBackend.emit>`: This is the "
 "method that performs the actual emitting logic."
 msgstr ""
 
-#: ../../../usage/events.rst:185
+#: ../../../usage/events.rst:187
 msgid ""
 "Additionally, the abstract ``__aenter__`` and ``__aexit__`` methods from :"
 "obj:`contextlib.AbstractAsyncContextManager` must be implemented, allowing "
 "the emitter to be used as an async context manager."
 msgstr ""
 
-#: ../../../usage/events.rst:189
+#: ../../../usage/events.rst:191
 msgid ""
 "By default Litestar uses the :class:`SimpleEventEmitter <litestar.events."
 "SimpleEventEmitter>`, which offers an in-memory async queue."
 msgstr ""
 
-#: ../../../usage/events.rst:193
+#: ../../../usage/events.rst:195
 msgid ""
 "This solution works well if the system does not need to rely on complex "
 "behaviour, such as a retry mechanism, persistence, or scheduling/cron. For "
