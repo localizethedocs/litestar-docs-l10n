@@ -1,0 +1,222 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../usage/security/guards.rst:2
+msgid "Guards"
+msgstr ""
+
+#: ../../../usage/security/guards.rst:4
+msgid ""
+"Guards are callables that receive two arguments - ``connection``, which is "
+"the :class:`ASGIConnection <.connection.base.ASGIConnection>` instance, and "
+"``route_handler``, which is a copy of the :class:`BaseRouteHandler <."
+"handlers.base.BaseRouteHandler>`. Their role is to *authorize* the request "
+"by verifying that the connection is allowed to reach the endpoint handler in "
+"question. If verification fails, the guard should raise an HTTPException, "
+"usually a :class:`NotAuthorizedException <starlite.exceptions."
+"NotAuthorizedException>` with a ``status_code`` of 401."
+msgstr ""
+
+#: ../../../usage/security/guards.rst:11
+msgid ""
+"To illustrate this we will implement a rudimentary role based authorization "
+"system in our Starlite app. As we have done for ``authentication``, we will "
+"assume that we added some sort of persistence layer without actually "
+"specifying it in the example."
+msgstr ""
+
+#: ../../../usage/security/guards.rst:15
+msgid ""
+"We begin by creating an :class:`Enum <enum.Enum>` with two roles - "
+"``consumer`` and ``admin``\\ :"
+msgstr ""
+
+#: ../../../usage/security/guards.rst:18
+msgid ""
+"from enum import Enum\n"
+"\n"
+"\n"
+"class UserRole(str, Enum):\n"
+"    CONSUMER = \"consumer\"\n"
+"    ADMIN = \"admin\""
+msgstr ""
+
+#: ../../../usage/security/guards.rst:26
+msgid "Our ``User`` model will now look like this:"
+msgstr ""
+
+#: ../../../usage/security/guards.rst:29
+msgid ""
+"from pydantic import BaseModel, UUID4\n"
+"from enum import Enum\n"
+"\n"
+"\n"
+"class UserRole(str, Enum):\n"
+"    CONSUMER = \"consumer\"\n"
+"    ADMIN = \"admin\"\n"
+"\n"
+"\n"
+"class User(BaseModel):\n"
+"    id: UUID4\n"
+"    role: UserRole\n"
+"\n"
+"    @property\n"
+"    def is_admin(self) -> bool:\n"
+"        \"\"\"Determines whether the user is an admin user\"\"\"\n"
+"        return self.role == UserRole.ADMIN"
+msgstr ""
+
+#: ../../../usage/security/guards.rst:48
+msgid ""
+"Given that the User model has a \"role\" property we can use it to authorize "
+"a request. Let's create a guard that only allows admin users to access "
+"certain route handlers and then add it to a route handler function:"
+msgstr ""
+
+#: ../../../usage/security/guards.rst:52
+msgid ""
+"from starlite import ASGIConnection, BaseRouteHandler, "
+"NotAuthorizedException\n"
+"from pydantic import BaseModel, UUID4\n"
+"from starlite import post\n"
+"from enum import Enum\n"
+"\n"
+"\n"
+"class UserRole(str, Enum):\n"
+"    CONSUMER = \"consumer\"\n"
+"    ADMIN = \"admin\"\n"
+"\n"
+"\n"
+"class User(BaseModel):\n"
+"    id: UUID4\n"
+"    role: UserRole\n"
+"\n"
+"    @property\n"
+"    def is_admin(self) -> bool:\n"
+"        \"\"\"Determines whether the user is an admin user\"\"\"\n"
+"        return self.role == UserRole.ADMIN\n"
+"\n"
+"\n"
+"def admin_user_guard(connection: ASGIConnection, _: BaseRouteHandler) -> "
+"None:\n"
+"    if not connection.user.is_admin:\n"
+"        raise NotAuthorizedException()\n"
+"\n"
+"\n"
+"@post(path=\"/user\", guards=[admin_user_guard])\n"
+"def create_user(data: User) -> User: ..."
+msgstr ""
+
+#: ../../../usage/security/guards.rst:82
+msgid ""
+"Thus, only an admin user would be able to send a post request to the "
+"``create_user`` handler."
+msgstr ""
+
+#: ../../../usage/security/guards.rst:85
+msgid "Guard scopes"
+msgstr ""
+
+#: ../../../usage/security/guards.rst:87
+msgid ""
+"Guards can be declared on all levels of the app - the Starlite instance, "
+"routers, controllers and individual route handlers:"
+msgstr ""
+
+#: ../../../usage/security/guards.rst:91
+msgid ""
+"from starlite import ASGIConnection, Controller, Router, Starlite, "
+"BaseRouteHandler\n"
+"\n"
+"\n"
+"def my_guard(connection: ASGIConnection, handler: BaseRouteHandler) -> "
+"None: ...\n"
+"\n"
+"\n"
+"# controller\n"
+"class UserController(Controller):\n"
+"    path = \"/user\"\n"
+"    guards = [my_guard]\n"
+"\n"
+"    ...\n"
+"\n"
+"\n"
+"# router\n"
+"admin_router = Router(path=\"admin\", route_handlers=[UserController], "
+"guards=[my_guard])\n"
+"\n"
+"# app\n"
+"app = Starlite(route_handlers=[admin_router], guards=[my_guard])"
+msgstr ""
+
+#: ../../../usage/security/guards.rst:112
+msgid ""
+"The deciding factor on where to place a guard is on the kind of access "
+"restriction that are required: do only specific route handlers need to be "
+"restricted? An entire controller? All the paths under a specific router? Or "
+"the entire app?"
+msgstr ""
+
+#: ../../../usage/security/guards.rst:115
+msgid ""
+"As you can see in the above examples - ``guards`` is a list. This means you "
+"can add **multiple** guards at every layer. Unlike ``dependencies`` , guards "
+"do not override each other but are rather *cumulative*. This means that you "
+"can define guards on different levels of your app, and they will combine."
+msgstr ""
+
+#: ../../../usage/security/guards.rst:120
+msgid "The route handler \"opt\" key"
+msgstr ""
+
+#: ../../../usage/security/guards.rst:122
+msgid ""
+"Occasionally there might be a need to set some values on the route handler "
+"itself - these can be permissions, or some other flag. This can be achieved "
+"with :ref:`the opts kwarg <handler_opts>` of route handler"
+msgstr ""
+
+#: ../../../usage/security/guards.rst:125
+msgid ""
+"To illustrate this lets say we want to have an endpoint that is guarded by a "
+"\"secret\" token, to which end we create the following guard:"
+msgstr ""
+
+#: ../../../usage/security/guards.rst:129
+msgid ""
+"from starlite import ASGIConnection, BaseRouteHandler, "
+"NotAuthorizedException, get\n"
+"from os import environ\n"
+"\n"
+"\n"
+"def secret_token_guard(\n"
+"    connection: ASGIConnection, route_handler: BaseRouteHandler\n"
+") -> None:\n"
+"    if (\n"
+"        route_handler.opt.get(\"secret\")\n"
+"        and not connection.headers.get(\"Secret-Header\", \"\")\n"
+"        == route_handler.opt[\"secret\"]\n"
+"    ):\n"
+"        raise NotAuthorizedException()\n"
+"\n"
+"\n"
+"@get(path=\"/secret\", guards=[secret_token_guard], opt={\"secret\": environ."
+"get(\"SECRET\")})\n"
+"def secret_endpoint() -> None: ..."
+msgstr ""

@@ -1,0 +1,285 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/middleware/rate_limit.rst:2
+msgid "rate_limit"
+msgstr ""
+
+#: ../../../../starlite/middleware/rate_limit.py:docstring of
+#: starlite.middleware.rate_limit.CacheObject:1
+msgid "Bases: :py:class:`object`"
+msgstr ""
+
+#: ../../../../starlite/middleware/rate_limit.py:docstring of
+#: starlite.middleware.rate_limit.CacheObject:1
+msgid "Representation of a cached object's metadata."
+msgstr ""
+
+#: ../../../../starlite/middleware/rate_limit.py:docstring of
+#: starlite.middleware.rate_limit.RateLimitMiddleware:1
+msgid "Bases: :py:class:`~starlite.middleware.base.AbstractMiddleware`"
+msgstr ""
+
+#: ../../../../starlite/middleware/rate_limit.py:docstring of
+#: starlite.middleware.rate_limit.RateLimitMiddleware:1
+msgid "Rate-limiting middleware."
+msgstr ""
+
+#: ../../../../starlite/middleware/rate_limit.py:docstring of
+#: starlite.middleware.rate_limit.RateLimitMiddleware.__init__:1
+msgid "Initialize ``RateLimitMiddleware``."
+msgstr ""
+
+#: ../../../../starlite/middleware/rate_limit.py:docstring of
+#: starlite.middleware.rate_limit.RateLimitConfig.validate_check_throttle_handler:0
+#: starlite.middleware.rate_limit.RateLimitMiddleware.__init__:0
+#: starlite.middleware.rate_limit.RateLimitMiddleware.cache_key_from_request:0
+#: starlite.middleware.rate_limit.RateLimitMiddleware.create_response_headers:0
+#: starlite.middleware.rate_limit.RateLimitMiddleware.create_send_wrapper:0
+#: starlite.middleware.rate_limit.RateLimitMiddleware.retrieve_cached_history:0
+#: starlite.middleware.rate_limit.RateLimitMiddleware.set_cached_history:0
+#: starlite.middleware.rate_limit.RateLimitMiddleware.should_check_request:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../../starlite/middleware/rate_limit.py:docstring of
+#: starlite.middleware.rate_limit.RateLimitMiddleware.__init__:3
+msgid "The ``next`` ASGI app to call."
+msgstr ""
+
+#: ../../../../starlite/middleware/rate_limit.py:docstring of
+#: starlite.middleware.rate_limit.RateLimitMiddleware.__init__:4
+msgid "An instance of RateLimitConfig."
+msgstr ""
+
+#: ../../../../starlite/middleware/rate_limit.py:docstring of
+#: starlite.middleware.rate_limit.RateLimitMiddleware.create_send_wrapper:1
+msgid ""
+"Create a ``send`` function that wraps the original send to inject response "
+"headers."
+msgstr ""
+
+#: ../../../../starlite/middleware/rate_limit.py:docstring of
+#: starlite.middleware.rate_limit.RateLimitMiddleware.create_send_wrapper:3
+msgid "The ASGI send function."
+msgstr ""
+
+#: ../../../../starlite/middleware/rate_limit.py:docstring of
+#: starlite.middleware.rate_limit.RateLimitMiddleware.create_send_wrapper:4
+msgid "A CacheObject instance."
+msgstr ""
+
+#: ../../../../starlite/middleware/rate_limit.py:docstring of
+#: starlite.middleware.rate_limit.RateLimitConfig.middleware:0
+#: starlite.middleware.rate_limit.RateLimitConfig.validate_check_throttle_handler:0
+#: starlite.middleware.rate_limit.RateLimitMiddleware.cache_key_from_request:0
+#: starlite.middleware.rate_limit.RateLimitMiddleware.create_response_headers:0
+#: starlite.middleware.rate_limit.RateLimitMiddleware.create_send_wrapper:0
+#: starlite.middleware.rate_limit.RateLimitMiddleware.retrieve_cached_history:0
+#: starlite.middleware.rate_limit.RateLimitMiddleware.set_cached_history:0
+#: starlite.middleware.rate_limit.RateLimitMiddleware.should_check_request:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/middleware/rate_limit.py:docstring of
+#: starlite.middleware.rate_limit.RateLimitMiddleware.create_send_wrapper:6
+msgid "Send wrapper callable."
+msgstr ""
+
+#: ../../../../starlite/middleware/rate_limit.py:docstring of
+#: starlite.middleware.rate_limit.RateLimitMiddleware.cache_key_from_request:1
+msgid "Get a cache-key from a ``Request``"
+msgstr ""
+
+#: ../../../../starlite/middleware/rate_limit.py:docstring of
+#: starlite.middleware.rate_limit.RateLimitMiddleware.cache_key_from_request:3
+#: starlite.middleware.rate_limit.RateLimitMiddleware.should_check_request:3
+msgid "A :class:`Request <starlite.connection.Request>` instance."
+msgstr ""
+
+#: ../../../../starlite/middleware/rate_limit.py:docstring of
+#: starlite.middleware.rate_limit.RateLimitMiddleware.cache_key_from_request:5
+msgid "A cache key."
+msgstr ""
+
+#: ../../../../starlite/middleware/rate_limit.py:docstring of
+#: starlite.middleware.rate_limit.RateLimitMiddleware.retrieve_cached_history:1
+msgid "Retrieve a list of time stamps for the given duration unit."
+msgstr ""
+
+#: ../../../../starlite/middleware/rate_limit.py:docstring of
+#: starlite.middleware.rate_limit.RateLimitMiddleware.retrieve_cached_history:3
+#: starlite.middleware.rate_limit.RateLimitMiddleware.set_cached_history:3
+msgid "Cache key."
+msgstr ""
+
+#: ../../../../starlite/middleware/rate_limit.py:docstring of
+#: starlite.middleware.rate_limit.RateLimitMiddleware.retrieve_cached_history:5
+#: starlite.middleware.rate_limit.RateLimitMiddleware.set_cached_history:4
+msgid "An instance of CacheObject."
+msgstr ""
+
+#: ../../../../starlite/middleware/rate_limit.py:docstring of
+#: starlite.middleware.rate_limit.RateLimitMiddleware.set_cached_history:1
+msgid "Store history extended with the current timestamp in cache."
+msgstr ""
+
+#: ../../../../starlite/middleware/rate_limit.py:docstring of
+#: starlite.middleware.rate_limit.RateLimitMiddleware.set_cached_history:6
+msgid "None"
+msgstr ""
+
+#: ../../../../starlite/middleware/rate_limit.py:docstring of
+#: starlite.middleware.rate_limit.RateLimitMiddleware.should_check_request:1
+msgid ""
+"Return a boolean indicating if a request should be checked for rate limiting."
+msgstr ""
+
+#: ../../../../starlite/middleware/rate_limit.py:docstring of
+#: starlite.middleware.rate_limit.RateLimitMiddleware.should_check_request:5
+msgid ""
+"Boolean dictating whether the request should be checked for rate-limiting."
+msgstr ""
+
+#: ../../../../starlite/middleware/rate_limit.py:docstring of
+#: starlite.middleware.rate_limit.RateLimitMiddleware.create_response_headers:1
+msgid "Create ratelimit response headers."
+msgstr ""
+
+#: ../../../../starlite/middleware/rate_limit.py:docstring of
+#: starlite.middleware.rate_limit.RateLimitMiddleware.create_response_headers:3
+msgid "Notes"
+msgstr ""
+
+#: ../../../../starlite/middleware/rate_limit.py:docstring of
+#: starlite.middleware.rate_limit.RateLimitMiddleware.create_response_headers:5
+msgid ""
+"see the :func:`IETF RateLimit draft <https://datatracker.ietf.org/doc/draft-"
+"ietf-httpapi-ratelimit-headers/>`"
+msgstr ""
+
+#: ../../../../starlite/middleware/rate_limit.py:docstring of
+#: starlite.middleware.rate_limit.RateLimitMiddleware.create_response_headers:7
+msgid "An instance of Cache Object."
+msgstr ""
+
+#: ../../../../starlite/middleware/rate_limit.py:docstring of
+#: starlite.middleware.rate_limit.RateLimitMiddleware.create_response_headers:9
+msgid "A dict of http headers."
+msgstr ""
+
+#: ../../../../starlite/middleware/rate_limit.py:docstring of
+#: starlite.middleware.rate_limit.RateLimitConfig:1
+msgid "Bases: :py:class:`~pydantic.main.BaseModel`"
+msgstr ""
+
+#: ../../../../starlite/middleware/rate_limit.py:docstring of
+#: starlite.middleware.rate_limit.RateLimitConfig:1
+msgid "Configuration for ``RateLimitMiddleware``"
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.middleware.rate_limit.RateLimitConfig.rate_limit:1
+msgid ""
+"A tuple containing a time unit (second, minute, hour, day) and quantity, e."
+"g. (\"day\", 1) or (\"minute\", 5)."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.middleware.rate_limit.RateLimitConfig.exclude:1
+msgid "A pattern or list of patterns to skip in the rate limiting middleware."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.middleware.rate_limit.RateLimitConfig.exclude_opt_key:1
+msgid ""
+"An identifier to use on routes to disable rate limiting for a particular "
+"route."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.middleware.rate_limit.RateLimitConfig.check_throttle_handler:1
+msgid ""
+"Handler callable that receives the request instance, returning a boolean "
+"dictating whether or not the request should be checked for rate limiting."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.middleware.rate_limit.RateLimitConfig.middleware_class:1
+msgid "The middleware class to use."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.middleware.rate_limit.RateLimitConfig.set_rate_limit_headers:1
+msgid ""
+"Boolean dictating whether to set the rate limit headers on the response."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.middleware.rate_limit.RateLimitConfig.rate_limit_policy_header_key:1
+msgid "Key to use for the rate limit policy header."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.middleware.rate_limit.RateLimitConfig.rate_limit_remaining_header_key:1
+msgid "Key to use for the rate limit remaining header."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.middleware.rate_limit.RateLimitConfig.rate_limit_reset_header_key:1
+msgid "Key to use for the rate limit reset header."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.middleware.rate_limit.RateLimitConfig.rate_limit_limit_header_key:1
+msgid "Key to use for the rate limit limit header."
+msgstr ""
+
+#: ../../../../starlite/middleware/rate_limit.py:docstring of
+#: starlite.middleware.rate_limit.RateLimitConfig.validate_check_throttle_handler:1
+msgid "Wrap ``check_throttle_handler`` in an ``AsyncCallable``"
+msgstr ""
+
+#: ../../../../starlite/middleware/rate_limit.py:docstring of
+#: starlite.middleware.rate_limit.RateLimitConfig.validate_check_throttle_handler:3
+msgid "A callable."
+msgstr ""
+
+#: ../../../../starlite/middleware/rate_limit.py:docstring of
+#: starlite.middleware.rate_limit.RateLimitConfig.validate_check_throttle_handler:5
+msgid "An instance of AsyncCallable"
+msgstr ""
+
+#: ../../../../starlite/middleware/rate_limit.py:docstring of
+#: starlite.middleware.rate_limit.RateLimitConfig.middleware:1
+msgid ""
+"Use this property to insert the config into a middleware list on one of the "
+"application layers."
+msgstr ""
+
+#: ../../../../starlite/middleware/rate_limit.py:docstring of
+#: starlite.middleware.rate_limit.RateLimitConfig.middleware:3
+msgid "Examples"
+msgstr ""
+
+#: ../../../../starlite/middleware/rate_limit.py:docstring of
+#: starlite.middleware.rate_limit.RateLimitConfig.middleware:21
+msgid ""
+"An instance of DefineMiddleware including ``self`` as the config kwarg value."
+msgstr ""

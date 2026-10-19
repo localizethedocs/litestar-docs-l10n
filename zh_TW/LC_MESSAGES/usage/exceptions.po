@@ -1,0 +1,422 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../usage/exceptions.rst:2
+msgid "Exceptions and exception handling"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:4
+msgid ""
+"Starlite define a base exception called :class:`StarliteException <starlite."
+"exceptions.StarLiteException>` which serves as a basis to all other "
+"exceptions."
+msgstr ""
+
+#: ../../../usage/exceptions.rst:7
+msgid "In general, Starlite will raise two types of exceptions:"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:9
+msgid "Exceptions that arise during application init, which fall"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:10
+msgid ""
+"Exceptions that are raised as part of the normal application flow, i.e. "
+"exceptions in route handlers, dependencies and middleware, that should be "
+"serialized in some fashion."
+msgstr ""
+
+#: ../../../usage/exceptions.rst:14
+msgid "Configuration Exceptions"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:16
+msgid ""
+"For missing extra dependencies, Starlite will raise either :class:"
+"`MissingDependencyException <starlite.exceptions."
+"MissingDependencyException>`. For example, if you try to use the :doc:"
+"`SQLAlchemyPlugin </usage/plugins/sqlalchemy>` without having SQLAlchemy "
+"installed, this will be raised when you start the application."
+msgstr ""
+
+#: ../../../usage/exceptions.rst:21
+msgid ""
+"For other configuration issues, Starlite will raise :class:"
+"`ImproperlyConfiguredException <starlite.exceptions."
+"ImproperlyConfiguredException>` with a message explaining the issue."
+msgstr ""
+
+#: ../../../usage/exceptions.rst:26
+msgid "Application Exceptions"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:28
+msgid ""
+"For application exceptions, Starlite uses the class :class:`HTTPException <."
+"exceptions.http_exceptions.HTTPException>`, which inherits from :class:"
+"`StarliteException <.exceptions.base.StarliteException>`. This exception "
+"will be serialized into a JSON response of the following schema:"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:32
+msgid ""
+"{\n"
+"  \"status_code\": 500,\n"
+"  \"detail\": \"Internal Server Error\",\n"
+"  \"extra\": {}\n"
+"}"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:40
+msgid ""
+"Starlite also offers several pre-configured exception subclasses with pre-"
+"set error codes that you can use, such as:"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:46
+msgid "Exception"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:46
+msgid "Status code"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:46
+msgid "Description"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:48
+msgid ":class:`ImproperlyConfiguredException`"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:48 ../../../usage/exceptions.rst:58
+msgid "500"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:48
+msgid "Used internally for configuration errors"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:50
+msgid ":class:`ValidationException`"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:50
+msgid "400"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:50
+msgid "Raised when validation or parsing failed"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:52
+msgid ":class:`NotFoundException`"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:52
+msgid "404"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:52
+msgid "HTTP status code 404"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:54
+msgid ":class:`NotAuthorizedException`"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:54
+msgid "401"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:54
+msgid "HTTP status code 401"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:56
+msgid ":class:`PermissionDeniedException`"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:56
+msgid "403"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:56
+msgid "HTTP status code 403"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:58
+msgid ":class:`InternalServerException`"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:58
+msgid "HTTP status code 500"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:60
+msgid ":class:`ServiceUnavailableException`"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:60
+msgid "503"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:60
+msgid "HTTP status code 503"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:63
+msgid ""
+"When a value fails ``pydantic`` validation, the result will be a :class:"
+"`ValidationException` with the ``extra`` key set to the pydantic validation "
+"errors. Thus, this data will be made available for the API consumers by "
+"default."
+msgstr ""
+
+#: ../../../usage/exceptions.rst:68
+msgid "Exception handling"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:70
+msgid ""
+"Starlite handles all errors by default by transforming them into **JSON "
+"responses**. If the errors are **instances of** :class:`HTTPException`, the "
+"responses will include the appropriate ``status_code``. Otherwise, the "
+"responses will default to ``500 - \"Internal Server Error\"``."
+msgstr ""
+
+#: ../../../usage/exceptions.rst:74
+msgid ""
+"You can customize exception handling by passing a dictionary, mapping either "
+"status codes or exception classes to callables. For example, if you would "
+"like to replace the default exception handler with a handler that returns "
+"plain-text responses you could do this:"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:79
+msgid ""
+"from starlite import HTTPException, MediaType, Request, Response, Starlite, "
+"get\n"
+"from starlite.status_codes import HTTP_500_INTERNAL_SERVER_ERROR\n"
+"\n"
+"\n"
+"def plain_text_exception_handler(_: Request, exc: Exception) -> Response:\n"
+"    \"\"\"Default handler for exceptions subclassed from HTTPException."
+"\"\"\"\n"
+"    status_code = getattr(exc, \"status_code\", "
+"HTTP_500_INTERNAL_SERVER_ERROR)\n"
+"    detail = getattr(exc, \"detail\", \"\")\n"
+"\n"
+"    return Response(\n"
+"        media_type=MediaType.TEXT,\n"
+"        content=detail,\n"
+"        status_code=status_code,\n"
+"    )\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"async def index() -> None:\n"
+"    raise HTTPException(detail=\"an error occurred\", status_code=400)\n"
+"\n"
+"\n"
+"app = Starlite(\n"
+"    route_handlers=[index],\n"
+"    exception_handlers={HTTPException: plain_text_exception_handler},\n"
+")\n"
+"\n"
+"# run: /"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:82
+msgid ""
+"The above will define a top level exception handler that will apply the "
+"``plain_text_exception_handler`` function to all exceptions that inherit "
+"from ``HTTPException``. You could of course be more granular:"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:86
+msgid ""
+"from starlite import (\n"
+"    HTTPException,\n"
+"    MediaType,\n"
+"    Request,\n"
+"    Response,\n"
+"    Starlite,\n"
+"    ValidationException,\n"
+"    get,\n"
+")\n"
+"from starlite.status_codes import HTTP_500_INTERNAL_SERVER_ERROR\n"
+"\n"
+"\n"
+"def validation_exception_handler(request: Request, exc: ValidationException) "
+"-> Response:\n"
+"    return Response(\n"
+"        media_type=MediaType.TEXT,\n"
+"        content=f\"validation error: {exc.detail}\",\n"
+"        status_code=400,\n"
+"    )\n"
+"\n"
+"\n"
+"def internal_server_error_handler(request: Request, exc: Exception) -> "
+"Response:\n"
+"    return Response(\n"
+"        media_type=MediaType.TEXT,\n"
+"        content=f\"server error: {exc}\",\n"
+"        status_code=500,\n"
+"    )\n"
+"\n"
+"\n"
+"def value_error_handler(request: Request, exc: ValueError) -> Response:\n"
+"    return Response(\n"
+"        media_type=MediaType.TEXT,\n"
+"        content=f\"value error: {exc}\",\n"
+"        status_code=400,\n"
+"    )\n"
+"\n"
+"\n"
+"@get(\"/validation-error\")\n"
+"async def validation_error(some_query_param: str) -> None:\n"
+"    pass\n"
+"\n"
+"\n"
+"@get(\"/server-error\")\n"
+"async def server_error() -> None:\n"
+"    raise HTTPException()\n"
+"\n"
+"\n"
+"@get(\"/value-error\")\n"
+"async def value_error() -> None:\n"
+"    raise ValueError(\"this is wrong\")\n"
+"\n"
+"\n"
+"app = Starlite(\n"
+"    route_handlers=[validation_error, server_error, value_error],\n"
+"    exception_handlers={\n"
+"        ValidationException: validation_exception_handler,\n"
+"        HTTP_500_INTERNAL_SERVER_ERROR: internal_server_error_handler,\n"
+"        ValueError: value_error_handler,\n"
+"    },\n"
+")\n"
+"\n"
+"\n"
+"# run: /validation-error\n"
+"# run: /server-error\n"
+"# run: /value-error"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:89
+msgid ""
+"The choice whether to use a single function that has switching logic inside "
+"it, or multiple functions depends on your specific needs."
+msgstr ""
+
+#: ../../../usage/exceptions.rst:92
+msgid ""
+"While it does not make much sense to have different functions with a top-"
+"level exception handling, Starlite supports defining exception handlers on "
+"all layers of the app, with the lower layers overriding layer above them. In "
+"the following example, the exception handler for the route handler function "
+"will only handle the ``ValidationException`` occurring within that route "
+"handler:"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:98
+msgid ""
+"from starlite import (\n"
+"    HTTPException,\n"
+"    Request,\n"
+"    Response,\n"
+"    Starlite,\n"
+"    ValidationException,\n"
+"    get,\n"
+")\n"
+"\n"
+"\n"
+"def app_exception_handler(request: Request, exc: HTTPException) -> "
+"Response:\n"
+"    return Response(\n"
+"        content={\n"
+"            \"error\": \"server error\",\n"
+"            \"path\": request.url.path,\n"
+"            \"detail\": exc.detail,\n"
+"            \"status_code\": exc.status_code,\n"
+"        },\n"
+"        status_code=500,\n"
+"    )\n"
+"\n"
+"\n"
+"def router_handler_exception_handler(request: Request, exc: "
+"ValidationException) -> Response:\n"
+"    return Response(\n"
+"        content={\"error\": \"validation error\", \"path\": request.url."
+"path},\n"
+"        status_code=400,\n"
+"    )\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"async def index() -> None:\n"
+"    raise HTTPException(\"something's gone wrong\")\n"
+"\n"
+"\n"
+"@get(\n"
+"    \"/greet\",\n"
+"    exception_handlers={ValidationException: "
+"router_handler_exception_handler},\n"
+")\n"
+"async def greet(name: str) -> str:\n"
+"    return f\"hello {name}\"\n"
+"\n"
+"\n"
+"app = Starlite(\n"
+"    route_handlers=[index, greet],\n"
+"    exception_handlers={HTTPException: app_exception_handler},\n"
+")\n"
+"\n"
+"\n"
+"# run: /\n"
+"# run: /greet"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:102
+msgid "Exception handling layers"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:104
+msgid ""
+"Since Starlite allows users to define both exception handlers and "
+"middlewares in a layered fashion, i.e. on individual route handlers, "
+"controllers, routers or the app layer, multiple layers of exception handlers "
+"are required to ensure that exceptions are handled correctly:"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:112
+msgid "Exception Handlers"
+msgstr ""
+
+#: ../../../usage/exceptions.rst:115
+msgid ""
+"As a result of the above structure, the exceptions raised by the ASGI Router "
+"itself, namely ``404 Not Found`` and ``405 Method Not Allowed`` are handled "
+"only by exception handlers defined on the app layer. Thus, if you want to "
+"affect these exceptions, you will need to pass the exception handlers for "
+"them to the Starlite constructor and cannot use other layers for this "
+"purpose."
+msgstr ""
