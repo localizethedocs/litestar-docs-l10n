@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-09 09:36+0000\n"
+"POT-Creation-Date: 2026-10-19 17:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -240,6 +240,7 @@ msgid ""
 "from litestar.controller import Controller\n"
 "from litestar.dto import DTOConfig, DTOData\n"
 "from litestar.handlers import get, post, patch, delete\n"
+"from litestar.params import JSONBody\n"
 "from pydantic import BaseModel, UUID4\n"
 "\n"
 "\n"
@@ -256,21 +257,22 @@ msgid ""
 "   path = \"/user-order\"\n"
 "\n"
 "   @post()\n"
-"   async def create_user_order(self, data: UserOrder) -> UserOrder: ...\n"
+"   async def create_user_order(self, data: JSONBody[UserOrder]) -> "
+"UserOrder: ...\n"
 "\n"
 "   @get(path=\"/{order_id:uuid}\")\n"
 "   async def retrieve_user_order(self, order_id: UUID4) -> UserOrder: ...\n"
 "\n"
 "   @patch(path=\"/{order_id:uuid}\", dto=PartialUserOrderDTO)\n"
 "   async def update_user_order(\n"
-"       self, order_id: UUID4, data: DTOData[PartialUserOrderDTO]\n"
+"       self, order_id: UUID4, data: JSONBody[DTOData[PartialUserOrderDTO]]\n"
 "   ) -> UserOrder: ...\n"
 "\n"
 "   @delete(path=\"/{order_id:uuid}\")\n"
 "   async def delete_user_order(self, order_id: UUID4) -> None: ..."
 msgstr ""
 
-#: ../../../usage/routing/overview.rst:173
+#: ../../../usage/routing/overview.rst:174
 msgid ""
 "The above is a simple example of a \"CRUD\" controller for a model called "
 "``UserOrder``. You can place as many :doc:`route handler methods </usage/"
@@ -278,7 +280,7 @@ msgid ""
 "method is unique."
 msgstr ""
 
-#: ../../../usage/routing/overview.rst:177
+#: ../../../usage/routing/overview.rst:178
 msgid ""
 "The ``path`` that is defined on the :class:`controller <.controller."
 "Controller>` is appended before the path that is defined for the route "
@@ -288,31 +290,31 @@ msgid ""
 "uuid}\"``."
 msgstr ""
 
-#: ../../../usage/routing/overview.rst:182
+#: ../../../usage/routing/overview.rst:183
 msgid ""
 "If you do not declare a ``path`` class variable on the controller, it will "
 "default to the root path of ``\"/\"``."
 msgstr ""
 
-#: ../../../usage/routing/overview.rst:185
+#: ../../../usage/routing/overview.rst:186
 msgid "Registering components multiple times"
 msgstr ""
 
-#: ../../../usage/routing/overview.rst:187
+#: ../../../usage/routing/overview.rst:188
 msgid ""
 "You can register both standalone route handler functions and controllers "
 "multiple times."
 msgstr ""
 
-#: ../../../usage/routing/overview.rst:190
+#: ../../../usage/routing/overview.rst:191
 msgid "Controllers"
 msgstr ""
 
-#: ../../../usage/routing/overview.rst:193
+#: ../../../usage/routing/overview.rst:194
 msgid "Registering a controller multiple times"
 msgstr ""
 
-#: ../../../usage/routing/overview.rst:193
+#: ../../../usage/routing/overview.rst:194
 msgid ""
 "from litestar import Router, Controller, get\n"
 "\n"
@@ -329,7 +331,7 @@ msgid ""
 "consumer_router = Router(path=\"/consumer\", route_handlers=[MyController])"
 msgstr ""
 
-#: ../../../usage/routing/overview.rst:209
+#: ../../../usage/routing/overview.rst:210
 msgid ""
 "In the above, the same ``MyController`` class has been registered on three "
 "different routers. This is possible because what is passed to the :class:"
@@ -339,7 +341,7 @@ msgid ""
 "encapsulation."
 msgstr ""
 
-#: ../../../usage/routing/overview.rst:214
+#: ../../../usage/routing/overview.rst:215
 msgid ""
 "Therefore, in the above example, three different instances of "
 "``MyController`` will be created, each mounted on a different sub-path, e."
@@ -347,19 +349,19 @@ msgid ""
 "controller``."
 msgstr ""
 
-#: ../../../usage/routing/overview.rst:218
+#: ../../../usage/routing/overview.rst:219
 msgid "Route handlers"
 msgstr ""
 
-#: ../../../usage/routing/overview.rst:220
+#: ../../../usage/routing/overview.rst:221
 msgid "You can also register standalone route handlers multiple times:"
 msgstr ""
 
-#: ../../../usage/routing/overview.rst:223
+#: ../../../usage/routing/overview.rst:224
 msgid "Registering a route handler multiple times"
 msgstr ""
 
-#: ../../../usage/routing/overview.rst:223
+#: ../../../usage/routing/overview.rst:224
 msgid ""
 "from litestar import Litestar, Router, get\n"
 "\n"
@@ -378,7 +380,7 @@ msgid ""
 "Litestar(route_handlers=[internal_router, partner_router, consumer_router])"
 msgstr ""
 
-#: ../../../usage/routing/overview.rst:238
+#: ../../../usage/routing/overview.rst:239
 msgid ""
 "When the handler function is registered, it's actually copied. Thus, each "
 "router has its own unique instance of the route handler. Path behaviour is "
@@ -387,17 +389,17 @@ msgid ""
 "handler``, and ``/consumer/handler``."
 msgstr ""
 
-#: ../../../usage/routing/overview.rst:242
+#: ../../../usage/routing/overview.rst:243
 msgid ""
 "You can nest routers as you see fit - but be aware that once a router has "
 "been registered it cannot be re-registered or an exception will be raised."
 msgstr ""
 
-#: ../../../usage/routing/overview.rst:246
+#: ../../../usage/routing/overview.rst:247
 msgid "Mounting ASGI Apps"
 msgstr ""
 
-#: ../../../usage/routing/overview.rst:248
+#: ../../../usage/routing/overview.rst:249
 msgid ""
 "Litestar support \"mounting\" ASGI applications on sub-paths, i.e., "
 "specifying a handler function that will handle all requests addressed to a "
@@ -408,11 +410,11 @@ msgstr ""
 msgid "Click to see an example of mounting an ASGI app"
 msgstr ""
 
-#: ../../../usage/routing/overview.rst:254
+#: ../../../usage/routing/overview.rst:255
 msgid "Mounting an ASGI App"
 msgstr ""
 
-#: ../../../usage/routing/overview.rst:254
+#: ../../../usage/routing/overview.rst:255
 msgid ""
 "import json\n"
 "from typing import TYPE_CHECKING\n"
@@ -444,18 +446,18 @@ msgid ""
 "app = Litestar(route_handlers=[my_asgi_app])"
 msgstr ""
 
-#: ../../../usage/routing/overview.rst:257
+#: ../../../usage/routing/overview.rst:258
 msgid ""
 "The handler function will receive all requests with an url that begins with "
 "``/some/sub-path``, e.g, ``/some/sub-path``, ``/some/sub-path/abc``, ``/some/"
 "sub-path/123/another/sub-path``, etc."
 msgstr ""
 
-#: ../../../usage/routing/overview.rst:260
+#: ../../../usage/routing/overview.rst:261
 msgid "Technical Details"
 msgstr ""
 
-#: ../../../usage/routing/overview.rst:263
+#: ../../../usage/routing/overview.rst:264
 msgid ""
 "If we are sending a request to the above with the url ``/some/sub-path``, "
 "the handler will be invoked and the value of ``scope[\"path\"]`` will equal "
@@ -463,7 +465,7 @@ msgid ""
 "invoked,and ``scope[\"path\"]`` will equal ``\"/abc\"``."
 msgstr ""
 
-#: ../../../usage/routing/overview.rst:267
+#: ../../../usage/routing/overview.rst:268
 msgid ""
 "Mounting is especially useful when you need to combine components of other "
 "ASGI applications - for example, for third party libraries. The following "
@@ -475,11 +477,11 @@ msgstr ""
 msgid "Click to see an example of mounting a Starlette app"
 msgstr ""
 
-#: ../../../usage/routing/overview.rst:274
+#: ../../../usage/routing/overview.rst:275
 msgid "Mounting a Starlette App"
 msgstr ""
 
-#: ../../../usage/routing/overview.rst:274
+#: ../../../usage/routing/overview.rst:275
 msgid ""
 "from typing import TYPE_CHECKING\n"
 "\n"
@@ -513,11 +515,11 @@ msgid ""
 "app = Litestar(route_handlers=[starlette_app])"
 msgstr ""
 
-#: ../../../usage/routing/overview.rst:277
+#: ../../../usage/routing/overview.rst:278
 msgid "Why Litestar uses radix based routing"
 msgstr ""
 
-#: ../../../usage/routing/overview.rst:279
+#: ../../../usage/routing/overview.rst:280
 msgid ""
 "The regex matching used by popular frameworks such as Starlette, FastAPI or "
 "Flask is very good at resolving path parameters fast, giving it an advantage "
@@ -531,13 +533,13 @@ msgid ""
 "expense of somewhat slower resolution of path parameters."
 msgstr ""
 
-#: ../../../usage/routing/overview.rst:287
+#: ../../../usage/routing/overview.rst:288
 msgid ""
 "Litestar implements its routing solution that is based on the concept of a "
 "`radix tree <https://en.wikipedia.org/wiki/Radix_tree>`_ or *trie*."
 msgstr ""
 
-#: ../../../usage/routing/overview.rst:290
+#: ../../../usage/routing/overview.rst:291
 msgid ""
 "If you are interested in the technical aspects of the implementation, refer "
 "to `this GitHub issue <https://github.com/litestar-org/litestar/"

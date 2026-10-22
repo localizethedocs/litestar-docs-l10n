@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-09 09:36+0000\n"
+"POT-Creation-Date: 2026-10-19 17:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -344,13 +344,15 @@ msgid ""
 "    ports:\n"
 "      - \"5432:5432\"\n"
 "    volumes:\n"
-"      - db_data:/var/lib/postgresql/data\n"
+"      # Note that image versions previous to 18 used /var/lib/postgresql/"
+"data\n"
+"      - db_data:/var/lib/postgresql\n"
 "\n"
 "volumes:\n"
 "  db_data:"
 msgstr ""
 
-#: ../../../topics/deployment/docker.rst:167
+#: ../../../topics/deployment/docker.rst:168
 msgid ""
 "This compose file defines two services: ``exampleapp`` and ``database``. The "
 "``exampleapp`` service is built from the Dockerfile in the current "
@@ -361,7 +363,7 @@ msgid ""
 "the database connection details, which are used by the app."
 msgstr ""
 
-#: ../../../topics/deployment/docker.rst:173
+#: ../../../topics/deployment/docker.rst:174
 msgid ""
 "Once you have your ``docker-compose.yml`` defined, you can run ``docker "
 "compose up`` to start the containers. You can also run ``docker compose up -"
@@ -372,11 +374,11 @@ msgstr ""
 msgid "Useful Compose Commands"
 msgstr "有用的 Compose 命令"
 
-#: ../../../topics/deployment/docker.rst:178
+#: ../../../topics/deployment/docker.rst:179
 msgid "Useful Docker Compose commands"
 msgstr "有用的 Docker Compose 命令"
 
-#: ../../../topics/deployment/docker.rst:178
+#: ../../../topics/deployment/docker.rst:179
 msgid ""
 "# Build the containers\n"
 "docker compose build\n"
