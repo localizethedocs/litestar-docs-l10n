@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-10-19 17:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,11 +20,6 @@ msgstr ""
 #: ../../../reference/channels/backends/base.rst:2
 msgid "base"
 msgstr ""
-
-#: ../../../../litestar/channels/backends/base.py:docstring of
-#: litestar.channels.backends.base.ChannelsBackend:1
-msgid "Bases: :py:class:`~abc.ABC`"
-msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../litestar/channels/backends/base.py:docstring of
 #: litestar.channels.backends.base.ChannelsBackend.on_startup:1
@@ -62,3 +57,6 @@ msgstr ""
 #: litestar.channels.backends.base.ChannelsBackend.get_history:1
 msgid "Return the event history of ``channel``, at most ``limit`` entries"
 msgstr ""
+
+#~ msgid "Bases: :py:class:`~abc.ABC`"
+#~ msgstr "基底類別：:py:class:`object`"

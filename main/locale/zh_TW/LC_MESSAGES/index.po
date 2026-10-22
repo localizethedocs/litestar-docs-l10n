@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-10-19 17:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,23 +17,23 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../../index.rst:158
+#: ../../../index.rst:149
 msgid "Documentation"
 msgstr "文件"
 
-#: ../../../index.rst:168
+#: ../../../index.rst:159
 msgid "Guides"
 msgstr "指南"
 
-#: ../../../index.rst:177
+#: ../../../index.rst:168
 msgid "Available Issues"
 msgstr ""
 
-#: ../../../index.rst:177
+#: ../../../index.rst:168
 msgid "Code of Conduct"
 msgstr "行為守則"
 
-#: ../../../index.rst:177
+#: ../../../index.rst:168
 msgid "Contributing"
 msgstr "參與貢獻"
 
@@ -327,15 +327,7 @@ msgstr "Telemetry Sports"
 msgid "`Telemetry Sports <https://telemetrysports.com/>`_"
 msgstr "`Telemetry Sports <https://telemetrysports.com/>`_"
 
-#: ../../../index.rst:140
-msgid "Stok"
-msgstr "Stok"
-
-#: ../../../index.rst:144
-msgid "`Stok <https://www.stok.kr/>`_"
-msgstr "`Stok <https://www.stok.kr/>`_"
-
-#: ../../../index.rst:146
+#: ../../../index.rst:137
 msgid ""
 "We invite organizations and individuals to join our sponsorship program. By "
 "becoming a sponsor on platforms like `Polar <sponsor-polar_>`_, `GitHub "
@@ -346,7 +338,7 @@ msgstr ""
 "polar_>`_\\ 、\\ `GitHub <sponsor-github_>`_ 或 `Open Collective <sponsor-"
 "oc_>`_ 等平臺的贊助者，在專案成長中扮演關鍵角色。"
 
-#: ../../../index.rst:150
+#: ../../../index.rst:141
 msgid ""
 "On top of regular sponsorship, we engage in pledge-based sponsorship "
 "opportunities through `Polar <sponsor-polar_>`_, where you can pledge an "
@@ -354,3 +346,9 @@ msgid ""
 msgstr ""
 "除了常態性贊助之外，我們也透過 `Polar <sponsor-polar_>`_ 提供基於承諾的贊助機"
 "會，讓您可針對希望實現的某項議題或功能，承諾捐贈特定金額。"
+
+#~ msgid "Stok"
+#~ msgstr "Stok"
+
+#~ msgid "`Stok <https://www.stok.kr/>`_"
+#~ msgstr "`Stok <https://www.stok.kr/>`_"

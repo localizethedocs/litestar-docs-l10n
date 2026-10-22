@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-10-19 17:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,10 +20,6 @@ msgstr ""
 #: ../../../reference/router.rst:2
 msgid "router"
 msgstr ""
-
-#: ../../../../litestar/router.py:docstring of litestar.router.Router:1
-msgid "Bases: :py:class:`object`"
-msgstr "基底類別：:py:class:`object`"
 
 #: ../../../../litestar/router.py:docstring of litestar.router.Router:1
 msgid "The Litestar Router class."
@@ -132,8 +128,8 @@ msgstr ""
 #: ../../../../litestar/router.py:docstring of
 #: litestar.router.Router.__init__:25
 msgid ""
-"A mapping of :func:`Parameter <.params.Parameter>` definitions available to "
-"all application paths."
+"A mapping of :func:`Parameter <.params.ParameterKwarg>` definitions "
+"available to all application paths."
 msgstr ""
 
 #: ../../../../litestar/router.py:docstring of
@@ -249,3 +245,6 @@ msgstr ""
 #: litestar.router.Router.register:1
 msgid "Register a Controller, Route instance or RouteHandler on the router"
 msgstr ""
+
+#~ msgid "Bases: :py:class:`object`"
+#~ msgstr "基底類別：:py:class:`object`"
