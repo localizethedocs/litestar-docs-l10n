@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-09 08:37+0000\n"
+"POT-Creation-Date: 2026-10-19 15:22+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -182,7 +182,7 @@ msgstr ""
 
 #: ../../../../litestar/response/streaming.py:docstring of
 #: litestar.response.streaming.Stream.to_asgi_response:1
-msgid "Create an ASGIStreamingResponse from a StremaingResponse instance."
+msgid "Create an ASGIStreamingResponse from a StreamingResponse instance."
 msgstr ""
 
 #: ../../../../litestar/response/streaming.py:docstring of
