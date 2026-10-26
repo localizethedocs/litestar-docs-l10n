@@ -1,0 +1,402 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/types.rst:2
+msgid "starlite.types"
+msgstr ""
+
+#: ../../../reference/types.rst:9
+msgid "Callable types"
+msgstr ""
+
+#: ../../../reference/types.rst:42
+msgid "ASGI Types"
+msgstr ""
+
+#: ../../../reference/types.rst:47
+msgid "ASGI Application"
+msgstr ""
+
+#: ../../../reference/types.rst:52
+msgid "ASGI Application Parameters"
+msgstr ""
+
+#: ../../../reference/types.rst:61
+msgid "ASGI Scopes"
+msgstr ""
+
+#: ../../../../docstring of starlite.types.asgi_types.ASGIVersion:1
+msgid "ASGI spec version."
+msgstr ""
+
+#: ../../../../docstring of starlite.types.asgi_types.BaseScope:1
+msgid "Base ASGI-scope."
+msgstr ""
+
+#: ../../../../docstring of starlite.types.asgi_types.WebSocketScope:1
+msgid "WebSocket-ASGI-scope."
+msgstr ""
+
+#: ../../../../docstring of starlite.types.asgi_types.HTTPScope:1
+msgid "HTTP-ASGI-scope."
+msgstr ""
+
+#: ../../../../docstring of starlite.types.asgi_types.LifeSpanScope:1
+msgid "Lifespan-ASGI-scope."
+msgstr ""
+
+#: ../../../reference/types.rst:75
+msgid "ASGI Events"
+msgstr ""
+
+#: ../../../../starlite/types/asgi_types.py:docstring of
+#: starlite.types.asgi_types.HTTPDisconnectEvent:1
+#: starlite.types.asgi_types.HTTPRequestEvent:1
+#: starlite.types.asgi_types.HTTPResponseBodyEvent:1
+#: starlite.types.asgi_types.LifeSpanShutdownCompleteEvent:1
+#: starlite.types.asgi_types.LifeSpanShutdownEvent:1
+#: starlite.types.asgi_types.LifeSpanShutdownFailedEvent:1
+#: starlite.types.asgi_types.LifeSpanStartupCompleteEvent:1
+#: starlite.types.asgi_types.LifeSpanStartupEvent:1
+#: starlite.types.asgi_types.LifeSpanStartupFailedEvent:1
+#: starlite.types.asgi_types.WebSocketCloseEvent:1
+#: starlite.types.asgi_types.WebSocketConnectEvent:1
+#: starlite.types.asgi_types.WebSocketDisconnectEvent:1
+#: starlite.types.asgi_types.WebSocketReceiveEvent:1
+#: starlite.types.asgi_types.WebSocketResponseBodyEvent:1
+#: starlite.types.asgi_types.WebSocketSendEvent:1
+#: ../../../../starlite/types/file_types.py:docstring
+#: starlite.types.file_types.FileInfo:1
+msgid "Bases: :py:class:`~typing_extensions.TypedDict`"
+msgstr ""
+
+#: ../../../../starlite/types/asgi_types.py:docstring of
+#: starlite.types.asgi_types.HTTPRequestEvent:1
+msgid "ASGI `http.request` event."
+msgstr ""
+
+#: ../../../../starlite/types/asgi_types.py:docstring of
+#: starlite.types.asgi_types.HTTPResponseStartEvent:1
+#: starlite.types.asgi_types.HTTPServerPushEvent:1
+#: starlite.types.asgi_types.WebSocketAcceptEvent:1
+#: starlite.types.asgi_types.WebSocketResponseStartEvent:1
+msgid "Bases: :py:class:`~starlite.types.asgi_types.HeaderScope`"
+msgstr ""
+
+#: ../../../../starlite/types/asgi_types.py:docstring of
+#: starlite.types.asgi_types.HTTPResponseStartEvent:1
+msgid "ASGI `http.response.start` event."
+msgstr ""
+
+#: ../../../../starlite/types/asgi_types.py:docstring of
+#: starlite.types.asgi_types.HTTPResponseBodyEvent:1
+msgid "ASGI `http.response.body` event."
+msgstr ""
+
+#: ../../../../starlite/types/asgi_types.py:docstring of
+#: starlite.types.asgi_types.HTTPServerPushEvent:1
+msgid "ASGI `http.response.push` event."
+msgstr ""
+
+#: ../../../../starlite/types/asgi_types.py:docstring of
+#: starlite.types.asgi_types.HTTPDisconnectEvent:1
+msgid "ASGI `http.disconnect` event."
+msgstr ""
+
+#: ../../../../starlite/types/asgi_types.py:docstring of
+#: starlite.types.asgi_types.WebSocketConnectEvent:1
+msgid "ASGI `websocket.connect` event."
+msgstr ""
+
+#: ../../../../starlite/types/asgi_types.py:docstring of
+#: starlite.types.asgi_types.WebSocketAcceptEvent:1
+msgid "ASGI `websocket.accept` event."
+msgstr ""
+
+#: ../../../../starlite/types/asgi_types.py:docstring of
+#: starlite.types.asgi_types.WebSocketReceiveEvent:1
+msgid "ASGI `websocket.receive` event."
+msgstr ""
+
+#: ../../../../starlite/types/asgi_types.py:docstring of
+#: starlite.types.asgi_types.WebSocketSendEvent:1
+msgid "ASGI `websocket.send` event."
+msgstr ""
+
+#: ../../../../starlite/types/asgi_types.py:docstring of
+#: starlite.types.asgi_types.WebSocketResponseStartEvent:1
+msgid "ASGI `websocket.http.response.start` event."
+msgstr ""
+
+#: ../../../../starlite/types/asgi_types.py:docstring of
+#: starlite.types.asgi_types.WebSocketResponseBodyEvent:1
+msgid "ASGI `websocket.http.response.body` event."
+msgstr ""
+
+#: ../../../../starlite/types/asgi_types.py:docstring of
+#: starlite.types.asgi_types.WebSocketDisconnectEvent:1
+msgid "ASGI `websocket.disconnect` event."
+msgstr ""
+
+#: ../../../../starlite/types/asgi_types.py:docstring of
+#: starlite.types.asgi_types.WebSocketCloseEvent:1
+msgid "ASGI `websocket.close` event."
+msgstr ""
+
+#: ../../../../starlite/types/asgi_types.py:docstring of
+#: starlite.types.asgi_types.LifeSpanStartupEvent:1
+msgid "ASGI `lifespan.startup` event."
+msgstr ""
+
+#: ../../../../starlite/types/asgi_types.py:docstring of
+#: starlite.types.asgi_types.LifeSpanShutdownEvent:1
+msgid "ASGI `lifespan.shutdown` event."
+msgstr ""
+
+#: ../../../../starlite/types/asgi_types.py:docstring of
+#: starlite.types.asgi_types.LifeSpanStartupCompleteEvent:1
+msgid "ASGI `lifespan.startup.complete` event."
+msgstr ""
+
+#: ../../../../starlite/types/asgi_types.py:docstring of
+#: starlite.types.asgi_types.LifeSpanStartupFailedEvent:1
+msgid "ASGI `lifespan.startup.failed` event."
+msgstr ""
+
+#: ../../../../starlite/types/asgi_types.py:docstring of
+#: starlite.types.asgi_types.LifeSpanShutdownCompleteEvent:1
+msgid "ASGI `lifespan.shutdown.complete` event."
+msgstr ""
+
+#: ../../../../starlite/types/asgi_types.py:docstring of
+#: starlite.types.asgi_types.LifeSpanShutdownFailedEvent:1
+msgid "ASGI `lifespan.shutdown.failed` event."
+msgstr ""
+
+#: ../../../reference/types.rst:117
+msgid "Event Groupings"
+msgstr ""
+
+#: ../../../reference/types.rst:136
+msgid "Send / Receive Parameter Types"
+msgstr ""
+
+#: ../../../reference/types.rst:144
+msgid "Helper Types"
+msgstr ""
+
+#: ../../../reference/types.rst:146
+msgid "Helper types are useful generic types that can be used."
+msgstr ""
+
+#: ../../../reference/types.rst:154
+msgid "Protocols"
+msgstr ""
+
+#: ../../../../starlite/types/file_types.py:docstring of
+#: starlite.types.file_types.FileSystemProtocol:1
+#: ../../../../starlite/types/protocols.py:docstring
+#: starlite.types.protocols.Logger:1
+msgid "Bases: :py:class:`~typing.Protocol`"
+msgstr ""
+
+#: ../../../../starlite/types/protocols.py:docstring of
+#: starlite.types.protocols.Logger:1
+msgid "Logger protocol."
+msgstr ""
+
+#: ../../../reference/types.rst:160
+msgid "Composite Types"
+msgstr ""
+
+#: ../../../reference/types.rst:176
+msgid "Partial types"
+msgstr ""
+
+#: ../../../../starlite/types/partial.py:docstring of
+#: starlite.types.partial.Partial:1
+msgid ""
+"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~starlite.types.partial.T`]"
+msgstr ""
+
+#: ../../../../starlite/types/partial.py:docstring of
+#: starlite.types.partial.Partial:1
+msgid "Type generation for PATCH routes."
+msgstr ""
+
+#: ../../../../starlite/types/partial.py:docstring of
+#: starlite.types.partial.Partial:3
+msgid ""
+"Partial is a special typing helper that takes a generic T, which must be a :"
+"class:`TypedDict <typing.TypedDict>`, dataclass or pydantic model class, and "
+"returns to static type checkers a version of this T in which all fields - "
+"and nested fields - are optional."
+msgstr ""
+
+#: ../../../../starlite/types/partial.py:docstring of
+#: starlite.types.partial.Partial.__class_getitem__:1
+msgid ""
+"Take a pydantic model class, :class:`TypedDict <typing.TypedDict>` or a "
+"dataclass and return an all optional version of that class."
+msgstr ""
+
+#: ../../../../starlite/types/file_types.py:docstring of
+#: starlite.types.file_types.FileSystemProtocol.info:0
+#: starlite.types.file_types.FileSystemProtocol.open:0
+#: ../../../../starlite/types/partial.py:docstring
+#: starlite.types.partial.Partial.__class_getitem__:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../starlite/types/partial.py:docstring of
+#: starlite.types.partial.Partial.__class_getitem__:4
+msgid ""
+"A pydantic model, :class:`TypedDict <typing.TypedDict>` or dataclass class."
+msgstr ""
+
+#: ../../../../starlite/types/file_types.py:docstring of
+#: starlite.types.file_types.FileSystemProtocol.info:0
+#: ../../../../starlite/types/partial.py:docstring
+#: starlite.types.partial.Partial.__class_getitem__:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/types/partial.py:docstring of
+#: starlite.types.partial.Partial.__class_getitem__:6
+msgid "A pydantic model, :class:`TypedDict <typing.TypedDict>`, or dataclass."
+msgstr ""
+
+#: ../../../reference/types.rst:183
+msgid "File types"
+msgstr ""
+
+#: ../../../../starlite/types/file_types.py:docstring of
+#: starlite.types.file_types.FileInfo:1
+msgid "File information gathered from a file system."
+msgstr ""
+
+#: ../../../../docstring of starlite.types.FileInfo.created:1
+msgid "Created time stamp, equal to 'stat_result.st_ctime'."
+msgstr ""
+
+#: ../../../../docstring of starlite.types.FileInfo.destination:1
+msgid "Output of loading a symbolic link."
+msgstr ""
+
+#: ../../../../docstring of starlite.types.FileInfo.gid:1
+msgid "Group ID of owner."
+msgstr ""
+
+#: ../../../../docstring of starlite.types.FileInfo.ino:1
+msgid "inode value."
+msgstr ""
+
+#: ../../../../docstring of starlite.types.FileInfo.islink:1
+msgid "True if the file is a symbolic link."
+msgstr ""
+
+#: ../../../../docstring of starlite.types.FileInfo.mode:1
+msgid "Protection mode."
+msgstr ""
+
+#: ../../../../docstring of starlite.types.FileInfo.mtime:1
+msgid "Modified time stamp."
+msgstr ""
+
+#: ../../../../docstring of starlite.types.FileInfo.name:1
+msgid "The path of the file."
+msgstr ""
+
+#: ../../../../docstring of starlite.types.FileInfo.nlink:1
+msgid "Number of hard links."
+msgstr ""
+
+#: ../../../../docstring of starlite.types.FileInfo.size:1
+msgid "Total size, in bytes."
+msgstr ""
+
+#: ../../../../docstring of starlite.types.FileInfo.type:1
+msgid "The type of the file system object."
+msgstr ""
+
+#: ../../../../docstring of starlite.types.FileInfo.uid:1
+msgid "User ID of owner."
+msgstr ""
+
+#: ../../../../starlite/types/file_types.py:docstring of
+#: starlite.types.file_types.FileSystemProtocol:1
+msgid "Base protocol used to interact with a file-system."
+msgstr ""
+
+#: ../../../../starlite/types/file_types.py:docstring of
+#: starlite.types.file_types.FileSystemProtocol:3
+msgid ""
+"This protocol is commensurable with the file systems exported by the [fsspec]"
+"(https://filesystem-spec.readthedocs.io/en/latest/) library."
+msgstr ""
+
+#: ../../../../starlite/types/file_types.py:docstring of
+#: starlite.types.file_types.FileSystemProtocol.info:1
+msgid "Retrieve information about a given file path."
+msgstr ""
+
+#: ../../../../starlite/types/file_types.py:docstring of
+#: starlite.types.file_types.FileSystemProtocol.info:3
+msgid "A file path."
+msgstr ""
+
+#: ../../../../starlite/types/file_types.py:docstring of
+#: starlite.types.file_types.FileSystemProtocol.info:4
+msgid "Any additional kwargs."
+msgstr ""
+
+#: ../../../../starlite/types/file_types.py:docstring of
+#: starlite.types.file_types.FileSystemProtocol.info:6
+msgid "A dictionary of file info."
+msgstr ""
+
+#: ../../../../starlite/types/file_types.py:docstring of
+#: starlite.types.file_types.FileSystemProtocol.open:1
+msgid "Return a file-like object from the filesystem."
+msgstr ""
+
+#: ../../../../starlite/types/file_types.py:docstring of
+#: starlite.types.file_types.FileSystemProtocol.open:3
+msgid "Notes"
+msgstr ""
+
+#: ../../../../starlite/types/file_types.py:docstring of
+#: starlite.types.file_types.FileSystemProtocol.open:5
+msgid "The return value must function correctly in a context ``with`` block."
+msgstr ""
+
+#: ../../../../starlite/types/file_types.py:docstring of
+#: starlite.types.file_types.FileSystemProtocol.open:7
+msgid "Path to the target file."
+msgstr ""
+
+#: ../../../../starlite/types/file_types.py:docstring of
+#: starlite.types.file_types.FileSystemProtocol.open:8
+msgid "Mode, similar to the built ``open``."
+msgstr ""
+
+#: ../../../../starlite/types/file_types.py:docstring of
+#: starlite.types.file_types.FileSystemProtocol.open:9
+msgid "Buffer size."
+msgstr ""

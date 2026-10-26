@@ -1,0 +1,76 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/exceptions/base_exceptions.rst:2
+msgid "base_exceptions"
+msgstr ""
+
+#: ../../../../starlite/exceptions/base_exceptions.py:docstring of
+#: starlite.exceptions.base_exceptions.StarLiteException:1
+msgid "Bases: :py:class:`Exception`"
+msgstr ""
+
+#: ../../../../starlite/exceptions/base_exceptions.py:docstring of
+#: starlite.exceptions.base_exceptions.StarLiteException:1
+msgid "Base exception class from which all Starlite exceptions inherit."
+msgstr ""
+
+#: ../../../../starlite/exceptions/base_exceptions.py:docstring of
+#: starlite.exceptions.base_exceptions.StarLiteException.__init__:1
+msgid "Initialize ``StarLiteException``."
+msgstr ""
+
+#: ../../../../starlite/exceptions/base_exceptions.py:docstring of
+#: starlite.exceptions.base_exceptions.StarLiteException.__init__:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../starlite/exceptions/base_exceptions.py:docstring of
+#: starlite.exceptions.base_exceptions.StarLiteException.__init__:3
+msgid "args are cast to ``str`` before passing to `Exception.__init__()`"
+msgstr ""
+
+#: ../../../../starlite/exceptions/base_exceptions.py:docstring of
+#: starlite.exceptions.base_exceptions.StarLiteException.__init__:5
+msgid "detail of the exception."
+msgstr ""
+
+#: ../../../../starlite/exceptions/base_exceptions.py:docstring of
+#: starlite.exceptions.base_exceptions.MissingDependencyException:1
+#: starlite.exceptions.base_exceptions.SerializationException:1
+msgid ""
+"Bases: :py:class:`~starlite.exceptions.base_exceptions.StarLiteException`"
+msgstr ""
+
+#: ../../../../starlite/exceptions/base_exceptions.py:docstring of
+#: starlite.exceptions.base_exceptions.MissingDependencyException:1
+msgid "Missing optional dependency."
+msgstr ""
+
+#: ../../../../starlite/exceptions/base_exceptions.py:docstring of
+#: starlite.exceptions.base_exceptions.MissingDependencyException:3
+msgid ""
+"This exception is raised only when a module depends on a dependency that has "
+"not been installed."
+msgstr ""
+
+#: ../../../../starlite/exceptions/base_exceptions.py:docstring of
+#: starlite.exceptions.base_exceptions.SerializationException:1
+msgid "Encoding or decoding of an object failed."
+msgstr ""

@@ -1,0 +1,2168 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../release-notes/changelog.rst:2
+msgid "1.x Changelog"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:5
+msgid "1.51.16"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:7
+msgid ""
+"Fix a security issue ([CVE-2024-32982](https://cve.mitre.org/cgi-bin/cvename."
+"cgi?name=CVE-2024-32982) where static files could allow users the ability to "
+"escape the configured static files directory and read arbitrary files on the "
+"filesystem."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:11
+msgid "1.51.11"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:13
+msgid ""
+"Fix missing ``content-encoding`` headers for gzip/brotli compressed files"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:16
+msgid "1.51.10"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:18
+msgid "Fix ``Partial`` modifying dataclasses"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:19
+msgid "Fix CLI `--reload` flag not working as expected"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:20
+msgid "Add uvicorn to ``cli`` extra"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:23
+msgid "1.51.9"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:25
+msgid ""
+"Remove ``pytest-lazy-fixture`` as s dependency that was erroneously added in "
+"the previous release"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:29
+msgid "1.51.8"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:31
+msgid ""
+"Fix a regression where setting ``cache=True`` in a route handler would cause "
+"errors when used with the redis cache backend"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:35
+msgid "1.51.7"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:37
+msgid ""
+"Fix a regression in path resolution that prevented ``404`` being raised for "
+"some invalid paths"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:38
+msgid ""
+"Fix a ``DeprecationWarning`` for the wrong name ``starlite/middleware/"
+"session/__init__.py``"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:42
+msgid "1.51.6"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:44
+msgid "Fix optional query parameter openapi schema generation"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:47
+msgid "1.51.5"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:49
+msgid "Fix domain configuration handling in JWT Auth"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:52
+msgid "1.51.4"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:54
+msgid "support passing type encoders to ``AbstractSecurityConfig``"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:57
+msgid "1.51.3"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:59
+msgid "Fix static path validation for ``/``"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:62
+msgid "1.51.2"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:64
+msgid ""
+"Fix for security advisory https://github.com/starlite-api/starlite/security/"
+"advisories/GHSA-p24m-863f-fm6q"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:67
+msgid "1.51.1"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:69
+msgid "Fix critical bug in parsing headers @knowsuchagency"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:72
+msgid "1.51.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:74
+msgid "fix optional sequence query param"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:75
+msgid "fix memory leak in logging middleware"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:76
+msgid "add missing CORS headers on exception responses"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:77
+msgid "configure logger and force \"DEBUG\" level in debug mode"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:78
+msgid "allow on-app-init hooks to modify initial state"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:79
+msgid "add exception logging in debug mode"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:82
+msgid "1.50.2"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:84
+msgid "return valid OAuth2 response body by default"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:85
+msgid "correctly handle async-callable classes as dependencies"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:86
+msgid "fix ``type_encoders`` pickle bug when using response caching"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:89
+msgid "1.50.1"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:91
+msgid "fix typo in jinja extra"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:95
+msgid "1.50.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:97
+msgid "fix expected OpenAPI components in ``test_merged_components_correct``"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:98
+msgid "fix missing / wrong dependencies for Jinja2 extra"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:99
+msgid "add msgspec typed decoding"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:100
+msgid "add async test client"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:101
+msgid "prioritize plugins when creating DTOs"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:104
+msgid "1.49.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:106
+msgid "add reserved handler kwarg `body`"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:107
+msgid "add support for `Path` alongside `PurePath` for serialization"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:108
+msgid ""
+"add CLI commands for OpenAPI to TypeScript and OpenAPI schema generation"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:109
+msgid "ensure HTTP requests with invalid payloads return 400."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:110
+msgid "ensure unique OpenAPI operation IDs"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:111
+msgid "fix issue when response is an empty iterable of DTOs"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:112
+msgid "fix `meter` in OpenTelemetry middleware being passed a"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:115
+msgid "1.48.1"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:116
+msgid "rename ``enc_hook`` -> ``default`` in ``encode_json``"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:117
+msgid "re-enable ``super()`` calls to ``Response.serializer``"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:118
+msgid "extend serializable type"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:119
+msgid "support application factory pattern in CLI ``run`` command"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:122
+msgid "1.48.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:124
+msgid "add docs versioning."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:125
+msgid "add support for layered ``type_encoders``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:126
+msgid "fix Sorting of tags in OpenAPI schema."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:127
+msgid "fix rendering of Enum params in OpenAPI."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:128
+msgid "fix swagger check for schema."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:129
+msgid "update ``fast-query-parsers`` and ``pydantic``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:132
+msgid "1.47.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:134
+msgid ""
+"fix Don’t import ``CookieBackendConfig`` by default in ``starlite.middleware."
+"sessions``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:135
+msgid "add Auto generation of DTOs from response data."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:136
+msgid "add Media type inference to HTTP handlers."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:137
+msgid "add Support differently named path parameters."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:138
+msgid "add ``fast-query-parsers``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:142
+msgid "1.46.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:144
+msgid "add CLI."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:145
+msgid "add Support ``Cookie`` instances in ``Response.set_cookie``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:146
+msgid "add Support for controlling Pydantic models’ alias in OpenAPI Schema."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:147
+msgid "fix Jinja Template response ignores MediaType settings."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:148
+msgid "fix Make SessionAuth openapi_schema use backend_config.key."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:149
+msgid "fix Support utf-8 encoded strings in form data."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:150
+msgid ""
+"update Move ``JinjaTemplateEngine`` and ``MakoTemplateEngine`` to contrib."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:151
+msgid "update Update template config."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:156
+msgid "1.45.1"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:158
+msgid "fix controller support for mixed websocket and http route handlers."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:159
+msgid "fix serialization of pydantic types."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:164
+msgid "1.45.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:166
+msgid "add ``MessagePack`` support and serialization with ``msgspec``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:167
+msgid "fix OpenAPI support for custom responses with generic types."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:168
+msgid "fix OpenAPI support for dynamic route handlers."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:169
+msgid "fix TestClient handling of escaped ampersands in query params."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:170
+msgid "fix logger propagation causing duplicate messages."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:171
+msgid "fix mounting starlette apps require trailing slashes."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:172
+msgid "fix rate-limiting of mount paths."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:177
+msgid "1.44.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:179
+msgid "add support for pagination."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:180
+msgid "add new multipart parser."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:181
+msgid "update ``urlencoded`` parsing."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:182
+msgid ""
+"fix ``OpenAPIController`` when ASGI ``root_path`` is set on ASGI server."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:183
+msgid "fix generator based dependencies cached responses."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:188
+msgid "1.43.1"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:190
+msgid "change ``StructLoggingConfing.processor`` type hint to ``List``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:191
+msgid "fix cookie caching issues."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:192
+msgid "honour documentation_only flag for cookies."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:193
+msgid "remove ``SessionAuth`` import."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:194
+msgid "support legacy OpenAPI file upload format."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:199
+msgid "1.43.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:201
+msgid "add security module and JWT auth contrib."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:202
+msgid ""
+"deprecate ``middleware.session.memcached_backend.MemcachedBackend."
+"delete_all``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:207
+msgid "1.42.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:209
+msgid "support different types of path parameters for different leaf nodes."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:210
+msgid "add dependencies with ``yield``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:211
+msgid "update custom state injection and add ``ImmutableState``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:212
+msgid "fix #854 - Incorrect path resolution of ‘path’ type parameters."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:213
+msgid "fix #849 - Make LoggingMiddleware handle request bodies correctly."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:218
+msgid "1.41.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:220
+msgid "general performance optimization."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:221
+msgid ""
+"fix #841: change ``middleware.session.sqlalchemy_backend.SessionModelMixin."
+"data`` to ``LargeBinary``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:226
+msgid "1.40.1"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:228
+msgid ""
+"fix for improper parsing of sequence query params declared in nested "
+"dependencies."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:229
+msgid "fix for header parsing from iterables."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:234
+msgid "1.40.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:236
+msgid "add ``OpenTelemetry`` instrumentation contrib package."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:237
+msgid ""
+"add forward ref resolution to signature models, allowing for usage with "
+"future annotations."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:238
+msgid "add handling of compressed “body” in logging middleware."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:239
+msgid "breaking: removed per request dependency caching."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:240
+msgid ""
+"fix 404 where current node has handlers and child route has path params."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:241
+msgid "fix flaky SQLA-session-backend tests."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:242
+msgid ""
+"update OpenAPI generation to hide automatically created OPTIONS routes in "
+"schema."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:243
+msgid ""
+"update ``AllowedHosts`` and ``CompressionMiddleware`` application to handler "
+"level."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:244
+msgid ""
+"update ``request_factory.{_default_route_handler,default_app}`` to have "
+"deferred bootstrap."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:245
+msgid "update the routing layer and param parsing to improve performance."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:250
+msgid "1.39.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:252
+msgid "add ``CORSMiddleware``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:253
+msgid "add ``URL``, ``URLPath`` and ``Address`` datastructures."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:254
+msgid "add ``send_as_attachment`` flag for ``StaticFiles``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:255
+msgid "add handling of ``OPTIONS`` requests."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:256
+msgid "fix ``content-disposition`` in ``html_mode`` StaticFiles."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:257
+msgid ""
+"fix ``filename`` parameter in ``FileResponse`` set for ``StaticFiles`` "
+"response."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:258
+msgid "refactor builtin middlewares."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:259
+msgid "remove Python 3.7 support."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:260
+msgid "remove ``starlette`` as a dependency."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:265
+msgid "1.38.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:267
+msgid "add ``AllowedHostsMiddleware``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:268
+msgid "add ``*args`` override to ``Logger`` protocol."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:269
+msgid "add ``QueryMultiDict`` for ``request.query`` and ``socket.query``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:270
+msgid "add ``ServerErrorMiddleware`` with own exception printer."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:271
+msgid "fix resolving starlette responses."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:272
+msgid "update ``path_params`` key to always exist in scope."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:277
+msgid "1.37.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:279
+msgid "add ‘gzip’ compression."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:280
+msgid ""
+"add ``StaticFiles`` to replace Starlette’s version + support for ``fsspec``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:281
+msgid "add ``head`` decorator."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:282
+msgid "remove Starlette ``Middleware`` type from typing."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:287
+msgid "1.36.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:289
+msgid "add ``AbstractMiddleware`` class."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:290
+msgid "add layering for opt dictionary."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:291
+msgid "add per request caching of dependencies."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:292
+msgid ""
+"add\\ ``Headers``, ``MutableHeaders`` and update ``FormMultiDict`` to use "
+"the ``multidict`` library."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:293
+msgid "fix asgi/websocket handlers when **future** annotations is used."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:294
+msgid "removed “method” from ``ResponseExtractorField``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:295
+msgid "update dependency resolution in kwargs model to run concurrently."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:300
+msgid "1.35.1"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:302
+msgid ""
+"fix hard dependency on external ``cryptography`` package when importing "
+"``starlite``"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:303
+msgid "fix invalid default ``base_url`` for ``TestClient``"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:308
+msgid "1.35.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:310
+msgid "add context-manager when using SQLAlchemy sessions."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:311
+msgid "add support for mounting ASGI applications."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:312
+msgid ""
+"fix ``SQLAlchemyPlugin.to_dict()`` where instance has relationship raising "
+"an exception."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:313
+msgid "update route registration to ensure unique handlers."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:314
+msgid "update routing logic to use a cleaner architecture."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:315
+msgid "update sessions to support explicitly setting to ``Empty``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:316
+msgid "update test client to run session creation in the client’s portal."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:321
+msgid "1.34.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:323
+msgid ""
+"add a ``__test__ = False`` attribute to the ``TestClient`` so it won’t get "
+"collected by pytest together with an async test."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:324
+msgid "add support for server-side sessions."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:325
+msgid "fix an issue where header values would be forced to lower case."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:330
+msgid "1.33.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:332
+msgid "add ``TestClient`` to replace Starlette."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:337
+msgid "1.32.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:339
+msgid "add ``BackgroundTask`` and ``BackgroundTasks`` to replace Starlette."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:340
+msgid "add ``Etag`` support to ``File`` and update response containers."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:341
+msgid ""
+"add ``RedirectResponse``, ``FileResponse`` and ``StreamingResponse`` to "
+"replace Starlette."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:342
+msgid "add ``status_codes`` constants."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:343
+msgid "fix cache classes being coupled to ``asyncio``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:344
+msgid "update ``Response`` to replace Starlette."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:349
+msgid "1.31.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:351
+msgid "add support for ETag headers."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:352
+msgid "add support Cache-Control headers."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:353
+msgid "fix ``Partial`` handling of ``ClassVar``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:354
+msgid "update CSRFMiddleware to support excluding routes."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:359
+msgid "1.30.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:361
+msgid "add ``url_for_static_asset`` path resolver function."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:362
+msgid ""
+"fix SQLAlchemy plugin maps JSON column types to ``Union[Dict, List]`` on "
+"DTOs."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:363
+msgid ""
+"fix ``SessionMiddleware`` handling non-session cookies with ``session`` "
+"anywhere in their name."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:364
+msgid "update a ``TypeVar`` for ``ExceptionHandler`` exception parameter."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:369
+msgid "1.29.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:371
+msgid "add native support for ``TypedDict`` as data type."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:376
+msgid "1.28.1"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:378
+msgid "fix ``QueueListenerHandler`` using stdlib ``QueueListenerHandler``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:379
+msgid "update ``pydantic-factories`` to ``v1.11.1``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:384
+msgid "1.28.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:386
+msgid "add ``csrf_input`` template context value."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:387
+msgid "add ``csrf_token`` template callable."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:388
+msgid "add support for pydantic’s ``ConstrainedDate`` in OpenAPI schema."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:389
+msgid "fix ``NoReturn`` as allowed return typing for ``delete`` decorators."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:390
+msgid ""
+"fix signature model for dependency with ``skip_validation`` and ``default``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:391
+msgid "update ``QueueListenerHandler`` to log to stderr by default."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:392
+msgid ""
+"update ``TemplateEngineProtocol`` to support registering template callables."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:397
+msgid "1.27.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:399
+msgid "add ``url_for`` function in templates."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:400
+msgid "add ``redis`` cache backend."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:401
+msgid "add ``memcached`` cache backend."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:406
+msgid "1.26.1"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:408
+msgid "fix optional ``UploadFile`` not being allowed."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:413
+msgid "1.26.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:415
+msgid "add ``cache`` property getter to ``ASGIConnection``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:416
+msgid "add support for creating test sessions from raw session cookies."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:417
+msgid "add support for using custom ``Request`` and ``WebSocket`` classes."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:418
+msgid "fix large file uploads with ``httpx``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:419
+msgid "fix route handler name indexing."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:420
+msgid "update OpenAPIController to configure bundle download paths."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:421
+msgid "update ``RequestFactory`` to assign empty session dict by default."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:422
+msgid ""
+"update ``SQLAlchemyConfig`` session\\ *maker*\\ \\* attributes to protocols."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:423
+msgid ""
+"update ``SQLAlchemyConfig`` to support either passing an instance or setting "
+"connection string."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:424
+msgid "update templating to inject request into template context."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:429
+msgid "1.25.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:431
+msgid "add ``app.route_reverse`` method."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:432
+msgid ""
+"update ``SQLAlchemyPluginConfig`` to allow setting ``before_send_handler``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:433
+msgid ""
+"update ``SQLAlchemyPluginConfig`` to expose ``engine`` and ``sessionmaker``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:434
+msgid "update ``SQLAlchemyPlugin`` to handle ``SQLAlchemy 2.0`` column types."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:439
+msgid "1.24.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:441
+msgid "update ``RequestFactory``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:442
+msgid ""
+"update ``SQLAlchemyPlugin`` to support connection and dependency injection."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:447
+msgid "1.23.1"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:449
+msgid "fix ``httpx`` being a required dependency."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:454
+msgid "1.23.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:456
+msgid "add ``LoggingMiddleware``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:457
+msgid ""
+"add support for configurable ``exclude_from_auth`` to "
+"``AbstractAuthenticationMiddleware``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:458
+msgid ""
+"refactor to reduce cognitive complexity of code and increase performance."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:463
+msgid "1.22.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:465
+msgid "add ``**kwargs`` support to route handlers."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:466
+msgid "breaking: remove ``create_test_request``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:467
+msgid ""
+"breaking: update Starlette to version ``0.21.0``. This version changes the "
+"TestClient to use ``httpx`` instead of ``requests``, which is a breaking "
+"change."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:468
+msgid "fix add default empty session to ``RequestFactory``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:473
+msgid "1.21.2"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:475
+msgid "fix regression in accessing ``request.headers`` due to caching."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:480
+msgid "1.21.1"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:482
+msgid "add ``StructLoggingConfig``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:487
+msgid "1.21.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:489
+msgid "add ``on_app_init`` hook."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:490
+msgid ""
+"add ``testing.RequestFactory`` helper class for constructing ``Request`` "
+"objects."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:491
+msgid "refactor logging config and fix default handlers."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:492
+msgid ""
+"update ``State`` object implements ``MutableMapping`` interface, attribute "
+"access/mutation, ``copy()`` and ``dict()`` methods."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:493
+msgid ""
+"update internal implementations of ``HTTPConnection``, ``Request`` and "
+"``WebSocket``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:494
+msgid "update typing of ``__init__()`` method return annotations."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:499
+msgid "1.20.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:501
+msgid ""
+"update ASGI typings (``scope``, ``receive``, ``send``, ``message`` and "
+"``ASGIApp``) to use strong types derived from `asgiref <https://github.com/"
+"django/asgiref>`__."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:502
+msgid "update ``SessionMiddleware`` to use custom serializer used on request."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:503
+msgid ""
+"update ``openapi-pydantic-schema`` to ``v1.3.0`` adding support for "
+"``__schema_name__``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:508
+msgid "1.19.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:510
+msgid "add ``RateLimitMiddleware``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:511
+msgid "add ``media_type`` to ``ResponseContainer``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:512
+msgid "add support for multiple cookies in ``create_test_request``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:513
+msgid "add support for multiple responses documentation by @seladb."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:518
+msgid "1.18.1"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:520
+msgid "fix ``ResponseHeader`` not being correctly encoded."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:521
+msgid "update ``SQLAlchemyPlugin`` for v2.0 compatibility."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:526
+msgid "1.18.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:528
+msgid ""
+"update ``serializer`` to handle ``SecretStr``, ``PurePath`` and "
+"``PurePosixPath``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:529
+msgid ""
+"update multipart handling to use `starlite-multipart <https://github.com/"
+"starlite-api/starlite-multipart>`__."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:534
+msgid "1.17.2"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:536
+msgid "update ``Partial`` to support dataclasses."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:541
+msgid "1.17.1"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:543
+msgid "add ``url_for`` method similar to Starlette’s."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:544
+msgid "fix ``AsyncCallable`` to ensure wrapped methods remain unbound."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:549
+msgid "1.17.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:551
+msgid "add ``SessionMiddleware``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:556
+msgid "1.16.2"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:558
+msgid ""
+"fix ``before_request`` regression causing it to not handle returned "
+"responses from the hook."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:563
+msgid "1.16.1"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:565
+msgid "fix validation errors raised when using custom state."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:566
+msgid "update ``picologging`` integration to use ``picologging.dictConfig``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:571
+msgid "1.16.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:573
+msgid "add ``exclude`` parameter to ``AbstractAuthenticationMiddleware``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:574
+msgid ""
+"add options to disable OpenAPI documentation sites and schema endpoints via "
+"config."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:575
+msgid "refactor ``KwargsModel``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:580
+msgid "1.15.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:582
+msgid ""
+"add ``examples/`` directory and tests for complete documentation examples."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:583
+msgid ""
+"replace ``pydantic-openapi-schema`` import from ``v3_0_3`` with import from "
+"``v3_10_0``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:588
+msgid "1.14.1"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:590
+msgid "fix OpenAPI schema for ``UploadFile``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:591
+msgid "remove empty aliases from field parameters."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:592
+msgid "update OpenAPI security definitions into OpenAPI configuration."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:597
+msgid "1.14.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:599
+msgid "refactored brotli middleware typing."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:600
+msgid "update Extended ``PluginProtocol`` with an ``on_app_init`` method."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:605
+msgid "1.13.1"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:607
+msgid "fix ``is_class_and_subclass`` not handling type annotations."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:612
+msgid "1.13.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:614
+msgid "fix remove duplicated detail in ``HTTPException.__str__()``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:615
+msgid ""
+"fix removed imports causing ``MissingDependencyException`` where ``brotli`` "
+"not installed and not required."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:616
+msgid "update Add ``skip_validation`` flag to ``Dependency`` function."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:617
+msgid ""
+"update Export starlite cookie to header and use it in CSRF middleware and "
+"OpenAPI response @seladb."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:618
+msgid ""
+"update cache protocol, cache backend integration including locking for sync "
+"access."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:619
+msgid ""
+"update consistent eager evaluation of async callables across the codebase."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:624
+msgid "1.12.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:626
+msgid "fix handling of “\\*” in routes by @waweber."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:627
+msgid "update middleware typing and addition of ``DefineMiddleware``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:632
+msgid "1.11.1"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:634
+msgid "hotfix Exception raised by ``issubclass`` check."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:639
+msgid "1.11.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:641
+msgid "fix ``Stream`` handling of generators."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:642
+msgid "fix ``UploadFile`` OpenAPI schema exception."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:643
+msgid "refactor http and path param parsing."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:644
+msgid ""
+"update OpenAPIController to use render methods and configurable ``root`` "
+"class var @mobiusxs."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:649
+msgid "1.10.1"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:651
+msgid ""
+"fix regression in StaticFiles of resolution of index.html in "
+"``html_mode=True``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:656
+msgid "1.10.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:658
+msgid "breaking update handling of status code <100, 204 or 304."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:659
+msgid "fix adding only new routes to the route_map by @Dr-Emann."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:660
+msgid "refactor tidy up exceptions."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:661
+msgid "refactor update ``to_response`` and datastructures."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:662
+msgid "refactor update installation extras."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:667
+msgid "1.9.2"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:669
+msgid "update installation extras."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:674
+msgid "1.9.1"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:676
+msgid "add CSRF Middleware and config, @seladb."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:677
+msgid ""
+"add starlite ports of BackgroundTask and BackgroundTasks in ``starlite."
+"datastructures``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:682
+msgid "1.9.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:684
+msgid ""
+"add support for `picologging <https://github.com/microsoft/picologging>`__."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:685
+msgid "update response headers, handling of cookies and handling of responses."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:690
+msgid "1.8.1"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:692
+msgid "add piccolo-orm plugin."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:693
+msgid "fix CacheConfig being broken due to pydantic validation bug."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:698
+msgid "1.8.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:700
+msgid ""
+"add `Stoplights Elements <https://stoplight.io/open-source/elements>`__ "
+"OpenAPI support @aedify-swi"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:701
+msgid ""
+"breaking replace `openapi-pydantic-schema <https://github.com/kuimono/"
+"openapi-schema-pydantic>`__ with `pydantic-openapi-schema <https://github."
+"com/starlite-api/pydantic-openapi-schema>`__."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:706
+msgid "1.7.3"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:708
+msgid ""
+"fix to routes being allowed under static paths and improvements to path "
+"resolution @Dr-Emann"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:713
+msgid "1.7.2"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:715
+msgid "add ``OpenAPIConfig.use_handler_docstring`` param."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:716
+msgid "update ``Partial`` to annotate fields of nested classes @Harry-Lees."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:721
+msgid "1.7.1"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:723
+msgid "add ``Swagger-UI`` support @timwedde."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:724
+msgid "add orjson support to websockets."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:729
+msgid "1.7.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:731
+msgid "add ``TortoiseORMPlugin``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:736
+msgid "1.6.2"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:738
+msgid "remove ``exrex`` from second hand dependencies."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:739
+msgid "update error handling,"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:744
+msgid "1.6.1"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:746
+msgid "add ``after_response`` hook."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:751
+msgid "1.6.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:753
+msgid "add support for layered parameters."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:758
+msgid "1.5.4"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:760
+msgid "add Brotli compression middleware by @cofin."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:765
+msgid "1.5.3"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:767
+msgid "fix route handler exception resolution."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:768
+msgid "update path param validation during registration @danesolberg."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:773
+msgid "1.5.2"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:775
+msgid "fix path resolution edge cases."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:780
+msgid "1.5.1"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:782
+msgid "add gzip middleware support."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:783
+msgid "fix dependency validation failure returning 400 (instead of 500)."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:784
+msgid ""
+"fix raise exception on routes with duplicate path parameters @danesolberg."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:789
+msgid "1.5.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:791
+msgid "add ``requests`` as optional dependency @Bobronium."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:792
+msgid "add layered middleware support."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:793
+msgid "fix CORS headers and middlewares not processing exceptions."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:794
+msgid "fix OpenAPI array items being double nested."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:795
+msgid "fix order of exception handlers."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:796
+msgid "update exception handlers to work in layers."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:801
+msgid "1.4.2"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:803
+msgid ""
+"fix ``status_code`` missing from exception OpenAPI documentation @timwedde."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:804
+msgid "fix exception ``extra`` being mistyped in OpenAPI documentation."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:809
+msgid "1.4.1"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:811
+msgid "add better detection of async callables."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:812
+msgid ""
+"fix ``None`` return value from handler with ``204`` has empty response "
+"content."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:813
+msgid ""
+"fix ``Provide`` properly detects async ``@classmethod`` as async callables."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:814
+msgid ""
+"update exception handlers to be configurable at each layer of the "
+"application."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:819
+msgid "1.4.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:821
+msgid "add dependency function @peterschutt."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:822
+msgid ""
+"add raise ``ImproperConfiguredException`` when user-defined generic type "
+"resolved as openapi parameter @peterschutt."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:823
+msgid "add selective deduplication of openapi parameters @peterschutt."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:824
+msgid "add test for generic model injection @Goldziher."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:825
+msgid "update Starlette to 0.20.3."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:830
+msgid "1.3.9"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:832
+msgid "include dependencies in docs @timwedde."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:837
+msgid "1.3.8"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:839
+msgid "fix ``Router.tags`` being omitted from the docs @peterschutt."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:844
+msgid "1.3.7"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:846
+msgid "fix logging configure hanging in startup."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:851
+msgid "1.3.6"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:853
+msgid "update validation errors to return more useful json objects."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:858
+msgid "1.3.5"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:860
+msgid "add memoization to openAPI schema."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:861
+msgid "update Starlette to 0.20.1."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:866
+msgid "1.3.4"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:868
+msgid "fix ``DTOFactory`` handling of optional fields @peterschutt."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:873
+msgid "1.3.3"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:875
+msgid "update pydantic to 1.9.1."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:880
+msgid "1.3.2"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:882
+msgid "fix static path resolution when static files are served from “/”."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:883
+msgid "refactor logging."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:888
+msgid "1.3.1"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:890
+msgid "fix reserved keywords appearing in OpenAPI documentation @Joko013."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:895
+msgid "1.3.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:897
+msgid "update middleware call order @slavugan."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:902
+msgid "1.2.5"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:904
+msgid ""
+"fix ‘request.body()’ being only readable once by setting the read result "
+"into scope."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:909
+msgid "1.2.4"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:911
+msgid "update ``Starlette`` to version ``0.19.0``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:916
+msgid "1.2.3"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:918
+msgid "fix regression in error handling, returning 404 instead of 500."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:919
+msgid "update ``LoggingConfig`` to be non-blocking @madlad33."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:924
+msgid "1.2.2"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:926
+msgid "fix regression with controller multi-registration."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:931
+msgid "1.2.1"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:933
+msgid "fix handling of empty request body @t1waz."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:938
+msgid "1.2.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:940
+msgid "add run_in_thread configuration."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:945
+msgid "1.1.1"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:947
+msgid "add tags support to Controller @tclasen."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:948
+msgid "update OpenAPI operationIds to be more humanized @tclasen."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:953
+msgid "1.1.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:955
+msgid "add response caching support."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:960
+msgid "1.0.5"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:962
+msgid "fix typing of ``Partial`` @to-ph."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:967
+msgid "1.0.4"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:969
+msgid ""
+"update ``Request.state`` to be defined already in the application @ashwinvin."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:974
+msgid "1.0.3"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:976
+msgid "add argument validation on ``Parameter`` and ``Body``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:981
+msgid "1.0.2"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:983
+msgid "fix lifecycle injection of application state into class methods."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:988
+msgid "1.0.1"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:990
+msgid "fix ``MissingDependencyException`` inheritance chain."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:991
+msgid "fix ``ValidationException`` missing as export in ``__init__`` method."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:996
+msgid "1.0.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:998
+msgid "add template support @ashwinvin."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:999
+msgid "update ``starlite.request`` by renaming it to ``starlite.connection``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1000
+msgid ""
+"update the kwarg parsing and data injection logic to compute required kwargs "
+"for each route handler during application bootstrap."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1001
+msgid ""
+"update the redoc UI path from ``/schema/redoc`` to ``/schema`` @yudjinn."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1006
+msgid "0.7.2"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1008
+msgid "add missing support for starlette background tasks."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1009
+msgid "fix error with static files not working with root route."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1010
+msgid "fix function signature modelling ignoring non-annotated fields."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1011
+msgid "fix headers being case-sensitive."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1016
+msgid "0.7.1"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1018
+msgid "update handling of paths without parameters."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1023
+msgid "0.7.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1025
+msgid "add ``@asgi`` route handler decorator."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1026
+msgid "update query parameters parsing."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1027
+msgid "update request-response cycle handling."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1028
+msgid "update rewrote route resolution."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1033
+msgid "0.6.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1035
+msgid "add support for multiple paths per route handler."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1036
+msgid "add support for static files."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1037
+msgid "update ``DTOFactory``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1038
+msgid "update ``PluginProtocol`` - add ``from_dict`` methods."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1039
+msgid "update ``SQLAlchemyPlugin``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1040
+msgid ""
+"update dependency injection to allow for dependency injection into "
+"dependencies."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1041
+msgid "update lifecycle support to allow for application state injection."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1042
+msgid ""
+"update route handlers and dependencies to allow for application state "
+"injection."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1047
+msgid "0.5.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1049
+msgid ""
+"update BaseRoute to not inherit from Starlette, allowing for optimization "
+"using ``_slots_``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1050
+msgid ""
+"update RouteHandlers from being pydantic models to being custom classes, "
+"allowing for optimization using ``_slots_``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1051
+msgid "update base path handling in controllers @vincentsarago."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1056
+msgid "0.4.3"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1058
+msgid "fix dto factory handling of forward refs."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1063
+msgid "0.4.2"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1065
+msgid "fix Parameter default not being respected."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1070
+msgid "0.4.1"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1072
+msgid "add support for ``before_request`` and ``after_request`` hooks."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1073
+msgid "fix sql_alchemy requirement not being isolated to the plugin only."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1078
+msgid "0.4.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1080
+msgid "add ``DTOFactory``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1081
+msgid "add ``SQLAlchemyPlugin``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1082
+msgid "add plugin support."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1083
+msgid "fix orjson compatibility @vincentsarago."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1088
+msgid "0.3.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1090
+msgid "update openapi configuration."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1095
+msgid "0.2.1"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1097
+msgid "fix regression in handler validation."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1102
+msgid "0.2.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1104
+msgid "add support for websockets."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1105
+msgid "update multipart data handling to support mixed fields."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1110
+msgid "0.1.6"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1112
+msgid ""
+"fix monkey patch “openapi-schema-pydantic” to change Schema.Config.extra to "
+"Extra.ignore."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1117
+msgid "0.1.5"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1119
+msgid ""
+"fix monkey patch “openapi-schema-pydantic” to change Schema.extra to Extra."
+"ignore."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1124
+msgid "0.1.4"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1126
+msgid "fix include_in_schema for routes always being true."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1127
+msgid ""
+"fix update pydantic-factories to v1.1.0, resolving compatibility issues with "
+"older versions of pydantic."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1132
+msgid "0.1.3"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1134
+msgid "add ``NotFoundException``."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1135
+msgid "update dependencies to use pydantic-factories v1.0.0."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1140
+msgid "0.1.2"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1142
+msgid "fix ``requests`` not being included in project dependencies."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1143
+msgid "update pydantic to v1.9.0."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1148
+msgid "0.1.1"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1150
+msgid "add missing exports to **init**."
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1155
+msgid "0.1.0"
+msgstr ""
+
+#: ../../../release-notes/changelog.rst:1157
+msgid "initial release."
+msgstr ""
