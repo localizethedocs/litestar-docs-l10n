@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-19 17:13+0000\n"
+"POT-Creation-Date: 2026-10-26 16:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,59 +28,62 @@ msgstr ""
 #: ../../../usage/requests.rst:7
 msgid ""
 "The body of HTTP requests can be accessed using the special ``data`` "
-"parameter in a handler function."
+"parameter in a handler function, declared with a body marker. For a JSON "
+"body, that's :data:`~litestar.params.JSONBody`."
 msgstr ""
 
-#: ../../../usage/requests.rst:10
+#: ../../../usage/requests.rst:11
 msgid ""
 "from litestar import Litestar, post\n"
+"from litestar.params import JSONBody\n"
 "\n"
 "\n"
 "@post(path=\"/\")\n"
-"async def index(data: dict[str, str]) -> dict[str, str]:\n"
+"async def index(data: JSONBody[dict[str, str]]) -> dict[str, str]:\n"
 "    return data\n"
 "\n"
 "\n"
 "app = Litestar(route_handlers=[index])"
 msgstr ""
 
-#: ../../../usage/requests.rst:13
+#: ../../../usage/requests.rst:14
 msgid "The type of ``data`` can be any supported type, including"
 msgstr ""
 
-#: ../../../usage/requests.rst:16
+#: ../../../usage/requests.rst:17
 msgid "Arbitrary stdlib types"
 msgstr ""
 
-#: ../../../usage/requests.rst:17
+#: ../../../usage/requests.rst:18
 msgid ":class:`TypedDicts <typing.TypedDict>`"
 msgstr ""
 
-#: ../../../usage/requests.rst:18
+#: ../../../usage/requests.rst:19
 msgid ":func:`dataclasses <dataclasses.dataclass>`"
 msgstr ""
 
-#: ../../../usage/requests.rst:19
+#: ../../../usage/requests.rst:20
 msgid "Types supported via :doc:`plugins </usage/plugins/index>` ie."
 msgstr ""
 
-#: ../../../usage/requests.rst:20
+#: ../../../usage/requests.rst:21
 msgid "`Msgspec Struct <https://msgspec.dev/structs>`_"
 msgstr ""
 
-#: ../../../usage/requests.rst:21
+#: ../../../usage/requests.rst:22
 msgid "`Pydantic models <https://docs.pydantic.dev/usage/models/>`_"
 msgstr ""
 
-#: ../../../usage/requests.rst:22
+#: ../../../usage/requests.rst:23
 msgid "`Attrs classes <https://www.attrs.org/en/stable/>`_"
 msgstr ""
 
-#: ../../../usage/requests.rst:26
+#: ../../../usage/requests.rst:27
 msgid ""
 "from dataclasses import dataclass\n"
 "\n"
 "from litestar import Litestar, post\n"
+"from litestar.params import JSONBody\n"
 "\n"
 "\n"
 "@dataclass\n"
@@ -90,18 +93,18 @@ msgid ""
 "\n"
 "\n"
 "@post(path=\"/\")\n"
-"async def index(data: User) -> User:\n"
+"async def index(data: JSONBody[User]) -> User:\n"
 "    return data\n"
 "\n"
 "\n"
 "app = Litestar(route_handlers=[index])"
 msgstr ""
 
-#: ../../../usage/requests.rst:30
+#: ../../../usage/requests.rst:31
 msgid "Validation and customization of OpenAPI documentation"
 msgstr ""
 
-#: ../../../usage/requests.rst:32
+#: ../../../usage/requests.rst:33
 msgid ""
 "With the help of :class:`Body <litestar.params.Body>`, you have fine-grained "
 "control over the validation of the request body, and can also customize the "
@@ -112,7 +115,7 @@ msgstr ""
 msgid "example"
 msgstr ""
 
-#: ../../../usage/requests.rst:41
+#: ../../../usage/requests.rst:42
 msgid ""
 "from dataclasses import dataclass\n"
 "from typing import Annotated\n"
@@ -142,7 +145,7 @@ msgstr ""
 msgid "how to test"
 msgstr ""
 
-#: ../../../usage/requests.rst:46
+#: ../../../usage/requests.rst:47
 msgid ""
 "def test_request_data_3() -> None:\n"
 "    with TestClient(app=app_3) as client:\n"
@@ -154,32 +157,32 @@ msgid ""
 "[\"schemas\"][\"User\"][\"description\"]"
 msgstr ""
 
-#: ../../../usage/requests.rst:51
+#: ../../../usage/requests.rst:52
 msgid "Content-type"
 msgstr ""
 
-#: ../../../usage/requests.rst:53
+#: ../../../usage/requests.rst:54
 msgid ""
 "By default, Litestar will try to parse the request body as JSON. While this "
 "may be desired in most cases, you might want to specify a different type. "
-"You can do so by passing a :class:`RequestEncodingType <litestar.enums."
-"RequestEncodingType>` to ``Body``. This will also help to generate the "
-"correct media-type in the OpenAPI schema."
+"You can do so by passing a :class:`RequestEncodingType "
+"<litestar.enums.RequestEncodingType>` to ``Body``. This will also help to "
+"generate the correct media-type in the OpenAPI schema."
 msgstr ""
 
-#: ../../../usage/requests.rst:59
+#: ../../../usage/requests.rst:60
 msgid "URL Encoded Form Data"
 msgstr ""
 
-#: ../../../usage/requests.rst:61
+#: ../../../usage/requests.rst:62
 msgid ""
 "To access data sent as `url-encoded form data <https://developer.mozilla.org/"
 "en-US/docs/Web/HTTP/Methods/POST>`_, i.e. ``application/x-www-form-"
-"urlencoded`` Content-Type header, wrap the ``data`` annotation with :data:"
-"`~litestar.params.URLEncodedBody`:"
+"urlencoded`` Content-Type header, wrap the ``data`` annotation "
+"with :data:`~litestar.params.URLEncodedBody`:"
 msgstr ""
 
-#: ../../../usage/requests.rst:70
+#: ../../../usage/requests.rst:71
 msgid ""
 "from dataclasses import dataclass\n"
 "\n"
@@ -201,7 +204,7 @@ msgid ""
 "app = Litestar(route_handlers=[create_user])"
 msgstr ""
 
-#: ../../../usage/requests.rst:75
+#: ../../../usage/requests.rst:76
 msgid ""
 "def test_request_data_4() -> None:\n"
 "    with TestClient(app=app_4) as client:\n"
@@ -210,34 +213,34 @@ msgid ""
 "        assert response.json() == {\"id\": 1, \"name\": \"John\"}"
 msgstr ""
 
-#: ../../../usage/requests.rst:80
+#: ../../../usage/requests.rst:81
 msgid ""
 "URL encoded data is inherently less versatile than JSON data - for example, "
 "it cannot handle complex dictionaries and deeply nested data. It should only "
 "be used for simple data structures."
 msgstr ""
 
-#: ../../../usage/requests.rst:85
+#: ../../../usage/requests.rst:86
 msgid ""
 "``URLEncodedBody[<type>]`` is a shorthand for ``Annotated[<type>, "
 "Body(media_type=RequestEncodingType.URL_ENCODED)]``. If you want to pass "
-"additional OpenAPI metadata or constraints, use the :class:`~typing."
-"Annotated` form"
+"additional OpenAPI metadata or constraints, use "
+"the :class:`~typing.Annotated` form"
 msgstr ""
 
-#: ../../../usage/requests.rst:92
+#: ../../../usage/requests.rst:93
 msgid "MultiPart Form Data"
 msgstr ""
 
-#: ../../../usage/requests.rst:94
+#: ../../../usage/requests.rst:95
 msgid ""
 "You can access data uploaded using a request with a `multipart/form-data "
 "<https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST>`_ Content-"
-"Type header by specifying the data with :data:`~litestar.params."
-"MultipartBody`:"
+"Type header by specifying the data "
+"with :data:`~litestar.params.MultipartBody`:"
 msgstr ""
 
-#: ../../../usage/requests.rst:103
+#: ../../../usage/requests.rst:104
 msgid ""
 "from dataclasses import dataclass\n"
 "\n"
@@ -264,7 +267,7 @@ msgid ""
 "app = Litestar(route_handlers=[create_user])"
 msgstr ""
 
-#: ../../../usage/requests.rst:108
+#: ../../../usage/requests.rst:109
 msgid ""
 "def test_request_data_5() -> None:\n"
 "    with TestClient(app=app_5) as client:\n"
@@ -283,19 +286,19 @@ msgid ""
 "        }"
 msgstr ""
 
-#: ../../../usage/requests.rst:113
+#: ../../../usage/requests.rst:114
 msgid ""
 "``MultipartBody[<type>]`` is a shorthand for ``Annotated[<type>, "
 "Body(media_type=RequestEncodingType.MULTI_PART)]``. If you want to pass "
-"additional OpenAPI metadata or constraints, use the :class:`~typing."
-"Annotated` form"
+"additional OpenAPI metadata or constraints, use "
+"the :class:`~typing.Annotated` form"
 msgstr ""
 
-#: ../../../usage/requests.rst:120
+#: ../../../usage/requests.rst:121
 msgid "File uploads"
 msgstr ""
 
-#: ../../../usage/requests.rst:122
+#: ../../../usage/requests.rst:123
 msgid ""
 "In case of files uploaded, Litestar transforms the results into an instance "
 "of :class:`UploadFile <.datastructures.upload_file.UploadFile>` class, which "
@@ -303,17 +306,17 @@ msgid ""
 "type your file uploads accordingly."
 msgstr ""
 
-#: ../../../usage/requests.rst:126
+#: ../../../usage/requests.rst:127
 msgid ""
-"To access a single file simply type ``data`` as :class:`UploadFile <."
-"datastructures.upload_file.UploadFile>`:"
+"To access a single file simply type ``data`` as :class:`UploadFile "
+"<.datastructures.upload_file.UploadFile>`:"
 msgstr ""
 
 #: ../../../usage/requests.rst:0
 msgid "Async"
 msgstr ""
 
-#: ../../../usage/requests.rst:138
+#: ../../../usage/requests.rst:139
 msgid ""
 "from litestar import Litestar, MediaType, post\n"
 "from litestar.datastructures import UploadFile\n"
@@ -330,7 +333,7 @@ msgid ""
 "app = Litestar(route_handlers=[handle_file_upload])"
 msgstr ""
 
-#: ../../../usage/requests.rst:143
+#: ../../../usage/requests.rst:144
 msgid ""
 "def test_request_data_6() -> None:\n"
 "    with TestClient(app=app_6) as client:\n"
@@ -344,7 +347,7 @@ msgstr ""
 msgid "Sync"
 msgstr ""
 
-#: ../../../usage/requests.rst:153
+#: ../../../usage/requests.rst:154
 msgid ""
 "from litestar import Litestar, MediaType, post\n"
 "from litestar.datastructures import UploadFile\n"
@@ -361,7 +364,7 @@ msgid ""
 "app = Litestar(route_handlers=[handle_file_upload])"
 msgstr ""
 
-#: ../../../usage/requests.rst:158
+#: ../../../usage/requests.rst:159
 msgid ""
 "def test_request_data_7() -> None:\n"
 "    with TestClient(app=app_7) as client:\n"
@@ -371,29 +374,29 @@ msgid ""
 "        assert response.text == f\"hello,length: {len(b'world')}\""
 msgstr ""
 
-#: ../../../usage/requests.rst:161
+#: ../../../usage/requests.rst:162
 msgid "Technical details"
 msgstr ""
 
-#: ../../../usage/requests.rst:164
+#: ../../../usage/requests.rst:165
 msgid ""
-":class:`UploadFile <.datastructures.UploadFile>` wraps :class:"
-"`SpooledTemporaryFile <tempfile.SpooledTemporaryFile>` so it can be used "
-"asynchronously. Inside a synchronous function we don't need this wrapper, so "
-"we can use its :meth:`read <io.TextIOBase.read>` method directly."
+":class:`UploadFile <.datastructures.UploadFile>` "
+"wraps :class:`SpooledTemporaryFile <tempfile.SpooledTemporaryFile>` so it "
+"can be used asynchronously. Inside a synchronous function we don't need this "
+"wrapper, so we can use its :meth:`read <io.TextIOBase.read>` method directly."
 msgstr ""
 
-#: ../../../usage/requests.rst:171
+#: ../../../usage/requests.rst:172
 msgid "Multiple files"
 msgstr ""
 
-#: ../../../usage/requests.rst:173
+#: ../../../usage/requests.rst:174
 msgid ""
 "To access multiple files with known filenames, you can use any structured "
 "type:"
 msgstr ""
 
-#: ../../../usage/requests.rst:181
+#: ../../../usage/requests.rst:182
 msgid ""
 "import dataclasses\n"
 "\n"
@@ -415,14 +418,14 @@ msgid ""
 "    cv_content = await data.cv.read()\n"
 "    diploma_content = await data.diploma.read()\n"
 "\n"
-"    return {\"cv\": cv_content.decode(), \"diploma\": diploma_content."
-"decode()}\n"
+"    return {\"cv\": cv_content.decode(), \"diploma\": "
+"diploma_content.decode()}\n"
 "\n"
 "\n"
 "app = Litestar(route_handlers=[handle_file_upload])"
 msgstr ""
 
-#: ../../../usage/requests.rst:186
+#: ../../../usage/requests.rst:187
 msgid ""
 "def test_request_data_8() -> None:\n"
 "    with TestClient(app=app_8) as client:\n"
@@ -435,17 +438,17 @@ msgid ""
 "\"the best\"}"
 msgstr ""
 
-#: ../../../usage/requests.rst:191
+#: ../../../usage/requests.rst:192
 msgid "Files as a dictionary"
 msgstr ""
 
-#: ../../../usage/requests.rst:193
+#: ../../../usage/requests.rst:194
 msgid ""
 "If you do not care about parsing and validation and only want to access the "
 "form data as a dictionary, you can use a ``dict`` instead:"
 msgstr ""
 
-#: ../../../usage/requests.rst:200
+#: ../../../usage/requests.rst:201
 msgid ""
 "from litestar import Litestar, post\n"
 "from litestar.datastructures import UploadFile\n"
@@ -467,7 +470,7 @@ msgid ""
 "app = Litestar(route_handlers=[handle_file_upload])"
 msgstr ""
 
-#: ../../../usage/requests.rst:205
+#: ../../../usage/requests.rst:206
 msgid ""
 "def test_request_data_9() -> None:\n"
 "    with TestClient(app=app_9) as client:\n"
@@ -480,15 +483,15 @@ msgid ""
 "        }"
 msgstr ""
 
-#: ../../../usage/requests.rst:210
+#: ../../../usage/requests.rst:211
 msgid "Files as a list"
 msgstr ""
 
-#: ../../../usage/requests.rst:212
+#: ../../../usage/requests.rst:213
 msgid "Finally, you can also access the files as a list without the filenames:"
 msgstr ""
 
-#: ../../../usage/requests.rst:219
+#: ../../../usage/requests.rst:220
 msgid ""
 "from litestar import Litestar, post\n"
 "from litestar.datastructures import UploadFile\n"
@@ -502,8 +505,8 @@ msgid ""
 "    result = {}\n"
 "    for file in data:\n"
 "        content = await file.read()\n"
-"        result[file.filename] = (len(content), file.content_type, file."
-"headers)\n"
+"        result[file.filename] = (len(content), file.content_type, "
+"file.headers)\n"
 "\n"
 "    return result\n"
 "\n"
@@ -511,7 +514,7 @@ msgid ""
 "app = Litestar(route_handlers=[handle_file_upload])"
 msgstr ""
 
-#: ../../../usage/requests.rst:224
+#: ../../../usage/requests.rst:225
 msgid ""
 "def test_request_data_10() -> None:\n"
 "    with TestClient(app=app_10) as client:\n"
@@ -533,15 +536,15 @@ msgid ""
 "        # if you pass the filename explicitly, it will be used as the "
 "filename\n"
 "        #     # (filename, file (or bytes))\n"
-"        response = client.post(\"/\", files={\"file\": (\"hello.txt\", io."
-"BytesIO(b\"hello\"))})\n"
+"        response = client.post(\"/\", files={\"file\": (\"hello.txt\", "
+"io.BytesIO(b\"hello\"))})\n"
 "        assert response.status_code == 201\n"
 "        assert response.json().get(\"hello.txt\")[0] == len(b\"hello\")\n"
 "\n"
 "        # if you add the content type, it will be used as the content type\n"
 "        #     # (filename, file (or bytes), content_type)\n"
-"        response = client.post(\"/\", files={\"file\": (\"hello.txt\", io."
-"BytesIO(b\"hello\"), \"application/x-bittorrent\")})\n"
+"        response = client.post(\"/\", files={\"file\": (\"hello.txt\", "
+"io.BytesIO(b\"hello\"), \"application/x-bittorrent\")})\n"
 "        assert response.status_code == 201\n"
 "        assert response.json().get(\"hello.txt\")[0] == len(b\"hello\")\n"
 "        assert response.json().get(\"hello.txt\")[1] == \"application/x-"
@@ -555,17 +558,17 @@ msgid ""
 "        )"
 msgstr ""
 
-#: ../../../usage/requests.rst:228
+#: ../../../usage/requests.rst:229
 msgid "MessagePack data"
 msgstr ""
 
-#: ../../../usage/requests.rst:230
+#: ../../../usage/requests.rst:231
 msgid ""
 "To receive `MessagePack <https://msgpack.org/>`_ data, annotate ``data`` "
 "with :data:`~litestar.params.MsgPackBody`:"
 msgstr ""
 
-#: ../../../usage/requests.rst:238
+#: ../../../usage/requests.rst:239
 msgid ""
 "from typing import Any\n"
 "\n"
@@ -586,12 +589,12 @@ msgid ""
 "app = Litestar(route_handlers=[msgpack_handler])"
 msgstr ""
 
-#: ../../../usage/requests.rst:243
+#: ../../../usage/requests.rst:244
 msgid ""
 "        assert response.json().get(\"hello.txt\")[1] == \"application/x-"
 "bittorrent\"\n"
-"        assert (\"X-Foo\", \"bar\") in response.json().get(\"hello.txt\")[2]."
-"items()\n"
+"        assert (\"X-Foo\", \"bar\") in response.json().get(\"hello.txt\")"
+"[2].items()\n"
 "\n"
 "\n"
 "def test_msgpack_app() -> None:\n"
@@ -599,19 +602,19 @@ msgid ""
 "True}"
 msgstr ""
 
-#: ../../../usage/requests.rst:247
+#: ../../../usage/requests.rst:248
 msgid ""
 "``MsgPackBody[<type>]`` is a shorthand for ``Annotated[<type>, "
 "Body(media_type=RequestEncodingType.MESSAGEPACK)]``. If you want to pass "
-"additional OpenAPI metadata or constraints, use the :class:`~typing."
-"Annotated` form"
+"additional OpenAPI metadata or constraints, use "
+"the :class:`~typing.Annotated` form"
 msgstr ""
 
-#: ../../../usage/requests.rst:255
+#: ../../../usage/requests.rst:256
 msgid "Custom Request"
 msgstr ""
 
-#: ../../../usage/requests.rst:259
+#: ../../../usage/requests.rst:260
 msgid ""
 "Litestar supports custom ``request_class`` instances, which can be used to "
 "further configure the default :class:`Request`. The example below "
@@ -622,7 +625,7 @@ msgstr ""
 msgid "Example of a custom request at the application level"
 msgstr ""
 
-#: ../../../usage/requests.rst:269
+#: ../../../usage/requests.rst:270
 msgid ""
 "from litestar import Litestar, Request, get\n"
 "from litestar.connection.base import empty_receive, empty_send\n"
@@ -662,17 +665,17 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../../usage/requests.rst:274
+#: ../../../usage/requests.rst:275
 msgid ""
 "        response = client.post(\"/\", content=encode_msgpack(test_data))\n"
 "        assert response.json() == test_data"
 msgstr ""
 
-#: ../../../usage/requests.rst:277
+#: ../../../usage/requests.rst:278
 msgid "Layered architecture"
 msgstr ""
 
-#: ../../../usage/requests.rst:279
+#: ../../../usage/requests.rst:280
 msgid ""
 "Request classes are part of Litestar's layered architecture, which means you "
 "can set a request class on every layer of the application. If you have set a "
@@ -680,38 +683,39 @@ msgid ""
 "will take precedence."
 msgstr ""
 
-#: ../../../usage/requests.rst:283
+#: ../../../usage/requests.rst:284
 msgid ""
 "You can read more about this in the :ref:`usage/applications:layered "
 "architecture` section"
 msgstr ""
 
-#: ../../../usage/requests.rst:287
+#: ../../../usage/requests.rst:288
 msgid "Limits"
 msgstr ""
 
-#: ../../../usage/requests.rst:290
+#: ../../../usage/requests.rst:291
 msgid "Body size"
 msgstr ""
 
-#: ../../../usage/requests.rst:292
+#: ../../../usage/requests.rst:293
 msgid ""
 "A limit for the allowed request body size can be set on all layers via the "
 "``request_max_body_size`` parameter and defaults to 10MB. If a request body "
 "exceeds this limit, a ``413 - Request Entity Too Large`` response will be "
 "returned. This limit applies to all methods of consuming the request body, "
 "including requesting it via the ``body`` parameter in a route handler and "
-"consuming it through a manually constructed :class:`~litestar.connection."
-"Request` instance, e.g. in a middleware."
+"consuming it through a manually "
+"constructed :class:`~litestar.connection.Request` instance, e.g. in a "
+"middleware."
 msgstr ""
 
-#: ../../../usage/requests.rst:300
+#: ../../../usage/requests.rst:301
 msgid ""
 "To disable this limit for a specific handler / router / controller, it can "
 "be set to :obj:`None`."
 msgstr ""
 
-#: ../../../usage/requests.rst:304
+#: ../../../usage/requests.rst:305
 msgid ""
 "Setting ``request_max_body_size=None`` is strongly discouraged as it exposes "
 "the application to a denial of service (DoS) attack by sending arbitrarily "
@@ -721,32 +725,31 @@ msgid ""
 "crashes, should no outside limits be imposed."
 msgstr ""
 
-#: ../../../usage/requests.rst:311
+#: ../../../usage/requests.rst:312
 msgid ""
 "This is generally only recommended in environments where the application is "
 "running behind a reverse proxy such as NGINX, where a size limit is already "
 "set."
 msgstr ""
 
-#: ../../../usage/requests.rst:316
+#: ../../../usage/requests.rst:317
 msgid ""
 "Since ``request_max_body_size`` is handled on a per-request basis, it won't "
 "affect middlewares or ASGI handlers when they try to access the request body "
 "via the raw ASGI events. To avoid this, middlewares and ASGI handlers should "
 "construct a :class:`~litestar.connection.Request` instance and use the "
-"regular :meth:`~litestar.connection.Request.stream` / :meth:`~litestar."
-"connection.Request.body` or content-appropriate method to consume the "
-"request body in a safe manner."
+"regular :meth:`~litestar.connection.Request.stream` / :meth:`~litestar.connection.Request.body` "
+"or content-appropriate method to consume the request body in a safe manner."
 msgstr ""
 
-#: ../../../usage/requests.rst:326
+#: ../../../usage/requests.rst:327
 msgid ""
 "For requests that define a ``Content-Length`` header, Litestar will not "
 "attempt to read the request body should the header value exceed the "
 "``request_max_body_size``."
 msgstr ""
 
-#: ../../../usage/requests.rst:329
+#: ../../../usage/requests.rst:330
 msgid ""
 "Validation that the actual request body matches the ``Content-Length`` "
 "header is delegated to the ASGI server (e.g. uvicorn). This ensures "

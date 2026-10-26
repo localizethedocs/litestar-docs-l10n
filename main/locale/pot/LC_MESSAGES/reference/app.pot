@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-19 17:13+0000\n"
+"POT-Creation-Date: 2026-10-26 16:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -76,10 +76,11 @@ msgstr ""
 
 #: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:3
 msgid ""
-"A sequence of :class:`exception hook handlers <.types."
-"AfterExceptionHookHandler>`. This hook is called after an exception occurs. "
-"In difference to exception handlers, it is not meant to return a response - "
-"only to process the exception (e.g. log it, send it to Sentry etc.)."
+"A sequence of :class:`exception hook handlers "
+"<.types.AfterExceptionHookHandler>`. This hook is called after an exception "
+"occurs. In difference to exception handlers, it is not meant to return a "
+"response - only to process the exception (e.g. log it, send it to Sentry "
+"etc.)."
 msgstr ""
 
 #: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:6
@@ -97,9 +98,9 @@ msgstr ""
 
 #: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:10
 msgid ""
-"A sequence of allowed hosts, or an :class:`AllowedHostsConfig <.config."
-"allowed_hosts.AllowedHostsConfig>` instance. Enables the builtin allowed "
-"hosts middleware."
+"A sequence of allowed hosts, or an :class:`AllowedHostsConfig "
+"<.config.allowed_hosts.AllowedHostsConfig>` instance. Enables the builtin "
+"allowed hosts middleware."
 msgstr ""
 
 #: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:13
@@ -112,15 +113,16 @@ msgstr ""
 
 #: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:16
 msgid ""
-"A sequence of :class:`before send hook handlers <.types."
-"BeforeMessageSendHookHandler>`. Called when the ASGI send function is called."
+"A sequence of :class:`before send hook handlers "
+"<.types.BeforeMessageSendHookHandler>`. Called when the ASGI send function "
+"is called."
 msgstr ""
 
 #: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:18
 msgid ""
-"A ``cache-control`` header of type :class:`CacheControlHeader <litestar."
-"datastructures.CacheControlHeader>` to add to route handlers of this app. "
-"Can be overridden by route handlers."
+"A ``cache-control`` header of type :class:`CacheControlHeader "
+"<litestar.datastructures.CacheControlHeader>` to add to route handlers of "
+"this app. Can be overridden by route handlers."
 msgstr ""
 
 #: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:21
@@ -134,8 +136,7 @@ msgid "If set, configures CORS handling for the application."
 msgstr ""
 
 #: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:24
-msgid ""
-"If set, configures :class:`CSRFMiddleware <.middleware.csrf.CSRFMiddleware>`."
+msgid "If set, enables CSRF protection."
 msgstr ""
 
 #: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:25
@@ -160,8 +161,8 @@ msgstr ""
 
 #: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:31
 msgid ""
-"A subclass of :class:`BaseEventEmitterBackend <.events.emitter."
-"BaseEventEmitterBackend>`."
+"A subclass of :class:`BaseEventEmitterBackend "
+"<.events.emitter.BaseEventEmitterBackend>`."
 msgstr ""
 
 #: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:33
@@ -202,10 +203,10 @@ msgstr ""
 msgid ""
 "A sequence of :class:`OnAppInitHandler <.types.OnAppInitHandler>` instances. "
 "Handlers receive an instance of :class:`AppConfig <.config.app.AppConfig>` "
-"that will have been initially populated with the parameters passed to :class:"
-"`Litestar <litestar.app.Litestar>`, and must return an instance of same. If "
-"more than one handler is registered they are called in the order they are "
-"provided."
+"that will have been initially populated with the parameters passed "
+"to :class:`Litestar <litestar.app.Litestar>`, and must return an instance of "
+"same. If more than one handler is registered they are called in the order "
+"they are provided."
 msgstr ""
 
 #: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:45
@@ -226,9 +227,10 @@ msgstr ""
 
 #: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:50
 msgid ""
-"A string keyed mapping of arbitrary values that can be accessed in :class:"
-"`Guards <.types.Guard>` or wherever you have access to :class:`Request "
-"<litestar.connection.request.Request>` or :class:`ASGI Scope <.types.Scope>`."
+"A string keyed mapping of arbitrary values that can be accessed "
+"in :class:`Guards <.types.Guard>` or wherever you have access "
+"to :class:`Request <litestar.connection.request.Request>` or :class:`ASGI "
+"Scope <.types.Scope>`."
 msgstr ""
 
 #: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:53
@@ -287,8 +289,8 @@ msgstr ""
 
 #: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:69
 msgid ""
-"A string keyed mapping of :class:`ResponseHeader <.datastructures."
-"ResponseHeader>`"
+"A string keyed mapping of :class:`ResponseHeader "
+"<.datastructures.ResponseHeader>`"
 msgstr ""
 
 #: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:70
@@ -304,15 +306,16 @@ msgstr ""
 #: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:73
 msgid ""
 "A sequence of route handlers, which can include instances of :class:`Router "
-"<.router.Router>`, subclasses of :class:`Controller <.controller."
-"Controller>` or any callable decorated by the route handler decorators."
+"<.router.Router>`, subclasses of :class:`Controller "
+"<.controller.Controller>` or any callable decorated by the route handler "
+"decorators."
 msgstr ""
 
 #: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:76
 msgid ""
 "A sequence of dicts that will be added to the schema of all route handlers "
-"in the application. See :data:`SecurityRequirement <.openapi.spec."
-"SecurityRequirement>` for details."
+"in the application. See :data:`SecurityRequirement "
+"<.openapi.spec.SecurityRequirement>` for details."
 msgstr ""
 
 #: ../../../../litestar/app.py:docstring of litestar.app.Litestar.__init__:79

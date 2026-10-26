@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-19 17:13+0000\n"
+"POT-Creation-Date: 2026-10-26 16:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -57,8 +57,8 @@ msgstr ""
 
 #: ../../../getting-started.rst:23
 msgid ""
-":ref:`Brotli Compression Middleware <usage/middleware/builtin-middleware:"
-"brotli>`"
+":ref:`Brotli Compression Middleware <usage/middleware/builtin-"
+"middleware:brotli>`"
 msgstr ""
 
 #: ../../../getting-started.rst:24
@@ -144,9 +144,9 @@ msgstr ""
 
 #: ../../../getting-started.rst:53
 msgid ""
-":ref:`Better OpenAPI examples generation <usage/openapi/schema_generation:"
-"Generating examples>` with `Polyfactory <https://github.com/litestar-org/"
-"polyfactory>`_"
+":ref:`Better OpenAPI examples generation <usage/openapi/"
+"schema_generation:Generating examples>` with `Polyfactory <https://"
+"github.com/litestar-org/polyfactory>`_"
 msgstr ""
 
 #: ../../../getting-started.rst:54
@@ -272,8 +272,8 @@ msgstr ""
 
 #: ../../../getting-started.rst:121
 msgid ""
-"``http://localhost:8000/schema/swagger`` (for `Swagger UI <https://swagger."
-"io/>`_),"
+"``http://localhost:8000/schema/swagger`` (for `Swagger UI <https://"
+"swagger.io/>`_),"
 msgstr ""
 
 #: ../../../getting-started.rst:122
@@ -311,8 +311,8 @@ msgstr ""
 
 #: ../../../getting-started.rst:144
 msgid ""
-"You can also use dataclasses (standard library and Pydantic), :class:`typing."
-"TypedDict`, or :class:`msgspec.Struct`."
+"You can also use dataclasses (standard library and "
+"Pydantic), :class:`typing.TypedDict`, or :class:`msgspec.Struct`."
 msgstr ""
 
 #: ../../../getting-started.rst:148
@@ -348,6 +348,7 @@ msgid ""
 "\n"
 "from litestar import Controller, get, post, put, patch, delete\n"
 "from litestar.dto import DTOData\n"
+"from litestar.params import FromPath, JSONBody\n"
 "from pydantic import UUID4\n"
 "\n"
 "from my_app.models import User, PartialUserDTO\n"
@@ -357,24 +358,25 @@ msgid ""
 "    path = \"/users\"\n"
 "\n"
 "    @post()\n"
-"    async def create_user(self, data: User) -> User: ...\n"
+"    async def create_user(self, data: JSONBody[User]) -> User: ...\n"
 "\n"
 "    @get()\n"
 "    async def list_users(self) -> List[User]: ...\n"
 "\n"
 "    @patch(path=\"/{user_id:uuid}\", dto=PartialUserDTO)\n"
 "    async def partial_update_user(\n"
-"        self, user_id: UUID4, data: DTOData[User]\n"
+"        self, user_id: FromPath[UUID4], data: JSONBody[DTOData[User]]\n"
 "    ) -> User: ...\n"
 "\n"
 "    @put(path=\"/{user_id:uuid}\")\n"
-"    async def update_user(self, user_id: UUID4, data: User) -> User: ...\n"
+"    async def update_user(self, user_id: FromPath[UUID4], data: "
+"JSONBody[User]) -> User: ...\n"
 "\n"
 "    @get(path=\"/{user_id:uuid}\")\n"
-"    async def get_user(self, user_id: UUID4) -> User: ...\n"
+"    async def get_user(self, user_id: FromPath[UUID4]) -> User: ...\n"
 "\n"
 "    @delete(path=\"/{user_id:uuid}\")\n"
-"    async def delete_user(self, user_id: UUID4) -> None: ..."
+"    async def delete_user(self, user_id: FromPath[UUID4]) -> None: ..."
 msgstr ""
 
 #: ../../../getting-started.rst:0
@@ -385,6 +387,7 @@ msgstr ""
 msgid ""
 "from litestar import Controller, get, post, put, patch, delete\n"
 "from litestar.dto import DTOData\n"
+"from litestar.params import FromPath, JSONBody\n"
 "from pydantic import UUID4\n"
 "\n"
 "from my_app.models import User, PartialUserDTO\n"
@@ -394,33 +397,34 @@ msgid ""
 "    path = \"/users\"\n"
 "\n"
 "    @post()\n"
-"    async def create_user(self, data: User) -> User: ...\n"
+"    async def create_user(self, data: JSONBody[User]) -> User: ...\n"
 "\n"
 "    @get()\n"
 "    async def list_users(self) -> list[User]: ...\n"
 "\n"
 "    @patch(path=\"/{user_id:uuid}\", dto=PartialUserDTO)\n"
 "    async def partial_update_user(\n"
-"        self, user_id: UUID4, data: DTOData[User]\n"
+"        self, user_id: FromPath[UUID4], data: JSONBody[DTOData[User]]\n"
 "    ) -> User: ...\n"
 "\n"
 "    @put(path=\"/{user_id:uuid}\")\n"
-"    async def update_user(self, user_id: UUID4, data: User) -> User: ...\n"
+"    async def update_user(self, user_id: FromPath[UUID4], data: "
+"JSONBody[User]) -> User: ...\n"
 "\n"
 "    @get(path=\"/{user_id:uuid}\")\n"
-"    async def get_user(self, user_id: UUID4) -> User: ...\n"
+"    async def get_user(self, user_id: FromPath[UUID4]) -> User: ...\n"
 "\n"
 "    @delete(path=\"/{user_id:uuid}\")\n"
-"    async def delete_user(self, user_id: UUID4) -> None: ..."
+"    async def delete_user(self, user_id: FromPath[UUID4]) -> None: ..."
 msgstr ""
 
-#: ../../../getting-started.rst:202
+#: ../../../getting-started.rst:203
 msgid ""
 "When instantiating your app, import your *controller* into your "
 "application's entry-point and pass it to Litestar:"
 msgstr ""
 
-#: ../../../getting-started.rst:206
+#: ../../../getting-started.rst:207
 msgid ""
 "from litestar import Litestar\n"
 "\n"
@@ -429,21 +433,21 @@ msgid ""
 "app = Litestar(route_handlers=[UserController])"
 msgstr ""
 
-#: ../../../getting-started.rst:213
+#: ../../../getting-started.rst:214
 msgid ""
 "To **run your application**, use an ASGI server such as `uvicorn <https://"
 "uvicorn.dev/>`_ :"
 msgstr ""
 
-#: ../../../getting-started.rst:215
+#: ../../../getting-started.rst:216
 msgid "uvicorn my_app.main:app --reload"
 msgstr ""
 
-#: ../../../getting-started.rst:221
+#: ../../../getting-started.rst:222
 msgid "Philosophy"
 msgstr ""
 
-#: ../../../getting-started.rst:223
+#: ../../../getting-started.rst:224
 msgid ""
 "Litestar is a community-driven project. This means not a single author, but "
 "rather a core team of maintainers is leading the project, supported by a "
@@ -451,21 +455,21 @@ msgid ""
 "very actively developed."
 msgstr ""
 
-#: ../../../getting-started.rst:226
+#: ../../../getting-started.rst:227
 msgid ""
 "Litestar draws inspiration from `NestJS <https://nestjs.com/>`_ - a "
 "contemporary TypeScript framework - which places opinions and patterns at "
 "its core."
 msgstr ""
 
-#: ../../../getting-started.rst:228
+#: ../../../getting-started.rst:229
 msgid ""
 "While still allowing for **function-based endpoints**, Litestar seeks to "
 "build on Python's powerful and versatile OOP, by placing **class-based "
 "controllers** at its core."
 msgstr ""
 
-#: ../../../getting-started.rst:230
+#: ../../../getting-started.rst:231
 msgid ""
 "Litestar is **not** a microframework. Unlike frameworks such as FastAPI, "
 "Starlette, or Flask, Litestar includes a lot of functionalities out of the "
@@ -475,11 +479,11 @@ msgid ""
 "never feature its own ORM), but its scope is not micro either."
 msgstr ""
 
-#: ../../../getting-started.rst:237
+#: ../../../getting-started.rst:238
 msgid "Feature comparison with similar frameworks"
 msgstr ""
 
-#: ../../../getting-started.rst:239
+#: ../../../getting-started.rst:240
 msgid "Litestar vs. other frameworks"
 msgstr ""
 
@@ -515,7 +519,7 @@ msgstr ""
 msgid ":octicon:`check`"
 msgstr ""
 
-#: ../../../getting-started.rst:244
+#: ../../../getting-started.rst:245
 msgid ""
 "<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-"
 "octicon-check\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M13.78 "
@@ -612,11 +616,11 @@ msgstr ""
 msgid "Caching"
 msgstr ""
 
-#: ../../../getting-started.rst:245
+#: ../../../getting-started.rst:246
 msgid "Example Applications"
 msgstr ""
 
-#: ../../../getting-started.rst:247
+#: ../../../getting-started.rst:248
 msgid ""
 "`litestar-pg-redis-docker <https://github.com/litestar-org/litestar-pg-redis-"
 "docker>`_ : In addition to Litestar, this demonstrates a pattern of "
@@ -625,17 +629,17 @@ msgid ""
 "big and small."
 msgstr ""
 
-#: ../../../getting-started.rst:250
+#: ../../../getting-started.rst:251
 msgid ""
 "`litestar-fullstack <https://github.com/litestar-org/litestar-fullstack>`_ : "
 "A fully-capable, production-ready fullstack Litestar web application "
 "configured with best practices. It includes SQLAlchemy 2.0, ReactJS, `Vite "
 "<https://vitejs.dev/>`_, `SAQ job queue <https://saq-py.readthedocs.io/en/"
-"latest/>`_, ``Jinja`` templates and more. `Read more <https://litestar-org."
-"github.io/litestar-fullstack/latest/>`_."
+"latest/>`_, ``Jinja`` templates and more. `Read more <https://litestar-"
+"org.github.io/litestar-fullstack/latest/>`_."
 msgstr ""
 
-#: ../../../getting-started.rst:254
+#: ../../../getting-started.rst:255
 msgid ""
 "`litestar-hello-world <https://github.com/litestar-org/litestar-hello-"
 "world>`_: A bare-minimum application setup. Great for testing and POC work."
