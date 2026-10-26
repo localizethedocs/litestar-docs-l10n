@@ -1,0 +1,1547 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Litestar-Org
+# This file is distributed under the same license as the Litestar package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Litestar 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-19 15:22+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../usage/routing/parameters.rst:2
+msgid "Parameters"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:7
+msgid ""
+"Request parameters are parts of the request that can be injected into a "
+"handler function or dependency. They allow type-coercion, validation, and "
+"will show up in the generated OpenAPI schema."
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:11
+msgid ""
+"There are for request parameter types supported, which can be specified in "
+"two different forms:"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:15
+msgid "Type"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:15
+msgid "Short form"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:15
+msgid ":class:`~typing.Annotated` Form"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:17
+msgid "query"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:17
+msgid ":data:`.params.FromQuery`"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:17
+msgid ""
+":class:`Annotated[\\<type\\>, QueryParameter()] <.params.QueryParameter>`"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:19
+msgid "path"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:19
+msgid ":data:`.params.FromPath`"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:19
+msgid ":class:`Annotated[\\<type\\>, PathParameter()] <.params.PathParameter>`"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:21
+msgid "header"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:21
+msgid ":data:`.params.FromHeader`"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:21
+msgid ""
+":class:`Annotated[\\<type\\>, HeaderParameter()] <.params.HeaderParameter>`"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:23
+msgid "cookie"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:23
+msgid ":data:`.params.FromCookie`"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:23
+msgid ""
+":class:`Annotated[\\<type\\>, CookieParameter()] <.params.CookieParameter>`"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:29
+msgid "Parameter declarations"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:31
+msgid ""
+"Each parameter source has two equivalent declaration forms: a marker type "
+"alias for the common case, and an :class:`~typing.Annotated` form for when "
+"extra configuration is needed:"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:0
+msgid "Marker form"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:40
+msgid ""
+"from litestar import get\n"
+"from litestar.params import FromCookie, FromHeader, FromPath, FromQuery\n"
+"\n"
+"@get(\"/{user_id:int}\")\n"
+"async def handler(\n"
+"    user_id: FromPath[int],\n"
+"    limit: FromQuery[int],\n"
+"    token: FromHeader[str],\n"
+"    session: FromCookie[str],\n"
+") -> None: ..."
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:0
+msgid "Annotated form"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:0
+msgid "Python 3.8+"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:55
+msgid ""
+"from typing_extensions import Annotated\n"
+"\n"
+"from litestar import get\n"
+"from litestar.params import (\n"
+"    CookieParameter,\n"
+"    HeaderParameter,\n"
+"    PathParameter,\n"
+"    QueryParameter,\n"
+")\n"
+"\n"
+"@get(\"/{user_id:int}\")\n"
+"async def handler(\n"
+"    user_id: Annotated[int, PathParameter(ge=1)],\n"
+"    limit: Annotated[int, QueryParameter(gt=0, le=100)],\n"
+"    token: Annotated[str, HeaderParameter(name=\"X-API-KEY\")],\n"
+"    session: Annotated[str, CookieParameter(name=\"session-id\")],\n"
+") -> None: ..."
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:0
+msgid "Python 3.9+"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:55
+msgid ""
+"from typing import Annotated\n"
+"\n"
+"from litestar import get\n"
+"from litestar.params import (\n"
+"    CookieParameter,\n"
+"    HeaderParameter,\n"
+"    PathParameter,\n"
+"    QueryParameter,\n"
+")\n"
+"\n"
+"@get(\"/{user_id:int}\")\n"
+"async def handler(\n"
+"    user_id: Annotated[int, PathParameter(ge=1)],\n"
+"    limit: Annotated[int, QueryParameter(gt=0, le=100)],\n"
+"    token: Annotated[str, HeaderParameter(name=\"X-API-KEY\")],\n"
+"    session: Annotated[str, CookieParameter(name=\"session-id\")],\n"
+") -> None: ..."
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:74
+msgid ""
+"The two forms are equivalent: ``FromQuery[T]`` is just an alias for "
+"``Annotated[T, QueryParameter()]``. Prefer the marker form when no extra "
+"configuration is needed."
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:78
+msgid "Technical details"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:81
+msgid ""
+"These :term:`parameters <parameter>` will be parsed from the function "
+"signature and used to generate an internal data model. This model in turn "
+"will be used to validate the parameters and generate the OpenAPI schema"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:87
+msgid ":doc:`/topics/explicit_declarations`"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:91
+msgid "Optional, required and nullable"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:93
+msgid ""
+"Just like function parameters in Python, request parameters can be required, "
+"optional or have a default value."
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:96
+msgid "Parameters declared without any default are required"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:97
+msgid "Parameters declared with a default are optional"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:98
+msgid ""
+"Parameters declared with ``| None`` are *nullable*, i.e. the may take a "
+"``None`` value; they are still required, unless they are given a default "
+"value"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:101
+msgid ""
+"Defaults work exactly like defaults in regular function parameters: If the "
+"value is missing from the request, the handler is called with the default:"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:105
+msgid "Defining a default value for a query parameter"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:105
+msgid ""
+"from typing import Dict\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.params import FromQuery\n"
+"\n"
+"\n"
+"@get(\"/\", sync_to_thread=False)\n"
+"def index(param: FromQuery[str] = \"hello\") -> Dict[str, str]:\n"
+"    return {\"param\": param}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[index])"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:105
+msgid ""
+"from litestar import Litestar, get\n"
+"from litestar.params import FromQuery\n"
+"\n"
+"\n"
+"@get(\"/\", sync_to_thread=False)\n"
+"def index(param: FromQuery[str] = \"hello\") -> dict[str, str]:\n"
+"    return {\"param\": param}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[index])"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:-1
+msgid ""
+"> curl http://127.0.0.1:8000/\n"
+"{\"param\":\"hello\"}\n"
+"> curl http://127.0.0.1:8000/?param=john\n"
+"{\"param\":\"john\"}"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:108
+msgid "Marking a parameter optional means the type itself permits :obj:`None`:"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:111
+msgid "Defining an optional query parameter"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:111
+msgid ""
+"from typing import Dict, Optional\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.params import FromQuery\n"
+"\n"
+"\n"
+"@get(\"/\", sync_to_thread=False)\n"
+"def index(param: FromQuery[Optional[str]] = None) -> Dict[str, "
+"Optional[str]]:\n"
+"    return {\"param\": param}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[index])"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:111
+msgid ""
+"from typing import Optional\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.params import FromQuery\n"
+"\n"
+"\n"
+"@get(\"/\", sync_to_thread=False)\n"
+"def index(param: FromQuery[Optional[str]] = None) -> dict[str, "
+"Optional[str]]:\n"
+"    return {\"param\": param}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[index])"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:0
+msgid "Python 3.10+"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:111
+msgid ""
+"from litestar import Litestar, get\n"
+"from litestar.params import FromQuery\n"
+"\n"
+"\n"
+"@get(\"/\", sync_to_thread=False)\n"
+"def index(param: FromQuery[str | None] = None) -> dict[str, str | None]:\n"
+"    return {\"param\": param}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[index])"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:-1
+msgid ""
+"> curl http://127.0.0.1:8000/\n"
+"{\"param\":null}\n"
+"> curl http://127.0.0.1:8000/?param=goodbye\n"
+"{\"param\":\"goodbye\"}"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:116
+msgid ""
+"Path parameters are always required because they are part of the URL itself. "
+"You can only get a \"missing\" path parameter when the same handler is "
+"registered against :ref:`multiple paths <usage/routing/parameters:path "
+"parameters>` (e.g. ``[\"/items\", \"/items/{id:int}\"]``), in which case the "
+"handler-side default fills in for the path without the slot."
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:124
+msgid "Parameter types"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:127
+msgid "Path parameters"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:129
+msgid ""
+"Path :term:`parameters <parameter>` are declared as part of the ``path`` "
+"component of the URL using the syntax ``{param_name:param_type}``. The "
+"handler function receives the value via a parameter of the same name, "
+"declared with :data:`~.params.FromPath`:"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:134
+msgid "Defining a path parameter in a route handler"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:134
+msgid ""
+"import dataclasses\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.params import FromPath\n"
+"\n"
+"\n"
+"@dataclasses.dataclass\n"
+"class User:\n"
+"    id: int\n"
+"    name: str\n"
+"\n"
+"\n"
+"USER_DB = {1: User(id=1, name=\"John Doe\")}\n"
+"\n"
+"\n"
+"@get(\"/user/{user_id:int}\", sync_to_thread=False)\n"
+"def get_user(user_id: FromPath[int]) -> User:\n"
+"    return USER_DB[user_id]\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[get_user])"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:137
+msgid "There are two components to declaring a path parameter:"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:139
+msgid ""
+"In the :class:`@get() <.handlers.get>` :term:`decorator`, the path component "
+"declares both the parameter's name (``user_id``) and type (:class:`int`)"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:141
+msgid ""
+"In the handler signature, ``user_id`` is declared as :data:`FromPath[int] <."
+"params.FromPath>`, which tells Litestar to inject the matching path value"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:145
+msgid "Two characteristics are unique to path parameters:"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:147
+msgid ""
+"The URL slot defines the structurally required type via the ``:type`` suffix "
+"(see :ref:`usage/routing/parameters:supported path parameter types` below). "
+"Litestar coerces the captured string into this type before passing it to the "
+"handler, and the handler-side type annotation can request a further coercion "
+"(see :ref:`usage/routing/parameters:type coercion`)."
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:152
+msgid ""
+"Path parameters cannot be declared on application :ref:`layers <usage/"
+"applications:layered architecture>`"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:156
+msgid ""
+"You only need to declare the path :term:`parameter` in the function "
+"signature if the handler actually uses it. If the path parameter is part of "
+"the path but the function does not consume it, you can omit it from the "
+"signature; it will still be validated and added to the OpenAPI schema."
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:163
+msgid "Supported path parameter types"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:165
+msgid "The following types are supported in the ``{name:type}`` slot:"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:167
+msgid "``date``: Accepts date strings and time stamps."
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:168
+msgid "``datetime``: Accepts date-time strings and time stamps."
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:169
+msgid "``decimal``: Accepts decimal values and floats."
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:170
+msgid ":class:`float`: Accepts ints and floats."
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:171
+msgid ":class:`int`: Accepts ints and floats."
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:172
+msgid ":class:`path`: Accepts valid POSIX paths."
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:173
+msgid ":class:`str`: Accepts all string values."
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:174
+msgid ""
+"``time``: Accepts time strings with optional timezone compatible with "
+"standard (Pydantic/Msgspec) datetime formats."
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:175
+msgid ""
+"``timedelta``: Accepts duration strings compatible with the standard "
+"(Pydantic/Msgspec) timedelta formats."
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:176
+msgid "``uuid``: Accepts all uuid values."
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:179
+msgid "Query parameters"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:181
+msgid ""
+"Query :term:`parameters <parameter>` are declared as :term:`parameters "
+"<argument>` on the handler function, typed with :data:`~.params.FromQuery` "
+"or ``Annotated[<type>, QueryParameter()]``."
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:186
+msgid "Defining a query parameter in a route handler"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:186
+msgid ""
+"from typing import Dict\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.params import FromQuery\n"
+"\n"
+"\n"
+"@get(\"/\", sync_to_thread=False)\n"
+"def index(param: FromQuery[str]) -> Dict[str, str]:\n"
+"    return {\"param\": param}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[index])"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:186
+msgid ""
+"from litestar import Litestar, get\n"
+"from litestar.params import FromQuery\n"
+"\n"
+"\n"
+"@get(\"/\", sync_to_thread=False)\n"
+"def index(param: FromQuery[str]) -> dict[str, str]:\n"
+"    return {\"param\": param}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[index])"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:-1
+msgid ""
+"> curl http://127.0.0.1:8000/?param=foo\n"
+"{\"param\":\"foo\"}\n"
+"> curl http://127.0.0.1:8000/?param=bar\n"
+"{\"param\":\"bar\"}"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:191
+msgid "Header parameters"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:193
+msgid ""
+"Header :term:`parameters <parameter>` are declared with :data:`~.params."
+"FromHeader` or ``Annotated[<type>, HeaderParameter()]``. The handler-side "
+"parameter name is used as the header name by default; HTTP headers are "
+"matched case-insensitively, so ``token: FromHeader[str]`` matches both "
+"``Token`` and ``token`` on the wire."
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:198
+msgid ""
+"In practice, most headers you care about have names that are not valid "
+"Python identifiers (e.g. ``X-API-KEY``, ``Content-Type``). In those cases, "
+"switch to :class:`~typing.Annotated` and set ``name=`` on :class:`~.params."
+"HeaderParameter`:"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:203
+msgid ""
+"from typing_extensions import Annotated\n"
+"\n"
+"from litestar.params import HeaderParameter\n"
+"\n"
+"\n"
+"async def handler(token: Annotated[str, HeaderParameter(name=\"X-API-"
+"KEY\")]) -> None: ..."
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:203
+msgid ""
+"from typing import Annotated\n"
+"\n"
+"from litestar.params import HeaderParameter\n"
+"\n"
+"\n"
+"async def handler(token: Annotated[str, HeaderParameter(name=\"X-API-"
+"KEY\")]) -> None: ..."
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:212
+msgid "Cookie parameters"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:214
+msgid ""
+"Cookie :term:`parameters <parameter>` are declared with :data:`~.params."
+"FromCookie` or ``Annotated[<type>, CookieParameter()]``. The handler-side "
+"parameter name is used as the cookie name by default:"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:219
+msgid ""
+"from typing_extensions import Annotated\n"
+"\n"
+"from litestar.params import CookieParameter\n"
+"\n"
+"\n"
+"async def handler(session: Annotated[str, CookieParameter(name=\"session-"
+"id\")]) -> None: ..."
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:219
+msgid ""
+"from typing import Annotated\n"
+"\n"
+"from litestar.params import CookieParameter\n"
+"\n"
+"\n"
+"async def handler(session: Annotated[str, CookieParameter(name=\"session-"
+"id\")]) -> None: ..."
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:227
+msgid ""
+"A combined example showing both header and cookie parameters alongside a "
+"path parameter:"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:230
+msgid "Defining header and cookie parameters"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:230
+msgid ""
+"import dataclasses\n"
+"\n"
+"from typing_extensions import Annotated\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.exceptions import NotAuthorizedException\n"
+"from litestar.params import CookieParameter, FromPath, HeaderParameter\n"
+"\n"
+"VALID_TOKEN = \"super-secret-secret\"\n"
+"VALID_COOKIE_VALUE = \"cookie-secret\"\n"
+"\n"
+"\n"
+"@dataclasses.dataclass\n"
+"class User:\n"
+"    id: int\n"
+"    name: str\n"
+"\n"
+"\n"
+"USER_DB = {\n"
+"    1: User(id=1, name=\"John Doe\"),\n"
+"}\n"
+"\n"
+"\n"
+"@get(path=\"/users/{user_id:int}/\")\n"
+"async def get_user(\n"
+"    user_id: FromPath[int],\n"
+"    token: Annotated[str, HeaderParameter(name=\"X-API-KEY\")],\n"
+"    cookie: Annotated[str, CookieParameter(name=\"my-cookie-param\")],\n"
+") -> User:\n"
+"    if token != VALID_TOKEN or cookie != VALID_COOKIE_VALUE:\n"
+"        raise NotAuthorizedException\n"
+"    return USER_DB[user_id]\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[get_user])"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:230
+msgid ""
+"import dataclasses\n"
+"\n"
+"from typing import Annotated\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.exceptions import NotAuthorizedException\n"
+"from litestar.params import CookieParameter, FromPath, HeaderParameter\n"
+"\n"
+"VALID_TOKEN = \"super-secret-secret\"\n"
+"VALID_COOKIE_VALUE = \"cookie-secret\"\n"
+"\n"
+"\n"
+"@dataclasses.dataclass\n"
+"class User:\n"
+"    id: int\n"
+"    name: str\n"
+"\n"
+"\n"
+"USER_DB = {\n"
+"    1: User(id=1, name=\"John Doe\"),\n"
+"}\n"
+"\n"
+"\n"
+"@get(path=\"/users/{user_id:int}/\")\n"
+"async def get_user(\n"
+"    user_id: FromPath[int],\n"
+"    token: Annotated[str, HeaderParameter(name=\"X-API-KEY\")],\n"
+"    cookie: Annotated[str, CookieParameter(name=\"my-cookie-param\")],\n"
+") -> User:\n"
+"    if token != VALID_TOKEN or cookie != VALID_COOKIE_VALUE:\n"
+"        raise NotAuthorizedException\n"
+"    return USER_DB[user_id]\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[get_user])"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:235
+msgid "Type coercion"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:237
+msgid ""
+"Every parameter starts life on the wire as a string (or for path parameters, "
+"a string captured by the URL slot). Litestar coerces that raw value into the "
+"inner type of the marker (``FromQuery[int]``, ``FromHeader[float]``, "
+"``FromPath[datetime]``, …) before passing it to the handler:"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:242
+msgid "Coercing query parameters into different types"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:242
+msgid ""
+"from datetime import datetime, timedelta\n"
+"from typing import Any, Dict, List\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.params import FromQuery\n"
+"\n"
+"\n"
+"@get(\"/\", sync_to_thread=False)\n"
+"def index(\n"
+"    date: FromQuery[datetime],\n"
+"    number: FromQuery[int],\n"
+"    floating_number: FromQuery[float],\n"
+"    strings: FromQuery[List[str]],\n"
+") -> Dict[str, Any]:\n"
+"    return {\n"
+"        \"datetime\": date + timedelta(days=1),\n"
+"        \"int\": number,\n"
+"        \"float\": floating_number,\n"
+"        \"list\": strings,\n"
+"    }\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[index])"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:242
+msgid ""
+"from datetime import datetime, timedelta\n"
+"from typing import Any\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.params import FromQuery\n"
+"\n"
+"\n"
+"@get(\"/\", sync_to_thread=False)\n"
+"def index(\n"
+"    date: FromQuery[datetime],\n"
+"    number: FromQuery[int],\n"
+"    floating_number: FromQuery[float],\n"
+"    strings: FromQuery[list[str]],\n"
+") -> dict[str, Any]:\n"
+"    return {\n"
+"        \"datetime\": date + timedelta(days=1),\n"
+"        \"int\": number,\n"
+"        \"float\": floating_number,\n"
+"        \"list\": strings,\n"
+"    }\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[index])"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:-1
+msgid ""
+"> curl http://127.0.0.1:8000/?"
+"date=2022-11-28T13:22:06.916540&floating_number=0.1&number=42&strings=1&strings=2\n"
+"{\"datetime\":\"2022-11-29T13:22:06.916540\",\"int\":42,\"float\":0.1,"
+"\"list\":[\"1\",\"2\"]}"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:245
+msgid ""
+"Path parameters additionally support coercion via the path-slot type itself. "
+"The handler-side type does not need to match the slot type one-to-one — if "
+"the slot captures an :class:`int` and the handler asks for a :class:"
+"`~datetime.datetime`, Litestar applies the second conversion:"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:250
+msgid "Coercing a path parameter into a different type"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:250
+msgid ""
+"import dataclasses\n"
+"from datetime import datetime, timezone\n"
+"from typing import List\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.params import FromPath\n"
+"\n"
+"\n"
+"@dataclasses.dataclass\n"
+"class Order:\n"
+"    id: int\n"
+"    customer_id: int\n"
+"\n"
+"\n"
+"ORDERS_BY_DATETIME = {\n"
+"    datetime.fromtimestamp(1667924386, tz=timezone.utc): [\n"
+"        Order(id=1, customer_id=2),\n"
+"        Order(id=2, customer_id=2),\n"
+"    ]\n"
+"}\n"
+"\n"
+"\n"
+"@get(path=\"/orders/{from_date:int}\", sync_to_thread=False)\n"
+"def get_orders(from_date: FromPath[datetime]) -> List[Order]:\n"
+"    return ORDERS_BY_DATETIME[from_date]\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[get_orders])"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:250
+msgid ""
+"import dataclasses\n"
+"from datetime import datetime, timezone\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.params import FromPath\n"
+"\n"
+"\n"
+"@dataclasses.dataclass\n"
+"class Order:\n"
+"    id: int\n"
+"    customer_id: int\n"
+"\n"
+"\n"
+"ORDERS_BY_DATETIME = {\n"
+"    datetime.fromtimestamp(1667924386, tz=timezone.utc): [\n"
+"        Order(id=1, customer_id=2),\n"
+"        Order(id=2, customer_id=2),\n"
+"    ]\n"
+"}\n"
+"\n"
+"\n"
+"@get(path=\"/orders/{from_date:int}\", sync_to_thread=False)\n"
+"def get_orders(from_date: FromPath[datetime]) -> list[Order]:\n"
+"    return ORDERS_BY_DATETIME[from_date]\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[get_orders])"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:0
+msgid "Python 3.11+"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:250
+msgid ""
+"import dataclasses\n"
+"from datetime import datetime, UTC\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.params import FromPath\n"
+"\n"
+"\n"
+"@dataclasses.dataclass\n"
+"class Order:\n"
+"    id: int\n"
+"    customer_id: int\n"
+"\n"
+"\n"
+"ORDERS_BY_DATETIME = {\n"
+"    datetime.fromtimestamp(1667924386, tz=UTC): [\n"
+"        Order(id=1, customer_id=2),\n"
+"        Order(id=2, customer_id=2),\n"
+"    ]\n"
+"}\n"
+"\n"
+"\n"
+"@get(path=\"/orders/{from_date:int}\", sync_to_thread=False)\n"
+"def get_orders(from_date: FromPath[datetime]) -> list[Order]:\n"
+"    return ORDERS_BY_DATETIME[from_date]\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[get_orders])"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:253
+msgid ""
+"The same conversion rules apply to header and cookie parameters: "
+"``FromHeader[int]`` will parse the header value as an integer, "
+"``FromCookie[datetime]`` will parse the cookie as a datetime, and so on."
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:258
+msgid "Aliasing"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:260
+msgid ""
+"By default, the name of the function parameter is used to retrieve the "
+"parameter data from the request. To decouple the two, for example to receive "
+"``camelCase`` query keys while keeping ``snake_case`` Python parameter "
+"names, or to declare an ``X-``-prefixed header, pass ``name=\"...\"`` to the "
+"matching specifier class:"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:266
+msgid "Remapping a query parameter to a different URL name"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:266
+msgid ""
+"from typing import Dict\n"
+"\n"
+"from typing_extensions import Annotated\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.params import QueryParameter\n"
+"\n"
+"\n"
+"@get(\"/\", sync_to_thread=False)\n"
+"def index(snake_case: Annotated[str, QueryParameter(name=\"camelCase\")]) -> "
+"Dict[str, str]:\n"
+"    return {\"param\": snake_case}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[index])"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:266
+msgid ""
+"from typing import Annotated\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.params import QueryParameter\n"
+"\n"
+"\n"
+"@get(\"/\", sync_to_thread=False)\n"
+"def index(snake_case: Annotated[str, QueryParameter(name=\"camelCase\")]) -> "
+"dict[str, str]:\n"
+"    return {\"param\": snake_case}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[index])"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:-1
+msgid ""
+"> curl http://127.0.0.1:8000/?camelCase=foo\n"
+"{\"param\":\"foo\"}"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:269
+msgid ""
+"A request to ``http://127.0.0.1:8000?camelCase=foo`` will be received as "
+"``snake_case=\"foo\"`` inside the handler."
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:272
+msgid ""
+"The same pattern applies to :class:`~.params.HeaderParameter`,:class:`~."
+"params.CookieParameter` and :class:`~.params.PathParameter`."
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:278
+msgid "Validation constraints"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:280
+msgid ""
+"All parameters can be given certain validation constraints, that will be "
+"validated when a request is received, and represented in the OpenAPI schema."
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:283
+msgid ""
+"Currently supported constraints are: ``gt``, ``ge``, ``lt``, ``le``, "
+"``multiple_of``, ``min_length``, ``max_length``, ``min_items``, "
+"``max_items``, and ``pattern``. A value that does not satisfy the constraint "
+"raises :exc:`~.exceptions.http_exceptions.ValidationException`:"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:289
+msgid "Constraining a query parameter to integers larger than 5"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:289
+msgid ""
+"from typing import Dict\n"
+"\n"
+"from typing_extensions import Annotated\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.params import QueryParameter\n"
+"\n"
+"\n"
+"@get(\"/\", sync_to_thread=False)\n"
+"def index(param: Annotated[int, QueryParameter(gt=5)]) -> Dict[str, int]:\n"
+"    return {\"param\": param}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[index])"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:289
+msgid ""
+"from typing import Annotated\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.params import QueryParameter\n"
+"\n"
+"\n"
+"@get(\"/\", sync_to_thread=False)\n"
+"def index(param: Annotated[int, QueryParameter(gt=5)]) -> dict[str, int]:\n"
+"    return {\"param\": param}\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[index])"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:294
+msgid "OpenAPI metadata"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:296
+msgid ""
+"Parameters can extend or alter their OpenAPI schema, e.g. to customize their "
+"title, add a description or examples:"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:300
+msgid "Adding  OpenAPI metadata to a path parameter"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:300
+msgid ""
+"import dataclasses\n"
+"from typing import Any, Dict\n"
+"\n"
+"from typing_extensions import Annotated\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.openapi.spec.example import Example\n"
+"from litestar.openapi.spec.external_documentation import "
+"ExternalDocumentation\n"
+"from litestar.params import PathParameter\n"
+"\n"
+"\n"
+"@dataclasses.dataclass\n"
+"class Version:\n"
+"    id: int\n"
+"    specs: Dict[str, Any]\n"
+"\n"
+"\n"
+"VERSIONS = {1: Version(id=1, specs={\"some\": \"value\"})}\n"
+"\n"
+"\n"
+"@get(path=\"/versions/{version:int}\", sync_to_thread=False)\n"
+"def get_product_version(\n"
+"    version: Annotated[\n"
+"        int,\n"
+"        PathParameter(\n"
+"            title=\"Available Product Versions\",\n"
+"            description=\"Get a specific version spec from the available "
+"specs\",\n"
+"            examples=[Example(value=1)],\n"
+"            external_docs=ExternalDocumentation(\n"
+"                url=\"https://mywebsite.com/documentation/"
+"product#versions\",  # type: ignore[arg-type]\n"
+"            ),\n"
+"        ),\n"
+"    ],\n"
+") -> Version:\n"
+"    return VERSIONS[version]\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[get_product_version])"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:300
+msgid ""
+"import dataclasses\n"
+"from typing import Any\n"
+"\n"
+"from typing import Annotated\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.openapi.spec.example import Example\n"
+"from litestar.openapi.spec.external_documentation import "
+"ExternalDocumentation\n"
+"from litestar.params import PathParameter\n"
+"\n"
+"\n"
+"@dataclasses.dataclass\n"
+"class Version:\n"
+"    id: int\n"
+"    specs: dict[str, Any]\n"
+"\n"
+"\n"
+"VERSIONS = {1: Version(id=1, specs={\"some\": \"value\"})}\n"
+"\n"
+"\n"
+"@get(path=\"/versions/{version:int}\", sync_to_thread=False)\n"
+"def get_product_version(\n"
+"    version: Annotated[\n"
+"        int,\n"
+"        PathParameter(\n"
+"            title=\"Available Product Versions\",\n"
+"            description=\"Get a specific version spec from the available "
+"specs\",\n"
+"            examples=[Example(value=1)],\n"
+"            external_docs=ExternalDocumentation(\n"
+"                url=\"https://mywebsite.com/documentation/"
+"product#versions\",  # type: ignore[arg-type]\n"
+"            ),\n"
+"        ),\n"
+"    ],\n"
+") -> Version:\n"
+"    return VERSIONS[version]\n"
+"\n"
+"\n"
+"app = Litestar(route_handlers=[get_product_version])"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:305
+msgid "Customizing enum schemas"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:307
+msgid ""
+"By default, the OpenAPI schema generated for an enum-typed parameter uses "
+"the enum's docstring for the description section of the schema. Overriding "
+"the description via :attr:`~.params.KwargDefinition.description` would "
+"change it for every parameter sharing that enum, because only one schema is "
+"generated per enum. To get distinct descriptions, also pass :attr:`~.params."
+"KwargDefinition.schema_component_key` so a separate schema component is "
+"generated per parameter:"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:315
+msgid "Distinct OpenAPI components for parameters sharing the same enum type"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:315
+msgid ""
+"from enum import Enum\n"
+"from typing import Annotated\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.params import FromQuery, QueryParameter\n"
+"\n"
+"\n"
+"class MyEnum(str, Enum):\n"
+"    \"\"\"My enum accepts two values\"\"\"\n"
+"\n"
+"    A = \"a\"\n"
+"    B = \"b\"\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"async def index(\n"
+"    q1: Annotated[MyEnum, QueryParameter(description=\"This is q1\", "
+"schema_component_key=\"q1\")],\n"
+"    q2: FromQuery[MyEnum],\n"
+"    q3: Annotated[MyEnum, QueryParameter(description=\"This is q3\", "
+"schema_component_key=\"q3\")],\n"
+") -> None: ...\n"
+"\n"
+"\n"
+"app = Litestar([index])"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:315
+msgid ""
+"from enum import StrEnum\n"
+"from typing import Annotated\n"
+"\n"
+"from litestar import Litestar, get\n"
+"from litestar.params import FromQuery, QueryParameter\n"
+"\n"
+"\n"
+"class MyEnum(StrEnum):\n"
+"    \"\"\"My enum accepts two values\"\"\"\n"
+"\n"
+"    A = \"a\"\n"
+"    B = \"b\"\n"
+"\n"
+"\n"
+"@get(\"/\")\n"
+"async def index(\n"
+"    q1: Annotated[MyEnum, QueryParameter(description=\"This is q1\", "
+"schema_component_key=\"q1\")],\n"
+"    q2: FromQuery[MyEnum],\n"
+"    q3: Annotated[MyEnum, QueryParameter(description=\"This is q3\", "
+"schema_component_key=\"q3\")],\n"
+") -> None: ...\n"
+"\n"
+"\n"
+"app = Litestar([index])"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:318
+msgid ""
+"In the above example, the schema for ``q1`` references a \"q1\" schema "
+"component with description \"This is q1\"; the schema for ``q2`` references "
+"the shared \"MyEnum\" component with description \"My enum accepts two "
+"values\"; and the schema for ``q3`` references a \"q3\" component with "
+"description \"This is q3\"."
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:323
+msgid ""
+"Without the :attr:`~.params.KwargDefinition.schema_component_key` arguments "
+"on ``q1`` and ``q3``, all three would share the same \"MyEnum\" component "
+"with description \"This is q1\" — whichever description was processed first "
+"wins."
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:329
+msgid "Layered Parameters"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:331
+msgid ""
+"As part of Litestar's :ref:`layered architecture <usage/applications:layered "
+"architecture>`, you can declare :term:`parameters <parameter>` not only on "
+"individual route handler functions, but also on other layers of the "
+"application:"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:336
+msgid "Declaring parameters on different layers of the application"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:336
+msgid ""
+"from typing import Dict, Union\n"
+"\n"
+"from typing_extensions import Annotated\n"
+"\n"
+"from litestar import Controller, Litestar, Router, get\n"
+"from litestar.params import (\n"
+"    CookieParameter,\n"
+"    FromHeader,\n"
+"    FromPath,\n"
+"    FromQuery,\n"
+"    HeaderParameter,\n"
+"    QueryParameter,\n"
+")\n"
+"\n"
+"\n"
+"class MyController(Controller):\n"
+"    path = \"/controller\"\n"
+"    parameters = {\n"
+"        \"controller_param\": QueryParameter(annotation=int, lt=100),\n"
+"    }\n"
+"\n"
+"    @get(\"/{path_param:int}\", sync_to_thread=False)\n"
+"    def my_handler(\n"
+"        self,\n"
+"        path_param: FromPath[int],\n"
+"        local_param: FromQuery[str],\n"
+"        router_param: FromHeader[str],\n"
+"        controller_param: Annotated[int, QueryParameter(lt=50)],\n"
+"    ) -> Dict[str, Union[str, int]]:\n"
+"        return {\n"
+"            \"path_param\": path_param,\n"
+"            \"local_param\": local_param,\n"
+"            \"router_param\": router_param,\n"
+"            \"controller_param\": controller_param,\n"
+"        }\n"
+"\n"
+"\n"
+"router = Router(\n"
+"    path=\"/router\",\n"
+"    route_handlers=[MyController],\n"
+"    parameters={\n"
+"        \"router_param\": HeaderParameter(annotation=str, name=\"MyHeader\", "
+"pattern=\"^[a-zA-Z]$\", required=False),\n"
+"    },\n"
+")\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[router],\n"
+"    parameters={\n"
+"        \"app_param\": CookieParameter(annotation=str, name=\"special-"
+"cookie\", required=False),\n"
+"    },\n"
+")"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:336
+msgid ""
+"from typing import Union\n"
+"\n"
+"from typing import Annotated\n"
+"\n"
+"from litestar import Controller, Litestar, Router, get\n"
+"from litestar.params import (\n"
+"    CookieParameter,\n"
+"    FromHeader,\n"
+"    FromPath,\n"
+"    FromQuery,\n"
+"    HeaderParameter,\n"
+"    QueryParameter,\n"
+")\n"
+"\n"
+"\n"
+"class MyController(Controller):\n"
+"    path = \"/controller\"\n"
+"    parameters = {\n"
+"        \"controller_param\": QueryParameter(annotation=int, lt=100),\n"
+"    }\n"
+"\n"
+"    @get(\"/{path_param:int}\", sync_to_thread=False)\n"
+"    def my_handler(\n"
+"        self,\n"
+"        path_param: FromPath[int],\n"
+"        local_param: FromQuery[str],\n"
+"        router_param: FromHeader[str],\n"
+"        controller_param: Annotated[int, QueryParameter(lt=50)],\n"
+"    ) -> dict[str, Union[str, int]]:\n"
+"        return {\n"
+"            \"path_param\": path_param,\n"
+"            \"local_param\": local_param,\n"
+"            \"router_param\": router_param,\n"
+"            \"controller_param\": controller_param,\n"
+"        }\n"
+"\n"
+"\n"
+"router = Router(\n"
+"    path=\"/router\",\n"
+"    route_handlers=[MyController],\n"
+"    parameters={\n"
+"        \"router_param\": HeaderParameter(annotation=str, name=\"MyHeader\", "
+"pattern=\"^[a-zA-Z]$\", required=False),\n"
+"    },\n"
+")\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[router],\n"
+"    parameters={\n"
+"        \"app_param\": CookieParameter(annotation=str, name=\"special-"
+"cookie\", required=False),\n"
+"    },\n"
+")"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:336
+msgid ""
+"from typing import Annotated\n"
+"\n"
+"from litestar import Controller, Litestar, Router, get\n"
+"from litestar.params import (\n"
+"    CookieParameter,\n"
+"    FromHeader,\n"
+"    FromPath,\n"
+"    FromQuery,\n"
+"    HeaderParameter,\n"
+"    QueryParameter,\n"
+")\n"
+"\n"
+"\n"
+"class MyController(Controller):\n"
+"    path = \"/controller\"\n"
+"    parameters = {\n"
+"        \"controller_param\": QueryParameter(annotation=int, lt=100),\n"
+"    }\n"
+"\n"
+"    @get(\"/{path_param:int}\", sync_to_thread=False)\n"
+"    def my_handler(\n"
+"        self,\n"
+"        path_param: FromPath[int],\n"
+"        local_param: FromQuery[str],\n"
+"        router_param: FromHeader[str],\n"
+"        controller_param: Annotated[int, QueryParameter(lt=50)],\n"
+"    ) -> dict[str, str | int]:\n"
+"        return {\n"
+"            \"path_param\": path_param,\n"
+"            \"local_param\": local_param,\n"
+"            \"router_param\": router_param,\n"
+"            \"controller_param\": controller_param,\n"
+"        }\n"
+"\n"
+"\n"
+"router = Router(\n"
+"    path=\"/router\",\n"
+"    route_handlers=[MyController],\n"
+"    parameters={\n"
+"        \"router_param\": HeaderParameter(annotation=str, name=\"MyHeader\", "
+"pattern=\"^[a-zA-Z]$\", required=False),\n"
+"    },\n"
+")\n"
+"\n"
+"app = Litestar(\n"
+"    route_handlers=[router],\n"
+"    parameters={\n"
+"        \"app_param\": CookieParameter(annotation=str, name=\"special-"
+"cookie\", required=False),\n"
+"    },\n"
+")"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:339
+msgid ""
+"In the above we declare :term:`parameters <parameter>` on the :class:"
+"`Litestar app <.app.Litestar>`, :class:`router <.router.Router>`, and :class:"
+"`controller <.controller.Controller>` layers in addition to those declared "
+"in the route handler. Examine these more closely:"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:343
+msgid ""
+"``app_param`` is a cookie parameter with the key ``special-cookie``, "
+"declared via :class:`~.params.CookieParameter` on the :class:`Litestar app <."
+"app.Litestar>` with ``annotation=str``. ``required=False`` makes it "
+"optional; without that argument it would be required by default."
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:347
+msgid ""
+"Because the route handler function does not declare ``app_param`` at all, "
+"the parameter is still extracted and validated at the application level even "
+"though the handler never sees it."
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:350
+msgid ""
+"``router_param`` is a header parameter with the key ``MyHeader``, declared "
+"via :class:`~.params.HeaderParameter` on the router. It is declared "
+"``required=False`` on the router, so it does not fail validation if absent — "
+"unless the handler explicitly opts in by re-declaring it (as this one does)."
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:354
+msgid ""
+"The handler types it as :class:`FromHeader[str] <.params.FromHeader>` "
+"(rather than ``str | None``), making it required at the handler level. If a "
+"value *is* provided, it is also tested against the router-declared regex."
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:357
+msgid ""
+"``controller_param`` is a query parameter with the key ``controller_param``, "
+"declared via :class:`~.params.QueryParameter` on the controller with "
+"``lt=100`` (value must be less than 100). The handler redeclares it with "
+"``Annotated[int, QueryParameter(lt=50)]``, tightening the constraint to less "
+"than 50 for this particular route."
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:362
+msgid ""
+"``local_param`` is a route-handler-local :ref:`query parameter <usage/"
+"routing/parameters:query parameters>` (``FromQuery[str]``), and "
+"``path_param`` is a :ref:`path parameter <usage/routing/parameters:path "
+"parameters>` (``FromPath[int]``)."
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:370
+msgid "Deprecated declaration styles"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:372
+msgid ""
+"Earlier 2.x releases accepted several other ways of declaring handler "
+"parameters. These continue to work for the remainder of the 2.x line, but "
+"they now emit a :class:`~.exceptions.LitestarDeprecationWarning` and will be "
+"removed in 3.0."
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:380
+msgid "Deprecated"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:381
+msgid "Use instead"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:382
+msgid "``def h(name: str)`` *(implicit query parameter)*"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:383
+msgid "``def h(name: FromQuery[str])``"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:384
+msgid "``def h(user_id: int)`` *(implicit path parameter)*"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:385
+msgid "``def h(user_id: FromPath[int])``"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:386
+msgid "``Annotated[str, Parameter(query=\"alias\")]``"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:387
+msgid "``Annotated[str, QueryParameter(name=\"alias\")]``"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:388
+msgid "``Annotated[str, Parameter(header=\"X-API-KEY\")]``"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:389
+msgid "``Annotated[str, HeaderParameter(name=\"X-API-KEY\")]``"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:390
+msgid "``Annotated[str, Parameter(cookie=\"session\")]``"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:391
+msgid "``Annotated[str, CookieParameter(name=\"session\")]``"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:392
+msgid "``name: str = Parameter(...)`` *(default-value style)*"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:393
+msgid "``name: Annotated[str, QueryParameter(...)]``"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:395
+msgid ""
+"The :func:`~.params.Parameter` function itself is **not** removed and can "
+"still be used to attach pure metadata (``description``, ``gt``, etc.) when "
+"wrapped in :class:`~typing.Annotated`. Only its ``header``, ``cookie``, and "
+"``query`` keyword arguments are deprecated — passing any of those emits a :"
+"exc:`DeprecationWarning` independently of the handler-level warning."
+msgstr ""
