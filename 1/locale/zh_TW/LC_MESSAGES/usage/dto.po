@@ -431,7 +431,7 @@ msgstr ""
 
 #: ../../../usage/dto.rst:0
 msgid "Python 3.8+"
-msgstr "Python 3.8+"
+msgstr ""
 
 #: ../../../usage/dto.rst:186
 msgid "DTO automatic conversion"
@@ -495,7 +495,7 @@ msgstr ""
 
 #: ../../../usage/dto.rst:0
 msgid "Python 3.10+"
-msgstr "Python 3.10+"
+msgstr ""
 
 #: ../../../usage/dto.rst:186
 msgid ""

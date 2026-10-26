@@ -137,7 +137,7 @@ msgstr ""
 
 #: ../../../usage/parameters.rst:0
 msgid "Python 3.8+"
-msgstr "Python 3.8+"
+msgstr ""
 
 #: ../../../usage/parameters.rst:45
 msgid ""
@@ -172,7 +172,7 @@ msgstr ""
 
 #: ../../../usage/parameters.rst:0
 msgid "Python 3.10+"
-msgstr "Python 3.10+"
+msgstr ""
 
 #: ../../../usage/parameters.rst:45
 msgid ""
@@ -317,7 +317,7 @@ msgstr ""
 
 #: ../../../usage/parameters.rst:78
 msgid "Query Parameters"
-msgstr "查詢參數"
+msgstr ""
 
 #: ../../../usage/parameters.rst:80
 msgid ""

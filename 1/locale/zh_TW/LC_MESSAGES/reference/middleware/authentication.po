@@ -45,7 +45,7 @@ msgstr ""
 #: ../../../../starlite/middleware/authentication.py:docstring of
 #: starlite.middleware.authentication.AbstractAuthenticationMiddleware:1
 msgid "Bases: :py:class:`~abc.ABC`"
-msgstr "基底類別：:py:class:`object`"
+msgstr ""
 
 #: ../../../../starlite/middleware/authentication.py:docstring of
 #: starlite.middleware.authentication.AbstractAuthenticationMiddleware:1

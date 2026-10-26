@@ -36,7 +36,7 @@ msgstr ""
 
 #: ../../../migration/fastapi.rst:0
 msgid "FastAPI"
-msgstr "FastAPI"
+msgstr ""
 
 #: ../../../migration/fastapi.rst:17
 msgid ""
@@ -52,7 +52,7 @@ msgstr ""
 
 #: ../../../migration/fastapi.rst:0
 msgid "Starlette"
-msgstr "Starlette"
+msgstr ""
 
 #: ../../../migration/fastapi.rst:32
 msgid ""
@@ -318,7 +318,7 @@ msgstr ""
 
 #: ../../../migration/fastapi.rst:241
 msgid "Middleware"
-msgstr "中介軟體"
+msgstr ""
 
 #: ../../../migration/fastapi.rst:243
 msgid ""

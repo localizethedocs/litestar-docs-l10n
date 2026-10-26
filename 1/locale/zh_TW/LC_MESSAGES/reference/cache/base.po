@@ -24,7 +24,7 @@ msgstr ""
 #: ../../../../starlite/cache/base.py:docstring of
 #: starlite.cache.base.CacheBackendProtocol:1
 msgid "Bases: :py:class:`~typing.Protocol`"
-msgstr "基底類別：:py:class:`~typing.Protocol`"
+msgstr ""
 
 #: ../../../../starlite/cache/base.py:docstring of
 #: starlite.cache.base.CacheBackendProtocol:1

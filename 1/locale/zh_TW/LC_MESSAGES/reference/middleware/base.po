@@ -24,7 +24,7 @@ msgstr ""
 #: ../../../../starlite/middleware/base.py:docstring of
 #: starlite.middleware.base.MiddlewareProtocol:1
 msgid "Bases: :py:class:`~typing.Protocol`"
-msgstr "基底類別：:py:class:`~typing.Protocol`"
+msgstr ""
 
 #: ../../../../starlite/middleware/base.py:docstring of
 #: starlite.middleware.base.MiddlewareProtocol:1
