@@ -312,9 +312,3 @@ msgid ""
 "FsspecAsyncWrapper` depending on its type. If fsspec is not installed or "
 "``file_system`` is not an fsspec file system, return ``file_system``"
 msgstr ""
-
-#~ msgid "Bases: :py:class:`~abc.ABC`"
-#~ msgstr "基底類別：:py:class:`object`"
-
-#~ msgid "Bases: :py:class:`~litestar.plugins.base.InitPlugin`"
-#~ msgstr "基底類別：:py:class:`~litestar.plugins.base.InitPlugin`"

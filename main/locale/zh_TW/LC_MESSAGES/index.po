@@ -346,9 +346,3 @@ msgid ""
 msgstr ""
 "除了常態性贊助之外，我們也透過 `Polar <sponsor-polar_>`_ 提供基於承諾的贊助機"
 "會，讓您可針對希望實現的某項議題或功能，承諾捐贈特定金額。"
-
-#~ msgid "Stok"
-#~ msgstr "Stok"
-
-#~ msgid "`Stok <https://www.stok.kr/>`_"
-#~ msgstr "`Stok <https://www.stok.kr/>`_"

@@ -44,6 +44,3 @@ msgstr ""
 #: litestar.middleware.allowed_hosts.AllowedHostsMiddleware.__init__:4
 msgid "An instance of AllowedHostsConfig."
 msgstr ""
-
-#~ msgid "Bases: :py:class:`~litestar.middleware.base.AbstractMiddleware`"
-#~ msgstr "基底類別：:py:class:`~litestar.middleware.base.AbstractMiddleware`"

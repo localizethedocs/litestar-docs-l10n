@@ -133,6 +133,3 @@ msgid ""
 "Get the time in seconds ``key`` expires in. If no such ``key`` exists or no "
 "expiry time was set, return ``None``."
 msgstr ""
-
-#~ msgid "Bases: :py:class:`~litestar.stores.base.Store`"
-#~ msgstr "基底類別：:py:class:`~litestar.stores.base.Store`"

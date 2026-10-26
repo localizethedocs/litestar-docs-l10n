@@ -20,7 +20,7 @@ msgstr ""
 #: ../../../onboarding/flask.rst:0 ../../../onboarding/flask.rst:2
 #: ../../../onboarding/flask.rst:207 ../../../onboarding/flask.rst:814
 msgid "Flask"
-msgstr ""
+msgstr "Flask"
 
 #: ../../../onboarding/flask.rst:5
 msgid "Layered configuration"
@@ -88,7 +88,7 @@ msgstr ""
 #: ../../../onboarding/flask.rst:0 ../../../onboarding/flask.rst:207
 #: ../../../onboarding/flask.rst:814
 msgid "Litestar"
-msgstr ""
+msgstr "Litestar"
 
 #: ../../../onboarding/flask.rst:53
 msgid ""
@@ -123,7 +123,7 @@ msgstr ""
 
 #: ../../../onboarding/flask.rst:65
 msgid "Path parameters"
-msgstr ""
+msgstr "路徑參數"
 
 #: ../../../onboarding/flask.rst:67
 msgid ""
@@ -190,7 +190,7 @@ msgstr ""
 
 #: ../../../onboarding/flask.rst:110
 msgid ":doc:`/usage/routing/parameters`"
-msgstr ""
+msgstr ":doc:`/usage/routing/parameters`"
 
 #: ../../../onboarding/flask.rst:114
 msgid "Sync and async handlers"
@@ -329,7 +329,7 @@ msgstr ""
 
 #: ../../../onboarding/flask.rst:209
 msgid "``request.args``"
-msgstr ""
+msgstr "``request.args``"
 
 #: ../../../onboarding/flask.rst:209
 msgid ""
@@ -339,51 +339,51 @@ msgstr ""
 
 #: ../../../onboarding/flask.rst:211
 msgid "``request.base_url``"
-msgstr ""
+msgstr "``request.base_url``"
 
 #: ../../../onboarding/flask.rst:213
 msgid "``request.authorization``"
-msgstr ""
+msgstr "``request.authorization``"
 
 #: ../../../onboarding/flask.rst:213
 msgid "``request.auth``"
-msgstr ""
+msgstr "``request.auth``"
 
 #: ../../../onboarding/flask.rst:215
 msgid "``request.cache_control``"
-msgstr ""
+msgstr "``request.cache_control``"
 
 #: ../../../onboarding/flask.rst:215
 msgid "``request.headers.get(\"cache-control\")``"
-msgstr ""
+msgstr "``request.headers.get(\"cache-control\")``"
 
 #: ../../../onboarding/flask.rst:217
 msgid "``request.content_encoding``"
-msgstr ""
+msgstr "``request.content_encoding``"
 
 #: ../../../onboarding/flask.rst:217
 msgid "``request.headers.get(\"content-encoding\")``"
-msgstr ""
+msgstr "``request.headers.get(\"content-encoding\")``"
 
 #: ../../../onboarding/flask.rst:219
 msgid "``request.content_length``"
-msgstr ""
+msgstr "``request.content_length``"
 
 #: ../../../onboarding/flask.rst:219
 msgid "``request.headers.get(\"content-length\")``"
-msgstr ""
+msgstr "``request.headers.get(\"content-length\")``"
 
 #: ../../../onboarding/flask.rst:221
 msgid "``request.content_type``"
-msgstr ""
+msgstr "``request.content_type``"
 
 #: ../../../onboarding/flask.rst:223
 msgid "``request.cookies``"
-msgstr ""
+msgstr "``request.cookies``"
 
 #: ../../../onboarding/flask.rst:225
 msgid "``request.data``"
-msgstr ""
+msgstr "``request.data``"
 
 #: ../../../onboarding/flask.rst:225
 msgid "``await request.body()``"
@@ -391,15 +391,15 @@ msgstr ""
 
 #: ../../../onboarding/flask.rst:227
 msgid "``request.date``"
-msgstr ""
+msgstr "``request.date``"
 
 #: ../../../onboarding/flask.rst:227
 msgid "``request.headers.get(\"date\")``"
-msgstr ""
+msgstr "``request.headers.get(\"date\")``"
 
 #: ../../../onboarding/flask.rst:229
 msgid "``request.endpoint``"
-msgstr ""
+msgstr "``request.endpoint``"
 
 #: ../../../onboarding/flask.rst:229
 msgid "``request.route_handler.name``"
@@ -407,15 +407,15 @@ msgstr ""
 
 #: ../../../onboarding/flask.rst:231
 msgid "``request.environ``"
-msgstr ""
+msgstr "``request.environ``"
 
 #: ../../../onboarding/flask.rst:231
 msgid "``request.scope``"
-msgstr ""
+msgstr "``request.scope``"
 
 #: ../../../onboarding/flask.rst:233 ../../../onboarding/flask.rst:848
 msgid "``request.files``"
-msgstr ""
+msgstr "``request.files``"
 
 #: ../../../onboarding/flask.rst:233
 msgid ""
@@ -425,7 +425,7 @@ msgstr ""
 
 #: ../../../onboarding/flask.rst:235
 msgid "``request.form``"
-msgstr ""
+msgstr "``request.form``"
 
 #: ../../../onboarding/flask.rst:235
 msgid ""
@@ -451,7 +451,7 @@ msgstr ""
 
 #: ../../../onboarding/flask.rst:241
 msgid ":octicon:`dash`"
-msgstr ""
+msgstr ":octicon:`dash`"
 
 #: ../../../onboarding/flask.rst:242
 msgid ""
@@ -460,6 +460,10 @@ msgid ""
 "7.75A.75.75 0 0 1 2.75 7h10a.75.75 0 0 1 0 1.5h-10A.75.75 0 0 1 2 7.75Z\"></"
 "path></svg>"
 msgstr ""
+"<svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-"
+"octicon-dash\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M2 "
+"7.75A.75.75 0 0 1 2.75 7h10a.75.75 0 0 1 0 1.5h-10A.75.75 0 0 1 2 7.75Z\"></"
+"path></svg>"
 
 #: ../../../onboarding/flask.rst:243
 msgid "``request.if_match``"
@@ -803,7 +807,7 @@ msgstr ""
 
 #: ../../../onboarding/flask.rst:426 ../../../onboarding/flask.rst:840
 msgid "Serialization"
-msgstr ""
+msgstr "序列化"
 
 #: ../../../onboarding/flask.rst:428
 msgid ""
@@ -1267,7 +1271,7 @@ msgstr ""
 
 #: ../../../onboarding/flask.rst:731
 msgid ":doc:`/usage/static-files`"
-msgstr ""
+msgstr ":doc:`/usage/static-files`"
 
 #: ../../../onboarding/flask.rst:735
 msgid "WebSockets"
@@ -1329,7 +1333,7 @@ msgstr ""
 
 #: ../../../onboarding/flask.rst:763
 msgid "Testing"
-msgstr ""
+msgstr "測試"
 
 #: ../../../onboarding/flask.rst:765
 msgid ""
@@ -1395,7 +1399,7 @@ msgstr ""
 
 #: ../../../onboarding/flask.rst:803
 msgid ":doc:`/usage/middleware/index`"
-msgstr ""
+msgstr ":doc:`/usage/middleware/index`"
 
 #: ../../../onboarding/flask.rst:809
 msgid "Quick reference"

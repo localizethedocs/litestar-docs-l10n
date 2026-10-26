@@ -137,9 +137,3 @@ msgstr ""
 #: litestar.middleware.compression.middleware.CompressionMiddleware.create_compression_send_wrapper:7
 msgid "An ASGI send function."
 msgstr ""
-
-#~ msgid "Bases: :py:class:`~typing.Protocol`"
-#~ msgstr "基底類別：:py:class:`~typing.Protocol`"
-
-#~ msgid "Bases: :py:class:`~litestar.middleware.base.AbstractMiddleware`"
-#~ msgstr "基底類別：:py:class:`~litestar.middleware.base.AbstractMiddleware`"

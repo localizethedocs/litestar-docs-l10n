@@ -24,15 +24,3 @@ msgstr ""
 #: ../../../migration/fastapi.rst:6
 msgid "This content has moved to :doc:`/onboarding/fastapi`"
 msgstr ""
-
-#~ msgid "FastAPI"
-#~ msgstr "FastAPI"
-
-#~ msgid "Starlette"
-#~ msgstr "Starlette"
-
-#~ msgid "Litestar"
-#~ msgstr "Litestar"
-
-#~ msgid "Middleware"
-#~ msgstr "中介軟體"

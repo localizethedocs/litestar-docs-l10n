@@ -358,9 +358,3 @@ msgid ""
 "An instance of :class:`PrometheusConfig <.plugins.prometheus."
 "PrometheusConfig>`"
 msgstr ""
-
-#~ msgid "Bases: :py:class:`object`"
-#~ msgstr "基底類別：:py:class:`object`"
-
-#~ msgid "Bases: :py:class:`~litestar.middleware.base.AbstractMiddleware`"
-#~ msgstr "基底類別：:py:class:`~litestar.middleware.base.AbstractMiddleware`"

@@ -265,7 +265,7 @@ msgstr ""
 #: ../../../release-notes/changelog.rst:235
 #: ../../../release-notes/changelog.rst:251
 msgid ":doc:`/usage/cli`"
-msgstr ""
+msgstr ":doc:`/usage/cli`"
 
 #: ../../../release-notes/changelog.rst:242
 msgid ""

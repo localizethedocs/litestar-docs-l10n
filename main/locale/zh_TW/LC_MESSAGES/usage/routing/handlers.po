@@ -269,7 +269,7 @@ msgstr ""
 
 #: ../../../usage/routing/handlers.rst:0
 msgid "Python 3.8+"
-msgstr "Python 3.8+"
+msgstr ""
 
 #: ../../../usage/routing/handlers.rst:115
 msgid "Providing an alternative name for a reserved keyword argument"

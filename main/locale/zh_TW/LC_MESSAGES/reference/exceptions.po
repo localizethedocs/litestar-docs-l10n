@@ -365,31 +365,3 @@ msgstr ""
 #: litestar.exceptions.responses.create_exception_response:12
 msgid "HTTP response constructed from exception details."
 msgstr ""
-
-#~ msgid "Bases: :py:class:`Exception`"
-#~ msgstr "基底類別：:py:class:`Exception`"
-
-#~ msgid "Bases: :py:class:`UserWarning`"
-#~ msgstr "基底類別：:py:class:`UserWarning`"
-
-#~ msgid ""
-#~ "Bases: :py:class:`~litestar.exceptions.http_exceptions.ClientException`"
-#~ msgstr ""
-#~ "基底類別：:py:class:`~litestar.exceptions.http_exceptions.ClientException`"
-
-#~ msgid ""
-#~ "Bases: :py:class:`~litestar.exceptions.http_exceptions."
-#~ "InternalServerException`"
-#~ msgstr ""
-#~ "基底類別：:py:class:`~litestar.exceptions.http_exceptions."
-#~ "InternalServerException`"
-
-#~ msgid ""
-#~ "Bases: :py:class:`~litestar.exceptions.websocket_exceptions."
-#~ "WebSocketException`"
-#~ msgstr ""
-#~ "基底類別：:py:class:`~litestar.exceptions.websocket_exceptions."
-#~ "WebSocketException`"
-
-#~ msgid "Bases: :py:class:`object`"
-#~ msgstr "基底類別：:py:class:`object`"

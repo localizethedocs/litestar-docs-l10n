@@ -57,6 +57,3 @@ msgstr ""
 #: litestar.channels.backends.base.ChannelsBackend.get_history:1
 msgid "Return the event history of ``channel``, at most ``limit`` entries"
 msgstr ""
-
-#~ msgid "Bases: :py:class:`~abc.ABC`"
-#~ msgstr "基底類別：:py:class:`object`"

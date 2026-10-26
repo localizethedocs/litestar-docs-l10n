@@ -238,6 +238,3 @@ msgid ""
 "None' = None, id: 'int | str | None' = None, retry: 'int | None' = None, "
 "comment: 'str | None' = None, sep: 'str' = '\\r\\n')"
 msgstr ""
-
-#~ msgid "Bases: :py:class:`object`"
-#~ msgstr "基底類別：:py:class:`object`"

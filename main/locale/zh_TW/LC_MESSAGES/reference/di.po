@@ -60,6 +60,3 @@ msgstr ""
 #: ../../../../litestar/di.py:docstring of litestar.di.Provide.__call__:1
 msgid "Call the provider's dependency."
 msgstr ""
-
-#~ msgid "Bases: :py:class:`object`"
-#~ msgstr "基底類別：:py:class:`object`"

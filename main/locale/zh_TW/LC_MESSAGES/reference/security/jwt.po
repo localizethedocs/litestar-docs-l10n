@@ -974,6 +974,3 @@ msgstr ""
 #: litestar.security.jwt.token.Token.encode:9
 msgid "If encoding fails."
 msgstr ""
-
-#~ msgid "Bases: :py:class:`object`"
-#~ msgstr "基底類別：:py:class:`object`"

@@ -317,9 +317,3 @@ msgstr ""
 #: litestar.plugins.pydantic.plugins.schema.PydanticSchemaPlugin.for_pydantic_model:6
 msgid "A schema instance."
 msgstr ""
-
-#~ msgid "Bases: :py:class:`~litestar.plugins.base.DIPlugin`"
-#~ msgstr "基底類別：:py:class:`~litestar.plugins.base.DIPlugin`"
-
-#~ msgid "Bases: :py:class:`~litestar.plugins.base.InitPlugin`"
-#~ msgstr "基底類別：:py:class:`~litestar.plugins.base.InitPlugin`"

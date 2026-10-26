@@ -485,6 +485,3 @@ msgstr ""
 #: ../../../../litestar/params.py:docstring of typing.Annotated:1
 msgid "Declare a 'application/x-www-form-urlencoded' request body"
 msgstr ""
-
-#~ msgid "Bases: :py:class:`object`"
-#~ msgstr "基底類別：:py:class:`object`"

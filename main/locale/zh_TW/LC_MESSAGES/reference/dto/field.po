@@ -136,6 +136,3 @@ msgstr ""
 #: litestar.dto.field.extract_dto_field:13
 msgid "DTO field info, if any."
 msgstr ""
-
-#~ msgid "Bases: :py:class:`object`"
-#~ msgstr "基底類別：:py:class:`object`"

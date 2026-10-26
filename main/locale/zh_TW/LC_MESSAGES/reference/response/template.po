@@ -168,9 +168,3 @@ msgstr ""
 #: litestar.response.template.Template.to_asgi_response:12
 msgid "An ASGIResponse instance."
 msgstr ""
-
-#~ msgid ""
-#~ "Bases: :py:class:`~litestar.response.base.Response`\\ [:py:class:`bytes`]"
-#~ msgstr ""
-#~ "基底類別：:py:class:`~litestar.response.base.Response`\\ [:py:class:"
-#~ "`bytes`]"

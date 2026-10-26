@@ -2941,6 +2941,3 @@ msgid ""
 "object.__str__() (if defined) or repr(object). encoding defaults to sys."
 "getdefaultencoding(). errors defaults to 'strict'."
 msgstr ""
-
-#~ msgid "Bases: :py:class:`object`"
-#~ msgstr "基底類別：:py:class:`object`"

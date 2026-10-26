@@ -149,6 +149,3 @@ msgid ""
 "Raise an exception for fields present in the raw data that are not defined "
 "on the model"
 msgstr ""
-
-#~ msgid "Bases: :py:class:`object`"
-#~ msgstr "基底類別：:py:class:`object`"

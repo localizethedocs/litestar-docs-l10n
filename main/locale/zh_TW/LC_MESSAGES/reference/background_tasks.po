@@ -100,6 +100,3 @@ msgstr ""
 #: litestar.background_tasks.BackgroundTasks.__call__:1
 msgid "Call the wrapped background tasks."
 msgstr ""
-
-#~ msgid "Bases: :py:class:`object`"
-#~ msgstr "基底類別：:py:class:`object`"

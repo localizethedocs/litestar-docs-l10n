@@ -583,9 +583,3 @@ msgstr ""
 #: ../../../../litestar/app.py:docstring of litestar.app.Litestar.emit:5
 msgid "kwargs to pass to the listener(s)"
 msgstr ""
-
-#~ msgid "Bases: :py:class:`~typing.TypedDict`"
-#~ msgstr "基底類別：:py:class:`~typing.TypedDict`"
-
-#~ msgid "Bases: :py:class:`~litestar.router.Router`"
-#~ msgstr "基底類別：:py:class:`~litestar.router.Router`"

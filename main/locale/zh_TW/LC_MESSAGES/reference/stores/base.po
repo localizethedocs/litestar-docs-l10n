@@ -178,6 +178,3 @@ msgid ""
 "Get the time in seconds ``key`` expires in. If no such ``key`` exists or no "
 "expiry time was set, return ``None``."
 msgstr ""
-
-#~ msgid "Bases: :py:class:`~abc.ABC`"
-#~ msgstr "基底類別：:py:class:`object`"

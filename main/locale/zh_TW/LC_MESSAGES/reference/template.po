@@ -201,6 +201,3 @@ msgstr ""
 #: litestar.template.base.TemplateProtocol.render:6
 msgid "The rendered template string"
 msgstr ""
-
-#~ msgid "Bases: :py:class:`~typing.Protocol`"
-#~ msgstr "基底類別：:py:class:`~typing.Protocol`"

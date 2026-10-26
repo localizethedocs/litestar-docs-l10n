@@ -1888,6 +1888,3 @@ msgid ""
 "returned from handlers, however they are low-level, and lack the utility of "
 "the higher-level response types."
 msgstr ""
-
-#~ msgid ":class:`.params.Parameter`"
-#~ msgstr ":class:`.params.Parameter`"

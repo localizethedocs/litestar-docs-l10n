@@ -41,7 +41,7 @@ msgstr ""
 
 #: ../../../tutorials/todo-app/2-interacting-with-the-list.rst:0
 msgid "Python 3.8+"
-msgstr "Python 3.8+"
+msgstr ""
 
 #: ../../../tutorials/todo-app/2-interacting-with-the-list.rst:16
 msgid ""
@@ -64,7 +64,7 @@ msgstr ""
 
 #: ../../../tutorials/todo-app/2-interacting-with-the-list.rst:0
 msgid "Python 3.10+"
-msgstr "Python 3.10+"
+msgstr ""
 
 #: ../../../tutorials/todo-app/2-interacting-with-the-list.rst:16
 msgid ""

@@ -259,9 +259,3 @@ msgstr ""
 #: litestar.openapi.ResponseSpec.examples:1
 msgid "A list of Example models."
 msgstr ""
-
-#~ msgid "Bases: :py:class:`object`"
-#~ msgstr "基底類別：:py:class:`object`"
-
-#~ msgid "Parameters"
-#~ msgstr "參數"

@@ -340,7 +340,7 @@ msgstr ""
 
 #: ../../../getting-started.rst:0
 msgid "Python 3.8+"
-msgstr "Python 3.8+"
+msgstr ""
 
 #: ../../../getting-started.rst:168
 msgid ""

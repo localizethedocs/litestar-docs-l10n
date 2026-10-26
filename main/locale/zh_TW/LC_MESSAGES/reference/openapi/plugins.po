@@ -380,6 +380,3 @@ msgstr ""
 #: litestar.openapi.plugins.YamlRenderPlugin.render:6
 msgid "The rendered OpenAPI schema as YAML."
 msgstr ""
-
-#~ msgid "Bases: :py:class:`~abc.ABC`"
-#~ msgstr "基底類別：:py:class:`object`"

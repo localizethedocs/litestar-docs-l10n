@@ -319,12 +319,3 @@ msgstr ""
 #: ../../../reference/types.rst:160
 msgid "Composite Types"
 msgstr ""
-
-#~ msgid "Bases: :py:class:`~typing.TypedDict`"
-#~ msgstr "基底類別：:py:class:`~typing.TypedDict`"
-
-#~ msgid "Bases: :py:class:`~litestar.types.asgi_types.BaseScope`"
-#~ msgstr "基底類別：:py:class:`~litestar.types.asgi_types.BaseScope`"
-
-#~ msgid "Bases: :py:class:`~typing.Protocol`"
-#~ msgstr "基底類別：:py:class:`~typing.Protocol`"

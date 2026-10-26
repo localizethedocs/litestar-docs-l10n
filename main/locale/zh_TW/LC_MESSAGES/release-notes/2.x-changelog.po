@@ -1462,7 +1462,7 @@ msgstr ""
 
 #: ../../../release-notes/2.x-changelog.rst:0
 msgid "Python 3.8+"
-msgstr "Python 3.8+"
+msgstr ""
 
 #: ../../../release-notes/2.x-changelog.rst:1363
 msgid ""
@@ -1487,7 +1487,7 @@ msgstr ""
 
 #: ../../../release-notes/2.x-changelog.rst:0
 msgid "Python 3.10+"
-msgstr "Python 3.10+"
+msgstr ""
 
 #: ../../../release-notes/2.x-changelog.rst:1363
 msgid ""

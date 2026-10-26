@@ -245,6 +245,3 @@ msgstr ""
 #: litestar.router.Router.register:1
 msgid "Register a Controller, Route instance or RouteHandler on the router"
 msgstr ""
-
-#~ msgid "Bases: :py:class:`object`"
-#~ msgstr "基底類別：:py:class:`object`"

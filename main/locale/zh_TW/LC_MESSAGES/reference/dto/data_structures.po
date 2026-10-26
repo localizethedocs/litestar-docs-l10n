@@ -126,6 +126,3 @@ msgstr ""
 #: litestar.dto.data_structures.DTOFieldDefinition.from_field_definition:9
 msgid "A :class:`FieldDefinition` instance."
 msgstr ""
-
-#~ msgid "Bases: :py:class:`~litestar.typing.FieldDefinition`"
-#~ msgstr "基底類別：:py:class:`~litestar.typing.FieldDefinition`"
