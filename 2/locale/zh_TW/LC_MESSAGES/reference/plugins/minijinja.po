@@ -38,7 +38,7 @@ msgstr ""
 
 #: ../../../reference/plugins/minijinja.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/plugins/minijinja.py:docstring of
 #: litestar.plugins.minijinja.MiniJinjaTemplate:3

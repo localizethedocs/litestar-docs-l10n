@@ -610,7 +610,7 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:460
 msgid ":doc:`/usage/routing/parameters`"
-msgstr ""
+msgstr ":doc:`/usage/routing/parameters`"
 
 #: ../../../release-notes/changelog.rst:344
 msgid ""

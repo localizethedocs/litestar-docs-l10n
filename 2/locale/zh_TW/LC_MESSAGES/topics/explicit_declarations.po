@@ -49,7 +49,7 @@ msgstr ""
 
 #: ../../../topics/explicit_declarations.rst:24
 msgid ":doc:`/usage/routing/parameters`"
-msgstr ""
+msgstr ":doc:`/usage/routing/parameters`"
 
 #: ../../../topics/explicit_declarations.rst:29
 msgid "Historical background"

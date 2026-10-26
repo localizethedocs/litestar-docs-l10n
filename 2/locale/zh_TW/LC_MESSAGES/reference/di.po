@@ -33,7 +33,7 @@ msgstr ""
 
 #: ../../../../litestar/di.py:docstring of litestar.di.Provide:1
 msgid "Bases: :py:class:`object`"
-msgstr "基底類別：:py:class:`object`"
+msgstr ""
 
 #: ../../../../litestar/di.py:docstring of litestar.di.Provide:1
 msgid "Wrapper class for dependency injection"

@@ -1223,9 +1223,3 @@ msgid ""
 "The import of any of these names can be safely left inside an ``if "
 "TYPE_CHECKING:`` block without any configuration required."
 msgstr ""
-
-#~ msgid "Python 3.8+"
-#~ msgstr "Python 3.8+"
-
-#~ msgid "Python 3.9+"
-#~ msgstr "Python 3.9+"

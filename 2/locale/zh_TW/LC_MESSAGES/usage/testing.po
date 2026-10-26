@@ -127,7 +127,7 @@ msgstr ""
 
 #: ../../../usage/testing.rst:0
 msgid "Python 3.8+"
-msgstr "Python 3.8+"
+msgstr ""
 
 #: ../../../usage/testing.rst:84 ../../../usage/testing.rst:110
 #: ../../../usage/testing.rst:447

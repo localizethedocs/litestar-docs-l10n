@@ -769,7 +769,7 @@ msgstr ""
 #: ../../../../litestar/security/jwt/__init__.py:docstring of
 #: litestar.security.jwt.auth.OAuth2Login:1 litestar.security.jwt.token.Token:1
 msgid "Bases: :py:class:`object`"
-msgstr "基底類別：:py:class:`object`"
+msgstr ""
 
 #: ../../../../litestar/security/jwt/__init__.py:docstring of
 #: litestar.security.jwt.auth.OAuth2Login:1

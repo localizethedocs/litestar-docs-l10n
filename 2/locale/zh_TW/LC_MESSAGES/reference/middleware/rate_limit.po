@@ -25,7 +25,7 @@ msgstr ""
 #: litestar.middleware.rate_limit.CacheObject:1
 #: litestar.middleware.rate_limit.RateLimitConfig:1
 msgid "Bases: :py:class:`object`"
-msgstr "基底類別：:py:class:`object`"
+msgstr ""
 
 #: ../../../../litestar/middleware/rate_limit.py:docstring of
 #: litestar.middleware.rate_limit.CacheObject:1
@@ -171,7 +171,7 @@ msgstr ""
 #: ../../../../litestar/middleware/rate_limit.py:docstring of
 #: litestar.middleware.rate_limit.RateLimitMiddleware:1
 msgid "Bases: :py:class:`~litestar.middleware.base.AbstractMiddleware`"
-msgstr "基底類別：:py:class:`~litestar.middleware.base.AbstractMiddleware`"
+msgstr ""
 
 #: ../../../../litestar/middleware/rate_limit.py:docstring of
 #: litestar.middleware.rate_limit.RateLimitMiddleware:1

@@ -30,7 +30,6 @@ msgstr ""
 #: litestar.plugins.problem_details.ProblemDetailsException:1
 msgid "Bases: :py:class:`~litestar.exceptions.http_exceptions.HTTPException`"
 msgstr ""
-"基底類別：:py:class:`~litestar.exceptions.http_exceptions.HTTPException`"
 
 #: ../../../../litestar/plugins/problem_details.py:docstring of
 #: litestar.plugins.problem_details.ProblemDetailsException:1
@@ -94,7 +93,7 @@ msgstr ""
 #: ../../../../litestar/plugins/problem_details.py:docstring of
 #: litestar.plugins.problem_details.ProblemDetailsConfig:1
 msgid "Bases: :py:class:`object`"
-msgstr "基底類別：:py:class:`object`"
+msgstr ""
 
 #: ../../../../litestar/plugins/problem_details.py:docstring of
 #: litestar.plugins.problem_details.ProblemDetailsConfig:1
@@ -130,7 +129,7 @@ msgstr ""
 #: ../../../../litestar/plugins/problem_details.py:docstring of
 #: litestar.plugins.problem_details.ProblemDetailsPlugin:1
 msgid "Bases: :py:class:`~litestar.plugins.base.InitPlugin`"
-msgstr "基底類別：:py:class:`~litestar.plugins.base.InitPlugin`"
+msgstr ""
 
 #: ../../../../litestar/plugins/problem_details.py:docstring of
 #: litestar.plugins.problem_details.ProblemDetailsPlugin:1

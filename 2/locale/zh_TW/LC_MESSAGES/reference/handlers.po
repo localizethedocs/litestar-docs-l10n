@@ -224,7 +224,7 @@ msgstr ""
 #: ../../../../litestar/handlers/__init__.py:docstring of
 #: litestar.handlers.base.BaseRouteHandler:1
 msgid "Bases: :py:class:`object`"
-msgstr "基底類別：:py:class:`object`"
+msgstr ""
 
 #: ../../../../litestar/handlers/__init__.py:docstring of
 #: litestar.handlers.base.BaseRouteHandler:1
@@ -1159,7 +1159,7 @@ msgstr ""
 #: ../../../../litestar/handlers/__init__.py:docstring of
 #: litestar.handlers.websocket_handlers.listener.WebsocketListener:1
 msgid "Bases: :py:class:`~abc.ABC`"
-msgstr "基底類別：:py:class:`object`"
+msgstr ""
 
 #: ../../../../litestar/handlers/__init__.py:docstring of
 #: litestar.handlers.websocket_handlers.listener.WebsocketListener.__init__:1

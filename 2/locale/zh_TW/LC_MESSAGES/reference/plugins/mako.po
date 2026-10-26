@@ -42,7 +42,7 @@ msgstr ""
 
 #: ../../../reference/plugins/mako.rst:0
 msgid "Parameters"
-msgstr ""
+msgstr "參數"
 
 #: ../../../../litestar/plugins/mako.py:docstring of
 #: litestar.plugins.mako.MakoTemplate.__init__:3
@@ -94,7 +94,7 @@ msgstr ""
 #: ../../../../litestar/plugins/mako.py:docstring of
 #: litestar.plugins.mako.MakoTemplateEngine.__init__:1
 msgid "Initialize template engine."
-msgstr ""
+msgstr "初始化模板引擎。"
 
 #: ../../../../litestar/plugins/mako.py:docstring of
 #: litestar.plugins.mako.MakoTemplateEngine.__init__:3

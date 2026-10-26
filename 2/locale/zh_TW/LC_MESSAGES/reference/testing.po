@@ -295,7 +295,7 @@ msgstr ""
 #: litestar.testing.request_factory.RequestFactory:1
 #: litestar.testing.websocket_test_session.WebSocketTestSession:1
 msgid "Bases: :py:class:`object`"
-msgstr "基底類別：:py:class:`object`"
+msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.request_factory.RequestFactory:1

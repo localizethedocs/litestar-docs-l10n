@@ -750,7 +750,7 @@ msgstr "``starlite.Parameter``"
 
 #: ../../../release-notes/whats-new-2.rst:230
 msgid ":class:`.params.Parameter`"
-msgstr ":class:`.params.Parameter`"
+msgstr ""
 
 #: ../../../release-notes/whats-new-2.rst:235
 msgid "Response headers"

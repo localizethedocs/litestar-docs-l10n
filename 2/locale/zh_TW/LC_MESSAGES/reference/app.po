@@ -29,7 +29,7 @@ msgstr ""
 
 #: ../../../../litestar/app.py:docstring of litestar.app.HandlerIndex:1
 msgid "Bases: :py:class:`~typing.TypedDict`"
-msgstr "基底類別：:py:class:`~typing.TypedDict`"
+msgstr ""
 
 #: ../../../../litestar/app.py:docstring of litestar.app.HandlerIndex:1
 msgid "Map route handler names to a mapping of paths + route handler."
@@ -59,7 +59,7 @@ msgstr ""
 
 #: ../../../../litestar/app.py:docstring of litestar.app.Litestar:1
 msgid "Bases: :py:class:`~litestar.router.Router`"
-msgstr "基底類別：:py:class:`~litestar.router.Router`"
+msgstr ""
 
 #: ../../../../litestar/app.py:docstring of litestar.app.Litestar:1
 msgid "The Litestar application."

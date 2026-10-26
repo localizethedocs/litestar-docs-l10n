@@ -26,6 +26,3 @@ msgid ""
 "Import from :mod:`litestar.plugins.jinja` instead. This module will be "
 "removed in 3.0.0."
 msgstr ""
-
-#~ msgid "Parameters"
-#~ msgstr "參數"

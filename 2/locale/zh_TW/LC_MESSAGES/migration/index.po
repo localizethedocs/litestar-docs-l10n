@@ -24,6 +24,3 @@ msgstr ""
 #: ../../../migration/index.rst:6
 msgid "This content has moved to :doc:`/onboarding/index`"
 msgstr ""
-
-#~ msgid "Migrating to Litestar"
-#~ msgstr "遷移至 Litestar"

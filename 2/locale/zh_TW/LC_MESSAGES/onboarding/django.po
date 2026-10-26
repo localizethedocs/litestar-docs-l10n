@@ -110,7 +110,7 @@ msgstr ""
 
 #: ../../../onboarding/django.rst:0 ../../../onboarding/django.rst:1560
 msgid "Litestar"
-msgstr ""
+msgstr "Litestar"
 
 #: ../../../onboarding/django.rst:75
 msgid ""
@@ -382,7 +382,7 @@ msgstr ""
 
 #: ../../../onboarding/django.rst:272
 msgid "Application state"
-msgstr ""
+msgstr "應用程式狀態"
 
 #: ../../../onboarding/django.rst:274
 msgid ""
@@ -602,7 +602,7 @@ msgstr ""
 
 #: ../../../onboarding/django.rst:431
 msgid ":doc:`/usage/routing/parameters`"
-msgstr ""
+msgstr ":doc:`/usage/routing/parameters`"
 
 #: ../../../onboarding/django.rst:435
 msgid "Header and cookie parameters"
@@ -789,7 +789,7 @@ msgstr ""
 
 #: ../../../onboarding/django.rst:0
 msgid "Python 3.9+"
-msgstr ""
+msgstr "Python 3.9+"
 
 #: ../../../onboarding/django.rst:554
 msgid ""
@@ -918,7 +918,7 @@ msgstr ""
 
 #: ../../../onboarding/django.rst:617
 msgid "Serialization"
-msgstr ""
+msgstr "序列化"
 
 #: ../../../onboarding/django.rst:619
 msgid ""
@@ -1710,7 +1710,7 @@ msgstr ""
 
 #: ../../../onboarding/django.rst:1059 ../../../onboarding/django.rst:1604
 msgid "Middleware"
-msgstr ""
+msgstr "中介軟體"
 
 #: ../../../onboarding/django.rst:1061
 msgid ""
@@ -2371,7 +2371,7 @@ msgstr ""
 
 #: ../../../onboarding/django.rst:1428
 msgid "Testing"
-msgstr ""
+msgstr "測試"
 
 #: ../../../onboarding/django.rst:1430
 msgid ""

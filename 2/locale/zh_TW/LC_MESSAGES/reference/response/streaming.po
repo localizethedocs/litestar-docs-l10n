@@ -24,7 +24,7 @@ msgstr ""
 #: ../../../../litestar/response/streaming.py:docstring of
 #: litestar.response.streaming.ASGIStreamingResponse:1
 msgid "Bases: :py:class:`~litestar.response.base.ASGIResponse`"
-msgstr "基底類別：:py:class:`~litestar.response.base.ASGIResponse`"
+msgstr ""
 
 #: ../../../../litestar/response/streaming.py:docstring of
 #: litestar.response.streaming.ASGIStreamingResponse:1

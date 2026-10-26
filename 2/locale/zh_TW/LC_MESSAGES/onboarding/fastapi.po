@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../onboarding/fastapi.rst:0 ../../../onboarding/fastapi.rst:2
 msgid "FastAPI"
-msgstr ""
+msgstr "FastAPI"
 
 #: ../../../onboarding/fastapi.rst:6
 msgid "Layered configuration"
@@ -103,7 +103,7 @@ msgstr ""
 
 #: ../../../onboarding/fastapi.rst:0
 msgid "Starlette"
-msgstr ""
+msgstr "Starlette"
 
 #: ../../../onboarding/fastapi.rst:64
 msgid ""
@@ -118,7 +118,7 @@ msgstr ""
 
 #: ../../../onboarding/fastapi.rst:0 ../../../onboarding/fastapi.rst:864
 msgid "Litestar"
-msgstr ""
+msgstr "Litestar"
 
 #: ../../../onboarding/fastapi.rst:77
 msgid ""
@@ -224,7 +224,7 @@ msgstr ""
 
 #: ../../../onboarding/fastapi.rst:134 ../../../onboarding/fastapi.rst:872
 msgid "Application state"
-msgstr ""
+msgstr "應用程式狀態"
 
 #: ../../../onboarding/fastapi.rst:136
 msgid ""
@@ -631,7 +631,7 @@ msgstr ""
 
 #: ../../../onboarding/fastapi.rst:418
 msgid "Serialization"
-msgstr ""
+msgstr "序列化"
 
 #: ../../../onboarding/fastapi.rst:420
 msgid ""
@@ -1039,7 +1039,7 @@ msgstr ""
 
 #: ../../../onboarding/fastapi.rst:671 ../../../onboarding/fastapi.rst:898
 msgid "Middleware"
-msgstr ""
+msgstr "中介軟體"
 
 #: ../../../onboarding/fastapi.rst:673
 msgid ""
@@ -1223,7 +1223,7 @@ msgstr ""
 
 #: ../../../onboarding/fastapi.rst:787
 msgid "Testing"
-msgstr ""
+msgstr "測試"
 
 #: ../../../onboarding/fastapi.rst:789
 msgid ""
