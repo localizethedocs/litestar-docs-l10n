@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-19 17:13+0000\n"
+"POT-Creation-Date: 2026-10-26 16:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -108,8 +108,8 @@ msgstr ""
 
 #: ../../../usage/channels.rst:46
 msgid ""
-"A :class:`Subscriber <.subscriber.Subscriber>`: An object wrapping an :term:"
-"`event stream` and providing access to it through various methods"
+"A :class:`Subscriber <.subscriber.Subscriber>`: An object wrapping "
+"an :term:`event stream` and providing access to it through various methods"
 msgstr ""
 
 #: ../../../usage/channels.rst:48
@@ -130,10 +130,11 @@ msgstr ""
 
 #: ../../../usage/channels.rst:56
 msgid ""
-"Responsible for receiving and publishing messages to all connected :term:"
-"`backends <backend>`; All backends sharing the same broker will have access "
-"to the same messages, allowing for inter-process communication. This is "
-"typically handled by a separate entity like `Redis <https://redis.io/>`_"
+"Responsible for receiving and publishing messages to all "
+"connected :term:`backends <backend>`; All backends sharing the same broker "
+"will have access to the same messages, allowing for inter-process "
+"communication. This is typically handled by a separate entity like `Redis "
+"<https://redis.io/>`_"
 msgstr ""
 
 #: ../../../usage/channels.rst:60
@@ -142,10 +143,10 @@ msgstr ""
 
 #: ../../../usage/channels.rst:62
 msgid ""
-"The :class:`~.plugin.ChannelsPlugin`, a central instance managing :term:"
-"`subscribers <subscriber>`, reading messages from the :term:`backend`, "
-"putting them in the appropriate :term:`event stream`, and publishing data to "
-"the backend"
+"The :class:`~.plugin.ChannelsPlugin`, a central instance "
+"managing :term:`subscribers <subscriber>`, reading messages from "
+"the :term:`backend`, putting them in the appropriate :term:`event stream`, "
+"and publishing data to the backend"
 msgstr ""
 
 #: ../../../usage/channels.rst:66
@@ -185,8 +186,8 @@ msgstr ""
 
 #: ../../../usage/channels.rst:80
 msgid ""
-"A set of previously published :term:`events <event>`, stored by the :term:"
-"`backend` and available to be pushed to a :term:`subscriber`"
+"A set of previously published :term:`events <event>`, stored by "
+"the :term:`backend` and available to be pushed to a :term:`subscriber`"
 msgstr ""
 
 #: ../../../usage/channels.rst:82
@@ -239,10 +240,10 @@ msgstr ""
 
 #: ../../../usage/channels.rst:140
 msgid ""
-"The plugin makes itself available as a dependency under the :paramref:"
-"`~ChannelsPlugin.channels` key, which means it is not necessary to import it "
-"and instead, it can be used from within route handlers or other callables "
-"within the dependency tree directly"
+"The plugin makes itself available as a dependency under "
+"the :paramref:`~ChannelsPlugin.channels` key, which means it is not "
+"necessary to import it and instead, it can be used from within route "
+"handlers or other callables within the dependency tree directly"
 msgstr ""
 
 #: ../../../usage/channels.rst:145
@@ -283,8 +284,9 @@ msgstr ""
 #: ../../../usage/channels.rst:166
 msgid ""
 "If :paramref:`~ChannelsPlugin.arbitrary_channels_allowed` is not ``True``, "
-"trying to publish or subscribe to a :term:`channel` not passed to :paramref:"
-"`~ChannelsPlugin.channels` will raise a :exc:`ChannelsException`."
+"trying to publish or subscribe to a :term:`channel` not passed "
+"to :paramref:`~ChannelsPlugin.channels` will raise "
+"a :exc:`ChannelsException`."
 msgstr ""
 
 #: ../../../usage/channels.rst:170
@@ -314,8 +316,8 @@ msgstr ""
 
 #: ../../../usage/channels.rst:183
 msgid ""
-"This method is non-blocking, even though channels and the associated :term:"
-"`backends <backend>` are fundamentally asynchronous."
+"This method is non-blocking, even though channels and the "
+"associated :term:`backends <backend>` are fundamentally asynchronous."
 msgstr ""
 
 #: ../../../usage/channels.rst:186
@@ -351,8 +353,8 @@ msgstr ""
 
 #: ../../../usage/channels.rst:203
 msgid ""
-"Manually through the :meth:`~ChannelsPlugin.subscribe` and :meth:"
-"`~ChannelsPlugin.unsubscribe` methods"
+"Manually through the :meth:`~ChannelsPlugin.subscribe` "
+"and :meth:`~ChannelsPlugin.unsubscribe` methods"
 msgstr ""
 
 #: ../../../usage/channels.rst:204
@@ -361,18 +363,19 @@ msgstr ""
 
 #: ../../../usage/channels.rst:206
 msgid ""
-"Both :meth:`~ChannelsPlugin.subscribe` and :meth:`~ChannelsPlugin."
-"start_subscription` produce a :class:`Subscriber`, which can be used to "
-"interact with the streams of events subscribed to."
+"Both :meth:`~ChannelsPlugin.subscribe` "
+"and :meth:`~ChannelsPlugin.start_subscription` produce "
+"a :class:`Subscriber`, which can be used to interact with the streams of "
+"events subscribed to."
 msgstr ""
 
 #: ../../../usage/channels.rst:209
 msgid ""
 "The context manager should be preferred, since it ensures that channels are "
-"being unsubscribed. Using the :meth:`~ChannelsPlugin.subscribe` and :meth:"
-"`~ChannelsPlugin.unsubscribe` methods directly should only be one when a :"
-"term:`context manager <asynchronous context manager>` cannot be used, e.g., "
-"when the :term:`subscription` would span different contexts."
+"being unsubscribed. Using the :meth:`~ChannelsPlugin.subscribe` "
+"and :meth:`~ChannelsPlugin.unsubscribe` methods directly should only be one "
+"when a :term:`context manager <asynchronous context manager>` cannot be "
+"used, e.g., when the :term:`subscription` would span different contexts."
 msgstr ""
 
 #: ../../../usage/channels.rst:215
@@ -448,9 +451,9 @@ msgstr ""
 
 #: ../../../usage/channels.rst:258
 msgid ""
-"The plugin's :meth:`put_subscriber_history <ChannelsPlugin."
-"put_subscriber_history>` can be used to fetch this :term:`history` and put "
-"it into a subscriber's :term:`event stream`."
+"The plugin's :meth:`put_subscriber_history "
+"<ChannelsPlugin.put_subscriber_history>` can be used to fetch "
+"this :term:`history` and put it into a subscriber's :term:`event stream`."
 msgstr ""
 
 #: ../../../usage/channels.rst:261
@@ -484,12 +487,13 @@ msgstr ""
 
 #: ../../../usage/channels.rst:266
 msgid ""
-"The publication of the :term:`history` happens sequentially, one :term:"
-"`channel` and one :term:`event` at a time. This is done to ensure the "
-"correct ordering of events and to avoid filling up a :term:`subscriber`'s "
-"backlog, which would result in dropped :term:`history` entries. Should the "
-"amount of entries exceed the maximum backlog size, the execution will wait "
-"until previous events have been processed."
+"The publication of the :term:`history` happens sequentially, "
+"one :term:`channel` and one :term:`event` at a time. This is done to ensure "
+"the correct ordering of events and to avoid filling up "
+"a :term:`subscriber`'s backlog, which would result in "
+"dropped :term:`history` entries. Should the amount of entries exceed the "
+"maximum backlog size, the execution will wait until previous events have "
+"been processed."
 msgstr ""
 
 #: ../../../usage/channels.rst:272
@@ -517,8 +521,8 @@ msgstr ""
 
 #: ../../../usage/channels.rst:286
 msgid ""
-"In addition to being an abstraction of an :term:`event stream`, the :class:"
-"`Subscriber` provides two methods to handle this stream:"
+"In addition to being an abstraction of an :term:`event stream`, "
+"the :class:`Subscriber` provides two methods to handle this stream:"
 msgstr ""
 
 #: ../../../usage/channels.rst:289
@@ -537,21 +541,21 @@ msgstr ""
 
 #: ../../../usage/channels.rst:294
 msgid ""
-"A :term:`context manager <asynchronous context manager>`, wrapping an :class:"
-"`asyncio.Task`, consuming events yielded by :meth:`iter_events <Subscriber."
-"iter_events>`, invoking a provided :term:`callback` for each of them. Upon "
-"exit, it will attempt a graceful shutdown of the running task, waiting for "
-"all currently enqueued events in the stream to be processed. If the context "
-"exits with an error, the task will be cancelled instead."
+"A :term:`context manager <asynchronous context manager>`, wrapping "
+"an :class:`asyncio.Task`, consuming events yielded by :meth:`iter_events "
+"<Subscriber.iter_events>`, invoking a provided :term:`callback` for each of "
+"them. Upon exit, it will attempt a graceful shutdown of the running task, "
+"waiting for all currently enqueued events in the stream to be processed. If "
+"the context exits with an error, the task will be cancelled instead."
 msgstr ""
 
 #: ../../../usage/channels.rst:300
 msgid ""
-"It is possible to force the task to stop immediately, by setting :paramref:"
-"`~Subscriber.run_in_background.join` to ``False`` in :meth:"
-"`run_in_background <Subscriber.run_in_background>`, which will lead to the "
-"cancellation of the task. By default this only happens when the context is "
-"left with an exception."
+"It is possible to force the task to stop immediately, by "
+"setting :paramref:`~Subscriber.run_in_background.join` to ``False`` "
+"in :meth:`run_in_background <Subscriber.run_in_background>`, which will lead "
+"to the cancellation of the task. By default this only happens when the "
+"context is left with an exception."
 msgstr ""
 
 #: ../../../usage/channels.rst:305
@@ -571,8 +575,8 @@ msgstr ""
 
 #: ../../../usage/channels.rst:314
 msgid ""
-"By iterating over it directly, using :meth:`iter_events <Subscriber."
-"iter_events>`"
+"By iterating over it directly, using :meth:`iter_events "
+"<Subscriber.iter_events>`"
 msgstr ""
 
 #: ../../../usage/channels.rst:315
@@ -626,13 +630,13 @@ msgstr ""
 
 #: ../../../usage/channels.rst:330
 msgid ""
-"The same can be achieved by passing :meth:`Websocket.send_text() <litestar."
-"connection.WebSocket.send_text>` as the callback to :meth:`~Subscriber."
-"run_in_background`. This will cause the WebSocket's method to be invoked "
-"every time a new :term:`event` becomes available in the :term:`stream <event "
-"stream>`, but gives control back to the application, providing an "
-"opportunity to perform other tasks, such as receiving incoming data from the "
-"socket."
+"The same can be achieved by passing :meth:`Websocket.send_text() "
+"<litestar.connection.WebSocket.send_text>` as the callback "
+"to :meth:`~Subscriber.run_in_background`. This will cause the WebSocket's "
+"method to be invoked every time a new :term:`event` becomes available in "
+"the :term:`stream <event stream>`, but gives control back to the "
+"application, providing an opportunity to perform other tasks, such as "
+"receiving incoming data from the socket."
 msgstr ""
 
 #: ../../../usage/channels.rst:335
@@ -691,17 +695,17 @@ msgstr ""
 
 #: ../../../usage/channels.rst:351
 msgid ""
-"Each subscriber manages its own backlog: A queue of unprocessed :term:"
-"`events <event>`. By default, this backlog is unlimited in size, allowing it "
-"to grow indefinitely. For most applications, this should be no issue, but "
-"when the recipient consistently can not process messages faster than they "
-"come in, an application might opt to handle this case."
+"Each subscriber manages its own backlog: A queue of "
+"unprocessed :term:`events <event>`. By default, this backlog is unlimited in "
+"size, allowing it to grow indefinitely. For most applications, this should "
+"be no issue, but when the recipient consistently can not process messages "
+"faster than they come in, an application might opt to handle this case."
 msgstr ""
 
 #: ../../../usage/channels.rst:356
 msgid ""
-"The channels plugin provides two different strategies for managing this :"
-"term:`backpressure`:"
+"The channels plugin provides two different strategies for managing "
+"this :term:`backpressure`:"
 msgstr ""
 
 #: ../../../usage/channels.rst:358
@@ -723,7 +727,7 @@ msgstr ""
 #: ../../../usage/channels.rst:363
 msgid ""
 "from litestar.channels import ChannelsPlugin\n"
-"from litestar.channels.memory import MemoryChannelsBackend\n"
+"from litestar.channels.backends.memory import MemoryChannelsBackend\n"
 "\n"
 "channels = ChannelsPlugin(\n"
 "    backend=MemoryChannelsBackend(),\n"
@@ -739,7 +743,7 @@ msgstr ""
 #: ../../../usage/channels.rst:375
 msgid ""
 "from litestar.channels import ChannelsPlugin\n"
-"from litestar.channels.memory import MemoryChannelsBackend\n"
+"from litestar.channels.backends.memory import MemoryChannelsBackend\n"
 "\n"
 "channels = ChannelsPlugin(\n"
 "    backend=MemoryChannelsBackend(),\n"
@@ -754,8 +758,8 @@ msgstr ""
 
 #: ../../../usage/channels.rst:389
 msgid ""
-"The storing and :term:`fanout` of messages is handled by a :class:"
-"`ChannelsBackend <litestar.channels.backends.base.ChannelsBackend>`."
+"The storing and :term:`fanout` of messages is handled by "
+"a :class:`ChannelsBackend <litestar.channels.backends.base.ChannelsBackend>`."
 msgstr ""
 
 #: ../../../usage/channels.rst:392
@@ -855,8 +859,8 @@ msgstr ""
 
 #: ../../../usage/channels.rst:431
 msgid ""
-"The generated route handlers can optionally be configured to send the :term:"
-"`channel`'s :term:`history` after a client has connected:"
+"The generated route handlers can optionally be configured to send "
+"the :term:`channel`'s :term:`history` after a client has connected:"
 msgstr ""
 
 #: ../../../usage/channels.rst:434
@@ -884,8 +888,9 @@ msgstr ""
 
 #: ../../../usage/channels.rst:437
 msgid ""
-"When using the :paramref:`~litestar.channels.plugin.ChannelsPlugin."
-"arbitrary_channels_allowed` parameter on the :class:`ChannelsPlugin`, a "
-"single route handler will be generated instead, using a :ref:`path parameter "
-"<usage/routing/parameters:path parameters>` to specify the channel name"
+"When using "
+"the :paramref:`~litestar.channels.plugin.ChannelsPlugin.arbitrary_channels_allowed` "
+"parameter on the :class:`ChannelsPlugin`, a single route handler will be "
+"generated instead, using a :ref:`path parameter <usage/routing/"
+"parameters:path parameters>` to specify the channel name"
 msgstr ""

@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-10-19 08:58:57 +0300",
-      "hash" : "af5003e830c3a44dc22cad499200e28b898c1407",
-      "title" : "chore(deps): bump actions/create-github-app-token from 3.2.0 to 3.3.0 (#5141)"
+      "date" : "2026-10-26 16:27:49 +0100",
+      "hash" : "9d752aaee04d53c0d845cbd9749257bd3b7a8842",
+      "title" : "fix(ws): Add `socket` parameter to WS-listener signature (#5161)"
     }
   },
   "type" : "branch",
