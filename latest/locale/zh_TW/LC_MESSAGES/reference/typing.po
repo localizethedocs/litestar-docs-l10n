@@ -24,7 +24,7 @@ msgstr ""
 #: ../../../../litestar/typing.py:docstring of
 #: litestar.typing.FieldDefinition:1
 msgid "Bases: :py:class:`object`"
-msgstr "基底類別：:py:class:`object`"
+msgstr ""
 
 #: ../../../../litestar/typing.py:docstring of
 #: litestar.typing.FieldDefinition:1

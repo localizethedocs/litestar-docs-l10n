@@ -24,7 +24,7 @@ msgstr ""
 #: ../../../../litestar/middleware/allowed_hosts.py:docstring of
 #: litestar.middleware.allowed_hosts.AllowedHostsMiddleware:1
 msgid "Bases: :py:class:`~litestar.middleware.base.AbstractMiddleware`"
-msgstr "基底類別：:py:class:`~litestar.middleware.base.AbstractMiddleware`"
+msgstr ""
 
 #: ../../../../litestar/middleware/allowed_hosts.py:docstring of
 #: litestar.middleware.allowed_hosts.AllowedHostsMiddleware:1

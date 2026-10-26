@@ -27,6 +27,3 @@ msgid ""
 "`advanced_alchemy.repository.SQLAlchemySyncRepository` directly. This module "
 "is removed before 3.0.0."
 msgstr ""
-
-#~ msgid "Parameters"
-#~ msgstr "參數"

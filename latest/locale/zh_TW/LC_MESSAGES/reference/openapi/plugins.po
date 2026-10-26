@@ -24,7 +24,7 @@ msgstr ""
 #: ../../../../litestar/openapi/plugins.py:docstring of
 #: litestar.openapi.plugins.OpenAPIRenderPlugin:1
 msgid "Bases: :py:class:`~abc.ABC`"
-msgstr "基底類別：:py:class:`object`"
+msgstr ""
 
 #: ../../../../litestar/openapi/plugins.py:docstring of
 #: litestar.openapi.plugins.OpenAPIRenderPlugin:1

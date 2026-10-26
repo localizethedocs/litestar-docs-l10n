@@ -25,7 +25,7 @@ msgstr ""
 #: litestar.middleware.authentication.AbstractAuthenticationMiddleware:1
 #: litestar.middleware.base.ASGIMiddleware:1
 msgid "Bases: :py:class:`~abc.ABC`"
-msgstr "基底類別：:py:class:`object`"
+msgstr ""
 
 #: ../../../../litestar/middleware/__init__.py:docstring of
 #: litestar.middleware.base.ASGIMiddleware:1
@@ -256,7 +256,7 @@ msgstr ""
 #: litestar.middleware.base.AbstractMiddleware:1
 #: litestar.middleware.base.DefineMiddleware:1
 msgid "Bases: :py:class:`object`"
-msgstr "基底類別：:py:class:`object`"
+msgstr ""
 
 #: ../../../../litestar/middleware/__init__.py:docstring of
 #: litestar.middleware.base.AbstractMiddleware:1
@@ -387,7 +387,7 @@ msgstr ""
 #: ../../../../litestar/middleware/__init__.py:docstring of
 #: litestar.middleware.base.MiddlewareProtocol:1
 msgid "Bases: :py:class:`~typing.Protocol`"
-msgstr "基底類別：:py:class:`~typing.Protocol`"
+msgstr ""
 
 #: ../../../../litestar/middleware/__init__.py:docstring of
 #: litestar.middleware.base.MiddlewareProtocol:1

@@ -28,7 +28,7 @@ msgstr ""
 #: ../../../../litestar/plugins/flash.py:docstring of
 #: litestar.plugins.flash.FlashConfig:1
 msgid "Bases: :py:class:`object`"
-msgstr "基底類別：:py:class:`object`"
+msgstr ""
 
 #: ../../../../litestar/plugins/flash.py:docstring of
 #: litestar.plugins.flash.FlashConfig:1
@@ -38,7 +38,7 @@ msgstr ""
 #: ../../../../litestar/plugins/flash.py:docstring of
 #: litestar.plugins.flash.FlashPlugin:1
 msgid "Bases: :py:class:`~litestar.plugins.base.InitPlugin`"
-msgstr "基底類別：:py:class:`~litestar.plugins.base.InitPlugin`"
+msgstr ""
 
 #: ../../../../litestar/plugins/flash.py:docstring of
 #: litestar.plugins.flash.FlashPlugin:1

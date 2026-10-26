@@ -141,7 +141,7 @@ msgstr ""
 
 #: ../../../topics/deployment/docker.rst:0
 msgid "Python 3.8+"
-msgstr "Python 3.8+"
+msgstr ""
 
 #: ../../../topics/deployment/docker.rst:45
 msgid "``app.py``"

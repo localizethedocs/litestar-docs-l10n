@@ -136,7 +136,7 @@ msgstr ""
 
 #: ../../../onboarding/django.rst:94
 msgid "Route handlers"
-msgstr ""
+msgstr "路由处理函数"
 
 #: ../../../onboarding/django.rst:96
 msgid ""
@@ -315,7 +315,7 @@ msgstr ""
 
 #: ../../../onboarding/django.rst:219
 msgid ":doc:`/usage/routing/handlers`"
-msgstr ""
+msgstr ":doc:`/usage/routing/handlers`"
 
 #: ../../../onboarding/django.rst:223
 msgid "Routers"

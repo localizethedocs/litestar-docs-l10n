@@ -31,8 +31,6 @@ msgid ""
 "Bases: :py:class:`~litestar.middleware.session.base.BaseSessionBackend`\\ [:"
 "py:class:`CookieBackendConfig`]"
 msgstr ""
-"基底類別：:py:class:`~litestar.middleware.session.base.BaseSessionBackend`\\ "
-"[:py:class:`CookieBackendConfig`]"
 
 #: ../../../../litestar/middleware/session/client_side.py:docstring of
 #: litestar.middleware.session.client_side.ClientSideSessionBackend:1

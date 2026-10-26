@@ -24,7 +24,7 @@ msgstr ""
 #: ../../../../litestar/middleware/compression/__init__.py:docstring of
 #: litestar.middleware.compression.facade.CompressionFacade:1
 msgid "Bases: :py:class:`~typing.Protocol`"
-msgstr "基底類別：:py:class:`~typing.Protocol`"
+msgstr ""
 
 #: ../../../../litestar/middleware/compression/__init__.py:docstring of
 #: litestar.middleware.compression.facade.CompressionFacade:1
@@ -91,7 +91,7 @@ msgstr ""
 #: ../../../../litestar/middleware/compression/__init__.py:docstring of
 #: litestar.middleware.compression.middleware.CompressionMiddleware:1
 msgid "Bases: :py:class:`~litestar.middleware.base.AbstractMiddleware`"
-msgstr "基底類別：:py:class:`~litestar.middleware.base.AbstractMiddleware`"
+msgstr ""
 
 #: ../../../../litestar/middleware/compression/__init__.py:docstring of
 #: litestar.middleware.compression.middleware.CompressionMiddleware:1

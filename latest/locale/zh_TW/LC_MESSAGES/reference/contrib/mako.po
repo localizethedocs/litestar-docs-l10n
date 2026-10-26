@@ -26,9 +26,3 @@ msgid ""
 "Import from :mod:`litestar.plugins.mako` instead. This module will be "
 "removed in 3.0.0."
 msgstr ""
-
-#~ msgid "Parameters"
-#~ msgstr "參數"
-
-#~ msgid "Initialize template engine."
-#~ msgstr "初始化模板引擎。"

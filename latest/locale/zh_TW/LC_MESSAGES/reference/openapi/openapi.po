@@ -25,7 +25,7 @@ msgstr ""
 #: litestar.openapi.config.OpenAPIConfig:1
 #: litestar.openapi.datastructures.ResponseSpec:1
 msgid "Bases: :py:class:`object`"
-msgstr "基底類別：:py:class:`object`"
+msgstr ""
 
 #: ../../../../litestar/openapi/__init__.py:docstring of
 #: litestar.openapi.config.OpenAPIConfig:1
@@ -123,7 +123,7 @@ msgstr ""
 
 #: ../../../reference/openapi/openapi.rst:0
 msgid "Parameters"
-msgstr "參數"
+msgstr ""
 
 #: ../../../../litestar/openapi/__init__.py:docstring of
 #: litestar._openapi.utils.default_operation_id_creator:3

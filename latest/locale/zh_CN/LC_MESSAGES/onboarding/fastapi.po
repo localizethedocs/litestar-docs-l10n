@@ -81,7 +81,7 @@ msgstr ""
 
 #: ../../../onboarding/fastapi.rst:39
 msgid "Route handlers"
-msgstr ""
+msgstr "路由处理函数"
 
 #: ../../../onboarding/fastapi.rst:41
 msgid ""
