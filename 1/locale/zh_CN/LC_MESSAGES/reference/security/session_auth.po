@@ -24,10 +24,10 @@ msgstr ""
 #: ../../../../starlite/security/session_auth/auth.py:docstring of
 #: starlite.security.session_auth.auth.SessionAuth:1
 msgid ""
-"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~starlite.security.base."
-"UserType`], :py:class:`~starlite.security.base.AbstractSecurityConfig`\\ [:"
-"py:obj:`~starlite.security.base.UserType`, :py:class:`~typing.Dict`\\ [:py:"
-"class:`str`, :py:obj:`~typing.Any`]]"
+"Bases: :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~starlite.security.base.UserType`], :py:class:`~starlite.security.base.AbstractSecurityConfig`\\ "
+"[:py:obj:`~starlite.security.base.UserType`, :py:class:`~typing.Dict`\\ "
+"[:py:class:`str`, :py:obj:`~typing.Any`]]"
 msgstr ""
 
 #: ../../../../starlite/security/session_auth/auth.py:docstring of
@@ -48,8 +48,8 @@ msgstr ""
 #: ../../../../docstring of
 #: starlite.security.session_auth.SessionAuth.authentication_middleware_class:3
 msgid ""
-"Must inherit from :class:`SessionAuthMiddleware <starlite.security."
-"session_auth.middleware.SessionAuthMiddleware>`"
+"Must inherit from :class:`SessionAuthMiddleware "
+"<starlite.security.session_auth.middleware.SessionAuthMiddleware>`"
 msgstr ""
 
 #: ../../../../starlite/security/session_auth/auth.py:docstring of
@@ -88,8 +88,8 @@ msgstr ""
 #: ../../../../starlite/security/session_auth/auth.py:docstring of
 #: starlite.security.session_auth.SessionAuth.session_backend:3
 msgid ""
-"A subclass of :class:`BaseSessionBackend <starlite.middleware.session.base."
-"BaseSessionBackend>`"
+"A subclass of :class:`BaseSessionBackend "
+"<starlite.middleware.session.base.BaseSessionBackend>`"
 msgstr ""
 
 #: ../../../../starlite/security/session_auth/auth.py:docstring of
@@ -101,8 +101,8 @@ msgstr ""
 #: ../../../../starlite/security/session_auth/auth.py:docstring of
 #: starlite.security.session_auth.SessionAuth.openapi_components:3
 msgid ""
-"An :class:`Components <pydantic_openapi_schema.v3_1_0.components."
-"Components>` instance."
+"An :class:`Components "
+"<pydantic_openapi_schema.v3_1_0.components.Components>` instance."
 msgstr ""
 
 #: ../../../../starlite/security/session_auth/auth.py:docstring of
@@ -113,22 +113,22 @@ msgstr ""
 #: ../../../../starlite/security/session_auth/auth.py:docstring of
 #: starlite.security.session_auth.SessionAuth.security_requirement:3
 msgid ""
-":class:`SecurityRequirement <pydantic_openapi_schema.v3_1_0."
-"security_requirement.SecurityRequirement>` for the auth backend."
+":class:`SecurityRequirement "
+"<pydantic_openapi_schema.v3_1_0.security_requirement.SecurityRequirement>` "
+"for the auth backend."
 msgstr ""
 
 #: ../../../../starlite/security/session_auth/auth.py:docstring of
 #: starlite.security.session_auth.SessionAuth.security_requirement:6
 msgid ""
-"An OpenAPI 3.1 :class:`SecurityRequirement <pydantic_openapi_schema.v3_1_0."
-"security_requirement.SecurityRequirement>` dictionary."
+"An OpenAPI 3.1 :class:`SecurityRequirement "
+"<pydantic_openapi_schema.v3_1_0.security_requirement.SecurityRequirement>` "
+"dictionary."
 msgstr ""
 
 #: ../../../../starlite/security/session_auth/middleware.py:docstring of
 #: starlite.security.session_auth.middleware.SessionAuthMiddleware:1
-msgid ""
-"Bases: :py:class:`~starlite.middleware.authentication."
-"AbstractAuthenticationMiddleware`"
+msgid "Bases: :py:class:`~starlite.middleware.authentication.AbstractAuthenticationMiddleware`"
 msgstr ""
 
 #: ../../../../starlite/security/session_auth/middleware.py:docstring of
@@ -201,6 +201,6 @@ msgstr ""
 #: ../../../../starlite/security/session_auth/middleware.py:docstring of
 #: starlite.security.session_auth.middleware.SessionAuthMiddleware.authenticate_request:7
 msgid ""
-":class:`AuthenticationResult <starlite.middleware.authentication."
-"AuthenticationResult>`"
+":class:`AuthenticationResult "
+"<starlite.middleware.authentication.AuthenticationResult>`"
 msgstr ""

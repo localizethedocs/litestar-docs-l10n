@@ -679,8 +679,8 @@ msgstr ""
 
 #: ../../../usage/dependency-injection.rst:321
 msgid ""
-"Dependency validation can be toggled using the :class:`Dependency <starlite."
-"params.Dependency>` function."
+"Dependency validation can be toggled using the :class:`Dependency "
+"<starlite.params.Dependency>` function."
 msgstr ""
 
 #: ../../../usage/dependency-injection.rst:324

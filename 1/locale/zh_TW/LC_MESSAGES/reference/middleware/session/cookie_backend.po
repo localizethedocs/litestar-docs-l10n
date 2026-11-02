@@ -24,8 +24,8 @@ msgstr ""
 #: ../../../../starlite/middleware/session/cookie_backend.py:docstring of
 #: starlite.middleware.session.cookie_backend.CookieBackend:1
 msgid ""
-"Bases: :py:class:`~starlite.middleware.session.base.BaseSessionBackend`\\ [:"
-"py:class:`CookieBackendConfig`]"
+"Bases: :py:class:`~starlite.middleware.session.base.BaseSessionBackend`\\ "
+"[:py:class:`CookieBackendConfig`]"
 msgstr ""
 
 #: ../../../../starlite/middleware/session/cookie_backend.py:docstring of

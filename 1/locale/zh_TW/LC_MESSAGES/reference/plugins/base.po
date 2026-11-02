@@ -24,8 +24,8 @@ msgstr ""
 #: ../../../../starlite/plugins/base.py:docstring of
 #: starlite.plugins.base.PluginProtocol:1
 msgid ""
-"Bases: :py:class:`~typing.Protocol`\\ [:py:obj:`~starlite.plugins.base."
-"ModelT`]"
+"Bases: :py:class:`~typing.Protocol`\\ "
+"[:py:obj:`~starlite.plugins.base.ModelT`]"
 msgstr ""
 
 #: ../../../../starlite/plugins/base.py:docstring of

@@ -23,8 +23,7 @@ msgstr ""
 
 #: ../../../../starlite/exceptions/http_exceptions.py:docstring of
 #: starlite.exceptions.http_exceptions.HTTPException:1
-msgid ""
-"Bases: :py:class:`~starlite.exceptions.base_exceptions.StarLiteException`"
+msgid "Bases: :py:class:`~starlite.exceptions.base_exceptions.StarLiteException`"
 msgstr ""
 
 #: ../../../../starlite/exceptions/http_exceptions.py:docstring of
@@ -105,9 +104,7 @@ msgstr ""
 
 #: ../../../../starlite/exceptions/http_exceptions.py:docstring of
 #: starlite.exceptions.http_exceptions.ImproperlyConfiguredException:1
-msgid ""
-"Bases: :py:class:`~starlite.exceptions.http_exceptions.HTTPException`, :py:"
-"class:`ValueError`"
+msgid "Bases: :py:class:`~starlite.exceptions.http_exceptions.HTTPException`, :py:class:`ValueError`"
 msgstr ""
 
 #: ../../../../starlite/exceptions/http_exceptions.py:docstring of
@@ -129,9 +126,7 @@ msgstr ""
 #: ../../../../starlite/exceptions/http_exceptions.py:docstring of
 #: starlite.exceptions.http_exceptions.NotFoundException:1
 #: starlite.exceptions.http_exceptions.ValidationException:1
-msgid ""
-"Bases: :py:class:`~starlite.exceptions.http_exceptions.ClientException`, :py:"
-"class:`ValueError`"
+msgid "Bases: :py:class:`~starlite.exceptions.http_exceptions.ClientException`, :py:class:`ValueError`"
 msgstr ""
 
 #: ../../../../starlite/exceptions/http_exceptions.py:docstring of
@@ -186,9 +181,7 @@ msgstr ""
 #: starlite.exceptions.http_exceptions.NoRouteMatchFoundException:1
 #: starlite.exceptions.http_exceptions.ServiceUnavailableException:1
 #: starlite.exceptions.http_exceptions.TemplateNotFoundException:1
-msgid ""
-"Bases: :py:class:`~starlite.exceptions.http_exceptions."
-"InternalServerException`"
+msgid "Bases: :py:class:`~starlite.exceptions.http_exceptions.InternalServerException`"
 msgstr ""
 
 #: ../../../../starlite/exceptions/http_exceptions.py:docstring of

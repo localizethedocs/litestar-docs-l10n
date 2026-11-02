@@ -24,8 +24,8 @@ msgstr ""
 #: ../../../../starlite/template/base.py:docstring of
 #: starlite.template.base.TemplateEngineProtocol:1
 msgid ""
-"Bases: :py:class:`~typing.Protocol`\\ [:py:obj:`~starlite.template.base."
-"T_co`]"
+"Bases: :py:class:`~typing.Protocol`\\ "
+"[:py:obj:`~starlite.template.base.T_co`]"
 msgstr ""
 
 #: ../../../../starlite/template/base.py:docstring of

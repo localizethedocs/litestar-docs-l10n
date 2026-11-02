@@ -24,8 +24,8 @@ msgstr ""
 #: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
 #: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin:1
 msgid ""
-"Bases: :py:class:`~starlite.plugins.base.PluginProtocol`\\ [:py:class:"
-"`~sqlalchemy.orm.decl_api.DeclarativeMeta`]"
+"Bases: :py:class:`~starlite.plugins.base.PluginProtocol`\\ "
+"[:py:class:`~sqlalchemy.orm.decl_api.DeclarativeMeta`]"
 msgstr ""
 
 #: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
@@ -72,9 +72,9 @@ msgstr ""
 #: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
 #: starlite.plugins.sql_alchemy.plugin.SQLAlchemyPlugin.__init__:6
 msgid ""
-"Optional :class:`SQLAlchemyConfig <starlite.plugins.sql_alchemy."
-"SQLAlchemyConfig>` instance. If passed, the plugin will establish a DB "
-"connection and hook handlers and dependencies."
+"Optional :class:`SQLAlchemyConfig "
+"<starlite.plugins.sql_alchemy.SQLAlchemyConfig>` instance. If passed, the "
+"plugin will establish a DB connection and hook handlers and dependencies."
 msgstr ""
 
 #: ../../../../starlite/plugins/sql_alchemy/plugin.py:docstring of
@@ -333,8 +333,8 @@ msgstr ""
 #: ../../../../starlite/plugins/sql_alchemy/config.py:docstring of
 #: starlite.plugins.sql_alchemy.config.SQLAlchemyConfig:1
 msgid ""
-"Configuration for SQLAlchemy's :class:`sessionmaker <sqlalchemy.orm."
-"sessionmaker>`."
+"Configuration for SQLAlchemy's :class:`sessionmaker "
+"<sqlalchemy.orm.sessionmaker>`."
 msgstr ""
 
 #: ../../../../starlite/plugins/sql_alchemy/config.py:docstring of
@@ -380,8 +380,8 @@ msgstr ""
 #: ../../../../docstring of
 #: starlite.plugins.sql_alchemy.SQLAlchemyConfig.create_async_engine_callable:1
 msgid ""
-"Callable that creates an :class:`AsyncEngine <sqlalchemy.ext.asyncio."
-"AsyncEngine>` instance or instance of its subclass."
+"Callable that creates an :class:`AsyncEngine "
+"<sqlalchemy.ext.asyncio.AsyncEngine>` instance or instance of its subclass."
 msgstr ""
 
 #: ../../../../docstring of
@@ -399,8 +399,8 @@ msgstr ""
 #: ../../../../docstring of
 #: starlite.plugins.sql_alchemy.SQLAlchemyConfig.engine_app_state_key:1
 msgid ""
-"Key under which to store the SQLAlchemy engine in the application :class:"
-"`State <starlite.datastructures.State>` instance."
+"Key under which to store the SQLAlchemy engine in the "
+"application :class:`State <starlite.datastructures.State>` instance."
 msgstr ""
 
 #: ../../../../docstring of
@@ -438,9 +438,9 @@ msgstr ""
 #: ../../../../docstring of
 #: starlite.plugins.sql_alchemy.SQLAlchemyConfig.session_class:3
 msgid ""
-"If not set, the session class will default to :class:`sqlalchemy.orm."
-"Session` for sync connections and :class:`sqlalchemy.ext.asyncio."
-"AsyncSession` for async ones."
+"If not set, the session class will default "
+"to :class:`sqlalchemy.orm.Session` for sync connections "
+"and :class:`sqlalchemy.ext.asyncio.AsyncSession` for async ones."
 msgstr ""
 
 #: ../../../../docstring of
@@ -456,8 +456,8 @@ msgstr ""
 #: ../../../../docstring of
 #: starlite.plugins.sql_alchemy.SQLAlchemyConfig.session_maker_app_state_key:1
 msgid ""
-"Key under which to store the SQLAlchemy ``sessionmaker`` in the application :"
-"class:`State <starlite.datastructures.State>` instance."
+"Key under which to store the SQLAlchemy ``sessionmaker`` in the "
+"application :class:`State <starlite.datastructures.State>` instance."
 msgstr ""
 
 #: ../../../../docstring of
@@ -600,8 +600,8 @@ msgstr ""
 #: ../../../../starlite/plugins/sql_alchemy/config.py:docstring of
 #: starlite.plugins.sql_alchemy.config.SQLAlchemyConfig.config_sql_alchemy_logging:5
 msgid ""
-"Currently only works with :class:`LoggingConfig <starlite.config.logging."
-"LoggingConfig>`."
+"Currently only works with :class:`LoggingConfig "
+"<starlite.config.logging.LoggingConfig>`."
 msgstr ""
 
 #: ../../../../starlite/plugins/sql_alchemy/config.py:docstring of

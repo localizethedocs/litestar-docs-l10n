@@ -322,9 +322,9 @@ msgstr ""
 #: ../../../usage/parameters.rst:80
 msgid ""
 "Query parameters are defined as keyword arguments to handler functions. "
-"Every keyword argument that is not otherwise specified (for example as a :"
-"ref:`path parameter <usage/parameters:path parameters>`) will be interpreted "
-"as a query parameter."
+"Every keyword argument that is not otherwise specified (for example as "
+"a :ref:`path parameter <usage/parameters:path parameters>`) will be "
+"interpreted as a query parameter."
 msgstr ""
 
 #: ../../../usage/parameters.rst:85
@@ -398,8 +398,8 @@ msgstr ""
 #: ../../../usage/parameters.rst:104
 msgid ""
 "Query parameters are **required** by default. If one such a parameter has no "
-"value, a :class:`ValidationException <.exceptions.http_exceptions."
-"ValidationException>` will be raised."
+"value, a :class:`ValidationException "
+"<.exceptions.http_exceptions.ValidationException>` will be raised."
 msgstr ""
 
 #: ../../../usage/parameters.rst:108

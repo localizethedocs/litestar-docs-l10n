@@ -51,8 +51,8 @@ msgstr ""
 #: starlite.middleware.authentication.AbstractAuthenticationMiddleware:1
 msgid ""
 "Abstract AuthenticationMiddleware that allows users to create their own "
-"AuthenticationMiddleware by extending it and overriding :meth:"
-"`AbstractAuthenticationMiddleware.authenticate_request`."
+"AuthenticationMiddleware by extending it and "
+"overriding :meth:`AbstractAuthenticationMiddleware.authenticate_request`."
 msgstr ""
 
 #: ../../../../starlite/middleware/authentication.py:docstring of
@@ -157,6 +157,6 @@ msgstr ""
 #: ../../../../starlite/middleware/authentication.py:docstring of
 #: starlite.middleware.authentication.AbstractAuthenticationMiddleware.authenticate_request:11
 msgid ""
-"An instance of :class:`AuthenticationResult <starlite.middleware."
-"authentication.AuthenticationResult>`."
+"An instance of :class:`AuthenticationResult "
+"<starlite.middleware.authentication.AuthenticationResult>`."
 msgstr ""

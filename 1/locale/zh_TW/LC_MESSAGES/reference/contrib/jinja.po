@@ -24,8 +24,8 @@ msgstr ""
 #: ../../../../starlite/contrib/jinja.py:docstring of
 #: starlite.contrib.jinja.JinjaTemplateEngine:1
 msgid ""
-"Bases: :py:class:`~starlite.template.base.TemplateEngineProtocol`\\ [:py:"
-"class:`JinjaTemplate`]"
+"Bases: :py:class:`~starlite.template.base.TemplateEngineProtocol`\\ "
+"[:py:class:`JinjaTemplate`]"
 msgstr ""
 
 #: ../../../../starlite/contrib/jinja.py:docstring of

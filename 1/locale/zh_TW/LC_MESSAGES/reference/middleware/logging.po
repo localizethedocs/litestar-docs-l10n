@@ -169,8 +169,8 @@ msgstr ""
 #: starlite.middleware.logging.LoggingMiddlewareConfig.include_compressed_body:1
 msgid ""
 "Include body of compressed response in middleware. If `\"body\"` not set "
-"in. :attr:`response_log_fields <LoggingMiddlewareConfig."
-"response_log_fields>` this config value is ignored."
+"in. :attr:`response_log_fields "
+"<LoggingMiddlewareConfig.response_log_fields>` this config value is ignored."
 msgstr ""
 
 #: ../../../../docstring of

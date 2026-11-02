@@ -24,8 +24,8 @@ msgstr ""
 #: ../../../../starlite/middleware/session/redis_backend.py:docstring of
 #: starlite.middleware.session.redis_backend.RedisBackend:1
 msgid ""
-"Bases: :py:class:`~starlite.middleware.session.base.ServerSideBackend`\\ [:"
-"py:class:`RedisBackendConfig`]"
+"Bases: :py:class:`~starlite.middleware.session.base.ServerSideBackend`\\ "
+"[:py:class:`RedisBackendConfig`]"
 msgstr ""
 
 #: ../../../../starlite/middleware/session/redis_backend.py:docstring of
@@ -118,8 +118,7 @@ msgstr ""
 
 #: ../../../../starlite/middleware/session/redis_backend.py:docstring of
 #: starlite.middleware.session.redis_backend.RedisBackendConfig:1
-msgid ""
-"Bases: :py:class:`~starlite.middleware.session.base.ServerSideSessionConfig`"
+msgid "Bases: :py:class:`~starlite.middleware.session.base.ServerSideSessionConfig`"
 msgstr ""
 
 #: ../../../../starlite/middleware/session/redis_backend.py:docstring of

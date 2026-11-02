@@ -474,20 +474,22 @@ msgstr ""
 #: ../../../../starlite/response/streaming.py:docstring of
 #: starlite.response.streaming.StreamingResponse:1
 msgid ""
-"Bases: :py:class:`~starlite.response.base.Response`\\ [:py:obj:`~typing."
-"Union`\\ [:py:class:`~typing.Iterable`\\ [:py:obj:`~typing.Union`\\ [:py:"
-"class:`str`, :py:class:`bytes`]], :py:class:`~typing.Iterator`\\ [:py:obj:"
-"`~typing.Union`\\ [:py:class:`str`, :py:class:`bytes`]], :py:class:`~typing."
-"AsyncIterable`\\ [:py:obj:`~typing.Union`\\ [:py:class:`str`, :py:class:"
-"`bytes`]], :py:class:`~typing.AsyncIterator`\\ [:py:obj:`~typing.Union`\\ [:"
-"py:class:`str`, :py:class:`bytes`]]]]"
+"Bases: :py:class:`~starlite.response.base.Response`\\ "
+"[:py:obj:`~typing.Union`\\ [:py:class:`~typing.Iterable`\\ "
+"[:py:obj:`~typing.Union`\\ "
+"[:py:class:`str`, :py:class:`bytes`]], :py:class:`~typing.Iterator`\\ "
+"[:py:obj:`~typing.Union`\\ "
+"[:py:class:`str`, :py:class:`bytes`]], :py:class:`~typing.AsyncIterable`\\ "
+"[:py:obj:`~typing.Union`\\ "
+"[:py:class:`str`, :py:class:`bytes`]], :py:class:`~typing.AsyncIterator`\\ "
+"[:py:obj:`~typing.Union`\\ [:py:class:`str`, :py:class:`bytes`]]]]"
 msgstr ""
 
 #: ../../../../starlite/response/streaming.py:docstring of
 #: starlite.response.streaming.StreamingResponse:1
 msgid ""
-"An HTTP response that streams the response data as a series of ASGI 'http."
-"response.body' events."
+"An HTTP response that streams the response data as a series of ASGI "
+"'http.response.body' events."
 msgstr ""
 
 #: ../../../../starlite/response/streaming.py:docstring of
@@ -572,8 +574,8 @@ msgstr ""
 #: ../../../../starlite/response/file.py:docstring of
 #: starlite.response.file.FileResponse.__init__:5
 msgid ""
-"This class extends the :class:`StreamingResponse <starlite.response."
-"StreamingResponse>` class."
+"This class extends the :class:`StreamingResponse "
+"<starlite.response.StreamingResponse>` class."
 msgstr ""
 
 #: ../../../../starlite/response/file.py:docstring of
@@ -622,8 +624,9 @@ msgstr ""
 #: ../../../../starlite/response/file.py:docstring of
 #: starlite.response.file.FileResponse.__init__:26
 msgid ""
-"An implementation of the :class:`FileSystemProtocol <starlite.types."
-"FileSystemProtocol>`. If provided it will be used to load the file."
+"An implementation of the :class:`FileSystemProtocol "
+"<starlite.types.FileSystemProtocol>`. If provided it will be used to load "
+"the file."
 msgstr ""
 
 #: ../../../../starlite/response/file.py:docstring of

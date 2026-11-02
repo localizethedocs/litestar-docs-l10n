@@ -31,8 +31,8 @@ msgstr ""
 
 #: ../../../../CONTRIBUTING.rst:8
 msgid ""
-"Run ``poetry install`` to create a `virtual environment <https://docs.python."
-"org/3/tutorial/venv.html>`_ and install the dependencies"
+"Run ``poetry install`` to create a `virtual environment <https://"
+"docs.python.org/3/tutorial/venv.html>`_ and install the dependencies"
 msgstr ""
 
 #: ../../../../CONTRIBUTING.rst:10
@@ -131,13 +131,13 @@ msgstr ""
 #: ../../../../CONTRIBUTING.rst:45
 msgid ""
 "If something cannot be typed correctly due to a limitation of the type "
-"checkers, you may use `typing.cast <https://docs.python.org/3/library/typing."
-"html#typing.cast>`_ to rectify the situation. However, you should only use "
-"as a last resort if you've exhausted all other options of `type narrowing "
-"<https://mypy.readthedocs.io/en/stable/type_narrowing.html>`_, such as "
-"`isinstance() <https://docs.python.org/3/library/functions."
-"html#isinstance>`_ checks and `type guards <https://docs.python.org/3/"
-"library/typing.html#typing.TypeGuard>`_"
+"checkers, you may use `typing.cast <https://docs.python.org/3/library/"
+"typing.html#typing.cast>`_ to rectify the situation. However, you should "
+"only use as a last resort if you've exhausted all other options of `type "
+"narrowing <https://mypy.readthedocs.io/en/stable/type_narrowing.html>`_, "
+"such as `isinstance() <https://docs.python.org/3/library/"
+"functions.html#isinstance>`_ checks and `type guards <https://"
+"docs.python.org/3/library/typing.html#typing.TypeGuard>`_"
 msgstr ""
 
 #: ../../../../CONTRIBUTING.rst:51
@@ -423,8 +423,8 @@ msgstr ""
 #: ../../../../CONTRIBUTING.rst:204
 msgid ""
 "Increment the version in ``pyproject.toml`` according to the `versioning "
-"scheme <https://starlite-api.github.io/starlite/latest/starlite-versions."
-"html#version-numbering>`_"
+"scheme <https://starlite-api.github.io/starlite/latest/starlite-"
+"versions.html#version-numbering>`_"
 msgstr ""
 
 #: ../../../../CONTRIBUTING.rst:206

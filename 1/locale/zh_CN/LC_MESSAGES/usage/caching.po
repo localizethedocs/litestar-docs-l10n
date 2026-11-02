@@ -30,8 +30,8 @@ msgid ""
 "Starlite includes a builtin :class:`Cache <starlite.cache.Cache>` that "
 "offers a uniform interface to interact with different \"Cache Backends\". A "
 "*Cache Backend* is a class that either implements or fulfills the interface "
-"specified by :class:`CacheBackendProtocol <starlite.cache."
-"CacheBackendProtocol>` to provide cache services."
+"specified by :class:`CacheBackendProtocol "
+"<starlite.cache.CacheBackendProtocol>` to provide cache services."
 msgstr ""
 
 #: ../../../usage/caching.rst:12
@@ -44,10 +44,10 @@ msgstr ""
 
 #: ../../../usage/caching.rst:16
 msgid ""
-"By default, Starlite uses the :class:`SimpleCacheBackend <starlite.cache."
-"SimpleCacheBackend>`, which stores values in local memory with the added "
-"security of async locks. This is fine for local development, but it's not a "
-"good solution for production environments."
+"By default, Starlite uses the :class:`SimpleCacheBackend "
+"<starlite.cache.SimpleCacheBackend>`, which stores values in local memory "
+"with the added security of async locks. This is fine for local development, "
+"but it's not a good solution for production environments."
 msgstr ""
 
 #: ../../../usage/caching.rst:20
@@ -60,12 +60,12 @@ msgstr ""
 
 #: ../../../usage/caching.rst:25
 msgid ""
-":class:`RedisCacheBackend <starlite.cache.redis_cache_backend."
-"RedisCacheBackend>`, which uses `Redis <https://github.com/redis/redis-py>`_ "
-"as the caching database. Under the hood it uses `redis-py asyncio <https://"
-"redis-py.readthedocs.io/en/stable/examples/asyncio_examples.html>`_ to make "
-"sure requests are not blocked and `hiredis <https://github.com/redis/"
-"hiredis>`_ to boost performance."
+":class:`RedisCacheBackend "
+"<starlite.cache.redis_cache_backend.RedisCacheBackend>`, which uses `Redis "
+"<https://github.com/redis/redis-py>`_ as the caching database. Under the "
+"hood it uses `redis-py asyncio <https://redis-py.readthedocs.io/en/stable/"
+"examples/asyncio_examples.html>`_ to make sure requests are not blocked and "
+"`hiredis <https://github.com/redis/hiredis>`_ to boost performance."
 msgstr ""
 
 #: ../../../usage/caching.rst:32
@@ -80,10 +80,11 @@ msgstr ""
 
 #: ../../../usage/caching.rst:38
 msgid ""
-":class:`MemcachedCacheBackend <starlite.cache.memcached_cache_backend."
-"MemcachedCacheBackend>`, which uses `memcached <https://memcached.org/>`_ as "
-"the caching database. Under the hood it uses `aiomcache <https://github.com/"
-"aio-libs/aiomcache>`_ to make sure requests are not blocked."
+":class:`MemcachedCacheBackend "
+"<starlite.cache.memcached_cache_backend.MemcachedCacheBackend>`, which uses "
+"`memcached <https://memcached.org/>`_ as the caching database. Under the "
+"hood it uses `aiomcache <https://github.com/aio-libs/aiomcache>`_ to make "
+"sure requests are not blocked."
 msgstr ""
 
 #: ../../../usage/caching.rst:44
@@ -100,8 +101,8 @@ msgstr ""
 #: ../../../usage/caching.rst:51
 msgid ""
 "You can configure caching behaviour on the application level by passing an "
-"instance of :class:`CacheConfig <.config.CacheConfig>` to the :class:"
-"`Starlite instance <starlite.app.Starlite>`."
+"instance of :class:`CacheConfig <.config.CacheConfig>` to "
+"the :class:`Starlite instance <starlite.app.Starlite>`."
 msgstr ""
 
 #: ../../../usage/caching.rst:54
@@ -143,12 +144,12 @@ msgstr ""
 
 #: ../../../usage/caching.rst:94
 msgid ""
-"Since Starlite relies on the :class:`CacheBackendProtocol <starlite.cache."
-"CacheBackendProtocol>` to define cache, creating a custom cache backend is "
-"very simple - all that is required is to create a class that inherits from "
-"the protocol and implements all its methods, or even a class that simply "
-"implements these methods without inheriting from the protocol. Once this is "
-"done, you can use the backend in the cache config."
+"Since Starlite relies on the :class:`CacheBackendProtocol "
+"<starlite.cache.CacheBackendProtocol>` to define cache, creating a custom "
+"cache backend is very simple - all that is required is to create a class "
+"that inherits from the protocol and implements all its methods, or even a "
+"class that simply implements these methods without inheriting from the "
+"protocol. Once this is done, you can use the backend in the cache config."
 msgstr ""
 
 #: ../../../usage/caching.rst:101
@@ -254,10 +255,11 @@ msgstr ""
 #: ../../../usage/caching.rst:171
 msgid ""
 "The cache is also exposed as a property on the :class:`ASGIConnection "
-"<starlite.connection.ASGIConnection>` and the :class:`Request <starlite."
-"connection.Request>` and :class:`WebSocket <starlite.connection.WebSocket>` "
-"classes that inherit from it. You can thus interact with the cache inside a "
-"route handler easily, for example by doing this:"
+"<starlite.connection.ASGIConnection>` and the :class:`Request "
+"<starlite.connection.Request>` and :class:`WebSocket "
+"<starlite.connection.WebSocket>` classes that inherit from it. You can thus "
+"interact with the cache inside a route handler easily, for example by doing "
+"this:"
 msgstr ""
 
 #: ../../../usage/caching.rst:176

@@ -54,8 +54,7 @@ msgstr ""
 #: ../../../../starlite/exceptions/base_exceptions.py:docstring of
 #: starlite.exceptions.base_exceptions.MissingDependencyException:1
 #: starlite.exceptions.base_exceptions.SerializationException:1
-msgid ""
-"Bases: :py:class:`~starlite.exceptions.base_exceptions.StarLiteException`"
+msgid "Bases: :py:class:`~starlite.exceptions.base_exceptions.StarLiteException`"
 msgstr ""
 
 #: ../../../../starlite/exceptions/base_exceptions.py:docstring of

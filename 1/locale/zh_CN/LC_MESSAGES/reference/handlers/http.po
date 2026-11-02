@@ -24,8 +24,8 @@ msgstr ""
 #: ../../../../starlite/handlers/http.py:docstring of
 #: starlite.handlers.http.HTTPRouteHandler:1
 msgid ""
-"Bases: :py:class:`~starlite.handlers.base.BaseRouteHandler`\\ [:py:class:"
-"`HTTPRouteHandler`]"
+"Bases: :py:class:`~starlite.handlers.base.BaseRouteHandler`\\ "
+"[:py:class:`HTTPRouteHandler`]"
 msgstr ""
 
 #: ../../../../starlite/handlers/http.py:docstring of
@@ -72,10 +72,10 @@ msgstr ""
 #: starlite.handlers.http.patch.__init__:5
 #: starlite.handlers.http.post.__init__:5 starlite.handlers.http.put.__init__:5
 msgid ""
-"A sync or async function executed before a :class:`Request <starlite."
-"connection.Request>` is passed to any route handler. If this function "
-"returns a value, the request will not reach the route handler, and instead "
-"this value will be used."
+"A sync or async function executed before a :class:`Request "
+"<starlite.connection.Request>` is passed to any route handler. If this "
+"function returns a value, the request will not reach the route handler, and "
+"instead this value will be used."
 msgstr ""
 
 #: ../../../../starlite/handlers/http.py:docstring of
@@ -142,8 +142,9 @@ msgstr ""
 #: starlite.handlers.http.post.__init__:18
 #: starlite.handlers.http.put.__init__:18
 msgid ""
-"A ``cache-control`` header of type :class:`CacheControlHeader <starlite."
-"datastructures.CacheControlHeader>` that will be added to the response."
+"A ``cache-control`` header of type :class:`CacheControlHeader "
+"<starlite.datastructures.CacheControlHeader>` that will be added to the "
+"response."
 msgstr ""
 
 #: ../../../../starlite/handlers/http.py:docstring of
@@ -169,8 +170,8 @@ msgstr ""
 #: starlite.handlers.http.post.__init__:22
 #: starlite.handlers.http.put.__init__:22
 msgid ""
-"A string keyed dictionary of dependency :class:`Provider <starlite."
-"datastructures.Provide>` instances."
+"A string keyed dictionary of dependency :class:`Provider "
+"<starlite.datastructures.Provide>` instances."
 msgstr ""
 
 #: ../../../../starlite/handlers/http.py:docstring of
@@ -261,10 +262,10 @@ msgstr ""
 #: starlite.handlers.http.post.__init__:30
 #: starlite.handlers.http.put.__init__:30
 msgid ""
-"A string keyed dictionary of arbitrary values that can be accessed in :class:"
-"`Guards <starlite.types.Guard>` or wherever you have access to :class:"
-"`Request <starlite.connection.request.Request>` or :class:`ASGI Scope "
-"<starlite.types.Scope>`."
+"A string keyed dictionary of arbitrary values that can be accessed "
+"in :class:`Guards <starlite.types.Guard>` or wherever you have access "
+"to :class:`Request <starlite.connection.request.Request>` or :class:`ASGI "
+"Scope <starlite.types.Scope>`."
 msgstr ""
 
 #: ../../../../starlite/handlers/http.py:docstring of
@@ -301,8 +302,8 @@ msgstr ""
 #: starlite.handlers.http.post.__init__:35
 #: starlite.handlers.http.put.__init__:35
 msgid ""
-"A string keyed dictionary mapping :class:`ResponseHeader <starlite."
-"datastructures.ResponseHeader>` instances."
+"A string keyed dictionary mapping :class:`ResponseHeader "
+"<starlite.datastructures.ResponseHeader>` instances."
 msgstr ""
 
 #: ../../../../starlite/handlers/http.py:docstring of
@@ -543,8 +544,8 @@ msgstr ""
 #: ../../../../starlite/handlers/http.py:docstring of
 #: starlite.handlers.http.HTTPRouteHandler.resolve_response_headers:3
 msgid ""
-"A dictionary mapping keys to :class:`ResponseHeader <starlite.datastructures."
-"ResponseHeader>` instances."
+"A dictionary mapping keys to :class:`ResponseHeader "
+"<starlite.datastructures.ResponseHeader>` instances."
 msgstr ""
 
 #: ../../../../starlite/handlers/http.py:docstring of
@@ -572,8 +573,8 @@ msgstr ""
 #: ../../../../starlite/handlers/http.py:docstring of
 #: starlite.handlers.http.HTTPRouteHandler.resolve_before_request:6
 msgid ""
-"An optional :class:`before request lifecycle hook handler <starlite.types."
-"BeforeRequestHookHandler>`"
+"An optional :class:`before request lifecycle hook handler "
+"<starlite.types.BeforeRequestHookHandler>`"
 msgstr ""
 
 #: ../../../../starlite/handlers/http.py:docstring of
@@ -586,8 +587,8 @@ msgstr ""
 #: ../../../../starlite/handlers/http.py:docstring of
 #: starlite.handlers.http.HTTPRouteHandler.resolve_after_response:6
 msgid ""
-"An optional :class:`after response lifecycle hook handler <starlite.types."
-"AfterResponseHookHandler>`"
+"An optional :class:`after response lifecycle hook handler "
+"<starlite.types.AfterResponseHookHandler>`"
 msgstr ""
 
 #: ../../../../starlite/handlers/http.py:docstring of
@@ -627,8 +628,9 @@ msgstr ""
 #: ../../../../starlite/handlers/http.py:docstring of
 #: starlite.handlers.http.HTTPRouteHandler.to_response:4
 msgid ""
-"Either an instance of a :class:`ResponseContainer <starlite.datastructures."
-"ResponseContainer>`, a Response instance or an arbitrary value."
+"Either an instance of a :class:`ResponseContainer "
+"<starlite.datastructures.ResponseContainer>`, a Response instance or an "
+"arbitrary value."
 msgstr ""
 
 #: ../../../../starlite/handlers/http.py:docstring of

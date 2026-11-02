@@ -24,9 +24,8 @@ msgstr ""
 #: ../../../../starlite/datastructures/response_containers.py:docstring of
 #: starlite.datastructures.response_containers.ResponseContainer:1
 msgid ""
-"Bases: :py:class:`~abc.ABC`, :py:class:`~pydantic.generics.GenericModel`, :"
-"py:class:`~typing.Generic`\\ [:py:obj:`~starlite.datastructures."
-"response_containers.R`]"
+"Bases: :py:class:`~abc.ABC`, :py:class:`~pydantic.generics.GenericModel`, :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~starlite.datastructures.response_containers.R`]"
 msgstr ""
 
 #: ../../../../starlite/datastructures/response_containers.py:docstring of
@@ -165,9 +164,7 @@ msgstr ""
 
 #: ../../../../starlite/datastructures/response_containers.py:docstring of
 #: starlite.datastructures.response_containers.File:1
-msgid ""
-"Bases: :py:class:`~starlite.datastructures.response_containers."
-"ResponseContainer[FileResponse]`"
+msgid "Bases: :py:class:`~starlite.datastructures.response_containers.ResponseContainer[FileResponse]`"
 msgstr ""
 
 #: ../../../../starlite/datastructures/response_containers.py:docstring of
@@ -302,9 +299,7 @@ msgstr ""
 
 #: ../../../../starlite/datastructures/response_containers.py:docstring of
 #: starlite.datastructures.response_containers.Redirect:1
-msgid ""
-"Bases: :py:class:`~starlite.datastructures.response_containers."
-"ResponseContainer[RedirectResponse]`"
+msgid "Bases: :py:class:`~starlite.datastructures.response_containers.ResponseContainer[RedirectResponse]`"
 msgstr ""
 
 #: ../../../../starlite/datastructures/response_containers.py:docstring of
@@ -329,9 +324,7 @@ msgstr ""
 
 #: ../../../../starlite/datastructures/response_containers.py:docstring of
 #: starlite.datastructures.response_containers.Stream:1
-msgid ""
-"Bases: :py:class:`~starlite.datastructures.response_containers."
-"ResponseContainer[StreamingResponse]`"
+msgid "Bases: :py:class:`~starlite.datastructures.response_containers.ResponseContainer[StreamingResponse]`"
 msgstr ""
 
 #: ../../../../starlite/datastructures/response_containers.py:docstring of
@@ -373,9 +366,7 @@ msgstr ""
 
 #: ../../../../starlite/datastructures/response_containers.py:docstring of
 #: starlite.datastructures.response_containers.Template:1
-msgid ""
-"Bases: :py:class:`~starlite.datastructures.response_containers."
-"ResponseContainer[TemplateResponse]`"
+msgid "Bases: :py:class:`~starlite.datastructures.response_containers.ResponseContainer[TemplateResponse]`"
 msgstr ""
 
 #: ../../../../starlite/datastructures/response_containers.py:docstring of

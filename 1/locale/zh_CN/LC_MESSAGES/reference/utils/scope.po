@@ -57,9 +57,9 @@ msgstr ""
 #: ../../../../starlite/utils/scope.py:docstring of
 #: starlite.utils.scope.get_starlite_scope_state:5
 msgid ""
-"If called with a default value, this method behaves like to `dict."
-"set_default()`, both setting the key in the namespace to the default value, "
-"and returning it."
+"If called with a default value, this method behaves like to "
+"`dict.set_default()`, both setting the key in the namespace to the default "
+"value, and returning it."
 msgstr ""
 
 #: ../../../../starlite/utils/scope.py:docstring of

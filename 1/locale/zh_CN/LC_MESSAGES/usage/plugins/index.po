@@ -55,8 +55,8 @@ msgstr ""
 
 #: ../../../usage/plugins/index.rst:17
 msgid ""
-"A plugin is a class that implements the :class:`PluginProtocol <starlite."
-"plugins.base.PluginProtocol>`."
+"A plugin is a class that implements the :class:`PluginProtocol "
+"<starlite.plugins.base.PluginProtocol>`."
 msgstr ""
 
 #: ../../../usage/plugins/index.rst:19
@@ -207,8 +207,8 @@ msgstr ""
 #: ../../../usage/plugins/index.rst:77
 msgid ""
 "If you wish to register middlewares, guards, dependencies and so forth on "
-"the application init, you need to implement the :meth:`on_app_init <starlite."
-"plugins.base.PluginProtocol.on_app_init>` method:"
+"the application init, you need to implement the :meth:`on_app_init "
+"<starlite.plugins.base.PluginProtocol.on_app_init>` method:"
 msgstr ""
 
 #: ../../../usage/plugins/index.rst:81

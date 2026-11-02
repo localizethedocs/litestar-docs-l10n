@@ -25,8 +25,8 @@ msgstr ""
 msgid ""
 "As mentioned in :doc:`using middleware </usage/middleware/using-"
 "middleware>`, a middleware in Starlite is **any callable** that takes a "
-"kwarg called ``app``, which is the next ASGI handler, i.e. an :class:"
-"`ASGIApp <starlite.types.ASGIApp>`, and returns an ``ASGIApp``."
+"kwarg called ``app``, which is the next ASGI handler, i.e. "
+"an :class:`ASGIApp <starlite.types.ASGIApp>`, and returns an ``ASGIApp``."
 msgstr ""
 
 #: ../../../usage/middleware/creating-middleware.rst:9
@@ -52,10 +52,10 @@ msgstr ""
 msgid ""
 "While using functions is a perfectly viable approach, you can also use "
 "classes to do the same. See the next sections on two base classes you can "
-"use for this purpose - the :class:`MiddlewareProtocol <.middleware.base."
-"MiddlewareProtocol>` , which gives a bare-bones type, or the :class:"
-"`AbstractMiddleware <.middleware.base.AbstractMiddleware>` that offers a "
-"base class with some built in functionality."
+"use for this purpose - the :class:`MiddlewareProtocol "
+"<.middleware.base.MiddlewareProtocol>` , which gives a bare-bones type, or "
+"the :class:`AbstractMiddleware <.middleware.base.AbstractMiddleware>` that "
+"offers a base class with some built in functionality."
 msgstr ""
 
 #: ../../../usage/middleware/creating-middleware.rst:30
@@ -64,10 +64,10 @@ msgstr ""
 
 #: ../../../usage/middleware/creating-middleware.rst:32
 msgid ""
-"The :class:`MiddlewareProtocol <starlite.middleware.base."
-"MiddlewareProtocol>` class is a `PEP 544 Protocol <https://peps.python.org/"
-"pep-0544/>`_ that specifies the minimal implementation of a middleware as "
-"follows:"
+"The :class:`MiddlewareProtocol "
+"<starlite.middleware.base.MiddlewareProtocol>` class is a `PEP 544 Protocol "
+"<https://peps.python.org/pep-0544/>`_ that specifies the minimal "
+"implementation of a middleware as follows:"
 msgstr ""
 
 #: ../../../usage/middleware/creating-middleware.rst:37
@@ -95,9 +95,9 @@ msgid ""
 "The ``__call__`` method makes this class into a ``callable``, i.e. once "
 "instantiated this class acts like a function, that has the signature of an "
 "ASGI app: The three parameters, ``scope, receive, send`` are specified by "
-"`the ASGI specification <https://asgi.readthedocs.io/en/latest/index."
-"html>`_, and their values originate with the ASGI server (e.g. *uvicorn*\\ ) "
-"used to run Starlite."
+"`the ASGI specification <https://asgi.readthedocs.io/en/latest/"
+"index.html>`_, and their values originate with the ASGI server (e.g. "
+"*uvicorn*\\ ) used to run Starlite."
 msgstr ""
 
 #: ../../../usage/middleware/creating-middleware.rst:55
@@ -179,8 +179,9 @@ msgstr ""
 #: ../../../usage/middleware/creating-middleware.rst:116
 msgid ""
 "As you can see in the above, given some condition (request.session being "
-"None) we create a :class:`RedirectResponse <starlite.response."
-"RedirectResponse>` and then await it. Otherwise, we await ``self.app``"
+"None) we create a :class:`RedirectResponse "
+"<starlite.response.RedirectResponse>` and then await it. Otherwise, we await "
+"``self.app``"
 msgstr ""
 
 #: ../../../usage/middleware/creating-middleware.rst:121
@@ -234,8 +235,8 @@ msgid ""
 "            async def send_wrapper(message: Message) -> None:\n"
 "                if message[\"type\"] == \"http.response.start\":\n"
 "                    process_time = time.time() - start_time\n"
-"                    headers = MutableScopeHeaders."
-"from_message(message=message)\n"
+"                    headers = "
+"MutableScopeHeaders.from_message(message=message)\n"
 "                    headers[\"X-Process-Time\"] = str(process_time)\n"
 "                await send(message)\n"
 "\n"
@@ -250,8 +251,9 @@ msgstr ""
 
 #: ../../../usage/middleware/creating-middleware.rst:170
 msgid ""
-"Starlite offers an :class:`AbstractMiddleware <.middleware.base."
-"AbstractMiddleware>` class that can be extended to create middleware:"
+"Starlite offers an :class:`AbstractMiddleware "
+"<.middleware.base.AbstractMiddleware>` class that can be extended to create "
+"middleware:"
 msgstr ""
 
 #: ../../../usage/middleware/creating-middleware.rst:174
@@ -295,8 +297,8 @@ msgstr ""
 
 #: ../../../usage/middleware/creating-middleware.rst:207
 msgid ""
-"The scopes variable is a set that can include either or both ``ScopeType."
-"HTTP`` and ``ScopeType.WEBSOCKET`` , with the default being both."
+"The scopes variable is a set that can include either or both "
+"``ScopeType.HTTP`` and ``ScopeType.WEBSOCKET`` , with the default being both."
 msgstr ""
 
 #: ../../../usage/middleware/creating-middleware.rst:208
@@ -508,11 +510,11 @@ msgstr ""
 #: ../../../usage/middleware/creating-middleware.rst:221
 msgid ""
 "Starlite offers a simple way to pass positional arguments (``*args``) and "
-"key-word arguments (``**kwargs``) to middleware using the :class:"
-"`DefineMiddleware <starlite.middleware.base.DefineMiddleware>` class. Let's "
-"extend the factory function used in the examples above to take some args and "
-"kwargs and then use ``DefineMiddleware`` to pass these values to our "
-"middleware:"
+"key-word arguments (``**kwargs``) to middleware using "
+"the :class:`DefineMiddleware <starlite.middleware.base.DefineMiddleware>` "
+"class. Let's extend the factory function used in the examples above to take "
+"some args and kwargs and then use ``DefineMiddleware`` to pass these values "
+"to our middleware:"
 msgstr ""
 
 #: ../../../usage/middleware/creating-middleware.rst:227

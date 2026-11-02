@@ -24,8 +24,8 @@ msgstr ""
 #: ../../../../starlite/utils/sync.py:docstring of
 #: starlite.utils.sync.is_async_callable:1
 msgid ""
-"Extend :func:`asyncio.iscoroutinefunction` to additionally detect async :"
-"func:`functools.partial` objects and class instances with ``async def "
+"Extend :func:`asyncio.iscoroutinefunction` to additionally detect "
+"async :func:`functools.partial` objects and class instances with ``async def "
 "__call__()`` defined."
 msgstr ""
 
@@ -58,8 +58,8 @@ msgstr ""
 #: ../../../../starlite/utils/sync.py:docstring of
 #: starlite.utils.sync.AsyncCallable:1
 msgid ""
-"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~starlite.utils.sync.P`, :py:"
-"obj:`~starlite.utils.sync.T`]"
+"Bases: :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~starlite.utils.sync.P`, :py:obj:`~starlite.utils.sync.T`]"
 msgstr ""
 
 #: ../../../../starlite/utils/sync.py:docstring of

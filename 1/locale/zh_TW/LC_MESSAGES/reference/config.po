@@ -55,8 +55,8 @@ msgstr ""
 
 #: ../../../../docstring of starlite.config.AppConfig.after_exception:1
 msgid ""
-"An application level :class:`exception hook handler <starlite.types."
-"AfterExceptionHookHandler>` or list thereof."
+"An application level :class:`exception hook handler "
+"<starlite.types.AfterExceptionHookHandler>` or list thereof."
 msgstr ""
 
 #: ../../../../docstring of starlite.config.AppConfig.after_exception:3
@@ -95,8 +95,8 @@ msgstr ""
 #: starlite.config.AppConfig.before_shutdown:1
 #: starlite.config.AppConfig.before_startup:1
 msgid ""
-"An application level :class:`life-span hook handler <starlite.types."
-"LifeSpanHookHandler>` or list thereof."
+"An application level :class:`life-span hook handler "
+"<starlite.types.LifeSpanHookHandler>` or list thereof."
 msgstr ""
 
 #: ../../../../docstring of starlite.config.AppConfig.after_shutdown:3
@@ -129,8 +129,8 @@ msgstr ""
 
 #: ../../../../docstring of starlite.config.AppConfig.before_send:1
 msgid ""
-"An application level :class:`before send hook handler <starlite.types."
-"BeforeMessageSendHookHandler>` or list thereof."
+"An application level :class:`before send hook handler "
+"<starlite.types.BeforeMessageSendHookHandler>` or list thereof."
 msgstr ""
 
 #: ../../../../docstring of starlite.config.AppConfig.before_send:3
@@ -155,8 +155,9 @@ msgstr ""
 
 #: ../../../../docstring of starlite.config.AppConfig.cache_control:1
 msgid ""
-"A ``cache-control`` header of type :class:`CacheControlHeader <starlite."
-"datastructures.CacheControlHeader>` to add to route handlers of this app."
+"A ``cache-control`` header of type :class:`CacheControlHeader "
+"<starlite.datastructures.CacheControlHeader>` to add to route handlers of "
+"this app."
 msgstr ""
 
 #: ../../../../docstring of starlite.config.AppConfig.cache_control:4
@@ -184,8 +185,8 @@ msgstr ""
 
 #: ../../../../docstring of starlite.config.AppConfig.dependencies:1
 msgid ""
-"A string keyed dictionary of dependency :class:`Provider <starlite."
-"datastructures.Provide>` instances."
+"A string keyed dictionary of dependency :class:`Provider "
+"<starlite.datastructures.Provide>` instances."
 msgstr ""
 
 #: ../../../../docstring of starlite.config.AppConfig.etag:1
@@ -212,8 +213,8 @@ msgstr ""
 
 #: ../../../../docstring of starlite.config.AppConfig.logging_config:1
 msgid ""
-"An instance of :class:`BaseLoggingConfig <starlite.config.logging."
-"BaseLoggingConfig>` subclass."
+"An instance of :class:`BaseLoggingConfig "
+"<starlite.config.logging.BaseLoggingConfig>` subclass."
 msgstr ""
 
 #: ../../../../docstring of starlite.config.AppConfig.middleware:1
@@ -234,16 +235,16 @@ msgstr ""
 
 #: ../../../../docstring of starlite.config.AppConfig.openapi_config:1
 msgid ""
-"Defaults to :data:`DEFAULT_OPENAPI_CONFIG <starlite.app."
-"DEFAULT_OPENAPI_CONFIG>`"
+"Defaults to :data:`DEFAULT_OPENAPI_CONFIG "
+"<starlite.app.DEFAULT_OPENAPI_CONFIG>`"
 msgstr ""
 
 #: ../../../../docstring of starlite.config.AppConfig.opt:1
 msgid ""
-"A string keyed dictionary of arbitrary values that can be accessed in :class:"
-"`Guards <starlite.types.Guard>` or wherever you have access to :class:"
-"`Request <starlite.connection.request.Request>` or :class:`ASGI Scope "
-"<starlite.types.Scope>`."
+"A string keyed dictionary of arbitrary values that can be accessed "
+"in :class:`Guards <starlite.types.Guard>` or wherever you have access "
+"to :class:`Request <starlite.connection.request.Request>` or :class:`ASGI "
+"Scope <starlite.types.Scope>`."
 msgstr ""
 
 #: ../../../../docstring of starlite.config.AppConfig.opt:4
@@ -262,8 +263,8 @@ msgstr ""
 
 #: ../../../../docstring of starlite.config.AppConfig.request_class:1
 msgid ""
-"An optional subclass of :class:`Request <starlite.connection.request."
-"Request>` to use for http connections."
+"An optional subclass of :class:`Request "
+"<starlite.connection.request.Request>` to use for http connections."
 msgstr ""
 
 #: ../../../../docstring of starlite.config.AppConfig.response_class:1
@@ -278,14 +279,14 @@ msgstr ""
 
 #: ../../../../docstring of starlite.config.AppConfig.response_headers:1
 msgid ""
-"A string keyed dictionary mapping :class:`ResponseHeader <starlite."
-"datastructures.ResponseHeader>` instances."
+"A string keyed dictionary mapping :class:`ResponseHeader "
+"<starlite.datastructures.ResponseHeader>` instances."
 msgstr ""
 
 #: ../../../../docstring of starlite.config.AppConfig.route_handlers:1
 msgid ""
-"A required list of route handlers, which can include instances of :class:"
-"`Router <starlite.router.Router>`, subclasses of."
+"A required list of route handlers, which can include instances "
+"of :class:`Router <starlite.router.Router>`, subclasses of."
 msgstr ""
 
 #: ../../../../docstring of starlite.config.AppConfig.route_handlers:4
@@ -302,14 +303,15 @@ msgstr ""
 
 #: ../../../../docstring of starlite.config.AppConfig.security:3
 msgid ""
-":class:`SecurityRequirement <pydantic_openapi_schema.v3_1_0."
-"security_requirement.SecurityRequirement>` for details."
+":class:`SecurityRequirement "
+"<pydantic_openapi_schema.v3_1_0.security_requirement.SecurityRequirement>` "
+"for details."
 msgstr ""
 
 #: ../../../../docstring of starlite.config.AppConfig.static_files_config:1
 msgid ""
-"An instance or list of :class:`StaticFilesConfig <starlite.config."
-"StaticFilesConfig>`."
+"An instance or list of :class:`StaticFilesConfig "
+"<starlite.config.StaticFilesConfig>`."
 msgstr ""
 
 #: ../../../../docstring of starlite.config.AppConfig.tags:1
@@ -331,8 +333,8 @@ msgstr ""
 
 #: ../../../../docstring of starlite.config.AppConfig.websocket_class:1
 msgid ""
-"An optional subclass of :class:`WebSocket <starlite.connection.websocket."
-"WebSocket>` to use for websocket connections."
+"An optional subclass of :class:`WebSocket "
+"<starlite.connection.websocket.WebSocket>` to use for websocket connections."
 msgstr ""
 
 #: ../../../../docstring of
@@ -583,8 +585,9 @@ msgstr ""
 #: ../../../../starlite/config/csrf.py:docstring of
 #: starlite.config.csrf.CSRFConfig:3
 msgid ""
-"To enable CSRF protection, pass an instance of this class to the :class:"
-"`Starlite <starlite.app.Starlite>` constructor using the 'csrf_config' key."
+"To enable CSRF protection, pass an instance of this class to "
+"the :class:`Starlite <starlite.app.Starlite>` constructor using the "
+"'csrf_config' key."
 msgstr ""
 
 #: ../../../../docstring of starlite.config.CSRFConfig.secret:1
@@ -643,14 +646,15 @@ msgstr ""
 #: ../../../../starlite/config/cache.py:docstring of
 #: starlite.config.cache.CacheConfig:3
 msgid ""
-"To enable response caching, pass an instance of this class to the :class:"
-"`Starlite <starlite.app.Starlite>` constructor using the 'cache_config' key."
+"To enable response caching, pass an instance of this class to "
+"the :class:`Starlite <starlite.app.Starlite>` constructor using the "
+"'cache_config' key."
 msgstr ""
 
 #: ../../../../docstring of starlite.config.CacheConfig.backend:1
 msgid ""
-"Instance conforming to :class:`CacheBackendProtocol <starlite.cache."
-"CacheBackendProtocol>`, default."
+"Instance conforming to :class:`CacheBackendProtocol "
+"<starlite.cache.CacheBackendProtocol>`, default."
 msgstr ""
 
 #: ../../../../docstring of starlite.config.CacheConfig.backend:3
@@ -667,8 +671,8 @@ msgstr ""
 
 #: ../../../../docstring of starlite.config.CacheConfig.cache_key_builder:3
 msgid ""
-":func:`default_cache_key_builder <starlite.config.cache."
-"default_cache_key_builder>` if not provided"
+":func:`default_cache_key_builder "
+"<starlite.config.cache.default_cache_key_builder>` if not provided"
 msgstr ""
 
 #: ../../../../starlite/config/cache.py:docstring of
@@ -689,8 +693,8 @@ msgstr ""
 #: ../../../../starlite/config/compression.py:docstring of
 #: starlite.config.compression.CompressionConfig:3
 msgid ""
-"To enable response compression, pass an instance of this class to the :class:"
-"`Starlite <starlite.app.Starlite>` constructor using the "
+"To enable response compression, pass an instance of this class to "
+"the :class:`Starlite <starlite.app.Starlite>` constructor using the "
 "'compression_config' key."
 msgstr ""
 
@@ -773,9 +777,7 @@ msgstr ""
 #: ../../../../starlite/config/logging.py:docstring of
 #: starlite.config.logging.LoggingConfig:1
 #: starlite.config.logging.StructLoggingConfig:1
-msgid ""
-"Bases: :py:class:`~starlite.config.logging.BaseLoggingConfig`, :py:class:"
-"`~pydantic.main.BaseModel`"
+msgid "Bases: :py:class:`~starlite.config.logging.BaseLoggingConfig`, :py:class:`~pydantic.main.BaseModel`"
 msgstr ""
 
 #: ../../../../starlite/config/logging.py:docstring of
@@ -894,8 +896,8 @@ msgstr ""
 
 #: ../../../../docstring of starlite.config.OpenAPIConfig.openapi_controller:3
 msgid ""
-"Must be subclass of :class:`OpenAPIController <starlite.openapi.controller."
-"OpenAPIController>`."
+"Must be subclass of :class:`OpenAPIController "
+"<starlite.openapi.controller.OpenAPIController>`."
 msgstr ""
 
 #: ../../../../docstring of starlite.config.OpenAPIConfig.title:1
@@ -923,8 +925,7 @@ msgstr ""
 #: ../../../../docstring of starlite.config.OpenAPIConfig.external_docs:3
 msgid ""
 "Should be an instance of :class:`ExternalDocumentation "
-"<pydantic_openapi_schema.v3_1_0.external_documentation."
-"ExternalDocumentation>`."
+"<pydantic_openapi_schema.v3_1_0.external_documentation.ExternalDocumentation>`."
 msgstr ""
 
 #: ../../../../docstring of starlite.config.OpenAPIConfig.license:1
@@ -933,8 +934,8 @@ msgstr ""
 
 #: ../../../../docstring of starlite.config.OpenAPIConfig.license:3
 msgid ""
-"Should be an instance of :class:`License <pydantic_openapi_schema.v3_1_0."
-"license.License>`."
+"Should be an instance of :class:`License "
+"<pydantic_openapi_schema.v3_1_0.license.License>`."
 msgstr ""
 
 #: ../../../../docstring of starlite.config.OpenAPIConfig.security:1
@@ -953,8 +954,8 @@ msgstr ""
 
 #: ../../../../docstring of starlite.config.OpenAPIConfig.components:3
 msgid ""
-"Should be an instance of :class:`Components <pydantic_openapi_schema.v3_10_0."
-"components.Components>` or a list thereof."
+"Should be an instance of :class:`Components "
+"<pydantic_openapi_schema.v3_10_0.components.Components>` or a list thereof."
 msgstr ""
 
 #: ../../../../docstring of starlite.config.OpenAPIConfig.servers:1
@@ -985,8 +986,8 @@ msgstr ""
 
 #: ../../../../docstring of starlite.config.OpenAPIConfig.webhooks:1
 msgid ""
-"A mapping of key to either :class:`PathItem <pydantic_openapi_schema.v3_1_0."
-"path_item.PathItem>` or."
+"A mapping of key to either :class:`PathItem "
+"<pydantic_openapi_schema.v3_1_0.path_item.PathItem>` or."
 msgstr ""
 
 #: ../../../../docstring of starlite.config.OpenAPIConfig.webhooks:3
@@ -1015,8 +1016,8 @@ msgstr ""
 #: ../../../../starlite/config/openapi.py:docstring of
 #: starlite.config.openapi.OpenAPIConfig.to_openapi_schema:3
 msgid ""
-"An instance of :class:`OpenAPI <pydantic_openapi_schema.v3_1_0.open_api."
-"OpenAPI>`."
+"An instance of :class:`OpenAPI "
+"<pydantic_openapi_schema.v3_1_0.open_api.OpenAPI>`."
 msgstr ""
 
 #: ../../../../starlite/config/static_files.py:docstring of
@@ -1027,8 +1028,8 @@ msgstr ""
 #: ../../../../starlite/config/static_files.py:docstring of
 #: starlite.config.static_files.StaticFilesConfig:3
 msgid ""
-"To enable static files, pass an instance of this class to the :class:"
-"`Starlite <starlite.app.Starlite>` constructor using the "
+"To enable static files, pass an instance of this class to "
+"the :class:`Starlite <starlite.app.Starlite>` constructor using the "
 "'static_files_config' key."
 msgstr ""
 
@@ -1160,8 +1161,8 @@ msgstr ""
 #: ../../../../starlite/config/template.py:docstring of
 #: starlite.config.template.TemplateConfig:1
 msgid ""
-"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~starlite.config.template."
-"T`], :py:class:`~pydantic.generics.GenericModel`"
+"Bases: :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~starlite.config.template.T`], :py:class:`~pydantic.generics.GenericModel`"
 msgstr ""
 
 #: ../../../../starlite/config/template.py:docstring of
@@ -1182,8 +1183,8 @@ msgstr ""
 
 #: ../../../../docstring of starlite.config.TemplateConfig.engine:1
 msgid ""
-"A template engine adhering to the :class:`TemplateEngineProtocol <starlite."
-"template.base.TemplateEngineProtocol>`."
+"A template engine adhering to the :class:`TemplateEngineProtocol "
+"<starlite.template.base.TemplateEngineProtocol>`."
 msgstr ""
 
 #: ../../../../docstring of starlite.config.TemplateConfig.engine_callback:1
@@ -1225,8 +1226,8 @@ msgstr ""
 #: ../../../../starlite/config/allowed_hosts.py:docstring of
 #: starlite.config.allowed_hosts.AllowedHostsConfig:3
 msgid ""
-"To enable allowed hosts protection, pass an instance of this class to the :"
-"class:`Starlite <starlite.app.Starlite>` constructor using the "
+"To enable allowed hosts protection, pass an instance of this class to "
+"the :class:`Starlite <starlite.app.Starlite>` constructor using the "
 "``allowed_hosts`` key."
 msgstr ""
 

@@ -256,9 +256,9 @@ msgstr ""
 
 #: ../../../usage/contrib/jwt.rst:22
 msgid ""
-"This backend inherits from the :class:`JWTAuth <starlite.contrib.jwt."
-"JWTAuth>` backend, with the difference being that instead of using a header "
-"for the JWT Token, it uses a cookie."
+"This backend inherits from the :class:`JWTAuth "
+"<starlite.contrib.jwt.JWTAuth>` backend, with the difference being that "
+"instead of using a header for the JWT Token, it uses a cookie."
 msgstr ""
 
 #: ../../../usage/contrib/jwt.rst:26
@@ -479,9 +479,10 @@ msgstr ""
 
 #: ../../../usage/contrib/jwt.rst:33
 msgid ""
-"This backend inherits from the :class:`JWTCookieAuth <starlite.contrib.jwt."
-"JWTCookieAuth>` backend. It works similarly to the ``JWTCookieAuth`` "
-"backend, but is meant to be used for OAUTH2 Bearer password flows."
+"This backend inherits from the :class:`JWTCookieAuth "
+"<starlite.contrib.jwt.JWTCookieAuth>` backend. It works similarly to the "
+"``JWTCookieAuth`` backend, but is meant to be used for OAUTH2 Bearer "
+"password flows."
 msgstr ""
 
 #: ../../../usage/contrib/jwt.rst:37

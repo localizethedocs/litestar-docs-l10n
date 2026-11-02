@@ -154,8 +154,8 @@ msgstr ""
 #: ../../../../docstring of
 #: starlite.openapi.controller.OpenAPIController.after_request:1
 msgid ""
-"A sync or async function executed before a :class:`Request <starlite."
-"connection.Request>` is passed to any route handler."
+"A sync or async function executed before a :class:`Request "
+"<starlite.connection.Request>` is passed to any route handler."
 msgstr ""
 
 #: ../../../../docstring of
@@ -194,8 +194,8 @@ msgstr ""
 #: ../../../../docstring of
 #: starlite.openapi.controller.OpenAPIController.dependencies:1
 msgid ""
-"A string keyed dictionary of dependency :class:`Provider <starlite."
-"datastructures.Provide>` instances."
+"A string keyed dictionary of dependency :class:`Provider "
+"<starlite.datastructures.Provide>` instances."
 msgstr ""
 
 #: ../../../../docstring of
@@ -239,17 +239,17 @@ msgstr ""
 
 #: ../../../../docstring of starlite.openapi.controller.OpenAPIController.opt:1
 msgid ""
-"A string key dictionary of arbitrary values that can be accessed in :class:"
-"`Guards <starlite.types.Guard>` or wherever you have access to :class:"
-"`Request <starlite.connection.request.Request>` or :class:`ASGI Scope "
-"<starlite.types.Scope>`."
+"A string key dictionary of arbitrary values that can be accessed "
+"in :class:`Guards <starlite.types.Guard>` or wherever you have access "
+"to :class:`Request <starlite.connection.request.Request>` or :class:`ASGI "
+"Scope <starlite.types.Scope>`."
 msgstr ""
 
 #: ../../../../docstring of
 #: starlite.openapi.controller.OpenAPIController.owner:1
 msgid ""
-"The :class:`Router <starlite.router.Router>` or :class:`Starlite <starlite."
-"app.Starlite>` app that owns the controller."
+"The :class:`Router <starlite.router.Router>` or :class:`Starlite "
+"<starlite.app.Starlite>` app that owns the controller."
 msgstr ""
 
 #: ../../../../docstring of
@@ -281,8 +281,8 @@ msgstr ""
 #: ../../../../docstring of
 #: starlite.openapi.controller.OpenAPIController.response_headers:1
 msgid ""
-"A string keyed dictionary mapping :class:`ResponseHeader <starlite."
-"datastructures.ResponseHeader>` instances."
+"A string keyed dictionary mapping :class:`ResponseHeader "
+"<starlite.datastructures.ResponseHeader>` instances."
 msgstr ""
 
 #: ../../../../docstring of

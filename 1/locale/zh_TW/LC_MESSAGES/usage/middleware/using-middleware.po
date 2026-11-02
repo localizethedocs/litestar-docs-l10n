@@ -249,14 +249,14 @@ msgstr ""
 
 #: ../../../usage/middleware/using-middleware.rst:90
 msgid ""
-":class:`NotFoundException <starlite.exceptions.http_exceptions."
-"NotFoundException>`"
+":class:`NotFoundException "
+"<starlite.exceptions.http_exceptions.NotFoundException>`"
 msgstr ""
 
 #: ../../../usage/middleware/using-middleware.rst:91
 msgid ""
-":class:`MethodNotAllowedException <starlite.exceptions.http_exceptions."
-"MethodNotAllowedException>`"
+":class:`MethodNotAllowedException "
+"<starlite.exceptions.http_exceptions.MethodNotAllowedException>`"
 msgstr ""
 
 #: ../../../usage/middleware/using-middleware.rst:93

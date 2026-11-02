@@ -24,10 +24,9 @@ msgstr ""
 #: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
 #: starlite.contrib.jwt.jwt_auth.JWTAuth:1
 msgid ""
-"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~starlite.security.base."
-"UserType`], :py:class:`~starlite.security.base.AbstractSecurityConfig`\\ [:"
-"py:obj:`~starlite.security.base.UserType`, :py:class:`~starlite.contrib.jwt."
-"jwt_token.Token`]"
+"Bases: :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~starlite.security.base.UserType`], :py:class:`~starlite.security.base.AbstractSecurityConfig`\\ "
+"[:py:obj:`~starlite.security.base.UserType`, :py:class:`~starlite.contrib.jwt.jwt_token.Token`]"
 msgstr ""
 
 #: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
@@ -132,8 +131,8 @@ msgstr ""
 #: starlite.contrib.jwt.JWTCookieAuth.openapi_components:3
 #: starlite.contrib.jwt.OAuth2PasswordBearerAuth.openapi_components:3
 msgid ""
-"An :class:`Components <pydantic_openapi_schema.v3_1_0.components."
-"Components>` instance."
+"An :class:`Components "
+"<pydantic_openapi_schema.v3_1_0.components.Components>` instance."
 msgstr ""
 
 #: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
@@ -144,15 +143,16 @@ msgstr ""
 #: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
 #: starlite.contrib.jwt.JWTAuth.security_requirement:3
 msgid ""
-":class:`SecurityRequirement <pydantic_openapi_schema.v3_1_0."
-"security_requirement.SecurityRequirement>`"
+":class:`SecurityRequirement "
+"<pydantic_openapi_schema.v3_1_0.security_requirement.SecurityRequirement>`"
 msgstr ""
 
 #: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
 #: starlite.contrib.jwt.JWTAuth.security_requirement:5
 msgid ""
-"An OpenAPI 3.1 :class:`SecurityRequirement <pydantic_openapi_schema.v3_1_0."
-"security_requirement.SecurityRequirement>` dictionary."
+"An OpenAPI 3.1 :class:`SecurityRequirement "
+"<pydantic_openapi_schema.v3_1_0.security_requirement.SecurityRequirement>` "
+"dictionary."
 msgstr ""
 
 #: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
@@ -166,8 +166,8 @@ msgstr ""
 #: starlite.contrib.jwt.JWTAuth.middleware:3
 #: starlite.contrib.jwt.JWTCookieAuth.middleware:3
 msgid ""
-"An instance of :class:`DefineMiddleware <starlite.middleware.base."
-"DefineMiddleware>`."
+"An instance of :class:`DefineMiddleware "
+"<starlite.middleware.base.DefineMiddleware>`."
 msgstr ""
 
 #: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
@@ -307,9 +307,7 @@ msgstr ""
 
 #: ../../../../starlite/contrib/jwt/middleware.py:docstring of
 #: starlite.contrib.jwt.middleware.JWTAuthenticationMiddleware:1
-msgid ""
-"Bases: :py:class:`~starlite.middleware.authentication."
-"AbstractAuthenticationMiddleware`"
+msgid "Bases: :py:class:`~starlite.middleware.authentication.AbstractAuthenticationMiddleware`"
 msgstr ""
 
 #: ../../../../starlite/contrib/jwt/middleware.py:docstring of
@@ -452,9 +450,9 @@ msgstr ""
 #: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
 #: starlite.contrib.jwt.jwt_auth.JWTCookieAuth:1
 msgid ""
-"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~starlite.security.base."
-"UserType`], :py:class:`~starlite.contrib.jwt.jwt_auth.JWTAuth`\\ [:py:obj:"
-"`~starlite.security.base.UserType`]"
+"Bases: :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~starlite.security.base.UserType`], :py:class:`~starlite.contrib.jwt.jwt_auth.JWTAuth`\\ "
+"[:py:obj:`~starlite.security.base.UserType`]"
 msgstr ""
 
 #: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
@@ -516,9 +514,7 @@ msgstr ""
 
 #: ../../../../starlite/contrib/jwt/middleware.py:docstring of
 #: starlite.contrib.jwt.middleware.JWTCookieAuthenticationMiddleware:1
-msgid ""
-"Bases: :py:class:`~starlite.contrib.jwt.middleware."
-"JWTAuthenticationMiddleware`"
+msgid "Bases: :py:class:`~starlite.contrib.jwt.middleware.JWTAuthenticationMiddleware`"
 msgstr ""
 
 #: ../../../../starlite/contrib/jwt/middleware.py:docstring of
@@ -568,9 +564,9 @@ msgstr ""
 #: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of
 #: starlite.contrib.jwt.jwt_auth.OAuth2PasswordBearerAuth:1
 msgid ""
-"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~starlite.security.base."
-"UserType`], :py:class:`~starlite.contrib.jwt.jwt_auth.JWTCookieAuth`\\ [:py:"
-"obj:`~starlite.security.base.UserType`]"
+"Bases: :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~starlite.security.base.UserType`], :py:class:`~starlite.contrib.jwt.jwt_auth.JWTCookieAuth`\\ "
+"[:py:obj:`~starlite.security.base.UserType`]"
 msgstr ""
 
 #: ../../../../starlite/contrib/jwt/jwt_auth.py:docstring of

@@ -24,8 +24,8 @@ msgstr ""
 #: ../../../../starlite/plugins/piccolo_orm.py:docstring of
 #: starlite.plugins.piccolo_orm.PiccoloORMPlugin:1
 msgid ""
-"Bases: :py:class:`~starlite.plugins.base.PluginProtocol`\\ [:py:class:"
-"`~piccolo.table.Table`]"
+"Bases: :py:class:`~starlite.plugins.base.PluginProtocol`\\ "
+"[:py:class:`~piccolo.table.Table`]"
 msgstr ""
 
 #: ../../../../starlite/plugins/piccolo_orm.py:docstring of

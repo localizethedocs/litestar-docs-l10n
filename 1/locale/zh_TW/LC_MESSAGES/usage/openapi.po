@@ -114,9 +114,10 @@ msgstr ""
 
 #: ../../../usage/openapi.rst:62
 msgid ""
-"By default, an `operation <https://spec.openapis.org/oas/latest."
-"html#operation-object>`_ schema is generated for all route handlers. You can "
-"omit a route handler from the schema by setting ``include_in_schema=False``:"
+"By default, an `operation <https://spec.openapis.org/oas/"
+"latest.html#operation-object>`_ schema is generated for all route handlers. "
+"You can omit a route handler from the schema by setting "
+"``include_in_schema=False``:"
 msgstr ""
 
 #: ../../../usage/openapi.rst:66
@@ -140,8 +141,8 @@ msgstr ""
 
 #: ../../../usage/openapi.rst:77
 msgid ""
-"A list of strings that correlate to the `tag specification <https://spec."
-"openapis.org/oas/latest.html#tag-object>`_."
+"A list of strings that correlate to the `tag specification <https://"
+"spec.openapis.org/oas/latest.html#tag-object>`_."
 msgstr ""
 
 #: ../../../usage/openapi.rst:82
@@ -151,9 +152,9 @@ msgstr ""
 #: ../../../usage/openapi.rst:80
 msgid ""
 "A list of dictionaries that correlate to the `security requirements "
-"specification <https://spec.openapis.org/oas/latest."
-"html#securityRequirementObject>`_. The values for this key are string keyed "
-"dictionaries with the values being a list of objects."
+"specification <https://spec.openapis.org/oas/"
+"latest.html#securityRequirementObject>`_. The values for this key are string "
+"keyed dictionaries with the values being a list of objects."
 msgstr ""
 
 #: ../../../usage/openapi.rst:85
@@ -356,9 +357,9 @@ msgstr ""
 
 #: ../../../usage/openapi.rst:193
 msgid ""
-"Starlite includes an :class:`OpenAPIController <starlite.openapi.controller."
-"OpenAPIController>` class that is used as the default controller in the :"
-"class:`OpenAPIConfig <.config.OpenAPIConfig>`."
+"Starlite includes an :class:`OpenAPIController "
+"<starlite.openapi.controller.OpenAPIController>` class that is used as the "
+"default controller in the :class:`OpenAPIConfig <.config.OpenAPIConfig>`."
 msgstr ""
 
 #: ../../../usage/openapi.rst:196
@@ -412,8 +413,8 @@ msgstr ""
 #: ../../../usage/openapi.rst:213
 msgid ""
 "Additionally, the root ``/schema/`` path is accessible, serving the site "
-"that is configured as the default in the :class:`OpenAPIConfig <starlite."
-"config.OpenAPIConfig>`."
+"that is configured as the default in the :class:`OpenAPIConfig "
+"<starlite.config.OpenAPIConfig>`."
 msgstr ""
 
 #: ../../../usage/openapi.rst:217
@@ -422,10 +423,10 @@ msgstr ""
 
 #: ../../../usage/openapi.rst:219
 msgid ""
-"You can use your own subclass of :class:`OpenAPIController <starlite.openapi."
-"controller.OpenAPIController>` by setting it as then controller to use in "
-"the :class:`OpenAPIConfig <starlite.config.OpenAPIConfig>` "
-"``openapi_controller`` kwarg."
+"You can use your own subclass of :class:`OpenAPIController "
+"<starlite.openapi.controller.OpenAPIController>` by setting it as then "
+"controller to use in the :class:`OpenAPIConfig "
+"<starlite.config.OpenAPIConfig>` ``openapi_controller`` kwarg."
 msgstr ""
 
 #: ../../../usage/openapi.rst:222
@@ -460,9 +461,9 @@ msgstr ""
 #: ../../../usage/openapi.rst:246
 msgid ""
 "You can change the default download paths for JS and CSS bundles as well as "
-"google fonts by subclassing :class:`OpenAPIController <starlite.openapi."
-"controller.OpenAPIController>`  and setting any of the following class "
-"variables:"
+"google fonts by subclassing :class:`OpenAPIController "
+"<starlite.openapi.controller.OpenAPIController>`  and setting any of the "
+"following class variables:"
 msgstr ""
 
 #: ../../../usage/openapi.rst:250
@@ -475,13 +476,13 @@ msgid ""
 "    redoc_google_fonts = False\n"
 "    redoc_js_url = \"https://offline_location/redoc.standalone.js\"\n"
 "    swagger_css_url = \"https://offline_location/swagger-ui-css\"\n"
-"    swagger_ui_bundle_js_url = \"https://offline_location/swagger-ui-bundle."
-"js\"\n"
+"    swagger_ui_bundle_js_url = \"https://offline_location/swagger-ui-"
+"bundle.js\"\n"
 "    swagger_ui_standalone_preset_js_url = (\n"
 "        \"https://offline_location/swagger-ui-standalone-preset.js\"\n"
 "    )\n"
-"    stoplight_elements_css_url = \"https://offline_location/spotlight-styles."
-"mins.css\"\n"
+"    stoplight_elements_css_url = \"https://offline_location/spotlight-"
+"styles.mins.css\"\n"
 "    stoplight_elements_js_url = (\n"
 "        \"https://offline_location/spotlight-web-components.min.js\"\n"
 "    )\n"
@@ -502,10 +503,10 @@ msgstr ""
 
 #: ../../../usage/openapi.rst:281
 msgid ""
-"The OpenAPI schema is generated during the :class:`Starlite <starlite.app."
-"Starlite>` app's init method. Once init is finished, its accessible as ``app."
-"openapi_schema``. As such you can always access it inside route handlers, "
-"dependencies etc. by access the request instance:"
+"The OpenAPI schema is generated during the :class:`Starlite "
+"<starlite.app.Starlite>` app's init method. Once init is finished, its "
+"accessible as ``app.openapi_schema``. As such you can always access it "
+"inside route handlers, dependencies etc. by access the request instance:"
 msgstr ""
 
 #: ../../../usage/openapi.rst:286
@@ -526,8 +527,8 @@ msgstr ""
 #: ../../../usage/openapi.rst:300
 msgid ""
 "You can customize the OpenAPI schemas generated for pydantic models by "
-"following the guidelines in the `pydantic docs <https://pydantic-docs."
-"helpmanual.io/usage/schema/>`_."
+"following the guidelines in the `pydantic docs <https://pydantic-"
+"docs.helpmanual.io/usage/schema/>`_."
 msgstr ""
 
 #: ../../../usage/openapi.rst:303

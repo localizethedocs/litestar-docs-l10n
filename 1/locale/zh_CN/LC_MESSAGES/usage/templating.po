@@ -23,10 +23,10 @@ msgstr ""
 
 #: ../../../usage/templating.rst:4
 msgid ""
-"Starlite has built-in support for both the `Jinja2 <https://jinja."
-"palletsprojects.com/en/3.0.x/>`_ and `Mako <https://www.makotemplates.org/"
-">`_ template engines, as well as abstractions to make use of any template "
-"engine you wish."
+"Starlite has built-in support for both the `Jinja2 <https://"
+"jinja.palletsprojects.com/en/3.0.x/>`_ and `Mako <https://"
+"www.makotemplates.org/>`_ template engines, as well as abstractions to make "
+"use of any template engine you wish."
 msgstr ""
 
 #: ../../../usage/templating.rst:9
@@ -107,9 +107,9 @@ msgstr ""
 
 #: ../../../usage/templating.rst:46
 msgid ""
-"The ``directory`` parameter passed to :class:`TemplateConfig <starlite."
-"config.template.TemplateConfig>` can be either a directory or list of "
-"directories to use for loading templates."
+"The ``directory`` parameter passed to :class:`TemplateConfig "
+"<starlite.config.template.TemplateConfig>` can be either a directory or list "
+"of directories to use for loading templates."
 msgstr ""
 
 #: ../../../usage/templating.rst:51
@@ -119,9 +119,9 @@ msgstr ""
 #: ../../../usage/templating.rst:53
 msgid ""
 "If you wish to use another templating engine, you can easily do so by "
-"implementing :class:`TemplateEngineProtocol <starlite.template."
-"TemplateEngineProtocol>`. This class accepts a generic argument which should "
-"be the template class, and it specifies two methods:"
+"implementing :class:`TemplateEngineProtocol "
+"<starlite.template.TemplateEngineProtocol>`. This class accepts a generic "
+"argument which should be the template class, and it specifies two methods:"
 msgstr ""
 
 #: ../../../usage/templating.rst:0
@@ -184,8 +184,8 @@ msgstr ""
 
 #: ../../../usage/templating.rst:80
 msgid ""
-"If you need to access the template engine instance, you can do so via the :"
-"class:`TemplateConfig.engine <starlite.config.template.TemplateConfig>` "
+"If you need to access the template engine instance, you can do so via "
+"the :class:`TemplateConfig.engine <starlite.config.template.TemplateConfig>` "
 "attribute:"
 msgstr ""
 
@@ -268,9 +268,9 @@ msgstr ""
 #: ../../../usage/templating.rst:118
 msgid ""
 "``name`` is the name of the template file within on of the specified "
-"directories. If no file with that name is found, a :class:"
-"`TemplateNotFoundException <starlite.exceptions.TemplateNotFoundException>` "
-"exception will be raised."
+"directories. If no file with that name is found, "
+"a :class:`TemplateNotFoundException "
+"<starlite.exceptions.TemplateNotFoundException>` exception will be raised."
 msgstr ""
 
 #: ../../../usage/templating.rst:121
@@ -434,9 +434,10 @@ msgstr ""
 #: ../../../usage/templating.rst:250
 msgid ""
 "To access urls for route handlers you can use the ``url_for`` function. Its "
-"signature and behaviour matches :meth:`route_reverse <starlite.app.Starlite."
-"route_reverse>` behaviour. More details about route handler indexing can be "
-"found :ref:`here <usage/route-handlers:route handler indexing>`."
+"signature and behaviour matches :meth:`route_reverse "
+"<starlite.app.Starlite.route_reverse>` behaviour. More details about route "
+"handler indexing can be found :ref:`here <usage/route-handlers:route handler "
+"indexing>`."
 msgstr ""
 
 #: ../../../usage/templating.rst:257
@@ -459,8 +460,9 @@ msgstr ""
 #: ../../../usage/templating.rst:260
 msgid ""
 "URLs for static files can be created using the ``url_for_static_asset`` "
-"function. It's signature and behaviour are identical to :meth:`app."
-"url_for_static_asset <starlite.app.Starlite.url_for_static_asset>`."
+"function. It's signature and behaviour are identical "
+"to :meth:`app.url_for_static_asset "
+"<starlite.app.Starlite.url_for_static_asset>`."
 msgstr ""
 
 #: ../../../usage/templating.rst:265
@@ -469,13 +471,14 @@ msgstr ""
 
 #: ../../../usage/templating.rst:267
 msgid ""
-"The  :class:`TemplateEngineProtocol <starlite.template.base."
-"TemplateEngineProtocol>` specifies the method ``register_template_callable`` "
-"that allows defining a custom callable on a template engine. This method is "
-"implemented for the two built in engines, and it can be used to register "
-"callables that will be injected into the template. The callable should "
-"expect one argument - the context dictionary. It can be any callable - a "
-"function, method or class that defines the call method. For example:"
+"The  :class:`TemplateEngineProtocol "
+"<starlite.template.base.TemplateEngineProtocol>` specifies the method "
+"``register_template_callable`` that allows defining a custom callable on a "
+"template engine. This method is implemented for the two built in engines, "
+"and it can be used to register callables that will be injected into the "
+"template. The callable should expect one argument - the context dictionary. "
+"It can be any callable - a function, method or class that defines the call "
+"method. For example:"
 msgstr ""
 
 #: ../../../usage/templating.rst:279 ../../../usage/templating.rst:290
@@ -650,8 +653,8 @@ msgstr ""
 
 #: ../../../usage/templating.rst:298
 msgid ""
-"Run the example with ``uvicorn template_functions:app`` , visit  "
-"http://127.0.0.1:8000, and you'll see"
+"Run the example with ``uvicorn template_functions:app`` , visit  http://"
+"127.0.0.1:8000, and you'll see"
 msgstr ""
 
 #: ../../../usage/templating.rst:-1

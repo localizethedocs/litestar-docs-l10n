@@ -38,9 +38,7 @@ msgstr ""
 
 #: ../../../../starlite/middleware/session/sqlalchemy_backend.py:docstring of
 #: starlite.middleware.session.sqlalchemy_backend.SessionModel:1
-msgid ""
-"Bases: :py:class:`~starlite.middleware.session.sqlalchemy_backend."
-"SessionModelMixin`"
+msgid "Bases: :py:class:`~starlite.middleware.session.sqlalchemy_backend.SessionModelMixin`"
 msgstr ""
 
 #: ../../../../starlite/middleware/session/sqlalchemy_backend.py:docstring of
@@ -126,10 +124,9 @@ msgstr ""
 #: ../../../../starlite/middleware/session/sqlalchemy_backend.py:docstring of
 #: starlite.middleware.session.sqlalchemy_backend.BaseSQLAlchemyBackend:1
 msgid ""
-"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~starlite.middleware.session."
-"sqlalchemy_backend.AnySASessionT`], :py:class:`~starlite.middleware.session."
-"base.ServerSideBackend`\\ [:py:class:`SQLAlchemyBackendConfig`], :py:class:"
-"`~abc.ABC`"
+"Bases: :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~starlite.middleware.session.sqlalchemy_backend.AnySASessionT`], :py:class:`~starlite.middleware.session.base.ServerSideBackend`\\ "
+"[:py:class:`SQLAlchemyBackendConfig`], :py:class:`~abc.ABC`"
 msgstr ""
 
 #: ../../../../starlite/middleware/session/sqlalchemy_backend.py:docstring of
@@ -148,8 +145,8 @@ msgstr ""
 #: starlite.middleware.session.sqlalchemy_backend.BaseSQLAlchemyBackend:5
 msgid ""
 "Requires ``sqlalchemy`` which needs to be installed separately, and a "
-"configured :class:`SQLAlchemyPlugin <starlite.plugins.sql_alchemy."
-"SQLAlchemyPlugin>`."
+"configured :class:`SQLAlchemyPlugin "
+"<starlite.plugins.sql_alchemy.SQLAlchemyPlugin>`."
 msgstr ""
 
 #: ../../../../starlite/middleware/session/sqlalchemy_backend.py:docstring of
@@ -170,9 +167,8 @@ msgstr ""
 #: ../../../../starlite/middleware/session/sqlalchemy_backend.py:docstring of
 #: starlite.middleware.session.sqlalchemy_backend.AsyncSQLAlchemyBackend:1
 msgid ""
-"Bases: :py:class:`~starlite.middleware.session.sqlalchemy_backend."
-"BaseSQLAlchemyBackend`\\ [:py:class:`~sqlalchemy.ext.asyncio.session."
-"AsyncSession`]"
+"Bases: :py:class:`~starlite.middleware.session.sqlalchemy_backend.BaseSQLAlchemyBackend`\\ "
+"[:py:class:`~sqlalchemy.ext.asyncio.session.AsyncSession`]"
 msgstr ""
 
 #: ../../../../starlite/middleware/session/sqlalchemy_backend.py:docstring of
@@ -261,8 +257,8 @@ msgstr ""
 #: ../../../../starlite/middleware/session/sqlalchemy_backend.py:docstring of
 #: starlite.middleware.session.sqlalchemy_backend.SQLAlchemyBackend:1
 msgid ""
-"Bases: :py:class:`~starlite.middleware.session.sqlalchemy_backend."
-"BaseSQLAlchemyBackend`\\ [:py:class:`~sqlalchemy.orm.session.Session`]"
+"Bases: :py:class:`~starlite.middleware.session.sqlalchemy_backend.BaseSQLAlchemyBackend`\\ "
+"[:py:class:`~sqlalchemy.orm.session.Session`]"
 msgstr ""
 
 #: ../../../../starlite/middleware/session/sqlalchemy_backend.py:docstring of
@@ -272,15 +268,14 @@ msgstr ""
 
 #: ../../../../starlite/middleware/session/sqlalchemy_backend.py:docstring of
 #: starlite.middleware.session.sqlalchemy_backend.SQLAlchemyBackendConfig:1
-msgid ""
-"Bases: :py:class:`~starlite.middleware.session.base.ServerSideSessionConfig`"
+msgid "Bases: :py:class:`~starlite.middleware.session.base.ServerSideSessionConfig`"
 msgstr ""
 
 #: ../../../../starlite/middleware/session/sqlalchemy_backend.py:docstring of
 #: starlite.middleware.session.sqlalchemy_backend.SQLAlchemyBackendConfig:1
 msgid ""
-"Configuration for :class:`SQLAlchemyBackend` and :class:"
-"`AsyncSQLAlchemyBackend`"
+"Configuration for :class:`SQLAlchemyBackend` "
+"and :class:`AsyncSQLAlchemyBackend`"
 msgstr ""
 
 #: ../../../../starlite/middleware/session/sqlalchemy_backend.py:docstring of

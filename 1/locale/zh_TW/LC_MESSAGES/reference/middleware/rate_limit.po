@@ -197,8 +197,8 @@ msgstr ""
 #: ../../../../docstring of
 #: starlite.middleware.rate_limit.RateLimitConfig.rate_limit:1
 msgid ""
-"A tuple containing a time unit (second, minute, hour, day) and quantity, e."
-"g. (\"day\", 1) or (\"minute\", 5)."
+"A tuple containing a time unit (second, minute, hour, day) and quantity, "
+"e.g. (\"day\", 1) or (\"minute\", 5)."
 msgstr ""
 
 #: ../../../../docstring of

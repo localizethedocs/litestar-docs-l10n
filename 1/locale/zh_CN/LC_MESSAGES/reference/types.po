@@ -243,10 +243,10 @@ msgstr ""
 #: ../../../../starlite/types/partial.py:docstring of
 #: starlite.types.partial.Partial:3
 msgid ""
-"Partial is a special typing helper that takes a generic T, which must be a :"
-"class:`TypedDict <typing.TypedDict>`, dataclass or pydantic model class, and "
-"returns to static type checkers a version of this T in which all fields - "
-"and nested fields - are optional."
+"Partial is a special typing helper that takes a generic T, which must be "
+"a :class:`TypedDict <typing.TypedDict>`, dataclass or pydantic model class, "
+"and returns to static type checkers a version of this T in which all fields "
+"- and nested fields - are optional."
 msgstr ""
 
 #: ../../../../starlite/types/partial.py:docstring of

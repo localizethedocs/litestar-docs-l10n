@@ -54,11 +54,11 @@ msgstr "參數"
 
 #: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:3
 msgid ""
-"An application level :class:`exception hook handler <starlite.types."
-"AfterExceptionHookHandler>` or list thereof.This hook is called after an "
-"exception occurs. In difference to exception handlers, it is not meant to "
-"return a response - only to process the exception (e.g. log it, send it to "
-"Sentry etc.)."
+"An application level :class:`exception hook handler "
+"<starlite.types.AfterExceptionHookHandler>` or list thereof.This hook is "
+"called after an exception occurs. In difference to exception handlers, it is "
+"not meant to return a response - only to process the exception (e.g. log it, "
+"send it to Sentry etc.)."
 msgstr ""
 
 #: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:6
@@ -76,16 +76,18 @@ msgstr ""
 
 #: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:10
 msgid ""
-"An application level :class:`life-span hook handler <starlite.types."
-"LifeSpanHookHandler>` or list thereof. This hook is called during the ASGI "
-"shutdown, after all callables in the 'on_shutdown' list have been called."
+"An application level :class:`life-span hook handler "
+"<starlite.types.LifeSpanHookHandler>` or list thereof. This hook is called "
+"during the ASGI shutdown, after all callables in the 'on_shutdown' list have "
+"been called."
 msgstr ""
 
 #: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:13
 msgid ""
-"An application level :class:`life-span hook handler <starlite.types."
-"LifeSpanHookHandler>` or list thereof. This hook is called during the ASGI "
-"startup, after all callables in the 'on_startup' list have been called."
+"An application level :class:`life-span hook handler "
+"<starlite.types.LifeSpanHookHandler>` or list thereof. This hook is called "
+"during the ASGI startup, after all callables in the 'on_startup' list have "
+"been called."
 msgstr ""
 
 #: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:16
@@ -102,23 +104,25 @@ msgstr ""
 
 #: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:20
 msgid ""
-"An application level :class:`before send hook handler <starlite.types."
-"BeforeMessageSendHookHandler>` or list thereof. This hook is called when the "
-"ASGI send function is called."
+"An application level :class:`before send hook handler "
+"<starlite.types.BeforeMessageSendHookHandler>` or list thereof. This hook is "
+"called when the ASGI send function is called."
 msgstr ""
 
 #: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:22
 msgid ""
-"An application level :class:`life-span hook handler <starlite.types."
-"LifeSpanHookHandler>` or list thereof. This hook is called during the ASGI "
-"shutdown, before any callables in the 'on_shutdown' list have been called."
+"An application level :class:`life-span hook handler "
+"<starlite.types.LifeSpanHookHandler>` or list thereof. This hook is called "
+"during the ASGI shutdown, before any callables in the 'on_shutdown' list "
+"have been called."
 msgstr ""
 
 #: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:25
 msgid ""
-"An application level :class:`life-span hook handler <starlite.types."
-"LifeSpanHookHandler>` or list thereof. This hook is called during the ASGI "
-"startup, before any callables in the 'on_startup' list have been called."
+"An application level :class:`life-span hook handler "
+"<starlite.types.LifeSpanHookHandler>` or list thereof. This hook is called "
+"during the ASGI startup, before any callables in the 'on_startup' list have "
+"been called."
 msgstr ""
 
 #: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:28
@@ -127,9 +131,9 @@ msgstr ""
 
 #: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:29
 msgid ""
-"A ``cache-control`` header of type :class:`CacheControlHeader <starlite."
-"datastructures.CacheControlHeader>` to add to route handlers of this app. "
-"Can be overridden by route handlers."
+"A ``cache-control`` header of type :class:`CacheControlHeader "
+"<starlite.datastructures.CacheControlHeader>` to add to route handlers of "
+"this app. Can be overridden by route handlers."
 msgstr ""
 
 #: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:32
@@ -152,8 +156,8 @@ msgstr ""
 
 #: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:37
 msgid ""
-"A string keyed dictionary of dependency :class:`Provider <starlite."
-"datastructures.Provide>` instances."
+"A string keyed dictionary of dependency :class:`Provider "
+"<starlite.datastructures.Provide>` instances."
 msgstr ""
 
 #: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:38
@@ -178,8 +182,8 @@ msgstr ""
 
 #: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:43
 msgid ""
-"A subclass of :class:`BaseLoggingConfig <starlite.config.logging."
-"BaseLoggingConfig>`."
+"A subclass of :class:`BaseLoggingConfig "
+"<starlite.config.logging.BaseLoggingConfig>`."
 msgstr ""
 
 #: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:44
@@ -195,11 +199,11 @@ msgstr ""
 #: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:47
 msgid ""
 "A sequence of :class:`OnAppInitHandler <starlite.types.OnAppInitHandler>` "
-"instances. Handlers receive an instance of :class:`AppConfig <starlite."
-"config.app.AppConfig>` that will have been initially populated with the "
-"parameters passed to :class:`Starlite <starlite.app.Starlite>`, and must "
-"return an instance of same. If more than one handler is registered they are "
-"called in the order they are provided."
+"instances. Handlers receive an instance of :class:`AppConfig "
+"<starlite.config.app.AppConfig>` that will have been initially populated "
+"with the parameters passed to :class:`Starlite <starlite.app.Starlite>`, and "
+"must return an instance of same. If more than one handler is registered they "
+"are called in the order they are provided."
 msgstr ""
 
 #: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:51
@@ -220,10 +224,10 @@ msgstr ""
 
 #: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:56
 msgid ""
-"A string keyed dictionary of arbitrary values that can be accessed in :class:"
-"`Guards <starlite.types.Guard>` or wherever you have access to :class:"
-"`Request <starlite.connection.request.Request>` or :class:`ASGI Scope "
-"<starlite.types.Scope>`."
+"A string keyed dictionary of arbitrary values that can be accessed "
+"in :class:`Guards <starlite.types.Guard>` or wherever you have access "
+"to :class:`Request <starlite.connection.request.Request>` or :class:`ASGI "
+"Scope <starlite.types.Scope>`."
 msgstr ""
 
 #: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:58
@@ -238,8 +242,8 @@ msgstr ""
 
 #: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:61
 msgid ""
-"An optional subclass of :class:`Request <starlite.connection.request."
-"Request>` to use for http connections."
+"An optional subclass of :class:`Request "
+"<starlite.connection.request.Request>` to use for http connections."
 msgstr ""
 
 #: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:63
@@ -254,16 +258,16 @@ msgstr ""
 
 #: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:65
 msgid ""
-"A string keyed dictionary mapping :class:`ResponseHeader <starlite."
-"datastructures.ResponseHeader>` instances."
+"A string keyed dictionary mapping :class:`ResponseHeader "
+"<starlite.datastructures.ResponseHeader>` instances."
 msgstr ""
 
 #: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:67
 msgid ""
-"A required list of route handlers, which can include instances of :class:"
-"`Router <starlite.router.Router>`, subclasses of :class:`Controller "
-"<starlite.controller.Controller>` or any function decorated by the route "
-"handler decorators."
+"A required list of route handlers, which can include instances "
+"of :class:`Router <starlite.router.Router>`, subclasses "
+"of :class:`Controller <starlite.controller.Controller>` or any function "
+"decorated by the route handler decorators."
 msgstr ""
 
 #: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:70
@@ -276,8 +280,8 @@ msgstr ""
 
 #: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:72
 msgid ""
-"An instance or list of :class:`StaticFilesConfig <starlite.config."
-"StaticFilesConfig>`"
+"An instance or list of :class:`StaticFilesConfig "
+"<starlite.config.StaticFilesConfig>`"
 msgstr ""
 
 #: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:73
@@ -298,8 +302,8 @@ msgstr ""
 
 #: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__init__:76
 msgid ""
-"An optional subclass of :class:`WebSocket <starlite.connection.websocket."
-"WebSocket>` to use for websocket connections."
+"An optional subclass of :class:`WebSocket "
+"<starlite.connection.websocket.WebSocket>` to use for websocket connections."
 msgstr ""
 
 #: ../../../../starlite/app.py:docstring of starlite.app.Starlite.__call__:1
@@ -350,8 +354,8 @@ msgstr ""
 
 #: ../../../../starlite/app.py:docstring of starlite.app.Starlite.register:5
 msgid ""
-"an instance of :class:`Router <starlite.router.Router>`, a subclass of :"
-"class:`Controller <starlite.controller.Controller>` or any function "
+"an instance of :class:`Router <starlite.router.Router>`, a subclass "
+"of :class:`Controller <starlite.controller.Controller>` or any function "
 "decorated by the route handler decorators."
 msgstr ""
 

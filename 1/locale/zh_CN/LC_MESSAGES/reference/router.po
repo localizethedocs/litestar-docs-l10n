@@ -48,10 +48,10 @@ msgstr ""
 #: ../../../../starlite/router.py:docstring of
 #: starlite.router.Router.__init__:3
 msgid ""
-"A sync or async function executed before a :class:`Request <starlite."
-"connection.Request>` is passed to any route handler. If this function "
-"returns a value, the request will not reach the route handler, and instead "
-"this value will be used."
+"A sync or async function executed before a :class:`Request "
+"<starlite.connection.Request>` is passed to any route handler. If this "
+"function returns a value, the request will not reach the route handler, and "
+"instead this value will be used."
 msgstr ""
 
 #: ../../../../starlite/router.py:docstring of
@@ -74,16 +74,16 @@ msgstr ""
 #: ../../../../starlite/router.py:docstring of
 #: starlite.router.Router.__init__:11
 msgid ""
-"A ``cache-control`` header of type :class:`CacheControlHeader <starlite."
-"datastructures.CacheControlHeader>` to add to route handlers of this router. "
-"Can be overridden by route handlers."
+"A ``cache-control`` header of type :class:`CacheControlHeader "
+"<starlite.datastructures.CacheControlHeader>` to add to route handlers of "
+"this router. Can be overridden by route handlers."
 msgstr ""
 
 #: ../../../../starlite/router.py:docstring of
 #: starlite.router.Router.__init__:14
 msgid ""
-"A string keyed dictionary of dependency :class:`Provider <starlite."
-"datastructures.Provide>` instances."
+"A string keyed dictionary of dependency :class:`Provider "
+"<starlite.datastructures.Provide>` instances."
 msgstr ""
 
 #: ../../../../starlite/router.py:docstring of
@@ -113,10 +113,10 @@ msgstr ""
 #: ../../../../starlite/router.py:docstring of
 #: starlite.router.Router.__init__:21
 msgid ""
-"A string keyed dictionary of arbitrary values that can be accessed in :class:"
-"`Guards <starlite.types.Guard>` or wherever you have access to :class:"
-"`Request <starlite.connection.request.Request>` or :class:`ASGI Scope "
-"<starlite.types.Scope>`."
+"A string keyed dictionary of arbitrary values that can be accessed "
+"in :class:`Guards <starlite.types.Guard>` or wherever you have access "
+"to :class:`Request <starlite.connection.request.Request>` or :class:`ASGI "
+"Scope <starlite.types.Scope>`."
 msgstr ""
 
 #: ../../../../starlite/router.py:docstring of
@@ -149,17 +149,17 @@ msgstr ""
 #: ../../../../starlite/router.py:docstring of
 #: starlite.router.Router.__init__:31
 msgid ""
-"A string keyed dictionary mapping :class:`ResponseHeader <starlite."
-"datastructures.ResponseHeader>` instances."
+"A string keyed dictionary mapping :class:`ResponseHeader "
+"<starlite.datastructures.ResponseHeader>` instances."
 msgstr ""
 
 #: ../../../../starlite/router.py:docstring of
 #: starlite.router.Router.__init__:33
 msgid ""
-"A required list of route handlers, which can include instances of :class:"
-"`Router <starlite.router.Router>`, subclasses of :class:`Controller "
-"<starlite.controller.Controller>` or any function decorated by the route "
-"handler decorators."
+"A required list of route handlers, which can include instances "
+"of :class:`Router <starlite.router.Router>`, subclasses "
+"of :class:`Controller <starlite.controller.Controller>` or any function "
+"decorated by the route handler decorators."
 msgstr ""
 
 #: ../../../../starlite/router.py:docstring of
@@ -192,9 +192,9 @@ msgstr ""
 #: starlite.router.Router.register:3
 msgid ""
 "a subclass or instance of Controller, an instance of ``Router`` or a "
-"function/method that has been decorated by any of the routing decorators, e."
-"g. :class:`get <starlite.handlers.http.get>`, :class:`post <starlite."
-"handlers.http.post>`."
+"function/method that has been decorated by any of the routing decorators, "
+"e.g. :class:`get <starlite.handlers.http.get>`, :class:`post "
+"<starlite.handlers.http.post>`."
 msgstr ""
 
 #: ../../../../starlite/router.py:docstring of

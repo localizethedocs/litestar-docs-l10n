@@ -24,9 +24,8 @@ msgstr ""
 #: ../../../../starlite/connection/base.py:docstring of
 #: starlite.connection.base.ASGIConnection:1
 msgid ""
-"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~starlite.connection.base."
-"Handler`, :py:obj:`~starlite.connection.base.User`, :py:obj:`~starlite."
-"connection.base.Auth`]"
+"Bases: :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~starlite.connection.base.Handler`, :py:obj:`~starlite.connection.base.User`, :py:obj:`~starlite.connection.base.Auth`]"
 msgstr ""
 
 #: ../../../../starlite/connection/base.py:docstring of
@@ -289,9 +288,9 @@ msgstr ""
 #: ../../../../starlite/connection/base.py:docstring of
 #: starlite.connection.base.ASGIConnection.set_session:3
 msgid ""
-"If the :class:`Starlite SessionMiddleware <starlite.middleware.session."
-"SessionMiddleware>` is enabled, the session will be added to the response as "
-"a cookie header."
+"If the :class:`Starlite SessionMiddleware "
+"<starlite.middleware.session.SessionMiddleware>` is enabled, the session "
+"will be added to the response as a cookie header."
 msgstr ""
 
 #: ../../../../starlite/connection/base.py:docstring of
@@ -313,9 +312,9 @@ msgstr ""
 #: ../../../../starlite/connection/base.py:docstring of
 #: starlite.connection.base.ASGIConnection.clear_session:3
 msgid ""
-"If the :class:`Starlite SessionMiddleware <starlite.middleware.session."
-"SessionMiddleware>` is enabled, this will cause the session data to be "
-"cleared."
+"If the :class:`Starlite SessionMiddleware "
+"<starlite.middleware.session.SessionMiddleware>` is enabled, this will cause "
+"the session data to be cleared."
 msgstr ""
 
 #: ../../../../starlite/connection/base.py:docstring of

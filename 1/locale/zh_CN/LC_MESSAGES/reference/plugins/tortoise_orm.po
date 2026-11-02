@@ -24,8 +24,8 @@ msgstr ""
 #: ../../../../starlite/plugins/tortoise_orm.py:docstring of
 #: starlite.plugins.tortoise_orm.TortoiseORMPlugin:1
 msgid ""
-"Bases: :py:class:`~starlite.plugins.base.PluginProtocol`\\ [:py:class:"
-"`~tortoise.models.Model`]"
+"Bases: :py:class:`~starlite.plugins.base.PluginProtocol`\\ "
+"[:py:class:`~tortoise.models.Model`]"
 msgstr ""
 
 #: ../../../../starlite/plugins/tortoise_orm.py:docstring of

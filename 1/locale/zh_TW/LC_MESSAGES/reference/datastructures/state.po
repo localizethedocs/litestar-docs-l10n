@@ -230,8 +230,8 @@ msgstr ""
 #: ../../../../starlite/datastructures/state.py:docstring of
 #: starlite.datastructures.state.State:1
 msgid ""
-"Bases: :py:class:`~starlite.datastructures.state.ImmutableState`, :py:class:"
-"`~typing.MutableMapping`\\ [:py:class:`str`, :py:obj:`~typing.Any`]"
+"Bases: :py:class:`~starlite.datastructures.state.ImmutableState`, :py:class:`~typing.MutableMapping`\\ "
+"[:py:class:`str`, :py:obj:`~typing.Any`]"
 msgstr ""
 
 #: ../../../../starlite/datastructures/state.py:docstring of

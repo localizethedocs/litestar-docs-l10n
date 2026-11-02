@@ -23,9 +23,9 @@ msgstr ""
 
 #: ../../../usage/exceptions.rst:4
 msgid ""
-"Starlite define a base exception called :class:`StarliteException <starlite."
-"exceptions.StarLiteException>` which serves as a basis to all other "
-"exceptions."
+"Starlite define a base exception called :class:`StarliteException "
+"<starlite.exceptions.StarLiteException>` which serves as a basis to all "
+"other exceptions."
 msgstr ""
 
 #: ../../../usage/exceptions.rst:7
@@ -49,18 +49,20 @@ msgstr ""
 
 #: ../../../usage/exceptions.rst:16
 msgid ""
-"For missing extra dependencies, Starlite will raise either :class:"
-"`MissingDependencyException <starlite.exceptions."
-"MissingDependencyException>`. For example, if you try to use the :doc:"
-"`SQLAlchemyPlugin </usage/plugins/sqlalchemy>` without having SQLAlchemy "
-"installed, this will be raised when you start the application."
+"For missing extra dependencies, Starlite will raise "
+"either :class:`MissingDependencyException "
+"<starlite.exceptions.MissingDependencyException>`. For example, if you try "
+"to use the :doc:`SQLAlchemyPlugin </usage/plugins/sqlalchemy>` without "
+"having SQLAlchemy installed, this will be raised when you start the "
+"application."
 msgstr ""
 
 #: ../../../usage/exceptions.rst:21
 msgid ""
-"For other configuration issues, Starlite will raise :class:"
-"`ImproperlyConfiguredException <starlite.exceptions."
-"ImproperlyConfiguredException>` with a message explaining the issue."
+"For other configuration issues, Starlite will "
+"raise :class:`ImproperlyConfiguredException "
+"<starlite.exceptions.ImproperlyConfiguredException>` with a message "
+"explaining the issue."
 msgstr ""
 
 #: ../../../usage/exceptions.rst:26
@@ -69,10 +71,10 @@ msgstr ""
 
 #: ../../../usage/exceptions.rst:28
 msgid ""
-"For application exceptions, Starlite uses the class :class:`HTTPException <."
-"exceptions.http_exceptions.HTTPException>`, which inherits from :class:"
-"`StarliteException <.exceptions.base.StarliteException>`. This exception "
-"will be serialized into a JSON response of the following schema:"
+"For application exceptions, Starlite uses the class :class:`HTTPException "
+"<.exceptions.http_exceptions.HTTPException>`, which inherits "
+"from :class:`StarliteException <.exceptions.base.StarliteException>`. This "
+"exception will be serialized into a JSON response of the following schema:"
 msgstr ""
 
 #: ../../../usage/exceptions.rst:32
@@ -184,10 +186,10 @@ msgstr ""
 
 #: ../../../usage/exceptions.rst:63
 msgid ""
-"When a value fails ``pydantic`` validation, the result will be a :class:"
-"`ValidationException` with the ``extra`` key set to the pydantic validation "
-"errors. Thus, this data will be made available for the API consumers by "
-"default."
+"When a value fails ``pydantic`` validation, the result will be "
+"a :class:`ValidationException` with the ``extra`` key set to the pydantic "
+"validation errors. Thus, this data will be made available for the API "
+"consumers by default."
 msgstr ""
 
 #: ../../../usage/exceptions.rst:68
@@ -365,8 +367,8 @@ msgid ""
 "def router_handler_exception_handler(request: Request, exc: "
 "ValidationException) -> Response:\n"
 "    return Response(\n"
-"        content={\"error\": \"validation error\", \"path\": request.url."
-"path},\n"
+"        content={\"error\": \"validation error\", \"path\": "
+"request.url.path},\n"
 "        status_code=400,\n"
 "    )\n"
 "\n"

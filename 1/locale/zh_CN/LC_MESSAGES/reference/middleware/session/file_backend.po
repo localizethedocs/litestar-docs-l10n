@@ -49,8 +49,8 @@ msgstr ""
 #: ../../../../starlite/middleware/session/file_backend.py:docstring of
 #: starlite.middleware.session.file_backend.FileBackend:1
 msgid ""
-"Bases: :py:class:`~starlite.middleware.session.base.ServerSideBackend`\\ [:"
-"py:class:`FileBackendConfig`]"
+"Bases: :py:class:`~starlite.middleware.session.base.ServerSideBackend`\\ "
+"[:py:class:`FileBackendConfig`]"
 msgstr ""
 
 #: ../../../../starlite/middleware/session/file_backend.py:docstring of
@@ -145,8 +145,7 @@ msgstr ""
 
 #: ../../../../starlite/middleware/session/file_backend.py:docstring of
 #: starlite.middleware.session.file_backend.FileBackendConfig:1
-msgid ""
-"Bases: :py:class:`~starlite.middleware.session.base.ServerSideSessionConfig`"
+msgid "Bases: :py:class:`~starlite.middleware.session.base.ServerSideSessionConfig`"
 msgstr ""
 
 #: ../../../../starlite/middleware/session/file_backend.py:docstring of

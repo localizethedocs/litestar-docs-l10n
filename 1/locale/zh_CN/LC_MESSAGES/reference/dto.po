@@ -51,8 +51,8 @@ msgstr ""
 
 #: ../../../../starlite/dto.py:docstring of starlite.dto.DTO:1
 msgid ""
-"Bases: :py:class:`~pydantic.generics.GenericModel`, :py:class:`~typing."
-"Generic`\\ [:py:obj:`~starlite.dto.T`]"
+"Bases: :py:class:`~pydantic.generics.GenericModel`, :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~starlite.dto.T`]"
 msgstr ""
 
 #: ../../../../starlite/dto.py:docstring of starlite.dto.DTO:1
@@ -121,9 +121,9 @@ msgstr ""
 
 #: ../../../../starlite/dto.py:docstring of starlite.dto.DTOFactory.__call__:1
 msgid ""
-"Given a supported model class - either pydantic, :class:`TypedDict <typing."
-"TypedDict>`, dataclass or a class supported via plugins, create a DTO "
-"pydantic model class."
+"Given a supported model class - either pydantic, :class:`TypedDict "
+"<typing.TypedDict>`, dataclass or a class supported via plugins, create a "
+"DTO pydantic model class."
 msgstr ""
 
 #: ../../../../starlite/dto.py:docstring of starlite.dto.DTOFactory.__call__:4
@@ -166,8 +166,9 @@ msgstr ""
 
 #: ../../../../starlite/dto.py:docstring of starlite.dto.DTOFactory.__call__:47
 msgid ""
-"A type that is either a subclass of ``BaseModel``, :class:`TypedDict <typing."
-"TypedDict>`, a ``dataclass`` or any other type with a plugin registered."
+"A type that is either a subclass of ``BaseModel``, :class:`TypedDict "
+"<typing.TypedDict>`, a ``dataclass`` or any other type with a plugin "
+"registered."
 msgstr ""
 
 #: ../../../../starlite/dto.py:docstring of starlite.dto.DTOFactory.__call__:50
@@ -199,6 +200,7 @@ msgstr ""
 
 #: ../../../../starlite/dto.py:docstring of starlite.dto.DTOFactory.__call__:63
 msgid ""
-"If ``source`` is not a pydantic model, :class:`TypedDict <typing."
-"TypedDict>`     or dataclass, and there is no plugin registered for its type."
+"If ``source`` is not a pydantic model, :class:`TypedDict "
+"<typing.TypedDict>`     or dataclass, and there is no plugin registered for "
+"its type."
 msgstr ""

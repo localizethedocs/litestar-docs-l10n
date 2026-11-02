@@ -94,16 +94,16 @@ msgstr ""
 #: ../../../../starlite/datastructures/background_tasks.py:docstring of
 #: starlite.datastructures.background_tasks.BackgroundTasks.__init__:3
 msgid ""
-"An iterable of :class:`BackgroundTask <starlite.datastructures."
-"BackgroundTask>` instances."
+"An iterable of :class:`BackgroundTask "
+"<starlite.datastructures.BackgroundTask>` instances."
 msgstr ""
 
 #: ../../../../starlite/datastructures/background_tasks.py:docstring of
 #: starlite.datastructures.background_tasks.BackgroundTasks.__init__:4
 msgid ""
 "If you set this value to ``True`` than the tasks will run concurrently, "
-"using an [anyio.task_group](https://anyio.readthedocs.io/en/stable/tasks."
-"html). Note: this will not preserve execution order."
+"using an [anyio.task_group](https://anyio.readthedocs.io/en/stable/"
+"tasks.html). Note: this will not preserve execution order."
 msgstr ""
 
 #: ../../../../starlite/datastructures/background_tasks.py:docstring of

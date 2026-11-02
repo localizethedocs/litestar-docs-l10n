@@ -182,8 +182,8 @@ msgstr ""
 #: ../../../../starlite/utils/predicates.py:docstring of
 #: starlite.utils.predicates.is_dataclass_class:2
 msgid ""
-"Wrap :func:`is_dataclass <dataclasses.is_dataclass>` in a :data:`typing."
-"TypeGuard`, narrowing to type only, not"
+"Wrap :func:`is_dataclass <dataclasses.is_dataclass>` in "
+"a :data:`typing.TypeGuard`, narrowing to type only, not"
 msgstr ""
 
 #: ../../../../starlite/utils/predicates.py:docstring of
@@ -204,8 +204,8 @@ msgstr ""
 #: ../../../../starlite/utils/predicates.py:docstring of
 #: starlite.utils.predicates.is_dataclass_class_or_instance:1
 msgid ""
-"Wrap :func:`is_dataclass <dataclasses.is_dataclass>` in a :data:`typing."
-"TypeGuard`."
+"Wrap :func:`is_dataclass <dataclasses.is_dataclass>` in "
+"a :data:`typing.TypeGuard`."
 msgstr ""
 
 #: ../../../../starlite/utils/predicates.py:docstring of

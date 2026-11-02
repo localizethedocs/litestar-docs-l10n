@@ -84,8 +84,8 @@ msgstr ""
 #: ../../../../starlite/contrib/mako.py:docstring of
 #: starlite.contrib.mako.MakoTemplateEngine:1
 msgid ""
-"Bases: :py:class:`~starlite.template.base.TemplateEngineProtocol`\\ [:py:"
-"class:`~starlite.contrib.mako.MakoTemplate`]"
+"Bases: :py:class:`~starlite.template.base.TemplateEngineProtocol`\\ "
+"[:py:class:`~starlite.contrib.mako.MakoTemplate`]"
 msgstr ""
 
 #: ../../../../starlite/contrib/mako.py:docstring of

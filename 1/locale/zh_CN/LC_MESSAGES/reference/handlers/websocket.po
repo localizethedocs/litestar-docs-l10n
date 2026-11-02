@@ -24,8 +24,8 @@ msgstr ""
 #: ../../../../starlite/handlers/websocket.py:docstring of
 #: starlite.handlers.websocket.WebsocketRouteHandler:1
 msgid ""
-"Bases: :py:class:`~starlite.handlers.base.BaseRouteHandler`\\ [:py:class:"
-"`WebsocketRouteHandler`]"
+"Bases: :py:class:`~starlite.handlers.base.BaseRouteHandler`\\ "
+"[:py:class:`WebsocketRouteHandler`]"
 msgstr ""
 
 #: ../../../../starlite/handlers/websocket.py:docstring of
@@ -58,8 +58,8 @@ msgstr ""
 #: ../../../../starlite/handlers/websocket.py:docstring of
 #: starlite.handlers.websocket.WebsocketRouteHandler.__init__:4
 msgid ""
-"A string keyed dictionary of dependency :class:`Provider <starlite."
-"datastructures.Provide>` instances."
+"A string keyed dictionary of dependency :class:`Provider "
+"<starlite.datastructures.Provide>` instances."
 msgstr ""
 
 #: ../../../../starlite/handlers/websocket.py:docstring of
@@ -87,10 +87,10 @@ msgstr ""
 #: ../../../../starlite/handlers/websocket.py:docstring of
 #: starlite.handlers.websocket.WebsocketRouteHandler.__init__:9
 msgid ""
-"A string keyed dictionary of arbitrary values that can be accessed in :class:"
-"`Guards <starlite.types.Guard>` or wherever you have access to :class:"
-"`Request <starlite.connection.request.Request>` or :class:`ASGI Scope "
-"<starlite.types.Scope>`."
+"A string keyed dictionary of arbitrary values that can be accessed "
+"in :class:`Guards <starlite.types.Guard>` or wherever you have access "
+"to :class:`Request <starlite.connection.request.Request>` or :class:`ASGI "
+"Scope <starlite.types.Scope>`."
 msgstr ""
 
 #: ../../../../starlite/handlers/websocket.py:docstring of

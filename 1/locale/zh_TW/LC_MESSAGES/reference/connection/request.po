@@ -24,10 +24,9 @@ msgstr ""
 #: ../../../../starlite/connection/request.py:docstring of
 #: starlite.connection.request.Request:1
 msgid ""
-"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~starlite.connection.base."
-"User`, :py:obj:`~starlite.connection.base.Auth`], :py:class:`~starlite."
-"connection.base.ASGIConnection`\\ [:py:class:`HTTPRouteHandler`, :py:obj:"
-"`~starlite.connection.base.User`, :py:obj:`~starlite.connection.base.Auth`]"
+"Bases: :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~starlite.connection.base.User`, :py:obj:`~starlite.connection.base.Auth`], :py:class:`~starlite.connection.base.ASGIConnection`\\ "
+"[:py:class:`HTTPRouteHandler`, :py:obj:`~starlite.connection.base.User`, :py:obj:`~starlite.connection.base.Auth`]"
 msgstr ""
 
 #: ../../../../starlite/connection/request.py:docstring of

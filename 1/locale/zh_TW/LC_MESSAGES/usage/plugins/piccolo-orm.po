@@ -23,9 +23,9 @@ msgstr ""
 
 #: ../../../usage/plugins/piccolo-orm.rst:4
 msgid ""
-"To use the :class:`PiccoloORMPlugin <starlite.plugins.piccolo_orm."
-"PiccoloORMPlugin>` import it and pass it to the :class:`Starlite constructor "
-"<starlite.app.Starlite>`:"
+"To use the :class:`PiccoloORMPlugin "
+"<starlite.plugins.piccolo_orm.PiccoloORMPlugin>` import it and pass it to "
+"the :class:`Starlite constructor <starlite.app.Starlite>`:"
 msgstr ""
 
 #: ../../../usage/plugins/piccolo-orm.rst:8

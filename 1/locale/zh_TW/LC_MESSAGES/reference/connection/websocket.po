@@ -24,11 +24,9 @@ msgstr ""
 #: ../../../../starlite/connection/websocket.py:docstring of
 #: starlite.connection.websocket.WebSocket:1
 msgid ""
-"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~starlite.connection.base."
-"User`, :py:obj:`~starlite.connection.base.Auth`], :py:class:`~starlite."
-"connection.base.ASGIConnection`\\ [:py:class:`WebsocketRouteHandler`, :py:"
-"obj:`~starlite.connection.base.User`, :py:obj:`~starlite.connection.base."
-"Auth`]"
+"Bases: :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~starlite.connection.base.User`, :py:obj:`~starlite.connection.base.Auth`], :py:class:`~starlite.connection.base.ASGIConnection`\\ "
+"[:py:class:`WebsocketRouteHandler`, :py:obj:`~starlite.connection.base.User`, :py:obj:`~starlite.connection.base.Auth`]"
 msgstr ""
 
 #: ../../../../starlite/connection/websocket.py:docstring of

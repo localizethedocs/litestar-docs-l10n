@@ -25,8 +25,8 @@ msgstr ""
 #: starlite.datastructures.pagination.ClassicPagination:1
 #: starlite.datastructures.pagination.OffsetPagination:1
 msgid ""
-"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~starlite.datastructures."
-"pagination.T`]"
+"Bases: :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~starlite.datastructures.pagination.T`]"
 msgstr ""
 
 #: ../../../../starlite/datastructures/pagination.py:docstring of
@@ -81,8 +81,8 @@ msgstr ""
 #: ../../../../starlite/datastructures/pagination.py:docstring of
 #: starlite.datastructures.pagination.CursorPagination:1
 msgid ""
-"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~starlite.datastructures."
-"pagination.C`, :py:obj:`~starlite.datastructures.pagination.T`]"
+"Bases: :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~starlite.datastructures.pagination.C`, :py:obj:`~starlite.datastructures.pagination.T`]"
 msgstr ""
 
 #: ../../../../starlite/datastructures/pagination.py:docstring of
@@ -106,8 +106,8 @@ msgstr ""
 #: starlite.datastructures.pagination.AbstractSyncClassicPaginator:1
 #: starlite.datastructures.pagination.AbstractSyncOffsetPaginator:1
 msgid ""
-"Bases: :py:class:`~abc.ABC`, :py:class:`~typing.Generic`\\ [:py:obj:"
-"`~starlite.datastructures.pagination.T`]"
+"Bases: :py:class:`~abc.ABC`, :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~starlite.datastructures.pagination.T`]"
 msgstr ""
 
 #: ../../../../starlite/datastructures/pagination.py:docstring of
@@ -274,9 +274,8 @@ msgstr ""
 #: starlite.datastructures.pagination.AbstractAsyncCursorPaginator:1
 #: starlite.datastructures.pagination.AbstractSyncCursorPaginator:1
 msgid ""
-"Bases: :py:class:`~abc.ABC`, :py:class:`~typing.Generic`\\ [:py:obj:"
-"`~starlite.datastructures.pagination.C`, :py:obj:`~starlite.datastructures."
-"pagination.T`]"
+"Bases: :py:class:`~abc.ABC`, :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~starlite.datastructures.pagination.C`, :py:obj:`~starlite.datastructures.pagination.T`]"
 msgstr ""
 
 #: ../../../../starlite/datastructures/pagination.py:docstring of

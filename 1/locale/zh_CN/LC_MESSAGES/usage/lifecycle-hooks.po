@@ -145,8 +145,8 @@ msgstr ""
 #: ../../../usage/lifecycle-hooks.rst:36
 msgid ""
 "The ``after_request`` hook runs after the route handler returned and the "
-"response object has been resolved. It can be any callable which takes a :"
-"class:`Response <starlite.Response>` instance as its first parameter, and "
+"response object has been resolved. It can be any callable which takes "
+"a :class:`Response <starlite.Response>` instance as its first parameter, and "
 "returns a ``Response`` instance. The ``Response`` instance returned does not "
 "necessarily have to be the one that was received."
 msgstr ""
@@ -224,8 +224,8 @@ msgstr ""
 #: ../../../usage/lifecycle-hooks.rst:50
 msgid ""
 "The ``after_response`` hook runs after the response has been returned by the "
-"server. It can be any callable accepting a :class:`Request <starlite."
-"Request>` as its first parameter and does not return any value."
+"server. It can be any callable accepting a :class:`Request "
+"<starlite.Request>` as its first parameter and does not return any value."
 msgstr ""
 
 #: ../../../usage/lifecycle-hooks.rst:54

@@ -24,9 +24,9 @@ msgstr ""
 #: ../../../../starlite/datastructures/multi_dicts.py:docstring of
 #: starlite.datastructures.multi_dicts.MultiMixin:1
 msgid ""
-"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~starlite.datastructures."
-"multi_dicts.T`], :py:class:`~multidict._abc.MultiMapping`\\ [:py:obj:"
-"`~starlite.datastructures.multi_dicts.T`], :py:class:`~abc.ABC`"
+"Bases: :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~starlite.datastructures.multi_dicts.T`], :py:class:`~multidict._abc.MultiMapping`\\ "
+"[:py:obj:`~starlite.datastructures.multi_dicts.T`], :py:class:`~abc.ABC`"
 msgstr ""
 
 #: ../../../../starlite/datastructures/multi_dicts.py:docstring of
@@ -37,9 +37,9 @@ msgstr ""
 #: ../../../../starlite/datastructures/multi_dicts.py:docstring of
 #: starlite.datastructures.multi_dicts.MultiMixin:3
 msgid ""
-":class:`ImmutableMultiDict <starlite.datastructures.multi_dicts."
-"ImmutableMultiDict>` and :class:`MultiDict <starlite.datastructures."
-"multi_dicts.MultiDict>`"
+":class:`ImmutableMultiDict "
+"<starlite.datastructures.multi_dicts.ImmutableMultiDict>` "
+"and :class:`MultiDict <starlite.datastructures.multi_dicts.MultiDict>`"
 msgstr ""
 
 #: ../../../../starlite/datastructures/multi_dicts.py:docstring of
@@ -97,11 +97,10 @@ msgstr ""
 #: ../../../../starlite/datastructures/multi_dicts.py:docstring of
 #: starlite.datastructures.multi_dicts.MultiDict:1
 msgid ""
-"Bases: :py:class:`~multidict._multidict.MultiDict`\\ [:py:obj:`~starlite."
-"datastructures.multi_dicts.T`], :py:class:`~starlite.datastructures."
-"multi_dicts.MultiMixin`\\ [:py:obj:`~starlite.datastructures.multi_dicts."
-"T`], :py:class:`~typing.Generic`\\ [:py:obj:`~starlite.datastructures."
-"multi_dicts.T`]"
+"Bases: :py:class:`~multidict._multidict.MultiDict`\\ "
+"[:py:obj:`~starlite.datastructures.multi_dicts.T`], :py:class:`~starlite.datastructures.multi_dicts.MultiMixin`\\ "
+"[:py:obj:`~starlite.datastructures.multi_dicts.T`], :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~starlite.datastructures.multi_dicts.T`]"
 msgstr ""
 
 #: ../../../../starlite/datastructures/multi_dicts.py:docstring of
@@ -135,8 +134,8 @@ msgstr ""
 #: ../../../../starlite/datastructures/multi_dicts.py:docstring of
 #: starlite.datastructures.multi_dicts.MultiDict.immutable:3
 msgid ""
-":class:`ImmutableMultiDict <starlite.datastructures.multi_dicts."
-"ImmutableMultiDict>` view."
+":class:`ImmutableMultiDict "
+"<starlite.datastructures.multi_dicts.ImmutableMultiDict>` view."
 msgstr ""
 
 #: ../../../../starlite/datastructures/multi_dicts.py:docstring of
@@ -147,11 +146,10 @@ msgstr ""
 #: ../../../../starlite/datastructures/multi_dicts.py:docstring of
 #: starlite.datastructures.multi_dicts.ImmutableMultiDict:1
 msgid ""
-"Bases: :py:class:`~multidict._multidict.MultiDictProxy`\\ [:py:obj:"
-"`~starlite.datastructures.multi_dicts.T`], :py:class:`~starlite."
-"datastructures.multi_dicts.MultiMixin`\\ [:py:obj:`~starlite.datastructures."
-"multi_dicts.T`], :py:class:`~typing.Generic`\\ [:py:obj:`~starlite."
-"datastructures.multi_dicts.T`]"
+"Bases: :py:class:`~multidict._multidict.MultiDictProxy`\\ "
+"[:py:obj:`~starlite.datastructures.multi_dicts.T`], :py:class:`~starlite.datastructures.multi_dicts.MultiMixin`\\ "
+"[:py:obj:`~starlite.datastructures.multi_dicts.T`], :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~starlite.datastructures.multi_dicts.T`]"
 msgstr ""
 
 #: ../../../../starlite/datastructures/multi_dicts.py:docstring of

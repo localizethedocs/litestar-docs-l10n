@@ -34,11 +34,12 @@ msgstr ""
 
 #: ../../../index.rst:9
 msgid ""
-"The Starlite framework supports :doc:`/usage/plugins/index`, ships with :doc:"
-"`dependency injection </usage/dependency-injection>`, :doc:`security "
-"primitives </usage/security/index>`, :doc:`OpenAPI schema generation </usage/"
-"openapi>`, `MessagePack <https://msgpack.org/>`_, :doc:`middlewares </usage/"
-"middleware/index>` and much more."
+"The Starlite framework supports :doc:`/usage/plugins/index`, ships "
+"with :doc:`dependency injection </usage/dependency-"
+"injection>`, :doc:`security primitives </usage/security/"
+"index>`, :doc:`OpenAPI schema generation </usage/openapi>`, `MessagePack "
+"<https://msgpack.org/>`_, :doc:`middlewares </usage/middleware/index>` and "
+"much more."
 msgstr ""
 
 #: ../../../index.rst:15
@@ -55,8 +56,8 @@ msgstr ""
 
 #: ../../../index.rst:26
 msgid ""
-":ref:`Brotli Compression Middleware <usage/middleware/builtin-middleware:"
-"brotli>`:"
+":ref:`Brotli Compression Middleware <usage/middleware/builtin-"
+"middleware:brotli>`:"
 msgstr ""
 
 #: ../../../index.rst:26
@@ -165,8 +166,8 @@ msgstr ""
 
 #: ../../../index.rst:75
 msgid ""
-"You can also use dataclasses (standard library and Pydantic), :class:`typing."
-"TypedDict` or :class:`msgspec.Struct`."
+"You can also use dataclasses (standard library and "
+"Pydantic), :class:`typing.TypedDict` or :class:`msgspec.Struct`."
 msgstr ""
 
 #: ../../../index.rst:79

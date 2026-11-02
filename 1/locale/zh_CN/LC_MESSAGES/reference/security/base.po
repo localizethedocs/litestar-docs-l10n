@@ -24,9 +24,8 @@ msgstr ""
 #: ../../../../starlite/security/base.py:docstring of
 #: starlite.security.base.AbstractSecurityConfig:1
 msgid ""
-"Bases: :py:class:`~abc.ABC`, :py:class:`~typing.Generic`\\ [:py:obj:"
-"`~starlite.security.base.UserType`, :py:obj:`~starlite.security.base."
-"AuthType`], :py:class:`~pydantic.generics.GenericModel`"
+"Bases: :py:class:`~abc.ABC`, :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~starlite.security.base.UserType`, :py:obj:`~starlite.security.base.AuthType`], :py:class:`~pydantic.generics.GenericModel`"
 msgstr ""
 
 #: ../../../../starlite/security/base.py:docstring of
@@ -45,8 +44,8 @@ msgstr ""
 #: ../../../../docstring of
 #: starlite.security.base.AbstractSecurityConfig.authentication_middleware_class:3
 msgid ""
-"Must inherit from :class:`AbstractAuthenticationMiddleware <starlite."
-"middleware.authentication.AbstractAuthenticationMiddleware>`"
+"Must inherit from :class:`AbstractAuthenticationMiddleware "
+"<starlite.middleware.authentication.AbstractAuthenticationMiddleware>`"
 msgstr ""
 
 #: ../../../../docstring of
@@ -226,8 +225,8 @@ msgstr ""
 #: ../../../../starlite/security/base.py:docstring of
 #: starlite.security.base.AbstractSecurityConfig.openapi_components:3
 msgid ""
-"An :class:`Components <pydantic_openapi_schema.v3_1_0.components."
-"Components>` instance."
+"An :class:`Components "
+"<pydantic_openapi_schema.v3_1_0.components.Components>` instance."
 msgstr ""
 
 #: ../../../../starlite/security/base.py:docstring of
@@ -238,15 +237,17 @@ msgstr ""
 #: ../../../../starlite/security/base.py:docstring of
 #: starlite.security.base.AbstractSecurityConfig.security_requirement:3
 msgid ""
-":class:`SecurityRequirement <pydantic_openapi_schema.v3_1_0."
-"security_requirement.SecurityRequirement>` for the auth backend."
+":class:`SecurityRequirement "
+"<pydantic_openapi_schema.v3_1_0.security_requirement.SecurityRequirement>` "
+"for the auth backend."
 msgstr ""
 
 #: ../../../../starlite/security/base.py:docstring of
 #: starlite.security.base.AbstractSecurityConfig.security_requirement:6
 msgid ""
-"An OpenAPI 3.1 :class:`SecurityRequirement <pydantic_openapi_schema.v3_1_0."
-"security_requirement.SecurityRequirement>` dictionary."
+"An OpenAPI 3.1 :class:`SecurityRequirement "
+"<pydantic_openapi_schema.v3_1_0.security_requirement.SecurityRequirement>` "
+"dictionary."
 msgstr ""
 
 #: ../../../../starlite/security/base.py:docstring of
@@ -260,6 +261,6 @@ msgstr ""
 #: ../../../../starlite/security/base.py:docstring of
 #: starlite.security.base.AbstractSecurityConfig.middleware:4
 msgid ""
-"An instance of :class:`DefineMiddleware <starlite.middleware.base."
-"DefineMiddleware>`."
+"An instance of :class:`DefineMiddleware "
+"<starlite.middleware.base.DefineMiddleware>`."
 msgstr ""

@@ -24,8 +24,8 @@ msgstr ""
 #: ../../../../starlite/middleware/session/memcached_backend.py:docstring of
 #: starlite.middleware.session.memcached_backend.MemcachedBackend:1
 msgid ""
-"Bases: :py:class:`~starlite.middleware.session.base.ServerSideBackend`\\ [:"
-"py:class:`MemcachedBackendConfig`]"
+"Bases: :py:class:`~starlite.middleware.session.base.ServerSideBackend`\\ "
+"[:py:class:`MemcachedBackendConfig`]"
 msgstr ""
 
 #: ../../../../starlite/middleware/session/memcached_backend.py:docstring of
@@ -136,8 +136,7 @@ msgstr ""
 
 #: ../../../../starlite/middleware/session/memcached_backend.py:docstring of
 #: starlite.middleware.session.memcached_backend.MemcachedBackendConfig:1
-msgid ""
-"Bases: :py:class:`~starlite.middleware.session.base.ServerSideSessionConfig`"
+msgid "Bases: :py:class:`~starlite.middleware.session.base.ServerSideSessionConfig`"
 msgstr ""
 
 #: ../../../../starlite/middleware/session/memcached_backend.py:docstring of

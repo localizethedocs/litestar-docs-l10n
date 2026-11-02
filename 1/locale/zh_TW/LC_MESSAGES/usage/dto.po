@@ -24,16 +24,18 @@ msgstr ""
 #: ../../../usage/dto.rst:4
 msgid ""
 "Starlite includes a :class:`DTOFactory <starlite.dto.DTOFactory>` class that "
-"allows you to create DTOs from pydantic models, dataclasses, :class:`typing."
-"TypedDict`, and any other class supported via plugins."
+"allows you to create DTOs from pydantic models, "
+"dataclasses, :class:`typing.TypedDict`, and any other class supported via "
+"plugins."
 msgstr ""
 
 #: ../../../usage/dto.rst:7
 msgid ""
 "An instance of the factory must first be created, optionally passing plugins "
-"to it as a kwarg. It can then be used to create a :class:`DTO <starlite.dto."
-"DTO>` by calling the instance like a function. Additionally, it can exclude "
-"(drop) attributes, remap field names and field types, and add new fields."
+"to it as a kwarg. It can then be used to create a :class:`DTO "
+"<starlite.dto.DTO>` by calling the instance like a function. Additionally, "
+"it can exclude (drop) attributes, remap field names and field types, and add "
+"new fields."
 msgstr ""
 
 #: ../../../usage/dto.rst:11
@@ -60,10 +62,10 @@ msgstr ""
 
 #: ../../../usage/dto.rst:25
 msgid ""
-"The :class:`DTOFactory <starlite.dto.DTOFactory>` class supports :doc:"
-"`plugins </usage/plugins/index>`, for example, this is how it could be used "
-"with an SQLAlchemy declarative class using the :doc:`SQLAlchemyPlugin </"
-"usage/plugins/sqlalchemy>`:"
+"The :class:`DTOFactory <starlite.dto.DTOFactory>` class "
+"supports :doc:`plugins </usage/plugins/index>`, for example, this is how it "
+"could be used with an SQLAlchemy declarative class using "
+"the :doc:`SQLAlchemyPlugin </usage/plugins/sqlalchemy>`:"
 msgstr ""
 
 #: ../../../usage/dto.rst:30
@@ -317,10 +319,10 @@ msgstr ""
 
 #: ../../../usage/dto.rst:149
 msgid ""
-"Once you create a DTO class you can use its class method :meth:"
-"`from_model_instance <starlite.dto.DTO.from_model_instance>` to create an "
-"instance from an existing instance of the model from which the DTO was "
-"generated:"
+"Once you create a DTO class you can use its class "
+"method :meth:`from_model_instance <starlite.dto.DTO.from_model_instance>` to "
+"create an instance from an existing instance of the model from which the DTO "
+"was generated:"
 msgstr ""
 
 #: ../../../usage/dto.rst:153

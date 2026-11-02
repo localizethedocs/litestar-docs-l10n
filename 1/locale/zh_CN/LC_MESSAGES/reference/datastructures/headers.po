@@ -24,9 +24,9 @@ msgstr ""
 #: ../../../../starlite/datastructures/headers.py:docstring of
 #: starlite.datastructures.headers.Headers:1
 msgid ""
-"Bases: :py:class:`~multidict._multidict.CIMultiDictProxy`\\ [:py:class:"
-"`str`], :py:class:`~starlite.datastructures.multi_dicts.MultiMixin`\\ [:py:"
-"class:`str`]"
+"Bases: :py:class:`~multidict._multidict.CIMultiDictProxy`\\ "
+"[:py:class:`str`], :py:class:`~starlite.datastructures.multi_dicts.MultiMixin`\\ "
+"[:py:class:`str`]"
 msgstr ""
 
 #: ../../../../starlite/datastructures/headers.py:docstring of

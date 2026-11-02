@@ -122,8 +122,8 @@ msgstr ""
 #: ../../../../starlite/datastructures/provide.py:docstring of
 #: starlite.datastructures.provide.DependencyCleanupGroup.cleanup:3
 msgid ""
-"If there are multiple generators to be called, they will be executed in a :"
-"class:`anyio.TaskGroup`."
+"If there are multiple generators to be called, they will be executed in "
+"a :class:`anyio.TaskGroup`."
 msgstr ""
 
 #: ../../../../starlite/datastructures/provide.py:docstring of

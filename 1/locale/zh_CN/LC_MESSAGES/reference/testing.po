@@ -24,9 +24,8 @@ msgstr ""
 #: ../../../../starlite/testing/client/sync_client.py:docstring of
 #: starlite.testing.client.sync_client.TestClient:1
 msgid ""
-"Bases: :py:class:`~httpx.Client`, :py:class:`~starlite.testing.client.base."
-"BaseTestClient`, :py:class:`~typing.Generic`\\ [:py:obj:`~starlite.testing."
-"client.sync_client.T`]"
+"Bases: :py:class:`~httpx.Client`, :py:class:`~starlite.testing.client.base.BaseTestClient`, :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~starlite.testing.client.sync_client.T`]"
 msgstr ""
 
 #: ../../../../starlite/testing/client/sync_client.py:docstring of
@@ -349,8 +348,8 @@ msgstr ""
 #: ../../../../starlite/testing/client/sync_client.py:docstring of
 #: starlite.testing.client.sync_client.TestClient.websocket_connect:13
 msgid ""
-"An :class:`WebSocketTestSession <starlite.testing.test_client."
-"WebSocketTestSession>` instance."
+"An :class:`WebSocketTestSession "
+"<starlite.testing.test_client.WebSocketTestSession>` instance."
 msgstr ""
 
 #: ../../../../starlite/testing/client/sync_client.py:docstring of
@@ -448,8 +447,8 @@ msgstr ""
 #: ../../../../starlite/testing/request_factory.py:docstring of
 #: starlite.testing.request_factory.RequestFactory.__init__:3
 msgid ""
-"An instance of :class:`Starlite <starlite.app.Starlite>` to set as ``request."
-"scope[\"app\"]``."
+"An instance of :class:`Starlite <starlite.app.Starlite>` to set as "
+"``request.scope[\"app\"]``."
 msgstr ""
 
 #: ../../../../starlite/testing/request_factory.py:docstring of
@@ -652,18 +651,19 @@ msgstr ""
 #: starlite.testing.create_test_client.create_test_client:27
 msgid ""
 "A single handler or a list of route handlers, which can include instances "
-"of :class:`Router <starlite.router.Router>`, subclasses of :class:"
-"`Controller <starlite.controller.Controller>` or any function decorated by "
-"the route handler decorators."
+"of :class:`Router <starlite.router.Router>`, subclasses "
+"of :class:`Controller <starlite.controller.Controller>` or any function "
+"decorated by the route handler decorators."
 msgstr ""
 
 #: ../../../../starlite/testing/__init__.py:docstring of
 #: starlite.testing.create_test_client.create_test_client:30
 msgid ""
-"An application level :class:`exception event handler <starlite.types."
-"AfterExceptionHookHandler>`. This hook is called after an exception occurs. "
-"In difference to exception handlers, it is not meant to return a response - "
-"only to process the exception (e.g. log it, send it to Sentry etc.)."
+"An application level :class:`exception event handler "
+"<starlite.types.AfterExceptionHookHandler>`. This hook is called after an "
+"exception occurs. In difference to exception handlers, it is not meant to "
+"return a response - only to process the exception (e.g. log it, send it to "
+"Sentry etc.)."
 msgstr ""
 
 #: ../../../../starlite/testing/__init__.py:docstring of
@@ -685,17 +685,17 @@ msgstr ""
 #: ../../../../starlite/testing/__init__.py:docstring of
 #: starlite.testing.create_test_client.create_test_client:38
 msgid ""
-"An application level :class:`LifeSpan hook handler <starlite.types."
-"LifeSpanHookHandler>`. This hook is called during the ASGI shutdown, after "
-"all callables in the ``on_shutdown`` list have been called."
+"An application level :class:`LifeSpan hook handler "
+"<starlite.types.LifeSpanHookHandler>`. This hook is called during the ASGI "
+"shutdown, after all callables in the ``on_shutdown`` list have been called."
 msgstr ""
 
 #: ../../../../starlite/testing/__init__.py:docstring of
 #: starlite.testing.create_test_client.create_test_client:41
 msgid ""
-"An application level :class:`LifeSpan hook handler <starlite.types."
-"LifeSpanHookHandler>`. This hook is called during the ASGI startup, after "
-"all callables in the ``on_startup`` list have been called."
+"An application level :class:`LifeSpan hook handler "
+"<starlite.types.LifeSpanHookHandler>`. This hook is called during the ASGI "
+"startup, after all callables in the ``on_startup`` list have been called."
 msgstr ""
 
 #: ../../../../starlite/testing/__init__.py:docstring of
@@ -715,25 +715,25 @@ msgstr ""
 #: ../../../../starlite/testing/__init__.py:docstring of
 #: starlite.testing.create_test_client.create_test_client:51
 msgid ""
-"An application level :class:`before send hook handler <starlite.types."
-"BeforeMessageSendHookHandler>` or list thereof. This hook is called when the "
-"ASGI send function is called."
+"An application level :class:`before send hook handler "
+"<starlite.types.BeforeMessageSendHookHandler>` or list thereof. This hook is "
+"called when the ASGI send function is called."
 msgstr ""
 
 #: ../../../../starlite/testing/__init__.py:docstring of
 #: starlite.testing.create_test_client.create_test_client:53
 msgid ""
-"An application level :class:`LifeSpan hook handler <starlite.types."
-"LifeSpanHookHandler>`. This hook is called during the ASGI shutdown, before "
-"any callables in the ``on_shutdown`` list have been called."
+"An application level :class:`LifeSpan hook handler "
+"<starlite.types.LifeSpanHookHandler>`. This hook is called during the ASGI "
+"shutdown, before any callables in the ``on_shutdown`` list have been called."
 msgstr ""
 
 #: ../../../../starlite/testing/__init__.py:docstring of
 #: starlite.testing.create_test_client.create_test_client:55
 msgid ""
-"An application level :class:`LifeSpan hook handler <starlite.types."
-"LifeSpanHookHandler>`. This hook is called during the ASGI startup, before "
-"any callables in the ``on_startup`` list have been called."
+"An application level :class:`LifeSpan hook handler "
+"<starlite.types.LifeSpanHookHandler>`. This hook is called during the ASGI "
+"startup, before any callables in the ``on_startup`` list have been called."
 msgstr ""
 
 #: ../../../../starlite/testing/__init__.py:docstring of
@@ -761,8 +761,8 @@ msgstr ""
 #: ../../../../starlite/testing/__init__.py:docstring of
 #: starlite.testing.create_test_client.create_test_client:62
 msgid ""
-"A string keyed dictionary of dependency :class:`Provider <starlite."
-"datastructures.Provide>` instances."
+"A string keyed dictionary of dependency :class:`Provider "
+"<starlite.datastructures.Provide>` instances."
 msgstr ""
 
 #: ../../../../starlite/testing/__init__.py:docstring of
@@ -785,8 +785,8 @@ msgstr ""
 #: ../../../../starlite/testing/__init__.py:docstring of
 #: starlite.testing.create_test_client.create_test_client:66
 msgid ""
-"A subclass of :class:`BaseLoggingConfig <starlite.config.logging."
-"BaseLoggingConfig>`."
+"A subclass of :class:`BaseLoggingConfig "
+"<starlite.config.logging.BaseLoggingConfig>`."
 msgstr ""
 
 #: ../../../../starlite/testing/__init__.py:docstring of
@@ -805,11 +805,11 @@ msgstr ""
 #: starlite.testing.create_test_client.create_test_client:70
 msgid ""
 "A sequence of :class:`OnAppInitHandler <starlite.types.OnAppInitHandler>` "
-"instances. Handlers receive an instance of :class:`AppConfig <starlite."
-"config.app.AppConfig>` that will have been initially populated with the "
-"parameters passed to :class:`Starlite <starlite.app.Starlite>`, and must "
-"return an instance of same. If more than one handler is registered they are "
-"called in the order they are provided."
+"instances. Handlers receive an instance of :class:`AppConfig "
+"<starlite.config.app.AppConfig>` that will have been initially populated "
+"with the parameters passed to :class:`Starlite <starlite.app.Starlite>`, and "
+"must return an instance of same. If more than one handler is registered they "
+"are called in the order they are provided."
 msgstr ""
 
 #: ../../../../starlite/testing/__init__.py:docstring of
@@ -829,8 +829,8 @@ msgstr ""
 #: ../../../../starlite/testing/__init__.py:docstring of
 #: starlite.testing.create_test_client.create_test_client:78
 msgid ""
-"Defaults to :attr:`DEFAULT_OPENAPI_CONFIG <starlite.app."
-"DEFAULT_OPENAPI_CONFIG>`"
+"Defaults to :attr:`DEFAULT_OPENAPI_CONFIG "
+"<starlite.app.DEFAULT_OPENAPI_CONFIG>`"
 msgstr ""
 
 #: ../../../../starlite/testing/__init__.py:docstring of
@@ -848,8 +848,8 @@ msgstr ""
 #: ../../../../starlite/testing/__init__.py:docstring of
 #: starlite.testing.create_test_client.create_test_client:82
 msgid ""
-"An optional subclass of :class:`Request <starlite.connection.request."
-"Request>` to use for http connections."
+"An optional subclass of :class:`Request "
+"<starlite.connection.request.Request>` to use for http connections."
 msgstr ""
 
 #: ../../../../starlite/testing/__init__.py:docstring of
@@ -869,8 +869,8 @@ msgstr ""
 #: ../../../../starlite/testing/__init__.py:docstring of
 #: starlite.testing.create_test_client.create_test_client:88
 msgid ""
-"An instance or list of :class:`StaticFilesConfig <starlite.config."
-"StaticFilesConfig>`"
+"An instance or list of :class:`StaticFilesConfig "
+"<starlite.config.StaticFilesConfig>`"
 msgstr ""
 
 #: ../../../../starlite/testing/__init__.py:docstring of
@@ -881,8 +881,8 @@ msgstr ""
 #: ../../../../starlite/testing/__init__.py:docstring of
 #: starlite.testing.create_test_client.create_test_client:92
 msgid ""
-"An optional subclass of :class:`WebSocket <starlite.connection.websocket."
-"WebSocket>` to use for websocket connections."
+"An optional subclass of :class:`WebSocket "
+"<starlite.connection.websocket.WebSocket>` to use for websocket connections."
 msgstr ""
 
 #: ../../../../starlite/testing/__init__.py:docstring of

@@ -53,12 +53,12 @@ msgstr ""
 #: ../../../usage/route-handlers.rst:22
 msgid ""
 "What the decorator does, is wrap the function or method within a class "
-"instance that inherits from :class:`BaseRouteHandler <.handlers.base."
-"BaseRouteHandler>`. These classes are optimized descriptor classes that "
-"record all the data necessary for the given function or method - this "
-"includes a modelling of the function signature, which allows for injection "
-"of kwargs and dependencies, as well as data pertinent to OpenAPI spec "
-"generation."
+"instance that inherits from :class:`BaseRouteHandler "
+"<.handlers.base.BaseRouteHandler>`. These classes are optimized descriptor "
+"classes that record all the data necessary for the given function or method "
+"- this includes a modelling of the function signature, which allows for "
+"injection of kwargs and dependencies, as well as data pertinent to OpenAPI "
+"spec generation."
 msgstr ""
 
 #: ../../../usage/route-handlers.rst:29
@@ -162,14 +162,14 @@ msgstr ""
 
 #: ../../../usage/route-handlers.rst:89
 msgid ""
-"``cookies``: injects the request :class:`cookies <.datastructures.cookie."
-"Cookie>` as a parsed dictionary."
+"``cookies``: injects the request :class:`cookies "
+"<.datastructures.cookie.Cookie>` as a parsed dictionary."
 msgstr ""
 
 #: ../../../usage/route-handlers.rst:90
 msgid ""
-"``headers``: injects the request headers as an instance of :class:`Headers <."
-"datastructures.headers.Headers>` , which is a case-insensitive mapping."
+"``headers``: injects the request headers as an instance of :class:`Headers "
+"<.datastructures.headers.Headers>` , which is a case-insensitive mapping."
 msgstr ""
 
 #: ../../../usage/route-handlers.rst:92
@@ -195,8 +195,8 @@ msgstr ""
 
 #: ../../../usage/route-handlers.rst:96
 msgid ""
-"``state`` : injects a copy of the application :class:`State <.datastructures."
-"state.State>`."
+"``state`` : injects a copy of the application :class:`State "
+"<.datastructures.state.State>`."
 msgstr ""
 
 #: ../../../usage/route-handlers.rst:97
@@ -290,9 +290,10 @@ msgstr ""
 #: ../../../usage/route-handlers.rst:141
 msgid ""
 "The most commonly used route handlers are those that handle http requests "
-"and responses. These route handlers all inherit from the class :class:"
-"`HTTPRouteHandler <starlite.handlers.http.HTTPRouteHandler>`, which is "
-"aliased as the decorator called :func:`route <starlite.handlers.route>`:"
+"and responses. These route handlers all inherit from the "
+"class :class:`HTTPRouteHandler <starlite.handlers.http.HTTPRouteHandler>`, "
+"which is aliased as the decorator called :func:`route "
+"<starlite.handlers.route>`:"
 msgstr ""
 
 #: ../../../usage/route-handlers.rst:146
@@ -485,8 +486,8 @@ msgstr ""
 
 #: ../../../usage/route-handlers.rst:262
 msgid ""
-"Starlite supports Websockets via the :func:`websocket <starlite.handlers."
-"websocket>` decorator:"
+"Starlite supports Websockets via the :func:`websocket "
+"<starlite.handlers.websocket>` decorator:"
 msgstr ""
 
 #: ../../../usage/route-handlers.rst:265
@@ -503,9 +504,10 @@ msgstr ""
 
 #: ../../../usage/route-handlers.rst:275
 msgid ""
-"The\\ ``websocket`` decorator is an alias of the class :class:"
-"`WebsocketRouteHandler <starlite.handlers.websocket.WebsocketRouteHandler>`. "
-"Thus, the below code is equivalent to the one above:"
+"The\\ ``websocket`` decorator is an alias of the "
+"class :class:`WebsocketRouteHandler "
+"<starlite.handlers.websocket.WebsocketRouteHandler>`. Thus, the below code "
+"is equivalent to the one above:"
 msgstr ""
 
 #: ../../../usage/route-handlers.rst:280
@@ -562,8 +564,8 @@ msgstr ""
 
 #: ../../../usage/route-handlers.rst:309
 msgid ""
-"If you need to write your own ASGI application, you can do so using the :"
-"func:`asgi <starlite.handlers.asgi>` decorator:"
+"If you need to write your own ASGI application, you can do so using "
+"the :func:`asgi <starlite.handlers.asgi>` decorator:"
 msgstr ""
 
 #: ../../../usage/route-handlers.rst:312
@@ -589,9 +591,9 @@ msgstr ""
 
 #: ../../../usage/route-handlers.rst:330
 msgid ""
-"Like other route handlers, the ``asgi`` decorator is an alias of the class :"
-"class:`ASGIRouteHandler <.handlers.asgi.ASGIRouteHandler>`. Thus, the code "
-"below is equivalent to the one above:"
+"Like other route handlers, the ``asgi`` decorator is an alias of the "
+"class :class:`ASGIRouteHandler <.handlers.asgi.ASGIRouteHandler>`. Thus, the "
+"code below is equivalent to the one above:"
 msgstr ""
 
 #: ../../../usage/route-handlers.rst:335
@@ -647,8 +649,8 @@ msgstr ""
 
 #: ../../../usage/route-handlers.rst:365
 msgid ""
-"You can read more about these in the `ASGI specification <https://asgi."
-"readthedocs.io/en/latest/specs/main.html>`_."
+"You can read more about these in the `ASGI specification <https://"
+"asgi.readthedocs.io/en/latest/specs/main.html>`_."
 msgstr ""
 
 #: ../../../usage/route-handlers.rst:367
@@ -671,15 +673,15 @@ msgstr ""
 #: ../../../usage/route-handlers.rst:378
 msgid ""
 "You can provide in all route handler decorators a ``name`` kwarg. The value "
-"for this kwarg **must be unique**\\ , otherwise :class:"
-"`ImproperlyConfiguredException <starlite.exceptions."
-"ImproperlyConfiguredException>` exception will be raised. Default value for "
-"``name`` is value returned by ``handler.__str__`` which should be the full "
-"dotted path to the handler (e.g. ``app.controllers.projects.list`` for "
-"``list`` function residing in ``app/controllers/projects.py`` file). "
-"``name`` can be used to dynamically retrieve (i.e. during runtime) a mapping "
-"containing the route handler instance and paths, also it can be used to "
-"build a URL path for that handler:"
+"for this kwarg **must be unique**\\ , "
+"otherwise :class:`ImproperlyConfiguredException "
+"<starlite.exceptions.ImproperlyConfiguredException>` exception will be "
+"raised. Default value for ``name`` is value returned by ``handler.__str__`` "
+"which should be the full dotted path to the handler (e.g. "
+"``app.controllers.projects.list`` for ``list`` function residing in ``app/"
+"controllers/projects.py`` file). ``name`` can be used to dynamically "
+"retrieve (i.e. during runtime) a mapping containing the route handler "
+"instance and paths, also it can be used to build a URL path for that handler:"
 msgstr ""
 
 #: ../../../usage/route-handlers.rst:386
@@ -729,15 +731,15 @@ msgstr ""
 
 #: ../../../usage/route-handlers.rst:426
 msgid ""
-":meth:`route_reverse <.app.Starlite.route_reverse>` will raise :class:"
-"`NoMatchRouteFoundException <.exceptions.NoRouteMatchFoundException>` if "
-"route with given name was not found or if any of path parameters is missing "
-"or if any of passed path parameters types do not match types in the "
-"respective route declaration. However, :class:`str` is accepted in place of :"
-"class:`datetime.datetime`, :class:`datetime.date`, :class:`datetime.time`, :"
-"class:`datetime.timedelta`, :class:`float`, and :class:`pathlib.Path` "
-"parameters, so you can apply custom formatting and pass the result to "
-"``route_reverse``."
+":meth:`route_reverse <.app.Starlite.route_reverse>` will "
+"raise :class:`NoMatchRouteFoundException "
+"<.exceptions.NoRouteMatchFoundException>` if route with given name was not "
+"found or if any of path parameters is missing or if any of passed path "
+"parameters types do not match types in the respective route declaration. "
+"However, :class:`str` is accepted in place "
+"of :class:`datetime.datetime`, :class:`datetime.date`, :class:`datetime.time`, :class:`datetime.timedelta`, :class:`float`, "
+"and :class:`pathlib.Path` parameters, so you can apply custom formatting and "
+"pass the result to ``route_reverse``."
 msgstr ""
 
 #: ../../../usage/route-handlers.rst:433
@@ -753,8 +755,8 @@ msgid ""
 "\n"
 "\n"
 "@get(\n"
-"    [\"/some-path\", \"/some-path/{id:int}\", \"/some-path/{id:int}/{val:"
-"str}\"],\n"
+"    [\"/some-path\", \"/some-path/{id:int}\", \"/some-path/{id:int}/{val:str}"
+"\"],\n"
 "    name=\"handler_name\",\n"
 ")\n"
 "def handler(id: int = 1, val: str = \"default\") -> None: ...\n"
@@ -787,9 +789,9 @@ msgstr ""
 #: ../../../usage/route-handlers.rst:466
 msgid ""
 "If you have access to :class:`request <starlite.connection.request.Request>` "
-"instance you can make reverse lookups using :meth:`url_for <.connection.base."
-"ASGIConnection.url_for>` function which is similar to ``route_reverse`` but "
-"returns absolute URL."
+"instance you can make reverse lookups using :meth:`url_for "
+"<.connection.base.ASGIConnection.url_for>` function which is similar to "
+"``route_reverse`` but returns absolute URL."
 msgstr ""
 
 #: ../../../usage/route-handlers.rst:474
@@ -814,9 +816,9 @@ msgstr ""
 #: ../../../usage/route-handlers.rst:486
 msgid ""
 "This dictionary can be accessed by a :doc:`route guard </usage/security/"
-"guards>`, or by accessing the ``route_handler`` property on a :class:"
-"`request <starlite.connection.request.Request>`, or using the :class:`ASGI "
-"scope <starlite.types.Scope>` object directly."
+"guards>`, or by accessing the ``route_handler`` property on "
+"a :class:`request <starlite.connection.request.Request>`, or using "
+"the :class:`ASGI scope <starlite.types.Scope>` object directly."
 msgstr ""
 
 #: ../../../usage/route-handlers.rst:491

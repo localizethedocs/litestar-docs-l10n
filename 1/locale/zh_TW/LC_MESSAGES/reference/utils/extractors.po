@@ -105,9 +105,10 @@ msgstr "基底類別：:py:class:`object`"
 #: ../../../../starlite/utils/extractors.py:docstring of
 #: starlite.utils.extractors.ConnectionDataExtractor:1
 msgid ""
-"Utility class to extract data from an :class:`ASGIConnection <starlite."
-"connection.ASGIConnection>`, :class:`Request <starlite.connection.Request>` "
-"or :class:`WebSocket <starlite.connection.WebSocket>` instance."
+"Utility class to extract data from an :class:`ASGIConnection "
+"<starlite.connection.ASGIConnection>`, :class:`Request "
+"<starlite.connection.Request>` or :class:`WebSocket "
+"<starlite.connection.WebSocket>` instance."
 msgstr ""
 
 #: ../../../../starlite/utils/extractors.py:docstring of
@@ -385,9 +386,10 @@ msgstr ""
 #: starlite.utils.extractors.ResponseDataExtractor.extract_response_body:3
 #: starlite.utils.extractors.ResponseDataExtractor.extract_status_code:3
 msgid ""
-"A tuple containing :class:`HTTPResponseStartEvent <starlite.types.asgi_types."
-"HTTPResponseStartEvent>` and :class:`HTTPResponseBodyEvent <starlite.types."
-"asgi_types.HTTPResponseBodyEvent>`."
+"A tuple containing :class:`HTTPResponseStartEvent "
+"<starlite.types.asgi_types.HTTPResponseStartEvent>` "
+"and :class:`HTTPResponseBodyEvent "
+"<starlite.types.asgi_types.HTTPResponseBodyEvent>`."
 msgstr ""
 
 #: ../../../../starlite/utils/extractors.py:docstring of

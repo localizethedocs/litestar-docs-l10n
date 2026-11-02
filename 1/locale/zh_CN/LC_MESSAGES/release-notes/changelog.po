@@ -27,10 +27,10 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:7
 msgid ""
-"Fix a security issue ([CVE-2024-32982](https://cve.mitre.org/cgi-bin/cvename."
-"cgi?name=CVE-2024-32982) where static files could allow users the ability to "
-"escape the configured static files directory and read arbitrary files on the "
-"filesystem."
+"Fix a security issue ([CVE-2024-32982](https://cve.mitre.org/cgi-bin/"
+"cvename.cgi?name=CVE-2024-32982) where static files could allow users the "
+"ability to escape the configured static files directory and read arbitrary "
+"files on the filesystem."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:11
@@ -307,8 +307,8 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:134
 msgid ""
-"fix Don’t import ``CookieBackendConfig`` by default in ``starlite.middleware."
-"sessions``."
+"fix Don’t import ``CookieBackendConfig`` by default in "
+"``starlite.middleware.sessions``."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:135
@@ -467,8 +467,8 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:202
 msgid ""
-"deprecate ``middleware.session.memcached_backend.MemcachedBackend."
-"delete_all``."
+"deprecate "
+"``middleware.session.memcached_backend.MemcachedBackend.delete_all``."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:207
@@ -505,8 +505,9 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:221
 msgid ""
-"fix #841: change ``middleware.session.sqlalchemy_backend.SessionModelMixin."
-"data`` to ``LargeBinary``."
+"fix #841: change "
+"``middleware.session.sqlalchemy_backend.SessionModelMixin.data`` to "
+"``LargeBinary``."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:226
@@ -1426,8 +1427,8 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:677
 msgid ""
-"add starlite ports of BackgroundTask and BackgroundTasks in ``starlite."
-"datastructures``."
+"add starlite ports of BackgroundTask and BackgroundTasks in "
+"``starlite.datastructures``."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:682
@@ -1468,8 +1469,8 @@ msgstr ""
 #: ../../../release-notes/changelog.rst:701
 msgid ""
 "breaking replace `openapi-pydantic-schema <https://github.com/kuimono/"
-"openapi-schema-pydantic>`__ with `pydantic-openapi-schema <https://github."
-"com/starlite-api/pydantic-openapi-schema>`__."
+"openapi-schema-pydantic>`__ with `pydantic-openapi-schema <https://"
+"github.com/starlite-api/pydantic-openapi-schema>`__."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:706
@@ -2109,8 +2110,8 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:1119
 msgid ""
-"fix monkey patch “openapi-schema-pydantic” to change Schema.extra to Extra."
-"ignore."
+"fix monkey patch “openapi-schema-pydantic” to change Schema.extra to "
+"Extra.ignore."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:1124

@@ -48,8 +48,8 @@ msgstr ""
 #: ../../../usage/routing.rst:20
 msgid ""
 "If you are interested in the technical aspects of the implementation, refer "
-"to `this GitHub issue <https://github.com/starlite-api/starlite/"
-"issues/177>`_ - it includes an indepth discussion of the pertinent code."
+"to `this GitHub issue <https://github.com/starlite-api/starlite/issues/"
+"177>`_ - it includes an indepth discussion of the pertinent code."
 msgstr ""
 
 #: ../../../usage/routing.rst:27
@@ -58,8 +58,8 @@ msgstr ""
 
 #: ../../../usage/routing.rst:29
 msgid ""
-"At the root of every Starlite application there is an instance of the :class:"
-"`Starlite <starlite.app.Starlite>` class, on which the root level "
+"At the root of every Starlite application there is an instance of "
+"the :class:`Starlite <starlite.app.Starlite>` class, on which the root level "
 "controllers, routers and route handler functions are registered using the "
 "``route_handlers`` kwarg:"
 msgstr ""
@@ -138,12 +138,13 @@ msgstr ""
 
 #: ../../../usage/routing.rst:89
 msgid ""
-"Since the app instance is attached to all instances of :class:"
-"`ASGIConnection <.connection.base.ASGIConnection>`, :class:`Request <."
-"connection.request.Request>` and :class:`WebSocket <.connection.websocket."
-"WebSocket>` objects, you can in effect call the :meth:`register <.router."
-"Router.register>` method inside route handler functions, middlewares and "
-"even injected dependencies. For example:"
+"Since the app instance is attached to all instances "
+"of :class:`ASGIConnection "
+"<.connection.base.ASGIConnection>`, :class:`Request "
+"<.connection.request.Request>` and :class:`WebSocket "
+"<.connection.websocket.WebSocket>` objects, you can in effect call "
+"the :meth:`register <.router.Router.register>` method inside route handler "
+"functions, middlewares and even injected dependencies. For example:"
 msgstr ""
 
 #: ../../../usage/routing.rst:95
@@ -216,11 +217,11 @@ msgstr ""
 
 #: ../../../usage/routing.rst:147
 msgid ""
-"Controllers are subclasses of the class :class:`Controller <.controller."
-"Controller>`. They are used to organize endpoints under a specific sub-path, "
-"which is the controller's path. Their purpose is to allow users to utilize "
-"python OOP for better code organization and organize code by logical "
-"concerns."
+"Controllers are subclasses of the class :class:`Controller "
+"<.controller.Controller>`. They are used to organize endpoints under a "
+"specific sub-path, which is the controller's path. Their purpose is to allow "
+"users to utilize python OOP for better code organization and organize code "
+"by logical concerns."
 msgstr ""
 
 #: ../../../usage/routing.rst:152
