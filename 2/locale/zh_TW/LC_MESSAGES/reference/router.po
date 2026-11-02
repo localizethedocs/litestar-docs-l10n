@@ -47,10 +47,10 @@ msgstr "參數"
 #: ../../../../litestar/router.py:docstring of
 #: litestar.router.Router.__init__:3
 msgid ""
-"A sync or async function executed before a :class:`Request <.connection."
-"Request>` is passed to any route handler. If this function returns a value, "
-"the request will not reach the route handler, and instead this value will be "
-"used."
+"A sync or async function executed before a :class:`Request "
+"<.connection.Request>` is passed to any route handler. If this function "
+"returns a value, the request will not reach the route handler, and instead "
+"this value will be used."
 msgstr ""
 
 #: ../../../../litestar/router.py:docstring of
@@ -73,9 +73,9 @@ msgstr ""
 #: ../../../../litestar/router.py:docstring of
 #: litestar.router.Router.__init__:11
 msgid ""
-"A ``cache-control`` header of type :class:`CacheControlHeader <."
-"datastructures.CacheControlHeader>` to add to route handlers of this router. "
-"Can be overridden by route handlers."
+"A ``cache-control`` header of type :class:`CacheControlHeader "
+"<.datastructures.CacheControlHeader>` to add to route handlers of this "
+"router. Can be overridden by route handlers."
 msgstr ""
 
 #: ../../../../litestar/router.py:docstring of
@@ -124,9 +124,10 @@ msgstr ""
 #: ../../../../litestar/router.py:docstring of
 #: litestar.router.Router.__init__:22
 msgid ""
-"A string keyed mapping of arbitrary values that can be accessed in :data:"
-"`Guards <.types.Guard>` or wherever you have access to :class:`Request <."
-"connection.Request>` or :data:`ASGI Scope <.types.Scope>`."
+"A string keyed mapping of arbitrary values that can be accessed "
+"in :data:`Guards <.types.Guard>` or wherever you have access "
+"to :class:`Request <.connection.Request>` or :data:`ASGI Scope "
+"<.types.Scope>`."
 msgstr ""
 
 #: ../../../../litestar/router.py:docstring of
@@ -174,8 +175,8 @@ msgstr ""
 #: ../../../../litestar/router.py:docstring of
 #: litestar.router.Router.__init__:36
 msgid ""
-"A string keyed mapping of :class:`ResponseHeader <.datastructures."
-"ResponseHeader>` instances."
+"A string keyed mapping of :class:`ResponseHeader "
+"<.datastructures.ResponseHeader>` instances."
 msgstr ""
 
 #: ../../../../litestar/router.py:docstring of
@@ -188,17 +189,18 @@ msgstr ""
 #: ../../../../litestar/router.py:docstring of
 #: litestar.router.Router.__init__:40
 msgid ""
-"A required sequence of route handlers, which can include instances of :class:"
-"`Router <.router.Router>`, subclasses of :class:`Controller <.controller."
-"Controller>` or any function decorated by the route handler decorators."
+"A required sequence of route handlers, which can include instances "
+"of :class:`Router <.router.Router>`, subclasses of :class:`Controller "
+"<.controller.Controller>` or any function decorated by the route handler "
+"decorators."
 msgstr ""
 
 #: ../../../../litestar/router.py:docstring of
 #: litestar.router.Router.__init__:43
 msgid ""
 "A sequence of dicts that will be added to the schema of all route handlers "
-"in the application. See :data:`SecurityRequirement <.openapi.spec."
-"SecurityRequirement>` for details."
+"in the application. See :data:`SecurityRequirement "
+"<.openapi.spec.SecurityRequirement>` for details."
 msgstr ""
 
 #: ../../../../litestar/router.py:docstring of
@@ -254,8 +256,8 @@ msgstr ""
 #: litestar.router.Router.register:3
 msgid ""
 "a subclass or instance of Controller, an instance of :class:`Router` or a "
-"function/method that has been decorated by any of the routing decorators, e."
-"g. :class:`get <.handlers.get>`, :class:`post <.handlers.post>`."
+"function/method that has been decorated by any of the routing decorators, "
+"e.g. :class:`get <.handlers.get>`, :class:`post <.handlers.post>`."
 msgstr ""
 
 #: ../../../reference/router.rst:0
@@ -270,8 +272,8 @@ msgstr ""
 #: ../../../../litestar/router.py:docstring of
 #: litestar.router.Router.route_handler_method_map:1
 msgid ""
-"Map route paths to :class:`RouteHandlerMapItem <litestar.types."
-"internal_types es.RouteHandlerMapItem>`"
+"Map route paths to :class:`RouteHandlerMapItem "
+"<litestar.types.internal_types es.RouteHandlerMapItem>`"
 msgstr ""
 
 #: ../../../../litestar/router.py:docstring of

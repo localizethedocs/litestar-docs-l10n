@@ -38,8 +38,8 @@ msgstr ""
 
 #: ../../../../docstring of litestar.controller.Controller.after_request:1
 msgid ""
-"A sync or async function executed before a :class:`Request <.connection."
-"Request>` is passed to any route handler."
+"A sync or async function executed before a :class:`Request "
+"<.connection.Request>` is passed to any route handler."
 msgstr ""
 
 #: ../../../../docstring of litestar.controller.Controller.after_request:3
@@ -106,9 +106,10 @@ msgstr ""
 
 #: ../../../../docstring of litestar.controller.Controller.opt:1
 msgid ""
-"A string key mapping of arbitrary values that can be accessed in :class:"
-"`Guards <.types.Guard>` or wherever you have access to :class:`Request <."
-"connection.Request>` or :class:`ASGI Scope <.types.Scope>`."
+"A string key mapping of arbitrary values that can be accessed "
+"in :class:`Guards <.types.Guard>` or wherever you have access "
+"to :class:`Request <.connection.Request>` or :class:`ASGI Scope "
+"<.types.Scope>`."
 msgstr ""
 
 #: ../../../../docstring of litestar.controller.Controller.parameters:1
@@ -228,8 +229,8 @@ msgstr ""
 
 #: ../../../../docstring of litestar.controller.Controller.response_headers:1
 msgid ""
-"A string keyed dictionary mapping :class:`ResponseHeader <.datastructures."
-"ResponseHeader>` instances."
+"A string keyed dictionary mapping :class:`ResponseHeader "
+"<.datastructures.ResponseHeader>` instances."
 msgstr ""
 
 #: ../../../../docstring of litestar.controller.Controller.path:1
@@ -244,8 +245,8 @@ msgstr ""
 
 #: ../../../../docstring of litestar.controller.Controller.owner:1
 msgid ""
-"The :class:`Router <.router.Router>` or :class:`Litestar <litestar.app."
-"Litestar>` app that owns the controller."
+"The :class:`Router <.router.Router>` or :class:`Litestar "
+"<litestar.app.Litestar>` app that owns the controller."
 msgstr ""
 
 #: ../../../../docstring of litestar.controller.Controller.owner:3

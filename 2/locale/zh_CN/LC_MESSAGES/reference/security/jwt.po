@@ -24,10 +24,9 @@ msgstr ""
 #: ../../../../litestar/security/jwt/__init__.py:docstring of
 #: litestar.security.jwt.auth.BaseJWTAuth:1
 msgid ""
-"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~litestar.security.jwt.auth."
-"UserType`, :py:obj:`~litestar.security.jwt.auth.TokenT`], :py:class:"
-"`~litestar.security.base.AbstractSecurityConfig`\\ [:py:obj:`~litestar."
-"security.jwt.auth.UserType`, :py:obj:`~litestar.security.jwt.auth.TokenT`]"
+"Bases: :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~litestar.security.jwt.auth.UserType`, :py:obj:`~litestar.security.jwt.auth.TokenT`], :py:class:`~litestar.security.base.AbstractSecurityConfig`\\ "
+"[:py:obj:`~litestar.security.jwt.auth.UserType`, :py:obj:`~litestar.security.jwt.auth.TokenT`]"
 msgstr ""
 
 #: ../../../../litestar/security/jwt/__init__.py:docstring of
@@ -190,8 +189,8 @@ msgstr ""
 #: ../../../../litestar/security/jwt/__init__.py:docstring of
 #: litestar.security.jwt.BaseJWTAuth.middleware:1
 msgid ""
-"Create :class:`JWTAuthenticationMiddleware` wrapped in :class:"
-"`DefineMiddleware <.middleware.base.DefineMiddleware>`."
+"Create :class:`JWTAuthenticationMiddleware` wrapped "
+"in :class:`DefineMiddleware <.middleware.base.DefineMiddleware>`."
 msgstr ""
 
 #: ../../../../litestar/security/jwt/__init__.py:docstring of
@@ -248,8 +247,8 @@ msgstr ""
 #: ../../../../litestar/security/jwt/__init__.py:docstring of
 #: litestar.security.jwt.BaseJWTAuth.security_requirement:5
 msgid ""
-"An OpenAPI 3.1 :data:`SecurityRequirement <.openapi.spec."
-"SecurityRequirement>` dictionary."
+"An OpenAPI 3.1 :data:`SecurityRequirement "
+"<.openapi.spec.SecurityRequirement>` dictionary."
 msgstr ""
 
 #: ../../../../litestar/security/jwt/__init__.py:docstring of
@@ -417,10 +416,9 @@ msgstr ""
 #: litestar.security.jwt.auth.JWTCookieAuth:1
 #: litestar.security.jwt.auth.OAuth2PasswordBearerAuth:1
 msgid ""
-"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~litestar.security.jwt.auth."
-"UserType`, :py:obj:`~litestar.security.jwt.auth.TokenT`], :py:class:"
-"`~litestar.security.jwt.auth.BaseJWTAuth`\\ [:py:obj:`~litestar.security.jwt."
-"auth.UserType`, :py:obj:`~litestar.security.jwt.auth.TokenT`]"
+"Bases: :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~litestar.security.jwt.auth.UserType`, :py:obj:`~litestar.security.jwt.auth.TokenT`], :py:class:`~litestar.security.jwt.auth.BaseJWTAuth`\\ "
+"[:py:obj:`~litestar.security.jwt.auth.UserType`, :py:obj:`~litestar.security.jwt.auth.TokenT`]"
 msgstr ""
 
 #: ../../../../litestar/security/jwt/__init__.py:docstring of
@@ -488,9 +486,7 @@ msgstr ""
 
 #: ../../../../litestar/security/jwt/__init__.py:docstring of
 #: litestar.security.jwt.middleware.JWTAuthenticationMiddleware:1
-msgid ""
-"Bases: :py:class:`~litestar.middleware.authentication."
-"AbstractAuthenticationMiddleware`"
+msgid "Bases: :py:class:`~litestar.middleware.authentication.AbstractAuthenticationMiddleware`"
 msgstr ""
 
 #: ../../../../litestar/security/jwt/__init__.py:docstring of
@@ -741,9 +737,7 @@ msgstr ""
 
 #: ../../../../litestar/security/jwt/__init__.py:docstring of
 #: litestar.security.jwt.middleware.JWTCookieAuthenticationMiddleware:1
-msgid ""
-"Bases: :py:class:`~litestar.security.jwt.middleware."
-"JWTAuthenticationMiddleware`"
+msgid "Bases: :py:class:`~litestar.security.jwt.middleware.JWTAuthenticationMiddleware`"
 msgstr ""
 
 #: ../../../../litestar/security/jwt/__init__.py:docstring of

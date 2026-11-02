@@ -37,8 +37,8 @@ msgstr ""
 #: ../../../../docstring of
 #: litestar.plugins.structlog.StructlogConfig.structlog_logging_config:1
 msgid ""
-"Structlog Logging configuration for Litestar.  See ``litestar.logging.config."
-"StructLoggingConfig``` for details."
+"Structlog Logging configuration for Litestar.  See "
+"``litestar.logging.config.StructLoggingConfig``` for details."
 msgstr ""
 
 #: ../../../../docstring of

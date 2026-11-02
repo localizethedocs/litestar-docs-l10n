@@ -459,9 +459,9 @@ msgstr ""
 msgid ""
 "When using a database, we need to ensure that we clean up our resources "
 "correctly. To do this, we create a context manager called "
-"``db_connection()`` that creates a new :class:`engine <sqlalchemy.ext."
-"asyncio.AsyncEngine>` and disposes of it when we are done. This context "
-"manager is added to the application's ``lifespan`` argument."
+"``db_connection()`` that creates a new :class:`engine "
+"<sqlalchemy.ext.asyncio.AsyncEngine>` and disposes of it when we are done. "
+"This context manager is added to the application's ``lifespan`` argument."
 msgstr ""
 
 #: ../../../tutorials/sqlalchemy/0-introduction.rst:52

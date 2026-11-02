@@ -185,9 +185,9 @@ msgstr ""
 #: ../../../../litestar/response/base.py:docstring of
 #: litestar.response.base.Response.__init__:6
 msgid ""
-"A :class:`BackgroundTask <.background_tasks.BackgroundTask>` instance or :"
-"class:`BackgroundTasks <.background_tasks.BackgroundTasks>` to execute after "
-"the response is finished. Defaults to ``None``."
+"A :class:`BackgroundTask <.background_tasks.BackgroundTask>` instance "
+"or :class:`BackgroundTasks <.background_tasks.BackgroundTasks>` to execute "
+"after the response is finished. Defaults to ``None``."
 msgstr ""
 
 #: ../../../../litestar/response/base.py:docstring of
@@ -218,8 +218,8 @@ msgstr ""
 #: ../../../../litestar/response/base.py:docstring of
 #: litestar.response.base.Response.set_cookie:1
 msgid ""
-"Set a cookie on the response. If passed a :class:`Cookie <.datastructures."
-"Cookie>` instance, keyword arguments will be ignored."
+"Set a cookie on the response. If passed a :class:`Cookie "
+"<.datastructures.Cookie>` instance, keyword arguments will be ignored."
 msgstr ""
 
 #: ../../../../litestar/response/base.py:docstring of

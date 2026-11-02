@@ -25,9 +25,9 @@ msgstr ""
 msgid ""
 "Litestar maintains a suite of DTO factory types that can be used to create "
 "DTOs for use with popular data modelling libraries, such as ORMs. These take "
-"a model type as a generic type argument, and create subtypes of :class:"
-"`AbstractDTO <litestar.dto.base_dto.AbstractDTO>` that support conversion of "
-"that model type to and from raw bytes."
+"a model type as a generic type argument, and create subtypes "
+"of :class:`AbstractDTO <litestar.dto.base_dto.AbstractDTO>` that support "
+"conversion of that model type to and from raw bytes."
 msgstr ""
 
 #: ../../../usage/dto/1-abstract-dto.rst:9
@@ -48,8 +48,8 @@ msgstr ""
 
 #: ../../../usage/dto/1-abstract-dto.rst:14
 msgid ""
-":class:`SQLAlchemyDTO <advanced_alchemy.extensions.litestar.dto."
-"SQLAlchemyDTO>`"
+":class:`SQLAlchemyDTO "
+"<advanced_alchemy.extensions.litestar.dto.SQLAlchemyDTO>`"
 msgstr ""
 
 #: ../../../usage/dto/1-abstract-dto.rst:17
@@ -211,8 +211,8 @@ msgstr ""
 
 #: ../../../usage/dto/1-abstract-dto.rst:64
 msgid ""
-"Fields can be explicitly excluded using :class:`DTOConfig <litestar.dto."
-"config.DTOConfig>`."
+"Fields can be explicitly excluded using :class:`DTOConfig "
+"<litestar.dto.config.DTOConfig>`."
 msgstr ""
 
 #: ../../../usage/dto/1-abstract-dto.rst:66
@@ -419,9 +419,9 @@ msgstr ""
 
 #: ../../../usage/dto/1-abstract-dto.rst:104
 msgid ""
-"Fields can be renamed using :class:`DTOConfig <litestar.dto.config."
-"DTOConfig>`. The following example uses the name ``userName`` client-side, "
-"and ``user`` internally."
+"Fields can be renamed using :class:`DTOConfig "
+"<litestar.dto.config.DTOConfig>`. The following example uses the name "
+"``userName`` client-side, and ``user`` internally."
 msgstr ""
 
 #: ../../../usage/dto/1-abstract-dto.rst:108
@@ -675,8 +675,8 @@ msgstr ""
 msgid ""
 "litestar.exceptions.dto.InvalidAnnotationException: DTO narrowed with "
 "'<class 'docs.examples.data_transfer_objects.factory.type_checking.User'>', "
-"handler type is '<class 'docs.examples.data_transfer_objects.factory."
-"type_checking.Foo'>'"
+"handler type is '<class "
+"'docs.examples.data_transfer_objects.factory.type_checking.Foo'>'"
 msgstr ""
 
 #: ../../../usage/dto/1-abstract-dto.rst:146
@@ -686,8 +686,8 @@ msgstr ""
 #: ../../../usage/dto/1-abstract-dto.rst:148
 msgid ""
 "The depth of related items parsed from client data and serialized into "
-"return data can be controlled using the ``max_nested_depth`` parameter to :"
-"class:`DTOConfig <litestar.dto.config.DTOConfig>`."
+"return data can be controlled using the ``max_nested_depth`` parameter "
+"to :class:`DTOConfig <litestar.dto.config.DTOConfig>`."
 msgstr ""
 
 #: ../../../usage/dto/1-abstract-dto.rst:151
@@ -912,8 +912,8 @@ msgstr ""
 
 #: ../../../usage/dto/1-abstract-dto.rst:187
 msgid ""
-"In the following example, we create a ``User`` model, that is a :func:"
-"`dataclass <dataclasses.dataclass>` with 3 required fields: ``id``, "
+"In the following example, we create a ``User`` model, that is "
+"a :func:`dataclass <dataclasses.dataclass>` with 3 required fields: ``id``, "
 "``name``, and ``age``."
 msgstr ""
 
@@ -1061,8 +1061,8 @@ msgstr ""
 #: ../../../usage/dto/1-abstract-dto.rst:227
 msgid ""
 "To augment data used to instantiate our model instances, we can provide "
-"keyword arguments to the :meth:`create_instance() <litestar.dto."
-"data_structures.DTOData.create_instance>` method."
+"keyword arguments to the :meth:`create_instance() "
+"<litestar.dto.data_structures.DTOData.create_instance>` method."
 msgstr ""
 
 #: ../../../usage/dto/1-abstract-dto.rst:230
@@ -1125,10 +1125,11 @@ msgstr ""
 #: ../../../usage/dto/1-abstract-dto.rst:238
 msgid ""
 "The double-underscore syntax ``address__id`` passed as a keyword argument to "
-"the :meth:`create_instance() <litestar.dto.data_structures.DTOData."
-"create_instance>` method call is used to specify a value for a nested "
-"attribute. In this case, it's used to provide a value for the ``id`` "
-"attribute of the ``Address`` instance nested within the ``Person`` instance."
+"the :meth:`create_instance() "
+"<litestar.dto.data_structures.DTOData.create_instance>` method call is used "
+"to specify a value for a nested attribute. In this case, it's used to "
+"provide a value for the ``id`` attribute of the ``Address`` instance nested "
+"within the ``Person`` instance."
 msgstr ""
 
 #: ../../../usage/dto/1-abstract-dto.rst:243
@@ -1218,9 +1219,9 @@ msgstr ""
 
 #: ../../../usage/dto/1-abstract-dto.rst:265
 msgid ""
-"Inside the handler, the :meth:`DTOData.update_instance <litestar.dto."
-"data_structures.DTOData.update_instance>` method is called to update the "
-"instance of ``Person`` before returning it."
+"Inside the handler, the :meth:`DTOData.update_instance "
+"<litestar.dto.data_structures.DTOData.update_instance>` method is called to "
+"update the instance of ``Person`` before returning it."
 msgstr ""
 
 #: ../../../usage/dto/1-abstract-dto.rst:268
@@ -1274,9 +1275,10 @@ msgstr ""
 
 #: ../../../usage/dto/1-abstract-dto.rst:281
 msgid ""
-"This can be overridden by setting the :attr:`DTOConfig."
-"leading_underscore_private <litestar.dto.config.DTOConfig."
-"underscore_fields_private>` attribute to ``False``."
+"This can be overridden by setting "
+"the :attr:`DTOConfig.leading_underscore_private "
+"<litestar.dto.config.DTOConfig.underscore_fields_private>` attribute to "
+"``False``."
 msgstr ""
 
 #: ../../../usage/dto/1-abstract-dto.rst:286
@@ -1598,8 +1600,8 @@ msgstr ""
 #: ../../../usage/dto/1-abstract-dto.rst:-1
 msgid ""
 "> curl http://127.0.0.1:8000/users\n"
-"{\"items\":[{\"id\":1,\"name\":\"Litestar User\"}],\"page_size\":10,"
-"\"current_page\":1,\"total_pages\":1}"
+"{\"items\":[{\"id\":1,\"name\":\"Litestar User\"}],"
+"\"page_size\":10,\"current_page\":1,\"total_pages\":1}"
 msgstr ""
 
 #: ../../../usage/dto/1-abstract-dto.rst:377
@@ -1612,8 +1614,8 @@ msgstr ""
 #: ../../../usage/dto/1-abstract-dto.rst:389
 msgid ""
 "The example sets up a ``/users`` endpoint, where a paginated list of "
-"``User`` objects is returned, wrapped in :class:`ClassicPagination <."
-"pagination.ClassicPagination>`."
+"``User`` objects is returned, wrapped in :class:`ClassicPagination "
+"<.pagination.ClassicPagination>`."
 msgstr ""
 
 #: ../../../usage/dto/1-abstract-dto.rst:393

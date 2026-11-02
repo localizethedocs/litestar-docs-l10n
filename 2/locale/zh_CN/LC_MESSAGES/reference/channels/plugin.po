@@ -23,9 +23,7 @@ msgstr ""
 
 #: ../../../../litestar/channels/plugin.py:docstring of
 #: litestar.channels.plugin.ChannelsPlugin:1
-msgid ""
-"Bases: :py:class:`~litestar.plugins.base.InitPlugin`, :py:class:`~contextlib."
-"AbstractAsyncContextManager`"
+msgid "Bases: :py:class:`~litestar.plugins.base.InitPlugin`, :py:class:`~contextlib.AbstractAsyncContextManager`"
 msgstr ""
 
 #: ../../../../litestar/channels/plugin.py:docstring of
@@ -88,9 +86,9 @@ msgstr ""
 #: ../../../../litestar/channels/plugin.py:docstring of
 #: litestar.channels.plugin.ChannelsPlugin.__init__:16
 msgid ""
-"Send mode to use for sending data through a :class:`WebSocket <.connection."
-"WebSocket>`. This will be used when sending within generated route handlers "
-"or :meth:`Subscriber.run_in_background`"
+"Send mode to use for sending data through a :class:`WebSocket "
+"<.connection.WebSocket>`. This will be used when sending within generated "
+"route handlers or :meth:`Subscriber.run_in_background`"
 msgstr ""
 
 #: ../../../../litestar/channels/plugin.py:docstring of
@@ -236,6 +234,5 @@ msgstr ""
 
 #: ../../../../litestar/channels/plugin.py:docstring of
 #: litestar.channels.plugin.ChannelsException:1
-msgid ""
-"Bases: :py:class:`~litestar.exceptions.base_exceptions.LitestarException`"
+msgid "Bases: :py:class:`~litestar.exceptions.base_exceptions.LitestarException`"
 msgstr ""

@@ -32,8 +32,8 @@ msgstr ""
 
 #: ../../../topics/deployment/docker.rst:8
 msgid ""
-"This guide uses the `Docker official Python container <https://hub.docker."
-"com/_/python>`_ as a base image."
+"This guide uses the `Docker official Python container <https://"
+"hub.docker.com/_/python>`_ as a base image."
 msgstr ""
 
 #: ../../../topics/deployment/docker.rst:11
@@ -352,8 +352,8 @@ msgstr ""
 #: ../../../topics/deployment/docker.rst:174
 msgid ""
 "Once you have your ``docker-compose.yml`` defined, you can run ``docker "
-"compose up`` to start the containers. You can also run ``docker compose up -"
-"d`` to run the containers in the background, or \"detached\" mode."
+"compose up`` to start the containers. You can also run ``docker compose up "
+"-d`` to run the containers in the background, or \"detached\" mode."
 msgstr ""
 
 #: ../../../topics/deployment/docker.rst:0

@@ -60,9 +60,9 @@ msgstr ""
 #: litestar.response.sse.ServerSentEvent.__init__:4
 #: litestar.response.streaming.Stream.__init__:4
 msgid ""
-"A :class:`BackgroundTask <.background_tasks.BackgroundTask>` instance or :"
-"class:`BackgroundTasks <.background_tasks.BackgroundTasks>` to execute after "
-"the response is finished. Defaults to None."
+"A :class:`BackgroundTask <.background_tasks.BackgroundTask>` instance "
+"or :class:`BackgroundTasks <.background_tasks.BackgroundTasks>` to execute "
+"after the response is finished. Defaults to None."
 msgstr ""
 
 #: ../../../../litestar/response/__init__.py:docstring of
@@ -107,15 +107,16 @@ msgstr ""
 #: ../../../../litestar/response/__init__.py:docstring of
 #: litestar.response.file.File.__init__:18
 msgid ""
-"The output of calling :meth:`file_system.info <types.FileSystemProtocol."
-"info>`, equivalent to providing an :class:`os.stat_result`."
+"The output of calling :meth:`file_system.info "
+"<types.FileSystemProtocol.info>`, equivalent to providing "
+"an :class:`os.stat_result`."
 msgstr ""
 
 #: ../../../../litestar/response/__init__.py:docstring of
 #: litestar.response.file.File.__init__:20
 msgid ""
-"An implementation of the :class:`FileSystemProtocol <.types."
-"FileSystemProtocol>`. If provided it will be used to load the file."
+"An implementation of the :class:`FileSystemProtocol "
+"<.types.FileSystemProtocol>`. If provided it will be used to load the file."
 msgstr ""
 
 #: ../../../../litestar/response/__init__.py:docstring of
@@ -159,8 +160,8 @@ msgstr ""
 #: ../../../../litestar/response/__init__.py:docstring of
 #: litestar.response.file.File.to_asgi_response:1
 msgid ""
-"Create an :class:`ASGIFileResponse <litestar.response.file."
-"ASGIFileResponse>` instance."
+"Create an :class:`ASGIFileResponse "
+"<litestar.response.file.ASGIFileResponse>` instance."
 msgstr ""
 
 #: ../../../../litestar/response/__init__.py:docstring of
@@ -372,9 +373,9 @@ msgstr ""
 #: litestar.response.base.Response.__init__:6
 #: litestar.response.template.Template.__init__:5
 msgid ""
-"A :class:`BackgroundTask <.background_tasks.BackgroundTask>` instance or :"
-"class:`BackgroundTasks <.background_tasks.BackgroundTasks>` to execute after "
-"the response is finished. Defaults to ``None``."
+"A :class:`BackgroundTask <.background_tasks.BackgroundTask>` instance "
+"or :class:`BackgroundTasks <.background_tasks.BackgroundTasks>` to execute "
+"after the response is finished. Defaults to ``None``."
 msgstr ""
 
 #: ../../../../litestar/response/__init__.py:docstring of
@@ -417,8 +418,8 @@ msgstr ""
 #: ../../../../litestar/response/__init__.py:docstring of
 #: litestar.response.base.Response.set_cookie:1
 msgid ""
-"Set a cookie on the response. If passed a :class:`Cookie <.datastructures."
-"Cookie>` instance, keyword arguments will be ignored."
+"Set a cookie on the response. If passed a :class:`Cookie "
+"<.datastructures.Cookie>` instance, keyword arguments will be ignored."
 msgstr ""
 
 #: ../../../../litestar/response/__init__.py:docstring of
@@ -556,18 +557,18 @@ msgstr ""
 #: ../../../../litestar/response/__init__.py:docstring of
 #: litestar.response.streaming.Stream:1
 msgid ""
-"Bases: :py:class:`~litestar.response.base.Response`\\ [:py:class:`~typing."
-"Iterable`\\ [:py:class:`str` | :py:class:`bytes`] | :py:class:`~typing."
-"Iterator`\\ [:py:class:`str` | :py:class:`bytes`] | :py:class:`~typing."
-"AsyncIterable`\\ [:py:class:`str` | :py:class:`bytes`] | :py:class:`~typing."
-"AsyncIterator`\\ [:py:class:`str` | :py:class:`bytes`]]"
+"Bases: :py:class:`~litestar.response.base.Response`\\ "
+"[:py:class:`~typing.Iterable`\\ [:py:class:`str` | :py:class:`bytes`] "
+"| :py:class:`~typing.Iterator`\\ [:py:class:`str` | :py:class:`bytes`] "
+"| :py:class:`~typing.AsyncIterable`\\ [:py:class:`str` | :py:class:`bytes`] "
+"| :py:class:`~typing.AsyncIterator`\\ [:py:class:`str` | :py:class:`bytes`]]"
 msgstr ""
 
 #: ../../../../litestar/response/__init__.py:docstring of
 #: litestar.response.streaming.Stream:1
 msgid ""
-"An HTTP response that streams the response data as a series of ASGI ``http."
-"response.body`` events."
+"An HTTP response that streams the response data as a series of ASGI "
+"``http.response.body`` events."
 msgstr ""
 
 #: ../../../../litestar/response/__init__.py:docstring of

@@ -246,8 +246,8 @@ msgstr ""
 
 #: ../../../tutorials/repository-tutorial/02-repository-introduction.rst:65
 msgid ""
-"Here we import the :class:`SQLAlchemyAsyncRepository <advanced_alchemy."
-"repository.SQLAlchemyAsyncRepository>` class and create an "
+"Here we import the :class:`SQLAlchemyAsyncRepository "
+"<advanced_alchemy.repository.SQLAlchemyAsyncRepository>` class and create an "
 "``AuthorRepository`` repository class. This is all that's required to "
 "include all of the integrated repository features."
 msgstr ""
@@ -464,8 +464,8 @@ msgstr ""
 
 #: ../../../tutorials/repository-tutorial/02-repository-introduction.rst:156
 msgid ""
-"You can download it: :download:`/examples/contrib/sqlalchemy/us_state_lookup."
-"json` or view below:"
+"You can download it: :download:`/examples/contrib/sqlalchemy/"
+"us_state_lookup.json` or view below:"
 msgstr ""
 
 #: ../../../tutorials/repository-tutorial/02-repository-introduction.rst:159
@@ -746,8 +746,8 @@ msgid ""
 "    with session_factory() as db_session:\n"
 "        # 1) Load the JSON data into the US States table.\n"
 "        repo = USStateRepository(session=db_session)\n"
-"        fixture = open_fixture(here, USStateRepository.model_type."
-"__tablename__)  # type: ignore\n"
+"        fixture = open_fixture(here, "
+"USStateRepository.model_type.__tablename__)  # type: ignore\n"
 "        objs = repo.add_many([USStateRepository.model_type(**raw_obj) for "
 "raw_obj in fixture])\n"
 "        db_session.commit()\n"
@@ -820,8 +820,8 @@ msgstr ""
 msgid ""
 "Now that we have demonstrated how to interact with the repository objects "
 "outside of a Litestar application, our next example will use dependency "
-"injection to add this functionality to a :class:`~litestar.controller."
-"Controller`!"
+"injection to add this functionality to "
+"a :class:`~litestar.controller.Controller`!"
 msgstr ""
 
 #: ../../../tutorials/repository-tutorial/02-repository-introduction.rst:222

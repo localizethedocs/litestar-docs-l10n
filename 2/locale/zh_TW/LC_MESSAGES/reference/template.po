@@ -24,8 +24,8 @@ msgstr ""
 #: ../../../../litestar/template/__init__.py:docstring of
 #: litestar.template.config.TemplateConfig:1
 msgid ""
-"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~litestar.template.config."
-"EngineType`]"
+"Bases: :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~litestar.template.config.EngineType`]"
 msgstr ""
 
 #: ../../../../litestar/template/__init__.py:docstring of
@@ -51,8 +51,8 @@ msgstr ""
 
 #: ../../../../docstring of litestar.template.TemplateConfig.engine:1
 msgid ""
-"A template engine adhering to the :class:`TemplateEngineProtocol <litestar."
-"template.base.TemplateEngineProtocol>`."
+"A template engine adhering to the :class:`TemplateEngineProtocol "
+"<litestar.template.base.TemplateEngineProtocol>`."
 msgstr ""
 
 #: ../../../../docstring of litestar.template.TemplateConfig.engine_callback:1
@@ -78,8 +78,8 @@ msgstr ""
 #: ../../../../litestar/template/__init__.py:docstring of
 #: litestar.template.base.TemplateEngineProtocol:1
 msgid ""
-"Bases: :py:class:`~typing.Protocol`\\ [:py:obj:`~litestar.template.base."
-"TemplateType_co`, :py:obj:`~litestar.template.base.ContextType_co`]"
+"Bases: :py:class:`~typing.Protocol`\\ "
+"[:py:obj:`~litestar.template.base.TemplateType_co`, :py:obj:`~litestar.template.base.ContextType_co`]"
 msgstr ""
 
 #: ../../../../litestar/template/__init__.py:docstring of

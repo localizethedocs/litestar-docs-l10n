@@ -49,18 +49,18 @@ msgstr ""
 
 #: ../../../index.rst:6
 msgid ""
-"The Litestar framework supports :doc:`/usage/plugins/index`, ships with :doc:"
-"`dependency injection </usage/dependency-injection>`, :doc:`security "
-"primitives </usage/security/index>`, :doc:`OpenAPI schema generation </usage/"
-"openapi/index>`, `MessagePack <https://msgpack.org/>`_, :doc:`middlewares </"
-"usage/middleware/index>`, a great :doc:`CLI </usage/cli>` experience, and "
-"much more."
+"The Litestar framework supports :doc:`/usage/plugins/index`, ships "
+"with :doc:`dependency injection </usage/dependency-"
+"injection>`, :doc:`security primitives </usage/security/"
+"index>`, :doc:`OpenAPI schema generation </usage/openapi/index>`, "
+"`MessagePack <https://msgpack.org/>`_, :doc:`middlewares </usage/middleware/"
+"index>`, a great :doc:`CLI </usage/cli>` experience, and much more."
 msgstr ""
 "Litestar 框架支援 :doc:`/usage/plugins/index`，並內建了\\ :doc:`依賴注入 </"
-"usage/dependency-injection>`、:doc:`安全性原語 </usage/security/index>`、:"
-"doc:`OpenAPI 結構生成 </usage/openapi/index>`、`MessagePack <https://msgpack."
-"org/>`_、:doc:`中介軟體 </usage/middleware/index>`、優異的 :doc:`CLI </usage/"
-"cli>` 體驗以及更多功能。"
+"usage/dependency-injection>`、:doc:`安全性原語 </usage/security/"
+"index>`、:doc:`OpenAPI 結構生成 </usage/openapi/index>`、`MessagePack "
+"<https://msgpack.org/>`_、:doc:`中介軟體 </usage/middleware/index>`、優異"
+"的 :doc:`CLI </usage/cli>` 體驗以及更多功能。"
 
 #: ../../../index.rst:12
 msgid "Installation"
@@ -98,8 +98,8 @@ msgstr ""
 
 #: ../../../index.rst:29
 msgid ""
-":ref:`Brotli Compression Middleware <usage/middleware/builtin-middleware:"
-"brotli>`:"
+":ref:`Brotli Compression Middleware <usage/middleware/builtin-"
+"middleware:brotli>`:"
 msgstr ""
 
 #: ../../../index.rst:30
@@ -301,8 +301,8 @@ msgstr ""
 
 #: ../../../index.rst:129
 msgid ""
-"``http://localhost:8000/schema/swagger`` (for `Swagger UI <https://swagger."
-"io/>`_),"
+"``http://localhost:8000/schema/swagger`` (for `Swagger UI <https://"
+"swagger.io/>`_),"
 msgstr ""
 
 #: ../../../index.rst:130
@@ -313,8 +313,8 @@ msgstr ""
 
 #: ../../../index.rst:131
 msgid ""
-"``http://localhost:8000/schema/rapidoc`` (for `RapiDoc <https://rapidocweb."
-"com/>`_)"
+"``http://localhost:8000/schema/rapidoc`` (for `RapiDoc <https://"
+"rapidocweb.com/>`_)"
 msgstr ""
 
 #: ../../../index.rst:133
@@ -399,8 +399,8 @@ msgstr ""
 
 #: ../../../index.rst:188
 msgid ""
-"You can also use dataclasses (standard library and Pydantic), :class:`typing."
-"TypedDict`, or :class:`msgspec.Struct`."
+"You can also use dataclasses (standard library and "
+"Pydantic), :class:`typing.TypedDict`, or :class:`msgspec.Struct`."
 msgstr ""
 
 #: ../../../index.rst:192
@@ -731,16 +731,16 @@ msgid ""
 "A fully-capable, production-ready fullstack Litestar web application "
 "configured with best practices. It includes SQLAlchemy 2.0, VueJS, `Vite "
 "<https://vitejs.dev/>`_, `SAQ job queue <https://saq-py.readthedocs.io/en/"
-"latest/>`_, ``Jinja`` templates and more. `Read more <https://litestar-org."
-"github.io/litestar-fullstack/latest/>`_. Like all Litestar projects, this "
-"application is open to contributions, big and small."
+"latest/>`_, ``Jinja`` templates and more. `Read more <https://litestar-"
+"org.github.io/litestar-fullstack/latest/>`_. Like all Litestar projects, "
+"this application is open to contributions, big and small."
 msgstr ""
 
 #: ../../../index.rst:328
 msgid ""
 "`litestar-fullstack-inertia <https://github.com/litestar-org/litestar-"
-"fullstack-inertia>`_ : Similar to `Litestar Fullstack <https://litestar-org."
-"github.io/litestar-fullstack/latest/>`_ but uses `Inertia.js <https://"
+"fullstack-inertia>`_ : Similar to `Litestar Fullstack <https://litestar-"
+"org.github.io/litestar-fullstack/latest/>`_ but uses `Inertia.js <https://"
 "inertiajs.com>`_."
 msgstr ""
 

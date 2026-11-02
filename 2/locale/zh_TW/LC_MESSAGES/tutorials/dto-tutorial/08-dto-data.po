@@ -32,8 +32,8 @@ msgstr ""
 
 #: ../../../tutorials/dto-tutorial/08-dto-data.rst:8
 msgid ""
-"The solution to this is the :class:`DTOData <litestar.dto.data_structures."
-"DTOData>` type."
+"The solution to this is the :class:`DTOData "
+"<litestar.dto.data_structures.DTOData>` type."
 msgstr ""
 
 #: ../../../tutorials/dto-tutorial/08-dto-data.rst:11
@@ -84,15 +84,16 @@ msgstr ""
 msgid ""
 "The handler function's data parameter type is changed to ``DTOData[Person]`` "
 "instead of ``Person``, and accordingly, the value injected to represent the "
-"inbound client data will be an instance of :class:`DTOData <litestar.dto."
-"data_structures.DTOData>`."
+"inbound client data will be an instance of :class:`DTOData "
+"<litestar.dto.data_structures.DTOData>`."
 msgstr ""
 
 #: ../../../tutorials/dto-tutorial/08-dto-data.rst:23
 msgid ""
 "In the handler, we produce a value for the ``id`` field, and create an "
-"instance of ``Person`` using the :meth:`create_instance <litestar.dto."
-"data_structures.DTOData.create_instance>` method of the ``DTOData`` instance."
+"instance of ``Person`` using the :meth:`create_instance "
+"<litestar.dto.data_structures.DTOData.create_instance>` method of the "
+"``DTOData`` instance."
 msgstr ""
 
 #: ../../../tutorials/dto-tutorial/08-dto-data.rst:26
@@ -115,6 +116,6 @@ msgstr ""
 #: ../../../tutorials/dto-tutorial/08-dto-data.rst:38
 msgid ""
 "The :class:`DTOData <litestar.dto.data_structures.DTOData>` type has some "
-"other useful methods, and we'll take a look at those in the next section: :"
-"ref:`updating`."
+"other useful methods, and we'll take a look at those in the next "
+"section: :ref:`updating`."
 msgstr ""

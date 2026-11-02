@@ -51,8 +51,8 @@ msgstr ""
 
 #: ../../../../docstring of litestar.typing.FieldDefinition.args:1
 msgid ""
-"The result of calling ``get_args(annotation)`` after unwrapping Annotated, e."
-"g. (int,)."
+"The result of calling ``get_args(annotation)`` after unwrapping Annotated, "
+"e.g. (int,)."
 msgstr ""
 
 #: ../../../../docstring of litestar.typing.FieldDefinition.metadata:1
@@ -411,8 +411,8 @@ msgstr ""
 #: litestar.typing.FieldDefinition.from_parameter:4
 msgid ""
 "mapping of names to types. Should be result of ``get_type_hints()``, "
-"preferably via the :attr:``get_fn_type_hints() <.utils.signature_parsing."
-"get_fn_type_hints>`` helper."
+"preferably via the :attr:``get_fn_type_hints() "
+"<.utils.signature_parsing.get_fn_type_hints>`` helper."
 msgstr ""
 
 #: ../../../../litestar/typing.py:docstring of

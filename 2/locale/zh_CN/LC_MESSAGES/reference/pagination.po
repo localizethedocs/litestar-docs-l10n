@@ -27,8 +27,8 @@ msgstr ""
 #: litestar.pagination.AbstractSyncClassicPaginator:1
 #: litestar.pagination.AbstractSyncOffsetPaginator:1
 msgid ""
-"Bases: :py:class:`~abc.ABC`, :py:class:`~typing.Generic`\\ [:py:obj:"
-"`~litestar.pagination.T`]"
+"Bases: :py:class:`~abc.ABC`, :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~litestar.pagination.T`]"
 msgstr ""
 
 #: ../../../../litestar/pagination.py:docstring of
@@ -128,8 +128,8 @@ msgstr ""
 #: litestar.pagination.AbstractAsyncCursorPaginator:1
 #: litestar.pagination.AbstractSyncCursorPaginator:1
 msgid ""
-"Bases: :py:class:`~abc.ABC`, :py:class:`~typing.Generic`\\ [:py:obj:"
-"`~litestar.pagination.C`, :py:obj:`~litestar.pagination.T`]"
+"Bases: :py:class:`~abc.ABC`, :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~litestar.pagination.C`, :py:obj:`~litestar.pagination.T`]"
 msgstr ""
 
 #: ../../../../litestar/pagination.py:docstring of
@@ -263,8 +263,8 @@ msgstr ""
 #: ../../../../litestar/pagination.py:docstring of
 #: litestar.pagination.CursorPagination:1
 msgid ""
-"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~litestar.pagination.C`, :py:"
-"obj:`~litestar.pagination.T`]"
+"Bases: :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~litestar.pagination.C`, :py:obj:`~litestar.pagination.T`]"
 msgstr ""
 
 #: ../../../../litestar/pagination.py:docstring of
@@ -289,8 +289,8 @@ msgstr ""
 #: ../../../../litestar/pagination.py:docstring of
 #: advanced_alchemy.service.pagination.OffsetPagination:1
 msgid ""
-"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~advanced_alchemy.service."
-"pagination.T`]"
+"Bases: :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~advanced_alchemy.service.pagination.T`]"
 msgstr ""
 
 #: ../../../../docstring of litestar.pagination.OffsetPagination.offset:1

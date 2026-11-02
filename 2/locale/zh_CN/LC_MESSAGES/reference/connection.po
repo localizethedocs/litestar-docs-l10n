@@ -85,9 +85,8 @@ msgstr ""
 #: ../../../../litestar/connection/__init__.py:docstring of
 #: litestar.connection.base.ASGIConnection:1
 msgid ""
-"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~litestar.connection.base."
-"HandlerT`, :py:obj:`~litestar.connection.base.UserT`, :py:obj:`~litestar."
-"connection.base.AuthT`, :py:obj:`~litestar.connection.base.StateT`]"
+"Bases: :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~litestar.connection.base.HandlerT`, :py:obj:`~litestar.connection.base.UserT`, :py:obj:`~litestar.connection.base.AuthT`, :py:obj:`~litestar.connection.base.StateT`]"
 msgstr ""
 
 #: ../../../../litestar/connection/__init__.py:docstring of
@@ -188,9 +187,9 @@ msgstr ""
 #: ../../../../litestar/connection/__init__.py:docstring of
 #: litestar.connection.base.ASGIConnection.clear_session:3
 msgid ""
-"If the :class:`Litestar SessionMiddleware <.middleware.session.base."
-"SessionMiddleware>` is enabled, this will cause the session data to be "
-"cleared."
+"If the :class:`Litestar SessionMiddleware "
+"<.middleware.session.base.SessionMiddleware>` is enabled, this will cause "
+"the session data to be cleared."
 msgstr ""
 
 #: ../../../../litestar/connection/__init__.py:docstring of
@@ -300,9 +299,9 @@ msgstr ""
 #: ../../../../litestar/connection/__init__.py:docstring of
 #: litestar.connection.base.ASGIConnection.set_session:3
 msgid ""
-"If the :class:`SessionMiddleware <.middleware.session.base."
-"SessionMiddleware>` is enabled, the session will be added to the response as "
-"a cookie header."
+"If the :class:`SessionMiddleware "
+"<.middleware.session.base.SessionMiddleware>` is enabled, the session will "
+"be added to the response as a cookie header."
 msgstr ""
 
 #: ../../../../litestar/connection/__init__.py:docstring of
@@ -417,12 +416,9 @@ msgstr ""
 #: ../../../../litestar/connection/__init__.py:docstring of
 #: litestar.connection.request.Request:1
 msgid ""
-"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~litestar.connection.base."
-"UserT`, :py:obj:`~litestar.connection.base.AuthT`, :py:obj:`~litestar."
-"connection.base.StateT`], :py:class:`~litestar.connection.base."
-"ASGIConnection`\\ [:py:class:`HTTPRouteHandler`, :py:obj:`~litestar."
-"connection.base.UserT`, :py:obj:`~litestar.connection.base.AuthT`, :py:obj:"
-"`~litestar.connection.base.StateT`]"
+"Bases: :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~litestar.connection.base.UserT`, :py:obj:`~litestar.connection.base.AuthT`, :py:obj:`~litestar.connection.base.StateT`], :py:class:`~litestar.connection.base.ASGIConnection`\\ "
+"[:py:class:`HTTPRouteHandler`, :py:obj:`~litestar.connection.base.UserT`, :py:obj:`~litestar.connection.base.AuthT`, :py:obj:`~litestar.connection.base.StateT`]"
 msgstr ""
 
 #: ../../../../litestar/connection/__init__.py:docstring of
@@ -438,8 +434,8 @@ msgstr ""
 #: ../../../../litestar/connection/__init__.py:docstring of
 #: litestar.connection.Request.accept:1
 msgid ""
-"Parse the request's 'Accept' header, returning an :class:`Accept <litestar."
-"datastructures.headers.Accept>` instance."
+"Parse the request's 'Accept' header, returning an :class:`Accept "
+"<litestar.datastructures.headers.Accept>` instance."
 msgstr ""
 
 #: ../../../../litestar/connection/__init__.py:docstring of
@@ -555,12 +551,9 @@ msgstr ""
 #: ../../../../litestar/connection/__init__.py:docstring of
 #: litestar.connection.websocket.WebSocket:1
 msgid ""
-"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~litestar.connection.base."
-"UserT`, :py:obj:`~litestar.connection.base.AuthT`, :py:obj:`~litestar."
-"connection.base.StateT`], :py:class:`~litestar.connection.base."
-"ASGIConnection`\\ [:py:class:`WebsocketRouteHandler`, :py:obj:`~litestar."
-"connection.base.UserT`, :py:obj:`~litestar.connection.base.AuthT`, :py:obj:"
-"`~litestar.connection.base.StateT`]"
+"Bases: :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~litestar.connection.base.UserT`, :py:obj:`~litestar.connection.base.AuthT`, :py:obj:`~litestar.connection.base.StateT`], :py:class:`~litestar.connection.base.ASGIConnection`\\ "
+"[:py:class:`WebsocketRouteHandler`, :py:obj:`~litestar.connection.base.UserT`, :py:obj:`~litestar.connection.base.AuthT`, :py:obj:`~litestar.connection.base.StateT`]"
 msgstr ""
 
 #: ../../../../litestar/connection/__init__.py:docstring of

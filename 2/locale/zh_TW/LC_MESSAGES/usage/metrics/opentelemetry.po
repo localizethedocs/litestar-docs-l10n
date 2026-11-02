@@ -47,9 +47,9 @@ msgstr ""
 #: ../../../usage/metrics/opentelemetry.rst:18
 msgid ""
 "Once these requirements are satisfied, you can instrument your Litestar "
-"application by creating an instance of :class:`OpenTelemetryConfig <litestar."
-"plugins.opentelemetry.OpenTelemetryConfig>` and passing the middleware it "
-"creates to the Litestar constructor:"
+"application by creating an instance of :class:`OpenTelemetryConfig "
+"<litestar.plugins.opentelemetry.OpenTelemetryConfig>` and passing the "
+"middleware it creates to the Litestar constructor:"
 msgstr ""
 
 #: ../../../usage/metrics/opentelemetry.rst:23
@@ -74,7 +74,7 @@ msgstr ""
 #: ../../../usage/metrics/opentelemetry.rst:35
 msgid ""
 "You can also pass con figuration to the ``OpenTelemetryConfig`` telling it "
-"which providers to use. Consult :class:`reference docs <litestar.plugins."
-"opentelemetry.OpenTelemetryConfig>` regarding the configuration options you "
-"can use."
+"which providers to use. Consult :class:`reference docs "
+"<litestar.plugins.opentelemetry.OpenTelemetryConfig>` regarding the "
+"configuration options you can use."
 msgstr ""

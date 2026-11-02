@@ -23,9 +23,9 @@ msgstr ""
 
 #: ../../../usage/exceptions.rst:4
 msgid ""
-"Litestar defines a base exception called :class:`LitestarException <litestar."
-"exceptions.LitestarException>` which serves as a base class for all other "
-"exceptions, see :mod:`API Reference <litestar.exceptions>`."
+"Litestar defines a base exception called :class:`LitestarException "
+"<litestar.exceptions.LitestarException>` which serves as a base class for "
+"all other exceptions, see :mod:`API Reference <litestar.exceptions>`."
 msgstr ""
 
 #: ../../../usage/exceptions.rst:7
@@ -51,18 +51,19 @@ msgstr ""
 
 #: ../../../usage/exceptions.rst:16
 msgid ""
-"For missing extra dependencies, Litestar will raise either :class:"
-"`MissingDependencyException <litestar.exceptions."
-"MissingDependencyException>`. For example, if you try to use the :ref:"
-"`SQLAlchemyPlugin <plugins>` without having SQLAlchemy installed, this will "
-"be raised when you start the application."
+"For missing extra dependencies, Litestar will raise "
+"either :class:`MissingDependencyException "
+"<litestar.exceptions.MissingDependencyException>`. For example, if you try "
+"to use the :ref:`SQLAlchemyPlugin <plugins>` without having SQLAlchemy "
+"installed, this will be raised when you start the application."
 msgstr ""
 
 #: ../../../usage/exceptions.rst:21
 msgid ""
-"For other configuration issues, Litestar will raise :class:"
-"`ImproperlyConfiguredException <litestar.exceptions."
-"ImproperlyConfiguredException>` with a message explaining the issue."
+"For other configuration issues, Litestar will "
+"raise :class:`ImproperlyConfiguredException "
+"<litestar.exceptions.ImproperlyConfiguredException>` with a message "
+"explaining the issue."
 msgstr ""
 
 #: ../../../usage/exceptions.rst:26
@@ -71,10 +72,10 @@ msgstr ""
 
 #: ../../../usage/exceptions.rst:28
 msgid ""
-"For application exceptions, Litestar uses the class :class:`~litestar."
-"exceptions.http_exceptions.HTTPException`, which inherits from :class:"
-"`~litestar.exceptions.LitestarException`. This exception will be serialized "
-"into a JSON response of the following schema:"
+"For application exceptions, Litestar uses the "
+"class :class:`~litestar.exceptions.http_exceptions.HTTPException`, which "
+"inherits from :class:`~litestar.exceptions.LitestarException`. This "
+"exception will be serialized into a JSON response of the following schema:"
 msgstr ""
 
 #: ../../../usage/exceptions.rst:32
@@ -186,9 +187,9 @@ msgstr ""
 
 #: ../../../usage/exceptions.rst:65
 msgid ""
-"When a value fails validation, the result will be a :class:`~litestar."
-"exceptions.http_exceptions.ValidationException` with the ``extra`` key set "
-"to the validation error message."
+"When a value fails validation, the result will be "
+"a :class:`~litestar.exceptions.http_exceptions.ValidationException` with the "
+"``extra`` key set to the validation error message."
 msgstr ""
 
 #: ../../../usage/exceptions.rst:67
@@ -204,10 +205,10 @@ msgstr ""
 #: ../../../usage/exceptions.rst:74
 msgid ""
 "Litestar handles all errors by default by transforming them into **JSON "
-"responses**. If the errors are **instances of** :class:`~litestar.exceptions."
-"http_exceptions.HTTPException`, the responses will include the appropriate "
-"``status_code``. Otherwise, the responses will default to ``500 - \"Internal "
-"Server Error\"``."
+"responses**. If the errors are **instances "
+"of** :class:`~litestar.exceptions.http_exceptions.HTTPException`, the "
+"responses will include the appropriate ``status_code``. Otherwise, the "
+"responses will default to ``500 - \"Internal Server Error\"``."
 msgstr ""
 
 #: ../../../usage/exceptions.rst:79
@@ -413,8 +414,8 @@ msgid ""
 "def router_handler_exception_handler(request: Request, exc: "
 "ValidationException) -> Response:\n"
 "    return Response(\n"
-"        content={\"error\": \"validation error\", \"path\": request.url."
-"path},\n"
+"        content={\"error\": \"validation error\", \"path\": "
+"request.url.path},\n"
 "        status_code=400,\n"
 "    )\n"
 "\n"

@@ -24,13 +24,13 @@ msgstr ""
 #: ../../../tutorials/sqlalchemy/4-final-touches-and-recap.rst:4
 msgid ""
 "There is one more improvement that we can make to our application. "
-"Currently, we utilize both the :class:`SQLAlchemyInitPlugin <litestar."
-"contrib.sqlalchemy.plugins.SQLAlchemyInitPlugin>` and the :class:"
-"`SQLAlchemySerializationPlugin <litestar.contrib.sqlalchemy.plugins."
-"SQLAlchemySerializationPlugin>`, but there is a shortcut for this "
-"configuration: the :class:`SQLAlchemyPlugin <litestar.contrib.sqlalchemy."
-"plugins.SQLAlchemyPlugin>` is a combination of the two, so we can simplify "
-"our configuration by using it instead."
+"Currently, we utilize both the :class:`SQLAlchemyInitPlugin "
+"<litestar.contrib.sqlalchemy.plugins.SQLAlchemyInitPlugin>` and "
+"the :class:`SQLAlchemySerializationPlugin "
+"<litestar.contrib.sqlalchemy.plugins.SQLAlchemySerializationPlugin>`, but "
+"there is a shortcut for this configuration: the :class:`SQLAlchemyPlugin "
+"<litestar.contrib.sqlalchemy.plugins.SQLAlchemyPlugin>` is a combination of "
+"the two, so we can simplify our configuration by using it instead."
 msgstr ""
 
 #: ../../../tutorials/sqlalchemy/4-final-touches-and-recap.rst:11
@@ -351,9 +351,9 @@ msgstr ""
 #: ../../../tutorials/sqlalchemy/4-final-touches-and-recap.rst:24
 msgid ""
 "In the final application ``TodoItem`` is defined, representing a TODO item. "
-"It extends from the :class:`DeclarativeBase <sqlalchemy.orm."
-"DeclarativeBase>` class provided by `SQLAlchemy <http://www.sqlalchemy.org/"
-">`_:"
+"It extends from the :class:`DeclarativeBase "
+"<sqlalchemy.orm.DeclarativeBase>` class provided by `SQLAlchemy <http://"
+"www.sqlalchemy.org/>`_:"
 msgstr ""
 
 #: ../../../tutorials/sqlalchemy/4-final-touches-and-recap.rst:28

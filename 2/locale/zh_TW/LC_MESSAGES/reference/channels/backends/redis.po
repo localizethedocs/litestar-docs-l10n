@@ -23,9 +23,7 @@ msgstr ""
 
 #: ../../../../litestar/channels/backends/redis.py:docstring of
 #: litestar.channels.backends.redis.RedisChannelsBackend:1
-msgid ""
-"Bases: :py:class:`~litestar.channels.backends.base.ChannelsBackend`, :py:"
-"class:`~abc.ABC`"
+msgid "Bases: :py:class:`~litestar.channels.backends.base.ChannelsBackend`, :py:class:`~abc.ABC`"
 msgstr ""
 
 #: ../../../../litestar/channels/backends/redis.py:docstring of
@@ -62,8 +60,7 @@ msgstr ""
 #: ../../../../litestar/channels/backends/redis.py:docstring of
 #: litestar.channels.backends.redis.RedisChannelsPubSubBackend:1
 #: litestar.channels.backends.redis.RedisChannelsStreamBackend:1
-msgid ""
-"Bases: :py:class:`~litestar.channels.backends.redis.RedisChannelsBackend`"
+msgid "Bases: :py:class:`~litestar.channels.backends.redis.RedisChannelsBackend`"
 msgstr ""
 
 #: ../../../../litestar/channels/backends/redis.py:docstring of

@@ -72,9 +72,8 @@ msgstr ""
 #: ../../../../litestar/plugins/minijinja.py:docstring of
 #: litestar.plugins.minijinja.MiniJinjaTemplateEngine:1
 msgid ""
-"Bases: :py:class:`~litestar.template.base.TemplateEngineProtocol`\\ [:py:"
-"class:`MiniJinjaTemplate`, :py:class:`~litestar.plugins.minijinja."
-"StateProtocol`]"
+"Bases: :py:class:`~litestar.template.base.TemplateEngineProtocol`\\ "
+"[:py:class:`MiniJinjaTemplate`, :py:class:`~litestar.plugins.minijinja.StateProtocol`]"
 msgstr ""
 
 #: ../../../../litestar/plugins/minijinja.py:docstring of

@@ -35,8 +35,8 @@ msgstr ""
 
 #: ../../../usage/routing/handlers.rst:10
 msgid ""
-"Defining a route handler by decorating a function with the :class:`@get() <."
-"handlers.get>` :term:`decorator`"
+"Defining a route handler by decorating a function with the :class:`@get() "
+"<.handlers.get>` :term:`decorator`"
 msgstr ""
 
 #: ../../../usage/routing/handlers.rst:10
@@ -99,10 +99,10 @@ msgstr ""
 
 #: ../../../usage/routing/handlers.rst:28
 msgid ""
-"All route handler :term:`decorators <decorator>` accept an optional path :"
-"term:`argument`. This :term:`argument` can be declared as a :term:`kwarg "
-"<argument>` using the :paramref:`~.handlers.base.BaseRouteHandler.path` "
-"parameter:"
+"All route handler :term:`decorators <decorator>` accept an optional "
+"path :term:`argument`. This :term:`argument` can be declared as "
+"a :term:`kwarg <argument>` using "
+"the :paramref:`~.handlers.base.BaseRouteHandler.path` parameter:"
 msgstr ""
 
 #: ../../../usage/routing/handlers.rst:33
@@ -197,8 +197,9 @@ msgstr ""
 #: ../../../usage/routing/handlers.rst:88
 msgid ""
 ":ref:`path, query, header, and cookie parameters <parameter-types>`, "
-"declared with :data:`~.params.FromPath`, :data:`~.params.FromQuery`, :data:"
-"`~.params.FromHeader`, and :data:`~.params.FromCookie`"
+"declared "
+"with :data:`~.params.FromPath`, :data:`~.params.FromQuery`, :data:`~.params.FromHeader`, "
+"and :data:`~.params.FromCookie`"
 msgstr ""
 
 #: ../../../usage/routing/handlers.rst:91
@@ -218,20 +219,20 @@ msgstr ""
 
 #: ../../../usage/routing/handlers.rst:97
 msgid ""
-"``cookies: RequestCookies``: injects the request cookies as a :class:"
-"`dictionary <dict>`. See :data:`~.params.RequestCookies`."
+"``cookies: RequestCookies``: injects the request cookies as "
+"a :class:`dictionary <dict>`. See :data:`~.params.RequestCookies`."
 msgstr ""
 
 #: ../../../usage/routing/handlers.rst:99
 msgid ""
-"``headers: Headers``: injects the request :class:`~.datastructures.headers."
-"Headers`."
+"``headers: Headers``: injects the "
+"request :class:`~.datastructures.headers.Headers`."
 msgstr ""
 
 #: ../../../usage/routing/handlers.rst:100
 msgid ""
-"``query: QueryParams``: injects the request ``query_params``. See :data:`~."
-"params.QueryParams`."
+"``query: QueryParams``: injects the request ``query_params``. "
+"See :data:`~.params.QueryParams`."
 msgstr ""
 
 #: ../../../usage/routing/handlers.rst:101
@@ -247,15 +248,16 @@ msgstr ""
 
 #: ../../../usage/routing/handlers.rst:104
 msgid ""
-"``socket: WebSocket``: injects the :class:`WebSocket <.connection."
-"WebSocket>` instance. Available only for `websocket route handlers`_. With a "
-"custom websocket class, use that class or one it inherits from."
+"``socket: WebSocket``: injects the :class:`WebSocket "
+"<.connection.WebSocket>` instance. Available only for `websocket route "
+"handlers`_. With a custom websocket class, use that class or one it inherits "
+"from."
 msgstr ""
 
 #: ../../../usage/routing/handlers.rst:106
 msgid ""
-"``state: State``: injects a copy of the application :class:`State <."
-"datastructures.state.State>`."
+"``state: State``: injects a copy of the application :class:`State "
+"<.datastructures.state.State>`."
 msgstr ""
 
 #: ../../../usage/routing/handlers.rst:107
@@ -266,8 +268,8 @@ msgstr ""
 
 #: ../../../usage/routing/handlers.rst:108
 msgid ""
-"``data``: the parsed request body, declared with a body marker such as :data:"
-"`~.params.JSONBody`. See :doc:`requests </usage/requests>`."
+"``data``: the parsed request body, declared with a body marker such "
+"as :data:`~.params.JSONBody`. See :doc:`requests </usage/requests>`."
 msgstr ""
 
 #: ../../../usage/routing/handlers.rst:111
@@ -328,9 +330,9 @@ msgstr ""
 
 #: ../../../usage/routing/handlers.rst:151
 msgid ""
-"If a type annotation is missing, an :exc:`~.exceptions."
-"ImproperlyConfiguredException` will be raised during the application boot-up "
-"process."
+"If a type annotation is missing, "
+"an :exc:`~.exceptions.ImproperlyConfiguredException` will be raised during "
+"the application boot-up process."
 msgstr ""
 
 #: ../../../usage/routing/handlers.rst:154
@@ -358,9 +360,9 @@ msgstr ""
 #: ../../../usage/routing/handlers.rst:163
 msgid ""
 "The most commonly used route handlers are those that handle HTTP requests "
-"and responses. These route handlers all inherit from the :class:`~.handlers."
-"HTTPRouteHandler` class, which is aliased as the :term:`decorator` called :"
-"func:`~.handlers.route`:"
+"and responses. These route handlers all inherit from "
+"the :class:`~.handlers.HTTPRouteHandler` class, which is aliased as "
+"the :term:`decorator` called :func:`~.handlers.route`:"
 msgstr ""
 
 #: ../../../usage/routing/handlers.rst:168
@@ -386,8 +388,8 @@ msgstr ""
 
 #: ../../../usage/routing/handlers.rst:181
 msgid ""
-"Defining a route handler by decorating a function with the :class:"
-"`HTTPRouteHandler <.handlers.HTTPRouteHandler>` class"
+"Defining a route handler by decorating a function with "
+"the :class:`HTTPRouteHandler <.handlers.HTTPRouteHandler>` class"
 msgstr ""
 
 #: ../../../usage/routing/handlers.rst:181
@@ -408,9 +410,9 @@ msgstr ""
 #: ../../../usage/routing/handlers.rst:195
 msgid ""
 "Litestar also includes \"semantic\" :term:`decorators <decorator>`, that "
-"is, :term:`decorators <decorator>` the pre-set the :paramref:`~litestar."
-"handlers.HTTPRouteHandler.http_method` :term:`kwarg <argument>` to a "
-"specific HTTP verb, which correlates with their name:"
+"is, :term:`decorators <decorator>` the pre-set "
+"the :paramref:`~litestar.handlers.HTTPRouteHandler.http_method` :term:`kwarg "
+"<argument>` to a specific HTTP verb, which correlates with their name:"
 msgstr ""
 
 #: ../../../usage/routing/handlers.rst:199
@@ -440,8 +442,9 @@ msgstr ""
 #: ../../../usage/routing/handlers.rst:206
 msgid ""
 "These are used exactly like :func:`@route() <.handlers.route>` with the sole "
-"exception that you cannot configure the :paramref:`~.handlers."
-"HTTPRouteHandler.http_method` :term:`kwarg <argument>`:"
+"exception that you cannot configure "
+"the :paramref:`~.handlers.HTTPRouteHandler.http_method` :term:`kwarg "
+"<argument>`:"
 msgstr ""
 
 #: ../../../usage/routing/handlers.rst:0
@@ -502,12 +505,13 @@ msgstr ""
 
 #: ../../../usage/routing/handlers.rst:258
 msgid ""
-"Although these :term:`decorators <decorator>` are merely subclasses of :"
-"class:`~.handlers.HTTPRouteHandler` that pre-set the :paramref:`~.handlers."
-"HTTPRouteHandler.http_method`, using :func:`@get() <.handlers.get>`, :func:"
-"`@patch() <.handlers.patch>`, :func:`@put() <.handlers.put>`, :func:"
-"`@delete() <.handlers.delete>`, or :func:`@post() <.handlers.post>` instead "
-"of :func:`@route() <.handlers.route>` makes the code clearer and simpler."
+"Although these :term:`decorators <decorator>` are merely subclasses "
+"of :class:`~.handlers.HTTPRouteHandler` that pre-set "
+"the :paramref:`~.handlers.HTTPRouteHandler.http_method`, using :func:`@get() "
+"<.handlers.get>`, :func:`@patch() <.handlers.patch>`, :func:`@put() "
+"<.handlers.put>`, :func:`@delete() <.handlers.delete>`, or :func:`@post() "
+"<.handlers.post>` instead of :func:`@route() <.handlers.route>` makes the "
+"code clearer and simpler."
 msgstr ""
 
 #: ../../../usage/routing/handlers.rst:263
@@ -515,10 +519,10 @@ msgid ""
 "Furthermore, in the OpenAPI specification each unique combination of HTTP "
 "verb (e.g. ``GET``, ``POST``, etc.) and path is regarded as a distinct "
 "`operation <https://spec.openapis.org/oas/latest.html#operation-"
-"object>`_\\ , and each operation should be distinguished by a unique :"
-"paramref:`~.handlers.HTTPRouteHandler.operation_id` and optimally also have "
-"a :paramref:`~.handlers.HTTPRouteHandler.summary` and :paramref:`~.handlers."
-"HTTPRouteHandler.description` sections."
+"object>`_\\ , and each operation should be distinguished by a "
+"unique :paramref:`~.handlers.HTTPRouteHandler.operation_id` and optimally "
+"also have a :paramref:`~.handlers.HTTPRouteHandler.summary` "
+"and :paramref:`~.handlers.HTTPRouteHandler.description` sections."
 msgstr ""
 
 #: ../../../usage/routing/handlers.rst:269
@@ -534,8 +538,8 @@ msgstr ""
 
 #: ../../../usage/routing/handlers.rst:276
 msgid ""
-"A WebSocket connection can be handled with a :func:`@websocket() <.handlers."
-"WebsocketRouteHandler>` route handler."
+"A WebSocket connection can be handled with a :func:`@websocket() "
+"<.handlers.WebsocketRouteHandler>` route handler."
 msgstr ""
 
 #: ../../../usage/routing/handlers.rst:278
@@ -637,8 +641,8 @@ msgstr ""
 
 #: ../../../usage/routing/handlers.rst:328
 msgid ""
-"If you need to write your own ASGI application, you can do so using the :"
-"func:`@asgi() <.handlers.asgi>` :term:`decorator`:"
+"If you need to write your own ASGI application, you can do so using "
+"the :func:`@asgi() <.handlers.asgi>` :term:`decorator`:"
 msgstr ""
 
 #: ../../../usage/routing/handlers.rst:331
@@ -669,9 +673,10 @@ msgstr ""
 
 #: ../../../usage/routing/handlers.rst:350
 msgid ""
-"Like other route handlers, the :func:`@asgi() <.handlers.asgi>` :term:"
-"`decorator` is an alias of the :class:`~.handlers.ASGIRouteHandler` class. "
-"Thus, the code below is equivalent to the one above:"
+"Like other route handlers, the :func:`@asgi() "
+"<.handlers.asgi>` :term:`decorator` is an alias of "
+"the :class:`~.handlers.ASGIRouteHandler` class. Thus, the code below is "
+"equivalent to the one above:"
 msgstr ""
 
 #: ../../../usage/routing/handlers.rst:354
@@ -706,9 +711,9 @@ msgstr ""
 
 #: ../../../usage/routing/handlers.rst:377
 msgid ""
-"In difference to the other route handlers, the :func:`@asgi() <.handlers."
-"asgi>` route handler accepts only three :term:`kwargs <argument>` that "
-"**must** be defined:"
+"In difference to the other route handlers, the :func:`@asgi() "
+"<.handlers.asgi>` route handler accepts only three :term:`kwargs <argument>` "
+"that **must** be defined:"
 msgstr ""
 
 #: ../../../usage/routing/handlers.rst:380
@@ -733,8 +738,8 @@ msgstr ""
 
 #: ../../../usage/routing/handlers.rst:386
 msgid ""
-"You can read more about these in the `ASGI specification <https://asgi."
-"readthedocs.io/en/latest/specs/main.html>`_."
+"You can read more about these in the `ASGI specification <https://"
+"asgi.readthedocs.io/en/latest/specs/main.html>`_."
 msgstr ""
 
 #: ../../../usage/routing/handlers.rst:388
@@ -747,10 +752,10 @@ msgstr ""
 
 #: ../../../usage/routing/handlers.rst:392
 msgid ""
-"See the :class:`ASGIRouteHandler API reference documentation <.handlers."
-"asgi_handlers.ASGIRouteHandler>` for full details on the :func:`@asgi() <."
-"handlers.asgi>` :term:`decorator` and the :term:`kwargs <argument>` it "
-"accepts."
+"See the :class:`ASGIRouteHandler API reference documentation "
+"<.handlers.asgi_handlers.ASGIRouteHandler>` for full details on "
+"the :func:`@asgi() <.handlers.asgi>` :term:`decorator` and the :term:`kwargs "
+"<argument>` it accepts."
 msgstr ""
 
 #: ../../../usage/routing/handlers.rst:396
@@ -759,22 +764,25 @@ msgstr ""
 
 #: ../../../usage/routing/handlers.rst:398
 msgid ""
-"You can provide a :paramref:`~.handlers.base.BaseRouteHandler.name` :term:"
-"`kwarg <argument>` in all route handler :term:`decorators <decorator>`. The "
-"value for this :term:`kwarg <argument>` **must be unique**, otherwise :exc:"
-"`~.exceptions.ImproperlyConfiguredException` exception will be raised."
+"You can provide "
+"a :paramref:`~.handlers.base.BaseRouteHandler.name` :term:`kwarg <argument>` "
+"in all route handler :term:`decorators <decorator>`. The value for "
+"this :term:`kwarg <argument>` **must be unique**, "
+"otherwise :exc:`~.exceptions.ImproperlyConfiguredException` exception will "
+"be raised."
 msgstr ""
 
 #: ../../../usage/routing/handlers.rst:402
 msgid ""
 "The default value for :paramref:`~.handlers.base.BaseRouteHandler.name` is "
 "the value returned by the handler's :meth:`~object.__str__` method, which "
-"should be the full dotted path to the handler (e.g., ``app.controllers."
-"projects.list`` for the ``list`` function residing in the ``app/controllers/"
-"projects.py`` file). :paramref:`~.handlers.base.BaseRouteHandler.name` can "
-"be used to dynamically retrieve (i.e. during runtime) a mapping containing "
-"the route handler instance and paths. It can also be used to build a URL "
-"path for that handler:"
+"should be the full dotted path to the handler (e.g., "
+"``app.controllers.projects.list`` for the ``list`` function residing in the "
+"``app/controllers/projects.py`` "
+"file). :paramref:`~.handlers.base.BaseRouteHandler.name` can be used to "
+"dynamically retrieve (i.e. during runtime) a mapping containing the route "
+"handler instance and paths. It can also be used to build a URL path for that "
+"handler:"
 msgstr ""
 
 #: ../../../usage/routing/handlers.rst:409
@@ -834,8 +842,8 @@ msgstr ""
 
 #: ../../../usage/routing/handlers.rst:454
 msgid ""
-"As a convenience, you can also pass the route handler directly to :meth:`~."
-"app.Litestar.route_reverse`:"
+"As a convenience, you can also pass the route handler directly "
+"to :meth:`~.app.Litestar.route_reverse`:"
 msgstr ""
 
 #: ../../../usage/routing/handlers.rst:457
@@ -859,22 +867,22 @@ msgstr ""
 
 #: ../../../usage/routing/handlers.rst:471
 msgid ""
-":meth:`~.app.Litestar.route_reverse` will raise :exc:`~.exceptions."
-"NoRouteMatchFoundException` if a route with the given name was not found, or "
-"if any of the passed path :term:`parameters <parameter>` are missing or do "
-"not match the types in the respective route declaration. As an exception, :"
-"class:`str` is accepted in place of :class:`~datetime.datetime`, :class:"
-"`~datetime.date`, :class:`~datetime.time`, :class:`~datetime.timedelta`, :"
-"class:`float`, and :class:`~pathlib.Path` parameters, so you can apply "
-"custom formatting and pass the result to :meth:`~.app.Litestar."
-"route_reverse`."
+":meth:`~.app.Litestar.route_reverse` will "
+"raise :exc:`~.exceptions.NoRouteMatchFoundException` if a route with the "
+"given name was not found, or if any of the passed path :term:`parameters "
+"<parameter>` are missing or do not match the types in the respective route "
+"declaration. As an exception, :class:`str` is accepted in place "
+"of :class:`~datetime.datetime`, :class:`~datetime.date`, :class:`~datetime.time`, :class:`~datetime.timedelta`, :class:`float`, "
+"and :class:`~pathlib.Path` parameters, so you can apply custom formatting "
+"and pass the result to :meth:`~.app.Litestar.route_reverse`."
 msgstr ""
 
 #: ../../../usage/routing/handlers.rst:478
 msgid ""
-"If handler has multiple paths attached to it, :meth:`~.app.Litestar."
-"route_reverse` will return the path that consumes the highest number of the :"
-"term:`keyword arguments <argument>` passed to the function."
+"If handler has multiple paths attached to "
+"it, :meth:`~.app.Litestar.route_reverse` will return the path that consumes "
+"the highest number of the :term:`keyword arguments <argument>` passed to the "
+"function."
 msgstr ""
 
 #: ../../../usage/routing/handlers.rst:482
@@ -890,8 +898,8 @@ msgid ""
 "\n"
 "\n"
 "@get(\n"
-"   [\"/some-path\", \"/some-path/{id:int}\", \"/some-path/{id:int}/{val:"
-"str}\"],\n"
+"   [\"/some-path\", \"/some-path/{id:int}\", \"/some-path/{id:int}/{val:str}"
+"\"],\n"
 "   name=\"handler_name\",\n"
 ")\n"
 "def handler(id: FromPath[int] = 1, val: FromPath[str] = \"default\") -> "
@@ -915,20 +923,20 @@ msgstr ""
 
 #: ../../../usage/routing/handlers.rst:508
 msgid ""
-"When a handler is associated with multiple routes having identical path :"
-"term:`parameters <parameter>` (e.g., an indexed handler registered across "
-"multiple routers), the output of :meth:`~.app.Litestar.route_reverse` is "
-"unpredictable. This :term:`callable` will return a formatted path; however, "
-"its selection may appear arbitrary. Therefore, reversing URLs under these "
-"conditions is **strongly** advised against."
+"When a handler is associated with multiple routes having identical "
+"path :term:`parameters <parameter>` (e.g., an indexed handler registered "
+"across multiple routers), the output of :meth:`~.app.Litestar.route_reverse` "
+"is unpredictable. This :term:`callable` will return a formatted path; "
+"however, its selection may appear arbitrary. Therefore, reversing URLs under "
+"these conditions is **strongly** advised against."
 msgstr ""
 
 #: ../../../usage/routing/handlers.rst:513
 msgid ""
 "If you have access to a :class:`~.connection.Request` instance, you can "
-"perform reverse lookups using the :meth:`~.connection.ASGIConnection."
-"url_for` method, which is similar to :meth:`~.app.Litestar.route_reverse`, "
-"but returns an absolute URL."
+"perform reverse lookups using "
+"the :meth:`~.connection.ASGIConnection.url_for` method, which is similar "
+"to :meth:`~.app.Litestar.route_reverse`, but returns an absolute URL."
 msgstr ""
 
 #: ../../../usage/routing/handlers.rst:520
@@ -944,8 +952,8 @@ msgstr ""
 #: ../../../usage/routing/handlers.rst:526
 #: ../../../usage/routing/handlers.rst:542
 msgid ""
-"Adding arbitrary metadata to a route handler through the ``opt`` :term:"
-"`kwarg <argument>`"
+"Adding arbitrary metadata to a route handler through the "
+"``opt`` :term:`kwarg <argument>`"
 msgstr ""
 
 #: ../../../usage/routing/handlers.rst:526
@@ -960,9 +968,10 @@ msgstr ""
 #: ../../../usage/routing/handlers.rst:534
 msgid ""
 "This dictionary can be accessed by a :doc:`route guard </usage/security/"
-"guards>`, or by accessing the :attr:`~.connection.ASGIConnection."
-"route_handler` property on a :class:`~.connection.request.Request` object, "
-"or using the :class:`ASGI scope <litestar.types.Scope>` object directly."
+"guards>`, or by accessing "
+"the :attr:`~.connection.ASGIConnection.route_handler` property on "
+"a :class:`~.connection.request.Request` object, or using the :class:`ASGI "
+"scope <litestar.types.Scope>` object directly."
 msgstr ""
 
 #: ../../../usage/routing/handlers.rst:538
@@ -1156,9 +1165,10 @@ msgstr ""
 #: ../../../usage/routing/handlers.rst:630
 msgid ""
 "If you want to map your type to a name that is different from its "
-"``__name__`` attribute, you can use the :paramref:`~.handlers.base."
-"BaseRouteHandler.signature_namespace` parameter, e.g., ``app = "
-"Litestar(signature_namespace={\"FooModel\": Model})``."
+"``__name__`` attribute, you can use "
+"the :paramref:`~.handlers.base.BaseRouteHandler.signature_namespace` "
+"parameter, e.g., ``app = Litestar(signature_namespace={\"FooModel\": "
+"Model})``."
 msgstr ""
 
 #: ../../../usage/routing/handlers.rst:634
@@ -1174,8 +1184,8 @@ msgstr ""
 #: ../../../usage/routing/handlers.rst:639
 msgid ""
 "Litestar automatically adds some names to the signature :term:`namespace` "
-"when parsing signature models in order to support injection of the :ref:"
-"`handler-function-kwargs`."
+"when parsing signature models in order to support injection of "
+"the :ref:`handler-function-kwargs`."
 msgstr ""
 
 #: ../../../usage/routing/handlers.rst:642

@@ -145,8 +145,8 @@ msgstr ""
 #: ../../../../litestar/static_files/__init__.py:docstring of
 #: litestar.static_files.config.StaticFilesConfig:3
 msgid ""
-"To enable static files, pass an instance of this class to the :class:"
-"`Litestar <litestar.app.Litestar>` constructor using the "
+"To enable static files, pass an instance of this class to "
+"the :class:`Litestar <litestar.app.Litestar>` constructor using the "
 "'static_files_config' key."
 msgstr ""
 

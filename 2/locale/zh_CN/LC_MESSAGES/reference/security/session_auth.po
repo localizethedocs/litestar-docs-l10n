@@ -24,11 +24,10 @@ msgstr ""
 #: ../../../../litestar/security/session_auth/auth.py:docstring of
 #: litestar.security.session_auth.auth.SessionAuth:1
 msgid ""
-"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~litestar.security.base."
-"UserType`, :py:obj:`~litestar.middleware.session.base."
-"BaseSessionBackendT`], :py:class:`~litestar.security.base."
-"AbstractSecurityConfig`\\ [:py:obj:`~litestar.security.base.UserType`, :py:"
-"class:`~typing.Dict`\\ [:py:class:`str`, :py:obj:`~typing.Any`]]"
+"Bases: :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~litestar.security.base.UserType`, :py:obj:`~litestar.middleware.session.base.BaseSessionBackendT`], :py:class:`~litestar.security.base.AbstractSecurityConfig`\\ "
+"[:py:obj:`~litestar.security.base.UserType`, :py:class:`~typing.Dict`\\ "
+"[:py:class:`str`, :py:obj:`~typing.Any`]]"
 msgstr ""
 
 #: ../../../../litestar/security/session_auth/auth.py:docstring of
@@ -156,8 +155,8 @@ msgid ""
 "def my_handler(request: Request) -> None: ...\n"
 "\n"
 "\n"
-"app = Litestar(route_handlers=[my_handler], middleware=[session_auth_config."
-"middleware])"
+"app = Litestar(route_handlers=[my_handler], "
+"middleware=[session_auth_config.middleware])"
 msgstr ""
 
 #: ../../../reference/security/session_auth.rst:0
@@ -178,8 +177,8 @@ msgstr ""
 #: ../../../../litestar/security/session_auth/auth.py:docstring of
 #: litestar.security.session_auth.SessionAuth.session_backend:3
 msgid ""
-"A subclass of :class:`BaseSessionBackend <litestar.middleware.session.base."
-"BaseSessionBackend>`"
+"A subclass of :class:`BaseSessionBackend "
+"<litestar.middleware.session.base.BaseSessionBackend>`"
 msgstr ""
 
 #: ../../../../litestar/security/session_auth/auth.py:docstring of
@@ -210,15 +209,13 @@ msgstr ""
 #: ../../../../litestar/security/session_auth/auth.py:docstring of
 #: litestar.security.session_auth.SessionAuth.security_requirement:6
 msgid ""
-"An OpenAPI 3.1 :data:`SecurityRequirement <.openapi.spec."
-"SecurityRequirement>` dictionary."
+"An OpenAPI 3.1 :data:`SecurityRequirement "
+"<.openapi.spec.SecurityRequirement>` dictionary."
 msgstr ""
 
 #: ../../../../litestar/security/session_auth/middleware.py:docstring of
 #: litestar.security.session_auth.middleware.SessionAuthMiddleware:1
-msgid ""
-"Bases: :py:class:`~litestar.middleware.authentication."
-"AbstractAuthenticationMiddleware`"
+msgid "Bases: :py:class:`~litestar.middleware.authentication.AbstractAuthenticationMiddleware`"
 msgstr ""
 
 #: ../../../../litestar/security/session_auth/middleware.py:docstring of
@@ -281,6 +278,6 @@ msgstr ""
 #: ../../../../litestar/security/session_auth/middleware.py:docstring of
 #: litestar.security.session_auth.middleware.SessionAuthMiddleware.authenticate_request:7
 msgid ""
-":class:`AuthenticationResult <.middleware.authentication."
-"AuthenticationResult>`"
+":class:`AuthenticationResult "
+"<.middleware.authentication.AuthenticationResult>`"
 msgstr ""

@@ -130,9 +130,9 @@ msgstr ""
 
 #: ../../../topics/deployment/supervisor.rst:56
 msgid ""
-"You can place the above config file in ``/etc/supervisor/conf.d/exampleapp."
-"conf``. After you have created the config file, you will need to reload the "
-"``supervisor`` config to load your new service file."
+"You can place the above config file in ``/etc/supervisor/conf.d/"
+"exampleapp.conf``. After you have created the config file, you will need to "
+"reload the ``supervisor`` config to load your new service file."
 msgstr ""
 
 #: ../../../topics/deployment/supervisor.rst:0
@@ -339,8 +339,8 @@ msgid ""
 "      echo \" > Updating Supervisor and shell configurations...\"\n"
 "      sudo ln -sf /opt/exampleapp/server/service.conf /etc/supervisor/conf.d/"
 "exampleapp.conf\n"
-"      sudo ln -sf /opt/exampleapp/server/alias.sh /etc/profile.d/exampleapp."
-"sh\n"
+"      sudo ln -sf /opt/exampleapp/server/alias.sh /etc/profile.d/"
+"exampleapp.sh\n"
 "      source /etc/profile.d/exampleapp.sh\n"
 "\n"
 "      # Update Supervisor to apply new configurations\n"

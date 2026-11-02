@@ -43,10 +43,10 @@ msgstr ""
 #: ../../../tutorials/repository-tutorial/01-modelling-and-features.rst:13
 msgid ""
 "We'll begin by modelling the entities and relationships between authors and "
-"books. We'll start by creating the ``Author`` table, utilizing the :class:"
-"`UUIDBase <advanced_alchemy.base.UUIDBase>` class. To keep things simple, "
-"our first model will encompass only three fields: ``id``, ``name``, and "
-"``dob``."
+"books. We'll start by creating the ``Author`` table, utilizing "
+"the :class:`UUIDBase <advanced_alchemy.base.UUIDBase>` class. To keep things "
+"simple, our first model will encompass only three fields: ``id``, ``name``, "
+"and ``dob``."
 msgstr ""
 
 #: ../../../tutorials/repository-tutorial/01-modelling-and-features.rst:19
@@ -98,19 +98,20 @@ msgstr ""
 
 #: ../../../tutorials/repository-tutorial/01-modelling-and-features.rst:40
 msgid ""
-"To implement this, we will define a new ``Book`` model via the :class:"
-"`UUIDAuditBase <advanced_alchemy.base.UUIDAuditBase>` class. Observe that "
-"the only modification here is the parent class from which we inherit. This "
-"minor change endows the `book` table with automatic timestamp columns "
-"(`created` and `updated`) upon deployment!"
+"To implement this, we will define a new ``Book`` model via "
+"the :class:`UUIDAuditBase <advanced_alchemy.base.UUIDAuditBase>` class. "
+"Observe that the only modification here is the parent class from which we "
+"inherit. This minor change endows the `book` table with automatic timestamp "
+"columns (`created` and `updated`) upon deployment!"
 msgstr ""
 
 #: ../../../tutorials/repository-tutorial/01-modelling-and-features.rst:48
 msgid ""
 "If your application requires integer-based primary keys, equivalent base "
-"model and base audit model implementations can be found at :class:"
-"`BigIntBase <advanced_alchemy.base.BigIntAuditBase>` and :class:"
-"`BigIntAuditBase <advanced_alchemy.base.UUIDAuditBase>` respectively."
+"model and base audit model implementations can be found "
+"at :class:`BigIntBase <advanced_alchemy.base.BigIntAuditBase>` "
+"and :class:`BigIntAuditBase <advanced_alchemy.base.UUIDAuditBase>` "
+"respectively."
 msgstr ""
 
 #: ../../../tutorials/repository-tutorial/01-modelling-and-features.rst:55
@@ -151,8 +152,9 @@ msgstr ""
 
 #: ../../../tutorials/repository-tutorial/01-modelling-and-features.rst:72
 msgid ""
-"A ``BigInteger`` variant :class:`BigIntIdentity <advanced_alchemy.types."
-"BigIntIdentity>` that reverts to an ``Integer`` for unsupported variants."
+"A ``BigInteger`` variant :class:`BigIntIdentity "
+"<advanced_alchemy.types.BigIntIdentity>` that reverts to an ``Integer`` for "
+"unsupported variants."
 msgstr ""
 
 #: ../../../tutorials/repository-tutorial/01-modelling-and-features.rst:75

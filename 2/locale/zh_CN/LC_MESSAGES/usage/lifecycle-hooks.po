@@ -66,10 +66,10 @@ msgstr ""
 #: ../../../usage/lifecycle-hooks.rst:22
 msgid ""
 "The ``before_request`` hook runs immediately before calling the route "
-"handler function. It can be any callable accepting a :class:`~litestar."
-"connection.Request` as its first parameter and returns either ``None`` or a "
-"value that can be used in a response. If a value is returned, the router "
-"handler for this request will be bypassed."
+"handler function. It can be any callable accepting "
+"a :class:`~litestar.connection.Request` as its first parameter and returns "
+"either ``None`` or a value that can be used in a response. If a value is "
+"returned, the router handler for this request will be bypassed."
 msgstr ""
 
 #: ../../../usage/lifecycle-hooks.rst:0
@@ -184,8 +184,8 @@ msgstr ""
 #: ../../../usage/lifecycle-hooks.rst:36
 msgid ""
 "The ``after_request`` hook runs after the route handler returned and the "
-"response object has been resolved. It can be any callable which takes a :"
-"class:`~litestar.response.Response` instance as its first parameter, and "
+"response object has been resolved. It can be any callable which takes "
+"a :class:`~litestar.response.Response` instance as its first parameter, and "
 "returns a ``Response`` instance. The ``Response`` instance returned does not "
 "necessarily have to be the one that was received."
 msgstr ""
@@ -255,8 +255,9 @@ msgstr ""
 #: ../../../usage/lifecycle-hooks.rst:50
 msgid ""
 "The ``after_response`` hook runs after the response has been returned by the "
-"server. It can be any callable accepting a :class:`~litestar.connection."
-"Request` as its first parameter and does not return any value."
+"server. It can be any callable accepting "
+"a :class:`~litestar.connection.Request` as its first parameter and does not "
+"return any value."
 msgstr ""
 
 #: ../../../usage/lifecycle-hooks.rst:54

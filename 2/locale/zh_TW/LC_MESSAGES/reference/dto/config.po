@@ -49,8 +49,8 @@ msgstr ""
 #: ../../../../docstring of litestar.dto.config.DTOConfig.exclude:7
 #: litestar.dto.config.DTOConfig.include:7
 msgid ""
-"The field names are dot-separated paths to nested fields, e.g. ``\"address."
-"street\"`` will"
+"The field names are dot-separated paths to nested fields, e.g. "
+"``\"address.street\"`` will"
 msgstr ""
 
 #: ../../../../docstring of litestar.dto.config.DTOConfig.exclude:8

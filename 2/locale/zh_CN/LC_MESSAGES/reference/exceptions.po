@@ -50,8 +50,7 @@ msgstr ""
 #: litestar.exceptions.dto_exceptions.DTOFactoryException:1
 #: litestar.exceptions.http_exceptions.HTTPException:1
 #: litestar.exceptions.websocket_exceptions.WebSocketException:1
-msgid ""
-"Bases: :py:class:`~litestar.exceptions.base_exceptions.LitestarException`"
+msgid "Bases: :py:class:`~litestar.exceptions.base_exceptions.LitestarException`"
 msgstr ""
 
 #: ../../../../litestar/exceptions/__init__.py:docstring of
@@ -122,9 +121,7 @@ msgstr ""
 
 #: ../../../../litestar/exceptions/__init__.py:docstring of
 #: litestar.exceptions.http_exceptions.ImproperlyConfiguredException:1
-msgid ""
-"Bases: :py:class:`~litestar.exceptions.http_exceptions.HTTPException`, :py:"
-"class:`ValueError`"
+msgid "Bases: :py:class:`~litestar.exceptions.http_exceptions.HTTPException`, :py:class:`ValueError`"
 msgstr ""
 
 #: ../../../../litestar/exceptions/__init__.py:docstring of
@@ -141,8 +138,7 @@ msgstr ""
 
 #: ../../../../litestar/exceptions/__init__.py:docstring of
 #: litestar.exceptions.dto_exceptions.InvalidAnnotationException:1
-msgid ""
-"Bases: :py:class:`~litestar.exceptions.dto_exceptions.DTOFactoryException`"
+msgid "Bases: :py:class:`~litestar.exceptions.dto_exceptions.DTOFactoryException`"
 msgstr ""
 
 #: ../../../../litestar/exceptions/__init__.py:docstring of
@@ -210,9 +206,7 @@ msgstr ""
 
 #: ../../../../litestar/exceptions/__init__.py:docstring of
 #: litestar.exceptions.base_exceptions.MissingDependencyException:1
-msgid ""
-"Bases: :py:class:`~litestar.exceptions.base_exceptions.LitestarException`, :"
-"py:class:`ImportError`"
+msgid "Bases: :py:class:`~litestar.exceptions.base_exceptions.LitestarException`, :py:class:`ImportError`"
 msgstr ""
 
 #: ../../../../litestar/exceptions/__init__.py:docstring of
@@ -231,9 +225,7 @@ msgstr ""
 #: litestar.exceptions.http_exceptions.NoRouteMatchFoundException:1
 #: litestar.exceptions.http_exceptions.ServiceUnavailableException:1
 #: litestar.exceptions.http_exceptions.TemplateNotFoundException:1
-msgid ""
-"Bases: :py:class:`~litestar.exceptions.http_exceptions."
-"InternalServerException`"
+msgid "Bases: :py:class:`~litestar.exceptions.http_exceptions.InternalServerException`"
 msgstr ""
 
 #: ../../../../litestar/exceptions/__init__.py:docstring of
@@ -250,9 +242,7 @@ msgstr ""
 #: ../../../../litestar/exceptions/__init__.py:docstring of
 #: litestar.exceptions.http_exceptions.NotFoundException:1
 #: litestar.exceptions.http_exceptions.ValidationException:1
-msgid ""
-"Bases: :py:class:`~litestar.exceptions.http_exceptions.ClientException`, :py:"
-"class:`ValueError`"
+msgid "Bases: :py:class:`~litestar.exceptions.http_exceptions.ClientException`, :py:class:`ValueError`"
 msgstr ""
 
 #: ../../../../litestar/exceptions/__init__.py:docstring of
@@ -308,9 +298,7 @@ msgstr ""
 
 #: ../../../../litestar/exceptions/__init__.py:docstring of
 #: litestar.exceptions.websocket_exceptions.WebSocketDisconnect:1
-msgid ""
-"Bases: :py:class:`~litestar.exceptions.websocket_exceptions."
-"WebSocketException`"
+msgid "Bases: :py:class:`~litestar.exceptions.websocket_exceptions.WebSocketException`"
 msgstr ""
 
 #: ../../../../litestar/exceptions/__init__.py:docstring of

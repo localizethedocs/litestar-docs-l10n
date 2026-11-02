@@ -24,8 +24,8 @@ msgstr ""
 #: ../../../tutorials/sqlalchemy/1-provide-session-with-di.rst:5
 msgid ""
 "In our original script, we had to repeat the logic to construct a session "
-"instance for every request type. This is not very `DRY <https://en.wikipedia."
-"org/wiki/Don%27t_repeat_yourself>`_."
+"instance for every request type. This is not very `DRY <https://"
+"en.wikipedia.org/wiki/Don%27t_repeat_yourself>`_."
 msgstr ""
 
 #: ../../../tutorials/sqlalchemy/1-provide-session-with-di.rst:8
@@ -467,10 +467,10 @@ msgstr ""
 #: ../../../tutorials/sqlalchemy/1-provide-session-with-di.rst:35
 msgid ""
 "In the route handlers, the database session is injected by adding a "
-"parameter named ``transaction`` and marking it with :data:`~litestar.di."
-"NamedDependency`. The marker tells Litestar to supply the value from the "
-"``transaction`` dependency at runtime, matching the parameter name against "
-"the dependency key."
+"parameter named ``transaction`` and marking it "
+"with :data:`~litestar.di.NamedDependency`. The marker tells Litestar to "
+"supply the value from the ``transaction`` dependency at runtime, matching "
+"the parameter name against the dependency key."
 msgstr ""
 
 #: ../../../tutorials/sqlalchemy/1-provide-session-with-di.rst:41

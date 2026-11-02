@@ -120,18 +120,18 @@ msgstr ""
 #: ../../../../litestar/response/streaming.py:docstring of
 #: litestar.response.streaming.Stream:1
 msgid ""
-"Bases: :py:class:`~litestar.response.base.Response`\\ [:py:class:`~typing."
-"Iterable`\\ [:py:class:`str` | :py:class:`bytes`] | :py:class:`~typing."
-"Iterator`\\ [:py:class:`str` | :py:class:`bytes`] | :py:class:`~typing."
-"AsyncIterable`\\ [:py:class:`str` | :py:class:`bytes`] | :py:class:`~typing."
-"AsyncIterator`\\ [:py:class:`str` | :py:class:`bytes`]]"
+"Bases: :py:class:`~litestar.response.base.Response`\\ "
+"[:py:class:`~typing.Iterable`\\ [:py:class:`str` | :py:class:`bytes`] "
+"| :py:class:`~typing.Iterator`\\ [:py:class:`str` | :py:class:`bytes`] "
+"| :py:class:`~typing.AsyncIterable`\\ [:py:class:`str` | :py:class:`bytes`] "
+"| :py:class:`~typing.AsyncIterator`\\ [:py:class:`str` | :py:class:`bytes`]]"
 msgstr ""
 
 #: ../../../../litestar/response/streaming.py:docstring of
 #: litestar.response.streaming.Stream:1
 msgid ""
-"An HTTP response that streams the response data as a series of ASGI ``http."
-"response.body`` events."
+"An HTTP response that streams the response data as a series of ASGI "
+"``http.response.body`` events."
 msgstr ""
 
 #: ../../../../litestar/response/streaming.py:docstring of
@@ -147,9 +147,9 @@ msgstr ""
 #: ../../../../litestar/response/streaming.py:docstring of
 #: litestar.response.streaming.Stream.__init__:4
 msgid ""
-"A :class:`BackgroundTask <.background_tasks.BackgroundTask>` instance or :"
-"class:`BackgroundTasks <.background_tasks.BackgroundTasks>` to execute after "
-"the response is finished. Defaults to None."
+"A :class:`BackgroundTask <.background_tasks.BackgroundTask>` instance "
+"or :class:`BackgroundTasks <.background_tasks.BackgroundTasks>` to execute "
+"after the response is finished. Defaults to None."
 msgstr ""
 
 #: ../../../../litestar/response/streaming.py:docstring of
