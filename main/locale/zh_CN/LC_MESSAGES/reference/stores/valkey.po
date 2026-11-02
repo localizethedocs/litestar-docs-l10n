@@ -59,8 +59,8 @@ msgstr ""
 #: ../../../../litestar/stores/valkey.py:docstring of
 #: litestar.stores.valkey.ValkeyStore.with_client:1
 msgid ""
-"Initialize a :class:`ValkeyStore` instance with a new class:`valkey.asyncio."
-"Valkey` instance."
+"Initialize a :class:`ValkeyStore` instance with a new "
+"class:`valkey.asyncio.Valkey` instance."
 msgstr ""
 
 #: ../../../../litestar/stores/valkey.py:docstring of

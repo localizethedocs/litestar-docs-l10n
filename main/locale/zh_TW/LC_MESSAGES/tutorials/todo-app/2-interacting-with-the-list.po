@@ -124,8 +124,8 @@ msgstr ""
 
 #: ../../../tutorials/todo-app/2-interacting-with-the-list.rst:48
 msgid ""
-"As in the previous chapter, this too can be improved by using :doc:"
-"`dataclasses <python:library/dataclasses>` instead of plain dicts."
+"As in the previous chapter, this too can be improved by "
+"using :doc:`dataclasses <python:library/dataclasses>` instead of plain dicts."
 msgstr ""
 
 #: ../../../tutorials/todo-app/2-interacting-with-the-list.rst:52

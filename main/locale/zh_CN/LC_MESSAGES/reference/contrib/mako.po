@@ -77,9 +77,9 @@ msgstr ""
 #: ../../../../litestar/contrib/mako.py:docstring of
 #: litestar.contrib.mako.MakoTemplateEngine:1
 msgid ""
-"Bases: :py:class:`~litestar.template.base.TemplateEngineProtocol`\\ [:py:"
-"class:`~litestar.contrib.mako.MakoTemplate`, :py:class:`~collections.abc."
-"Mapping`\\ [:py:class:`str`, :py:obj:`~typing.Any`]]"
+"Bases: :py:class:`~litestar.template.base.TemplateEngineProtocol`\\ "
+"[:py:class:`~litestar.contrib.mako.MakoTemplate`, :py:class:`~collections.abc.Mapping`\\ "
+"[:py:class:`str`, :py:obj:`~typing.Any`]]"
 msgstr ""
 
 #: ../../../../litestar/contrib/mako.py:docstring of

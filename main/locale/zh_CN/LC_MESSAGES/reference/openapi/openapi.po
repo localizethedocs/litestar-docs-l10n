@@ -59,8 +59,8 @@ msgstr ""
 #: ../../../../litestar/openapi/config.py:docstring of
 #: litestar.openapi.OpenAPIConfig.contact:1
 msgid ""
-"API contact information, should be an :class:`Contact <litestar.openapi.spec."
-"contact.Contact>` instance."
+"API contact information, should be an :class:`Contact "
+"<litestar.openapi.spec.contact.Contact>` instance."
 msgstr ""
 
 #: ../../../../litestar/openapi/config.py:docstring of
@@ -76,8 +76,8 @@ msgstr ""
 #: ../../../../litestar/openapi/config.py:docstring of
 #: litestar.openapi.OpenAPIConfig.external_docs:3
 msgid ""
-"Should be an instance of :class:`ExternalDocumentation <litestar.openapi."
-"spec.external_documentation.ExternalDocumentation>`."
+"Should be an instance of :class:`ExternalDocumentation "
+"<litestar.openapi.spec.external_documentation.ExternalDocumentation>`."
 msgstr ""
 
 #: ../../../../litestar/openapi/config.py:docstring of
@@ -88,8 +88,8 @@ msgstr ""
 #: ../../../../litestar/openapi/config.py:docstring of
 #: litestar.openapi.OpenAPIConfig.license:3
 msgid ""
-"Should be an instance of :class:`License <litestar.openapi.spec.license."
-"License>`."
+"Should be an instance of :class:`License "
+"<litestar.openapi.spec.license.License>`."
 msgstr ""
 
 #: ../../../../litestar/openapi/config.py:docstring of
@@ -115,8 +115,8 @@ msgstr ""
 #: ../../../../litestar/openapi/config.py:docstring of
 #: litestar.openapi.OpenAPIConfig.components:3
 msgid ""
-"Should be an instance of :class:`Components <litestar.openapi.spec."
-"components.Components>` or a list thereof."
+"Should be an instance of :class:`Components "
+"<litestar.openapi.spec.components.Components>` or a list thereof."
 msgstr ""
 
 #: ../../../../litestar/openapi/config.py:docstring of
@@ -150,8 +150,8 @@ msgstr ""
 #: ../../../../litestar/openapi/config.py:docstring of
 #: litestar.openapi.OpenAPIConfig.webhooks:1
 msgid ""
-"A mapping of key to either :class:`PathItem <litestar.openapi.spec.path_item."
-"PathItem>` or."
+"A mapping of key to either :class:`PathItem "
+"<litestar.openapi.spec.path_item.PathItem>` or."
 msgstr ""
 
 #: ../../../../litestar/openapi/config.py:docstring of

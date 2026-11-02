@@ -185,8 +185,8 @@ msgstr ""
 #: litestar.plugins.opentelemetry.OpenTelemetryConfig.middleware:1
 #: litestar.plugins.opentelemetry.config.OpenTelemetryConfig.middleware:1
 msgid ""
-"Create an instance of :class:`DefineMiddleware <litestar.middleware.base."
-"DefineMiddleware>`."
+"Create an instance of :class:`DefineMiddleware "
+"<litestar.middleware.base.DefineMiddleware>`."
 msgstr ""
 
 #: ../../../reference/plugins/opentelemetry.rst:0
@@ -221,8 +221,8 @@ msgstr ""
 #: ../../../../litestar/plugins/opentelemetry/middleware.py:docstring of
 #: litestar.plugins.opentelemetry.middleware.OpenTelemetryInstrumentationMiddleware.__init__:4
 msgid ""
-"An instance of :class:`OpenTelemetryConfig <litestar.plugins.opentelemetry."
-"OpenTelemetryConfig>`."
+"An instance of :class:`OpenTelemetryConfig "
+"<litestar.plugins.opentelemetry.OpenTelemetryConfig>`."
 msgstr ""
 
 #: ../../../../litestar/plugins/opentelemetry/plugin.py:docstring of

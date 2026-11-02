@@ -404,8 +404,8 @@ msgstr ""
 #: litestar.repository.abc._sync.AbstractSyncRepository.upsert_many:6
 msgid ""
 "Instances to update or created. Identifier used to determine if an existing "
-"instance exists is the value of an attribute on ``data`` named as value of :"
-"attr:`id_attribute <AbstractAsyncRepository.id_attribute>`."
+"instance exists is the value of an attribute on ``data`` named as value "
+"of :attr:`id_attribute <AbstractAsyncRepository.id_attribute>`."
 msgstr ""
 
 #: ../../../../litestar/repository/abc/_async.py:docstring of
@@ -526,8 +526,8 @@ msgstr ""
 #: ../../../../litestar/repository/abc/_sync.py:docstring
 #: litestar.repository.abc._sync.AbstractSyncRepository.get_id_attribute_value:1
 msgid ""
-"Get value of attribute named as :attr:`id_attribute <AbstractAsyncRepository."
-"id_attribute>` on ``item``."
+"Get value of attribute named as :attr:`id_attribute "
+"<AbstractAsyncRepository.id_attribute>` on ``item``."
 msgstr ""
 
 #: ../../../../litestar/repository/abc/_async.py:docstring of
@@ -581,6 +581,6 @@ msgstr ""
 #: ../../../../litestar/repository/abc/_sync.py:docstring
 #: litestar.repository.abc._sync.AbstractSyncRepository.set_id_attribute_value:8
 msgid ""
-"Item with ``item_id`` set to :attr:`id_attribute <AbstractAsyncRepository."
-"id_attribute>`"
+"Item with ``item_id`` set to :attr:`id_attribute "
+"<AbstractAsyncRepository.id_attribute>`"
 msgstr ""

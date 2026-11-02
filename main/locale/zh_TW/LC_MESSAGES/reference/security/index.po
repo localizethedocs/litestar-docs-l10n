@@ -37,8 +37,8 @@ msgstr ""
 #: ../../../../litestar/security/base.py:docstring of
 #: litestar.security.AbstractSecurityConfig.authentication_middleware_class:3
 msgid ""
-"Must inherit from :class:`AbstractAuthenticationMiddleware <litestar."
-"middleware.authentication.AbstractAuthenticationMiddleware>`"
+"Must inherit from :class:`AbstractAuthenticationMiddleware "
+"<litestar.middleware.authentication.AbstractAuthenticationMiddleware>`"
 msgstr ""
 
 #: ../../../../litestar/security/base.py:docstring of
@@ -220,8 +220,8 @@ msgstr ""
 #: ../../../../litestar/security/base.py:docstring of
 #: litestar.security.AbstractSecurityConfig.security_requirement:6
 msgid ""
-"An OpenAPI 3.1 :data:`SecurityRequirement <.openapi.spec."
-"SecurityRequirement>` dictionary."
+"An OpenAPI 3.1 :data:`SecurityRequirement "
+"<.openapi.spec.SecurityRequirement>` dictionary."
 msgstr ""
 
 #: ../../../../litestar/security/base.py:docstring of
@@ -235,6 +235,6 @@ msgstr ""
 #: ../../../../litestar/security/base.py:docstring of
 #: litestar.security.AbstractSecurityConfig.middleware:4
 msgid ""
-"An instance of :class:`DefineMiddleware <litestar.middleware.base."
-"DefineMiddleware>`."
+"An instance of :class:`DefineMiddleware "
+"<litestar.middleware.base.DefineMiddleware>`."
 msgstr ""

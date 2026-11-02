@@ -36,8 +36,8 @@ msgstr ""
 #: ../../../../litestar/template/config.py:docstring of
 #: litestar.template.TemplateConfig.engine:1
 msgid ""
-"A template engine adhering to the :class:`TemplateEngineProtocol <litestar."
-"template.base.TemplateEngineProtocol>`."
+"A template engine adhering to the :class:`TemplateEngineProtocol "
+"<litestar.template.base.TemplateEngineProtocol>`."
 msgstr ""
 
 #: ../../../../litestar/template/config.py:docstring of

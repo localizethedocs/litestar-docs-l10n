@@ -30,8 +30,8 @@ msgid ""
 "`CORS (Cross-Origin Resource Sharing) <https://developer.mozilla.org/en-US/"
 "docs/Web/HTTP/CORS>`_ is a common security mechanism that is often "
 "implemented using middleware. To enable CORS in a litestar application "
-"simply pass an instance of :class:`~litestar.config.cors.CORSConfig` to :"
-"class:`~litestar.app.Litestar`:"
+"simply pass an instance of :class:`~litestar.config.cors.CORSConfig` "
+"to :class:`~litestar.app.Litestar`:"
 msgstr ""
 
 #: ../../../usage/middleware/builtin-middleware.rst:12
@@ -230,10 +230,11 @@ msgstr ""
 
 #: ../../../usage/middleware/builtin-middleware.rst:140
 msgid ""
-"Litestar includes an :class:`~litestar.middleware.allowed_hosts."
-"AllowedHostsMiddleware` class that can be easily enabled by either passing "
-"an instance of :class:`~litestar.config.allowed_hosts.AllowedHostsConfig` or "
-"a list of domains to :class:`~litestar.app.Litestar`:"
+"Litestar includes "
+"an :class:`~litestar.middleware.allowed_hosts.AllowedHostsMiddleware` class "
+"that can be easily enabled by either passing an instance "
+"of :class:`~litestar.config.allowed_hosts.AllowedHostsConfig` or a list of "
+"domains to :class:`~litestar.app.Litestar`:"
 msgstr ""
 
 #: ../../../usage/middleware/builtin-middleware.rst:145
@@ -252,10 +253,10 @@ msgstr ""
 #: ../../../usage/middleware/builtin-middleware.rst:158
 msgid ""
 "You can use wildcard prefixes (``*.``) in the beginning of a domain to match "
-"any combination of subdomains. Thus, ``*.example.com`` will match ``www."
-"example.com`` but also ``x.y.z.example.com`` etc. You can also simply put "
-"``*`` in trusted hosts, which means allow all. This is akin to turning the "
-"middleware off, so in this case it may be better to not enable it in the "
+"any combination of subdomains. Thus, ``*.example.com`` will match "
+"``www.example.com`` but also ``x.y.z.example.com`` etc. You can also simply "
+"put ``*`` in trusted hosts, which means allow all. This is akin to turning "
+"the middleware off, so in this case it may be better to not enable it in the "
 "first place. You should note that a wildcard can only be used in the prefix "
 "of a domain name, not in the middle or end. Doing so will result in a "
 "validation exception being raised."
@@ -275,9 +276,9 @@ msgstr ""
 
 #: ../../../usage/middleware/builtin-middleware.rst:171
 msgid ""
-"You can enable any one of these backends by passing an instance of :class:"
-"`~litestar.config.compression.CompressionConfig` to ``compression_config`` "
-"of :class:`~litestar.app.Litestar`."
+"You can enable any one of these backends by passing an instance "
+"of :class:`~litestar.config.compression.CompressionConfig` to "
+"``compression_config`` of :class:`~litestar.app.Litestar`."
 msgstr ""
 
 #: ../../../usage/middleware/builtin-middleware.rst:176
@@ -286,9 +287,9 @@ msgstr ""
 
 #: ../../../usage/middleware/builtin-middleware.rst:178
 msgid ""
-"You can enable gzip compression of responses by passing an instance of :"
-"class:`~litestar.config.compression.CompressionConfig` with the ``backend`` "
-"parameter set to ``\"gzip\"``."
+"You can enable gzip compression of responses by passing an instance "
+"of :class:`~litestar.config.compression.CompressionConfig` with the "
+"``backend`` parameter set to ``\"gzip\"``."
 msgstr ""
 
 #: ../../../usage/middleware/builtin-middleware.rst:181
@@ -341,9 +342,9 @@ msgstr ""
 
 #: ../../../usage/middleware/builtin-middleware.rst:205
 msgid ""
-"You can enable brotli compression of responses by passing an instance of :"
-"class:`~litestar.config.compression.CompressionConfig` with the ``backend`` "
-"parameter set to ``\"brotli\"``."
+"You can enable brotli compression of responses by passing an instance "
+"of :class:`~litestar.config.compression.CompressionConfig` with the "
+"``backend`` parameter set to ``\"brotli\"``."
 msgstr ""
 
 #: ../../../usage/middleware/builtin-middleware.rst:208
@@ -420,9 +421,9 @@ msgstr ""
 
 #: ../../../usage/middleware/builtin-middleware.rst:237
 msgid ""
-"You can enable zstd compression of responses by passing an instance of :"
-"class:`~litestar.config.compression.CompressionConfig` with the ``backend`` "
-"parameter set to ``\"zstd\"``."
+"You can enable zstd compression of responses by passing an instance "
+"of :class:`~litestar.config.compression.CompressionConfig` with the "
+"``backend`` parameter set to ``\"zstd\"``."
 msgstr ""
 
 #: ../../../usage/middleware/builtin-middleware.rst:240
@@ -468,15 +469,16 @@ msgstr ""
 
 #: ../../../usage/middleware/builtin-middleware.rst:259
 msgid ""
-"Litestar includes an optional :class:`~litestar.middleware.rate_limit."
-"RateLimitMiddleware` that follows the `IETF RateLimit draft specification "
-"<https://datatracker.ietf.org/doc/draft-ietf-httpapi-ratelimit-headers/>`_."
+"Litestar includes an "
+"optional :class:`~litestar.middleware.rate_limit.RateLimitMiddleware` that "
+"follows the `IETF RateLimit draft specification <https://"
+"datatracker.ietf.org/doc/draft-ietf-httpapi-ratelimit-headers/>`_."
 msgstr ""
 
 #: ../../../usage/middleware/builtin-middleware.rst:262
 msgid ""
-"To use the rate limit middleware, use the :class:`~litestar.middleware."
-"rate_limit.RateLimitConfig`:"
+"To use the rate limit middleware, use "
+"the :class:`~litestar.middleware.rate_limit.RateLimitConfig`:"
 msgstr ""
 
 #: ../../../usage/middleware/builtin-middleware.rst:265
@@ -495,8 +497,8 @@ msgid ""
 "    return \"ok\"\n"
 "\n"
 "\n"
-"app = Litestar(route_handlers=[handler], middleware=[rate_limit_config."
-"middleware])"
+"app = Litestar(route_handlers=[handler], "
+"middleware=[rate_limit_config.middleware])"
 msgstr ""
 
 #: ../../../usage/middleware/builtin-middleware.rst:267
@@ -550,10 +552,10 @@ msgstr ""
 
 #: ../../../usage/middleware/builtin-middleware.rst:298
 msgid ""
-"Litestar includes a :class:`~litestar.middleware.session.base."
-"SessionMiddleware`, offering client- and server-side sessions. Server-side "
-"sessions are backed by Litestar's :doc:`stores </usage/stores>`, which offer "
-"support for:"
+"Litestar includes "
+"a :class:`~litestar.middleware.session.base.SessionMiddleware`, offering "
+"client- and server-side sessions. Server-side sessions are backed by "
+"Litestar's :doc:`stores </usage/stores>`, which offer support for:"
 msgstr ""
 
 #: ../../../usage/middleware/builtin-middleware.rst:302
@@ -579,9 +581,9 @@ msgstr ""
 #: ../../../usage/middleware/builtin-middleware.rst:310
 msgid ""
 "To start using sessions in your application all you have to do is create an "
-"instance of a :class:`configuration <litestar.middleware.session.base."
-"BaseBackendConfig>` object and add its middleware to your application's "
-"middleware stack:"
+"instance of a :class:`configuration "
+"<litestar.middleware.session.base.BaseBackendConfig>` object and add its "
+"middleware to your application's middleware stack:"
 msgstr ""
 
 #: ../../../usage/middleware/builtin-middleware.rst:315
@@ -633,8 +635,8 @@ msgid ""
 "Since both client- and server-side sessions rely on cookies (one for storing "
 "the actual session data, the other for storing the session ID), they share "
 "most of the cookie configuration. A complete reference of the cookie "
-"configuration can be found at :class:`~litestar.middleware.session.base."
-"BaseBackendConfig`."
+"configuration can be found "
+"at :class:`~litestar.middleware.session.base.BaseBackendConfig`."
 msgstr ""
 
 #: ../../../usage/middleware/builtin-middleware.rst:326
@@ -643,9 +645,10 @@ msgstr ""
 
 #: ../../../usage/middleware/builtin-middleware.rst:328
 msgid ""
-"Client side sessions are available through the :class:`~litestar.middleware."
-"session.client_side.ClientSideSessionBackend`, which offers strong AES-CGM "
-"encryption security best practices while support cookie splitting."
+"Client side sessions are available through "
+"the :class:`~litestar.middleware.session.client_side.ClientSideSessionBackend`, "
+"which offers strong AES-CGM encryption security best practices while support "
+"cookie splitting."
 msgstr ""
 
 #: ../../../usage/middleware/builtin-middleware.rst:333
@@ -706,6 +709,5 @@ msgid ":doc:`/usage/stores`"
 msgstr ""
 
 #: ../../../usage/middleware/builtin-middleware.rst:359
-msgid ""
-":class:`~litestar.middleware.session.server_side.ServerSideSessionConfig`"
+msgid ":class:`~litestar.middleware.session.server_side.ServerSideSessionConfig`"
 msgstr ""

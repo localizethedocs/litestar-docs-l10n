@@ -23,18 +23,18 @@ msgstr ""
 
 #: ../../../usage/security/abstract-authentication-middleware.rst:5
 msgid ""
-"Litestar exports :class:`~.middleware.authentication."
-"AbstractAuthenticationMiddleware`, which is an :term:`abstract base class` "
-"(ABC) that implements the :class:`~.middleware.base.MiddlewareProtocol`. To "
-"add authentication to your app using this class as a basis, subclass it and "
-"implement the abstract method :meth:`~.middleware.authentication."
-"AbstractAuthenticationMiddleware.authenticate_request`:"
+"Litestar "
+"exports :class:`~.middleware.authentication.AbstractAuthenticationMiddleware`, "
+"which is an :term:`abstract base class` (ABC) that implements "
+"the :class:`~.middleware.base.MiddlewareProtocol`. To add authentication to "
+"your app using this class as a basis, subclass it and implement the abstract "
+"method :meth:`~.middleware.authentication.AbstractAuthenticationMiddleware.authenticate_request`:"
 msgstr ""
 
 #: ../../../usage/security/abstract-authentication-middleware.rst:11
 msgid ""
-"Adding authentication to your app by subclassing :class:`~.middleware."
-"authentication.AbstractAuthenticationMiddleware`"
+"Adding authentication to your app by "
+"subclassing :class:`~.middleware.authentication.AbstractAuthenticationMiddleware`"
 msgstr ""
 
 #: ../../../usage/security/abstract-authentication-middleware.rst:11
@@ -57,9 +57,9 @@ msgstr ""
 #: ../../../usage/security/abstract-authentication-middleware.rst:28
 msgid ""
 "As you can see, ``authenticate_request`` is an async function that receives "
-"a connection instance and is supposed to return an :class:`~.middleware."
-"authentication.AuthenticationResult` instance, which is a :doc:`dataclass "
-"<python:library/dataclasses>` that has two attributes:"
+"a connection instance and is supposed to return "
+"an :class:`~.middleware.authentication.AuthenticationResult` instance, which "
+"is a :doc:`dataclass <python:library/dataclasses>` that has two attributes:"
 msgstr ""
 
 #: ../../../usage/security/abstract-authentication-middleware.rst:32
@@ -79,9 +79,9 @@ msgid ""
 "These values are then set as part of the ``scope`` dictionary, and they are "
 "made available as :attr:`Request.user <.connection.ASGIConnection.user>` "
 "and :attr:`Request.auth <.connection.ASGIConnection.auth>` respectively, for "
-"HTTP route handlers, and :attr:`WebSocket.user <.connection.ASGIConnection."
-"user>` and :attr:`WebSocket.auth <.connection.ASGIConnection.auth>` for "
-"websocket route handlers."
+"HTTP route handlers, and :attr:`WebSocket.user "
+"<.connection.ASGIConnection.user>` and :attr:`WebSocket.auth "
+"<.connection.ASGIConnection.auth>` for websocket route handlers."
 msgstr ""
 
 #: ../../../usage/security/abstract-authentication-middleware.rst:43

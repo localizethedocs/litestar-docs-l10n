@@ -114,15 +114,16 @@ msgstr ""
 #: ../../../../litestar/contrib/opentelemetry/__init__.py:docstring of
 #: litestar.contrib.opentelemetry.OpenTelemetryConfig.middleware:1
 msgid ""
-"Create an instance of :class:`DefineMiddleware <litestar.middleware.base."
-"DefineMiddleware>` that wraps with."
+"Create an instance of :class:`DefineMiddleware "
+"<litestar.middleware.base.DefineMiddleware>` that wraps with."
 msgstr ""
 
 #: ../../../../litestar/contrib/opentelemetry/__init__.py:docstring of
 #: litestar.contrib.opentelemetry.OpenTelemetryConfig.middleware:3
 msgid ""
-"[OpenTelemetry InstrumentationMiddleware][litestar.contrib.opentelemetry."
-"OpenTelemetryInstrumentationMiddleware] or a subclass of this middleware."
+"[OpenTelemetry InstrumentationMiddleware]"
+"[litestar.contrib.opentelemetry.OpenTelemetryInstrumentationMiddleware] or a "
+"subclass of this middleware."
 msgstr ""
 
 #: ../../../reference/contrib/opentelemetry.rst:0
@@ -195,8 +196,8 @@ msgstr ""
 #: ../../../../litestar/contrib/opentelemetry/__init__.py:docstring of
 #: litestar.contrib.opentelemetry.middleware.OpenTelemetryInstrumentationMiddleware.__init__:4
 msgid ""
-"An instance of :class:`OpenTelemetryConfig <.contrib.opentelemetry."
-"OpenTelemetryConfig>`"
+"An instance of :class:`OpenTelemetryConfig "
+"<.contrib.opentelemetry.OpenTelemetryConfig>`"
 msgstr ""
 
 #: ../../../../litestar/contrib/opentelemetry/__init__.py:docstring of

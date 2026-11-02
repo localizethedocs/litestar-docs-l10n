@@ -27,9 +27,9 @@ msgstr ""
 
 #: ../../../usage/debugging.rst:7
 msgid ""
-"You can configure Litestar to drop into the :doc:`Python Debugger <python:"
-"library/pdb>` when an exception occurs. This can be configured in different "
-"ways:"
+"You can configure Litestar to drop into the :doc:`Python Debugger "
+"<python:library/pdb>` when an exception occurs. This can be configured in "
+"different ways:"
 msgstr ""
 
 #: ../../../usage/debugging.rst:10

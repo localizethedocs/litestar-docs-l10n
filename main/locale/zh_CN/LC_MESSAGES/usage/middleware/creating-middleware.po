@@ -140,9 +140,9 @@ msgstr ""
 #: ../../../usage/middleware/creating-middleware.rst:67
 msgid ""
 "To help with this, :class:`~litestar.middleware.ASGIMiddleware` allows to "
-"specify a set of :class:`~litestar.middleware.constraints."
-"MiddlewareConstraints` - Once configured, these will be validated on "
-"application startup."
+"specify a set "
+"of :class:`~litestar.middleware.constraints.MiddlewareConstraints` - Once "
+"configured, these will be validated on application startup."
 msgstr ""
 
 #: ../../../usage/middleware/creating-middleware.rst:71
@@ -165,8 +165,8 @@ msgstr ""
 #: ../../../usage/middleware/creating-middleware.rst:76
 msgid ""
 "Here, we specify that every instance of ``CachingMiddleware`` must come "
-"after any instance of :class:`~litestar.middleware.authentication."
-"AbstractAuthenticationMiddleware`."
+"after any instance "
+"of :class:`~litestar.middleware.authentication.AbstractAuthenticationMiddleware`."
 msgstr ""
 
 #: ../../../usage/middleware/creating-middleware.rst:83
@@ -263,9 +263,9 @@ msgstr ""
 
 #: ../../../usage/middleware/creating-middleware.rst:142
 msgid ""
-"Most of the time in a plugin you would do ``app_config.middleware."
-"append(MyCustomMiddleware)`` which will be ok if it has no constraints "
-"attached."
+"Most of the time in a plugin you would do "
+"``app_config.middleware.append(MyCustomMiddleware)`` which will be ok if it "
+"has no constraints attached."
 msgstr ""
 
 #: ../../../usage/middleware/creating-middleware.rst:145
@@ -428,8 +428,8 @@ msgid ""
 "The ``__call__`` method makes this class into a ``callable``, i.e. once "
 "instantiated this class acts like a function, that has the signature of an "
 "ASGI app: The three parameters, ``scope, receive, send`` are specified by "
-"`the ASGI specification <https://asgi.readthedocs.io/en/latest/index."
-"html>`_, and their values originate with the ASGI server (e.g. "
+"`the ASGI specification <https://asgi.readthedocs.io/en/latest/"
+"index.html>`_, and their values originate with the ASGI server (e.g. "
 "``uvicorn``\\ ) used to run Litestar."
 msgstr ""
 
@@ -459,8 +459,8 @@ msgid ""
 "None:\n"
 "        if scope[\"type\"] == \"http\":\n"
 "            request = Request(scope)\n"
-"            logger.info(\"Got request: %s - %s\", request.method, request."
-"url)\n"
+"            logger.info(\"Got request: %s - %s\", request.method, "
+"request.url)\n"
 "        await self.app(scope, receive, send)"
 msgstr ""
 
@@ -512,8 +512,9 @@ msgstr ""
 #: ../../../usage/middleware/creating-middleware.rst:278
 msgid ""
 "As you can see in the above, given some condition (``request.session`` being "
-"``None``) we create a :class:`~litestar.response.redirect."
-"ASGIRedirectResponse` and then await it. Otherwise, we await ``self.app``"
+"``None``) we create "
+"a :class:`~litestar.response.redirect.ASGIRedirectResponse` and then await "
+"it. Otherwise, we await ``self.app``"
 msgstr ""
 
 #: ../../../usage/middleware/creating-middleware.rst:282
@@ -567,8 +568,8 @@ msgid ""
 "            async def send_wrapper(message: Message) -> None:\n"
 "                if message[\"type\"] == \"http.response.start\":\n"
 "                    process_time = time.monotonic() - start_time\n"
-"                    headers = MutableScopeHeaders."
-"from_message(message=message)\n"
+"                    headers = "
+"MutableScopeHeaders.from_message(message=message)\n"
 "                    headers[\"X-Process-Time\"] = str(process_time)\n"
 "                await send(message)\n"
 "\n"
@@ -625,8 +626,8 @@ msgstr ""
 
 #: ../../../usage/middleware/creating-middleware.rst:365
 msgid ""
-"The scope variable is a set that can include either or both : ``ScopeType."
-"HTTP`` and ``ScopeType.WEBSOCKET`` , with the default being both."
+"The scope variable is a set that can include either or both : "
+"``ScopeType.HTTP`` and ``ScopeType.WEBSOCKET`` , with the default being both."
 msgstr ""
 
 #: ../../../usage/middleware/creating-middleware.rst:366
@@ -637,9 +638,9 @@ msgstr ""
 
 #: ../../../usage/middleware/creating-middleware.rst:367
 msgid ""
-"``exclude_opt_key`` is the key to use for in a route handler's :class:"
-"`Router.opt <litestar.router.Router>` dict for a boolean, whether to omit "
-"from the middleware."
+"``exclude_opt_key`` is the key to use for in a route "
+"handler's :class:`Router.opt <litestar.router.Router>` dict for a boolean, "
+"whether to omit from the middleware."
 msgstr ""
 
 #: ../../../usage/middleware/creating-middleware.rst:369
@@ -744,10 +745,10 @@ msgstr ""
 #: ../../../usage/middleware/creating-middleware.rst:383
 msgid ""
 "Litestar offers a simple way to pass positional arguments (``*args``) and "
-"keyword arguments (``**kwargs``) to middleware using the :class:`~litestar."
-"middleware.base.DefineMiddleware` class. Let's extend the factory function "
-"used in the examples above to take some args and kwargs and then use "
-"``DefineMiddleware`` to pass these values to our middleware:"
+"keyword arguments (``**kwargs``) to middleware using "
+"the :class:`~litestar.middleware.base.DefineMiddleware` class. Let's extend "
+"the factory function used in the examples above to take some args and kwargs "
+"and then use ``DefineMiddleware`` to pass these values to our middleware:"
 msgstr ""
 
 #: ../../../usage/middleware/creating-middleware.rst:389

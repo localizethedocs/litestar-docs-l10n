@@ -43,8 +43,8 @@ msgstr ""
 
 #: ../../../release-notes/whats-new-2.rst:18
 msgid ""
-"The name \"Starlite\" was chosen as an homage to `Starlette <https://www."
-"starlette.io/>`_, the ASGI framework and toolkit Starlite was initially "
+"The name \"Starlite\" was chosen as an homage to `Starlette <https://"
+"www.starlette.io/>`_, the ASGI framework and toolkit Starlite was initially "
 "based on. Over the course of its development, Starlite grew more independent "
 "and relied less on Starlette, up to the point were Starlette was officially "
 "removed as a dependency in November 2022, with the release of `v1.39.0 "
@@ -758,12 +758,12 @@ msgstr ""
 
 #: ../../../release-notes/whats-new-2.rst:237
 msgid ""
-"Response header can now be set using either a :class:`Sequence <typing."
-"Sequence>` of :class:`ResponseHeader <.datastructures.response_header."
-"ResponseHeader>`, or by using a plain :class:`Mapping[str, str] <typing."
-"Mapping>`. The typing of :class:`ResponseHeader <.datastructures."
-"response_header.ResponseHeader>` was also changed to be more strict and now "
-"only allows string values."
+"Response header can now be set using either a :class:`Sequence "
+"<typing.Sequence>` of :class:`ResponseHeader "
+"<.datastructures.response_header.ResponseHeader>`, or by using a "
+"plain :class:`Mapping[str, str] <typing.Mapping>`. The typing "
+"of :class:`ResponseHeader <.datastructures.response_header.ResponseHeader>` "
+"was also changed to be more strict and now only allows string values."
 msgstr ""
 
 #: ../../../release-notes/whats-new-2.rst:244
@@ -950,8 +950,8 @@ msgstr ""
 #: ../../../release-notes/whats-new-2.rst:360
 msgid ""
 "The ``initial_state`` argument to :class:`~litestar.app.Litestar` has been "
-"replaced with a ``state`` keyword argument, accepting an optional :class:"
-"`~litestar.datastructures.state.State` instance."
+"replaced with a ``state`` keyword argument, accepting an "
+"optional :class:`~litestar.datastructures.state.State` instance."
 msgstr ""
 
 #: ../../../release-notes/whats-new-2.rst:364
@@ -1081,8 +1081,7 @@ msgid ":class:`~litestar.config.response_cache.ResponseCacheConfig`"
 msgstr ""
 
 #: ../../../release-notes/whats-new-2.rst:417
-msgid ""
-":class:`~litestar.middleware.session.server_side.ServerSideSessionConfig`"
+msgid ":class:`~litestar.middleware.session.server_side.ServerSideSessionConfig`"
 msgstr ""
 
 #: ../../../release-notes/whats-new-2.rst:419
@@ -1095,8 +1094,8 @@ msgstr ""
 
 #: ../../../release-notes/whats-new-2.rst:422
 msgid ""
-"``AppConfig.cache_config`` > :attr:`~litestar.config.app.AppConfig."
-"response_cache_config`"
+"``AppConfig.cache_config`` "
+"> :attr:`~litestar.config.app.AppConfig.response_cache_config`"
 msgstr ""
 
 #: ../../../release-notes/whats-new-2.rst:424
@@ -1118,8 +1117,8 @@ msgstr ""
 
 #: ../../../release-notes/whats-new-2.rst:434
 msgid ""
-"A DTO is any type that inherits from :class:`litestar.dto.base_dto."
-"AbstractDTO`."
+"A DTO is any type that inherits "
+"from :class:`litestar.dto.base_dto.AbstractDTO`."
 msgstr ""
 
 #: ../../../release-notes/whats-new-2.rst:436
@@ -1571,8 +1570,8 @@ msgstr "HTMX"
 
 #: ../../../release-notes/whats-new-2.rst:587
 msgid ""
-"Basic support for HTMX requests and responses was added with the ``litestar."
-"contrib.htmx`` module."
+"Basic support for HTMX requests and responses was added with the "
+"``litestar.contrib.htmx`` module."
 msgstr ""
 
 #: ../../../release-notes/whats-new-2.rst:591
@@ -1823,11 +1822,11 @@ msgstr ""
 
 #: ../../../release-notes/whats-new-2.rst:691
 msgid ""
-"A new ``lifespan`` argument has been added to :class:`~litestar.app."
-"Litestar`, accepting an asynchronous context manager, wrapping the lifespan "
-"of the application. It will be entered with the startup phase and exited on "
-"shutdown, providing functionality equal to the ``on_startup`` and "
-"``on_shutdown`` hooks."
+"A new ``lifespan`` argument has been added "
+"to :class:`~litestar.app.Litestar`, accepting an asynchronous context "
+"manager, wrapping the lifespan of the application. It will be entered with "
+"the startup phase and exited on shutdown, providing functionality equal to "
+"the ``on_startup`` and ``on_shutdown`` hooks."
 msgstr ""
 
 #: ../../../release-notes/whats-new-2.rst:698
@@ -1844,8 +1843,8 @@ msgid ""
 "async def db_connection(app: Litestar) -> AsyncGenerator[None, None]:\n"
 "    engine = getattr(app.state, \"engine\", None)\n"
 "    if engine is None:\n"
-"        engine = create_async_engine(\"postgresql+asyncpg://postgres:"
-"mysecretpassword@pg.db:5432/db\")\n"
+"        engine = create_async_engine(\"postgresql+asyncpg://"
+"postgres:mysecretpassword@pg.db:5432/db\")\n"
 "        app.state.engine = engine\n"
 "\n"
 "    try:\n"
@@ -1871,20 +1870,20 @@ msgstr ""
 
 #: ../../../release-notes/whats-new-2.rst:709
 msgid ""
-"In Litestar, these types still exist, however they are now subclasses of :"
-"class:`Response <.response.Response>` and are imported from the ``litestar."
-"response`` module. In contrast to Starlite's Response Containers, these "
-"types have more utility for interacting with the outgoing response, such as "
-"methods to add headers and cookies. Otherwise, their usage should remain "
-"very similar to Starlite."
+"In Litestar, these types still exist, however they are now subclasses "
+"of :class:`Response <.response.Response>` and are imported from the "
+"``litestar.response`` module. In contrast to Starlite's Response Containers, "
+"these types have more utility for interacting with the outgoing response, "
+"such as methods to add headers and cookies. Otherwise, their usage should "
+"remain very similar to Starlite."
 msgstr ""
 
 #: ../../../release-notes/whats-new-2.rst:715
 msgid ""
-"Litestar also introduces a new layer of ASGI response type, based on :class:"
-"`ASGIResponse <.response.base.ASGIResponse>`. These types represent the "
-"response as an immutable object and are used internally by Litestar to "
-"perform the I/O operations of the response. These can be created and "
-"returned from handlers, however they are low-level, and lack the utility of "
-"the higher-level response types."
+"Litestar also introduces a new layer of ASGI response type, based "
+"on :class:`ASGIResponse <.response.base.ASGIResponse>`. These types "
+"represent the response as an immutable object and are used internally by "
+"Litestar to perform the I/O operations of the response. These can be created "
+"and returned from handlers, however they are low-level, and lack the utility "
+"of the higher-level response types."
 msgstr ""

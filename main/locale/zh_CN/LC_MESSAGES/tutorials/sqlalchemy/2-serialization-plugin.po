@@ -23,10 +23,11 @@ msgstr ""
 
 #: ../../../tutorials/sqlalchemy/2-serialization-plugin.rst:4
 msgid ""
-"Our next improvement is to leverage the :class:"
-"`SQLAlchemySerializationPlugin <advanced_alchemy.extensions.litestar.plugins."
-"SQLAlchemySerializationPlugin>` so that we can receive and return our "
-"SQLAlchemy models directly to and from our handlers."
+"Our next improvement is to leverage "
+"the :class:`SQLAlchemySerializationPlugin "
+"<advanced_alchemy.extensions.litestar.plugins.SQLAlchemySerializationPlugin>` "
+"so that we can receive and return our SQLAlchemy models directly to and from "
+"our handlers."
 msgstr ""
 
 #: ../../../tutorials/sqlalchemy/2-serialization-plugin.rst:8
@@ -296,6 +297,7 @@ msgstr ""
 
 #: ../../../tutorials/sqlalchemy/2-serialization-plugin.rst:50
 msgid ""
-"Next we'll look at how the :class:`SQLAlchemyInitPlugin <advanced_alchemy."
-"extensions.litestar.plugins.SQLAlchemyInitPlugin>` can help us."
+"Next we'll look at how the :class:`SQLAlchemyInitPlugin "
+"<advanced_alchemy.extensions.litestar.plugins.SQLAlchemyInitPlugin>` can "
+"help us."
 msgstr ""

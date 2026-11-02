@@ -108,8 +108,8 @@ msgstr ""
 #: litestar.middleware.constraints.MiddlewareConstraints.apply_after:7
 #: litestar.middleware.constraints.MiddlewareConstraints.apply_before:7
 msgid ""
-"If ``True`` and ``other`` is a string, ignore the constraint if an :exc:"
-"`ImportError` occurs when trying to import it"
+"If ``True`` and ``other`` is a string, ignore the constraint if "
+"an :exc:`ImportError` occurs when trying to import it"
 msgstr ""
 
 #: ../../../../litestar/middleware/constraints.py:docstring of

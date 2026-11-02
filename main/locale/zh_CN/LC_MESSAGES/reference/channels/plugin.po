@@ -81,9 +81,9 @@ msgstr ""
 #: ../../../../litestar/channels/plugin.py:docstring of
 #: litestar.channels.plugin.ChannelsPlugin.__init__:16
 msgid ""
-"Send mode to use for sending data through a :class:`WebSocket <.connection."
-"WebSocket>`. This will be used when sending within generated route handlers "
-"or :meth:`Subscriber.run_in_background`"
+"Send mode to use for sending data through a :class:`WebSocket "
+"<.connection.WebSocket>`. This will be used when sending within generated "
+"route handlers or :meth:`Subscriber.run_in_background`"
 msgstr ""
 
 #: ../../../../litestar/channels/plugin.py:docstring of

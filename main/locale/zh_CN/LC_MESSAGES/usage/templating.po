@@ -134,9 +134,9 @@ msgstr ""
 
 #: ../../../usage/templating.rst:71
 msgid ""
-"The ``directory`` parameter passed to :class:`TemplateConfig <litestar."
-"template.TemplateConfig>` can be either a directory or list of directories "
-"to use for loading templates."
+"The ``directory`` parameter passed to :class:`TemplateConfig "
+"<litestar.template.TemplateConfig>` can be either a directory or list of "
+"directories to use for loading templates."
 msgstr ""
 
 #: ../../../usage/templating.rst:75
@@ -167,8 +167,8 @@ msgstr ""
 
 #: ../../../usage/templating.rst:96
 msgid ""
-"The ``instance`` parameter passed to :class:`TemplateConfig <litestar."
-"template.TemplateConfig>` can not be used in conjunction with the "
+"The ``instance`` parameter passed to :class:`TemplateConfig "
+"<litestar.template.TemplateConfig>` can not be used in conjunction with the "
 "``directory`` parameter, if you choose to use instance you're fully "
 "responsible on the engine creation."
 msgstr ""
@@ -180,9 +180,9 @@ msgstr ""
 #: ../../../usage/templating.rst:102
 msgid ""
 "If you wish to use another templating engine, you can easily do so by "
-"implementing :class:`TemplateEngineProtocol <litestar.template."
-"TemplateEngineProtocol>`. This class accepts a generic argument which should "
-"be the template class, and it specifies two methods:"
+"implementing :class:`TemplateEngineProtocol "
+"<litestar.template.TemplateEngineProtocol>`. This class accepts a generic "
+"argument which should be the template class, and it specifies two methods:"
 msgstr ""
 
 #: ../../../usage/templating.rst:0
@@ -269,8 +269,9 @@ msgstr ""
 
 #: ../../../usage/templating.rst:129
 msgid ""
-"If you need to access the template engine instance, you can do so via the :"
-"class:`TemplateConfig.engine <litestar.template.TemplateConfig>` attribute:"
+"If you need to access the template engine instance, you can do so via "
+"the :class:`TemplateConfig.engine <litestar.template.TemplateConfig>` "
+"attribute:"
 msgstr ""
 
 #: ../../../usage/templating.rst:138
@@ -411,8 +412,8 @@ msgstr ""
 #: ../../../usage/templating.rst:178
 msgid ""
 "``name`` is the name of the template file within on of the specified "
-"directories. If no file with that name is found, a :class:"
-"`TemplateNotFoundException <.exceptions.TemplateNotFoundException>` "
+"directories. If no file with that name is found, "
+"a :class:`TemplateNotFoundException <.exceptions.TemplateNotFoundException>` "
 "exception will be raised."
 msgstr ""
 
@@ -647,9 +648,10 @@ msgstr ""
 #: ../../../usage/templating.rst:374
 msgid ""
 "To access urls for route handlers, you can use the ``url_for`` function. Its "
-"signature and behaviour match those of :meth:`route_reverse <litestar.app."
-"Litestar.route_reverse>`. More details about route handler indexing can be "
-"found :ref:`here <usage/routing/handlers:route handler indexing>`."
+"signature and behaviour match those of :meth:`route_reverse "
+"<litestar.app.Litestar.route_reverse>`. More details about route handler "
+"indexing can be found :ref:`here <usage/routing/handlers:route handler "
+"indexing>`."
 msgstr ""
 
 #: ../../../usage/templating.rst:378
@@ -671,9 +673,10 @@ msgstr ""
 
 #: ../../../usage/templating.rst:384
 msgid ""
-"For static file serving as provided by :func:`~litestar.static_files."
-"create_static_files_router`, ``url_for`` can be used with the ``static`` "
-"handler name: ``url_for(\"static\", file_name=\"style.css\")``"
+"For static file serving as provided "
+"by :func:`~litestar.static_files.create_static_files_router`, ``url_for`` "
+"can be used with the ``static`` handler name: ``url_for(\"static\", "
+"file_name=\"style.css\")``"
 msgstr ""
 
 #: ../../../usage/templating.rst:390
@@ -682,13 +685,14 @@ msgstr ""
 
 #: ../../../usage/templating.rst:392
 msgid ""
-"The  :class:`TemplateEngineProtocol <litestar.template.base."
-"TemplateEngineProtocol>` specifies the method ``register_template_callable`` "
-"that allows defining a custom callable on a template engine. This method is "
-"implemented for the two built in engines, and it can be used to register "
-"callables that will be injected into the template. The callable should "
-"expect one argument - the context dictionary. It can be any callable - a "
-"function, method, or class that defines the call method. For example:"
+"The  :class:`TemplateEngineProtocol "
+"<litestar.template.base.TemplateEngineProtocol>` specifies the method "
+"``register_template_callable`` that allows defining a custom callable on a "
+"template engine. This method is implemented for the two built in engines, "
+"and it can be used to register callables that will be injected into the "
+"template. The callable should expect one argument - the context dictionary. "
+"It can be any callable - a function, method, or class that defines the call "
+"method. For example:"
 msgstr ""
 
 #: ../../../usage/templating.rst:404 ../../../usage/templating.rst:415
@@ -839,8 +843,8 @@ msgstr ""
 
 #: ../../../usage/templating.rst:433
 msgid ""
-"Run the example with ``uvicorn template_functions:app`` , visit  "
-"http://127.0.0.1:8000, and you'll see"
+"Run the example with ``uvicorn template_functions:app`` , visit  http://"
+"127.0.0.1:8000, and you'll see"
 msgstr ""
 
 #: ../../../usage/templating.rst:436

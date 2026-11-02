@@ -46,16 +46,17 @@ msgid ""
 "By setting :paramref:`~litestar.handlers.HTTPRouteHandler.cache` to "
 "``True``, the response from the handler will be cached. If no "
 "``cache_key_builder`` is set in the route handler, caching for the route "
-"handler will be enabled for the :attr:`~.config.response_cache."
-"ResponseCacheConfig.default_expiration`."
+"handler will be enabled for "
+"the :attr:`~.config.response_cache.ResponseCacheConfig.default_expiration`."
 msgstr ""
 
 #: ../../../usage/caching.rst:18
 msgid ""
-"If the default :paramref:`~litestar.config.response_cache."
-"ResponseCacheConfig.default_expiration` is set to ``None``, setting up the "
-"route handler with :paramref:`~litestar.handlers.HTTPRouteHandler.cache` set "
-"to ``True`` will keep the response in cache indefinitely."
+"If the "
+"default :paramref:`~litestar.config.response_cache.ResponseCacheConfig.default_expiration` "
+"is set to ``None``, setting up the route handler "
+"with :paramref:`~litestar.handlers.HTTPRouteHandler.cache` set to ``True`` "
+"will keep the response in cache indefinitely."
 msgstr ""
 
 #: ../../../usage/caching.rst:22
@@ -66,9 +67,9 @@ msgstr ""
 
 #: ../../../usage/caching.rst:25
 msgid ""
-"Caching the response for 120 seconds by setting the :paramref:`~litestar."
-"handlers.HTTPRouteHandler.cache` parameter to the number of seconds to cache "
-"the response."
+"Caching the response for 120 seconds by setting "
+"the :paramref:`~litestar.handlers.HTTPRouteHandler.cache` parameter to the "
+"number of seconds to cache the response."
 msgstr ""
 
 #: ../../../usage/caching.rst:25
@@ -82,15 +83,15 @@ msgstr ""
 
 #: ../../../usage/caching.rst:31
 msgid ""
-"If you want the response to be cached indefinitely, you can pass the :class:"
-"`~.config.response_cache.CACHE_FOREVER` sentinel instead:"
+"If you want the response to be cached indefinitely, you can pass "
+"the :class:`~.config.response_cache.CACHE_FOREVER` sentinel instead:"
 msgstr ""
 
 #: ../../../usage/caching.rst:35
 msgid ""
-"Caching the response indefinitely by setting the :paramref:`~litestar."
-"handlers.HTTPRouteHandler.cache` parameter to :class:`~litestar.config."
-"response_cache.CACHE_FOREVER`."
+"Caching the response indefinitely by setting "
+"the :paramref:`~litestar.handlers.HTTPRouteHandler.cache` parameter "
+"to :class:`~litestar.config.response_cache.CACHE_FOREVER`."
 msgstr ""
 
 #: ../../../usage/caching.rst:35
@@ -111,8 +112,8 @@ msgstr ""
 #: ../../../usage/caching.rst:44
 msgid ""
 "You can configure caching behaviour on the application level by passing an "
-"instance of :class:`~.config.response_cache.ResponseCacheConfig` to the :"
-"class:`Litestar instance <.app.Litestar>`."
+"instance of :class:`~.config.response_cache.ResponseCacheConfig` to "
+"the :class:`Litestar instance <.app.Litestar>`."
 msgstr ""
 
 #: ../../../usage/caching.rst:48
@@ -122,8 +123,8 @@ msgstr ""
 #: ../../../usage/caching.rst:50
 msgid ""
 "By default, caching will use the :class:`~.stores.memory.MemoryStore`, but "
-"it can be configured with any :class:`~.stores.base.Store`, for example :"
-"class:`~.stores.redis.RedisStore`:"
+"it can be configured with any :class:`~.stores.base.Store`, for "
+"example :class:`~.stores.redis.RedisStore`:"
 msgstr ""
 
 #: ../../../usage/caching.rst:54
@@ -211,10 +212,10 @@ msgstr ""
 
 #: ../../../usage/caching.rst:74
 msgid ""
-"The :attr:`~.config.response_cache.ResponseCacheConfig."
-"cache_response_filter` can be customized to implement any caching logic "
-"based on the application's needs. For example, you might want to cache only "
-"successful responses, or cache responses based on certain headers or content."
+"The :attr:`~.config.response_cache.ResponseCacheConfig.cache_response_filter` "
+"can be customized to implement any caching logic based on the application's "
+"needs. For example, you might want to cache only successful responses, or "
+"cache responses based on certain headers or content."
 msgstr ""
 
 #: ../../../usage/caching.rst:78

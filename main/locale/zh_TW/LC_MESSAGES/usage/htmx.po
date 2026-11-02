@@ -35,8 +35,8 @@ msgstr ""
 #: ../../../usage/htmx.rst:8
 msgid ""
 "This section assumes that you have prior knowledge of HTMX. If you want to "
-"learn HTMX, we recommend consulting their `official tutorial <https://htmx."
-"org/docs>`_."
+"learn HTMX, we recommend consulting their `official tutorial <https://"
+"htmx.org/docs>`_."
 msgstr ""
 
 #: ../../../usage/htmx.rst:13
@@ -135,8 +135,8 @@ msgstr ""
 #: ../../../usage/htmx.rst:89
 msgid ""
 "The most common  use-case for HTMX to render an html page or html snippet. "
-"Litestar makes this easy by providing an :class:`~litestar.plugins.htmx."
-"HTMXTemplate` response:"
+"Litestar makes this easy by providing "
+"an :class:`~litestar.plugins.htmx.HTMXTemplate` response:"
 msgstr ""
 
 #: ../../../usage/htmx.rst:93

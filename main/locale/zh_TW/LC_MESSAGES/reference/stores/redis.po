@@ -59,8 +59,8 @@ msgstr ""
 #: ../../../../litestar/stores/redis.py:docstring of
 #: litestar.stores.redis.RedisStore.with_client:1
 msgid ""
-"Initialize a :class:`RedisStore` instance with a new class:`redis.asyncio."
-"Redis` instance."
+"Initialize a :class:`RedisStore` instance with a new "
+"class:`redis.asyncio.Redis` instance."
 msgstr ""
 
 #: ../../../../litestar/stores/redis.py:docstring of

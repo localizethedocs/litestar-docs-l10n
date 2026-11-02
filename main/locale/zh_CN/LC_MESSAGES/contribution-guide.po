@@ -104,8 +104,8 @@ msgstr ""
 
 #: ../../../../CONTRIBUTING.rst:36
 msgid ""
-"Run ``make install`` to create a `virtual environment <https://docs.python."
-"org/3/tutorial/venv.html>`_ and install the required development "
+"Run ``make install`` to create a `virtual environment <https://"
+"docs.python.org/3/tutorial/venv.html>`_ and install the required development "
 "dependencies or run the ``uv sync`` command manually:"
 msgstr ""
 
@@ -207,8 +207,9 @@ msgstr ""
 
 #: ../../../../CONTRIBUTING.rst:76
 msgid ""
-"Commit your changes to git. We follow `conventional commits <https://www."
-"conventionalcommits.org/>`_ which are enforced using a ``pre-commit`` hook."
+"Commit your changes to git. We follow `conventional commits <https://"
+"www.conventionalcommits.org/>`_ which are enforced using a ``pre-commit`` "
+"hook."
 msgstr ""
 
 #: ../../../../CONTRIBUTING.rst:78
@@ -219,8 +220,8 @@ msgstr ""
 msgid ""
 "Open a `pull request <https://docs.github.com/en/pull-requests>`_. Give the "
 "pull request a descriptive title indicating what it changes. The style of "
-"the PR title should also follow `conventional commits <https://www."
-"conventionalcommits.org/>`_, and this is enforced using a GitHub action."
+"the PR title should also follow `conventional commits <https://"
+"www.conventionalcommits.org/>`_, and this is enforced using a GitHub action."
 msgstr ""
 
 #: ../../../../CONTRIBUTING.rst:82

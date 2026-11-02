@@ -26,17 +26,17 @@ msgid ""
 "When sending files with :class:`~litestar.response.File` or serving them "
 "using :func:`~litestar.static_files.create_static_files_router`, in addition "
 "to doing so from the local file system Litestar also supports custom file "
-"systems, including support for `fsspec <https://filesystem-spec.readthedocs."
-"io/en/latest/>`_, which enables an integration with a wide range of remote "
-"file systems."
+"systems, including support for `fsspec <https://filesystem-"
+"spec.readthedocs.io/en/latest/>`_, which enables an integration with a wide "
+"range of remote file systems."
 msgstr ""
 
 #: ../../../usage/file_systems.rst:10
 msgid ""
-"At its core, a file system is any class that implements the abstract :class:"
-"`~litestar.file_system.BaseFileSystem` class. By default, Litestar ships "
-"with a single implementation: :class:`~litestar.file_system."
-"BaseLocalFileSystem`."
+"At its core, a file system is any class that implements the "
+"abstract :class:`~litestar.file_system.BaseFileSystem` class. By default, "
+"Litestar ships with a single "
+"implementation: :class:`~litestar.file_system.BaseLocalFileSystem`."
 msgstr ""
 
 #: ../../../usage/file_systems.rst:16
@@ -67,11 +67,12 @@ msgstr ""
 
 #: ../../../usage/file_systems.rst:23
 msgid ""
-"In addition to file systems implemented on top of :class:`~litestar."
-"file_system.BaseFileSystem`, all ``fsspec`` file systems, synchronous and "
-"asynchronous, are supported. They will be wrapped in :class:`~litestar."
-"file_system.FsspecSyncWrapper` or :class:`~litestar.file_system."
-"FsspecAsyncWrapper` respectively to conform to a common interface."
+"In addition to file systems implemented on top "
+"of :class:`~litestar.file_system.BaseFileSystem`, all ``fsspec`` file "
+"systems, synchronous and asynchronous, are supported. They will be wrapped "
+"in :class:`~litestar.file_system.FsspecSyncWrapper` "
+"or :class:`~litestar.file_system.FsspecAsyncWrapper` respectively to conform "
+"to a common interface."
 msgstr ""
 
 #: ../../../usage/file_systems.rst:32
@@ -87,9 +88,9 @@ msgstr ""
 #: ../../../usage/file_systems.rst:37
 msgid ""
 "It can still make sense to set them up in the `Registry` instead, or wrap "
-"them manually with :func:`~litestar.file_system."
-"maybe_wrap_fsspec_file_system` once and use that wrapper, so they don't have "
-"to be wrapped again for every usage:"
+"them manually "
+"with :func:`~litestar.file_system.maybe_wrap_fsspec_file_system` once and "
+"use that wrapper, so they don't have to be wrapped again for every usage:"
 msgstr ""
 
 #: ../../../usage/file_systems.rst:0
@@ -175,15 +176,16 @@ msgstr "適配支援符號連結的檔案系統"
 msgid ""
 "Handling symlinks can be tricky. To ensure Litestar always does the right "
 "thing, existing file systems that do support symlinks can be registered as "
-"\"linkable\" without having to implement :class:`~litestar.file_system."
-"LinkableFileSystem`."
+"\"linkable\" without having to "
+"implement :class:`~litestar.file_system.LinkableFileSystem`."
 msgstr ""
 
 #: ../../../usage/file_systems.rst:79
 msgid ""
-"To register a file system as linkable, :meth:`~litestar.file_system."
-"LinkableFileSystem.register_as_linkable` can be used to register a type and "
-"a function to resolve symlinks on this file system."
+"To register a file system as "
+"linkable, :meth:`~litestar.file_system.LinkableFileSystem.register_as_linkable` "
+"can be used to register a type and a function to resolve symlinks on this "
+"file system."
 msgstr ""
 
 #: ../../../usage/file_systems.rst:84
@@ -216,9 +218,9 @@ msgstr "註冊表"
 
 #: ../../../usage/file_systems.rst:95
 msgid ""
-"For easier configuration and testing, :class:`~litestar.file_system."
-"FileSystemRegistry` can be used to register file systems under a name by "
-"which they can be referenced later."
+"For easier configuration and "
+"testing, :class:`~litestar.file_system.FileSystemRegistry` can be used to "
+"register file systems under a name by which they can be referenced later."
 msgstr ""
 
 #: ../../../usage/file_systems.rst:99
@@ -290,8 +292,9 @@ msgstr "設定預設檔案系統"
 msgid ""
 "For actions that involve sending files, if no file system is passed "
 "explicitly, Litestar will use the default file system defined in the "
-"registry. This defaults to :class:`~litestar.file_system."
-"BaseLocalFileSystem`, but may be configured to any supported file system."
+"registry. This defaults "
+"to :class:`~litestar.file_system.BaseLocalFileSystem`, but may be configured "
+"to any supported file system."
 msgstr ""
 
 #: ../../../usage/file_systems.rst:128

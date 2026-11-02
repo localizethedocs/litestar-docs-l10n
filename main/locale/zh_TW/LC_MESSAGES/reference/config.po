@@ -29,8 +29,8 @@ msgstr ""
 #: ../../../../litestar/config/allowed_hosts.py:docstring of
 #: litestar.config.allowed_hosts.AllowedHostsConfig:3
 msgid ""
-"To enable allowed hosts protection, pass an instance of this class to the :"
-"class:`Litestar <litestar.app.Litestar>` constructor using the "
+"To enable allowed hosts protection, pass an instance of this class to "
+"the :class:`Litestar <litestar.app.Litestar>` constructor using the "
 "``allowed_hosts`` key."
 msgstr ""
 
@@ -93,8 +93,8 @@ msgstr ""
 #: ../../../../litestar/config/app.py:docstring of
 #: litestar.config.app.AppConfig.after_exception:1
 msgid ""
-"An application level :class:`exception hook handler <.types."
-"AfterExceptionHookHandler>` or list thereof."
+"An application level :class:`exception hook handler "
+"<.types.AfterExceptionHookHandler>` or list thereof."
 msgstr ""
 
 #: ../../../../litestar/config/app.py:docstring of
@@ -115,8 +115,8 @@ msgstr ""
 #: ../../../../litestar/config/app.py:docstring of
 #: litestar.config.app.AppConfig.after_request:4
 msgid ""
-"Receives the response object which may be any subclass of :class:`Response <."
-"response.Response>`."
+"Receives the response object which may be any subclass of :class:`Response "
+"<.response.Response>`."
 msgstr ""
 
 #: ../../../../litestar/config/app.py:docstring of
@@ -144,8 +144,8 @@ msgstr ""
 #: ../../../../litestar/config/app.py:docstring of
 #: litestar.config.app.AppConfig.before_send:1
 msgid ""
-"An application level :class:`before send hook handler <.types."
-"BeforeMessageSendHookHandler>` or list thereof."
+"An application level :class:`before send hook handler "
+"<.types.BeforeMessageSendHookHandler>` or list thereof."
 msgstr ""
 
 #: ../../../../litestar/config/app.py:docstring of
@@ -156,8 +156,8 @@ msgstr ""
 #: ../../../../litestar/config/app.py:docstring of
 #: litestar.config.app.AppConfig.cache_control:1
 msgid ""
-"A ``cache-control`` header of type :class:`CacheControlHeader <."
-"datastructures.CacheControlHeader>` to add to route handlers of this app."
+"A ``cache-control`` header of type :class:`CacheControlHeader "
+"<.datastructures.CacheControlHeader>` to add to route handlers of this app."
 msgstr ""
 
 #: ../../../../litestar/config/app.py:docstring of
@@ -212,8 +212,8 @@ msgstr ""
 #: ../../../../litestar/events/emitter.py:docstring of
 #: litestar.events.emitter.SimpleEventEmitter:1
 msgid ""
-"A subclass of :class:`BaseEventEmitterBackend <.events.emitter."
-"BaseEventEmitterBackend>`."
+"A subclass of :class:`BaseEventEmitterBackend "
+"<.events.emitter.BaseEventEmitterBackend>`."
 msgstr ""
 
 #: ../../../../litestar/config/app.py:docstring of
@@ -269,16 +269,17 @@ msgstr ""
 #: ../../../../litestar/config/app.py:docstring of
 #: litestar.config.app.AppConfig.openapi_config:1
 msgid ""
-"Defaults to :data:`DEFAULT_OPENAPI_CONFIG <litestar.app."
-"DEFAULT_OPENAPI_CONFIG>`"
+"Defaults to :data:`DEFAULT_OPENAPI_CONFIG "
+"<litestar.app.DEFAULT_OPENAPI_CONFIG>`"
 msgstr ""
 
 #: ../../../../litestar/config/app.py:docstring of
 #: litestar.config.app.AppConfig.opt:1
 msgid ""
-"A string keyed dictionary of arbitrary values that can be accessed in :class:"
-"`Guards <.types.Guard>` or wherever you have access to :class:`Request <."
-"connection.Request>` or :class:`ASGI Scope <litestar.types.Scope>`."
+"A string keyed dictionary of arbitrary values that can be accessed "
+"in :class:`Guards <.types.Guard>` or wherever you have access "
+"to :class:`Request <.connection.Request>` or :class:`ASGI Scope "
+"<litestar.types.Scope>`."
 msgstr ""
 
 #: ../../../../litestar/config/app.py:docstring of
@@ -346,8 +347,8 @@ msgstr ""
 #: ../../../../litestar/config/app.py:docstring of
 #: litestar.config.app.AppConfig.response_headers:1
 msgid ""
-"A string keyed dictionary mapping :class:`ResponseHeader <.datastructures."
-"ResponseHeader>`."
+"A string keyed dictionary mapping :class:`ResponseHeader "
+"<.datastructures.ResponseHeader>`."
 msgstr ""
 
 #: ../../../../litestar/config/app.py:docstring of
@@ -365,17 +366,18 @@ msgstr ""
 #: ../../../../litestar/config/app.py:docstring of
 #: litestar.config.app.AppConfig.route_handlers:1
 msgid ""
-"A required list of route handlers, which can include instances of :class:"
-"`Router <.router.Router>`, subclasses of :class:`Controller <.controller."
-"Controller>` or any function decorated by the route handler decorators."
+"A required list of route handlers, which can include instances "
+"of :class:`Router <.router.Router>`, subclasses of :class:`Controller "
+"<.controller.Controller>` or any function decorated by the route handler "
+"decorators."
 msgstr ""
 
 #: ../../../../litestar/config/app.py:docstring of
 #: litestar.config.app.AppConfig.security:1
 msgid ""
 "A list of dictionaries that will be added to the schema of all route "
-"handlers in the application. See :data:`SecurityRequirement <.openapi.spec."
-"SecurityRequirement>` for details."
+"handlers in the application. See :data:`SecurityRequirement "
+"<.openapi.spec.SecurityRequirement>` for details."
 msgstr ""
 
 #: ../../../../litestar/config/app.py:docstring of
@@ -410,8 +412,8 @@ msgstr ""
 msgid ""
 "Central registry of :class:`Store <.stores.base.Store>` to be made available "
 "and be used throughout the application. Can be either a dictionary mapping "
-"strings to :class:`Store <.stores.base.Store>` instances, or an instance of :"
-"class:`StoreRegistry <.stores.registry.StoreRegistry>`."
+"strings to :class:`Store <.stores.base.Store>` instances, or an instance "
+"of :class:`StoreRegistry <.stores.registry.StoreRegistry>`."
 msgstr ""
 
 #: ../../../../litestar/config/app.py:docstring of
@@ -486,8 +488,9 @@ msgstr ""
 #: ../../../../litestar/config/compression.py:docstring of
 #: litestar.config.compression.CompressionConfig:3
 msgid ""
-"To enable response compression, pass an instance of this class to the :class:"
-"`Litestar <.app.Litestar>` constructor using the ``compression_config`` key."
+"To enable response compression, pass an instance of this class to "
+"the :class:`Litestar <.app.Litestar>` constructor using the "
+"``compression_config`` key."
 msgstr ""
 
 #: ../../../../litestar/config/compression.py:docstring of
@@ -569,8 +572,8 @@ msgstr ""
 #: ../../../../litestar/middleware/compression/middleware.py:docstring of
 #: litestar.middleware.compression.middleware.CompressionMiddleware:1
 msgid ""
-"Middleware class to use, should be a subclass of :class:"
-"`CompressionMiddleware`."
+"Middleware class to use, should be a subclass "
+"of :class:`CompressionMiddleware`."
 msgstr ""
 
 #: ../../../../litestar/config/compression.py:docstring of
@@ -762,8 +765,9 @@ msgstr ""
 #: ../../../../litestar/config/csrf.py:docstring of
 #: litestar.config.csrf.CSRFConfig:3
 msgid ""
-"To enable CSRF protection, pass an instance of this class to the :class:"
-"`Litestar <litestar.app.Litestar>` constructor using the 'csrf_config' key."
+"To enable CSRF protection, pass an instance of this class to "
+"the :class:`Litestar <litestar.app.Litestar>` constructor using the "
+"'csrf_config' key."
 msgstr ""
 
 #: ../../../../litestar/config/csrf.py:docstring of
@@ -840,8 +844,8 @@ msgstr ""
 #: ../../../../litestar/config/response_cache.py:docstring of
 #: litestar.config.response_cache.ResponseCacheConfig:3
 msgid ""
-"To enable response caching, pass an instance of this class to :class:"
-"`Litestar <.app.Litestar>` using the ``response_cache_config`` key."
+"To enable response caching, pass an instance of this class "
+"to :class:`Litestar <.app.Litestar>` using the ``response_cache_config`` key."
 msgstr ""
 
 #: ../../../../litestar/config/response_cache.py:docstring of
@@ -854,8 +858,8 @@ msgstr ""
 #: ../../../../litestar/config/response_cache.py:docstring of
 #: litestar.config.response_cache.default_cache_key_builder:1
 msgid ""
-":class:`CacheKeyBuilder <.types.CacheKeyBuilder>`. Defaults to :func:"
-"`default_cache_key_builder`."
+":class:`CacheKeyBuilder <.types.CacheKeyBuilder>`. Defaults "
+"to :func:`default_cache_key_builder`."
 msgstr ""
 
 #: ../../../../litestar/config/response_cache.py:docstring of
@@ -873,8 +877,8 @@ msgstr ""
 #: ../../../../litestar/config/response_cache.py:docstring of
 #: litestar.config.response_cache.ResponseCacheConfig.get_store_from_app:1
 msgid ""
-"Get the store defined in :attr:`store` from an :class:`Litestar <.app."
-"Litestar>` instance."
+"Get the store defined in :attr:`store` from an :class:`Litestar "
+"<.app.Litestar>` instance."
 msgstr ""
 
 #: ../../../../litestar/config/response_cache.py:docstring of

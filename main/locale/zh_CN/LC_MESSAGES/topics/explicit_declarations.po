@@ -36,8 +36,8 @@ msgstr ""
 #: ../../../topics/explicit_declarations.rst:12
 msgid ""
 "Simply put, in Litestar, an explicit parameter declaration is any handler or "
-"dependency function parameter, marked with a *marker* such as :class:"
-"`~litestar.params.FromQuery`, e.g."
+"dependency function parameter, marked with a *marker* such "
+"as :class:`~litestar.params.FromQuery`, e.g."
 msgstr ""
 
 #: ../../../topics/explicit_declarations.rst:17

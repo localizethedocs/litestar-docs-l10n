@@ -242,9 +242,9 @@ msgstr ""
 #: ../../../../litestar/connection/base.py:docstring of
 #: litestar.connection.base.ASGIConnection.set_session:3
 msgid ""
-"If the :class:`SessionMiddleware <.middleware.session.base."
-"SessionMiddleware>` is enabled, the session will be added to the response as "
-"a cookie header."
+"If the :class:`SessionMiddleware "
+"<.middleware.session.base.SessionMiddleware>` is enabled, the session will "
+"be added to the response as a cookie header."
 msgstr ""
 
 #: ../../../../litestar/connection/base.py:docstring of
@@ -275,9 +275,9 @@ msgstr ""
 #: ../../../../litestar/connection/base.py:docstring of
 #: litestar.connection.base.ASGIConnection.clear_session:3
 msgid ""
-"If the :class:`Litestar SessionMiddleware <.middleware.session.base."
-"SessionMiddleware>` is enabled, this will cause the session data to be "
-"cleared."
+"If the :class:`Litestar SessionMiddleware "
+"<.middleware.session.base.SessionMiddleware>` is enabled, this will cause "
+"the session data to be cleared."
 msgstr ""
 
 #: ../../../../litestar/connection/base.py:docstring of
@@ -349,8 +349,8 @@ msgstr ""
 #: ../../../../litestar/connection/request.py:docstring of
 #: litestar.connection.Request.accept:1
 msgid ""
-"Parse the request's 'Accept' header, returning an :class:`Accept <litestar."
-"datastructures.headers.Accept>` instance."
+"Parse the request's 'Accept' header, returning an :class:`Accept "
+"<litestar.datastructures.headers.Accept>` instance."
 msgstr ""
 
 #: ../../../../litestar/connection/request.py:docstring of

@@ -73,10 +73,10 @@ msgstr ""
 
 #: ../../../onboarding/fastapi.rst:32
 msgid ""
-"These, as well as ``msgspec``, are supported through its plugin system ( :"
-"class:`~litestar.plugins.SerializationPlugin` and :class:`~litestar.plugins."
-"OpenAPISchemaPlugin`) so it's easy to add first-class support for any "
-"library."
+"These, as well as ``msgspec``, are supported through its plugin system "
+"( :class:`~litestar.plugins.SerializationPlugin` "
+"and :class:`~litestar.plugins.OpenAPISchemaPlugin`) so it's easy to add "
+"first-class support for any library."
 msgstr ""
 
 #: ../../../onboarding/fastapi.rst:39
@@ -284,8 +284,9 @@ msgid ""
 "FastAPI allows declaring path and query parameters implicitly; If a function "
 "parameter of the same name is detected, the path / query parameter will be "
 "injected into it. Litestar uses the same mechanism but makes it explicit: "
-"The corresponding parameters must be marked with :data:`~litestar.params."
-"FromPath` and :data:`~litestar.params.FromQuery` respectively:"
+"The corresponding parameters must be marked "
+"with :data:`~litestar.params.FromPath` "
+"and :data:`~litestar.params.FromQuery` respectively:"
 msgstr ""
 
 #: ../../../onboarding/fastapi.rst:178
@@ -310,8 +311,8 @@ msgstr ""
 #: ../../../onboarding/fastapi.rst:190
 msgid ""
 "To define constraints or extend the OpenAPI schema for parameters, use their "
-"``Annotated`` shapes :class:`~litestar.params.PathParameter` and :class:"
-"`~litestar.params.QueryParameter`:"
+"``Annotated`` shapes :class:`~litestar.params.PathParameter` "
+"and :class:`~litestar.params.QueryParameter`:"
 msgstr ""
 
 #: ../../../onboarding/fastapi.rst:200
@@ -441,10 +442,12 @@ msgstr ""
 
 #: ../../../onboarding/fastapi.rst:284
 msgid ""
-"Form-encoded bodies use the same ``data`` parameter, annotated with :func:"
-"`~litestar.params.Body` and a ``media_type`` of :class:`RequestEncodingType."
-"URL_ENCODED <litestar.enums.RequestEncodingType>` or :class:"
-"`RequestEncodingType.MULTI_PART <litestar.enums.RequestEncodingType>`"
+"Form-encoded bodies use the same ``data`` parameter, annotated "
+"with :func:`~litestar.params.Body` and a ``media_type`` "
+"of :class:`RequestEncodingType.URL_ENCODED "
+"<litestar.enums.RequestEncodingType>` "
+"or :class:`RequestEncodingType.MULTI_PART "
+"<litestar.enums.RequestEncodingType>`"
 msgstr ""
 
 #: ../../../onboarding/fastapi.rst:289
@@ -474,8 +477,8 @@ msgid ""
 "\n"
 "@post(\"/login\")\n"
 "async def login(\n"
-"    data: Annotated[dict[str, str], Body(media_type=RequestEncodingType."
-"URL_ENCODED)],\n"
+"    data: Annotated[dict[str, str], "
+"Body(media_type=RequestEncodingType.URL_ENCODED)],\n"
 ") -> dict[str, str]:\n"
 "    return {\"user\": data[\"username\"]}\n"
 "\n"
@@ -489,12 +492,13 @@ msgstr ""
 
 #: ../../../onboarding/fastapi.rst:317
 msgid ""
-"Multipart bodies use the same ``data`` parameter with ``media_type`` set to :"
-"class:`RequestEncodingType.MULTI_PART <litestar.enums.RequestEncodingType>`. "
-"Uploaded files arrive as :class:`~litestar.datastructures.UploadFile` "
-"instances. To receive multiple files, you can simply use "
-"``list[UploadFile]``. For mixed form data (i.e. plain fields + uploads), you "
-"can simply annotate any field of a supported model type with ``UploadData``."
+"Multipart bodies use the same ``data`` parameter with ``media_type`` set "
+"to :class:`RequestEncodingType.MULTI_PART "
+"<litestar.enums.RequestEncodingType>`. Uploaded files arrive "
+"as :class:`~litestar.datastructures.UploadFile` instances. To receive "
+"multiple files, you can simply use ``list[UploadFile]``. For mixed form data "
+"(i.e. plain fields + uploads), you can simply annotate any field of a "
+"supported model type with ``UploadData``."
 msgstr ""
 
 #: ../../../onboarding/fastapi.rst:330
@@ -518,8 +522,8 @@ msgid ""
 "\n"
 "@post(\"/upload/\")\n"
 "async def upload_file(\n"
-"    data: Annotated[list[UploadFile], Body(media_type=RequestEncodingType."
-"MULTI_PART)],\n"
+"    data: Annotated[list[UploadFile], "
+"Body(media_type=RequestEncodingType.MULTI_PART)],\n"
 ") -> dict[str, list[str | None]]:\n"
 "    return {\"file_names\": [file.filename for file in data]}\n"
 "\n"
@@ -594,9 +598,9 @@ msgstr ""
 msgid ""
 "FastAPI defaults to setting headers directly on a ``Response`` . Litestar "
 "offers two paths: declare static values on the decorator with "
-"``response_cookies`` and ``response_headers``, or return a :class:`~litestar."
-"response.Response` with ``cookies=`` and ``headers=`` when the values depend "
-"on the request."
+"``response_cookies`` and ``response_headers``, or return "
+"a :class:`~litestar.response.Response` with ``cookies=`` and ``headers=`` "
+"when the values depend on the request."
 msgstr ""
 
 #: ../../../onboarding/fastapi.rst:398
@@ -704,8 +708,8 @@ msgstr ""
 
 #: ../../../onboarding/fastapi.rst:465
 msgid ""
-"FastAPI uses ``StreamingResponse``; Litestar uses :class:`~litestar.response."
-"Stream`. Both wrap a sync or async iterator."
+"FastAPI uses ``StreamingResponse``; Litestar "
+"uses :class:`~litestar.response.Stream`. Both wrap a sync or async iterator."
 msgstr ""
 
 #: ../../../onboarding/fastapi.rst:474
@@ -868,9 +872,10 @@ msgstr ""
 
 #: ../../../onboarding/fastapi.rst:559
 msgid ""
-"Construct a fresh application per test with :func:`~litestar.testing."
-"create_test_client`, passing the overridden dependency through the same "
-"``dependencies=`` keyword the production application uses"
+"Construct a fresh application per test "
+"with :func:`~litestar.testing.create_test_client`, passing the overridden "
+"dependency through the same ``dependencies=`` keyword the production "
+"application uses"
 msgstr ""
 
 #: ../../../onboarding/fastapi.rst:562
@@ -887,9 +892,9 @@ msgstr ""
 msgid ""
 "Both frameworks export an ``HTTPException``. The FastAPI one takes the "
 "status code as a positional argument; the Litestar one uses the keyword "
-"argument ``status_code``. A positional argument to Litestar's :class:"
-"`~litestar.exceptions.HTTPException` is appended to ``detail``, which is "
-"rendered in the JSON response."
+"argument ``status_code``. A positional argument to "
+"Litestar's :class:`~litestar.exceptions.HTTPException` is appended to "
+"``detail``, which is rendered in the JSON response."
 msgstr ""
 
 #: ../../../onboarding/fastapi.rst:580
@@ -991,9 +996,10 @@ msgstr ""
 
 #: ../../../onboarding/fastapi.rst:637
 msgid ""
-"A guard is a callable that receives the :class:`~litestar.connection."
-"ASGIConnection` and the :class:`~litestar.handlers.BaseRouteHandler`; "
-"raising an exception here aborts the request."
+"A guard is a callable that receives "
+"the :class:`~litestar.connection.ASGIConnection` and "
+"the :class:`~litestar.handlers.BaseRouteHandler`; raising an exception here "
+"aborts the request."
 msgstr ""
 
 #: ../../../onboarding/fastapi.rst:642
@@ -1046,11 +1052,11 @@ msgstr ""
 msgid ""
 "Pure ASGI middleware - a callable that wraps an ASGI app and returns another "
 "- works the same in both frameworks. Middleware built on Starlette's "
-"``BaseHTTPMiddleware`` does not port directly: use :class:`~litestar."
-"middleware.ASGIMiddleware` instead. Subclass it and implement :meth:"
-"`~litestar.middleware.ASGIMiddleware.handle`, which receives ``scope``, "
-"``receive``, ``send``, and a ``next_app`` callable (the equivalent of "
-"``call_next``)."
+"``BaseHTTPMiddleware`` does not port directly: "
+"use :class:`~litestar.middleware.ASGIMiddleware` instead. Subclass it and "
+"implement :meth:`~litestar.middleware.ASGIMiddleware.handle`, which receives "
+"``scope``, ``receive``, ``send``, and a ``next_app`` callable (the "
+"equivalent of ``call_next``)."
 msgstr ""
 
 #: ../../../onboarding/fastapi.rst:686
@@ -1112,9 +1118,10 @@ msgstr ""
 #: ../../../onboarding/fastapi.rst:712
 msgid ""
 "FastAPI injects a ``BackgroundTasks`` object into the handler. In Litestar, "
-"a :class:`~litestar.background_tasks.BackgroundTask` (or a :class:`~litestar."
-"background_tasks.BackgroundTasks` collection) can be passed directly to the "
-"response. These tasks run after the response body has been sent."
+"a :class:`~litestar.background_tasks.BackgroundTask` (or "
+"a :class:`~litestar.background_tasks.BackgroundTasks` collection) can be "
+"passed directly to the response. These tasks run after the response body has "
+"been sent."
 msgstr ""
 
 #: ../../../onboarding/fastapi.rst:723
@@ -1165,8 +1172,8 @@ msgstr ""
 
 #: ../../../onboarding/fastapi.rst:744
 msgid ""
-":func:`~litestar.handlers.websocket`: Raw `ASGI WebSocket <https://asgi."
-"readthedocs.io/en/latest/specs/www.html#websocket>`_ handling, same "
+":func:`~litestar.handlers.websocket`: Raw `ASGI WebSocket <https://"
+"asgi.readthedocs.io/en/latest/specs/www.html#websocket>`_ handling, same "
 "semantics as ``@app.websocket``"
 msgstr ""
 
@@ -1211,8 +1218,8 @@ msgstr ""
 
 #: ../../../onboarding/fastapi.rst:776
 msgid ""
-"For broadcast and pub/sub patterns, pair these handlers with the :doc:"
-"`channels </usage/channels>` plugin. Channels handles per-channel "
+"For broadcast and pub/sub patterns, pair these handlers with "
+"the :doc:`channels </usage/channels>` plugin. Channels handles per-channel "
 "subscriptions, history, and inter-process fan-out through a pluggable "
 "broker, and can generate WebSocket route handlers that publish incoming "
 "events to subscribed clients."
@@ -1228,11 +1235,11 @@ msgstr ""
 
 #: ../../../onboarding/fastapi.rst:789
 msgid ""
-"Both frameworks ship an ``httpx``-based ``TestClient``. The Litestar one is :"
-"class:`~litestar.testing.TestClient`. For unit testing, Litestar also "
-"provides :func:`~litestar.testing.create_test_client` and :func:`~litestar."
-"testing.create_async_test_client`, which take the same arguments as :class:"
-"`Litestar` and return a configured client."
+"Both frameworks ship an ``httpx``-based ``TestClient``. The Litestar one "
+"is :class:`~litestar.testing.TestClient`. For unit testing, Litestar also "
+"provides :func:`~litestar.testing.create_test_client` "
+"and :func:`~litestar.testing.create_async_test_client`, which take the same "
+"arguments as :class:`Litestar` and return a configured client."
 msgstr ""
 
 #: ../../../onboarding/fastapi.rst:801
@@ -1274,10 +1281,11 @@ msgstr ""
 
 #: ../../../onboarding/fastapi.rst:823
 msgid ""
-"Per-route OpenAPI metadata (``tags``, ``summary``, ``description``,"
-"``operation_id``, etc.) sits on the handler decorator in both frameworks. "
-"Application-wide options live on :class:`~litestar.openapi.config."
-"OpenAPIConfig`, passed as ``openapi_config=`` to the application."
+"Per-route OpenAPI metadata (``tags``, ``summary``, "
+"``description``,``operation_id``, etc.) sits on the handler decorator in "
+"both frameworks. Application-wide options live "
+"on :class:`~litestar.openapi.config.OpenAPIConfig`, passed as "
+"``openapi_config=`` to the application."
 msgstr ""
 
 #: ../../../onboarding/fastapi.rst:834

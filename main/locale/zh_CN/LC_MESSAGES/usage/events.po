@@ -227,9 +227,10 @@ msgstr ""
 
 #: ../../../usage/events.rst:178
 msgid ""
-"An \"event emitter\" is a class that inherits from :class:"
-"`BaseEventEmitterBackend <litestar.events.BaseEventEmitterBackend>`, which "
-"itself inherits from :obj:`contextlib.AbstractAsyncContextManager`."
+"An \"event emitter\" is a class that inherits "
+"from :class:`BaseEventEmitterBackend "
+"<litestar.events.BaseEventEmitterBackend>`, which itself inherits "
+"from :obj:`contextlib.AbstractAsyncContextManager`."
 msgstr ""
 
 #: ../../../usage/events.rst:182
@@ -240,15 +241,15 @@ msgstr ""
 
 #: ../../../usage/events.rst:185
 msgid ""
-"Additionally, the abstract ``__aenter__`` and ``__aexit__`` methods from :"
-"obj:`contextlib.AbstractAsyncContextManager` must be implemented, allowing "
-"the emitter to be used as an async context manager."
+"Additionally, the abstract ``__aenter__`` and ``__aexit__`` methods "
+"from :obj:`contextlib.AbstractAsyncContextManager` must be implemented, "
+"allowing the emitter to be used as an async context manager."
 msgstr ""
 
 #: ../../../usage/events.rst:189
 msgid ""
-"By default Litestar uses the :class:`SimpleEventEmitter <litestar.events."
-"SimpleEventEmitter>`, which offers an in-memory async queue."
+"By default Litestar uses the :class:`SimpleEventEmitter "
+"<litestar.events.SimpleEventEmitter>`, which offers an in-memory async queue."
 msgstr ""
 
 #: ../../../usage/events.rst:193

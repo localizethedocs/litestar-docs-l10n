@@ -344,9 +344,9 @@ msgstr ""
 #: ../../../usage/openapi/ui_plugins.rst:111
 msgid ""
 "Setting ``js_url`` lets you point the ReDoc bundle to any CDN or internal "
-"host. In ``redoc_config.py`` we override it to ``https://cdn.company."
-"internal/redoc/custom-redoc.js``. When provided, ``js_url`` takes precedence "
-"over ``version``."
+"host. In ``redoc_config.py`` we override it to ``https://"
+"cdn.company.internal/redoc/custom-redoc.js``. When provided, ``js_url`` "
+"takes precedence over ``version``."
 msgstr ""
 
 #: ../../../usage/openapi/ui_plugins.rst:119
@@ -371,8 +371,8 @@ msgstr ""
 #: ../../../usage/openapi/ui_plugins.rst:130
 msgid ""
 "The OpenAPI root path is the path at which the OpenAPI representations are "
-"served. By default, this is ``/schema``. This can be changed by setting the :"
-"attr:`OpenAPIConfig.path` attribute."
+"served. By default, this is ``/schema``. This can be changed by setting "
+"the :attr:`OpenAPIConfig.path` attribute."
 msgstr ""
 
 #: ../../../usage/openapi/ui_plugins.rst:133
@@ -415,9 +415,9 @@ msgstr ""
 #: ../../../usage/openapi/ui_plugins.rst:144
 msgid ""
 "If Litestar does not have built-in support for your OpenAPI UI framework of "
-"choice, you can easily create your own plugin by subclassing :class:"
-"`OpenAPIRenderPlugin` and implementing the :meth:`OpenAPIRenderPlugin."
-"render` method."
+"choice, you can easily create your own plugin by "
+"subclassing :class:`OpenAPIRenderPlugin` and implementing "
+"the :meth:`OpenAPIRenderPlugin.render` method."
 msgstr ""
 
 #: ../../../usage/openapi/ui_plugins.rst:147
@@ -688,12 +688,13 @@ msgstr ""
 
 #: ../../../usage/openapi/ui_plugins.rst:228
 msgid ""
-"When using Swagger, OAuth2 settings can be configured via the :paramref:`~."
-"openapi.plugins.SwaggerRenderPlugin.init_oauth` param of :meth:"
-"`SwaggerRenderPlugin <litestar.openapi.plugins.SwaggerRenderPlugin."
-"__init__>`, which can be set to a dictionary containing the parameters "
-"described in the Swagger UI documentation for OAuth2 `here <https://swagger."
-"io/docs/open-source-tools/swagger-ui/usage/oauth2/>`_."
+"When using Swagger, OAuth2 settings can be configured via "
+"the :paramref:`~.openapi.plugins.SwaggerRenderPlugin.init_oauth` param "
+"of :meth:`SwaggerRenderPlugin "
+"<litestar.openapi.plugins.SwaggerRenderPlugin.__init__>`, which can be set "
+"to a dictionary containing the parameters described in the Swagger UI "
+"documentation for OAuth2 `here <https://swagger.io/docs/open-source-tools/"
+"swagger-ui/usage/oauth2/>`_."
 msgstr ""
 
 #: ../../../usage/openapi/ui_plugins.rst:233

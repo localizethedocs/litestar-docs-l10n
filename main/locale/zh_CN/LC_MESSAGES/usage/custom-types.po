@@ -46,9 +46,10 @@ msgstr ""
 msgid ""
 "Litestar supports a mechanism where you provide encoding and decoding hook "
 "functions which translate your type in / to a type that it knows. You can "
-"provide them via the ``type_encoders`` and ``type_decoders`` :term:"
-"`parameters <parameter>` which can be defined on every layer. For example "
-"see the :doc:`litestar app reference </reference/app>`."
+"provide them via the ``type_encoders`` and "
+"``type_decoders`` :term:`parameters <parameter>` which can be defined on "
+"every layer. For example see the :doc:`litestar app reference </reference/"
+"app>`."
 msgstr ""
 
 #: ../../../usage/custom-types.rst:15

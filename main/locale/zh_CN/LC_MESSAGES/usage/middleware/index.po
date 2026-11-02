@@ -42,6 +42,6 @@ msgstr ""
 
 #: ../../../usage/middleware/index.rst:14
 msgid ""
-":ref:`Migration - FastAPI/Starlette - Middlewares <onboarding/fastapi:"
-"Middleware>`"
+":ref:`Migration - FastAPI/Starlette - Middlewares <onboarding/"
+"fastapi:Middleware>`"
 msgstr ""

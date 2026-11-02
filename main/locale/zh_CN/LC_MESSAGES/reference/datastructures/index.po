@@ -161,8 +161,8 @@ msgstr ""
 #: ../../../../litestar/datastructures/url.py:docstring of
 #: litestar.datastructures.URL.query_params:1
 msgid ""
-"Query parameters of a URL as a :class:`MultiDict <.datastructures."
-"multi_dicts.MultiDict>`"
+"Query parameters of a URL as a :class:`MultiDict "
+"<.datastructures.multi_dicts.MultiDict>`"
 msgstr ""
 
 #: ../../../../litestar/datastructures/url.py:docstring of
@@ -232,8 +232,8 @@ msgstr ""
 #: ../../../../litestar/datastructures/headers.py:docstring of
 #: litestar.datastructures.headers.Accept.accepts:3
 msgid ""
-"If multiple media types can be provided, it is better to use :func:"
-"`best_match`."
+"If multiple media types can be provided, it is better to "
+"use :func:`best_match`."
 msgstr ""
 
 #: ../../../../litestar/datastructures/headers.py:docstring of
@@ -675,8 +675,8 @@ msgstr ""
 #: ../../../../litestar/datastructures/state.py:docstring of
 #: litestar.datastructures.state.ImmutableState.__init__:3
 msgid ""
-"An object to initialize the state from. Can be a dict, an instance of :class:"
-"`ImmutableState`, or a tuple of key value paris."
+"An object to initialize the state from. Can be a dict, an instance "
+"of :class:`ImmutableState`, or a tuple of key value paris."
 msgstr ""
 
 #: ../../../../litestar/datastructures/state.py:docstring of
@@ -853,8 +853,8 @@ msgstr ""
 #: ../../../../litestar/datastructures/multi_dicts.py:docstring of
 #: litestar.datastructures.multi_dicts.MultiDict.__init__:1
 msgid ""
-"Initialize ``MultiDict`` from a`MultiMapping``, :class:`Mapping <typing."
-"Mapping>` or an iterable of tuples."
+"Initialize ``MultiDict`` from a`MultiMapping``, :class:`Mapping "
+"<typing.Mapping>` or an iterable of tuples."
 msgstr ""
 
 #: ../../../../litestar/datastructures/multi_dicts.py:docstring of
@@ -880,8 +880,8 @@ msgstr ""
 #: ../../../../litestar/datastructures/multi_dicts.py:docstring of
 #: litestar.datastructures.multi_dicts.MultiMixin:1
 msgid ""
-"Mixin providing common methods for multi dicts, used by :class:"
-"`ImmutableMultiDict` and :class:`MultiDict`"
+"Mixin providing common methods for multi dicts, used "
+"by :class:`ImmutableMultiDict` and :class:`MultiDict`"
 msgstr ""
 
 #: ../../../../litestar/datastructures/multi_dicts.py:docstring of

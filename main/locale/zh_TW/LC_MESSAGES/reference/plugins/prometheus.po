@@ -92,8 +92,8 @@ msgstr ""
 #: ../../../../litestar/plugins/prometheus/config.py:docstring of
 #: litestar.plugins.prometheus.PrometheusConfig.middleware:1
 msgid ""
-"Create an instance of :class:`DefineMiddleware <litestar.middleware.base."
-"DefineMiddleware>` that wraps with."
+"Create an instance of :class:`DefineMiddleware "
+"<litestar.middleware.base.DefineMiddleware>` that wraps with."
 msgstr ""
 
 #: ../../../../litestar/plugins/prometheus/config.py:docstring of
@@ -125,8 +125,8 @@ msgstr ""
 #: ../../../../litestar/plugins/prometheus/controller.py:docstring of
 #: litestar.plugins.prometheus.PrometheusController.after_request:1
 msgid ""
-"A sync or async function executed before a :class:`Request <.connection."
-"Request>` is passed to any route handler."
+"A sync or async function executed before a :class:`Request "
+"<.connection.Request>` is passed to any route handler."
 msgstr ""
 
 #: ../../../../litestar/plugins/prometheus/controller.py:docstring of
@@ -220,9 +220,10 @@ msgstr ""
 #: ../../../../litestar/plugins/prometheus/controller.py:docstring of
 #: litestar.plugins.prometheus.PrometheusController.opt:1
 msgid ""
-"A string key mapping of arbitrary values that can be accessed in :class:"
-"`Guards <.types.Guard>` or wherever you have access to :class:`Request <."
-"connection.Request>` or :class:`ASGI Scope <.types.Scope>`."
+"A string key mapping of arbitrary values that can be accessed "
+"in :class:`Guards <.types.Guard>` or wherever you have access "
+"to :class:`Request <.connection.Request>` or :class:`ASGI Scope "
+"<.types.Scope>`."
 msgstr ""
 
 #: ../../../../litestar/plugins/prometheus/controller.py:docstring of
@@ -261,8 +262,8 @@ msgstr ""
 #: ../../../../litestar/plugins/prometheus/controller.py:docstring of
 #: litestar.plugins.prometheus.PrometheusController.response_headers:1
 msgid ""
-"A string keyed dictionary mapping :class:`ResponseHeader <.datastructures."
-"ResponseHeader>` instances."
+"A string keyed dictionary mapping :class:`ResponseHeader "
+"<.datastructures.ResponseHeader>` instances."
 msgstr ""
 
 #: ../../../../litestar/plugins/prometheus/controller.py:docstring of
@@ -355,6 +356,6 @@ msgstr ""
 #: ../../../../litestar/plugins/prometheus/middleware.py:docstring of
 #: litestar.plugins.prometheus.middleware.PrometheusMiddleware.__init__:4
 msgid ""
-"An instance of :class:`PrometheusConfig <.plugins.prometheus."
-"PrometheusConfig>`"
+"An instance of :class:`PrometheusConfig "
+"<.plugins.prometheus.PrometheusConfig>`"
 msgstr ""

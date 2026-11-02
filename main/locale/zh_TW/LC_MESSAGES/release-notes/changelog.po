@@ -24,8 +24,8 @@ msgstr "3.x 變更日誌"
 #: ../../../release-notes/changelog.rst:14
 msgid ""
 "Remove the deprecated implicit request parameter declaration. All request "
-"parameters must now be explicitly marked (e.g. with :data:`~litestar.params."
-"FromQuery`)."
+"parameters must now be explicitly marked (e.g. "
+"with :data:`~litestar.params.FromQuery`)."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:22
@@ -138,9 +138,10 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:112
 msgid ""
-"Applications that configure response caching through :class:`~litestar."
-"config.response_cache.ResponseCacheConfig` and the handler-level ``cache`` "
-"argument are unaffected -- Litestar constructs the middleware itself."
+"Applications that configure response caching "
+"through :class:`~litestar.config.response_cache.ResponseCacheConfig` and the "
+"handler-level ``cache`` argument are unaffected -- Litestar constructs the "
+"middleware itself."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:116
@@ -188,8 +189,9 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:151
 msgid ""
-"Applications that configure CORS through :class:`~litestar.config.cors."
-"CORSConfig` are unaffected -- Litestar constructs the middleware itself."
+"Applications that configure CORS "
+"through :class:`~litestar.config.cors.CORSConfig` are unaffected -- Litestar "
+"constructs the middleware itself."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:155
@@ -427,11 +429,12 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:366
 msgid ""
-"Aside from debugging, there is only one place where Litestar logs, which is :"
-"class:`~litestar.middleware.logging.LoggingMiddleware`, which has been "
-"changed to accept a logger directly. ``litestar.middleware.lgging."
-"LoggingMiddlewareConfig`` has also been removed, with ``LoggingMiddleware`` "
-"now accepting all configuration arguments directly."
+"Aside from debugging, there is only one place where Litestar logs, which "
+"is :class:`~litestar.middleware.logging.LoggingMiddleware`, which has been "
+"changed to accept a logger directly. "
+"``litestar.middleware.lgging.LoggingMiddlewareConfig`` has also been "
+"removed, with ``LoggingMiddleware`` now accepting all configuration "
+"arguments directly."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:372
@@ -450,8 +453,8 @@ msgid ""
 "Remove the default exception handler for all unhandled exceptions. Unhandled "
 "exceptions will now be re-raised, for the server to handle. \"Unhandled "
 "exceptions\" in this context means any exception for which no custom "
-"exception handler exist, and that does not derive from :exc:"
-"`LitestarException` or :exc:`HTTPException`."
+"exception handler exist, and that does not derive "
+"from :exc:`LitestarException` or :exc:`HTTPException`."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:393
@@ -464,18 +467,18 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:420
 msgid ""
-"Remove all SQLAlchemy functionality from Litestar. Both ``litestar.contrib."
-"sqlalchemy`` and ``litestar.plugins.sqlalchemy`` modules have been "
-"completely removed. Users must now import directly from ``advanced_alchemy."
-"extensions.litestar``."
+"Remove all SQLAlchemy functionality from Litestar. Both "
+"``litestar.contrib.sqlalchemy`` and ``litestar.plugins.sqlalchemy`` modules "
+"have been completely removed. Users must now import directly from "
+"``advanced_alchemy.extensions.litestar``."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:424
 msgid ""
 "Migration: - ``from litestar.contrib.sqlalchemy import X`` → ``from "
-"advanced_alchemy.extensions.litestar import X`` - ``from litestar.plugins."
-"sqlalchemy import Y`` → ``from advanced_alchemy.extensions.litestar import "
-"Y``"
+"advanced_alchemy.extensions.litestar import X`` - ``from "
+"litestar.plugins.sqlalchemy import Y`` → ``from "
+"advanced_alchemy.extensions.litestar import Y``"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:428
@@ -487,17 +490,17 @@ msgstr ""
 #: ../../../release-notes/changelog.rst:437
 msgid ""
 "Remove the deprecated ``litestar.contrib.prometheus`` module. Code still "
-"using imports from this module should switch to using ``litestar.plugins."
-"prometheus``."
+"using imports from this module should switch to using "
+"``litestar.plugins.prometheus``."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:447
 msgid ""
 "Re-implement :class:`~litestar.testing.AsyncTestClient` to be async-native, "
 "i.e. use the currently running event loop to run the application, instead of "
-"running a separate event loop in a new thread. Additionally, a new :class:"
-"`~litestar.testing.AsyncWebSocketTestSession` has been introduced, providing "
-"an async testing utility for WebSockets."
+"running a separate event loop in a new thread. Additionally, a "
+"new :class:`~litestar.testing.AsyncWebSocketTestSession` has been "
+"introduced, providing an async testing utility for WebSockets."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:452
@@ -516,8 +519,8 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:465
 msgid ""
-"Remove deprecated ``<plugin_type>_plugins`` properties from :class:"
-"`Litestar`."
+"Remove deprecated ``<plugin_type>_plugins`` properties "
+"from :class:`Litestar`."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:468
@@ -557,17 +560,17 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:488
 msgid ""
-"The ``traceback_line_limit`` parameter of ``litestar.logging.config."
-"LoggingConfig`` has been removed. This parameter had no effect since version "
-"``2.9.0``, so it can be removed safely from applications without any change "
-"in behaviour."
+"The ``traceback_line_limit`` parameter of "
+"``litestar.logging.config.LoggingConfig`` has been removed. This parameter "
+"had no effect since version ``2.9.0``, so it can be removed safely from "
+"applications without any change in behaviour."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:497
 msgid ""
-"Remove the deprecated ``litestar.middleware.cors`` module and ``litestar."
-"middleware.cors.CORSMiddleware``. To configure the CORS middleware, use :"
-"class:`~litestar.config.cors.CORSConfig`."
+"Remove the deprecated ``litestar.middleware.cors`` module and "
+"``litestar.middleware.cors.CORSMiddleware``. To configure the CORS "
+"middleware, use :class:`~litestar.config.cors.CORSConfig`."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:505
@@ -642,8 +645,9 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:551
 msgid ""
-"Remove the deprecated ``ASGIResponse.encoded_headers`` property. Instead, :"
-"meth:`~litestar.response.base.ASGIResponse.encode_headers` should be used."
+"Remove the deprecated ``ASGIResponse.encoded_headers`` property. "
+"Instead, :meth:`~litestar.response.base.ASGIResponse.encode_headers` should "
+"be used."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:559
@@ -667,15 +671,15 @@ msgstr ""
 #: ../../../release-notes/changelog.rst:585
 msgid ""
 "Remove the deprecated ``litestar.contrib.repository`` module. Code still "
-"using imports from this module should switch to using ``litestar."
-"repository``."
+"using imports from this module should switch to using "
+"``litestar.repository``."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:594
 msgid ""
 "Remove the deprecated ``litestar.contrib.pydantic`` module. Code still using "
-"imports from this module should switch to using ``litestar.plugins."
-"pydantic``."
+"imports from this module should switch to using "
+"``litestar.plugins.pydantic``."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:603
@@ -714,11 +718,12 @@ msgstr ""
 #: ../../../release-notes/changelog.rst:644
 msgid ""
 ":class:`~litestar.plugins.opentelemetry.OpenTelemetryConfig` has been "
-"brought in line with the upstream ``opentelemetry.instrumentation.asgi."
-"OpenTelemetryMiddleware`` configuration, adding "
-"``client_request_hook_handler``, ``client_response_hook_handler``, "
-"``tracer``, ``exclude``, ``exclude_opt_key``, ``exclude_urls_env_key``, "
-"``exclude_spans``, ``http_capture_headers_server_request``, "
+"brought in line with the upstream "
+"``opentelemetry.instrumentation.asgi.OpenTelemetryMiddleware`` "
+"configuration, adding ``client_request_hook_handler``, "
+"``client_response_hook_handler``, ``tracer``, ``exclude``, "
+"``exclude_opt_key``, ``exclude_urls_env_key``, ``exclude_spans``, "
+"``http_capture_headers_server_request``, "
 "``http_capture_headers_server_response``, and "
 "``http_capture_headers_sanitize_fields``."
 msgstr ""
@@ -733,19 +738,20 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:670
 msgid ""
-"Middlewares inheriting from :class:`~litestar.middleware.base."
-"ASGIMiddleware` will now have zero runtime cost when they are excluded e.g. "
-"via the ``scope`` or ``exclude_opt_key`` options."
+"Middlewares inheriting "
+"from :class:`~litestar.middleware.base.ASGIMiddleware` will now have zero "
+"runtime cost when they are excluded e.g. via the ``scope`` or "
+"``exclude_opt_key`` options."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:674
 msgid ""
 "Previously, the base middleware was always being invoked for every request, "
 "evaluating the exclusion criteria, and then calling the user defined "
-"middleware functions. If a middleware had defined ``scopes = (ScopeType."
-"HTTP,)``, it would still be called for *every* request, regardless of the "
-"scope type. Only for requests with the type ``HTTP``, it would then call the "
-"user's function."
+"middleware functions. If a middleware had defined ``scopes = "
+"(ScopeType.HTTP,)``, it would still be called for *every* request, "
+"regardless of the scope type. Only for requests with the type ``HTTP``, it "
+"would then call the user's function."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:681
@@ -787,10 +793,10 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:715
 msgid ""
-"Add a new attribute :attr:`~litestar.middleware.ASGIMiddleware."
-"should_bypass_for_scope`; A callable which takes in a :class:`~litestar."
-"types.Scope` and returns a boolean to indicate whether to bypass the "
-"middleware for the current request."
+"Add a new "
+"attribute :attr:`~litestar.middleware.ASGIMiddleware.should_bypass_for_scope`; "
+"A callable which takes in a :class:`~litestar.types.Scope` and returns a "
+"boolean to indicate whether to bypass the middleware for the current request."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:45
@@ -874,9 +880,9 @@ msgstr ""
 #: ../../../release-notes/changelog.rst:410
 msgid ""
 "Fix a bug that could lead to unhandled exceptions raised within websocket "
-"handlers, and not derived from :exc:`LitestarException` or :exc:"
-"`HTTPException` to be silently swallowed. This would lead to a closing of "
-"the WebSocket connection without any indication of an exception"
+"handlers, and not derived from :exc:`LitestarException` "
+"or :exc:`HTTPException` to be silently swallowed. This would lead to a "
+"closing of the WebSocket connection without any indication of an exception"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:663
@@ -888,7 +894,7 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:723
 msgid ""
-"Fix a bug in :class:`MsgspecDTO` where a KeyError was raised if a :class:"
-"`msgspec.Struct` contained a :class:`~typing.ClassVar`. ClassVars are now "
-"correctly skipped when generating field definitions."
+"Fix a bug in :class:`MsgspecDTO` where a KeyError was raised if "
+"a :class:`msgspec.Struct` contained a :class:`~typing.ClassVar`. ClassVars "
+"are now correctly skipped when generating field definitions."
 msgstr ""

@@ -78,17 +78,17 @@ msgstr ""
 #: ../../../../litestar/plugins/base.py:docstring of
 #: litestar.plugins.base.DIPlugin.has_typed_init:1
 msgid ""
-"Return ``True`` if ``type_`` has type information available for its :func:"
-"`__init__` method that cannot be extracted from this method's type "
-"annotations (e.g. a Pydantic BaseModel subclass), and :meth:`DIPlugin."
-"get_typed_init` supports extraction of these annotations."
+"Return ``True`` if ``type_`` has type information available for "
+"its :func:`__init__` method that cannot be extracted from this method's type "
+"annotations (e.g. a Pydantic BaseModel subclass), "
+"and :meth:`DIPlugin.get_typed_init` supports extraction of these annotations."
 msgstr ""
 
 #: ../../../../litestar/plugins/base.py:docstring of
 #: litestar.plugins.base.DIPlugin.get_typed_init:1
 msgid ""
-"Return signature and type information about the ``type_``\\ s :func:"
-"`__init__` method."
+"Return signature and type information about the ``type_``\\ "
+"s :func:`__init__` method."
 msgstr ""
 
 #: ../../../../litestar/plugins/base.py:docstring of
@@ -173,9 +173,9 @@ msgstr ""
 #: ../../../../litestar/plugins/base.py:docstring of
 #: litestar.plugins.base.OpenAPISchemaPlugin.is_plugin_supported_type:3
 msgid ""
-"This is called by the default implementation of :meth:"
-"`is_plugin_supported_field` for backwards compatibility. User's should "
-"prefer to override that method instead."
+"This is called by the default implementation "
+"of :meth:`is_plugin_supported_field` for backwards compatibility. User's "
+"should prefer to override that method instead."
 msgstr ""
 
 #: ../../../../litestar/plugins/base.py:docstring of

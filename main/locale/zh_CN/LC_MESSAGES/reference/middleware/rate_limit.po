@@ -34,8 +34,8 @@ msgstr ""
 #: ../../../../litestar/middleware/rate_limit.py:docstring of
 #: litestar.middleware.rate_limit.RateLimitConfig.rate_limit:1
 msgid ""
-"A tuple containing a time unit (second, minute, hour, day) and quantity, e."
-"g. (\"day\", 1) or (\"minute\", 5)."
+"A tuple containing a time unit (second, minute, hour, day) and quantity, "
+"e.g. (\"day\", 1) or (\"minute\", 5)."
 msgstr ""
 
 #: ../../../../litestar/middleware/rate_limit.py:docstring of
@@ -54,8 +54,9 @@ msgstr ""
 #: litestar.middleware.rate_limit.get_remote_address:1
 msgid ""
 "A callable that receives the request and returns an identifier for which the "
-"limit should be applied. Defaults to :func:`~litestar.middleware.rate_limit."
-"get_remote_address`, which returns the client's address."
+"limit should be applied. Defaults "
+"to :func:`~litestar.middleware.rate_limit.get_remote_address`, which returns "
+"the client's address."
 msgstr ""
 
 #: ../../../../litestar/middleware/rate_limit.py:docstring of
@@ -66,8 +67,8 @@ msgid ""
 "implicitly. If running behind a proxy, a secure way of updating the client's "
 "address should be implemented, such as uvicorn's `ProxyHeaderMiddleware "
 "<https://github.com/encode/uvicorn/blob/master/uvicorn/middleware/"
-"proxy_headers.py>`_ or hypercon's `ProxyFixMiddleware <https://hypercorn."
-"readthedocs.io/en/latest/how_to_guides/proxy_fix.html>`_ ."
+"proxy_headers.py>`_ or hypercon's `ProxyFixMiddleware <https://"
+"hypercorn.readthedocs.io/en/latest/how_to_guides/proxy_fix.html>`_ ."
 msgstr ""
 
 #: ../../../../litestar/middleware/rate_limit.py:docstring of
@@ -140,8 +141,8 @@ msgid ""
 "def my_handler(request: Request) -> None: ...\n"
 "\n"
 "\n"
-"app = Litestar(route_handlers=[my_handler], middleware=[throttle_config."
-"middleware])"
+"app = Litestar(route_handlers=[my_handler], "
+"middleware=[throttle_config.middleware])"
 msgstr ""
 
 #: ../../../reference/middleware/rate_limit.rst:0
@@ -158,8 +159,8 @@ msgstr ""
 #: ../../../../litestar/middleware/rate_limit.py:docstring of
 #: litestar.middleware.rate_limit.RateLimitConfig.get_store_from_app:1
 msgid ""
-"Get the store defined in :attr:`store` from an :class:`Litestar <.app."
-"Litestar>` instance."
+"Get the store defined in :attr:`store` from an :class:`Litestar "
+"<.app.Litestar>` instance."
 msgstr ""
 
 #: ../../../../litestar/middleware/rate_limit.py:docstring of

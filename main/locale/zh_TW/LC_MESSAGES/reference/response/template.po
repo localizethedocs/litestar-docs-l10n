@@ -51,9 +51,9 @@ msgstr ""
 #: ../../../../litestar/response/template.py:docstring of
 #: litestar.response.template.Template.__init__:5
 msgid ""
-"A :class:`BackgroundTask <.background_tasks.BackgroundTask>` instance or :"
-"class:`BackgroundTasks <.background_tasks.BackgroundTasks>` to execute after "
-"the response is finished. Defaults to ``None``."
+"A :class:`BackgroundTask <.background_tasks.BackgroundTask>` instance "
+"or :class:`BackgroundTasks <.background_tasks.BackgroundTasks>` to execute "
+"after the response is finished. Defaults to ``None``."
 msgstr ""
 
 #: ../../../../litestar/response/template.py:docstring of

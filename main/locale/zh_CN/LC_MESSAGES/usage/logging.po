@@ -121,14 +121,15 @@ msgstr ""
 
 #: ../../../usage/logging.rst:55
 msgid ""
-"If both :class:`~litestar.config.compression.CompressionConfig` and :class:"
-"`~litestar.middleware.logging.LoggingMiddleware` have been defined for the "
-"application, the response body will be omitted from response logging if it "
-"has been compressed, even if ``\"body\"`` has been included in :paramref:"
-"`~litestar.middleware.logging.LoggingMiddleware.response_log_fields`. To "
-"force the body of compressed responses to be logged, set :paramref:"
-"`~litestar.middleware.logging.LoggingMiddleware.include_compressed_body` to "
-"``True`` , in addition to including ``\"body\"`` in ``response_log_fields``."
+"If both :class:`~litestar.config.compression.CompressionConfig` "
+"and :class:`~litestar.middleware.logging.LoggingMiddleware` have been "
+"defined for the application, the response body will be omitted from response "
+"logging if it has been compressed, even if ``\"body\"`` has been included "
+"in :paramref:`~litestar.middleware.logging.LoggingMiddleware.response_log_fields`. "
+"To force the body of compressed responses to be logged, "
+"set :paramref:`~litestar.middleware.logging.LoggingMiddleware.include_compressed_body` "
+"to ``True`` , in addition to including ``\"body\"`` in "
+"``response_log_fields``."
 msgstr ""
 
 #: ../../../usage/logging.rst:65

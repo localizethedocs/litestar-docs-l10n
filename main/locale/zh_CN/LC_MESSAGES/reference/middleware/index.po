@@ -88,16 +88,16 @@ msgstr ""
 #: litestar.middleware.ASGIMiddleware.exclude_path_pattern:5
 msgid ""
 "Pattern matching is performed against the **handler's path** (e.g., ``/user/"
-"{user_id:int}/``), NOT against the actual **request path** (e.g., ``/"
-"user/1234/``). This is a critical distinction for dynamic routes."
+"{user_id:int}/``), NOT against the actual **request path** (e.g., ``/user/"
+"1234/``). This is a critical distinction for dynamic routes."
 msgstr ""
 
 #: ../../../../litestar/middleware/base.py:docstring of
 #: litestar.middleware.ASGIMiddleware.exclude_path_pattern:9
 msgid ""
-"If you need to exclude based on paths dynamically, use :attr:`~litestar."
-"middleware.ASGIMiddleware.should_bypass_for_scope` instead, matching on "
-"``scope[\"path\"]``."
+"If you need to exclude based on paths dynamically, "
+"use :attr:`~litestar.middleware.ASGIMiddleware.should_bypass_for_scope` "
+"instead, matching on ``scope[\"path\"]``."
 msgstr ""
 
 #: ../../../../litestar/middleware/base.py:docstring of
@@ -204,19 +204,20 @@ msgstr ""
 #: ../../../../litestar/middleware/base.py:docstring of
 #: litestar.middleware.ASGIMiddleware.should_bypass_for_scope:14
 msgid ""
-"If it is not required to dynamically match the path of a request, :attr:"
-"`~litestar.middleware.ASGIMiddleware.exclude_path_pattern` should be used "
-"instead. Since its exclusion is done statically at startup time, it has no "
-"performance cost at runtime."
+"If it is not required to dynamically match the path of a "
+"request, :attr:`~litestar.middleware.ASGIMiddleware.exclude_path_pattern` "
+"should be used instead. Since its exclusion is done statically at startup "
+"time, it has no performance cost at runtime."
 msgstr ""
 
 #: ../../../../litestar/middleware/base.py:docstring of
 #: litestar.middleware.base.ASGIMiddleware.should_bypass_for_handler:1
 msgid ""
 "Return ``True`` if this middleware should be bypassed for ``handler``, "
-"according to :attr:`~litestar.middleware.ASGIMiddleware.scopes`, :attr:"
-"`~litestar.middleware.ASGIMiddleware.exclude_path_pattern` or :attr:"
-"`~litestar.middleware.ASGIMiddleware.exclude_opt_key`, otherwise ``False``."
+"according "
+"to :attr:`~litestar.middleware.ASGIMiddleware.scopes`, :attr:`~litestar.middleware.ASGIMiddleware.exclude_path_pattern` "
+"or :attr:`~litestar.middleware.ASGIMiddleware.exclude_opt_key`, otherwise "
+"``False``."
 msgstr ""
 
 #: ../../../../litestar/middleware/base.py:docstring of
@@ -265,8 +266,8 @@ msgstr ""
 #: litestar.middleware.authentication.AbstractAuthenticationMiddleware:1
 msgid ""
 "Abstract AuthenticationMiddleware that allows users to create their own "
-"AuthenticationMiddleware by extending it and overriding :meth:"
-"`AbstractAuthenticationMiddleware.authenticate_request`."
+"AuthenticationMiddleware by extending it and "
+"overriding :meth:`AbstractAuthenticationMiddleware.authenticate_request`."
 msgstr ""
 
 #: ../../../../litestar/middleware/authentication.py:docstring of
@@ -366,8 +367,8 @@ msgstr ""
 #: ../../../../litestar/middleware/authentication.py:docstring of
 #: litestar.middleware.authentication.AbstractAuthenticationMiddleware.authenticate_request:11
 msgid ""
-"An instance of :class:`AuthenticationResult <litestar.middleware."
-"authentication.AuthenticationResult>`."
+"An instance of :class:`AuthenticationResult "
+"<litestar.middleware.authentication.AuthenticationResult>`."
 msgstr ""
 
 #: ../../../../litestar/middleware/base.py:docstring of

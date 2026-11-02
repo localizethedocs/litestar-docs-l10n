@@ -30,8 +30,8 @@ msgstr ""
 #: ../../../usage/plugins/index.rst:10
 msgid ""
 "Plugins are defined by protocols, and any type that satisfies a protocol can "
-"be included in the ``plugins`` argument of the :class:`app <litestar.app."
-"Litestar>`."
+"be included in the ``plugins`` argument of the :class:`app "
+"<litestar.app.Litestar>`."
 msgstr ""
 
 #: ../../../usage/plugins/index.rst:15
@@ -47,16 +47,16 @@ msgstr ""
 
 #: ../../../usage/plugins/index.rst:20
 msgid ""
-"Implementations of these plugins must define a single method: :meth:"
-"`on_app_init(self, app_config: AppConfig) -> AppConfig: <litestar.plugins."
-"InitPlugin.on_app_init>`"
+"Implementations of these plugins must define a single "
+"method: :meth:`on_app_init(self, app_config: AppConfig) -> AppConfig: "
+"<litestar.plugins.InitPlugin.on_app_init>`"
 msgstr ""
 
 #: ../../../usage/plugins/index.rst:23
 msgid ""
-"The method accepts and must return an :class:`AppConfig <litestar.config.app."
-"AppConfig>` instance, which can be modified and is later used to instantiate "
-"the application."
+"The method accepts and must return an :class:`AppConfig "
+"<litestar.config.app.AppConfig>` instance, which can be modified and is "
+"later used to instantiate the application."
 msgstr ""
 
 #: ../../../usage/plugins/index.rst:26
@@ -121,8 +121,8 @@ msgstr ""
 msgid ""
 "The ``MyPlugin`` class is an implementation of the :class:`InitPlugin "
 "<litestar.plugins.InitPlugin>`. It defines a single method, "
-"``on_app_init()``, which takes an :class:`AppConfig <litestar.config.app."
-"AppConfig>` instance as an argument and returns same."
+"``on_app_init()``, which takes an :class:`AppConfig "
+"<litestar.config.app.AppConfig>` instance as an argument and returns same."
 msgstr ""
 
 #: ../../../usage/plugins/index.rst:43
@@ -130,8 +130,8 @@ msgid ""
 "In the ``on_app_init()`` method, the dependency mapping is updated to "
 "include a new dependency named ``\"name\"``, which is provided by the "
 "``get_name()`` function, and ``route_handlers`` is updated to include the "
-"``route_handler()`` function. The modified :class:`AppConfig <litestar."
-"config.app.AppConfig>` instance is then returned."
+"``route_handler()`` function. The modified :class:`AppConfig "
+"<litestar.config.app.AppConfig>` instance is then returned."
 msgstr ""
 
 #: ../../../usage/plugins/index.rst:48
@@ -157,24 +157,25 @@ msgstr ""
 
 #: ../../../usage/plugins/index.rst:58
 msgid ""
-"The method takes a :class:`FieldDefinition <litestar.typing."
-"FieldDefinition>` instance as an argument and returns a :class:`bool` "
-"indicating whether the plugin supports serialization for that type."
+"The method takes a :class:`FieldDefinition "
+"<litestar.typing.FieldDefinition>` instance as an argument and returns "
+"a :class:`bool` indicating whether the plugin supports serialization for "
+"that type."
 msgstr ""
 
 #: ../../../usage/plugins/index.rst:61
 msgid ""
 ":meth:`create_dto_for_type(self, field_definition: FieldDefinition) -> "
-"type[AbstractDTO]: <litestar.plugins.SerializationPlugin."
-"create_dto_for_type>`"
+"type[AbstractDTO]: "
+"<litestar.plugins.SerializationPlugin.create_dto_for_type>`"
 msgstr ""
 
 #: ../../../usage/plugins/index.rst:63
 msgid ""
-"This method accepts a :class:`FieldDefinition <litestar.typing."
-"FieldDefinition>` instance as an argument and must return a :class:"
-"`AbstractDTO <litestar.dto.base_dto.AbstractDTO>` implementation that can be "
-"used to serialize and deserialize the type."
+"This method accepts a :class:`FieldDefinition "
+"<litestar.typing.FieldDefinition>` instance as an argument and must return "
+"a :class:`AbstractDTO <litestar.dto.base_dto.AbstractDTO>` implementation "
+"that can be used to serialize and deserialize the type."
 msgstr ""
 
 #: ../../../usage/plugins/index.rst:67
@@ -188,8 +189,8 @@ msgstr ""
 #: ../../../usage/plugins/index.rst:74
 msgid ""
 "The following example shows a minimal ``SerializationPlugin`` implementation "
-"that mirrors the pattern used by ``advanced-alchemy``'s :class:"
-"`~advanced_alchemy.extensions.litestar.SQLAlchemySerializationPlugin`:"
+"that mirrors the pattern used by ``advanced-"
+"alchemy``'s :class:`~advanced_alchemy.extensions.litestar.SQLAlchemySerializationPlugin`:"
 msgstr ""
 
 #: ../../../usage/plugins/index.rst:78
@@ -262,10 +263,10 @@ msgstr ""
 
 #: ../../../usage/plugins/index.rst:85
 msgid ""
-"``CompanySerializationPlugin.create_dto_for_type()`` receives the same :"
-"class:`FieldDefinition <litestar.typing.FieldDefinition>` and must return "
-"an :class:`AbstractDTO <litestar.dto.base_dto.AbstractDTO>` subclass. It "
-"first unwraps any collection wrapper to recover the concrete model type, "
+"``CompanySerializationPlugin.create_dto_for_type()`` receives the "
+"same :class:`FieldDefinition <litestar.typing.FieldDefinition>` and must "
+"return an :class:`AbstractDTO <litestar.dto.base_dto.AbstractDTO>` subclass. "
+"It first unwraps any collection wrapper to recover the concrete model type, "
 "checks the ``_type_dto_map`` cache, and if no DTO has been built yet, "
 "parametrises :class:`DataclassDTO <litestar.dto.dataclass_dto.DataclassDTO>` "
 "with the annotation, caches it, and returns it. Caching keeps a single DTO "
@@ -324,8 +325,8 @@ msgid ""
 "\n"
 "    def get_typed_init(self, type_: Any) -> tuple[Signature, dict[str, "
 "Any]]:\n"
-"        signature = Signature([Parameter(name=\"param\", kind=Parameter."
-"POSITIONAL_OR_KEYWORD)])\n"
+"        signature = Signature([Parameter(name=\"param\", "
+"kind=Parameter.POSITIONAL_OR_KEYWORD)])\n"
 "        annotations = {\"param\": FromQuery[str]}\n"
 "        return signature, annotations\n"
 "\n"
@@ -360,9 +361,9 @@ msgstr ""
 
 #: ../../../usage/plugins/index.rst:125
 msgid ""
-"Implementations of this plugin must define a single method: :meth:"
-"`receive_route(self, route: BaseRoute) -> None: <litestar.plugins."
-"ReceiveRoutePlugin.receive_route>`"
+"Implementations of this plugin must define a single "
+"method: :meth:`receive_route(self, route: BaseRoute) -> None: "
+"<litestar.plugins.ReceiveRoutePlugin.receive_route>`"
 msgstr ""
 
 #: ../../../usage/plugins/index.rst:128
@@ -386,6 +387,6 @@ msgid ""
 "\n"
 "class RouteLoggerPlugin(ReceiveRoutePlugin):\n"
 "    def receive_route(self, route: BaseRoute) -> None:\n"
-"        print(f\"Route registered: {route.path} [{', '.join(route."
-"methods)}]\")"
+"        print(f\"Route registered: {route.path} [{', '.join(route.methods)}]"
+"\")"
 msgstr ""

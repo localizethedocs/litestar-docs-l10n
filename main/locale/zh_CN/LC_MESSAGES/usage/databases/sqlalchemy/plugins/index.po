@@ -41,8 +41,8 @@ msgstr ""
 
 #: ../../../usage/databases/sqlalchemy/plugins/index.rst:9
 msgid ""
-":class:`~advanced_alchemy.extensions.litestar."
-"SQLAlchemySerializationPlugin`: Serialization support"
+":class:`~advanced_alchemy.extensions.litestar.SQLAlchemySerializationPlugin`: "
+"Serialization support"
 msgstr ""
 
 #: ../../../usage/databases/sqlalchemy/plugins/index.rst:11

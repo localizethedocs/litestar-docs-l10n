@@ -114,10 +114,11 @@ msgstr ""
 
 #: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:29
 msgid ""
-"The plugin works by defining a :class:`SQLAlchemyDTO <advanced_alchemy."
-"extensions.litestar.dto.SQLAlchemyDTO>` class for each handler ``data`` or "
-"return annotation that is a SQLAlchemy model, or collection of SQLAlchemy "
-"models, that isn't otherwise managed by an explicitly defined DTO class."
+"The plugin works by defining a :class:`SQLAlchemyDTO "
+"<advanced_alchemy.extensions.litestar.dto.SQLAlchemyDTO>` class for each "
+"handler ``data`` or return annotation that is a SQLAlchemy model, or "
+"collection of SQLAlchemy models, that isn't otherwise managed by an "
+"explicitly defined DTO class."
 msgstr ""
 
 #: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:33
@@ -173,9 +174,9 @@ msgstr ""
 
 #: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:56
 msgid ""
-"As the serialization plugin merely defines DTOs for the handler, we can :ref:"
-"`mark the model fields <dto-marking-fields>` to control the data that we "
-"allow in and out of our application."
+"As the serialization plugin merely defines DTOs for the handler, we "
+"can :ref:`mark the model fields <dto-marking-fields>` to control the data "
+"that we allow in and out of our application."
 msgstr ""
 
 #: ../../../usage/databases/sqlalchemy/plugins/sqlalchemy_serialization_plugin.rst:65

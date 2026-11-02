@@ -27,12 +27,13 @@ msgstr ""
 
 #: ../../../usage/routing/overview.rst:8
 msgid ""
-"At the root of every Litestar application there is an instance of the :class:"
-"`Litestar <litestar.app.Litestar>` class, on which the root level :class:"
-"`controllers <.controller.Controller>`, :class:`routers <.router.Router>`, "
-"and :class:`route handler <.handlers.BaseRouteHandler>` functions are "
-"registered using the :paramref:`~litestar.config.app.AppConfig."
-"route_handlers` :term:`kwarg <argument>`:"
+"At the root of every Litestar application there is an instance of "
+"the :class:`Litestar <litestar.app.Litestar>` class, on which the root "
+"level :class:`controllers <.controller.Controller>`, :class:`routers "
+"<.router.Router>`, and :class:`route handler <.handlers.BaseRouteHandler>` "
+"functions are registered using "
+"the :paramref:`~litestar.config.app.AppConfig.route_handlers` :term:`kwarg "
+"<argument>`:"
 msgstr ""
 
 #: ../../../usage/routing/overview.rst:14
@@ -84,8 +85,8 @@ msgstr ""
 
 #: ../../../usage/routing/overview.rst:46
 msgid ""
-"To handle more complex path schemas you should use :class:`controllers <."
-"controller.Controller>` and :class:`routers <.router.Router>`"
+"To handle more complex path schemas you should use :class:`controllers "
+"<.controller.Controller>` and :class:`routers <.router.Router>`"
 msgstr ""
 
 #: ../../../usage/routing/overview.rst:50
@@ -101,8 +102,8 @@ msgstr ""
 
 #: ../../../usage/routing/overview.rst:56
 msgid ""
-"Registering a route handler dynamically with the :paramref:`~.app.Litestar."
-"register` method"
+"Registering a route handler dynamically with "
+"the :paramref:`~.app.Litestar.register` method"
 msgstr ""
 
 #: ../../../usage/routing/overview.rst:56
@@ -126,11 +127,11 @@ msgstr ""
 
 #: ../../../usage/routing/overview.rst:74
 msgid ""
-"Since the app instance is attached to all instances of :class:`~.connection."
-"base.ASGIConnection`, :class:`~.connection.request.Request`, and :class:`~."
-"connection.websocket.WebSocket` objects, you can in effect call the :meth:`~."
-"router.Router.register` method inside route handler functions, middlewares, "
-"and even injected dependencies. For example:"
+"Since the app instance is attached to all instances "
+"of :class:`~.connection.base.ASGIConnection`, :class:`~.connection.request.Request`, "
+"and :class:`~.connection.websocket.WebSocket` objects, you can in effect "
+"call the :meth:`~.router.Router.register` method inside route handler "
+"functions, middlewares, and even injected dependencies. For example:"
 msgstr ""
 
 #: ../../../usage/routing/overview.rst:80
@@ -176,16 +177,17 @@ msgstr ""
 
 #: ../../../usage/routing/overview.rst:105
 msgid ""
-":class:`Routers <.router.Router>` are instances of the :class:`~.router."
-"Router`, class which is the base class for the :class:`Litestar app <.app."
-"Litestar>` itself."
+":class:`Routers <.router.Router>` are instances of "
+"the :class:`~.router.Router`, class which is the base class for "
+"the :class:`Litestar app <.app.Litestar>` itself."
 msgstr ""
 
 #: ../../../usage/routing/overview.rst:108
 msgid ""
-"A :class:`~.router.Router` can register :class:`Controllers <.controller."
-"Controller>`, :class:`route handler <.handlers.BaseRouteHandler>` functions, "
-"and other routers, similarly to the Litestar constructor:"
+"A :class:`~.router.Router` can register :class:`Controllers "
+"<.controller.Controller>`, :class:`route handler "
+"<.handlers.BaseRouteHandler>` functions, and other routers, similarly to the "
+"Litestar constructor:"
 msgstr ""
 
 #: ../../../usage/routing/overview.rst:112
@@ -219,11 +221,11 @@ msgstr ""
 
 #: ../../../usage/routing/overview.rst:131
 msgid ""
-":class:`Controllers <.controller.Controller>` are subclasses of the :class:"
-"`Controller <.controller.Controller>` class. They are used to organize "
-"endpoints under a specific sub-path, which is the controller's path. Their "
-"purpose is to allow users to utilize Python OOP for better code organization "
-"and organize code by logical concerns."
+":class:`Controllers <.controller.Controller>` are subclasses of "
+"the :class:`Controller <.controller.Controller>` class. They are used to "
+"organize endpoints under a specific sub-path, which is the controller's "
+"path. Their purpose is to allow users to utilize Python OOP for better code "
+"organization and organize code by logical concerns."
 msgstr ""
 
 #: ../../../usage/routing/overview.rst:0
@@ -280,12 +282,12 @@ msgstr ""
 
 #: ../../../usage/routing/overview.rst:177
 msgid ""
-"The ``path`` that is defined on the :class:`controller <.controller."
-"Controller>` is appended before the path that is defined for the route "
-"handlers declared on it. Thus, in the above example, ``create_user_order`` "
-"has the path of the :class:`controller <.controller.Controller>` - ``/user-"
-"order/``, while ``retrieve_user_order`` has the path ``/user-order/{order_id:"
-"uuid}\"``."
+"The ``path`` that is defined on the :class:`controller "
+"<.controller.Controller>` is appended before the path that is defined for "
+"the route handlers declared on it. Thus, in the above example, "
+"``create_user_order`` has the path of the :class:`controller "
+"<.controller.Controller>` - ``/user-order/``, while ``retrieve_user_order`` "
+"has the path ``/user-order/{order_id:uuid}\"``."
 msgstr ""
 
 #: ../../../usage/routing/overview.rst:182
@@ -332,18 +334,18 @@ msgstr ""
 #: ../../../usage/routing/overview.rst:209
 msgid ""
 "In the above, the same ``MyController`` class has been registered on three "
-"different routers. This is possible because what is passed to the :class:"
-"`router <.router.Router>` is not a class instance but rather the class "
-"itself. The :class:`router <.router.Router>` creates its own instance of "
-"the :class:`controller <.controller.Controller>`, which ensures "
+"different routers. This is possible because what is passed to "
+"the :class:`router <.router.Router>` is not a class instance but rather the "
+"class itself. The :class:`router <.router.Router>` creates its own instance "
+"of the :class:`controller <.controller.Controller>`, which ensures "
 "encapsulation."
 msgstr ""
 
 #: ../../../usage/routing/overview.rst:214
 msgid ""
 "Therefore, in the above example, three different instances of "
-"``MyController`` will be created, each mounted on a different sub-path, e."
-"g., ``/internal/controller``, ``/partner/controller``, and ``/consumer/"
+"``MyController`` will be created, each mounted on a different sub-path, "
+"e.g., ``/internal/controller``, ``/partner/controller``, and ``/consumer/"
 "controller``."
 msgstr ""
 
@@ -540,6 +542,6 @@ msgstr ""
 #: ../../../usage/routing/overview.rst:290
 msgid ""
 "If you are interested in the technical aspects of the implementation, refer "
-"to `this GitHub issue <https://github.com/litestar-org/litestar/"
-"issues/177>`_ - it includes an indepth discussion of the pertinent code."
+"to `this GitHub issue <https://github.com/litestar-org/litestar/issues/"
+"177>`_ - it includes an indepth discussion of the pertinent code."
 msgstr ""

@@ -24,9 +24,9 @@ msgstr ""
 #: ../../../../litestar/contrib/jinja.py:docstring of
 #: litestar.contrib.jinja.JinjaTemplateEngine:1
 msgid ""
-"Bases: :py:class:`~litestar.template.base.TemplateEngineProtocol`\\ [:py:"
-"class:`JinjaTemplate`, :py:class:`~collections.abc.Mapping`\\ [:py:class:"
-"`str`, :py:obj:`~typing.Any`]]"
+"Bases: :py:class:`~litestar.template.base.TemplateEngineProtocol`\\ "
+"[:py:class:`JinjaTemplate`, :py:class:`~collections.abc.Mapping`\\ "
+"[:py:class:`str`, :py:obj:`~typing.Any`]]"
 msgstr ""
 
 #: ../../../../litestar/contrib/jinja.py:docstring of

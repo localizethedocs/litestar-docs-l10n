@@ -30,8 +30,8 @@ msgstr ""
 
 #: ../../../usage/static-files.rst:9
 msgid ""
-"Serving static files using :func:`create_static_files_router <litestar."
-"static_files.create_static_files_router>`"
+"Serving static files using :func:`create_static_files_router "
+"<litestar.static_files.create_static_files_router>`"
 msgstr ""
 
 #: ../../../usage/static-files.rst:9
@@ -89,16 +89,16 @@ msgstr ""
 
 #: ../../../usage/static-files.rst:25
 msgid ""
-"Setting :paramref:`~litestar.static_files.create_static_files_router.params."
-"send_as_attachment` to ``True`` will send them with a ``Content-Disposition: "
-"attachment`` instead:"
+"Setting :paramref:`~litestar.static_files.create_static_files_router.params.send_as_attachment` "
+"to ``True`` will send them with a ``Content-Disposition: attachment`` "
+"instead:"
 msgstr ""
 
 #: ../../../usage/static-files.rst:29
 msgid ""
-"Sending files as attachments using the :paramref:`~litestar.static_files."
-"create_static_files_router.params.send_as_attachment` parameter of :func:"
-"`create_static_files_router`"
+"Sending files as attachments using "
+"the :paramref:`~litestar.static_files.create_static_files_router.params.send_as_attachment` "
+"parameter of :func:`create_static_files_router`"
 msgstr ""
 
 #: ../../../usage/static-files.rst:29
@@ -123,8 +123,9 @@ msgstr ""
 
 #: ../../../usage/static-files.rst:38
 msgid ""
-"\"HTML mode\" can be enabled by setting :paramref:`~litestar.static_files."
-"create_static_files_router.params.html_mode` to ``True``."
+"\"HTML mode\" can be enabled by "
+"setting :paramref:`~litestar.static_files.create_static_files_router.params.html_mode` "
+"to ``True``."
 msgstr ""
 
 #: ../../../usage/static-files.rst:41
@@ -141,9 +142,9 @@ msgstr ""
 
 #: ../../../usage/static-files.rst:47
 msgid ""
-"Serving HTML files using the :paramref:`~litestar.static_files."
-"create_static_files_router.params.html_mode` parameter of :func:"
-"`create_static_files_router`"
+"Serving HTML files using "
+"the :paramref:`~litestar.static_files.create_static_files_router.params.html_mode` "
+"parameter of :func:`create_static_files_router`"
 msgstr ""
 
 #: ../../../usage/static-files.rst:47
@@ -224,8 +225,9 @@ msgstr ""
 
 #: ../../../usage/static-files.rst:67
 msgid ""
-"The router class used can be customized with the :paramref:`~.static_files."
-"create_static_files_router.params.router_class` parameter:"
+"The router class used can be customized with "
+"the :paramref:`~.static_files.create_static_files_router.params.router_class` "
+"parameter:"
 msgstr ""
 
 #: ../../../usage/static-files.rst:71
@@ -260,9 +262,9 @@ msgstr ""
 
 #: ../../../usage/static-files.rst:79
 msgid ""
-":meth:`~litestar.app.Litestar.route_reverse` and :meth:`~litestar.connection."
-"ASGIConnection.url_for` can be used to retrieve the path under which a "
-"specific file will be available:"
+":meth:`~litestar.app.Litestar.route_reverse` "
+"and :meth:`~litestar.connection.ASGIConnection.url_for` can be used to "
+"retrieve the path under which a specific file will be available:"
 msgstr ""
 
 #: ../../../usage/static-files.rst:84
@@ -289,8 +291,8 @@ msgstr ""
 
 #: ../../../usage/static-files.rst:87
 msgid ""
-"The ``name`` parameter has to match the ``name`` parameter passed to :func:"
-"`create_static_files_router`, which defaults to ``static``."
+"The ``name`` parameter has to match the ``name`` parameter passed "
+"to :func:`create_static_files_router`, which defaults to ``static``."
 msgstr ""
 
 #: ../../../usage/static-files.rst:92
@@ -349,9 +351,10 @@ msgstr ""
 
 #: ../../../usage/static-files.rst:113
 msgid ""
-"Local file systems (e.g. Litestar's :class:`~litestar.file_system."
-"BaseLocalFileSystem` or :class:`fsspec.implementations.local."
-"LocalFileSystem`) may support symlinks, which can cause unexpected behaviour."
+"Local file systems (e.g. "
+"Litestar's :class:`~litestar.file_system.BaseLocalFileSystem` "
+"or :class:`fsspec.implementations.local.LocalFileSystem`) may support "
+"symlinks, which can cause unexpected behaviour."
 msgstr ""
 
 #: ../../../usage/static-files.rst:117
@@ -410,10 +413,11 @@ msgstr ""
 
 #: ../../../usage/static-files.rst:151
 msgid ""
-"If the configured ``file_system`` does not inherit from :class:"
-"`LinkableFileSystem`, setting ``allow_symlinks_outside_directory`` to any "
-"value other than ``None`` will raise a :exc:`TypeError`. This ensures that "
-"unsupported file systems do not inadvertently allow symlink traversal."
+"If the configured ``file_system`` does not inherit "
+"from :class:`LinkableFileSystem`, setting "
+"``allow_symlinks_outside_directory`` to any value other than ``None`` will "
+"raise a :exc:`TypeError`. This ensures that unsupported file systems do not "
+"inadvertently allow symlink traversal."
 msgstr ""
 
 #: ../../../usage/static-files.rst:156

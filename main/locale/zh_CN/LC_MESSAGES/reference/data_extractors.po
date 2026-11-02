@@ -24,9 +24,10 @@ msgstr ""
 #: ../../../../litestar/data_extractors.py:docstring of
 #: litestar.data_extractors.ConnectionDataExtractor:1
 msgid ""
-"Utility class to extract data from an :class:`ASGIConnection <litestar."
-"connection.ASGIConnection>`, :class:`Request <litestar.connection.Request>` "
-"or :class:`WebSocket <litestar.connection.WebSocket>` instance."
+"Utility class to extract data from an :class:`ASGIConnection "
+"<litestar.connection.ASGIConnection>`, :class:`Request "
+"<litestar.connection.Request>` or :class:`WebSocket "
+"<litestar.connection.WebSocket>` instance."
 msgstr ""
 
 #: ../../../../litestar/data_extractors.py:docstring of
@@ -322,9 +323,10 @@ msgstr ""
 #: litestar.data_extractors.ResponseDataExtractor.extract_response_body:3
 #: litestar.data_extractors.ResponseDataExtractor.extract_status_code:3
 msgid ""
-"A tuple containing :class:`HTTPResponseStartEvent <litestar.types.asgi_types."
-"HTTPResponseStartEvent>` and :class:`HTTPResponseBodyEvent <litestar.types."
-"asgi_types.HTTPResponseBodyEvent>`."
+"A tuple containing :class:`HTTPResponseStartEvent "
+"<litestar.types.asgi_types.HTTPResponseStartEvent>` "
+"and :class:`HTTPResponseBodyEvent "
+"<litestar.types.asgi_types.HTTPResponseBodyEvent>`."
 msgstr ""
 
 #: ../../../../litestar/data_extractors.py:docstring of

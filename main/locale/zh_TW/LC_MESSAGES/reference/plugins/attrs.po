@@ -31,9 +31,9 @@ msgstr ""
 #: ../../../../litestar/plugins/attrs.py:docstring of
 #: litestar.plugins.attrs.AttrsSchemaPlugin.is_plugin_supported_type:3
 msgid ""
-"This is called by the default implementation of :meth:"
-"`is_plugin_supported_field` for backwards compatibility. User's should "
-"prefer to override that method instead."
+"This is called by the default implementation "
+"of :meth:`is_plugin_supported_field` for backwards compatibility. User's "
+"should prefer to override that method instead."
 msgstr ""
 
 #: ../../../reference/plugins/attrs.rst:0

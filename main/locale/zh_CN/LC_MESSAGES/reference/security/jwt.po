@@ -278,15 +278,15 @@ msgstr ""
 #: ../../../../litestar/security/jwt/auth.py:docstring of
 #: litestar.security.jwt.BaseJWTAuth.security_requirement:5
 msgid ""
-"An OpenAPI 3.1 :data:`SecurityRequirement <.openapi.spec."
-"SecurityRequirement>` dictionary."
+"An OpenAPI 3.1 :data:`SecurityRequirement "
+"<.openapi.spec.SecurityRequirement>` dictionary."
 msgstr ""
 
 #: ../../../../litestar/security/jwt/auth.py:docstring of
 #: litestar.security.jwt.BaseJWTAuth.middleware:1
 msgid ""
-"Create :class:`JWTAuthenticationMiddleware` wrapped in :class:"
-"`DefineMiddleware <.middleware.base.DefineMiddleware>`."
+"Create :class:`JWTAuthenticationMiddleware` wrapped "
+"in :class:`DefineMiddleware <.middleware.base.DefineMiddleware>`."
 msgstr ""
 
 #: ../../../../litestar/security/jwt/auth.py:docstring of

@@ -57,8 +57,8 @@ msgstr ":code:`pip install 'litestar[attrs]'`"
 
 #: ../../../getting-started.rst:23
 msgid ""
-":ref:`Brotli Compression Middleware <usage/middleware/builtin-middleware:"
-"brotli>`"
+":ref:`Brotli Compression Middleware <usage/middleware/builtin-"
+"middleware:brotli>`"
 msgstr ""
 
 #: ../../../getting-started.rst:24
@@ -144,9 +144,9 @@ msgstr ":code:`pip install 'litestar[mako]'`"
 
 #: ../../../getting-started.rst:53
 msgid ""
-":ref:`Better OpenAPI examples generation <usage/openapi/schema_generation:"
-"Generating examples>` with `Polyfactory <https://github.com/litestar-org/"
-"polyfactory>`_"
+":ref:`Better OpenAPI examples generation <usage/openapi/"
+"schema_generation:Generating examples>` with `Polyfactory <https://"
+"github.com/litestar-org/polyfactory>`_"
 msgstr ""
 
 #: ../../../getting-started.rst:54
@@ -272,8 +272,8 @@ msgstr ""
 
 #: ../../../getting-started.rst:121
 msgid ""
-"``http://localhost:8000/schema/swagger`` (for `Swagger UI <https://swagger."
-"io/>`_),"
+"``http://localhost:8000/schema/swagger`` (for `Swagger UI <https://"
+"swagger.io/>`_),"
 msgstr ""
 
 #: ../../../getting-started.rst:122
@@ -311,8 +311,8 @@ msgstr ""
 
 #: ../../../getting-started.rst:144
 msgid ""
-"You can also use dataclasses (standard library and Pydantic), :class:`typing."
-"TypedDict`, or :class:`msgspec.Struct`."
+"You can also use dataclasses (standard library and "
+"Pydantic), :class:`typing.TypedDict`, or :class:`msgspec.Struct`."
 msgstr ""
 
 #: ../../../getting-started.rst:148
@@ -703,8 +703,8 @@ msgid ""
 "A fully-capable, production-ready fullstack Litestar web application "
 "configured with best practices. It includes SQLAlchemy 2.0, ReactJS, `Vite "
 "<https://vitejs.dev/>`_, `SAQ job queue <https://saq-py.readthedocs.io/en/"
-"latest/>`_, ``Jinja`` templates and more. `Read more <https://litestar-org."
-"github.io/litestar-fullstack/latest/>`_."
+"latest/>`_, ``Jinja`` templates and more. `Read more <https://litestar-"
+"org.github.io/litestar-fullstack/latest/>`_."
 msgstr ""
 
 #: ../../../getting-started.rst:254
