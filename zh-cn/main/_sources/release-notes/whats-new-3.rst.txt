@@ -1,0 +1,495 @@
+.. py:currentmodule:: litestar
+
+
+What's changed in 3.0?
+======================
+
+This document is an overview of the changes between version **2.11.x** and **3.0**.
+For a detailed list of all changes, including changes between versions leading up to the
+3.0 release, consult the :doc:`/release-notes/changelog`.
+
+.. note:: The **2.11** release line is unaffected by this change
+
+Imports
+-------
+
++----------------------------------------------------+------------------------------------------------------------------------+
+| ``2.x``                                            | ``3.x``                                                                |
++====================================================+========================================================================+
+| ``litestar.contrib.attrs``                         | ``litestar.plugins.attrs``                                             |
++----------------------------------------------------+------------------------------------------------------------------------+
+| ``litestar.contrib.htmx``                          | ``litestar_htmx``                                                      |
++----------------------------------------------------+------------------------------------------------------------------------+
+| ``litestar.contrib.jinja``                         | ``litestar.plugins.jinja``                                             |
++----------------------------------------------------+------------------------------------------------------------------------+
+| ``litestar.contrib.jwt``                           | ``litestar.security.jwt``                                              |
++----------------------------------------------------+------------------------------------------------------------------------+
+| ``litestar.contrib.mako``                          | ``litestar.plugins.mako``                                              |
++----------------------------------------------------+------------------------------------------------------------------------+
+| ``litestar.contrib.minijinja``                     | ``litestar.plugins.minijinja``                                         |
++----------------------------------------------------+------------------------------------------------------------------------+
+| ``litestar.contrib.minijnja``                      | ``litestar.plugins.minijinja``                                         |
++----------------------------------------------------+------------------------------------------------------------------------+
+| ``litestar.contrib.opentelemetry``                 | ``litestar.plugins.opentelemetry``                                     |
++----------------------------------------------------+------------------------------------------------------------------------+
+| ``litestar.contrib.piccolo``                       | ``litestar_piccolo``                                                   |
++----------------------------------------------------+------------------------------------------------------------------------+
+| ``litestar.contrib.prometheus``                    | ``litestar.plugins.prometheus``                                        |
++----------------------------------------------------+------------------------------------------------------------------------+
+| ``litestar.contrib.pydantic``                      | ``litestar.plugins.pydantic``                                          |
++----------------------------------------------------+------------------------------------------------------------------------+
+| ``litestar.contrib.repository``                    | ``litestar.repository``                                                |
++----------------------------------------------------+------------------------------------------------------------------------+
+| ``litestar.contrib.sqlalchemy``                    | ``advanced_alchemy.extensions.litestar``                               |
++----------------------------------------------------+------------------------------------------------------------------------+
+
+
+Removal of ``StaticFileConfig``
+-------------------------------
+
+The ``StaticFilesConfig`` has been removed, alongside these related parameters and
+functions:
+
+- ``Litestar.static_files_config``
+- ``Litestar.url_for_static_asset``
+- ``Request.url_for_static_asset``
+
+:func:`create_static_files_router` is a drop-in replacement for ``StaticFilesConfig``,
+and can simply be added to the ``route_handlers`` like any other regular handler.
+
+Usage of ``url_for_static_assets`` should be replaced with a ``url_for("static", ...)``
+call.
+
+
+Implicit Optional Default Parameters
+------------------------------------
+
+In v2, if a handler was typed with an optional parameter it would be implicitly given a default value of ``None``. For
+example, if the following handler is called with no query parameter, the value ``None`` would be passed in to the
+handler for the ``param`` parameter:
+
+.. code-block:: python
+
+    @get("/")
+    def my_handler(param: int | None) -> ...:
+        ...
+
+This legacy behavior originates from our history of using Pydantic v1 models to represent handler signatures. In v3, we
+no longer make this implicit conversion. If you want to have a default value of ``None`` for an optional parameter, you
+must explicitly set it:
+
+.. code-block:: python
+
+    @get("/")
+    def my_handler(param: int | None = None) -> ...:
+        ...
+
+
+Path parameters must be marked
+------------------------------
+
+Only a parameter marked with :data:`~.params.FromPath` or :class:`~.params.PathParameter`
+is read from the path. In v2, a parameter whose name matched a path segment was read from
+the path even when it was marked as a query, header or cookie parameter. In v3 it is read
+from the location it is marked with:
+
+.. code-block:: python
+
+    @get("/{item_id:int}")
+    def my_handler(item_id: FromQuery[int]) -> ...:  # read from the query string
+        ...
+
+A parameter named like a path segment that declares no location, such as the deprecated
+``item_id: int``, raises :exc:`~.exceptions.ImproperlyConfiguredException` when the
+application is created. Declare it as ``item_id: FromPath[int]``.
+
+
+OpenAPI Controller Replaced by Plugins
+--------------------------------------
+
+In version 3.0, the OpenAPI controller pattern, deprecated in v2.8, has been removed in
+favor of a more flexible plugin system.
+
+Elimination of ``OpenAPIController`` Subclassing
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Previously, users configured elements such as the root path and styling by subclassing OpenAPIController and setting it
+on the ``OpenAPIConfig.openapi_controller`` attribute. As of version 3.0, this pattern has been removed. Instead, users
+are required to transition to using UI plugins for configuration.
+
+Migration Steps:
+
+1. Remove any implementations subclassing ``OpenAPIController``.
+2. Use the :attr:`OpenAPIConfig.render_plugins` attribute to configure the OpenAPI UI made available to your users.
+   If no plugin is supplied, we automatically add the :class:`ScalarRenderPlugin` for the default configuration.
+3. Use the :attr:`OpenAPIConfig.openapi_router` attribute for additional configuration.
+
+See the :doc:`/usage/openapi/ui_plugins` documentation for more information on how to configure OpenAPI plugins.
+
+Changes to Endpoint Configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The ``OpenAPIConfig.enabled_endpoints`` attribute is no longer available in version 3.0.0. This attribute previously
+enabled a set of endpoints that would serve different OpenAPI UIs. In the new version, only the ``openapi.json``
+endpoint is enabled by default, alongside the ``Scalar`` UI plugin as the default.
+
+To adapt to this change, you should explicitly configure any additional endpoints you need by properly setting up the
+necessary plugins within the :attr:`OpenAPIConfig.render_plugins` parameter.
+
+Modification to ``root_schema_site`` Handling
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The ``root_schema_site`` attribute, which enabled serving a particular UI at the OpenAPI root path, has been removed in
+version 3.0. The new approach automatically assigns the first :class:`OpenAPIRenderPlugin` listed in the
+:attr:`OpenAPIConfig.render_plugins` list to serve at the ``/schema`` endpoint, unless a plugin has been defined with
+the root path (``/``), in which case that plugin will be used.
+
+For those previously using the ``root_schema_site`` attribute, the migration involves ensuring that the UI intended to
+be served at the ``/schema`` endpoint is the first plugin listed in the :attr:`OpenAPIConfig.render_plugins`.
+
+
+Removal of the RapiDoc OpenAPI UI plugin
+----------------------------------------
+
+The ``RapidocRenderPlugin`` has been removed due to lack of upstream maintenance.
+
+If you were using ``RapidocRenderPlugin``, migrate to one of the other bundled UI plugins
+via :attr:`OpenAPIConfig.render_plugins`, e.g. :class:`ScalarRenderPlugin` (the default),
+:class:`SwaggerRenderPlugin`, :class:`RedocRenderPlugin` or :class:`StoplightRenderPlugin`.
+
+
+Deprecated ``app`` parameter for ``Response.to_asgi_response`` has been removed
+-------------------------------------------------------------------------------
+
+The parameter ``app`` for :meth:`~response.Response.to_asgi_response` has been removed.
+If you need access to the app instance inside a custom ``to_asgi_response`` method,
+replace the usages of ``app`` with ``request.app``.
+
+
+Deprecated scope state utilities removed
+----------------------------------------
+
+Litestar has previously made available utilities for storing and retrieving data in the ASGI scope state. These
+utilities have been removed in version 3.0.0. If you need to store data in the ASGI scope state, you should use do so
+using a namespace that is unique to your application and unlikely to conflict with other applications.
+
+The following utilities have been removed:
+
+- ``get_litestar_scope_state``
+- ``set_litestar_scope_state``
+- ``delete_litestar_scope_state``
+
+
+Deprecated utility function ``is_sync_or_async_generator`` removed
+------------------------------------------------------------------
+
+The utility function ``is_sync_or_async_generator`` has been removed as it is no longer used internally.
+
+If you were relying on this utility, you can define it yourself as follows:
+
+.. code-block:: python
+
+    from inspect import isasyncgenfunction, isgeneratorfunction
+
+    def is_sync_or_async_generator(obj: Any) -> bool:
+        return isgeneratorfunction(obj) or isasyncgenfunction(obj)
+
+
+Removal of semantic HTTP route handler classes
+-----------------------------------------------
+
+The semantic ``HTTPRouteHandler`` classes have been removed in favour of functional
+decorators. ``route``, ``get``, ``post``, ``patch``, ``put``, ``head`` and ``delete``
+are now all decorator functions returning :class:`~.handlers.HTTPRouteHandler`
+instances.
+
+As a result, customizing the decorators directly is not possible anymore. Instead, to
+use a route handler decorator with a custom route handler class, the ``handler_class``
+parameter to the decorator function can be used:
+
+Before:
+
+.. code-block:: python
+
+    class my_get_handler(get):
+        ... # custom handler
+
+    @my_get_handler()
+    async def handler() -> Any:
+        ...
+
+After:
+
+.. code-block:: python
+
+    class MyHTTPRouteHandler(HTTPRouteHandler):
+        ... # custom handler
+
+
+    @get(handler_class=MyHTTPRouteHandler)
+    async def handler() -> Any:
+        ...
+
+
+Deprecated ``app`` parameter for ``Response.to_asgi_response`` has been removed
+-------------------------------------------------------------------------------
+
+The parameter ``app`` for :meth:`~response.Response.to_asgi_response` has been removed.
+If you need access to the app instance inside a custom ``to_asgi_response`` method,
+replace the usages of ``app`` with ``request.app``.
+
+
+Removal of deprecated ``litestar.middleware.exceptions`` module and ``ExceptionHandlerMiddleware``
+--------------------------------------------------------------------------------------------------
+
+The deprecated ``litestar.middleware.exceptions`` module and the
+``ExceptionHandlerMiddleware`` have been removed. Since ``ExceptionHandlerMiddleware``
+has been applied automatically behind the scenes if necessary, no action is required.
+
+
+Update MessagePack media type to ``application/vnd.msgpack``
+------------------------------------------------------------
+
+Change the default media type of ``MessagePack`` from ``application/x-msgpack`` to the
+newly introduced official ``application/vnd.msgpack``.
+
+https://www.iana.org/assignments/media-types/application/vnd.msgpack
+
+
+Deprecated ``resolve_`` methods on route handlers
+-------------------------------------------------
+
+All ``resolve_`` methods on the route handlers
+(e.g. ``HTTPRouteHandler.resolve_response_headers``) have been
+deprecated and will be removed in ``4.0``. The attributes can now safely be accessed
+directly (e.g. `HTTPRouteHandlers.response_headers`).
+
+
+Moved routing related methods from ``Router`` to ``Litestar``
+-------------------------------------------------------------
+
+:class:`~litestar.router.Router` now only holds route handlers and configuration, while
+the actual routing is done in :class:`~litestar.app.Litestar`. With this, several
+methods and properties have been moved from ``Router`` to ``Litestar``:
+
+- ``route_handler_method_map``
+- ``get_route_handler_map``
+- ``routes``
+
+
+Removal of  ``CLIPluginProtocol``
+---------------------------------
+
+The :class:`~typing.Protocol` ``CLIPluginProtocol`` has been removed in favour
+of the abstract ``CLIPluginProtocol``. The functionality and interface remain the same,
+the only difference being that plugins that wish to provide this functionality are now
+required to inherit from :class:`~.plugins.CLIPlugin`.
+
+
+Removal of ``OpenAPISchemaPluginProtocol``
+------------------------------------------
+
+The :class:`~typing.Protocol` ``OpenAPISchemaPluginProtocol`` has been removed in favour
+of the abstract :class:`~litestar.plugins.OpenAPISchemaPlugin`. The functionality and
+interface remain the same, the only difference being that plugins that wish to provide
+this functionality are now required to inherit from
+:class:`~.plugins.OpenAPISchemaPlugin`.
+
+
+Dropped support for starlette middleware protocol
+-------------------------------------------------
+
+The `starlette middleware protocol <https://www.starlette.io/middleware>`_ is no longer
+supported.
+
+Only the "factory" pattern will now be supported, i.e. a callable that receives an ASGI
+callable as its only argument and returns another ASGI callable:
+
+.. code-block:: python
+
+    def middleware(app: ASGIApp) -> ASGIApp:
+        ...
+
+
+.. seealso::
+    :doc:`/usage/middleware/index`
+
+
+Built-in middleware migrated to ``ASGIMiddleware``
+--------------------------------------------------
+
+Litestar's built-in middleware are being moved from the legacy ``AbstractMiddleware`` and
+``MiddlewareProtocol`` bases onto :class:`~litestar.middleware.ASGIMiddleware`.
+``CORSMiddleware`` and ``ResponseCacheMiddleware`` have made this move.
+``ResponseCacheMiddleware`` has also been moved into
+``litestar.middleware._internal``, removing it from the public API.
+
+These classes are constructed by Litestar itself from their configuration objects, so
+applications that only configure them - for CORS, via
+:class:`~litestar.config.cors.CORSConfig`, and for response caching, via
+:class:`~litestar.config.response_cache.ResponseCacheConfig` and the handler-level
+``cache`` argument - are unaffected.
+
+Code that composed one of them directly into an ASGI stack must drop the ``app``
+argument, pass the settings as keyword arguments rather than a configuration object, and
+apply the instance to the next ASGI app:
+
+.. code-block:: python
+
+    # before
+    middleware = CORSMiddleware(app=next_app, config=cors_config)
+
+    # after
+    middleware = CORSMiddleware(
+        allow_origins=cors_config.allow_origins,
+        allow_methods=cors_config.allow_methods,
+        allow_headers=cors_config.allow_headers,
+        allow_credentials=cors_config.allow_credentials,
+        allow_origin_regex=cors_config.allow_origin_regex,
+        expose_headers=cors_config.expose_headers,
+        max_age=cors_config.max_age,
+    )
+    asgi_app = middleware(next_app)
+
+The settings are copied on construction, so mutating ``CORSConfig`` after the application
+has been created no longer affects the middleware.
+
+Because ``ASGIMiddleware.__call__`` returns a closure rather than the middleware
+instance, a middleware stack can no longer be introspected by walking the ``.app``
+attribute of each layer.
+
+Subclasses must also rename ``__call__`` to ``handle``, which receives the next ASGI app
+as an additional ``next_app`` argument in place of ``self.app``.
+
+.. seealso::
+    :ref:`asgi-middleware-migration`
+
+
+Removal of ``SerializationPluginProtocol``
+------------------------------------------
+
+The :class:`~typing.Protocol` ``SerializationPluginProtocol`` has been removed in favour
+of the abstract :class:`~litestar.plugins.SerializationPlugin`. The functionality and
+interface remain the same, the only difference being that plugins that wish to provide
+this functionality are now required to inherit from
+:class:`~.plugins.SerializationPlugin`.
+
+
+Removal of ``body`` in streaming responses
+-------------------------------------------
+
+The unsupported ``body`` parameter of :class:`~.ASGIStreamingResponse`
+and :class:`.ASGIFileResponse` has been removed.
+
+This does not change any behaviour, as this parameter was previously ignored.
+
+
+``polyfactory`` package removed from default dependencies
+----------------------------------------------------------
+
+The `polyfactory <https://polyfactory.litestar.dev/>`_ library has been moved from the
+default dependencies to the ``litestar[polyfactory]`` package extra. It
+is also included in ``litestar[full]``.
+
+
+``pyyaml`` package removed from default dependencies
+----------------------------------------------------
+
+The `PyYAML <https://pyyaml.org/wiki/PyYAMLDocumentation>`_ library, used to render the
+OpenAPI schema as YAML has been moved from the default dependencies to the
+``litestar[yaml]`` package extra.
+
+
+``litestar-htmx`` package removed from default dependencies
+-----------------------------------------------------------
+
+The `litestar-htmx <https://github.com/litestar-org/litestar-htmx/>`_ package powering
+the :doc:`HTMX plugin </usage/htmx>` has been moved to the ``litestar[htmx]`` extra.
+
+
+``click``, ``rich`` and ``rich-click`` packages removed from default dependencies
+---------------------------------------------------------------------------------
+
+The `click <https://click.palletsprojects.com/>`_, `rich <https://rich.readthedocs.io>`_
+and `rich-click <https://github.com/ewels/rich-click>`_ libraries powering the
+:doc:`CLI </usage/cli>` have been moved from the default dependencies to the
+``litestar[cli]`` package extra. They are also included in ``litestar[standard]`` and
+``litestar[full]``.
+
+Installing ``litestar`` on its own therefore no longer provides the ``litestar`` command.
+Invoking it without the extra raises a
+:class:`MissingDependencyException <litestar.exceptions.MissingDependencyException>`
+naming the extra to install:
+
+.. code-block:: shell
+    :caption: Install the CLI
+
+    pip install 'litestar[cli]'
+
+
+``httpx`` package removed from default dependencies
+----------------------------------------------------
+
+The `httpx <https://www.python-httpx.org/>`_ library, on which the
+:doc:`test clients </usage/testing>` are based, has been moved from the default
+dependencies to the ``litestar[testing]`` package extra. It is also included in
+``litestar[full]``.
+
+Importing anything from :mod:`litestar.testing` without the extra installed raises a
+:class:`MissingDependencyException <litestar.exceptions.MissingDependencyException>`
+naming the extra to install:
+
+.. code-block:: shell
+    :caption: Install the testing extra
+
+    pip install 'litestar[testing]'
+
+
+``rich-click>=1.9`` is now required by the CLI
+-----------------------------------------------
+
+The ``litestar[cli]`` extra now requires ``rich-click>=1.9``, which is needed for the
+themed :doc:`CLI </usage/cli>` output. Previously ``rich-click`` was capped at ``<1.9``,
+which silently disabled the theme, as the underlying option only exists from 1.9 onwards.
+
+This only affects applications that additionally pin ``rich-click<1.9`` themselves.
+
+
+Improved file system handling / fsspec integration
+---------------------------------------------------
+
+A more coherent :doc:`file system </usage/file_systems>` integration was added, with
+improved support for `fsspec <https://filesystem-spec.readthedocs.io/en/latest/>`_.
+This new implementation is more stable, performant and consistent, and includes new
+features such as random access to all supported file systems as well as streaming
+(optionally with offsets, even if the underlying file system does not support it
+natively).
+
+.. seealso::
+    :doc:`/usage/file_systems`
+
+
+Removal of ``resolve_symlinks`` parameter to ``create_static_files_router``
+---------------------------------------------------------------------------
+
+``resolve_symlinks`` parameter of
+:func:`~litestar.static_files.create_static_files_router` has been removed in favour of
+the new
+:paramref:`~litestar.static_files.create_static_files_router.allow_symlinks_outside_directory`
+parameter.
+
+.. attention::
+    This has been intentionally made a breaking change because the new parameter has
+    slightly different behaviour and defaults to ``False`` instead of ``True``.
+
+
+Middleware configuration constraints
+-------------------------------------
+
+:class:`~litestar.middleware.ASGIMiddleware`\ s can now express constraints for how
+they are applied in the middleware stack, which are then validated on application
+startup.
+
+.. seealso::
+
+    :ref:`usage/middleware/creating-middleware:Configuration constraints`

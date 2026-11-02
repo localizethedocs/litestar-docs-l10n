@@ -1,0 +1,723 @@
+:orphan:
+
+3.x Changelog
+=============
+
+.. changelog:: 3.0.0
+    :date: 2364-01-27
+
+    .. change:: Remove support for implicitly declared request parameters
+        :type: feature
+        :breaking:
+        :pr:
+
+        Remove the deprecated implicit request parameter declaration. All request
+        parameters must now be explicitly marked (e.g. with
+        :data:`~litestar.params.FromQuery`).
+
+        .. list-table::
+            :header-rows: 1
+            :widths: 45 55
+
+            * - Deprecated
+              - Use instead
+            * - ``def h(name: str)`` *(implicit query parameter)*
+              - ``def h(name: FromQuery[str])``
+            * - ``def h(user_id: int)`` *(implicit path parameter)*
+              - ``def h(user_id: FromPath[int])``
+            * - ``Annotated[str, Parameter(query="alias")]``
+              - ``Annotated[str, QueryParameter(name="alias")]``
+            * - ``Annotated[str, Parameter(header="X-API-KEY")]``
+              - ``Annotated[str, HeaderParameter(name="X-API-KEY")]``
+            * - ``Annotated[str, Parameter(cookie="session")]``
+              - ``Annotated[str, CookieParameter(name="session")]``
+            * - ``name: str = Parameter(...)`` *(default-value style)*
+              - ``name: Annotated[str, QueryParameter(...)]``
+
+        .. seealso::
+            :doc:`/usage/routing/parameters`
+
+    .. change:: Only read parameters marked as path parameters from the path
+        :type: bugfix
+        :pr: 5128
+        :breaking:
+
+        A parameter whose name matched a path segment was read from the path even when it
+        was marked with ``FromQuery``, ``FromHeader``, ``FromCookie`` or the corresponding
+        ``Parameter`` kwarg, and was documented as a path parameter. Such a parameter is
+        now read from, and documented at, the location it is marked with.
+
+        A parameter named like a path segment that declares no location, the deprecated
+        inferred path parameter style, now raises ``ImproperlyConfiguredException`` when
+        the application is created. Declare it with ``FromPath``.
+
+    .. change:: Add support for ``leeway`` parameter in JWT security backends
+        :type: feature
+        :pr: 5037
+        :issue: 4584
+        :breaking:
+
+        Add support for ``leeway`` parameter in JWT security backends, which allows set
+        a number of potential seconds as a clock error for expired tokens.
+
+        ``Token.decode`` and ``Token.decode_payload`` now take a ``leeway`` argument.
+        Custom token classes overriding either method must accept it and forward to
+        ``super()``, otherwise decoding raises ``TypeError``.
+
+    .. change:: Fix ``TypeError`` when generating a schema for a union of enums
+        :type: bugfix
+        :pr: 4997
+
+        Annotating a handler with a union whose members are all enums (e.g.
+        ``Color | Size``) crashed schema generation with ``TypeError: issubclass()
+        arg 1 must be a class``, as the union was dispatched to the enum schema
+        handler. Such unions are now documented as a ``oneOf`` with a component
+        schema per enum.
+
+    .. change:: Return HTTP 413 when the multipart form part limit is exceeded
+        :type: feature
+        :pr: 4990
+        :issue: 4439
+        :breaking:
+
+        Exceeding the configured multipart form part limit now returns
+        ``413 Request Entity Too Large`` instead of ``400 Bad Request``.
+
+    .. change:: Remove the RapiDoc OpenAPI UI plugin
+        :type: feature
+        :pr: 4977
+        :breaking:
+
+        The ``RapidocRenderPlugin`` has been removed due to lack of upstream maintenance.
+
+        Applications using ``RapidocRenderPlugin`` should migrate to another bundled UI
+        plugin, such as ``ScalarRenderPlugin`` (the default), ``SwaggerRenderPlugin``,
+        ``RedocRenderPlugin`` or ``StoplightRenderPlugin``.
+
+    .. change:: Migrate ``ResponseCacheMiddleware`` to ``ASGIMiddleware``
+        :type: feature
+        :pr: 4953
+        :issue: 4009
+        :breaking:
+
+        ``ResponseCacheMiddleware`` has been moved from the legacy ``AbstractMiddleware``
+        base to :class:`~litestar.middleware.ASGIMiddleware`, as part of migrating all
+        built-in middleware off the legacy bases. It now lives in
+        ``litestar.middleware._internal``, removing it from the public API.
+
+        .. note::
+            The move into ``litestar.middleware._internal`` does not affect usage:
+            the middleware was only ever applied internally by Litestar to begin with.
+
+        Applications that configure response caching through
+        :class:`~litestar.config.response_cache.ResponseCacheConfig` and the handler-level
+        ``cache`` argument are unaffected -- Litestar constructs the middleware itself.
+
+        Code composing the middleware directly into an ASGI stack must drop the ``app``
+        argument, pass the settings as keyword arguments rather than a
+        ``ResponseCacheConfig``, and apply the instance to the next ASGI app:
+
+        .. code-block:: python
+
+            # before
+            middleware = ResponseCacheMiddleware(app=next_app, config=response_cache_config)
+
+            # after
+            middleware = ResponseCacheMiddleware(
+                default_expiration=response_cache_config.default_expiration,
+                key_builder=response_cache_config.key_builder,
+                store=response_cache_config.store,
+                cache_response_filter=response_cache_config.cache_response_filter,
+            )
+            asgi_app = middleware(next_app)
+
+        Since ``ASGIMiddleware.__call__`` returns a closure rather than the middleware
+        instance, a middleware stack can no longer be introspected by walking the ``.app``
+        attribute of each layer.
+
+        .. seealso::
+            :ref:`asgi-middleware-migration`
+
+    .. change:: Migrate ``CORSMiddleware`` to ``ASGIMiddleware``
+        :type: feature
+        :pr: 4952
+        :issue: 4009
+        :breaking:
+
+        ``CORSMiddleware`` has been moved from the legacy ``AbstractMiddleware`` base to
+        :class:`~litestar.middleware.ASGIMiddleware`, as part of migrating all built-in
+        middleware off the legacy bases.
+
+        Applications that configure CORS through
+        :class:`~litestar.config.cors.CORSConfig` are unaffected -- Litestar constructs
+        the middleware itself.
+
+        Code instantiating the middleware directly must drop the ``app`` argument, pass
+        the settings as keyword arguments rather than a ``CORSConfig``, and apply the
+        instance to the next ASGI app:
+
+        .. code-block:: python
+
+            # before
+            middleware = CORSMiddleware(app=next_app, config=cors_config)
+
+            # after
+            middleware = CORSMiddleware(allow_origins=cors_config.allow_origins, ...)
+            asgi_app = middleware(next_app)
+
+        The settings are copied on construction, so mutating ``CORSConfig`` after the
+        application has been created no longer affects the middleware.
+
+        Since ``ASGIMiddleware.__call__`` returns a closure rather than the middleware
+        instance, a middleware stack can no longer be introspected by walking the ``.app``
+        attribute of each layer.
+
+        .. seealso::
+            :ref:`asgi-middleware-migration`
+
+    .. change:: Stop caching responses of handlers that do not enable caching
+        :type: bugfix
+        :pr: 4953
+
+        ``ResponseCacheMiddleware`` is applied per route, so a handler that never set
+        ``cache`` still had its responses written to the store when it shared a path with
+        a handler that did -- for example a ``POST`` handler on a path whose ``GET``
+        handler sets ``cache=True``. Those entries were written on every request, without
+        an expiry, and were never read back, since responses are only served from the
+        cache for handlers that enable it.
+
+        The middleware now passes such requests through untouched.
+    .. change:: Harden the PsycoPg channels listener
+        :type: bugfix
+
+        Serialize subscription changes and consume notifications in a background task so
+        dynamic ``LISTEN`` and ``UNLISTEN`` operations no longer contend with the listener.
+        Psycopg 3.2.4 or newer is now required for development and documentation builds.
+
+    .. change:: Move ``httpx`` to the ``testing`` extra
+        :type: feature
+        :pr: 4950
+        :breaking:
+
+        ``httpx``, used by the test clients, has been moved from the default dependencies
+        to the ``litestar[testing]`` extra. It remains included in ``litestar[full]``.
+
+        Importing anything from ``litestar.testing`` without the extra installed now
+        raises a ``MissingDependencyException`` naming the extra to install.
+
+        .. seealso::
+            :doc:`/usage/testing`
+
+    .. change:: Require ``rich-click>=1.9``
+        :type: feature
+        :pr: 4951
+        :breaking:
+
+        The ``litestar[cli]`` extra now requires ``rich-click>=1.9``. ``rich-click`` was
+        previously capped at ``<1.9``, which silently disabled the CLI's ``star-box``
+        theme: the underlying ``theme`` option only exists from 1.9 onwards, and
+        assigning an unknown setting is ignored rather than raising.
+
+        The CLI configuration has been migrated off the options 1.9 deprecates
+        (``use_markdown`` / ``use_rich_markup`` in favour of ``text_markup``, and
+        ``show_metavars_column`` / ``append_metavars_help`` in favour of
+        ``options_table_column_types`` / ``options_table_help_sections``).
+
+        The layout of the help output is preserved: option tables keep the long form in
+        the first column, the ``*`` marker on required parameters, and the metavar
+        appended directly after the help text. Colours do change, as the ``star-box``
+        theme now takes effect for the first time.
+
+        This only affects applications that additionally pin ``rich-click<1.9``
+        themselves.
+
+        .. seealso::
+            :doc:`/usage/cli`
+
+    .. change:: Move ``click``, ``rich`` and ``rich-click`` to the ``cli`` extra
+        :type: feature
+        :pr: 4949
+        :breaking:
+
+        ``click``, ``rich`` and ``rich-click``, which power the CLI, have been moved from
+        the default dependencies to the ``litestar[cli]`` extra. They remain included in
+        ``litestar[standard]`` and ``litestar[full]``.
+
+        Installing ``litestar`` on its own therefore no longer provides the ``litestar``
+        command. Invoking it without the extra now raises a
+        ``MissingDependencyException`` naming the extra to install.
+
+        .. seealso::
+            :doc:`/usage/cli`
+
+    .. change:: Remove deprecated ``litestar.contrib`` namespace
+        :type: feature
+        :issue: 4720
+        :breaking:
+
+        Remove the deprecated ``litestar.contrib`` namespace. Integrations previously
+        available from this namespace have moved to their replacement modules.
+
+    .. change:: Remove deprecated declaration of metadata through default values
+        :type: feature
+        :pr: 4819
+        :breaking:
+
+        Remove declaring parameter and body metadata through default values and setting
+        defaults inside markers.
+
+        - The ``default`` keyword has been removed from ``Parameter`` and ``Body``, along
+          with the underlying ``KwargDefinition.default`` field. Passing it now raises a
+          ``TypeError``.
+        - Using a ``QueryParameter`` / ``HeaderParameter`` / ``PathParameter`` /
+          ``CookieParameter`` or ``Body`` marker as a parameter *default value* (for
+          example ``data: Foo = Body(...)`` or ``param: int = QueryParameter(...)``)
+          now raises an exception
+
+        **Migration**
+
+        - If metadata is declared on the marker, move the marker into ``Annotated``:
+
+          - ``data: Foo = Body(min_items=2)`` becomes ``data: Annotated[Foo, Body(min_items=2)]``
+          - ``param: int = QueryParameter(gt=1)`` becomes ``param: Annotated[int, QueryParameter(gt=1)]``
+
+          For the unconstrained case the dedicated markers can be used as a shorthand,
+          e.g. ``JSONBody[Foo]``, ``MsgPackBody[Foo]``, ``MultipartBody[Foo]`` or
+          ``URLEncodedBody[Foo]`` for bodies, and ``FromQuery[int]``, ``FromHeader[int]``,
+          ``FromCookie[int]`` or ``FromPath[int]`` for parameters.
+
+        - Hoist defaults set inside ``Annotated`` into the parameter default:
+          ``param: Annotated[int, QueryParameter(default=5)]`` becomes
+          ``param: Annotated[int, QueryParameter(...)] = 5``.
+
+        .. seealso::
+            :doc:`/usage/routing/parameters`
+
+    .. change:: Remove deprecated ``params.Dependency`` and ``params.DependencyKwarg``
+        :type: feature
+        :pr: 4818
+        :breaking:
+
+        Remove ``params.Dependency`` and ``params.DependencyKwarg`` that were deprecated
+        in ``2.23.0``.
+
+        **Migration**
+
+        - Replace ``foo: int = Dependency()`` with ``foo: NamedDependency[int]``
+        - Replace ``foo: Annotated[int, Dependency(default=1)]`` by hoisting the
+          default into the parameter default: ``foo: NamedDependency[int] = 1``
+        - Replace ``foo: Annotated[int, Dependency(skip_validation=True)`` with
+          ``foo: NamedDependency[SkipValidation[int]]``
+
+    .. change:: Fix OpenAPI schema incorrectly marking nullable required fields as not required
+        :type: bugfix
+        :pr: 4687
+        :issue: 4673
+
+        Fields typed as ``T | None`` (nullable) without a default value are now correctly
+        included in the OpenAPI schema's ``required`` array. Previously, Litestar conflated
+        nullability (the type can be ``None``) with optionality (having a default value),
+        causing the generated schema to diverge from the OpenAPI 3.1.0 specification.
+
+        This affected all model types: dataclasses, msgspec Structs, attrs classes, and
+        Pydantic models. For example, a field ``name: int | None`` with no default was
+        previously excluded from ``required``; it is now correctly included.
+
+        Runtime request validation behavior is unchanged — nullable parameters without
+        defaults were already enforced as required at the validation layer.
+
+    .. change:: Drop support for Pydantic 1
+        :type: feature
+        :breaking:
+
+        Drop support for Pydantic 1.
+
+        Pydantic 1 is no longer supported or tested against. No changes required for
+        applications already using Pydantic 2. Applications using Pydantic 1 or a mix
+        between 1 and 2 should upgrade to Pydantic 2.
+
+    .. change:: Add ``ping_interval`` to ``ServerSentEvent`` for keepalive pings
+        :type: feature
+        :pr: 4623
+        :issue: 4082
+
+        Added optional ``ping_interval`` parameter to :class:`ServerSentEvent <litestar.response.ServerSentEvent>` that
+        sends SSE comment keepalive pings at the specified interval to prevent connection timeouts from reverse proxies
+        or clients.
+
+    .. change:: Remove logging config and related constructs
+        :type: feature
+        :breaking:
+        :pr: 4615
+        :issue: 2858, 3913, 3455
+
+        Remove Litestar's logging configuration, and related modules. In particular,
+        the following have been removed:
+
+        - ``Litestar.logging_config`` parameter
+        - ``Litestar.logger`` attribute
+        - ``Litestar.get_logger`` method
+        - ``AppConfig.logging_config`` attribute
+        - ``ASGIConnection.logger`` property
+        - ``litestar.logging`` module
+        - ``litestar.plugins.structlog`` module
+        - ``litestar.middleware.lgging.LoggingMiddlewareConfig`` class
+
+        Aside from debugging, there is only one place where Litestar logs, which is
+        :class:`~litestar.middleware.logging.LoggingMiddleware`, which has been changed
+        to accept a logger directly.
+        ``litestar.middleware.lgging.LoggingMiddlewareConfig`` has also been removed,
+        with ``LoggingMiddleware`` now accepting all configuration arguments directly.
+
+        Users that have previously relied on Litestar to configure logging, can simply
+        use the standard logging configuration provided by their logging library of
+        choice.
+
+        .. seealso::
+            :doc:`/usage/logging`
+
+
+    .. change:: Remove default exception handler for all unhandled exceptions
+        :type: feature
+        :breaking:
+        :pr: 4610
+
+        Remove the default exception handler for all unhandled exceptions. Unhandled
+        exceptions will now be re-raised, for the server to handle.
+        "Unhandled exceptions" in this context means any exception for which no custom
+        exception handler exist, and that does not derive from :exc:`LitestarException`
+        or :exc:`HTTPException`.
+
+        .. important::
+
+            Your application's runtime behaviour won't change in terms of *if*
+            exceptions get handled. The main difference will be that, for an unhandled
+            exception, it will be the ASGI server that creates a
+            ``500 - Internal Server Error`` response, instead of Litestar
+
+    .. change:: Fix ``raise_server_exceptions`` flag in test clients
+        :type: bugfix
+        :pr: 4610
+
+        Fix the ``raise_server_exceptions``. This flag has been non-functional (i.e. did
+        not change the behaviour at all) since version 1. This is now fixed, and
+        unhandled exceptions will be re-raised by the test client
+
+    .. change:: Fix swallowing of unhandled exceptions in WebSocket client
+        :type: bugfix
+        :pr: 4610
+
+        Fix a bug that could lead to unhandled exceptions raised within websocket
+        handlers, and not derived from :exc:`LitestarException` or :exc:`HTTPException`
+        to be silently swallowed. This would lead to a closing of the WebSocket
+        connection without any indication of an exception
+
+    .. change:: Remove all SQLAlchemy modules in favor of direct advanced-alchemy imports
+        :type: feature
+        :breaking:
+        :pr: 4340
+
+        Remove all SQLAlchemy functionality from Litestar. Both ``litestar.contrib.sqlalchemy``
+        and ``litestar.plugins.sqlalchemy`` modules have been completely removed. Users must now
+        import directly from ``advanced_alchemy.extensions.litestar``.
+
+        Migration:
+        - ``from litestar.contrib.sqlalchemy import X`` → ``from advanced_alchemy.extensions.litestar import X``
+        - ``from litestar.plugins.sqlalchemy import Y`` → ``from advanced_alchemy.extensions.litestar import Y``
+
+        This completes the separation of concerns, with advanced-alchemy being the sole provider
+        of SQLAlchemy integration for Litestar.
+
+    .. change:: Remove deprecated ``litestar.contrib.prometheus`` module
+        :type: feature
+        :breaking:
+        :pr: 4328
+        :issue: 4305
+
+        Remove the deprecated ``litestar.contrib.prometheus`` module. Code still using imports
+        from this module should switch to using ``litestar.plugins.prometheus``.
+
+
+    .. change:: Make ``AsyncTestClient`` async-native
+        :type: feature
+        :pr: 4291
+        :issue: 1920
+        :breaking:
+
+        Re-implement :class:`~litestar.testing.AsyncTestClient` to be async-native, i.e. use the currently running event
+        loop to run the application, instead of running a separate event loop in a new thread. Additionally, a new
+        :class:`~litestar.testing.AsyncWebSocketTestSession` has been introduced, providing an async testing utility
+        for WebSockets.
+
+        To ensure consisten behaviour across ``TestClient`` and ``AsyncTestClient``, all testing utilities have been
+        rewritten to be async first, with their synchronous counterparts proxying calls to the async implementation,
+        which they run internally within a dedicated thread + event loop.
+
+        .. seealso::
+            :ref:`usage/testing:Test Clients`
+            :ref:`usage/testing:Deciding which test client to use`
+
+    .. change:: Remove deprecated plugin properties from ``Litestar``
+        :type: feature
+        :pr: 4297
+        :breaking:
+
+        Remove deprecated ``<plugin_type>_plugins`` properties from :class:`Litestar`.
+
+        ===================================  ===================================
+        Removed                              Use instead
+        ===================================  ===================================
+        ``Litestar.openapi_schema_plugins``  ``Litestar.plugins.openapi_schema``
+        ``Litestar.cli_plugins``             ``Litestar.plugins.cli``
+        ``Litestar.serialization_plugins``   ``Litestar.serialization.cli``
+        ===================================  ===================================
+
+    .. change:: Remove deprecated ``allow_reserved`` and ``allow_empty_value`` property from ``ResponseHeader`` and ``OpenAPIHeader``
+        :type: feature
+        :pr: 4299
+        :breaking:
+
+        Remove the deprecated properties ``allow_reserved`` and ``allow_empty_value`` from
+        :class:`~litestar.datastructures.ResponseHeader` and :class:`~litestar.openapi.spec.OpenAPIHeader`.
+
+    .. change:: Remove deprecated ``traceback_line_limit`` parameter of ``LoggingConfig``
+        :type: feature
+        :breaking:
+        :pr: 4300
+
+        The ``traceback_line_limit`` parameter of ``litestar.logging.config.LoggingConfig`` has been removed. This
+        parameter had no effect since version ``2.9.0``, so it can be removed safely from applications without any
+        change in behaviour.
+
+    .. change:: Remove deprecated ``litestar.middleware.cors`` module
+        :type: feature
+        :breaking:
+        :pr: 4309
+
+        Remove the deprecated ``litestar.middleware.cors`` module and ``litestar.middleware.cors.CORSMiddleware``. To
+        configure the CORS middleware, use :class:`~litestar.config.cors.CORSConfig`.
+
+    .. change:: Remove deprecated ``encoded_headers`` parameter from ASGI response classes and ``to_asgi_response`` methods
+        :type: feature
+        :pr: 4311
+        :breaking:
+
+        The deprecated ``encoded_headers`` parameter has been removed from the following clases:
+
+        - :class:`~litestar.response.base.ASGIResponse`
+        - :meth:`~litestar.response.Response.to_asgi_response`
+        - :class:`~litestar.response.file.ASGIFileResponse`
+        - :meth:`~litestar.response.File.to_asgi_response`
+        - :class:`~litestar.response.redirect.ASGIRedirectResponse`
+        - :meth:`~litestar.response.Redirect.to_asgi_response`
+        - :class:`~litestar.response.streaming.ASGIStreamingResponse`
+        - :meth:`~litestar.response.Stream.to_asgi_response`
+        - :meth:`~litestar.response.Template.to_asgi_response`
+
+        Existing code still using ``encoded_headers`` should be migrated to using the ``headers`` parameter instead.
+
+    .. change:: Remove deprecated ``litestar.contrib.htmx`` module
+        :type: feature
+        :breaking:
+        :pr: 4316
+        :issue: 4303
+
+        Remove the deprecated ``litestar.contrib.htmx`` module. Code still using imports
+        from this module should switch to using ``litestar_htmx``.
+
+        Install it via ``litestar[htmx]`` extra.
+
+    .. change:: Remove deprecated ``LitestarType``
+        :type: feature
+        :pr: 4312
+        :breaking:
+
+        Remove the deprecated ``litestar.types.internal_types.LitestarType`` type alias. In its stead,
+        ``type[Litestar]`` can be used.
+
+    .. change:: Remove deprecated ``TemplateContext``
+        :type: feature
+        :pr: 4313
+        :breaking:
+
+        Remove the deprecated ``litestar.template.base.TemplateContext`` type. Its usages should be replaced with
+        :class:`collections.abc.Mapping`.
+
+    .. change:: Remove deprecated ``ASGIResponse.encoded_headers`` property
+        :type: feature
+        :pr: 4314
+        :breaking:
+
+        Remove the deprecated ``ASGIResponse.encoded_headers`` property. Instead,
+        :meth:`~litestar.response.base.ASGIResponse.encode_headers` should be used.
+
+    .. change:: Remove deprecated ``pydantic_get_unwrapped_annotation_and_type_hints``
+        :type: feature
+        :pr: 4315
+        :breaking:
+
+        Remove the deprecated ``pydantic_get_unwrapped_annotation_and_type_hints`` function.
+
+    .. change:: Remove deprecated ``litestar.contrib.attrs`` module
+        :type: feature
+        :breaking:
+        :pr: 4322
+        :issue: 4302
+
+        Remove the deprecated ``litestar.contrib.attrs`` module. Code still using imports
+        from this module should switch to using ``litestar.plugins.attrs``.
+
+    .. change:: Remove deprecated ``litestar.contrib.jwt`` module
+        :type: feature
+        :breaking:
+        :pr: 4333
+        :issue: 4304
+
+        Remove the deprecated ``litestar.contrib.jwt`` module. Code still using imports
+        from this module should switch to using ``litestar.security.jwt``.
+
+    .. change:: Remove deprecated ``litestar.contrib.repository`` module
+        :type: feature
+        :breaking:
+        :pr: 4337
+        :issue: 4307
+
+        Remove the deprecated ``litestar.contrib.repository`` module. Code still using imports
+        from this module should switch to using ``litestar.repository``.
+
+    .. change:: Remove deprecated ``litestar.contrib.pydantic`` module
+        :type: feature
+        :breaking:
+        :pr: 4339
+        :issue: 4306
+
+        Remove the deprecated ``litestar.contrib.pydantic`` module. Code still using imports
+        from this module should switch to using ``litestar.plugins.pydantic``.
+
+    .. change:: Remove deprecated module ``litestar/contrib/minijnja``
+        :type: feature
+        :breaking:
+        :pr: 4357
+        :issue: 4357
+
+        Remove the deprecated module ``litestar.contrib.minijnja``. This module was created with a typo in its name
+        (`minijnja` instead of `minijinja`). Instead ``litestar.contrib.minijinja`` should be used.
+
+    .. change:: Add ``round_trip`` parameter to ``PydanticPlugin``
+        :type: feature
+        :pr: 4350
+        :issue: 4349
+
+        New ``round_trip: bool`` parameter
+        to ``PydanticPlugin`` allows
+        serializing types like ``pydanctic.Json`` correctly.
+
+    .. change:: Remove deprecated ``litestar.contrib.minijinja.minijinja_from_state`` function
+        :type: feature
+        :breaking:
+        :pr: 4355
+        :issue: 4356
+
+        Remove the deprecated ``litestar.contrib.minijinja.minijinja_from_state`` function.
+        Instead use a callable that receives the minijinja ``State`` object as first argument.
+
+    .. change:: Remove deprecated ``litestar.contrib.piccolo`` module
+        :type: feature
+        :breaking:
+        :pr: 4363
+        :issue: 4364
+
+        Use ``litestar[piccolo]`` extra installation target
+        and ``litestar_piccolo`` plugin instead:
+        https://github.com/litestar-org/litestar-piccolo
+
+    .. change:: Move ``litestar.contrib.opentelemetry`` to ``litestar.plugins.opentelemetry`` and add upstream parity
+        :type: feature
+        :breaking:
+        :pr: 4691
+        :issue: 4466, 4468
+
+        Move the OpenTelemetry integration from ``litestar.contrib.opentelemetry`` to
+        ``litestar.plugins.opentelemetry``. Code still using imports from the old
+        module should switch to the new path.
+
+        :class:`~litestar.plugins.opentelemetry.OpenTelemetryConfig` has been brought
+        in line with the upstream
+        ``opentelemetry.instrumentation.asgi.OpenTelemetryMiddleware`` configuration,
+        adding ``client_request_hook_handler``, ``client_response_hook_handler``,
+        ``tracer``, ``exclude``, ``exclude_opt_key``, ``exclude_urls_env_key``,
+        ``exclude_spans``, ``http_capture_headers_server_request``,
+        ``http_capture_headers_server_response``, and
+        ``http_capture_headers_sanitize_fields``.
+
+        Also fixes a ``KeyError: 'route_handler'`` raised on every request when
+        ``exclude_opt_key`` was set, and corrects the ``OpenTelemetryHookHandler``
+        signature to accept the span, ASGI scope, and ASGI message as documented by
+        upstream.
+
+    .. change:: Change ``Optional`` to ``NotRequired`` for pydantic fields with ``default_factory``
+        :type: bugfix
+        :pr: 4347
+        :issue: 4294
+
+        Now, in the OpenAPI schema, ``pydantic`` fields with ``default_factory`` are displayed as non-null and not required.
+        Previously, this fields was nullable and not required.
+
+    .. change:: Zero cost excluded middlewares
+        :type: feature
+        :breaking:
+
+        Middlewares inheriting from :class:`~litestar.middleware.base.ASGIMiddleware`
+        will now have zero runtime cost when they are excluded e.g. via the ``scope`` or
+        ``exclude_opt_key`` options.
+
+        Previously, the base middleware was always being invoked for every request,
+        evaluating the exclusion criteria, and then calling the user defined middleware
+        functions. If a middleware had defined ``scopes = (ScopeType.HTTP,)``, it would
+        still be called for *every* request, regardless of the scope type. Only for
+        requests with the type ``HTTP``, it would then call the user's function.
+
+        .. note::
+            This behaviour is still true for the legacy ``AbstractMiddleware``
+
+        With *zero cost exclusion*, the exclusion is being evaluated statically. At app
+        creation time, when route handlers are registered and their middleware stacks
+        are being built, a middleware that is to be excluded will simply not be included
+        in the stack.
+
+        .. note::
+            Even though this change is marked as breaking, no runtime behaviour
+            difference is expected. Some test cases may break though if they relied on
+            the fact that the middleware wrapper created by ``ASGIMiddleware`` was
+            always being called
+
+    .. change:: Support for ``typing.ReadOnly`` in typed dict schemas
+        :type: feature
+        :issue: 4423
+        :pr: 4424
+
+        Support unwrapping ``ReadOnly`` type in schemas like:
+
+        .. code:: python
+
+          from typing import ReadOnly, TypedDict
+
+          class User(TypedDict):
+              id: ReadOnly[int]
+
+        ``typing_extensions.ReadOnly`` should be used for python versions <3.13.
+
+
+    .. change:: Add ``should_bypass_for_scope`` to ``ASGIMiddleware`` to allow excluding middlewares dynamically
+        :type: feature
+        :pr: 4441
+
+        Add a new attribute :attr:`~litestar.middleware.ASGIMiddleware.should_bypass_for_scope`;
+        A callable which takes in a :class:`~litestar.types.Scope` and returns a boolean
+        to indicate whether to bypass the middleware for the current request.
+
+    .. change:: Fix KeyError when ClassVar exists on msgspec Struct
+        :type: bugfix
+        :pr: 4665
+
+        Fix a bug in :class:`MsgspecDTO` where a KeyError was raised if a :class:`msgspec.Struct` contained a :class:`~typing.ClassVar`. ClassVars are now correctly skipped when generating field definitions.
