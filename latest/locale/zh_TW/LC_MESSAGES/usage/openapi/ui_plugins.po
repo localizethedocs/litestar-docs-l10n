@@ -558,9 +558,9 @@ msgstr ""
 #: ../../../usage/openapi/ui_plugins.rst:118
 msgid ""
 "Setting ``js_url`` lets you point the ReDoc bundle to any CDN or internal "
-"host. In ``redoc_config.py`` we override it to ``https://cdn.company."
-"internal/redoc/custom-redoc.js``. When provided, ``js_url`` takes precedence "
-"over ``version``."
+"host. In ``redoc_config.py`` we override it to ``https://"
+"cdn.company.internal/redoc/custom-redoc.js``. When provided, ``js_url`` "
+"takes precedence over ``version``."
 msgstr ""
 
 #: ../../../usage/openapi/ui_plugins.rst:126
@@ -585,8 +585,8 @@ msgstr ""
 #: ../../../usage/openapi/ui_plugins.rst:137
 msgid ""
 "The OpenAPI root path is the path at which the OpenAPI representations are "
-"served. By default, this is ``/schema``. This can be changed by setting the :"
-"attr:`OpenAPIConfig.path` attribute."
+"served. By default, this is ``/schema``. This can be changed by setting "
+"the :attr:`OpenAPIConfig.path` attribute."
 msgstr ""
 
 #: ../../../usage/openapi/ui_plugins.rst:140
@@ -661,8 +661,8 @@ msgstr ""
 #: ../../../usage/openapi/ui_plugins.rst:158
 msgid ""
 "The previous method of configuring elements such as the root path and "
-"styling was to subclass :class:`OpenAPIController`, and set it on the :attr:"
-"`OpenAPIConfig.openapi_controller` attribute. This approach is now "
+"styling was to subclass :class:`OpenAPIController`, and set it on "
+"the :attr:`OpenAPIConfig.openapi_controller` attribute. This approach is now "
 "deprecated and slated for removal in ``v3.0.0``, but if you are using it, "
 "there should be no change in behavior."
 msgstr ""
@@ -670,11 +670,11 @@ msgstr ""
 #: ../../../usage/openapi/ui_plugins.rst:162
 msgid ""
 "To maintain backward compatibility with the previous approach, if neither "
-"the :attr:`OpenAPIConfig.openapi_controller` or :attr:`OpenAPIConfig."
-"render_plugins` attributes are set, we will automatically add the plugins to "
-"respect the also deprecated :attr:`OpenAPIConfig.enabled_endpoints` "
-"attribute. By default, this will result in the following endpoints being "
-"enabled:"
+"the :attr:`OpenAPIConfig.openapi_controller` "
+"or :attr:`OpenAPIConfig.render_plugins` attributes are set, we will "
+"automatically add the plugins to respect the also "
+"deprecated :attr:`OpenAPIConfig.enabled_endpoints` attribute. By default, "
+"this will result in the following endpoints being enabled:"
 msgstr ""
 
 #: ../../../usage/openapi/ui_plugins.rst:167
@@ -715,8 +715,9 @@ msgstr ""
 
 #: ../../../usage/openapi/ui_plugins.rst:179
 msgid ""
-"To adopt the future behavior, explicitly set the :attr:`OpenAPIConfig."
-"render_plugins` field to an instance of :class:`ScalarRenderPlugin`:"
+"To adopt the future behavior, explicitly set "
+"the :attr:`OpenAPIConfig.render_plugins` field to an instance "
+"of :class:`ScalarRenderPlugin`:"
 msgstr ""
 
 #: ../../../usage/openapi/ui_plugins.rst:183
@@ -738,24 +739,26 @@ msgstr ""
 
 #: ../../../usage/openapi/ui_plugins.rst:189
 msgid ""
-"Litestar has always supported a ``root_schema_site`` attribute on the :class:"
-"`OpenAPIConfig` class. This attribute allows you to elect to serve a UI at "
-"the OpenAPI root path, e.g., by default ``redoc`` would be served at both ``/"
-"schema`` and ``/schema/redoc``."
+"Litestar has always supported a ``root_schema_site`` attribute on "
+"the :class:`OpenAPIConfig` class. This attribute allows you to elect to "
+"serve a UI at the OpenAPI root path, e.g., by default ``redoc`` would be "
+"served at both ``/schema`` and ``/schema/redoc``."
 msgstr ""
 
 #: ../../../usage/openapi/ui_plugins.rst:193
 msgid ""
 "In ``v3.0.0``, the ``root_schema_site`` attribute will be removed, and the "
-"first :class:`OpenAPIRenderPlugin` in the :attr:`OpenAPIConfig."
-"render_plugins` list will be assigned to the ``/schema`` endpoint."
+"first :class:`OpenAPIRenderPlugin` in "
+"the :attr:`OpenAPIConfig.render_plugins` list will be assigned to the ``/"
+"schema`` endpoint."
 msgstr ""
 
 #: ../../../usage/openapi/ui_plugins.rst:196
 msgid ""
-"As of ``v2.8.0``, if you explicitly use the new :attr:`OpenAPIConfig."
-"render_plugins` attribute, you will be automatically opted in to the new "
-"behavior, and the ``root_schema_site`` attribute will be ignored."
+"As of ``v2.8.0``, if you explicitly use the "
+"new :attr:`OpenAPIConfig.render_plugins` attribute, you will be "
+"automatically opted in to the new behavior, and the ``root_schema_site`` "
+"attribute will be ignored."
 msgstr ""
 
 #: ../../../usage/openapi/ui_plugins.rst:200
@@ -765,9 +768,9 @@ msgstr ""
 #: ../../../usage/openapi/ui_plugins.rst:202
 msgid ""
 "If Litestar does not have built-in support for your OpenAPI UI framework of "
-"choice, you can easily create your own plugin by subclassing :class:"
-"`OpenAPIRenderPlugin` and implementing the :meth:`OpenAPIRenderPlugin."
-"render` method."
+"choice, you can easily create your own plugin by "
+"subclassing :class:`OpenAPIRenderPlugin` and implementing "
+"the :meth:`OpenAPIRenderPlugin.render` method."
 msgstr ""
 
 #: ../../../usage/openapi/ui_plugins.rst:205
@@ -1082,11 +1085,12 @@ msgstr ""
 
 #: ../../../usage/openapi/ui_plugins.rst:286
 msgid ""
-"When using Swagger, OAuth2 settings can be configured via :attr:"
-"`swagger_ui_init_oauth <litestar.openapi.controller.OpenAPIController."
-"swagger_ui_init_oauth>`, which can be set to a dictionary containing the "
-"parameters described in the Swagger UI documentation for OAuth2 `here "
-"<https://swagger.io/docs/open-source-tools/swagger-ui/usage/oauth2/>`_."
+"When using Swagger, OAuth2 settings can be configured "
+"via :attr:`swagger_ui_init_oauth "
+"<litestar.openapi.controller.OpenAPIController.swagger_ui_init_oauth>`, "
+"which can be set to a dictionary containing the parameters described in the "
+"Swagger UI documentation for OAuth2 `here <https://swagger.io/docs/open-"
+"source-tools/swagger-ui/usage/oauth2/>`_."
 msgstr ""
 
 #: ../../../usage/openapi/ui_plugins.rst:291

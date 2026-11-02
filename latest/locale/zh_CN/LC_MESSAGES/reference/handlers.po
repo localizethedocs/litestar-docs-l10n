@@ -104,9 +104,10 @@ msgstr ""
 #: ../../../../litestar/handlers/__init__.py:docstring of
 #: litestar.handlers.asgi_handlers.ASGIRouteHandler.__init__:6
 msgid ""
-"A string key mapping of arbitrary values that can be accessed in :class:"
-"`Guards <.types.Guard>` or wherever you have access to :class:`Request <."
-"connection.Request>` or :class:`ASGI Scope <.types.Scope>`."
+"A string key mapping of arbitrary values that can be accessed "
+"in :class:`Guards <.types.Guard>` or wherever you have access "
+"to :class:`Request <.connection.Request>` or :class:`ASGI Scope "
+"<.types.Scope>`."
 msgstr ""
 
 #: ../../../../litestar/handlers/__init__.py:docstring of
@@ -329,9 +330,10 @@ msgstr ""
 #: litestar.handlers.websocket_handlers.stream.websocket_stream:23
 #: ../../../../docstring litestar.handlers.WebsocketListener.opt:1
 msgid ""
-"A string keyed mapping of arbitrary values that can be accessed in :class:"
-"`Guards <.types.Guard>` or wherever you have access to :class:`Request <."
-"connection.Request>` or :class:`ASGI Scope <.types.Scope>`."
+"A string keyed mapping of arbitrary values that can be accessed "
+"in :class:`Guards <.types.Guard>` or wherever you have access "
+"to :class:`Request <.connection.Request>` or :class:`ASGI Scope "
+"<.types.Scope>`."
 msgstr ""
 
 #: ../../../../litestar/handlers/__init__.py:docstring of
@@ -536,8 +538,8 @@ msgstr ""
 #: ../../../../litestar/handlers/__init__.py:docstring of
 #: litestar.handlers.base.BaseRouteHandler.resolve_middleware:3
 msgid ""
-"The middlewares are added from top to bottom (``app -> router -> controller -"
-"> route handler``) and then reversed."
+"The middlewares are added from top to bottom (``app -> router -> controller "
+"-> route handler``) and then reversed."
 msgstr ""
 
 #: ../../../../litestar/handlers/__init__.py:docstring of
@@ -612,10 +614,10 @@ msgstr ""
 #: litestar.handlers.http_handlers.decorators.post.__init__:5
 #: litestar.handlers.http_handlers.decorators.put.__init__:5
 msgid ""
-"A sync or async function executed before a :class:`Request <.connection."
-"Request>` is passed to any route handler. If this function returns a value, "
-"the request will not reach the route handler, and instead this value will be "
-"used."
+"A sync or async function executed before a :class:`Request "
+"<.connection.Request>` is passed to any route handler. If this function "
+"returns a value, the request will not reach the route handler, and instead "
+"this value will be used."
 msgstr ""
 
 #: ../../../../litestar/handlers/__init__.py:docstring of
@@ -641,9 +643,9 @@ msgstr ""
 #: litestar.handlers.http_handlers.decorators.post.__init__:10
 #: litestar.handlers.http_handlers.decorators.put.__init__:10
 msgid ""
-"A :class:`BackgroundTask <.background_tasks.BackgroundTask>` instance or :"
-"class:`BackgroundTasks <.background_tasks.BackgroundTasks>` to execute after "
-"the response is finished. Defaults to ``None``."
+"A :class:`BackgroundTask <.background_tasks.BackgroundTask>` instance "
+"or :class:`BackgroundTasks <.background_tasks.BackgroundTasks>` to execute "
+"after the response is finished. Defaults to ``None``."
 msgstr ""
 
 #: ../../../../litestar/handlers/__init__.py:docstring of
@@ -678,8 +680,8 @@ msgstr ""
 #: litestar.handlers.http_handlers.decorators.post.__init__:18
 #: litestar.handlers.http_handlers.decorators.put.__init__:18
 msgid ""
-"A ``cache-control`` header of type :class:`CacheControlHeader <."
-"datastructures.CacheControlHeader>` that will be added to the response."
+"A ``cache-control`` header of type :class:`CacheControlHeader "
+"<.datastructures.CacheControlHeader>` that will be added to the response."
 msgstr ""
 
 #: ../../../../litestar/handlers/__init__.py:docstring of
@@ -712,9 +714,9 @@ msgstr ""
 #: ../../../../litestar/handlers/__init__.py:docstring of
 #: litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__:28
 msgid ""
-"An :class:`http method string <.types.Method>`, a member of the enum :class:"
-"`HttpMethod <.enums.HttpMethod>` or a list of these that correlates to the "
-"methods the route handler function should handle."
+"An :class:`http method string <.types.Method>`, a member of the "
+"enum :class:`HttpMethod <.enums.HttpMethod>` or a list of these that "
+"correlates to the methods the route handler function should handle."
 msgstr ""
 
 #: ../../../../litestar/handlers/__init__.py:docstring of
@@ -786,8 +788,8 @@ msgstr ""
 #: litestar.handlers.http_handlers.decorators.post.__init__:44
 #: litestar.handlers.http_handlers.decorators.put.__init__:44
 msgid ""
-"A string keyed mapping of :class:`ResponseHeader <.datastructures."
-"ResponseHeader>` instances."
+"A string keyed mapping of :class:`ResponseHeader "
+"<.datastructures.ResponseHeader>` instances."
 msgstr ""
 
 #: ../../../../litestar/handlers/__init__.py:docstring of
@@ -995,8 +997,8 @@ msgstr ""
 #: ../../../../litestar/handlers/__init__.py:docstring of
 #: litestar.handlers.http_handlers.base.HTTPRouteHandler.resolve_after_response:6
 msgid ""
-"An optional :class:`after response lifecycle hook handler <.types."
-"AfterResponseHookHandler>`"
+"An optional :class:`after response lifecycle hook handler "
+"<.types.AfterResponseHookHandler>`"
 msgstr ""
 
 #: ../../../../litestar/handlers/__init__.py:docstring of
@@ -1009,8 +1011,8 @@ msgstr ""
 #: ../../../../litestar/handlers/__init__.py:docstring of
 #: litestar.handlers.http_handlers.base.HTTPRouteHandler.resolve_before_request:6
 msgid ""
-"An optional :class:`before request lifecycle hook handler <.types."
-"BeforeRequestHookHandler>`"
+"An optional :class:`before request lifecycle hook handler "
+"<.types.BeforeRequestHookHandler>`"
 msgstr ""
 
 #: ../../../../litestar/handlers/__init__.py:docstring of
@@ -1085,8 +1087,8 @@ msgstr ""
 #: ../../../../litestar/handlers/__init__.py:docstring of
 #: litestar.handlers.http_handlers.base.HTTPRouteHandler.resolve_response_headers:3
 msgid ""
-"A dictionary mapping keys to :class:`ResponseHeader <.datastructures."
-"ResponseHeader>` instances."
+"A dictionary mapping keys to :class:`ResponseHeader "
+"<.datastructures.ResponseHeader>` instances."
 msgstr ""
 
 #: ../../../../litestar/handlers/__init__.py:docstring of
@@ -1252,9 +1254,7 @@ msgstr ""
 
 #: ../../../../litestar/handlers/__init__.py:docstring of
 #: litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler:1
-msgid ""
-"Bases: :py:class:`~litestar.handlers.websocket_handlers.route_handler."
-"WebsocketRouteHandler`"
+msgid "Bases: :py:class:`~litestar.handlers.websocket_handlers.route_handler.WebsocketRouteHandler`"
 msgstr ""
 
 #: ../../../../litestar/handlers/__init__.py:docstring of
@@ -1300,8 +1300,8 @@ msgstr ""
 msgid ""
 "An asynchronous context manager, handling the lifespan of the connection. By "
 "default, it calls the ``connection_accept_handler``, ``on_connect`` and "
-"``on_disconnect``. Can request any dependencies, for example the :class:"
-"`WebSocket <.connection.WebSocket>` connection"
+"``on_disconnect``. Can request any dependencies, for example "
+"the :class:`WebSocket <.connection.WebSocket>` connection"
 msgstr ""
 
 #: ../../../../litestar/handlers/__init__.py:docstring of
@@ -1329,8 +1329,8 @@ msgstr ""
 #: ../../../../litestar/handlers/__init__.py:docstring of
 #: litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler.default_connection_lifespan:1
 msgid ""
-"Handle the connection lifespan of a :class:`WebSocket <.connection."
-"WebSocket>`."
+"Handle the connection lifespan of a :class:`WebSocket "
+"<.connection.WebSocket>`."
 msgstr ""
 
 #: ../../../../litestar/handlers/__init__.py:docstring of
@@ -1399,8 +1399,7 @@ msgstr ""
 #: litestar.handlers.http_handlers.decorators.patch:1
 #: litestar.handlers.http_handlers.decorators.post:1
 #: litestar.handlers.http_handlers.decorators.put:1
-msgid ""
-"Bases: :py:class:`~litestar.handlers.http_handlers.base.HTTPRouteHandler`"
+msgid "Bases: :py:class:`~litestar.handlers.http_handlers.base.HTTPRouteHandler`"
 msgstr ""
 
 #: ../../../../litestar/handlers/__init__.py:docstring of
@@ -1439,9 +1438,9 @@ msgstr ""
 #: litestar.handlers.http_handlers.decorators.post.__init__:28
 #: litestar.handlers.http_handlers.decorators.put.__init__:28
 msgid ""
-"An :class:`http method string <.types.Method>`, a member of the enum :class:"
-"`HttpMethod <litestar.enums.HttpMethod>` or a list of these that correlates "
-"to the methods the route handler function should handle."
+"An :class:`http method string <.types.Method>`, a member of the "
+"enum :class:`HttpMethod <litestar.enums.HttpMethod>` or a list of these that "
+"correlates to the methods the route handler function should handle."
 msgstr ""
 
 #: ../../../../litestar/handlers/__init__.py:docstring of
@@ -1627,8 +1626,8 @@ msgstr ""
 #: ../../../../litestar/handlers/__init__.py:docstring of
 #: litestar.handlers.websocket_handlers.stream.send_websocket_stream:28
 msgid ""
-"Callable to handle the send process. If ``None``, defaults to ``type(socket)."
-"send_data``"
+"Callable to handle the send process. If ``None``, defaults to "
+"``type(socket).send_data``"
 msgstr ""
 
 #: ../../../../litestar/handlers/__init__.py:docstring of

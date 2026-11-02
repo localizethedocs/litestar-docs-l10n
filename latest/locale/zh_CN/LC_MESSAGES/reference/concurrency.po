@@ -59,9 +59,9 @@ msgstr ""
 msgid ""
 "When called from asyncio, uses :meth:`asyncio.loop.run_in_executor` to run "
 "the callable. No executor is specified by default so the current loop's "
-"executor is used. A specific executor can be set using :func:`~litestar."
-"concurrency.set_asyncio_executor`. This does not affect the loop's default "
-"executor."
+"executor is used. A specific executor can be set "
+"using :func:`~litestar.concurrency.set_asyncio_executor`. This does not "
+"affect the loop's default executor."
 msgstr ""
 
 #: ../../../../litestar/concurrency.py:docstring of

@@ -28,8 +28,8 @@ msgstr ""
 #: ../../../../litestar/middleware/session/client_side.py:docstring of
 #: litestar.middleware.session.client_side.ClientSideSessionBackend:1
 msgid ""
-"Bases: :py:class:`~litestar.middleware.session.base.BaseSessionBackend`\\ [:"
-"py:class:`CookieBackendConfig`]"
+"Bases: :py:class:`~litestar.middleware.session.base.BaseSessionBackend`\\ "
+"[:py:class:`CookieBackendConfig`]"
 msgstr ""
 
 #: ../../../../litestar/middleware/session/client_side.py:docstring of
@@ -202,8 +202,8 @@ msgstr ""
 #: ../../../../litestar/middleware/session/client_side.py:docstring of
 #: litestar.middleware.session.client_side.CookieBackendConfig:1
 msgid ""
-"Bases: :py:class:`~litestar.middleware.session.base.BaseBackendConfig`\\ [:"
-"py:class:`~litestar.middleware.session.client_side.ClientSideSessionBackend`]"
+"Bases: :py:class:`~litestar.middleware.session.base.BaseBackendConfig`\\ "
+"[:py:class:`~litestar.middleware.session.client_side.ClientSideSessionBackend`]"
 msgstr ""
 
 #: ../../../../litestar/middleware/session/client_side.py:docstring of

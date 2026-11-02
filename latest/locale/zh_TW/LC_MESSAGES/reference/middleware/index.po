@@ -150,8 +150,8 @@ msgstr ""
 #: litestar.middleware.authentication.AbstractAuthenticationMiddleware:1
 msgid ""
 "Abstract AuthenticationMiddleware that allows users to create their own "
-"AuthenticationMiddleware by extending it and overriding :meth:"
-"`AbstractAuthenticationMiddleware.authenticate_request`."
+"AuthenticationMiddleware by extending it and "
+"overriding :meth:`AbstractAuthenticationMiddleware.authenticate_request`."
 msgstr ""
 
 #: ../../../../litestar/middleware/__init__.py:docstring of
@@ -247,8 +247,8 @@ msgstr ""
 #: ../../../../litestar/middleware/__init__.py:docstring of
 #: litestar.middleware.authentication.AbstractAuthenticationMiddleware.authenticate_request:11
 msgid ""
-"An instance of :class:`AuthenticationResult <litestar.middleware."
-"authentication.AuthenticationResult>`."
+"An instance of :class:`AuthenticationResult "
+"<litestar.middleware.authentication.AuthenticationResult>`."
 msgstr ""
 
 #: ../../../../litestar/middleware/__init__.py:docstring of

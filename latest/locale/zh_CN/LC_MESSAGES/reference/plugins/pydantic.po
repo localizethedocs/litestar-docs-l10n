@@ -29,24 +29,24 @@ msgstr ""
 #: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
 #: litestar.plugins.pydantic.plugins.di.PydanticDIPlugin.get_typed_init:1
 msgid ""
-"Return signature and type information about the ``type_``\\ s :func:"
-"`__init__` method."
+"Return signature and type information about the ``type_``\\ "
+"s :func:`__init__` method."
 msgstr ""
 
 #: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
 #: litestar.plugins.pydantic.plugins.di.PydanticDIPlugin.has_typed_init:1
 msgid ""
-"Return ``True`` if ``type_`` has type information available for its :func:"
-"`__init__` method that cannot be extracted from this method's type "
-"annotations (e.g. a Pydantic BaseModel subclass), and :meth:`DIPlugin."
-"get_typed_init` supports extraction of these annotations."
+"Return ``True`` if ``type_`` has type information available for "
+"its :func:`__init__` method that cannot be extracted from this method's type "
+"annotations (e.g. a Pydantic BaseModel subclass), "
+"and :meth:`DIPlugin.get_typed_init` supports extraction of these annotations."
 msgstr ""
 
 #: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
 #: litestar.plugins.pydantic.dto.PydanticDTO:1
 msgid ""
-"Bases: :py:class:`~litestar.dto.base_dto.AbstractDTO`, :py:class:`~typing."
-"Generic`\\ [:py:obj:`~litestar.plugins.pydantic.dto.T`]"
+"Bases: :py:class:`~litestar.dto.base_dto.AbstractDTO`, :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~litestar.plugins.pydantic.dto.T`]"
 msgstr ""
 
 #: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
@@ -176,8 +176,8 @@ msgstr ""
 #: litestar.plugins.pydantic.PydanticPlugin.__init__:10
 #: litestar.plugins.pydantic.plugins.init.PydanticInitPlugin.__init__:10
 msgid ""
-"use ``round_trip=True`` when calling ``.model_dump`` and ``."
-"model_dump_json`` on Pydantic 2.x models"
+"use ``round_trip=True`` when calling ``.model_dump`` and "
+"``.model_dump_json`` on Pydantic 2.x models"
 msgstr ""
 
 #: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
@@ -288,9 +288,9 @@ msgstr ""
 #: ../../../../litestar/plugins/pydantic/__init__.py:docstring of
 #: litestar.plugins.pydantic.plugins.schema.PydanticSchemaPlugin.is_plugin_supported_type:3
 msgid ""
-"This is called by the default implementation of :meth:"
-"`is_plugin_supported_field` for backwards compatibility. User's should "
-"prefer to override that method instead."
+"This is called by the default implementation "
+"of :meth:`is_plugin_supported_field` for backwards compatibility. User's "
+"should prefer to override that method instead."
 msgstr ""
 
 #: ../../../../litestar/plugins/pydantic/__init__.py:docstring of

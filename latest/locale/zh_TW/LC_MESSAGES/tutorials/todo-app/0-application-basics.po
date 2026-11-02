@@ -174,8 +174,8 @@ msgstr ""
 
 #: ../../../tutorials/todo-app/0-application-basics.rst:115
 msgid ""
-"If you are using a static type checker - such as `mypy <https://mypy."
-"readthedocs.io/en/stable/>`_ or `pyright <https://microsoft.github.io/"
+"If you are using a static type checker - such as `mypy <https://"
+"mypy.readthedocs.io/en/stable/>`_ or `pyright <https://microsoft.github.io/"
 "pyright/#/>`_ - this has the added benefit of making your applications easy "
 "to check and more type-safe."
 msgstr ""

@@ -178,8 +178,8 @@ msgstr ""
 
 #: ../../../tutorials/todo-app/1-accessing-the-list.rst:38
 msgid ""
-"To make your life a little easier, you can transform this example by using :"
-"py:mod:`dataclasses` instead of plain dictionaries:"
+"To make your life a little easier, you can transform this example by "
+"using :py:mod:`dataclasses` instead of plain dictionaries:"
 msgstr ""
 
 #: ../../../tutorials/todo-app/1-accessing-the-list.rst:40
@@ -256,10 +256,10 @@ msgstr ""
 
 #: ../../../tutorials/todo-app/1-accessing-the-list.rst:54
 msgid ""
-"In addition to dataclasses, Litestar supports many more types such as :class:"
-"`TypedDict <typing.TypedDict>`, :class:`NamedTuple <typing.NamedTuple>`, "
-"`Pydantic models <https://docs.pydantic.dev/usage/models/>`_, or `attrs "
-"classes <https://www.attrs.org/en/stable/>`_."
+"In addition to dataclasses, Litestar supports many more types such "
+"as :class:`TypedDict <typing.TypedDict>`, :class:`NamedTuple "
+"<typing.NamedTuple>`, `Pydantic models <https://docs.pydantic.dev/usage/"
+"models/>`_, or `attrs classes <https://www.attrs.org/en/stable/>`_."
 msgstr ""
 
 #: ../../../tutorials/todo-app/1-accessing-the-list.rst:61
@@ -276,11 +276,11 @@ msgstr ""
 #: ../../../tutorials/todo-app/1-accessing-the-list.rst:67
 msgid ""
 "For this you can employ query parameters; to define a query parameter, add a "
-"parameter to the handler function and annotate it with :data:`~.params."
-"FromQuery`, parameterised by the type you expect the value to have. When a "
-"request is being made, the query parameter will be extracted from the URL, "
-"converted to the declared type, and passed to the function parameter of the "
-"same name."
+"parameter to the handler function and annotate it "
+"with :data:`~.params.FromQuery`, parameterised by the type you expect the "
+"value to have. When a request is being made, the query parameter will be "
+"extracted from the URL, converted to the declared type, and passed to the "
+"function parameter of the same name."
 msgstr ""
 
 #: ../../../tutorials/todo-app/1-accessing-the-list.rst:74
@@ -582,9 +582,9 @@ msgstr ""
 #: ../../../tutorials/todo-app/1-accessing-the-list.rst:173
 msgid ""
 "The parameter is now declared as ``done: FromQuery[bool]``. The ``bool`` "
-"inside the brackets tells Litestar to convert the incoming string into a :"
-"class:`bool` before passing it to the handler. Since ``john`` (arguably) is "
-"not a representation of a boolean value, it will return an error response "
+"inside the brackets tells Litestar to convert the incoming string into "
+"a :class:`bool` before passing it to the handler. Since ``john`` (arguably) "
+"is not a representation of a boolean value, it will return an error response "
 "instead."
 msgstr ""
 
@@ -594,9 +594,9 @@ msgstr ""
 
 #: ../../../tutorials/todo-app/1-accessing-the-list.rst:186
 msgid ""
-"It is important to note that this conversion is not the result of calling :"
-"class:`bool` on the raw value. ``bool(\"john\")`` would be :obj:`True`, "
-"since Python considers all non-empty strings to be truthy."
+"It is important to note that this conversion is not the result of "
+"calling :class:`bool` on the raw value. ``bool(\"john\")`` would "
+"be :obj:`True`, since Python considers all non-empty strings to be truthy."
 msgstr ""
 
 #: ../../../tutorials/todo-app/1-accessing-the-list.rst:190
@@ -759,8 +759,8 @@ msgstr ""
 
 #: ../../../tutorials/todo-app/1-accessing-the-list.rst:248
 msgid ""
-":ref:`Routing - Parameters - Query Parameters <usage/routing/parameters:"
-"query parameters>`"
+":ref:`Routing - Parameters - Query Parameters <usage/routing/"
+"parameters:query parameters>`"
 msgstr ""
 
 #: ../../../tutorials/todo-app/1-accessing-the-list.rst:252
@@ -803,7 +803,7 @@ msgstr ""
 msgid ""
 "In addition to Swagger, Litestar serves the documentation from the generated "
 "OpenAPI schema with `ReDoc <https://redocly.com/>`_ and `Stoplight Elements "
-"<https://stoplight.io/open-source/elements/>`_. You can browse to "
-"http://127.0.0.1:8000/schema/redoc and http://127.0.0.1:8000/schema/elements "
-"to view each, respectively."
+"<https://stoplight.io/open-source/elements/>`_. You can browse to http://"
+"127.0.0.1:8000/schema/redoc and http://127.0.0.1:8000/schema/elements to "
+"view each, respectively."
 msgstr ""

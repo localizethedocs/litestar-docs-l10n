@@ -24,9 +24,9 @@ msgstr ""
 #: ../../../usage/cli.rst:7
 msgid ""
 "Litestar provides a convenient command line interface (CLI) for running and "
-"managing Litestar applications. The CLI is powered by `click <https://click."
-"palletsprojects.com/>`_, `rich <https://rich.readthedocs.io>`_, and `rich-"
-"click <https://github.com/ewels/rich-click>`_."
+"managing Litestar applications. The CLI is powered by `click <https://"
+"click.palletsprojects.com/>`_, `rich <https://rich.readthedocs.io>`_, and "
+"`rich-click <https://github.com/ewels/rich-click>`_."
 msgstr ""
 
 #: ../../../usage/cli.rst:12
@@ -67,8 +67,8 @@ msgid ""
 "Litestar offers autodiscovery of applications and application factories "
 "placed within the canonical modules named either ``app`` or ``application``. "
 "These modules can be individual files or directories. Within these modules "
-"or their submodules, the CLI will detect any instances of :class:`Litestar <."
-"app.Litestar>`, callables named ``create_app``, or callables annotated to "
+"or their submodules, the CLI will detect any instances of :class:`Litestar "
+"<.app.Litestar>`, callables named ``create_app``, or callables annotated to "
 "return a :class:`Litestar <.app.Litestar>` instance."
 msgstr ""
 
@@ -106,14 +106,14 @@ msgstr "在這些位置中，Litestar CLI 會尋找："
 
 #: ../../../usage/cli.rst:46
 msgid ""
-"An :term:`object` named ``app`` that is an instance of :class:`~.app."
-"Litestar`"
+"An :term:`object` named ``app`` that is an instance "
+"of :class:`~.app.Litestar`"
 msgstr ""
 
 #: ../../../usage/cli.rst:47
 msgid ""
-"An object named ``application`` that is an instance of :class:`~.app."
-"Litestar`"
+"An object named ``application`` that is an instance "
+"of :class:`~.app.Litestar`"
 msgstr ""
 
 #: ../../../usage/cli.rst:48
@@ -169,9 +169,9 @@ msgstr ""
 #: ../../../usage/cli.rst:79
 msgid ""
 "Litestar's CLI is built with `click <https://click.palletsprojects.com/>`_ "
-"and can be extended by making use of `entry points <https://packaging.python."
-"org/en/latest/specifications/entry-points/>`_, or by creating a plugin that "
-"conforms to the :class:`~.plugins.CLIPluginProtocol`."
+"and can be extended by making use of `entry points <https://"
+"packaging.python.org/en/latest/specifications/entry-points/>`_, or by "
+"creating a plugin that conforms to the :class:`~.plugins.CLIPluginProtocol`."
 msgstr ""
 
 #: ../../../usage/cli.rst:84
@@ -181,8 +181,8 @@ msgstr ""
 #: ../../../usage/cli.rst:86
 msgid ""
 "Entry points for the CLI can be added under the ``litestar.commands`` group. "
-"These entries should point to a :class:`click.Command` or :class:`click."
-"Group`:"
+"These entries should point to a :class:`click.Command` "
+"or :class:`click.Group`:"
 msgstr ""
 
 #: ../../../usage/cli.rst:0
@@ -253,11 +253,11 @@ msgstr ""
 
 #: ../../../usage/cli.rst:138
 msgid ""
-"A plugin extending the CLI can be created using the :class:`~.plugins."
-"CLIPluginProtocol`. Its :meth:`~.plugins.CLIPluginProtocol.on_cli_init` will "
-"be called during the initialization of the CLI, and receive the root :class:"
-"`click.Group` as its first argument, which can then be used to add or "
-"override commands:"
+"A plugin extending the CLI can be created using "
+"the :class:`~.plugins.CLIPluginProtocol`. "
+"Its :meth:`~.plugins.CLIPluginProtocol.on_cli_init` will be called during "
+"the initialization of the CLI, and receive the root :class:`click.Group` as "
+"its first argument, which can then be used to add or override commands:"
 msgstr ""
 
 #: ../../../usage/cli.rst:143

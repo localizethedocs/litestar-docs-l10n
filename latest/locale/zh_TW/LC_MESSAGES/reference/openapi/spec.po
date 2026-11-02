@@ -180,8 +180,8 @@ msgstr ""
 
 #: ../../../../docstring of litestar.openapi.spec.Components.security_schemes:1
 msgid ""
-"An object to hold reusable `Security Scheme  Objects <https://spec.openapis."
-"org/oas/v3.1.0#securitySchemeObject>`_"
+"An object to hold reusable `Security Scheme  Objects <https://"
+"spec.openapis.org/oas/v3.1.0#securitySchemeObject>`_"
 msgstr ""
 
 #: ../../../../docstring of litestar.openapi.spec.Components.schemas:1
@@ -259,9 +259,9 @@ msgstr ""
 msgid ""
 "This property SHALL be ignored if the request body media type s not "
 "``application/x-www-form-urlencoded`` or ``multipart/form-data``. If a value "
-"is explicitly defined, then the value of `contentType <https://spec.openapis."
-"org/oas/v3.1.0#encodingContentType>`_ (implicit or explicit) SHALL be "
-"ignored."
+"is explicitly defined, then the value of `contentType <https://"
+"spec.openapis.org/oas/v3.1.0#encodingContentType>`_ (implicit or explicit) "
+"SHALL be ignored."
 msgstr ""
 
 #: ../../../../docstring of litestar.openapi.spec.Encoding.content_type:1
@@ -303,9 +303,9 @@ msgid ""
 "default value is ``True``. For all other styles, the default value is "
 "``False``. This property SHALL be ignored if the request body media type is "
 "not ``application/x-www-form-urlencoded`` or ``multipart/form-data``. If a "
-"value is explicitly defined, then the value of `contentType <https://spec."
-"openapis.org/oas/v3.1.0#encodingContentType>`_ (implicit or explicit) SHALL "
-"be ignored."
+"value is explicitly defined, then the value of `contentType <https://"
+"spec.openapis.org/oas/v3.1.0#encodingContentType>`_ (implicit or explicit) "
+"SHALL be ignored."
 msgstr ""
 
 #: ../../../../docstring of litestar.openapi.spec.Encoding.headers:1
@@ -330,13 +330,14 @@ msgstr ""
 #: ../../../../docstring of litestar.openapi.spec.Encoding.style:3
 msgid ""
 "See `Parameter Object <https://spec.openapis.org/oas/"
-"v3.1.0#parameterObject>`_ for details on the `style <https://spec.openapis."
-"org/oas/v3.1.0#parameterStyle>`__ property. The behavior follows the same "
-"values as ``query`` parameters, including default values. This property "
-"SHALL be ignored if the request body media type is not ``application/x-www-"
-"form-urlencoded`` or ``multipart/form-data``. If a value is explicitly "
-"defined, then the value of `contentType <https://spec.openapis.org/oas/"
-"v3.1.0#encodingContentType>`_ (implicit or explicit) SHALL be ignored."
+"v3.1.0#parameterObject>`_ for details on the `style <https://"
+"spec.openapis.org/oas/v3.1.0#parameterStyle>`__ property. The behavior "
+"follows the same values as ``query`` parameters, including default values. "
+"This property SHALL be ignored if the request body media type is not "
+"``application/x-www-form-urlencoded`` or ``multipart/form-data``. If a value "
+"is explicitly defined, then the value of `contentType <https://"
+"spec.openapis.org/oas/v3.1.0#encodingContentType>`_ (implicit or explicit) "
+"SHALL be ignored."
 msgstr ""
 
 #: ../../../../litestar/openapi/spec/__init__.py:docstring of
@@ -659,11 +660,11 @@ msgstr ""
 
 #: ../../../../docstring of litestar.openapi.spec.OpenAPI.openapi:1
 msgid ""
-"**REQUIRED**. This string MUST be the `version number <https://spec.openapis."
-"org/oas/v3.1.0#versions>`_ of the OpenAPI Specification that the OpenAPI "
-"document uses. The ``openapi`` field SHOULD be used by tooling to interpret "
-"the OpenAPI document. This is *not* related to the API `info.version "
-"<https://spec.openapis.org/oas/v3.1.0#infoVersion>`_ string."
+"**REQUIRED**. This string MUST be the `version number <https://"
+"spec.openapis.org/oas/v3.1.0#versions>`_ of the OpenAPI Specification that "
+"the OpenAPI document uses. The ``openapi`` field SHOULD be used by tooling "
+"to interpret the OpenAPI document. This is *not* related to the API "
+"`info.version <https://spec.openapis.org/oas/v3.1.0#infoVersion>`_ string."
 msgstr ""
 
 #: ../../../../docstring of litestar.openapi.spec.OpenAPI.paths:1
@@ -690,10 +691,10 @@ msgstr ""
 #: ../../../../docstring of litestar.openapi.spec.OpenAPI.tags:3
 msgid ""
 "The order of the tags can be used to reflect on their order by the parsing "
-"tools. Not all tags that are used by the `Operation Object <https://spec."
-"openapis.org/oas/v3.1.0#operationObject>`_ must be declared. The tags that "
-"are not declared MAY be organized randomly or based on the tools' logic. "
-"Each tag name in the list MUST be unique."
+"tools. Not all tags that are used by the `Operation Object <https://"
+"spec.openapis.org/oas/v3.1.0#operationObject>`_ must be declared. The tags "
+"that are not declared MAY be organized randomly or based on the tools' "
+"logic. Each tag name in the list MUST be unique."
 msgstr ""
 
 #: ../../../../docstring of litestar.openapi.spec.OpenAPI.webhooks:1
@@ -1110,15 +1111,15 @@ msgstr ""
 
 #: ../../../../docstring of litestar.openapi.spec.Operation.parameters:3
 msgid ""
-"If a parameter is already defined at the `Path Item <https://spec.openapis."
-"org/oas/v3.1.0#pathItemParameters>`_, the new definition will override it "
-"but can never remove it. The list MUST NOT include duplicated parameters. A "
-"unique parameter is defined by a combination of a `name <https://spec."
-"openapis.org/oas/v3.1.0#parameterName>`_ and `location <https://spec."
-"openapis.org/oas/v3.1.0#parameterIn>`_. The list can use the `Reference "
-"Object <https://spec.openapis.org/oas/v3.1.0#referenceObject>`_ to link to "
-"parameters that are defined at the `OpenAPI Object's components/parameters "
-"<https://spec.openapis.org/oas/v3.1.0#componentsParameters>`_."
+"If a parameter is already defined at the `Path Item <https://"
+"spec.openapis.org/oas/v3.1.0#pathItemParameters>`_, the new definition will "
+"override it but can never remove it. The list MUST NOT include duplicated "
+"parameters. A unique parameter is defined by a combination of a `name "
+"<https://spec.openapis.org/oas/v3.1.0#parameterName>`_ and `location "
+"<https://spec.openapis.org/oas/v3.1.0#parameterIn>`_. The list can use the "
+"`Reference Object <https://spec.openapis.org/oas/v3.1.0#referenceObject>`_ "
+"to link to parameters that are defined at the `OpenAPI Object's components/"
+"parameters <https://spec.openapis.org/oas/v3.1.0#componentsParameters>`_."
 msgstr ""
 
 #: ../../../../docstring of litestar.openapi.spec.Operation.request_body:1
@@ -1190,9 +1191,9 @@ msgstr ""
 #: ../../../../litestar/openapi/spec/__init__.py:docstring of
 #: litestar.openapi.spec.parameter.Parameter:3
 msgid ""
-"A unique parameter is defined by a combination of a `name <https://spec."
-"openapis.org/oas/v3.1.0#parameterName>`_ and `location <https://spec."
-"openapis.org/oas/v3.1.0#parameterIn>`_."
+"A unique parameter is defined by a combination of a `name <https://"
+"spec.openapis.org/oas/v3.1.0#parameterName>`_ and `location <https://"
+"spec.openapis.org/oas/v3.1.0#parameterIn>`_."
 msgstr ""
 
 #: ../../../../docstring of litestar.openapi.spec.Parameter.allow_empty_value:7
@@ -1340,8 +1341,8 @@ msgstr ""
 #: ../../../../docstring of litestar.openapi.spec.PathItem.ref:1
 msgid ""
 "Allows for an external definition of this path item. The referenced "
-"structure MUST be in the format of a `Path Item Object <https://spec."
-"openapis.org/oas/v3.1.0#pathItemObject>`."
+"structure MUST be in the format of a `Path Item Object <https://"
+"spec.openapis.org/oas/v3.1.0#pathItemObject>`."
 msgstr ""
 
 #: ../../../../docstring of litestar.openapi.spec.PathItem.ref:4
@@ -1454,8 +1455,8 @@ msgstr ""
 msgid ""
 "The Schema Object allows the definition of input and output data types. "
 "These types can be objects, but also primitives and arrays. This object is a "
-"superset of the `JSON Schema Specification Draft 2020-12 <https://tools.ietf."
-"org/html/draft-bhutton-json-schema-00>`_."
+"superset of the `JSON Schema Specification Draft 2020-12 <https://"
+"tools.ietf.org/html/draft-bhutton-json-schema-00>`_."
 msgstr ""
 
 #: ../../../../litestar/openapi/spec/__init__.py:docstring of
@@ -1618,11 +1619,11 @@ msgstr ""
 #: ../../../../docstring of litestar.openapi.spec.Schema.content_encoding:4
 msgid ""
 "Possible values indicating base 16, 32, and 64 encodings with several "
-"variations are listed in :rfc:`4648`. Additionally, sections 6.7 and 6.8 of :"
-"rfc:`2045` provide encodings used in MIME.  As \"base64\" is defined in both "
-"RFCs, the definition from :rfc:`4648` SHOULD be assumed unless the string is "
-"specifically intended for use in a MIME context.  Note that all of these "
-"encodings result in strings consisting only of 7-bit ASCII characters. "
+"variations are listed in :rfc:`4648`. Additionally, sections 6.7 and 6.8 "
+"of :rfc:`2045` provide encodings used in MIME.  As \"base64\" is defined in "
+"both RFCs, the definition from :rfc:`4648` SHOULD be assumed unless the "
+"string is specifically intended for use in a MIME context.  Note that all of "
+"these encodings result in strings consisting only of 7-bit ASCII characters. "
 "therefore, this keyword has no meaning for strings containing characters "
 "outside of that range."
 msgstr ""
@@ -2535,8 +2536,8 @@ msgstr ""
 #: ../../../../docstring of litestar.openapi.spec.SecurityScheme.scheme:4
 msgid ""
 "The values used SHOULD be registered in the `IANA Authentication Scheme "
-"registry <https://www.iana.org/assignments/http-authschemes/http-authschemes."
-"xhtml>`_"
+"registry <https://www.iana.org/assignments/http-authschemes/http-"
+"authschemes.xhtml>`_"
 msgstr ""
 
 #: ../../../../docstring of

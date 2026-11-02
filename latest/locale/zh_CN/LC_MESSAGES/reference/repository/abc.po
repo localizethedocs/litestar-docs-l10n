@@ -23,7 +23,6 @@ msgstr ""
 
 #: ../../../reference/repository/abc.rst:4
 msgid ""
-"Use :class:`advanced_alchemy.repository.SQLAlchemyAsyncRepository` / :class:"
-"`advanced_alchemy.repository.SQLAlchemySyncRepository` directly. This module "
-"is removed before 3.0.0."
+"Use :class:`advanced_alchemy.repository.SQLAlchemyAsyncRepository` / :class:`advanced_alchemy.repository.SQLAlchemySyncRepository` "
+"directly. This module is removed before 3.0.0."
 msgstr ""

@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../../../reference/repository/handlers.rst:4
 msgid ""
-"No direct replacement. Wire the filter signature namespace yourself, or use :"
-"class:`advanced_alchemy.extensions.litestar.SQLAlchemyPlugin` which "
+"No direct replacement. Wire the filter signature namespace yourself, or "
+"use :class:`advanced_alchemy.extensions.litestar.SQLAlchemyPlugin` which "
 "registers it for you. This module is removed before 3.0.0."
 msgstr ""

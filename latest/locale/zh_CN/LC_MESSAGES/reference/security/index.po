@@ -24,9 +24,8 @@ msgstr ""
 #: ../../../../litestar/security/__init__.py:docstring of
 #: litestar.security.base.AbstractSecurityConfig:1
 msgid ""
-"Bases: :py:class:`~abc.ABC`, :py:class:`~typing.Generic`\\ [:py:obj:"
-"`~litestar.security.base.UserType`, :py:obj:`~litestar.security.base."
-"AuthType`]"
+"Bases: :py:class:`~abc.ABC`, :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~litestar.security.base.UserType`, :py:obj:`~litestar.security.base.AuthType`]"
 msgstr ""
 
 #: ../../../../litestar/security/__init__.py:docstring of
@@ -128,8 +127,8 @@ msgstr ""
 #: ../../../../litestar/security/__init__.py:docstring of
 #: litestar.security.AbstractSecurityConfig.middleware:4
 msgid ""
-"An instance of :class:`DefineMiddleware <litestar.middleware.base."
-"DefineMiddleware>`."
+"An instance of :class:`DefineMiddleware "
+"<litestar.middleware.base.DefineMiddleware>`."
 msgstr ""
 
 #: ../../../../litestar/security/__init__.py:docstring of
@@ -187,8 +186,8 @@ msgstr ""
 #: ../../../../litestar/security/__init__.py:docstring of
 #: litestar.security.AbstractSecurityConfig.security_requirement:6
 msgid ""
-"An OpenAPI 3.1 :data:`SecurityRequirement <.openapi.spec."
-"SecurityRequirement>` dictionary."
+"An OpenAPI 3.1 :data:`SecurityRequirement "
+"<.openapi.spec.SecurityRequirement>` dictionary."
 msgstr ""
 
 #: ../../../../docstring of
@@ -206,8 +205,8 @@ msgstr ""
 #: ../../../../docstring of
 #: litestar.security.AbstractSecurityConfig.authentication_middleware_class:3
 msgid ""
-"Must inherit from :class:`AbstractAuthenticationMiddleware <litestar."
-"middleware.authentication.AbstractAuthenticationMiddleware>`"
+"Must inherit from :class:`AbstractAuthenticationMiddleware "
+"<litestar.middleware.authentication.AbstractAuthenticationMiddleware>`"
 msgstr ""
 
 #: ../../../../docstring of

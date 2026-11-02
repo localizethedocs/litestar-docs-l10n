@@ -146,8 +146,8 @@ msgstr ""
 #: ../../../../litestar/datastructures/__init__.py:docstring of
 #: litestar.datastructures.URL.query_params:1
 msgid ""
-"Query parameters of a URL as a :class:`MultiDict <.datastructures."
-"multi_dicts.MultiDict>`"
+"Query parameters of a URL as a :class:`MultiDict "
+"<.datastructures.multi_dicts.MultiDict>`"
 msgstr ""
 
 #: ../../../../litestar/datastructures/__init__.py:docstring of
@@ -206,8 +206,8 @@ msgstr ""
 #: ../../../../litestar/datastructures/__init__.py:docstring of
 #: litestar.datastructures.headers.Accept.accepts:3
 msgid ""
-"If multiple media types can be provided, it is better to use :func:"
-"`best_match`."
+"If multiple media types can be provided, it is better to "
+"use :func:`best_match`."
 msgstr ""
 
 #: ../../../../litestar/datastructures/__init__.py:docstring of
@@ -575,9 +575,9 @@ msgstr ""
 #: ../../../../litestar/datastructures/__init__.py:docstring of
 #: litestar.datastructures.headers.Headers:1
 msgid ""
-"Bases: :py:class:`~multidict._multidict.CIMultiDictProxy`\\ [:py:class:"
-"`str`], :py:class:`~litestar.datastructures.multi_dicts.MultiMixin`\\ [:py:"
-"class:`str`]"
+"Bases: :py:class:`~multidict._multidict.CIMultiDictProxy`\\ "
+"[:py:class:`str`], :py:class:`~litestar.datastructures.multi_dicts.MultiMixin`\\ "
+"[:py:class:`str`]"
 msgstr ""
 
 #: ../../../../litestar/datastructures/__init__.py:docstring of
@@ -633,11 +633,10 @@ msgstr ""
 #: ../../../../litestar/datastructures/__init__.py:docstring of
 #: litestar.datastructures.multi_dicts.ImmutableMultiDict:1
 msgid ""
-"Bases: :py:class:`~multidict._multidict.MultiDictProxy`\\ [:py:obj:"
-"`~litestar.datastructures.multi_dicts.T`], :py:class:`~litestar."
-"datastructures.multi_dicts.MultiMixin`\\ [:py:obj:`~litestar.datastructures."
-"multi_dicts.T`], :py:class:`~typing.Generic`\\ [:py:obj:`~litestar."
-"datastructures.multi_dicts.T`]"
+"Bases: :py:class:`~multidict._multidict.MultiDictProxy`\\ "
+"[:py:obj:`~litestar.datastructures.multi_dicts.T`], :py:class:`~litestar.datastructures.multi_dicts.MultiMixin`\\ "
+"[:py:obj:`~litestar.datastructures.multi_dicts.T`], :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~litestar.datastructures.multi_dicts.T`]"
 msgstr ""
 
 #: ../../../../litestar/datastructures/__init__.py:docstring of
@@ -766,8 +765,8 @@ msgstr ""
 #: ../../../../litestar/datastructures/__init__.py:docstring of
 #: litestar.datastructures.state.ImmutableState.__init__:3
 msgid ""
-"An object to initialize the state from. Can be a dict, an instance of :class:"
-"`ImmutableState`, or a tuple of key value paris."
+"An object to initialize the state from. Can be a dict, an instance "
+"of :class:`ImmutableState`, or a tuple of key value paris."
 msgstr ""
 
 #: ../../../../litestar/datastructures/__init__.py:docstring of
@@ -875,11 +874,10 @@ msgstr ""
 #: ../../../../litestar/datastructures/__init__.py:docstring of
 #: litestar.datastructures.multi_dicts.MultiDict:1
 msgid ""
-"Bases: :py:class:`~multidict._multidict.MultiDict`\\ [:py:obj:`~litestar."
-"datastructures.multi_dicts.T`], :py:class:`~litestar.datastructures."
-"multi_dicts.MultiMixin`\\ [:py:obj:`~litestar.datastructures.multi_dicts."
-"T`], :py:class:`~typing.Generic`\\ [:py:obj:`~litestar.datastructures."
-"multi_dicts.T`]"
+"Bases: :py:class:`~multidict._multidict.MultiDict`\\ "
+"[:py:obj:`~litestar.datastructures.multi_dicts.T`], :py:class:`~litestar.datastructures.multi_dicts.MultiMixin`\\ "
+"[:py:obj:`~litestar.datastructures.multi_dicts.T`], :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~litestar.datastructures.multi_dicts.T`]"
 msgstr ""
 
 #: ../../../../litestar/datastructures/__init__.py:docstring of
@@ -890,8 +888,8 @@ msgstr ""
 #: ../../../../litestar/datastructures/__init__.py:docstring of
 #: litestar.datastructures.multi_dicts.MultiDict.__init__:1
 msgid ""
-"Initialize ``MultiDict`` from a`MultiMapping``, :class:`Mapping <typing."
-"Mapping>` or an iterable of tuples."
+"Initialize ``MultiDict`` from a`MultiMapping``, :class:`Mapping "
+"<typing.Mapping>` or an iterable of tuples."
 msgstr ""
 
 #: ../../../../litestar/datastructures/__init__.py:docstring of
@@ -917,16 +915,16 @@ msgstr ""
 #: ../../../../litestar/datastructures/__init__.py:docstring of
 #: litestar.datastructures.multi_dicts.MultiMixin:1
 msgid ""
-"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~litestar.datastructures."
-"multi_dicts.T`], :py:class:`~multidict._abc.MultiMapping`\\ [:py:obj:"
-"`~litestar.datastructures.multi_dicts.T`], :py:class:`~abc.ABC`"
+"Bases: :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~litestar.datastructures.multi_dicts.T`], :py:class:`~multidict._abc.MultiMapping`\\ "
+"[:py:obj:`~litestar.datastructures.multi_dicts.T`], :py:class:`~abc.ABC`"
 msgstr ""
 
 #: ../../../../litestar/datastructures/__init__.py:docstring of
 #: litestar.datastructures.multi_dicts.MultiMixin:1
 msgid ""
-"Mixin providing common methods for multi dicts, used by :class:"
-"`ImmutableMultiDict` and :class:`MultiDict`"
+"Mixin providing common methods for multi dicts, used "
+"by :class:`ImmutableMultiDict` and :class:`MultiDict`"
 msgstr ""
 
 #: ../../../../litestar/datastructures/__init__.py:docstring of
@@ -1128,8 +1126,8 @@ msgstr ""
 #: ../../../../docstring of
 #: litestar.datastructures.ResponseHeader.allow_reserved:4
 msgid ""
-"[RFC3986](https://tools.ietf.org/html/rfc3986#section-2.2) `:/?#[]@!$&'()*+,;"
-"=` to be included without percent- encoding."
+"[RFC3986](https://tools.ietf.org/html/rfc3986#section-2.2) `:/?#[]@!"
+"$&'()*+,;=` to be included without percent- encoding."
 msgstr ""
 
 #: ../../../../docstring of
@@ -1261,8 +1259,8 @@ msgstr ""
 #: ../../../../litestar/datastructures/__init__.py:docstring of
 #: litestar.datastructures.secret_values.SecretBytes:1
 msgid ""
-"Bases: :py:class:`~litestar.datastructures.secret_values.SecretValue`\\ [:py:"
-"class:`bytes`]"
+"Bases: :py:class:`~litestar.datastructures.secret_values.SecretValue`\\ "
+"[:py:class:`bytes`]"
 msgstr ""
 
 #: ../../../../litestar/datastructures/__init__.py:docstring of
@@ -1287,8 +1285,8 @@ msgstr ""
 #: ../../../../litestar/datastructures/__init__.py:docstring of
 #: litestar.datastructures.secret_values.SecretString:1
 msgid ""
-"Bases: :py:class:`~litestar.datastructures.secret_values.SecretValue`\\ [:py:"
-"class:`str`]"
+"Bases: :py:class:`~litestar.datastructures.secret_values.SecretValue`\\ "
+"[:py:class:`str`]"
 msgstr ""
 
 #: ../../../../litestar/datastructures/__init__.py:docstring of
@@ -1309,8 +1307,8 @@ msgstr ""
 #: ../../../../litestar/datastructures/__init__.py:docstring of
 #: litestar.datastructures.state.State:1
 msgid ""
-"Bases: :py:class:`~litestar.datastructures.state.ImmutableState`, :py:class:"
-"`~typing.MutableMapping`\\ [:py:class:`str`, :py:obj:`~typing.Any`]"
+"Bases: :py:class:`~litestar.datastructures.state.ImmutableState`, :py:class:`~typing.MutableMapping`\\ "
+"[:py:class:`str`, :py:obj:`~typing.Any`]"
 msgstr ""
 
 #: ../../../../litestar/datastructures/__init__.py:docstring of

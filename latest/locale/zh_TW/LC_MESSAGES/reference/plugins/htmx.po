@@ -309,9 +309,9 @@ msgstr ""
 #: litestar_htmx.response.Reswap:1 litestar_htmx.response.Retarget:1
 #: litestar_htmx.response.TriggerEvent:1
 msgid ""
-"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~litestar_htmx.response.T`], :"
-"py:class:`~litestar.response.base.Response`\\ [:py:obj:`~litestar_htmx."
-"response.T`]"
+"Bases: :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~litestar_htmx.response.T`], :py:class:`~litestar.response.base.Response`\\ "
+"[:py:obj:`~litestar_htmx.response.T`]"
 msgstr ""
 
 #: ../../../../litestar/plugins/htmx.py:docstring of

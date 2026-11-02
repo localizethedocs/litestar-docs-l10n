@@ -24,8 +24,8 @@ msgstr ""
 #: ../../../../litestar/dto/data_structures.py:docstring of
 #: litestar.dto.data_structures.DTOData:1
 msgid ""
-"Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~litestar.dto.data_structures."
-"T`]"
+"Bases: :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~litestar.dto.data_structures.T`]"
 msgstr ""
 
 #: ../../../../litestar/dto/data_structures.py:docstring of

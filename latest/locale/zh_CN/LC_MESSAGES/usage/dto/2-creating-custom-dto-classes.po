@@ -41,8 +41,8 @@ msgstr ""
 
 #: ../../../usage/dto/2-creating-custom-dto-classes.rst:13
 msgid ""
-"These methods must be implemented on any :class:`AbstractDTO <litestar.dto."
-"base_dto.AbstractDTO>` subtype."
+"These methods must be implemented on any :class:`AbstractDTO "
+"<litestar.dto.base_dto.AbstractDTO>` subtype."
 msgstr ""
 
 #: ../../../usage/dto/2-creating-custom-dto-classes.rst:16
@@ -52,8 +52,9 @@ msgstr ""
 #: ../../../usage/dto/2-creating-custom-dto-classes.rst:18
 msgid ""
 "This method receives the model type for the DTO and it should return a "
-"generator yielding :class:`DTOFieldDefinition<litestar.dto.data_structures."
-"DTOFieldDefinition>` instances corresponding with the model fields."
+"generator "
+"yielding :class:`DTOFieldDefinition<litestar.dto.data_structures.DTOFieldDefinition>` "
+"instances corresponding with the model fields."
 msgstr ""
 
 #: ../../../usage/dto/2-creating-custom-dto-classes.rst:23
@@ -62,7 +63,7 @@ msgstr ""
 
 #: ../../../usage/dto/2-creating-custom-dto-classes.rst:25
 msgid ""
-"This method receives a :class:`FieldDefinition<litestar.typing."
-"FieldDefinition>` instance and it should return a boolean indicating whether "
-"the field is a nested model field."
+"This method receives "
+"a :class:`FieldDefinition<litestar.typing.FieldDefinition>` instance and it "
+"should return a boolean indicating whether the field is a nested model field."
 msgstr ""

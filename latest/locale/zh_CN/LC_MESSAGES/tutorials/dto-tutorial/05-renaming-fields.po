@@ -33,9 +33,9 @@ msgstr ""
 
 #: ../../../tutorials/dto-tutorial/05-renaming-fields.rst:10
 msgid ""
-"We can rename fields explicitly using the :attr:`rename_fields <litestar.dto."
-"config.DTOConfig.rename_fields>` attribute. This attribute is a dictionary "
-"that maps the original field name to the new field name."
+"We can rename fields explicitly using the :attr:`rename_fields "
+"<litestar.dto.config.DTOConfig.rename_fields>` attribute. This attribute is "
+"a dictionary that maps the original field name to the new field name."
 msgstr ""
 
 #: ../../../tutorials/dto-tutorial/05-renaming-fields.rst:13

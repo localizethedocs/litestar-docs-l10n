@@ -24,8 +24,8 @@ msgstr ""
 #: ../../../../litestar/dto/msgspec_dto.py:docstring of
 #: litestar.dto.msgspec_dto.MsgspecDTO:1
 msgid ""
-"Bases: :py:class:`~litestar.dto.base_dto.AbstractDTO`, :py:class:`~typing."
-"Generic`\\ [:py:obj:`~litestar.dto.msgspec_dto.T`]"
+"Bases: :py:class:`~litestar.dto.base_dto.AbstractDTO`, :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~litestar.dto.msgspec_dto.T`]"
 msgstr ""
 
 #: ../../../../litestar/dto/msgspec_dto.py:docstring of

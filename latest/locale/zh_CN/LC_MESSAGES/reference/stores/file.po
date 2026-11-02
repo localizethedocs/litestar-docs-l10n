@@ -170,9 +170,9 @@ msgstr ""
 #: ../../../../litestar/stores/file.py:docstring of
 #: litestar.stores.file.FileStore.delete_expired:3
 msgid ""
-"Since expired items are normally only cleared on access (i.e. when calling :"
-"meth:`.get`), this method should be called in regular intervals to free disk "
-"space."
+"Since expired items are normally only cleared on access (i.e. when "
+"calling :meth:`.get`), this method should be called in regular intervals to "
+"free disk space."
 msgstr ""
 
 #: ../../../../litestar/stores/file.py:docstring of

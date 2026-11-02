@@ -73,9 +73,9 @@ msgstr ""
 #: ../../../../litestar/logging/standard.py:docstring of
 #: litestar.logging.standard.QueueListenerHandler:5
 msgid ""
-"This handler doesn't work with Python >= 3.12 and ``logging.config."
-"dictConfig``. It might be deprecated in the future. Please use ``logging."
-"QueueHandler`` instead."
+"This handler doesn't work with Python >= 3.12 and "
+"``logging.config.dictConfig``. It might be deprecated in the future. Please "
+"use ``logging.QueueHandler`` instead."
 msgstr ""
 
 #: ../../../../litestar/logging/standard.py:docstring of

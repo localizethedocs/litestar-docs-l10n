@@ -32,10 +32,11 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:136
 msgid ""
-"For this, add the types :data:`~litestar.params.RawBody`, :data:`~litestar."
-"params.QueryParams` and :data:`~litestar.params.RequestCookies`, and the "
-"body marker :data:`~litestar.params.RequestBody`, which declares a body of "
-"the default media type, ``application/json``."
+"For this, add the "
+"types :data:`~litestar.params.RawBody`, :data:`~litestar.params.QueryParams` "
+"and :data:`~litestar.params.RequestCookies`, and the body "
+"marker :data:`~litestar.params.RequestBody`, which declares a body of the "
+"default media type, ``application/json``."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:145
@@ -68,8 +69,8 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:152
 msgid ""
-"A body marker, e.g. :data:`~litestar.params.JSONBody` or :data:`~litestar."
-"params.RequestBody`"
+"A body marker, e.g. :data:`~litestar.params.JSONBody` "
+"or :data:`~litestar.params.RequestBody`"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:154
@@ -94,8 +95,8 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:159
 msgid ""
-"The request class configured for the handler, or one of its base classes, e."
-"g. :class:`~litestar.connection.Request`"
+"The request class configured for the handler, or one of its base classes, "
+"e.g. :class:`~litestar.connection.Request`"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:161
@@ -137,8 +138,9 @@ msgstr ""
 msgid ""
 "Serialize subscription changes and consume notifications in a background "
 "task so dynamic ``LISTEN`` and ``UNLISTEN`` operations no longer contend "
-"with the listener. :class:`~litestar.channels.backends.psycopg."
-"PsycoPgChannelsBackend` now requires psycopg 3.2.4 or newer."
+"with the "
+"listener. :class:`~litestar.channels.backends.psycopg.PsycoPgChannelsBackend` "
+"now requires psycopg 3.2.4 or newer."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:33
@@ -201,11 +203,12 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:90
 msgid ""
-":meth:`MutableScopeHeaders.getall() <litestar.datastructures."
-"MutableScopeHeaders.getall>` raised a :exc:`KeyError` for a missing header "
-"when an empty list was passed as ``default``, instead of returning it. In "
-"addition, the :exc:`KeyError` raised by ``getall()`` and by item access for "
-"a missing header now contains the header name."
+":meth:`MutableScopeHeaders.getall() "
+"<litestar.datastructures.MutableScopeHeaders.getall>` raised "
+"a :exc:`KeyError` for a missing header when an empty list was passed as "
+"``default``, instead of returning it. In addition, the :exc:`KeyError` "
+"raised by ``getall()`` and by item access for a missing header now contains "
+"the header name."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:101
@@ -327,8 +330,8 @@ msgstr ""
 #: ../../../release-notes/changelog.rst:248
 msgid ""
 "@post(\"/\")\n"
-"async def handler(data: Annotated[dict, Body(media_type=RequestEncodingType."
-"MULTI_PART)]) -> None:\n"
+"async def handler(data: Annotated[dict, "
+"Body(media_type=RequestEncodingType.MULTI_PART)]) -> None:\n"
 "    pass"
 msgstr ""
 
@@ -463,8 +466,9 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:354
 msgid ""
-"Deprecate ``litestar.contrib.opentelemetry`` in favour of :mod:`litestar."
-"plugins.opentelemetry`. The contrib location will be removed in 3.0.0."
+"Deprecate ``litestar.contrib.opentelemetry`` in favour "
+"of :mod:`litestar.plugins.opentelemetry`. The contrib location will be "
+"removed in 3.0.0."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:363
@@ -476,30 +480,33 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:371
 msgid ""
-"Deprecate ``litestar.contrib.jinja`` in favor of :mod:`litestar.plugins."
-"jinja`. The contrib location will be removed in 3.0.0."
+"Deprecate ``litestar.contrib.jinja`` in favor "
+"of :mod:`litestar.plugins.jinja`. The contrib location will be removed in "
+"3.0.0."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:379
 msgid ""
-"Deprecate ``litestar.contrib.mako`` in favor of  :mod:`litestar.plugins."
-"mako`. The contrib location will be removed in 3.0.0."
+"Deprecate ``litestar.contrib.mako`` in favor "
+"of  :mod:`litestar.plugins.mako`. The contrib location will be removed in "
+"3.0.0."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:386
 msgid ""
-"Deprecate ``litestar.contrib.minijinja`` in favor of :mod:`litestar.plugins."
-"minijinja`. The contrib location will be removed in 3.0.0."
+"Deprecate ``litestar.contrib.minijinja`` in favor "
+"of :mod:`litestar.plugins.minijinja`. The contrib location will be removed "
+"in 3.0.0."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:394
 msgid ""
-"Add an ``oauth2_redirect_url`` parameter to :class:`~litestar.openapi."
-"plugins.SwaggerRenderPlugin`. When set, the value is emitted as "
-"``oauth2RedirectUrl`` in the Swagger UI bundle config, overriding the "
-"default behavior of computing the URL from the current page location. This "
-"allows the OAuth2 redirect to be set explicitly when the API is mounted "
-"under a sub-path."
+"Add an ``oauth2_redirect_url`` parameter "
+"to :class:`~litestar.openapi.plugins.SwaggerRenderPlugin`. When set, the "
+"value is emitted as ``oauth2RedirectUrl`` in the Swagger UI bundle config, "
+"overriding the default behavior of computing the URL from the current page "
+"location. This allows the OAuth2 redirect to be set explicitly when the API "
+"is mounted under a sub-path."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:405
@@ -623,10 +630,11 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:466
 msgid ""
-"Fix :meth:`~litestar.security.jwt.Token.decode` leaking :exc:`KeyError` or :"
-"exc:`TypeError` when required claims (``sub``, ``exp``, ``iat``) are missing "
-"or malformed and claim verification is disabled. Decoding now raises :exc:"
-"`~litestar.exceptions.NotAuthorizedException` consistently in these cases."
+"Fix :meth:`~litestar.security.jwt.Token.decode` leaking :exc:`KeyError` "
+"or :exc:`TypeError` when required claims (``sub``, ``exp``, ``iat``) are "
+"missing or malformed and claim verification is disabled. Decoding now "
+"raises :exc:`~litestar.exceptions.NotAuthorizedException` consistently in "
+"these cases."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:477
@@ -647,25 +655,27 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:496
 msgid ""
-"Fix a data race in :class:`~litestar.middleware.rate_limit."
-"RateLimitMiddleware` where ``retrieve_cached_history`` and "
-"``set_cached_history`` could interleave between coroutines. Both calls now "
-"execute under the same :class:`anyio.Lock`."
+"Fix a data race "
+"in :class:`~litestar.middleware.rate_limit.RateLimitMiddleware` where "
+"``retrieve_cached_history`` and ``set_cached_history`` could interleave "
+"between coroutines. Both calls now execute under the "
+"same :class:`anyio.Lock`."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:506
 msgid ""
-"Remove an unreachable branch in :class:`~litestar.middleware.rate_limit."
-"RateLimitMiddleware`. ``reset`` is set to ``now + duration``, and the "
-"surrounding ``while`` loop already removes all items where ``reset <= now``, "
-"so the removed code path could never trigger."
+"Remove an unreachable branch "
+"in :class:`~litestar.middleware.rate_limit.RateLimitMiddleware`. ``reset`` "
+"is set to ``now + duration``, and the surrounding ``while`` loop already "
+"removes all items where ``reset <= now``, so the removed code path could "
+"never trigger."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:517
 msgid ""
-"Fix OpenAPI schema generation to emit ``string`` for :class:`decimal."
-"Decimal` fields instead of ``number``, matching the default string "
-"serialization used by msgspec."
+"Fix OpenAPI schema generation to emit ``string`` "
+"for :class:`decimal.Decimal` fields instead of ``number``, matching the "
+"default string serialization used by msgspec."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:526
@@ -682,12 +692,12 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:541
 msgid ""
-"Remove the content-length integrity check in :meth:`~litestar.connection."
-"Request.stream` that raised ``ClientException(\"Malformed request\")`` when "
-"streamed bytes exceeded the ``Content-Length`` header. This check broke when "
-"request decompression middleware wrapped the ASGI ``receive`` function, "
-"since the decompressed body is legitimately larger than the wire-format "
-"``Content-Length``."
+"Remove the content-length integrity check "
+"in :meth:`~litestar.connection.Request.stream` that raised "
+"``ClientException(\"Malformed request\")`` when streamed bytes exceeded the "
+"``Content-Length`` header. This check broke when request decompression "
+"middleware wrapped the ASGI ``receive`` function, since the decompressed "
+"body is legitimately larger than the wire-format ``Content-Length``."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:548
@@ -714,10 +724,10 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:593
 msgid ""
-"Add an ``after_exception`` option to :class:`~litestar.plugins.opentelemetry."
-"OpenTelemetryConfig`, which will add that hook to the applications "
-"``after_exception`` hooks, allowing the middleware to react to exception, "
-"without handling them."
+"Add an ``after_exception`` option "
+"to :class:`~litestar.plugins.opentelemetry.OpenTelemetryConfig`, which will "
+"add that hook to the applications ``after_exception`` hooks, allowing the "
+"middleware to react to exception, without handling them."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:583
@@ -748,8 +758,8 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:609
 msgid ""
-"``allowed_hosts=[\"*.example.com\"]`` would not only allow ``foo.example."
-"com``, but also ``example.x.com``."
+"``allowed_hosts=[\"*.example.com\"]`` would not only allow "
+"``foo.example.com``, but also ``example.x.com``."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:615
@@ -799,8 +809,8 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:671
 msgid ""
-"Fix typing to allow :class:`typing.Sequence` in :attr:`~litestar.security."
-"jwt.Token.aud`."
+"Fix typing to allow :class:`typing.Sequence` "
+"in :attr:`~litestar.security.jwt.Token.aud`."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:680
@@ -894,16 +904,16 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:907
 msgid ""
-"Add new ``round_trip`` parameter to :class:`~litestar.contrib.pydantic."
-"PydanticPlugin`, allowing correct serialization of types like ``pydanctic."
-"Json``."
+"Add new ``round_trip`` parameter "
+"to :class:`~litestar.contrib.pydantic.PydanticPlugin`, allowing correct "
+"serialization of types like ``pydanctic.Json``."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:766
 msgid ""
-"Fix a vulnerability in :class:`~litestar.middleware.rate_limit."
-"RateLimitMiddleware` that allowed clients to bypass the limit by spoofing "
-"the ``X-FORWARDED-FOR`` header."
+"Fix a vulnerability "
+"in :class:`~litestar.middleware.rate_limit.RateLimitMiddleware` that allowed "
+"clients to bypass the limit by spoofing the ``X-FORWARDED-FOR`` header."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:770
@@ -965,8 +975,8 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:824
 msgid ""
-"Preserve empty strings in multipart forms instead of converting them to :obj:"
-"`None`."
+"Preserve empty strings in multipart forms instead of converting them "
+"to :obj:`None`."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:832
@@ -1015,9 +1025,9 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:961
 msgid ""
-"Add a new ``exclude_from_schema`` parameter to :func:`~litestar.params."
-"Parameter` that allows to exclude a specific parameter from the OpenAPI "
-"schema."
+"Add a new ``exclude_from_schema`` parameter "
+"to :func:`~litestar.params.Parameter` that allows to exclude a specific "
+"parameter from the OpenAPI schema."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:970
@@ -1050,8 +1060,8 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:983
 msgid ""
-"Make the previously internally used :class:`litestar.plugins."
-"ReceiveRoutePlugin` public."
+"Make the previously internally "
+"used :class:`litestar.plugins.ReceiveRoutePlugin` public."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:918
@@ -1125,8 +1135,8 @@ msgstr ""
 #: ../../../release-notes/changelog.rst:1026
 msgid ""
 "Generated transfer functions now populate :mod:`linecache`  to improve "
-"tracebacks and support introspection of the generated functions e.g. via :"
-"func:`inspect.getsource`"
+"tracebacks and support introspection of the generated functions e.g. "
+"via :func:`inspect.getsource`"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:1030
@@ -1165,8 +1175,9 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:1119
 msgid ""
-"Add an ``options`` parameter to :class:`~litestar.openapi.plugins."
-"ScalarRenderPlugin`, that can be used to pass options directly to scalar."
+"Add an ``options`` parameter "
+"to :class:`~litestar.openapi.plugins.ScalarRenderPlugin`, that can be used "
+"to pass options directly to scalar."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:1124
@@ -1225,10 +1236,10 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:1093
 msgid ""
-"Ensure ``StartupError`` is raised by :func:`~litestar.testing."
-"subprocess_sync_client` and :func:`~litestar.testing."
-"subprocess_async_client` if the application failed to start within the "
-"timeout."
+"Ensure ``StartupError`` is raised "
+"by :func:`~litestar.testing.subprocess_sync_client` "
+"and :func:`~litestar.testing.subprocess_async_client` if the application "
+"failed to start within the timeout."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:1103
@@ -1316,8 +1327,8 @@ msgid ""
 "The new :class:`~litestar.middleware.ASGIMiddleware` features the same "
 "functionality as :class:`~litestar.middleware.AbstractMiddleware`, but makes "
 "it easier to pass configuration directly to middleware classes without a "
-"separate configuration object, allowing the need to use :class:`~litestar."
-"middleware.DefineMiddleware`."
+"separate configuration object, allowing the need to "
+"use :class:`~litestar.middleware.DefineMiddleware`."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:1276
@@ -1326,14 +1337,14 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:1282
 msgid ""
-"Add :class:`~litestar.plugins.SerializationPlugin` to replace :class:"
-"`~litestar.plugins.SerializationPluginProtocol`"
+"Add :class:`~litestar.plugins.SerializationPlugin` to "
+"replace :class:`~litestar.plugins.SerializationPluginProtocol`"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:1283
 msgid ""
-"Add :class:`~litestar.plugins.InitPlugin` to replace :class:`~litestar."
-"plugins.InitPluginProtocol`"
+"Add :class:`~litestar.plugins.InitPlugin` to "
+"replace :class:`~litestar.plugins.InitPluginProtocol`"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:1285
@@ -1348,11 +1359,11 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:1295
 msgid ""
-"A new ``debugger_module`` parameter has been added to :class:`~litestar.app."
-"Litestar`, which can receive any debugger module that implements a :func:"
-"`pdb.post_mortem` function with the same signature as the stdlib. This "
-"function will be called when an exception occurs and ``pdb_on_exception`` is "
-"set to ``True``\\ ."
+"A new ``debugger_module`` parameter has been added "
+"to :class:`~litestar.app.Litestar`, which can receive any debugger module "
+"that implements a :func:`pdb.post_mortem` function with the same signature "
+"as the stdlib. This function will be called when an exception occurs and "
+"``pdb_on_exception`` is set to ``True``\\ ."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:1206
@@ -1369,9 +1380,9 @@ msgstr ""
 #: ../../../release-notes/changelog.rst:1212
 msgid ""
 "We do not store the Litestar instance under the generic ``app`` key anymore, "
-"but the more specific ``litestar_app`` key. In addition the :meth:`~litestar."
-"app.Litestar.from_scope` method has been added, which can be used to safely "
-"access the current app from the scope"
+"but the more specific ``litestar_app`` key. In addition "
+"the :meth:`~litestar.app.Litestar.from_scope` method has been added, which "
+"can be used to safely access the current app from the scope"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:1216
@@ -1394,16 +1405,16 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:1309
 msgid ""
-"The module ``litestar.contrib.prometheus`` has been moved to ``litestar."
-"plugins.prometheus``. ``litestar.contrib.prometheus`` will be deprecated in "
-"the next major version"
+"The module ``litestar.contrib.prometheus`` has been moved to "
+"``litestar.plugins.prometheus``. ``litestar.contrib.prometheus`` will be "
+"deprecated in the next major version"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:1317
 msgid ""
-"The module ``litestar.contrib.attrs`` has been moved to ``litestar.plugins."
-"attrs``. ``litestar.contrib.attrs`` will be deprecated in the next major "
-"version"
+"The module ``litestar.contrib.attrs`` has been moved to "
+"``litestar.plugins.attrs``. ``litestar.contrib.attrs`` will be deprecated in "
+"the next major version"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:1325
@@ -1521,9 +1532,10 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:1428
 msgid ""
-"Add new :func:`~litestar.testing.subprocess_async_client` and :func:"
-"`~litestar.testing.subprocess_sync_client`, which can run an application in "
-"a new process, primarily for the purpose of end-to-end testing."
+"Add new :func:`~litestar.testing.subprocess_async_client` "
+"and :func:`~litestar.testing.subprocess_sync_client`, which can run an "
+"application in a new process, primarily for the purpose of end-to-end "
+"testing."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:1432
@@ -1575,8 +1587,9 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:1482
 msgid ""
-"Update the :class:`~litestar.channels.backends.psycopg."
-"PsycoPgChannelsBackend` backend to use the native psycopg ``SQL`` API"
+"Update "
+"the :class:`~litestar.channels.backends.psycopg.PsycoPgChannelsBackend` "
+"backend to use the native psycopg ``SQL`` API"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:1492
@@ -1598,8 +1611,8 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:1510
 msgid ""
-"Deprecate the ``litestar.contrib.sqlalchemy`` module in favor of ``litestar."
-"plugins.sqlalchemy``"
+"Deprecate the ``litestar.contrib.sqlalchemy`` module in favor of "
+"``litestar.plugins.sqlalchemy``"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:1517
@@ -1615,9 +1628,9 @@ msgstr ""
 msgid ""
 "Pydantic's ``BaseModel`` supports configuration to hide data values when "
 "throwing exceptions, via setting ``hide_input_in_errors`` -- see https://"
-"docs.pydantic.dev/2.0/api/config/#pydantic.config.ConfigDict."
-"hide_input_in_errors and https://docs.pydantic.dev/latest/usage/model_config/"
-"#hide-input-in-errors"
+"docs.pydantic.dev/2.0/api/config/"
+"#pydantic.config.ConfigDict.hide_input_in_errors and https://"
+"docs.pydantic.dev/latest/usage/model_config/#hide-input-in-errors"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:1530
@@ -1630,8 +1643,8 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:1539
 msgid ""
-"Deprecate ``litestar.contrib.pydantic`` in favor of ``litestar.plugins."
-"pydantic``"
+"Deprecate ``litestar.contrib.pydantic`` in favor of "
+"``litestar.plugins.pydantic``"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:1546
@@ -1666,10 +1679,11 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:1578
 msgid ""
-"Some frameworks do not include the ``more_body`` key in the \"http.response."
-"body\" ASGI event. According to the ASGI specification, this key should be "
-"set to ``False`` when there is no additional body content. Litestar expects "
-"``more_body`` to be explicitly defined, but others might not."
+"Some frameworks do not include the ``more_body`` key in the "
+"\"http.response.body\" ASGI event. According to the ASGI specification, this "
+"key should be set to ``False`` when there is no additional body content. "
+"Litestar expects ``more_body`` to be explicitly defined, but others might "
+"not."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:1583
@@ -1686,15 +1700,15 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:1604
 msgid ""
-"Fix a bug introduced in #3721 that was released with ``2.12.0`` caused an :"
-"exc:`ImportError` when the ``annotated_types`` package was not installed."
+"Fix a bug introduced in #3721 that was released with ``2.12.0`` caused "
+"an :exc:`ImportError` when the ``annotated_types`` package was not installed."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:1737
 msgid ""
-"Accept strings for the ``media_type`` parameter of :class:`~litestar.openapi."
-"datastructures.ResponseSpec`, making it behave the same way as :paramref:"
-"`~litestar.response.Response.media_type`."
+"Accept strings for the ``media_type`` parameter "
+"of :class:`~litestar.openapi.datastructures.ResponseSpec`, making it behave "
+"the same way as :paramref:`~litestar.response.Response.media_type`."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:1745
@@ -1707,8 +1721,9 @@ msgstr ""
 #: ../../../release-notes/changelog.rst:1749
 msgid ""
 "The keys can be set with the newly introduced ``schema_component_key`` "
-"parameter, which is available on :class:`~litestar.params.KwargDefinition`, :"
-"func:`~litestar.params.Body` and :func:`~litestar.params.Parameter`."
+"parameter, which is available "
+"on :class:`~litestar.params.KwargDefinition`, :func:`~litestar.params.Body` "
+"and :func:`~litestar.params.Parameter`."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:1754
@@ -1793,8 +1808,8 @@ msgstr ""
 #: ../../../release-notes/changelog.rst:1665
 msgid ""
 "Fix a bug where the OpenAPI schema would not include the struct fields "
-"implicitly generated by msgspec for its `tagged union <https://msgspec."
-"devstructs.html#tagged-unions>`_ support."
+"implicitly generated by msgspec for its `tagged union <https://"
+"msgspec.devstructs.html#tagged-unions>`_ support."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:1670
@@ -1818,8 +1833,8 @@ msgstr ""
 #: ../../../release-notes/changelog.rst:1693
 msgid ""
 "Fix a bug that would lead to Pydantic computed fields to be ignored during "
-"schema generation when the model was using a :class:`~litestar.contrib."
-"pydantic.PydanticDTO`."
+"schema generation when the model was using "
+"a :class:`~litestar.contrib.pydantic.PydanticDTO`."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:1698
@@ -1873,10 +1888,10 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:1802
 msgid ""
-"Add a new config option to :class:`~litestar.dto.config.DTOConfig`: :attr:"
-"`~litestar.dto.config.DTOConfig.forbid_unknown_fields` When set to ``True``, "
-"a validation error response will be returned if the source data contains "
-"fields not defined on the model."
+"Add a new config option "
+"to :class:`~litestar.dto.config.DTOConfig`: :attr:`~litestar.dto.config.DTOConfig.forbid_unknown_fields` "
+"When set to ``True``, a validation error response will be returned if the "
+"source data contains fields not defined on the model."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:1811
@@ -1920,13 +1935,14 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:1839
 msgid ""
-"To facilitate this feature, :meth:`~litestar.dto.base_dto.AbstractDTO."
-"get_config_for_model_type` has been added to :class:`~litestar.dto.base_dto."
-"AbstractDTO`, allowing the customization of the base config defined on the "
-"DTO factory for a specific model type. It will be called on DTO factory "
-"initialization, and receives the concrete DTO model type along side the :"
-"class:`~litestar.dto.config.DTOConfig` defined on the base DTO, which it can "
-"alter and return a new version to be used within the DTO instance."
+"To facilitate this "
+"feature, :meth:`~litestar.dto.base_dto.AbstractDTO.get_config_for_model_type` "
+"has been added to :class:`~litestar.dto.base_dto.AbstractDTO`, allowing the "
+"customization of the base config defined on the DTO factory for a specific "
+"model type. It will be called on DTO factory initialization, and receives "
+"the concrete DTO model type along side "
+"the :class:`~litestar.dto.config.DTOConfig` defined on the base DTO, which "
+"it can alter and return a new version to be used within the DTO instance."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:1851
@@ -2060,35 +2076,27 @@ msgid "**New JWT middleware parameters**"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:1908
-msgid ""
-":paramref:`~litestar.security.jwt.JWTAuthenticationMiddleware.token_audience`"
+msgid ":paramref:`~litestar.security.jwt.JWTAuthenticationMiddleware.token_audience`"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:1909
-msgid ""
-":paramref:`~litestar.security.jwt.JWTAuthenticationMiddleware.token_issuer`"
+msgid ":paramref:`~litestar.security.jwt.JWTAuthenticationMiddleware.token_issuer`"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:1910
-msgid ""
-":paramref:`~litestar.security.jwt.JWTAuthenticationMiddleware.require_claims`"
+msgid ":paramref:`~litestar.security.jwt.JWTAuthenticationMiddleware.require_claims`"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:1911
-msgid ""
-":paramref:`~litestar.security.jwt.JWTAuthenticationMiddleware.verify_expiry`"
+msgid ":paramref:`~litestar.security.jwt.JWTAuthenticationMiddleware.verify_expiry`"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:1912
-msgid ""
-":paramref:`~litestar.security.jwt.JWTAuthenticationMiddleware."
-"verify_not_before`"
+msgid ":paramref:`~litestar.security.jwt.JWTAuthenticationMiddleware.verify_not_before`"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:1913
-msgid ""
-":paramref:`~litestar.security.jwt.JWTAuthenticationMiddleware."
-"strict_audience`"
+msgid ":paramref:`~litestar.security.jwt.JWTAuthenticationMiddleware.strict_audience`"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:1915
@@ -2181,9 +2189,9 @@ msgstr ""
 msgid ""
 "Fix https://github.com/litestar-org/litestar/issues/3627 by properly "
 "handling the creation of :class:`~litestar.datastructures.FormMultiDict` "
-"where multiple values are given for a single key, to make :meth:`~litestar."
-"connection.Request.form` match the behaviour of receiving form data via the "
-"``data`` kwarg inside a route handler."
+"where multiple values are given for a single key, to "
+"make :meth:`~litestar.connection.Request.form` match the behaviour of "
+"receiving form data via the ``data`` kwarg inside a route handler."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:1980
@@ -2230,8 +2238,9 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:2016
 msgid ""
-"Changed previous 1-by-1 replacement logic for ``PrometheusMiddleware."
-"group_path=true`` with a more robust and slightly faster solution."
+"Changed previous 1-by-1 replacement logic for "
+"``PrometheusMiddleware.group_path=true`` with a more robust and slightly "
+"faster solution."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:2025
@@ -2333,8 +2342,8 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:2130
 msgid ""
-"Add ``OPTIONS`` to the default safe methods for :class:`~litestar.config."
-"csrf.CSRFConfig`"
+"Add ``OPTIONS`` to the default safe methods "
+"for :class:`~litestar.config.csrf.CSRFConfig`"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:2137
@@ -2346,17 +2355,16 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:2141
 msgid ""
-"More info about prometheus high cardinality https://grafana.com/"
-"blog/2022/02/15/what-are-cardinality-spikes-and-why-do-they-matter/"
+"More info about prometheus high cardinality https://grafana.com/blog/"
+"2022/02/15/what-are-cardinality-spikes-and-why-do-they-matter/"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:2148
 msgid ""
-"Fix a bug that caused :meth:`~litestar.testing.TestClient."
-"websocket_connect` / :meth:`~litestar.testing.AsyncTestClient."
-"websocket_connect` to not respect the ``base_url`` set in the client's "
-"constructor, and instead would use the static ``ws://testerver`` URL as a "
-"base."
+"Fix a bug that "
+"caused :meth:`~litestar.testing.TestClient.websocket_connect` / :meth:`~litestar.testing.AsyncTestClient.websocket_connect` "
+"to not respect the ``base_url`` set in the client's constructor, and instead "
+"would use the static ``ws://testerver`` URL as a base."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:2153
@@ -2433,8 +2441,8 @@ msgid ""
 "a \"lifespan.startup.failed\" message being sent after we've already sent a "
 "\"lifespan.startup.complete\" message. This would cause uvicorn to raise a "
 "``STATE_TRANSITION_ERROR`` assertion error due to their check for that "
-"condition , if asgi lifespan is forced (i.e., with ``$ uvicorn test_apps."
-"test_app:app --lifespan on``)."
+"condition , if asgi lifespan is forced (i.e., with ``$ uvicorn "
+"test_apps.test_app:app --lifespan on``)."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:2215
@@ -2457,8 +2465,8 @@ msgid ""
 "in __call__\n"
 "    await self.asgi_router.lifespan(receive=receive, send=send)  # type: "
 "ignore[arg-type]\n"
-"  File \"/home/peter/PycharmProjects/litestar/litestar/_asgi/asgi_router."
-"py\", line 180, in lifespan\n"
+"  File \"/home/peter/PycharmProjects/litestar/litestar/_asgi/"
+"asgi_router.py\", line 180, in lifespan\n"
 "    await send(failure_message)\n"
 "  File \"/home/peter/.local/share/pdm/venvs/litestar-dj-FOhMr-3.8/lib/"
 "python3.8/site-packages/uvicorn/lifespan/on.py\", line 116, in send\n"
@@ -2483,8 +2491,8 @@ msgid ""
 "Fixes an :exc`ImproperlyConfiguredException` where an app that explicitly "
 "registers an ``OpenAPIController`` on the application, and implicitly uses "
 "the OpenAPI router via the `OpenAPIConfig` object. This was caused by the "
-"two different handlers being given the same name as defined in ``litestar."
-"constants``."
+"two different handlers being given the same name as defined in "
+"``litestar.constants``."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:2254
@@ -2616,8 +2624,8 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:2379
 msgid ""
-"When something in the middleware stack raises an exception after a \"http."
-"response.start\" message has already been sent, we end up with long "
+"When something in the middleware stack raises an exception after a "
+"\"http.response.start\" message has already been sent, we end up with long "
 "exception chains that obfuscate the original exception."
 msgstr ""
 
@@ -2699,8 +2707,8 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:2466
 msgid ""
-"When mounting an app, path resolution uses ``re.search`` instead or ``re."
-"match``, thus mounted app matches any path which contains mount path."
+"When mounting an app, path resolution uses ``re.search`` instead or "
+"``re.match``, thus mounted app matches any path which contains mount path."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:2474
@@ -2828,8 +2836,8 @@ msgid ""
 "Fixes an `ImproperlyConfiguredException` where an app that explicitly "
 "registers an `OpenAPIController` on the application, and implicitly uses the "
 "OpenAPI router via the `OpenAPIConfig` object. This was caused by the two "
-"different handlers being given the same name as defined in `litestar."
-"constants`."
+"different handlers being given the same name as defined in "
+"`litestar.constants`."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:2654
@@ -2919,9 +2927,9 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:2827
 msgid ""
-"As discussed in https://github.com/litestar-org/litestar/"
-"pull/3280#issuecomment-2026878325, we want to warn about, and eventually "
-"disallow specifying parameter defaults in two places."
+"As discussed in https://github.com/litestar-org/litestar/pull/"
+"3280#issuecomment-2026878325, we want to warn about, and eventually disallow "
+"specifying parameter defaults in two places."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:2830
@@ -3011,15 +3019,16 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:2712
 msgid ""
-"Fixes a bug when using a non-JSON media type (e.g., ``text/plain``), :class:"
-"`~.exceptions.http_exceptions.ValidationException`'s would not get "
-"serialized properly because they would ignore custom ``type_encoders``."
+"Fixes a bug when using a non-JSON media type (e.g., ``text/"
+"plain``), :class:`~.exceptions.http_exceptions.ValidationException`'s would "
+"not get serialized properly because they would ignore custom "
+"``type_encoders``."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:2721
 msgid ""
-"Fixes a bug that would prevent default values for dataclasses and ``msgspec."
-"Struct`` s to be included in the OpenAPI schema."
+"Fixes a bug that would prevent default values for dataclasses and "
+"``msgspec.Struct`` s to be included in the OpenAPI schema."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:2729
@@ -3143,9 +3152,9 @@ msgstr ""
 #: ../../../release-notes/changelog.rst:2927
 msgid ""
 "This can be tested over at https://editor-next.swagger.io by loading up the "
-"OpenAPI 3.1 Pet store example. Then add ``examples`` in ``components.schemas."
-"Pet`` using the both ways and see the Swagger UI only render the example "
-"once it's properly formatted (it ignores is otherwise)."
+"OpenAPI 3.1 Pet store example. Then add ``examples`` in "
+"``components.schemas.Pet`` using the both ways and see the Swagger UI only "
+"render the example once it's properly formatted (it ignores is otherwise)."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:2937
@@ -3156,8 +3165,8 @@ msgstr ""
 msgid ""
 "Python 3.12 introduced a new way to configure ``QueueHandler`` and "
 "``QueueListener`` via ``logging.config.dictConfig()``. As described in the "
-"`logging documentation <https://docs.python.org/3/library/logging.config."
-"html#configuring-queuehandler-and-queuelistener>`_."
+"`logging documentation <https://docs.python.org/3/library/"
+"logging.config.html#configuring-queuehandler-and-queuelistener>`_."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:2943
@@ -3170,9 +3179,10 @@ msgstr ""
 msgid ""
 "And as stated in the doc: * Any custom queue handler and listener classes "
 "will need to be defined with the same initialization signatures as "
-"`QueueHandler <https://docs.python.org/3/library/logging.handlers."
-"html#logging.handlers.QueueHandler>`_ and `QueueListener <https://docs."
-"python.org/3/library/logging.handlers.html#logging.handlers.QueueListener>`_."
+"`QueueHandler <https://docs.python.org/3/library/"
+"logging.handlers.html#logging.handlers.QueueHandler>`_ and `QueueListener "
+"<https://docs.python.org/3/library/"
+"logging.handlers.html#logging.handlers.QueueListener>`_."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:2956
@@ -3285,11 +3295,11 @@ msgid ""
 "route handler's scope instead of afterwards A new abstract method "
 "``get_session_id`` was added to ``BaseSessionBackend`` since this method "
 "will be called for both ClientSideSessions and ServerSideSessions. Only for "
-"ServerSideSessions it will return an actual id. Using ``request."
-"set_session(...)`` will return the session id for ServerSideSessions and "
-"None for ClientSideSessions The session auth MiddlewareWrapper now refers to "
-"the Session Middleware via the configured backend, instead of it being "
-"hardcoded"
+"ServerSideSessions it will return an actual id. Using "
+"``request.set_session(...)`` will return the session id for "
+"ServerSideSessions and None for ClientSideSessions The session auth "
+"MiddlewareWrapper now refers to the Session Middleware via the configured "
+"backend, instead of it being hardcoded"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:3086
@@ -3389,9 +3399,10 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:3160
 msgid ""
-"Fix schema generation for ``pydantic.SecretStr`` and ``pydantic."
-"SecretBytes`` which, when constrained, would not be recognised as such with "
-"Pydantic V2 since they're not subtypes of their respective bases anymore."
+"Fix schema generation for ``pydantic.SecretStr`` and "
+"``pydantic.SecretBytes`` which, when constrained, would not be recognised as "
+"such with Pydantic V2 since they're not subtypes of their respective bases "
+"anymore."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:3169
@@ -3469,10 +3480,10 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:3262
 msgid ""
-"The option :attr:`~litestar.logging.config.LoggingConfig."
-"configure_root_logger` was added to :class:`~litestar.logging.config."
-"LoggingConfig` attribute. It is enabled by default to not implement a "
-"breaking change."
+"The "
+"option :attr:`~litestar.logging.config.LoggingConfig.configure_root_logger` "
+"was added to :class:`~litestar.logging.config.LoggingConfig` attribute. It "
+"is enabled by default to not implement a breaking change."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:3266
@@ -3509,9 +3520,9 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:3284
 msgid ""
-"Removes the need for a special :meth:`~litestar.app.Litestar."
-"url_for_static_asset` method on the app since `route_reverse` can be used "
-"instead"
+"Removes the need for a "
+"special :meth:`~litestar.app.Litestar.url_for_static_asset` method on the "
+"app since `route_reverse` can be used instead"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:3287
@@ -3520,8 +3531,9 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:3289
 msgid ""
-"Most router options can now be passed to the :func:`~litestar.static_files."
-"create_static_files_router`, allowing further customisation"
+"Most router options can now be passed to "
+"the :func:`~litestar.static_files.create_static_files_router`, allowing "
+"further customisation"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:3292
@@ -3684,10 +3696,10 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:3440
 msgid ""
-"Ensure :class:`~litestar.datastructures.MultiDict` and :class:`~litestar."
-"datastructures.ImmutableMultiDict` copy methods return a new instance of "
-"``MultiDict`` and ``ImmutableMultiDict``. Previously, these would return a :"
-"class:`multidict.MultiDict` instance."
+"Ensure :class:`~litestar.datastructures.MultiDict` "
+"and :class:`~litestar.datastructures.ImmutableMultiDict` copy methods return "
+"a new instance of ``MultiDict`` and ``ImmutableMultiDict``. Previously, "
+"these would return a :class:`multidict.MultiDict` instance."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:3450
@@ -3749,9 +3761,9 @@ msgstr ""
 #: ../../../release-notes/changelog.rst:3620
 msgid ""
 ":class:`~litestar.channels.backends.asyncpg.AsyncPgChannelsBackend`, using "
-"the `asyncpg <https://magicstack.github.io/asyncpg/current/>`_ driver and :"
-"class:`~litestar.channels.backends.psycopg.PsycoPgChannelsBackend` using the "
-"`psycopg3 <https://www.psycopg.org/psycopg3/docs/>`_ async driver."
+"the `asyncpg <https://magicstack.github.io/asyncpg/current/>`_ driver "
+"and :class:`~litestar.channels.backends.psycopg.PsycoPgChannelsBackend` "
+"using the `psycopg3 <https://www.psycopg.org/psycopg3/docs/>`_ async driver."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:3626
@@ -3843,8 +3855,8 @@ msgid ""
 "\n"
 "@post(path=\"/\")\n"
 "async def upload_files_object(\n"
-"    data: Annotated[FileUpload, Body(media_type=RequestEncodingType."
-"MULTI_PART)]\n"
+"    data: Annotated[FileUpload, "
+"Body(media_type=RequestEncodingType.MULTI_PART)]\n"
 ") -> list[str]:\n"
 "    pass"
 msgstr ""
@@ -3890,9 +3902,9 @@ msgstr ""
 #: ../../../release-notes/changelog.rst:3644
 msgid ""
 "Performance of threaded synchronous code was improved by using the async "
-"library's native threading helpers instead of anyio. On asyncio, :meth:"
-"`asyncio.loop.run_in_executor` is now used and on trio :func:`trio.to_thread."
-"run_sync`."
+"library's native threading helpers instead of anyio. On "
+"asyncio, :meth:`asyncio.loop.run_in_executor` is now used and on "
+"trio :func:`trio.to_thread.run_sync`."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:3649
@@ -3923,8 +3935,8 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:3657
 msgid ""
-":class:`~litestar.response.file.File` and :class:`~litestar.response.file."
-"ASGIFileResponse`"
+":class:`~litestar.response.file.File` "
+"and :class:`~litestar.response.file.ASGIFileResponse`"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:3669
@@ -3956,16 +3968,17 @@ msgstr ""
 #: ../../../release-notes/changelog.rst:3690
 msgid ""
 "Returning a ``Response[None]`` from a route handler for a response with a "
-"``204`` now works as expected without resulting in an :exc:"
-"`ImproperlyConfiguredException`"
+"``204`` now works as expected without resulting in "
+"an :exc:`ImproperlyConfiguredException`"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:3698
 msgid ""
-"Using a method on :attr:`Request.logger <litestar.connection.ASGIConnection."
-"logger>` when not setting a ``logging_config`` on the application would "
-"result in a non-descriptive :exc:`TypeError`. An :exc:"
-"`ImproperlyConfiguredException` with an explanation is now raised instead."
+"Using a method on :attr:`Request.logger "
+"<litestar.connection.ASGIConnection.logger>` when not setting a "
+"``logging_config`` on the application would result in a non-"
+"descriptive :exc:`TypeError`. An :exc:`ImproperlyConfiguredException` with "
+"an explanation is now raised instead."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:3713
@@ -4082,9 +4095,9 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:3847
 msgid ""
-"An :exc:`ImportError` was raised when trying to import from ``litestar."
-"security.jwt``. This was fixed by removing the imports from the deprecated "
-"``litestar.contrib.jwt`` within ``litesetar.security.jwt``."
+"An :exc:`ImportError` was raised when trying to import from "
+"``litestar.security.jwt``. This was fixed by removing the imports from the "
+"deprecated ``litestar.contrib.jwt`` within ``litesetar.security.jwt``."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:3855
@@ -4096,18 +4109,19 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:4004
 msgid ""
-"A new ``server_lifespan`` hook is now available on :class:`~litestar.app."
-"Litestar`. This hook works similar to the regular ``lifespan`` context "
-"manager, with the difference being is that it is only called once for the "
-"entire server lifespan, not for each application startup phase. Note that "
-"these only differ when running with an ASGI server that's using multiple "
-"worker processes."
+"A new ``server_lifespan`` hook is now available "
+"on :class:`~litestar.app.Litestar`. This hook works similar to the regular "
+"``lifespan`` context manager, with the difference being is that it is only "
+"called once for the entire server lifespan, not for each application startup "
+"phase. Note that these only differ when running with an ASGI server that's "
+"using multiple worker processes."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:4015
 msgid ""
-"A new ``template_string`` parameter was added to :class:`~litestar.template."
-"Template`, allowing to render templates directly from strings."
+"A new ``template_string`` parameter was added "
+"to :class:`~litestar.template.Template`, allowing to render templates "
+"directly from strings."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:4019
@@ -4195,8 +4209,8 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:3916
 msgid ""
-"Fix the missing ``write-only`` string literal in the ``mark`` parameter of :"
-"func:`~litestar.dto.field.dto_field`"
+"Fix the missing ``write-only`` string literal in the ``mark`` parameter "
+"of :func:`~litestar.dto.field.dto_field`"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:3924
@@ -4303,9 +4317,9 @@ msgstr ""
 #: ../../../release-notes/changelog.rst:4087
 msgid ""
 "Fix an issue where not providing the ``--ssl-certfile`` and ``--ssl-"
-"keyfile`` options to the ``litestar run`` command would cause a :exc:"
-"`FileNotFoundError` in uvicorn, when used together with the ``--reload``, "
-"``--web-concurrency`` options."
+"keyfile`` options to the ``litestar run`` command would cause "
+"a :exc:`FileNotFoundError` in uvicorn, when used together with the ``--"
+"reload``, ``--web-concurrency`` options."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:4101
@@ -4683,8 +4697,8 @@ msgstr ""
 msgid ""
 "{\n"
 "  \"status_code\": 400,\n"
-"  \"detail\": \"Missing required parameter foo for url http://testerver."
-"local\"\n"
+"  \"detail\": \"Missing required parameter foo for url http://"
+"testerver.local\"\n"
 "}"
 msgstr ""
 
@@ -4741,10 +4755,10 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:4410
 msgid ""
-"A previous limitation was removed that would apply compression from the :"
-"class:`~litestar.middleware.compression.CompressionMiddleware` only *after* "
-"a response was restored from the cache, resulting in unnecessary repeated "
-"computation and increased size of the stored response."
+"A previous limitation was removed that would apply compression from "
+"the :class:`~litestar.middleware.compression.CompressionMiddleware` only "
+"*after* a response was restored from the cache, resulting in unnecessary "
+"repeated computation and increased size of the stored response."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:4415
@@ -4783,10 +4797,10 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:4525
 msgid ""
-":meth:`~litestar.response.Response.to_asgi_response` was passing a non-:obj:"
-"`None` default value (``[]``) to ``ASGIResponse`` for ``encoded_headers``, "
-"resulting in a :exc:`DeprecationWarning` being raised. This was fixed by "
-"leaving the default value as :obj:`None`."
+":meth:`~litestar.response.Response.to_asgi_response` was passing a "
+"non-:obj:`None` default value (``[]``) to ``ASGIResponse`` for "
+"``encoded_headers``, resulting in a :exc:`DeprecationWarning` being raised. "
+"This was fixed by leaving the default value as :obj:`None`."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:4534
@@ -4814,8 +4828,8 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:4563
 msgid ""
-"Adds ``token_extras`` to both :func:`BaseJWTAuth.login` and :meth:"
-"`BaseJWTAuth.create_token` methods, to allow the definition of the "
+"Adds ``token_extras`` to both :func:`BaseJWTAuth.login` "
+"and :meth:`BaseJWTAuth.create_token` methods, to allow the definition of the "
 "``extras`` JWT field."
 msgstr ""
 
@@ -4835,17 +4849,18 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:4586
 msgid ""
-":class:`SQLAlchemyDTO (Advanced Alchemy) <advanced_alchemy.extensions."
-"litestar.dto.SQLAlchemyDTO>` can now be configured using a separate config "
-"object. This can be set using both class inheritance and `Annotated <https://"
-"docs.python.org/3/library/typing.html#typing.Annotated>`_:"
+":class:`SQLAlchemyDTO (Advanced Alchemy) "
+"<advanced_alchemy.extensions.litestar.dto.SQLAlchemyDTO>` can now be "
+"configured using a separate config object. This can be set using both class "
+"inheritance and `Annotated <https://docs.python.org/3/library/"
+"typing.html#typing.Annotated>`_:"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:4591
 msgid ""
-":class:`SQLAlchemyDTO (Advanced Alchemy) <advanced_alchemy.extensions."
-"litestar.dto.SQLAlchemyDTO>` can now be configured using a separate config "
-"object using ``config`` object."
+":class:`SQLAlchemyDTO (Advanced Alchemy) "
+"<advanced_alchemy.extensions.litestar.dto.SQLAlchemyDTO>` can now be "
+"configured using a separate config object using ``config`` object."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:4591
@@ -4860,9 +4875,9 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:4599
 msgid ""
-":class:`SQLAlchemyDTO (Advanced Alchemy) <advanced_alchemy.extensions."
-"litestar.dto.SQLAlchemyDTO>` can now be configured using a separate config "
-"object using ``Annotated``."
+":class:`SQLAlchemyDTO (Advanced Alchemy) "
+"<advanced_alchemy.extensions.litestar.dto.SQLAlchemyDTO>` can now be "
+"configured using a separate config object using ``Annotated``."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:4599
@@ -4880,8 +4895,8 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:4608
 msgid ""
-"Finally, implicit columns that are marked with ``Mark.READ_ONLY`` or ``Mark."
-"WRITE_ONLY`` will always be shown regardless of the value of "
+"Finally, implicit columns that are marked with ``Mark.READ_ONLY`` or "
+"``Mark.WRITE_ONLY`` will always be shown regardless of the value of "
 "``include_implicit_fields``."
 msgstr ""
 
@@ -4924,8 +4939,8 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:4640
 msgid ""
-"Converts the repository to use :func:`lambda_stmt <sqlalchemy.sql.expression."
-"lambda_stmt>` instead of the normal ``select``"
+"Converts the repository to use :func:`lambda_stmt "
+"<sqlalchemy.sql.expression.lambda_stmt>` instead of the normal ``select``"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:4647
@@ -4943,8 +4958,8 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:4661
 msgid ""
-"Ensures that when the Pydantic validation fails in the Pydantic DTO, a :"
-"class:`ValidationException` is raised with the extras set to the errors "
+"Ensures that when the Pydantic validation fails in the Pydantic DTO, "
+"a :class:`ValidationException` is raised with the extras set to the errors "
 "given by Pydantic."
 msgstr ""
 
@@ -4968,8 +4983,9 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:4689
 msgid ""
-"Set correctly the detail attribute on :class:`LitestarException` and :class:"
-"`HTTPException` regardless of whether it's passed positionally or by name."
+"Set correctly the detail attribute on :class:`LitestarException` "
+"and :class:`HTTPException` regardless of whether it's passed positionally or "
+"by name."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:4697
@@ -5084,8 +5100,8 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:4802
 msgid ""
-"Add missing default values for the ``receive`` and ``send`` parameters of :"
-"class:`~litestar.contrib.htmx.request.HTMXRequest`."
+"Add missing default values for the ``receive`` and ``send`` parameters "
+"of :class:`~litestar.contrib.htmx.request.HTMXRequest`."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:4810
@@ -5098,8 +5114,9 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:4819
 msgid ""
-"Fix a regression where calling :meth:`~litestar.dto.data_structures.DTOData."
-"create_instance` would ignore the renaming settings of fields."
+"Fix a regression where "
+"calling :meth:`~litestar.dto.data_structures.DTOData.create_instance` would "
+"ignore the renaming settings of fields."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:4827
@@ -5129,16 +5146,16 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:4857
 msgid ""
-"Fix a regression that would make ``litestar.contrib.jwt."
-"JWTAuthenticationMiddleware`` authenticate ``OPTIONS`` and ``HEAD`` requests "
-"by default."
+"Fix a regression that would make "
+"``litestar.contrib.jwt.JWTAuthenticationMiddleware`` authenticate "
+"``OPTIONS`` and ``HEAD`` requests by default."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:4865
 msgid ""
-"Fix a regression that would make :class:`~litestar.security.session_auth."
-"middleware.SessionAuthMiddleware` authenticate ``OPTIONS`` and ``HEAD`` "
-"requests by default."
+"Fix a regression that would "
+"make :class:`~litestar.security.session_auth.middleware.SessionAuthMiddleware` "
+"authenticate ``OPTIONS`` and ``HEAD`` requests by default."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:4877
@@ -5175,52 +5192,42 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:4905
 #: ../../../release-notes/changelog.rst:4963
-msgid ""
-"``~litestar.contrib.sqlalchemy.repository.SQLAlchemyAsyncRepository.delete``"
+msgid "``~litestar.contrib.sqlalchemy.repository.SQLAlchemyAsyncRepository.delete``"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:4906
 #: ../../../release-notes/changelog.rst:4964
-msgid ""
-"``~litestar.contrib.sqlalchemy.repository.SQLAlchemyAsyncRepository."
-"delete_many``"
+msgid "``~litestar.contrib.sqlalchemy.repository.SQLAlchemyAsyncRepository.delete_many``"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:4907
 #: ../../../release-notes/changelog.rst:4965
-msgid ""
-"``~litestar.contrib.sqlalchemy.repository.SQLAlchemyAsyncRepository.get``"
+msgid "``~litestar.contrib.sqlalchemy.repository.SQLAlchemyAsyncRepository.get``"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:4908
 #: ../../../release-notes/changelog.rst:4966
-msgid ""
-"``~litestar.contrib.sqlalchemy.repository.SQLAlchemyAsyncRepository.update``"
+msgid "``~litestar.contrib.sqlalchemy.repository.SQLAlchemyAsyncRepository.update``"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:4910
 #: ../../../release-notes/changelog.rst:4968
-msgid ""
-"``~litestar.contrib.sqlalchemy.repository.SQLAlchemySyncRepository.delete``"
+msgid "``~litestar.contrib.sqlalchemy.repository.SQLAlchemySyncRepository.delete``"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:4911
 #: ../../../release-notes/changelog.rst:4969
-msgid ""
-"``~litestar.contrib.sqlalchemy.repository.SQLAlchemySyncRepository."
-"delete_many``"
+msgid "``~litestar.contrib.sqlalchemy.repository.SQLAlchemySyncRepository.delete_many``"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:4912
 #: ../../../release-notes/changelog.rst:4970
-msgid ""
-"``~litestar.contrib.sqlalchemy.repository.SQLAlchemySyncRepository.get``"
+msgid "``~litestar.contrib.sqlalchemy.repository.SQLAlchemySyncRepository.get``"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:4913
 #: ../../../release-notes/changelog.rst:4971
-msgid ""
-"``~litestar.contrib.sqlalchemy.repository.SQLAlchemySyncRepository.update``"
+msgid "``~litestar.contrib.sqlalchemy.repository.SQLAlchemySyncRepository.update``"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:4919
@@ -5232,9 +5239,8 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:4924
 msgid ""
-"``~litestar.contrib.sqlalchemy.repository.SQLAlchemyAsyncRepository."
-"upsert_many`` ``~litestar.contrib.sqlalchemy.repository."
-"SQLAlchemySyncRepository.upsert_many``"
+"``~litestar.contrib.sqlalchemy.repository.SQLAlchemyAsyncRepository.upsert_many`` "
+"``~litestar.contrib.sqlalchemy.repository.SQLAlchemySyncRepository.upsert_many``"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:4931
@@ -5305,9 +5311,9 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:5000
 msgid ""
-"A bug was fixed that would cause field renaming to be skipped within :class:"
-"`~litestar.dto.data_structures.DTOData` and :meth:`~litestar.dto."
-"data_structures.DTOData.create_instance`."
+"A bug was fixed that would cause field renaming to be skipped "
+"within :class:`~litestar.dto.data_structures.DTOData` "
+"and :meth:`~litestar.dto.data_structures.DTOData.create_instance`."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:5008
@@ -5357,20 +5363,22 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:5070
 msgid ""
-"For columns, the :attr:`~sqlalchemy.engine.interfaces.ReflectedColumn."
-"type`\\ 's :attr:`~sqlalchemy.types.TypeEngine.python_type` will be used as "
-"the type of the column, and the :attr:`~sqlalchemy.engine.interfaces."
-"ReflectedColumn.nullable` property to determine if the field should have a :"
-"obj:`None` union."
+"For columns, "
+"the :attr:`~sqlalchemy.engine.interfaces.ReflectedColumn.type`\\ "
+"'s :attr:`~sqlalchemy.types.TypeEngine.python_type` will be used as the type "
+"of the column, and "
+"the :attr:`~sqlalchemy.engine.interfaces.ReflectedColumn.nullable` property "
+"to determine if the field should have a :obj:`None` union."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:5075
 msgid ""
-"For relationships, where the ``RelationshipProperty.direction`` is :attr:"
-"`~sqlalchemy.orm.RelationshipDirection.ONETOMANY` or :attr:`~sqlalchemy.orm."
-"RelationshipDirection.MANYTOMANY`, ``RelationshipProperty.collection_class`` "
-"and ``RelationshipProperty.mapper.class_`` are used to construct an "
-"annotation for the collection."
+"For relationships, where the ``RelationshipProperty.direction`` "
+"is :attr:`~sqlalchemy.orm.RelationshipDirection.ONETOMANY` "
+"or :attr:`~sqlalchemy.orm.RelationshipDirection.MANYTOMANY`, "
+"``RelationshipProperty.collection_class`` and "
+"``RelationshipProperty.mapper.class_`` are used to construct an annotation "
+"for the collection."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:5082
@@ -5382,8 +5390,8 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:5090
 msgid ""
-"Add support for piccolo ORM with the :class:`~litestar.contrib.piccolo."
-"PiccoloDTO`."
+"Add support for piccolo ORM with "
+"the :class:`~litestar.contrib.piccolo.PiccoloDTO`."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:5097
@@ -5395,9 +5403,9 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:5101
 msgid ""
-"If ``path`` is set in both :class:`~litestar.openapi.OpenAPIConfig` and :"
-"class:`~litestar.openapi.OpenAPIController`, the path set on the controller "
-"will take precedence."
+"If ``path`` is set in both :class:`~litestar.openapi.OpenAPIConfig` "
+"and :class:`~litestar.openapi.OpenAPIController`, the path set on the "
+"controller will take precedence."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:5111
@@ -5411,8 +5419,9 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:5114
 msgid ""
-"When this :obj:`True`, the session will :meth:`~sqlalchemy.orm.Session."
-"commit` instead of :meth:`~sqlalchemy.orm.Session.flush` before returning."
+"When this :obj:`True`, the session "
+"will :meth:`~sqlalchemy.orm.Session.commit` instead "
+"of :meth:`~sqlalchemy.orm.Session.flush` before returning."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:5118
@@ -5477,8 +5486,8 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:5132
 msgid ""
-"When :obj:`True`, the session will execute :meth:`~sqlalchemy.orm.Session."
-"refresh` objects before returning."
+"When :obj:`True`, the session will "
+"execute :meth:`~sqlalchemy.orm.Session.refresh` objects before returning."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:5145
@@ -5487,8 +5496,8 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:5146
 msgid ""
-"When this is :obj:`True`, the session will execute :meth:`~sqlalchemy.orm."
-"Session.expunge` all objects before returning."
+"When this is :obj:`True`, the session will "
+"execute :meth:`~sqlalchemy.orm.Session.expunge` all objects before returning."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:5155
@@ -5515,9 +5524,9 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:5177
 msgid ""
-":attr:`~litestar.dto.config.DTOConfig.include` has been added to :class:"
-"`~litestar.dto.config.DTOConfig`, providing a counterpart to :attr:"
-"`~litestar.dto.config.DTOConfig.exclude`."
+":attr:`~litestar.dto.config.DTOConfig.include` has been added "
+"to :class:`~litestar.dto.config.DTOConfig`, providing a counterpart "
+"to :attr:`~litestar.dto.config.DTOConfig.exclude`."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:5181
@@ -5532,16 +5541,18 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:5207
 msgid ""
-"A bug was fixed where ``~litestar.contrib.sqlalchemy.base.AuditColumns."
-"created_at`` and ``~litestar.contrib.sqlalchemy.base.AuditColumns."
-"updated_at`` would default to the :class:`~datetime.datetime` at "
-"initialization time, instead of the time of the update."
+"A bug was fixed where "
+"``~litestar.contrib.sqlalchemy.base.AuditColumns.created_at`` and "
+"``~litestar.contrib.sqlalchemy.base.AuditColumns.updated_at`` would default "
+"to the :class:`~datetime.datetime` at initialization time, instead of the "
+"time of the update."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:5218
 msgid ""
-"Fixes handling of columns defined with `Sequence <https://docs.sqlalchemy."
-"org/en/20/core/defaults.html#defining-sequences>`_ default values."
+"Fixes handling of columns defined with `Sequence <https://"
+"docs.sqlalchemy.org/en/20/core/defaults.html#defining-sequences>`_ default "
+"values."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:5222
@@ -5573,17 +5584,18 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:5198
 msgid ""
-"The ``_sentinel`` column of ``~litestar.contrib.sqlalchemy.base."
-"UUIDPrimaryKey`` has been renamed to ``sa_orm_sentinel``, to support "
-"Spanner, which does not support tables starting with ``_``."
+"The ``_sentinel`` column of "
+"``~litestar.contrib.sqlalchemy.base.UUIDPrimaryKey`` has been renamed to "
+"``sa_orm_sentinel``, to support Spanner, which does not support tables "
+"starting with ``_``."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:5247
 msgid ""
-"As part of the removal of Pydantic as a hard dependency, the header models :"
-"class:`~litestar.datastructures.Header`, :class:`~litestar.datastructures."
-"CacheControlHeader` and :class:`~litestar.datastructures.ETag` have been "
-"replaced with dataclasses."
+"As part of the removal of Pydantic as a hard dependency, the header "
+"models :class:`~litestar.datastructures.Header`, :class:`~litestar.datastructures.CacheControlHeader` "
+"and :class:`~litestar.datastructures.ETag` have been replaced with "
+"dataclasses."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:5254
@@ -5713,22 +5725,22 @@ msgstr ""
 #: ../../../release-notes/changelog.rst:5369
 msgid ""
 "A regression has been fixed in the Pydantic signature model logic, which was "
-"caused by the renaming of ``regex`` to ``pattern``, which would lead to the :"
-"attr:`~litestar.params.KwargDefinition.pattern` not being validated."
+"caused by the renaming of ``regex`` to ``pattern``, which would lead to "
+"the :attr:`~litestar.params.KwargDefinition.pattern` not being validated."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:5381
 msgid ""
 "Expose the previously private :class:`litestar.typing.ParsedType`. This is "
-"mainly indented for usage with :meth:`litestar.plugins."
-"SerializationPluginProtocol.supports_type`"
+"mainly indented for usage "
+"with :meth:`litestar.plugins.SerializationPluginProtocol.supports_type`"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:5389
 msgid ""
-"A new ``pdb_on_exception`` parameter was added to :class:`~litestar.app."
-"Litestar`. When set to ``True``, Litestar will drop into a the Python "
-"debugger when an exception occurs. It defaults to ``None``"
+"A new ``pdb_on_exception`` parameter was added "
+"to :class:`~litestar.app.Litestar`. When set to ``True``, Litestar will drop "
+"into a the Python debugger when an exception occurs. It defaults to ``None``"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:5392
@@ -5745,8 +5757,9 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:5401
 msgid ""
-"The ``operation_class`` argument was added to :class:`~litestar.handlers."
-"HTTPRouteHandler` and the corresponding decorators, allowing to override "
+"The ``operation_class`` argument was added "
+"to :class:`~litestar.handlers.HTTPRouteHandler` and the corresponding "
+"decorators, allowing to override "
 "the :class:`~litestar.openapi.spec.Operation` class, to enable further "
 "customization of the generated OpenAPI schema."
 msgstr ""
@@ -5779,10 +5792,10 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:5439
 msgid ""
-"Add a new synchronous repository base class: ``litestar.contrib.sqlalchemy."
-"repository.SQLAlchemySyncRepository``, which offer the same functionality as "
-"its asynchronous counterpart while operating on a synchronous :class:"
-"`sqlalchemy.orm.Session`."
+"Add a new synchronous repository base class: "
+"``litestar.contrib.sqlalchemy.repository.SQLAlchemySyncRepository``, which "
+"offer the same functionality as its asynchronous counterpart while operating "
+"on a synchronous :class:`sqlalchemy.orm.Session`."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:5448
@@ -5820,18 +5833,18 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:5492
 msgid ""
-"When exporting models using the ``~litestar.contrib.sqlalchemy.base."
-"CommonTableAttributes.to_dict`` method, unloaded columns will now always be "
-"excluded. This prevents implicit I/O via lazy loading, and errors when using "
-"an asynchronous session."
+"When exporting models using the "
+"``~litestar.contrib.sqlalchemy.base.CommonTableAttributes.to_dict`` method, "
+"unloaded columns will now always be excluded. This prevents implicit I/O via "
+"lazy loading, and errors when using an asynchronous session."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:5502
 msgid ""
-"The :meth:`DTOData.create_instance <litestar.dto.factory.DTOData."
-"create_instance>` method now supports providing values for arbitrarily "
-"nested data via kwargs using a double-underscore syntax, for example ``data."
-"create_instance(foo__bar=\"baz\")``."
+"The :meth:`DTOData.create_instance "
+"<litestar.dto.factory.DTOData.create_instance>` method now supports "
+"providing values for arbitrarily nested data via kwargs using a double-"
+"underscore syntax, for example ``data.create_instance(foo__bar=\"baz\")``."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:5509
@@ -5840,10 +5853,11 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:5516
 msgid ""
-"The :class:`SQLAlchemyDTO (Advanced Alchemy) <advanced_alchemy.extensions."
-"litestar.dto.SQLAlchemyDTO>` now supports `hybrid attribute <https://docs."
-"sqlalchemy.org/en/20/orm/extensions/hybrid.html>`_ and `associationproxy "
-"<https://docs.sqlalchemy.org/en/20/orm/extensions/associationproxy.html>`_."
+"The :class:`SQLAlchemyDTO (Advanced Alchemy) "
+"<advanced_alchemy.extensions.litestar.dto.SQLAlchemyDTO>` now supports "
+"`hybrid attribute <https://docs.sqlalchemy.org/en/20/orm/extensions/"
+"hybrid.html>`_ and `associationproxy <https://docs.sqlalchemy.org/en/20/orm/"
+"extensions/associationproxy.html>`_."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:5520
@@ -5852,9 +5866,10 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:5527
 msgid ""
-"DTOs can now be wrapped in generic collection types such as :class:`typing."
-"Sequence`. These will be substituted with a concrete and instantiable type "
-"at run time, e.g. in the case of ``Sequence`` a :class:`list`."
+"DTOs can now be wrapped in generic collection types such "
+"as :class:`typing.Sequence`. These will be substituted with a concrete and "
+"instantiable type at run time, e.g. in the case of ``Sequence`` "
+"a :class:`list`."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:5535
@@ -5867,9 +5882,9 @@ msgstr ""
 #: ../../../release-notes/changelog.rst:5545
 msgid ""
 "Leading underscore fields will not be excluded by default. This behaviour "
-"can be configured with the newly introduced :attr:`~litestar.dto.factory."
-"DTOConfig.underscore_fields_private` configuration value, which defaults to "
-"``True``."
+"can be configured with the newly "
+"introduced :attr:`~litestar.dto.factory.DTOConfig.underscore_fields_private` "
+"configuration value, which defaults to ``True``."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:5555
@@ -5900,16 +5915,17 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:5637
 msgid ""
-"When :class:`~litestar.typing.ParsedType` was introduced, :meth:`~litestar."
-"typing.ParsedType.is_subclass_of` any union was deliberately left to return "
-"``False`` with the intention of waiting for some use-cases to arrive."
+"When :class:`~litestar.typing.ParsedType` was "
+"introduced, :meth:`~litestar.typing.ParsedType.is_subclass_of` any union was "
+"deliberately left to return ``False`` with the intention of waiting for some "
+"use-cases to arrive."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:5642
 msgid ""
 "This behaviour was changed to address an issue where a handler may be typed "
-"to return a union of multiple response types; If all response types are :"
-"class:`~litestar.response.Response` subtypes then the correct response "
+"to return a union of multiple response types; If all response types "
+"are :class:`~litestar.response.Response` subtypes then the correct response "
 "handler will now be applied."
 msgstr ""
 
@@ -5930,8 +5946,9 @@ msgstr ""
 #: ../../../release-notes/changelog.rst:5671
 msgid ""
 "A bug was fixed that would cause smaller streaming responses to not be sent "
-"at all when the :class:`~litestar.middleware.compression."
-"CompressionMiddleware` was used with ``gzip``."
+"at all when "
+"the :class:`~litestar.middleware.compression.CompressionMiddleware` was used "
+"with ``gzip``."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:5680
@@ -5952,8 +5969,8 @@ msgstr ""
 msgid ""
 "An issue was resolved that would cause failures when dependency injection "
 "was being used with custom dependencies (that is, injection of things other "
-"than ``state``, ``query``, path parameters, etc.) within a :class:`~litestar."
-"handlers.WebsocketListener`."
+"than ``state``, ``query``, path parameters, etc.) within "
+"a :class:`~litestar.handlers.WebsocketListener`."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:5707
@@ -5977,10 +5994,11 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:5725
 msgid ""
-"Migrations generated for models with a ``~litestar.contrib.sqlalchemy.types."
-"GUID`` type would erroneously add a ``length=16`` on the input.  Since this "
-"parameter is not defined in the type's the ``__init__`` method. This was "
-"fixed by adding the appropriate parameter to the type's signature."
+"Migrations generated for models with a "
+"``~litestar.contrib.sqlalchemy.types.GUID`` type would erroneously add a "
+"``length=16`` on the input.  Since this parameter is not defined in the "
+"type's the ``__init__`` method. This was fixed by adding the appropriate "
+"parameter to the type's signature."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:5565
@@ -6192,9 +6210,10 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:5806
 msgid ""
-"The ``preferred_validation_backend`` parameter of :class:`~litestar.app."
-"Litestar` has been renamed to ``_preferred_validation_backend`` and "
-"deprecated. It will be removed completely in a future version."
+"The ``preferred_validation_backend`` parameter "
+"of :class:`~litestar.app.Litestar` has been renamed to "
+"``_preferred_validation_backend`` and deprecated. It will be removed "
+"completely in a future version."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:5810
@@ -6204,8 +6223,8 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:5811
 msgid ""
-"The ``preferred_validation_backend`` attribute has been removed from :class:"
-"`~litestar.config.app.AppConfig`"
+"The ``preferred_validation_backend`` attribute has been removed "
+"from :class:`~litestar.config.app.AppConfig`"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:5814
@@ -6218,8 +6237,8 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:5824
 msgid ""
-"The ``Response.get_serializer()`` method has been removed in favor of the :"
-"func:`~litestar.serialization.get_serializer` function."
+"The ``Response.get_serializer()`` method has been removed in favor of "
+"the :func:`~litestar.serialization.get_serializer` function."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:5827
@@ -6261,23 +6280,23 @@ msgstr ""
 msgid ""
 "Response containers have been removed and their functionality largely merged "
 "with that of :class:`~litestar.response.Response`. The predefined response "
-"containers still exist functionally, as subclasses of :class:`Response <."
-"response.Response>` and are now located within the :mod:`litestar.response` "
-"module. In addition to the functionality of Response containers, they now "
-"also feature all of the response's functionality, such as methods to add "
-"headers and cookies."
+"containers still exist functionally, as subclasses of :class:`Response "
+"<.response.Response>` and are now located within "
+"the :mod:`litestar.response` module. In addition to the functionality of "
+"Response containers, they now also feature all of the response's "
+"functionality, such as methods to add headers and cookies."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:5861
 msgid ""
 "The :class:`~litestar.response.Response` class now only serves as a wrapper "
 "and context object, and does not handle the data sending part, which has "
-"been delegated to a newly introduced :class:`ASGIResponse <.response.base."
-"ASGIResponse>`. This type (and its subclasses) represent the response as an "
-"immutable object and are used internally by Litestar to perform the I/O "
-"operations of the response. These can be created and returned from handlers "
-"like any other ASGI application, however they are low-level, and lack the "
-"utility of the higher-level response types."
+"been delegated to a newly introduced :class:`ASGIResponse "
+"<.response.base.ASGIResponse>`. This type (and its subclasses) represent the "
+"response as an immutable object and are used internally by Litestar to "
+"perform the I/O operations of the response. These can be created and "
+"returned from handlers like any other ASGI application, however they are low-"
+"level, and lack the utility of the higher-level response types."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:5879
@@ -6301,9 +6320,9 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:5896
 msgid ""
-"A warning will be raised when ``sync_to_thread`` is being used in :class:`~."
-"handlers.HTTPRouteHandler` or :class:`~.di.Provide` with an asynchronous "
-"callable, as this will have no effect."
+"A warning will be raised when ``sync_to_thread`` is being used "
+"in :class:`~.handlers.HTTPRouteHandler` or :class:`~.di.Provide` with an "
+"asynchronous callable, as this will have no effect."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:5900
@@ -6314,17 +6333,18 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:5908
 msgid ""
-"Dependencies can now be used in the :class:`~litestar.handlers."
-"websocket_listener` hooks ``on_accept``, ``on_disconnect`` and the "
-"``connection_lifespan`` context manager. The ``socket`` parameter is "
-"therefore also not mandatory anymore in those callables."
+"Dependencies can now be used in "
+"the :class:`~litestar.handlers.websocket_listener` hooks ``on_accept``, "
+"``on_disconnect`` and the ``connection_lifespan`` context manager. The "
+"``socket`` parameter is therefore also not mandatory anymore in those "
+"callables."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:5918
 msgid ""
-"Dependencies can now be declared without using :class:`~litestar.di."
-"Provide`. The callables can be passed directly to the ``dependencies`` "
-"dictionary."
+"Dependencies can now be declared without "
+"using :class:`~litestar.di.Provide`. The callables can be passed directly to "
+"the ``dependencies`` dictionary."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:5926
@@ -6365,17 +6385,18 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:5963
 msgid ""
-"On databases without native support for GUIDs, ``~litestar.contrib."
-"sqlalchemy.types.GUID`` will now fall back to ``BINARY(16)``."
+"On databases without native support for GUIDs, "
+"``~litestar.contrib.sqlalchemy.types.GUID`` will now fall back to "
+"``BINARY(16)``."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:5971
 msgid ""
-"A new ``lifespan`` argument has been added to :class:`~litestar.app."
-"Litestar`, accepting an asynchronous context manager, wrapping the lifespan "
-"of the application. It will be entered with the startup phase and exited on "
-"shutdown, providing functionality equal to the ``on_startup`` and "
-"``on_shutdown`` hooks."
+"A new ``lifespan`` argument has been added "
+"to :class:`~litestar.app.Litestar`, accepting an asynchronous context "
+"manager, wrapping the lifespan of the application. It will be entered with "
+"the startup phase and exited on shutdown, providing functionality equal to "
+"the ``on_startup`` and ``on_shutdown`` hooks."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:5981
@@ -6445,10 +6466,10 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:6068
 msgid ""
-"Add a new ``connection_accept_handler`` parameter to :class:"
-"`websocket_listener <litestar.handlers.websocket_listener>`, which can be "
-"used to customize how a connection is accepted, for example to add headers "
-"or subprotocols"
+"Add a new ``connection_accept_handler`` parameter "
+"to :class:`websocket_listener <litestar.handlers.websocket_listener>`, which "
+"can be used to customize how a connection is accepted, for example to add "
+"headers or subprotocols"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:6077
@@ -6484,9 +6505,9 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:6096
 msgid ""
-"Two new methods were added to the :class:`WebSocket <litestar.connection."
-"WebSocket>` connection, which allow to continuously receive data and iterate "
-"over it:"
+"Two new methods were added to the :class:`WebSocket "
+"<litestar.connection.WebSocket>` connection, which allow to continuously "
+"receive data and iterate over it:"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:6099
@@ -6499,8 +6520,8 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:6107
 msgid ""
-"Add support for `MessagePack <https://msgpack.org/index.html>`_ to the :"
-"class:`WebSocket <litestar.connection.WebSocket>` connection."
+"Add support for `MessagePack <https://msgpack.org/index.html>`_ to "
+"the :class:`WebSocket <litestar.connection.WebSocket>` connection."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:6110
@@ -6521,8 +6542,8 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:6116
 msgid ""
-"In addition, two MessagePack related methods were added to :class:"
-"`WebSocketTestSession <litestar.testing.WebSocketTestSession>`:"
+"In addition, two MessagePack related methods were added "
+"to :class:`WebSocketTestSession <litestar.testing.WebSocketTestSession>`:"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:6119
@@ -6532,8 +6553,8 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:6120
 msgid ""
-":meth:`receive_msgpack <litestar.testing.WebSocketTestSession."
-"receive_msgpack>`"
+":meth:`receive_msgpack "
+"<litestar.testing.WebSocketTestSession.receive_msgpack>`"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:6126
@@ -6572,10 +6593,10 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:6156
 msgid ""
-"The ``connection_lifespan`` argument was added to the :class:"
-"`WebSocketListener <litestar.handlers.websocket_listener>`, which accepts an "
-"asynchronous context manager, which can be used to handle the lifespan of "
-"the socket."
+"The ``connection_lifespan`` argument was added to "
+"the :class:`WebSocketListener <litestar.handlers.websocket_listener>`, which "
+"accepts an asynchronous context manager, which can be used to handle the "
+"lifespan of the socket."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:6165
@@ -6594,8 +6615,8 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:6059
 msgid ""
-"A bug was fixed that would cause a type error when using a :class:"
-"`websocket_listener <litestar.handlers.websocket_listener>` in a "
+"A bug was fixed that would cause a type error when using "
+"a :class:`websocket_listener <litestar.handlers.websocket_listener>` in a "
 "``Controller``"
 msgstr ""
 
@@ -6605,9 +6626,9 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:6184
 msgid ""
-"Pass the template context to the :class:`Template <litestar."
-"response_containers.Template>` returned by :class:`htmx.Response <litestar."
-"contrib.htmx.response>`."
+"Pass the template context to the :class:`Template "
+"<litestar.response_containers.Template>` returned by :class:`htmx.Response "
+"<litestar.contrib.htmx.response>`."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:6192
@@ -6632,10 +6653,11 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:6220
 msgid ""
-"Add a ``match_fields`` argument to ``litestar.contrib.sqlalchemy.repository."
-"SQLAlchemyAsyncRepository.get_or_create``. This lets you lookup a model "
-"using a subset of the kwargs you've provided. If the remaining kwargs are "
-"different from the retrieved model's stored values, an update is performed."
+"Add a ``match_fields`` argument to "
+"``litestar.contrib.sqlalchemy.repository.SQLAlchemyAsyncRepository.get_or_create``. "
+"This lets you lookup a model using a subset of the kwargs you've provided. "
+"If the remaining kwargs are different from the retrieved model's stored "
+"values, an update is performed."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:6229
@@ -6654,18 +6676,19 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:6270
 msgid ""
-"Support for DTOs has been added to :class:`WebSocketListener <litestar."
-"handlers.WebsocketListener>` and :class:`WebSocketListener <litestar."
-"handlers.websocket_listener>`. A ``dto`` and ``return_dto`` parameter has "
-"been added, providing the same functionality as their route handler "
-"counterparts."
+"Support for DTOs has been added to :class:`WebSocketListener "
+"<litestar.handlers.WebsocketListener>` and :class:`WebSocketListener "
+"<litestar.handlers.websocket_listener>`. A ``dto`` and ``return_dto`` "
+"parameter has been added, providing the same functionality as their route "
+"handler counterparts."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:6279
 msgid ""
-":class:`SerializationPluginProtocol <litestar.plugins."
-"SerializationPluginProtocol>` has been re-implemented, leveraging the new :"
-"class:`DTOInterface <litestar.dto.interface.DTOInterface>`."
+":class:`SerializationPluginProtocol "
+"<litestar.plugins.SerializationPluginProtocol>` has been re-implemented, "
+"leveraging the new :class:`DTOInterface "
+"<litestar.dto.interface.DTOInterface>`."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:6282
@@ -6697,15 +6720,15 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:6319
 msgid ""
-"An error would occur when using a callable without an :meth:`object."
-"__init__` method was used in a placed that would cause it to be inspected "
-"(such as a route handler's signature)."
+"An error would occur when using a callable without "
+"an :meth:`object.__init__` method was used in a placed that would cause it "
+"to be inspected (such as a route handler's signature)."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:6322
 msgid ""
-"This was caused by trying to access the ``__module__`` attribute of :meth:"
-"`object.__init__`, which would fail with"
+"This was caused by trying to access the ``__module__`` attribute "
+"of :meth:`object.__init__`, which would fail with"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:6325
@@ -6745,8 +6768,8 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:6238
 msgid ""
-"``SQLAlchemyRepository`` has been renamed to ``litestar.contrib.sqlalchemy."
-"repository.SQLAlchemyAsyncRepository``."
+"``SQLAlchemyRepository`` has been renamed to "
+"``litestar.contrib.sqlalchemy.repository.SQLAlchemyAsyncRepository``."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:6254
@@ -6766,9 +6789,10 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:6262
 msgid ""
-"As a result of these changes, :meth:`DTOInterface.from_bytes <litestar.dto."
-"interface.DTOInterface.data_to_encodable_type>` no longer needs to receive "
-"the connection instance, so the ``request`` parameter has been dropped."
+"As a result of these changes, :meth:`DTOInterface.from_bytes "
+"<litestar.dto.interface.DTOInterface.data_to_encodable_type>` no longer "
+"needs to receive the connection instance, so the ``request`` parameter has "
+"been dropped."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:6297
@@ -6889,9 +6913,9 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:6465
 msgid ""
-"A :class:`SQLAlchemyInitPlugin <litestar.contrib.sqlalchemy.plugins."
-"SQLAlchemyInitPlugin>` was added, providing support for managed synchronous "
-"and asynchronous sessions."
+"A :class:`SQLAlchemyInitPlugin "
+"<litestar.contrib.sqlalchemy.plugins.SQLAlchemyInitPlugin>` was added, "
+"providing support for managed synchronous and asynchronous sessions."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:6469
@@ -6906,36 +6930,38 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:6482
 msgid ""
-"Add support for manually setting status codes in the :class:"
-"`RedirectResponse <litestar.response_containers.Redirect>` response "
-"container. This was previously only possible by setting the ``status_code`` "
-"parameter on the corresponding route handler, making dynamic redirect status "
-"codes and conditional redirects using this container hard to implement."
+"Add support for manually setting status codes in "
+"the :class:`RedirectResponse <litestar.response_containers.Redirect>` "
+"response container. This was previously only possible by setting the "
+"``status_code`` parameter on the corresponding route handler, making dynamic "
+"redirect status codes and conditional redirects using this container hard to "
+"implement."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:6493
 msgid ""
-"Add the :class:`CACHE_FOREVER <litestar.config.response_cache."
-"CACHE_FOREVER>` sentinel value, that, when passed to a route handlers "
-"``cache argument``, will cause it to be cached forever, skipping the default "
-"expiration."
+"Add the :class:`CACHE_FOREVER "
+"<litestar.config.response_cache.CACHE_FOREVER>` sentinel value, that, when "
+"passed to a route handlers ``cache argument``, will cause it to be cached "
+"forever, skipping the default expiration."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:6496
 msgid ""
-"Additionally, add support for setting :attr:`ResponseCacheConfig."
-"default_expiration <litestar.config.response_cache.ResponseCacheConfig>` to "
-"``None``, allowing to cache values indefinitely by default when setting "
-"``cache=True`` on a route handler."
+"Additionally, add support for "
+"setting :attr:`ResponseCacheConfig.default_expiration "
+"<litestar.config.response_cache.ResponseCacheConfig>` to ``None``, allowing "
+"to cache values indefinitely by default when setting ``cache=True`` on a "
+"route handler."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:6504
 msgid ""
-"Add an :attr:`accept <litestar.connection.Request.accept>` property to :"
-"class:`Request <litestar.connection.Request>`, returning the newly added :"
-"class:`Accept <litestar.datastructures.headers.Accept>` header wrapper, "
-"representing the requests ``Accept`` HTTP header, offering basic content "
-"negotiation."
+"Add an :attr:`accept <litestar.connection.Request.accept>` property "
+"to :class:`Request <litestar.connection.Request>`, returning the newly "
+"added :class:`Accept <litestar.datastructures.headers.Accept>` header "
+"wrapper, representing the requests ``Accept`` HTTP header, offering basic "
+"content negotiation."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:6510
@@ -6987,8 +7013,8 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:6548
 msgid ""
-"This was fixed by changing how ``get_plugin_for_value`` interacts with :func:"
-"`typing.get_args`"
+"This was fixed by changing how ``get_plugin_for_value`` interacts "
+"with :func:`typing.get_args`"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:6555
@@ -7017,24 +7043,25 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:6576
 msgid ""
-"When using a model that includes a type annotation with :class:`typing."
-"Annotated` in a route handler, the interactive documentation would raise an "
-"error when accessed. This has been fixed and :class:`typing.Annotated` is "
-"now fully supported."
+"When using a model that includes a type annotation "
+"with :class:`typing.Annotated` in a route handler, the interactive "
+"documentation would raise an error when accessed. This has been fixed "
+"and :class:`typing.Annotated` is now fully supported."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:6585
 msgid ""
-"Add support for passing an empty ``data`` parameter to a :class:"
-"`RequestFactory <litestar.testing.RequestFactory>`, which would previously "
-"lead to an error."
+"Add support for passing an empty ``data`` parameter to "
+"a :class:`RequestFactory <litestar.testing.RequestFactory>`, which would "
+"previously lead to an error."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:6592
 msgid ""
-"Add missing parameters to :func:`create_test_client <litestar.testing."
-"create_test_client>` and :func:`create_test_client <litestar.testing."
-"create_async_test_client>`. The following parameters were added:"
+"Add missing parameters to :func:`create_test_client "
+"<litestar.testing.create_test_client>` and :func:`create_test_client "
+"<litestar.testing.create_async_test_client>`. The following parameters were "
+"added:"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:6595
@@ -7085,11 +7112,11 @@ msgstr ""
 #: ../../../release-notes/changelog.rst:6615
 msgid ""
 "Add a a ``repository`` module to ``contrib``, providing abstract base "
-"classes to implement the repository pattern. Also added was the ``contrib."
-"repository.sqlalchemy`` module, implementing a SQLAlchemy repository, "
-"offering hand-tuned abstractions over commonly used tasks, such as handling "
-"of object sessions, inserting, updating and upserting individual models or "
-"collections."
+"classes to implement the repository pattern. Also added was the "
+"``contrib.repository.sqlalchemy`` module, implementing a SQLAlchemy "
+"repository, offering hand-tuned abstractions over commonly used tasks, such "
+"as handling of object sessions, inserting, updating and upserting individual "
+"models or collections."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:6626
@@ -7125,8 +7152,8 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:6637
 msgid ""
-"Move ``starlite.config.cache.CacheConfig`` to  ``starlite.config."
-"response_cache.ResponseCacheConfig``"
+"Move ``starlite.config.cache.CacheConfig`` to  "
+"``starlite.config.response_cache.ResponseCacheConfig``"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:6638
@@ -7151,14 +7178,15 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:6645
 msgid ""
-"``starlite.middleware.rate_limit.RateLimitMiddleware``, ``starlite.config."
-"response_cache.ResponseCacheConfig``, and ``starlite.middleware.session."
-"server_side.ServerSideSessionConfig`` instead of accepting a ``storage`` "
-"argument that could be passed a ``Storage`` instance now have to be "
-"configured via the ``store`` attribute, accepting a string key for the store "
-"to be used from the registry. The ``store`` attribute has a unique default "
-"set, guaranteeing a unique ``starlite.stores.memory.MemoryStore`` instance "
-"is acquired for every one of them from the registry by default"
+"``starlite.middleware.rate_limit.RateLimitMiddleware``, "
+"``starlite.config.response_cache.ResponseCacheConfig``, and "
+"``starlite.middleware.session.server_side.ServerSideSessionConfig`` instead "
+"of accepting a ``storage`` argument that could be passed a ``Storage`` "
+"instance now have to be configured via the ``store`` attribute, accepting a "
+"string key for the store to be used from the registry. The ``store`` "
+"attribute has a unique default set, guaranteeing a unique "
+"``starlite.stores.memory.MemoryStore`` instance is acquired for every one of "
+"them from the registry by default"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:6656
@@ -7167,8 +7195,8 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:6663
 msgid ""
-"Add a ``__version__`` constant to the ``starlite`` namespace, containing a :"
-"class:`NamedTuple <typing.NamedTuple>`, holding information about the "
+"Add a ``__version__`` constant to the ``starlite`` namespace, containing "
+"a :class:`NamedTuple <typing.NamedTuple>`, holding information about the "
 "currently installed version of Starlite"
 msgstr ""
 
@@ -7193,8 +7221,8 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:6693
 msgid ""
-"Add three new configuration options to ``starlite.logging.config."
-"BaseLoggingConfig``:"
+"Add three new configuration options to "
+"``starlite.logging.config.BaseLoggingConfig``:"
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:6695
@@ -7251,8 +7279,8 @@ msgstr ""
 #: ../../../release-notes/changelog.rst:6723
 msgid ""
 "Fix https://github.com/litestar-org/litestar/issues/1292 by allowing to "
-"overwrite the default OpenAPI response description instead of raising :exc:"
-"`ImproperlyConfiguredException`."
+"overwrite the default OpenAPI response description instead of "
+"raising :exc:`ImproperlyConfiguredException`."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:6732
@@ -7281,8 +7309,9 @@ msgstr ""
 #: ../../../release-notes/changelog.rst:6755
 msgid ""
 "An error would be raised when using the SQLAlchemy plugin with a `sqlalchemy "
-"UUID <https://docs.sqlalchemy.org/en/20/core/type_basics.html#sqlalchemy."
-"types.UUID>`_. This was fixed by adding it to the provider map."
+"UUID <https://docs.sqlalchemy.org/en/20/core/"
+"type_basics.html#sqlalchemy.types.UUID>`_. This was fixed by adding it to "
+"the provider map."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:6764
@@ -7309,9 +7338,9 @@ msgstr ""
 #: ../../../release-notes/changelog.rst:6790
 msgid ""
 "``starlite.events.emitter.BaseEventEmitterBackend``, and subsequently "
-"``starlite.events.emitter.SimpleEventEmitter`` and ``starlite.app.Starlite."
-"emit`` have been changed to synchronous function, allowing them to easily be "
-"used within synchronous route handlers."
+"``starlite.events.emitter.SimpleEventEmitter`` and "
+"``starlite.app.Starlite.emit`` have been changed to synchronous function, "
+"allowing them to easily be used within synchronous route handlers."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:6801
@@ -7333,8 +7362,8 @@ msgstr ""
 #: ../../../release-notes/changelog.rst:6820
 msgid ""
 "The ``initial_state`` argument to ``starlite.app.Starlite`` has been "
-"replaced with a ``state`` keyword argument, accepting an optional ``starlite."
-"datastructures.state.State`` instance."
+"replaced with a ``state`` keyword argument, accepting an optional "
+"``starlite.datastructures.state.State`` instance."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:6823
@@ -7486,9 +7515,9 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:6910
 msgid ""
-"``starlite.app.Starlite.from_config`` was added to the ``starlite.app."
-"Starlite`` class which allows to construct an instance from an ``starlite."
-"config.app.AppConfig`` instance."
+"``starlite.app.Starlite.from_config`` was added to the "
+"``starlite.app.Starlite`` class which allows to construct an instance from "
+"an ``starlite.config.app.AppConfig`` instance."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:6918
@@ -7599,9 +7628,10 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:6975
 msgid ""
-"``type_encoders`` support has been added to ``starlite.security.base."
-"AbstractSecurityConfig``, enabling support for customized ``type_encoders`` "
-"for example in ``starlite.contrib.jwt.jwt_auth.JWTAuth``."
+"``type_encoders`` support has been added to "
+"``starlite.security.base.AbstractSecurityConfig``, enabling support for "
+"customized ``type_encoders`` for example in "
+"``starlite.contrib.jwt.jwt_auth.JWTAuth``."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:6985
@@ -7656,13 +7686,14 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:7014
 msgid ""
-":ref:`response headers <usage/responses:Setting Response Headers>` and :ref:"
-"`response cookies <usage/responses:Setting Response Cookies>` now have the "
-"same interface, along with the ``headers`` and ``cookies`` keyword arguments "
-"to ``starlite.response.Response``. They each allow to pass either a `:class:"
-"`Mapping[str, str] <typing.Mapping>`, e.g. a dictionary, or a :class:"
-"`Sequence <typing.Sequence>` of ``starlite.datastructures.response_header."
-"ResponseHeader`` or ``starlite.datastructures.cookie.Cookie`` respectively."
+":ref:`response headers <usage/responses:Setting Response Headers>` "
+"and :ref:`response cookies <usage/responses:Setting Response Cookies>` now "
+"have the same interface, along with the ``headers`` and ``cookies`` keyword "
+"arguments to ``starlite.response.Response``. They each allow to pass either "
+"a `:class:`Mapping[str, str] <typing.Mapping>`, e.g. a dictionary, or "
+"a :class:`Sequence <typing.Sequence>` of "
+"``starlite.datastructures.response_header.ResponseHeader`` or "
+"``starlite.datastructures.cookie.Cookie`` respectively."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:7028
@@ -7779,10 +7810,10 @@ msgstr ""
 
 #: ../../../release-notes/changelog.rst:7066
 msgid ""
-"The ``SQLAlchemyPlugin` has moved to ``starlite.contrib.sqlalchemy_1."
-"plugin`` and will only be compatible with the SQLAlchemy 1.4 release line. "
-"The newer SQLAlchemy 2.x releases will be supported by the ``contrib."
-"sqlalchemy`` module."
+"The ``SQLAlchemyPlugin` has moved to "
+"``starlite.contrib.sqlalchemy_1.plugin`` and will only be compatible with "
+"the SQLAlchemy 1.4 release line. The newer SQLAlchemy 2.x releases will be "
+"supported by the ``contrib.sqlalchemy`` module."
 msgstr ""
 
 #: ../../../release-notes/changelog.rst:7076

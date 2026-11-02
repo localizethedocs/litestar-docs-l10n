@@ -42,8 +42,8 @@ msgstr ""
 
 #: ../../../../docstring of litestar.openapi.OpenAPIConfig.contact:1
 msgid ""
-"API contact information, should be an :class:`Contact <litestar.openapi.spec."
-"contact.Contact>` instance."
+"API contact information, should be an :class:`Contact "
+"<litestar.openapi.spec.contact.Contact>` instance."
 msgstr ""
 
 #: ../../../../docstring of litestar.openapi.OpenAPIConfig.create_examples:1
@@ -64,8 +64,8 @@ msgstr ""
 
 #: ../../../../docstring of litestar.openapi.OpenAPIConfig.external_docs:3
 msgid ""
-"Should be an instance of :class:`ExternalDocumentation <litestar.openapi."
-"spec.external_documentation.ExternalDocumentation>`."
+"Should be an instance of :class:`ExternalDocumentation "
+"<litestar.openapi.spec.external_documentation.ExternalDocumentation>`."
 msgstr ""
 
 #: ../../../../docstring of litestar.openapi.OpenAPIConfig.license:1
@@ -74,8 +74,8 @@ msgstr ""
 
 #: ../../../../docstring of litestar.openapi.OpenAPIConfig.license:3
 msgid ""
-"Should be an instance of :class:`License <litestar.openapi.spec.license."
-"License>`."
+"Should be an instance of :class:`License "
+"<litestar.openapi.spec.license.License>`."
 msgstr ""
 
 #: ../../../../docstring of litestar.openapi.OpenAPIConfig.openapi_controller:1
@@ -84,8 +84,8 @@ msgstr ""
 
 #: ../../../../docstring of litestar.openapi.OpenAPIConfig.openapi_controller:3
 msgid ""
-"Must be subclass of :class:`OpenAPIController <litestar.openapi.controller."
-"OpenAPIController>`."
+"Must be subclass of :class:`OpenAPIController "
+"<litestar.openapi.controller.OpenAPIController>`."
 msgstr ""
 
 #: ../../../../docstring of litestar.openapi.OpenAPIConfig.openapi_router:1
@@ -98,8 +98,8 @@ msgstr ""
 
 #: ../../../../docstring of litestar.openapi.OpenAPIConfig.openapi_router:5
 msgid ""
-"This parameter is also ignored if the deprecated :attr:`openapi_router <."
-"openapi.OpenAPIConfig.openapi_controller>` kwarg is provided."
+"This parameter is also ignored if the deprecated :attr:`openapi_router "
+"<.openapi.OpenAPIConfig.openapi_controller>` kwarg is provided."
 msgstr ""
 
 #: ../../../../docstring of litestar.openapi.OpenAPIConfig.openapi_router:8
@@ -223,8 +223,8 @@ msgstr ""
 
 #: ../../../../docstring of litestar.openapi.OpenAPIConfig.webhooks:1
 msgid ""
-"A mapping of key to either :class:`PathItem <litestar.openapi.spec.path_item."
-"PathItem>` or."
+"A mapping of key to either :class:`PathItem "
+"<litestar.openapi.spec.path_item.PathItem>` or."
 msgstr ""
 
 #: ../../../../docstring of litestar.openapi.OpenAPIConfig.webhooks:3
@@ -245,8 +245,8 @@ msgstr ""
 
 #: ../../../../docstring of litestar.openapi.OpenAPIConfig.components:3
 msgid ""
-"Should be an instance of :class:`Components <litestar.openapi.spec."
-"components.Components>` or a list thereof."
+"Should be an instance of :class:`Components "
+"<litestar.openapi.spec.components.Components>` or a list thereof."
 msgstr ""
 
 #: ../../../../docstring of litestar.openapi.OpenAPIConfig.servers:1
@@ -266,8 +266,8 @@ msgstr ""
 
 #: ../../../../docstring of litestar.openapi.OpenAPIController.after_request:1
 msgid ""
-"A sync or async function executed before a :class:`Request <.connection."
-"Request>` is passed to any route handler."
+"A sync or async function executed before a :class:`Request "
+"<.connection.Request>` is passed to any route handler."
 msgstr ""
 
 #: ../../../../docstring of litestar.openapi.OpenAPIController.after_request:3
@@ -348,15 +348,16 @@ msgstr ""
 
 #: ../../../../docstring of litestar.openapi.OpenAPIController.opt:1
 msgid ""
-"A string key mapping of arbitrary values that can be accessed in :class:"
-"`Guards <.types.Guard>` or wherever you have access to :class:`Request <."
-"connection.Request>` or :class:`ASGI Scope <.types.Scope>`."
+"A string key mapping of arbitrary values that can be accessed "
+"in :class:`Guards <.types.Guard>` or wherever you have access "
+"to :class:`Request <.connection.Request>` or :class:`ASGI Scope "
+"<.types.Scope>`."
 msgstr ""
 
 #: ../../../../docstring of litestar.openapi.OpenAPIController.owner:1
 msgid ""
-"The :class:`Router <.router.Router>` or :class:`Litestar <litestar.app."
-"Litestar>` app that owns the controller."
+"The :class:`Router <.router.Router>` or :class:`Litestar "
+"<litestar.app.Litestar>` app that owns the controller."
 msgstr ""
 
 #: ../../../../docstring of litestar.openapi.OpenAPIController.owner:3
@@ -398,8 +399,8 @@ msgstr ""
 #: ../../../../docstring of
 #: litestar.openapi.OpenAPIController.response_headers:1
 msgid ""
-"A string keyed dictionary mapping :class:`ResponseHeader <.datastructures."
-"ResponseHeader>` instances."
+"A string keyed dictionary mapping :class:`ResponseHeader "
+"<.datastructures.ResponseHeader>` instances."
 msgstr ""
 
 #: ../../../../docstring of litestar.openapi.OpenAPIController.return_dto:1

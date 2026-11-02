@@ -204,9 +204,9 @@ msgstr ""
 #: ../../../../litestar/response/file.py:docstring of
 #: litestar.response.file.File.__init__:8
 msgid ""
-"A :class:`BackgroundTask <.background_tasks.BackgroundTask>` instance or :"
-"class:`BackgroundTasks <.background_tasks.BackgroundTasks>` to execute after "
-"the response is finished. Defaults to None."
+"A :class:`BackgroundTask <.background_tasks.BackgroundTask>` instance "
+"or :class:`BackgroundTasks <.background_tasks.BackgroundTasks>` to execute "
+"after the response is finished. Defaults to None."
 msgstr ""
 
 #: ../../../../litestar/response/file.py:docstring of
@@ -236,15 +236,16 @@ msgstr ""
 #: ../../../../litestar/response/file.py:docstring of
 #: litestar.response.file.File.__init__:18
 msgid ""
-"The output of calling :meth:`file_system.info <types.FileSystemProtocol."
-"info>`, equivalent to providing an :class:`os.stat_result`."
+"The output of calling :meth:`file_system.info "
+"<types.FileSystemProtocol.info>`, equivalent to providing "
+"an :class:`os.stat_result`."
 msgstr ""
 
 #: ../../../../litestar/response/file.py:docstring of
 #: litestar.response.file.File.__init__:20
 msgid ""
-"An implementation of the :class:`FileSystemProtocol <.types."
-"FileSystemProtocol>`. If provided it will be used to load the file."
+"An implementation of the :class:`FileSystemProtocol "
+"<.types.FileSystemProtocol>`. If provided it will be used to load the file."
 msgstr ""
 
 #: ../../../../litestar/response/file.py:docstring of
@@ -281,8 +282,8 @@ msgstr ""
 #: ../../../../litestar/response/file.py:docstring of
 #: litestar.response.file.File.to_asgi_response:1
 msgid ""
-"Create an :class:`ASGIFileResponse <litestar.response.file."
-"ASGIFileResponse>` instance."
+"Create an :class:`ASGIFileResponse "
+"<litestar.response.file.ASGIFileResponse>` instance."
 msgstr ""
 
 #: ../../../../litestar/response/file.py:docstring of

@@ -155,8 +155,9 @@ msgstr ""
 
 #: ../../../usage/dependency-injection.rst:78
 msgid ""
-"the parameter receiving the dependency must be marked with :data:`~litestar."
-"di.NamedDependency`, and its name must match the dependency key."
+"the parameter receiving the dependency must be marked "
+"with :data:`~litestar.di.NamedDependency`, and its name must match the "
+"dependency key."
 msgstr ""
 
 #: ../../../usage/dependency-injection.rst:80
@@ -171,10 +172,10 @@ msgstr ""
 msgid ""
 "Previously, a dependency was injected into any parameter whose name matched "
 "a dependency key in scope, with no marker required. Relying on this name-"
-"based *inference* now emits a :class:`~.exceptions."
-"LitestarDeprecationWarning` and will stop working in Litestar 3.0. Mark the "
-"parameter with :data:`~litestar.di.NamedDependency` instead (see :ref:`usage/"
-"dependency-injection:Marking dependencies`)."
+"based *inference* now emits "
+"a :class:`~.exceptions.LitestarDeprecationWarning` and will stop working in "
+"Litestar 3.0. Mark the parameter with :data:`~litestar.di.NamedDependency` "
+"instead (see :ref:`usage/dependency-injection:Marking dependencies`)."
 msgstr ""
 
 #: ../../../usage/dependency-injection.rst:91
@@ -594,8 +595,8 @@ msgid ""
 "the function will be memoized the first time it is called and then will be "
 "used. There is no sophisticated comparison of kwargs, LRU implementation, "
 "etc., so you should be careful when you choose to use this option. Note that "
-"dependencies will only be called once per request, even with ``Provide."
-"use_cache`` set to ``False``."
+"dependencies will only be called once per request, even with "
+"``Provide.use_cache`` set to ``False``."
 msgstr ""
 
 #: ../../../usage/dependency-injection.rst:309
@@ -648,9 +649,9 @@ msgstr ""
 
 #: ../../../usage/dependency-injection.rst:350
 msgid ""
-"A parameter that should receive an injected dependency is marked with the :"
-"data:`~litestar.di.NamedDependency` generic. The parameter name is matched "
-"against the dependency keys in scope, and the type wrapped by "
+"A parameter that should receive an injected dependency is marked with "
+"the :data:`~litestar.di.NamedDependency` generic. The parameter name is "
+"matched against the dependency keys in scope, and the type wrapped by "
 "``NamedDependency`` is used to validate the injected value:"
 msgstr ""
 
@@ -861,8 +862,8 @@ msgstr ""
 
 #: ../../../usage/dependency-injection.rst:425
 msgid ""
-"This validation can be bypassed using the :data:`~litestar.params."
-"SkipValidation` marker:"
+"This validation can be bypassed using "
+"the :data:`~litestar.params.SkipValidation` marker:"
 msgstr ""
 
 #: ../../../usage/dependency-injection.rst:428

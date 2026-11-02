@@ -23,7 +23,6 @@ msgstr ""
 
 #: ../../../reference/repository/testing.rst:4
 msgid ""
-"Use :class:`advanced_alchemy.repository.memory."
-"SQLAlchemyAsyncMockRepository` / :class:`advanced_alchemy.repository.memory."
-"SQLAlchemySyncMockRepository` instead. This module is removed before 3.0.0."
+"Use :class:`advanced_alchemy.repository.memory.SQLAlchemyAsyncMockRepository` / :class:`advanced_alchemy.repository.memory.SQLAlchemySyncMockRepository` "
+"instead. This module is removed before 3.0.0."
 msgstr ""

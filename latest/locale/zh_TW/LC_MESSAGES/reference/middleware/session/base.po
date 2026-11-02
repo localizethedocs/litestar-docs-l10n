@@ -24,8 +24,8 @@ msgstr ""
 #: ../../../../litestar/middleware/session/base.py:docstring of
 #: litestar.middleware.session.base.BaseBackendConfig:1
 msgid ""
-"Bases: :py:class:`~abc.ABC`, :py:class:`~typing.Generic`\\ [:py:obj:"
-"`~litestar.middleware.session.base.BaseSessionBackendT`]"
+"Bases: :py:class:`~abc.ABC`, :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~litestar.middleware.session.base.BaseSessionBackendT`]"
 msgstr ""
 
 #: ../../../../litestar/middleware/session/base.py:docstring of
@@ -142,8 +142,8 @@ msgid ""
 "def my_handler(request: Request) -> None: ...\n"
 "\n"
 "\n"
-"app = Litestar(route_handlers=[my_handler], middleware=[session_config."
-"middleware])"
+"app = Litestar(route_handlers=[my_handler], "
+"middleware=[session_config.middleware])"
 msgstr ""
 
 #: ../../../reference/middleware/session/base.rst:0
@@ -159,8 +159,8 @@ msgstr ""
 #: ../../../../litestar/middleware/session/base.py:docstring of
 #: litestar.middleware.session.base.BaseSessionBackend:1
 msgid ""
-"Bases: :py:class:`~abc.ABC`, :py:class:`~typing.Generic`\\ [:py:obj:"
-"`~litestar.middleware.session.base.ConfigT`]"
+"Bases: :py:class:`~abc.ABC`, :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~litestar.middleware.session.base.ConfigT`]"
 msgstr ""
 
 #: ../../../../litestar/middleware/session/base.py:docstring of
@@ -300,9 +300,8 @@ msgstr ""
 #: ../../../../litestar/middleware/session/base.py:docstring of
 #: litestar.middleware.session.base.SessionMiddleware:1
 msgid ""
-"Bases: :py:class:`~litestar.middleware.base.AbstractMiddleware`, :py:class:"
-"`~typing.Generic`\\ [:py:obj:`~litestar.middleware.session.base."
-"BaseSessionBackendT`]"
+"Bases: :py:class:`~litestar.middleware.base.AbstractMiddleware`, :py:class:`~typing.Generic`\\ "
+"[:py:obj:`~litestar.middleware.session.base.BaseSessionBackendT`]"
 msgstr ""
 
 #: ../../../../litestar/middleware/session/base.py:docstring of

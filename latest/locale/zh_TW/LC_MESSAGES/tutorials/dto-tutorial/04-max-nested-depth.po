@@ -36,9 +36,9 @@ msgstr ""
 msgid ""
 "Given that we didn't explicitly exclude it from the response, each of the "
 "``Person`` objects in the ``children`` collection should have an empty "
-"``children`` collection. The reason they do not is due to :attr:"
-"`max_nested_depth <litestar.dto.config.DTOConfig.max_nested_depth>` and its "
-"default value of ``1``."
+"``children`` collection. The reason they do not is due "
+"to :attr:`max_nested_depth <litestar.dto.config.DTOConfig.max_nested_depth>` "
+"and its default value of ``1``."
 msgstr ""
 
 #: ../../../tutorials/dto-tutorial/04-max-nested-depth.rst:16

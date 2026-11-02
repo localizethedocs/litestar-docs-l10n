@@ -409,8 +409,8 @@ msgstr ""
 
 #: ../../../usage/routing/parameters.rst:141
 msgid ""
-"In the handler signature, ``user_id`` is declared as :data:`FromPath[int] <."
-"params.FromPath>`, which tells Litestar to inject the matching path value"
+"In the handler signature, ``user_id`` is declared as :data:`FromPath[int] "
+"<.params.FromPath>`, which tells Litestar to inject the matching path value"
 msgstr ""
 
 #: ../../../usage/routing/parameters.rst:145
@@ -551,19 +551,19 @@ msgstr ""
 
 #: ../../../usage/routing/parameters.rst:193
 msgid ""
-"Header :term:`parameters <parameter>` are declared with :data:`~.params."
-"FromHeader` or ``Annotated[<type>, HeaderParameter()]``. The handler-side "
-"parameter name is used as the header name by default; HTTP headers are "
-"matched case-insensitively, so ``token: FromHeader[str]`` matches both "
-"``Token`` and ``token`` on the wire."
+"Header :term:`parameters <parameter>` are declared "
+"with :data:`~.params.FromHeader` or ``Annotated[<type>, "
+"HeaderParameter()]``. The handler-side parameter name is used as the header "
+"name by default; HTTP headers are matched case-insensitively, so ``token: "
+"FromHeader[str]`` matches both ``Token`` and ``token`` on the wire."
 msgstr ""
 
 #: ../../../usage/routing/parameters.rst:198
 msgid ""
 "In practice, most headers you care about have names that are not valid "
 "Python identifiers (e.g. ``X-API-KEY``, ``Content-Type``). In those cases, "
-"switch to :class:`~typing.Annotated` and set ``name=`` on :class:`~.params."
-"HeaderParameter`:"
+"switch to :class:`~typing.Annotated` and set ``name=`` "
+"on :class:`~.params.HeaderParameter`:"
 msgstr ""
 
 #: ../../../usage/routing/parameters.rst:203
@@ -594,9 +594,10 @@ msgstr ""
 
 #: ../../../usage/routing/parameters.rst:214
 msgid ""
-"Cookie :term:`parameters <parameter>` are declared with :data:`~.params."
-"FromCookie` or ``Annotated[<type>, CookieParameter()]``. The handler-side "
-"parameter name is used as the cookie name by default:"
+"Cookie :term:`parameters <parameter>` are declared "
+"with :data:`~.params.FromCookie` or ``Annotated[<type>, "
+"CookieParameter()]``. The handler-side parameter name is used as the cookie "
+"name by default:"
 msgstr ""
 
 #: ../../../usage/routing/parameters.rst:219
@@ -783,16 +784,16 @@ msgstr ""
 msgid ""
 "> curl http://127.0.0.1:8000/?"
 "date=2022-11-28T13:22:06.916540&floating_number=0.1&number=42&strings=1&strings=2\n"
-"{\"datetime\":\"2022-11-29T13:22:06.916540\",\"int\":42,\"float\":0.1,"
-"\"list\":[\"1\",\"2\"]}"
+"{\"datetime\":\"2022-11-29T13:22:06.916540\","
+"\"int\":42,\"float\":0.1,\"list\":[\"1\",\"2\"]}"
 msgstr ""
 
 #: ../../../usage/routing/parameters.rst:245
 msgid ""
 "Path parameters additionally support coercion via the path-slot type itself. "
 "The handler-side type does not need to match the slot type one-to-one — if "
-"the slot captures an :class:`int` and the handler asks for a :class:"
-"`~datetime.datetime`, Litestar applies the second conversion:"
+"the slot captures an :class:`int` and the handler asks for "
+"a :class:`~datetime.datetime`, Litestar applies the second conversion:"
 msgstr ""
 
 #: ../../../usage/routing/parameters.rst:250
@@ -971,8 +972,9 @@ msgstr ""
 
 #: ../../../usage/routing/parameters.rst:272
 msgid ""
-"The same pattern applies to :class:`~.params.HeaderParameter`,:class:`~."
-"params.CookieParameter` and :class:`~.params.PathParameter`."
+"The same pattern applies "
+"to :class:`~.params.HeaderParameter`,:class:`~.params.CookieParameter` "
+"and :class:`~.params.PathParameter`."
 msgstr ""
 
 #: ../../../usage/routing/parameters.rst:278
@@ -1145,9 +1147,9 @@ msgid ""
 "the enum's docstring for the description section of the schema. Overriding "
 "the description via :attr:`~.params.KwargDefinition.description` would "
 "change it for every parameter sharing that enum, because only one schema is "
-"generated per enum. To get distinct descriptions, also pass :attr:`~.params."
-"KwargDefinition.schema_component_key` so a separate schema component is "
-"generated per parameter:"
+"generated per enum. To get distinct descriptions, also "
+"pass :attr:`~.params.KwargDefinition.schema_component_key` so a separate "
+"schema component is generated per parameter:"
 msgstr ""
 
 #: ../../../usage/routing/parameters.rst:315
@@ -1416,17 +1418,17 @@ msgstr ""
 
 #: ../../../usage/routing/parameters.rst:339
 msgid ""
-"In the above we declare :term:`parameters <parameter>` on the :class:"
-"`Litestar app <.app.Litestar>`, :class:`router <.router.Router>`, and :class:"
-"`controller <.controller.Controller>` layers in addition to those declared "
-"in the route handler. Examine these more closely:"
+"In the above we declare :term:`parameters <parameter>` on "
+"the :class:`Litestar app <.app.Litestar>`, :class:`router <.router.Router>`, "
+"and :class:`controller <.controller.Controller>` layers in addition to those "
+"declared in the route handler. Examine these more closely:"
 msgstr ""
 
 #: ../../../usage/routing/parameters.rst:343
 msgid ""
 "``app_param`` is a cookie parameter with the key ``special-cookie``, "
-"declared via :class:`~.params.CookieParameter` on the :class:`Litestar app <."
-"app.Litestar>` with ``annotation=str``. ``required=False`` makes it "
+"declared via :class:`~.params.CookieParameter` on the :class:`Litestar app "
+"<.app.Litestar>` with ``annotation=str``. ``required=False`` makes it "
 "optional; without that argument it would be required by default."
 msgstr ""
 
@@ -1542,6 +1544,6 @@ msgid ""
 "The :func:`~.params.Parameter` function itself is **not** removed and can "
 "still be used to attach pure metadata (``description``, ``gt``, etc.) when "
 "wrapped in :class:`~typing.Annotated`. Only its ``header``, ``cookie``, and "
-"``query`` keyword arguments are deprecated — passing any of those emits a :"
-"exc:`DeprecationWarning` independently of the handler-level warning."
+"``query`` keyword arguments are deprecated — passing any of those emits "
+"a :exc:`DeprecationWarning` independently of the handler-level warning."
 msgstr ""
