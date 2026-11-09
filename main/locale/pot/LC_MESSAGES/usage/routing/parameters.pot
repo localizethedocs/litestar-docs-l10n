@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-19 17:13+0000\n"
+"POT-Creation-Date: 2026-11-09 18:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -227,17 +227,21 @@ msgid ""
 "value"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:101
+#: ../../../usage/routing/parameters.rst:100
+msgid "Parameters declared ``required=False`` must be given a default value"
+msgstr ""
+
+#: ../../../usage/routing/parameters.rst:102
 msgid ""
 "Defaults work exactly like defaults in regular function parameters: If the "
 "value is missing from the request, the handler is called with the default:"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:105
+#: ../../../usage/routing/parameters.rst:106
 msgid "Defining a default value for a query parameter"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:105
+#: ../../../usage/routing/parameters.rst:106
 msgid ""
 "from litestar import Litestar, get\n"
 "from litestar.params import FromQuery\n"
@@ -259,15 +263,15 @@ msgid ""
 "{\"param\":\"john\"}"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:108
+#: ../../../usage/routing/parameters.rst:109
 msgid "Marking a parameter optional means the type itself permits :obj:`None`:"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:111
+#: ../../../usage/routing/parameters.rst:112
 msgid "Defining an optional query parameter"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:111
+#: ../../../usage/routing/parameters.rst:112
 msgid ""
 "from litestar import Litestar, get\n"
 "from litestar.params import FromQuery\n"
@@ -289,7 +293,7 @@ msgid ""
 "{\"param\":\"goodbye\"}"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:116
+#: ../../../usage/routing/parameters.rst:117
 msgid ""
 "Path parameters are always required because they are part of the URL itself. "
 "You can only get a \"missing\" path parameter when the same handler is "
@@ -298,15 +302,15 @@ msgid ""
 "handler-side default fills in for the path without the slot."
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:124
+#: ../../../usage/routing/parameters.rst:125
 msgid "Parameter types"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:127
+#: ../../../usage/routing/parameters.rst:128
 msgid "Path parameters"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:129
+#: ../../../usage/routing/parameters.rst:130
 msgid ""
 "Path :term:`parameters <parameter>` are declared as part of the ``path`` "
 "component of the URL using the syntax ``{param_name:param_type}``. The "
@@ -314,11 +318,11 @@ msgid ""
 "declared with :data:`~.params.FromPath`:"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:134
+#: ../../../usage/routing/parameters.rst:135
 msgid "Defining a path parameter in a route handler"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:134
+#: ../../../usage/routing/parameters.rst:135
 msgid ""
 "import dataclasses\n"
 "\n"
@@ -343,27 +347,27 @@ msgid ""
 "app = Litestar(route_handlers=[get_user])"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:137
+#: ../../../usage/routing/parameters.rst:138
 msgid "There are two components to declaring a path parameter:"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:139
+#: ../../../usage/routing/parameters.rst:140
 msgid ""
 "In the :class:`@get() <.handlers.get>` :term:`decorator`, the path component "
 "declares both the parameter's name (``user_id``) and type (:class:`int`)"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:141
+#: ../../../usage/routing/parameters.rst:142
 msgid ""
-"In the handler signature, ``user_id`` is declared as :data:`FromPath[int] <."
-"params.FromPath>`, which tells Litestar to inject the matching path value"
+"In the handler signature, ``user_id`` is declared as :data:`FromPath[int] "
+"<.params.FromPath>`, which tells Litestar to inject the matching path value"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:145
+#: ../../../usage/routing/parameters.rst:146
 msgid "Two characteristics are unique to path parameters:"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:147
+#: ../../../usage/routing/parameters.rst:148
 msgid ""
 "The URL slot defines the structurally required type via the ``:type`` suffix "
 "(see :ref:`usage/routing/parameters:supported path parameter types` below). "
@@ -372,13 +376,13 @@ msgid ""
 "(see :ref:`usage/routing/parameters:type coercion`)."
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:152
+#: ../../../usage/routing/parameters.rst:153
 msgid ""
 "Path parameters cannot be declared on application :ref:`layers <usage/"
 "applications:layered architecture>`"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:156
+#: ../../../usage/routing/parameters.rst:157
 msgid ""
 "You only need to declare the path :term:`parameter` in the function "
 "signature if the handler actually uses it. If the path parameter is part of "
@@ -386,74 +390,74 @@ msgid ""
 "signature; it will still be validated and added to the OpenAPI schema."
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:163
+#: ../../../usage/routing/parameters.rst:164
 msgid "Supported path parameter types"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:165
+#: ../../../usage/routing/parameters.rst:166
 msgid "The following types are supported in the ``{name:type}`` slot:"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:167
+#: ../../../usage/routing/parameters.rst:168
 msgid "``date``: Accepts date strings and time stamps."
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:168
+#: ../../../usage/routing/parameters.rst:169
 msgid "``datetime``: Accepts date-time strings and time stamps."
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:169
+#: ../../../usage/routing/parameters.rst:170
 msgid "``decimal``: Accepts decimal values and floats."
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:170
+#: ../../../usage/routing/parameters.rst:171
 msgid ":class:`float`: Accepts ints and floats."
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:171
+#: ../../../usage/routing/parameters.rst:172
 msgid ":class:`int`: Accepts ints and floats."
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:172
+#: ../../../usage/routing/parameters.rst:173
 msgid ":class:`path`: Accepts valid POSIX paths."
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:173
+#: ../../../usage/routing/parameters.rst:174
 msgid ":class:`str`: Accepts all string values."
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:174
+#: ../../../usage/routing/parameters.rst:175
 msgid ""
 "``time``: Accepts time strings with optional timezone compatible with "
 "standard (Pydantic/Msgspec) datetime formats."
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:175
+#: ../../../usage/routing/parameters.rst:176
 msgid ""
 "``timedelta``: Accepts duration strings compatible with the standard "
 "(Pydantic/Msgspec) timedelta formats."
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:176
+#: ../../../usage/routing/parameters.rst:177
 msgid "``uuid``: Accepts all uuid values."
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:179
+#: ../../../usage/routing/parameters.rst:180
 msgid "Query parameters"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:181
+#: ../../../usage/routing/parameters.rst:182
 msgid ""
 "Query :term:`parameters <parameter>` are declared as :term:`parameters "
 "<argument>` on the handler function, typed with :data:`~.params.FromQuery` "
 "or ``Annotated[<type>, QueryParameter()]``."
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:186
+#: ../../../usage/routing/parameters.rst:187
 msgid "Defining a query parameter in a route handler"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:186
+#: ../../../usage/routing/parameters.rst:187
 msgid ""
 "from litestar import Litestar, get\n"
 "from litestar.params import FromQuery\n"
@@ -475,28 +479,28 @@ msgid ""
 "{\"param\":\"bar\"}"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:191
+#: ../../../usage/routing/parameters.rst:192
 msgid "Header parameters"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:193
+#: ../../../usage/routing/parameters.rst:194
 msgid ""
-"Header :term:`parameters <parameter>` are declared with :data:`~.params."
-"FromHeader` or ``Annotated[<type>, HeaderParameter()]``. The handler-side "
-"parameter name is used as the header name by default; HTTP headers are "
-"matched case-insensitively, so ``token: FromHeader[str]`` matches both "
-"``Token`` and ``token`` on the wire."
+"Header :term:`parameters <parameter>` are declared "
+"with :data:`~.params.FromHeader` or ``Annotated[<type>, "
+"HeaderParameter()]``. The handler-side parameter name is used as the header "
+"name by default; HTTP headers are matched case-insensitively, so ``token: "
+"FromHeader[str]`` matches both ``Token`` and ``token`` on the wire."
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:198
+#: ../../../usage/routing/parameters.rst:199
 msgid ""
 "In practice, most headers you care about have names that are not valid "
 "Python identifiers (e.g. ``X-API-KEY``, ``Content-Type``). In those cases, "
-"switch to :class:`~typing.Annotated` and set ``name=`` on :class:`~.params."
-"HeaderParameter`:"
+"switch to :class:`~typing.Annotated` and set ``name=`` "
+"on :class:`~.params.HeaderParameter`:"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:203
+#: ../../../usage/routing/parameters.rst:204
 msgid ""
 "from typing_extensions import Annotated\n"
 "\n"
@@ -507,7 +511,7 @@ msgid ""
 "KEY\")]) -> None: ..."
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:203
+#: ../../../usage/routing/parameters.rst:204
 msgid ""
 "from typing import Annotated\n"
 "\n"
@@ -518,18 +522,19 @@ msgid ""
 "KEY\")]) -> None: ..."
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:212
+#: ../../../usage/routing/parameters.rst:213
 msgid "Cookie parameters"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:214
+#: ../../../usage/routing/parameters.rst:215
 msgid ""
-"Cookie :term:`parameters <parameter>` are declared with :data:`~.params."
-"FromCookie` or ``Annotated[<type>, CookieParameter()]``. The handler-side "
-"parameter name is used as the cookie name by default:"
+"Cookie :term:`parameters <parameter>` are declared "
+"with :data:`~.params.FromCookie` or ``Annotated[<type>, "
+"CookieParameter()]``. The handler-side parameter name is used as the cookie "
+"name by default:"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:219
+#: ../../../usage/routing/parameters.rst:220
 msgid ""
 "from typing_extensions import Annotated\n"
 "\n"
@@ -540,7 +545,7 @@ msgid ""
 "id\")]) -> None: ..."
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:219
+#: ../../../usage/routing/parameters.rst:220
 msgid ""
 "from typing import Annotated\n"
 "\n"
@@ -551,17 +556,17 @@ msgid ""
 "id\")]) -> None: ..."
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:227
+#: ../../../usage/routing/parameters.rst:228
 msgid ""
 "A combined example showing both header and cookie parameters alongside a "
 "path parameter:"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:230
+#: ../../../usage/routing/parameters.rst:231
 msgid "Defining header and cookie parameters"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:230
+#: ../../../usage/routing/parameters.rst:231
 msgid ""
 "import dataclasses\n"
 "from typing import Annotated\n"
@@ -599,11 +604,11 @@ msgid ""
 "app = Litestar(route_handlers=[get_user])"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:235
+#: ../../../usage/routing/parameters.rst:236
 msgid "Type coercion"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:237
+#: ../../../usage/routing/parameters.rst:238
 msgid ""
 "Every parameter starts life on the wire as a string (or for path parameters, "
 "a string captured by the URL slot). Litestar coerces that raw value into the "
@@ -611,11 +616,11 @@ msgid ""
 "``FromPath[datetime]``, …) before passing it to the handler:"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:242
+#: ../../../usage/routing/parameters.rst:243
 msgid "Coercing query parameters into different types"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:242
+#: ../../../usage/routing/parameters.rst:243
 msgid ""
 "from datetime import datetime, timedelta\n"
 "from typing import Any\n"
@@ -646,23 +651,23 @@ msgstr ""
 msgid ""
 "> curl 'http://127.0.0.1:8000/?"
 "date=2022-11-28T13:22:06.916540&floating_number=0.1&number=42&strings=1&strings=2'\n"
-"{\"datetime\":\"2022-11-29T13:22:06.916540\",\"int\":42,\"float\":0.1,"
-"\"list\":[\"1\",\"2\"]}"
+"{\"datetime\":\"2022-11-29T13:22:06.916540\","
+"\"int\":42,\"float\":0.1,\"list\":[\"1\",\"2\"]}"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:245
+#: ../../../usage/routing/parameters.rst:246
 msgid ""
 "Path parameters additionally support coercion via the path-slot type itself. "
 "The handler-side type does not need to match the slot type one-to-one — if "
-"the slot captures an :class:`int` and the handler asks for a :class:"
-"`~datetime.datetime`, Litestar applies the second conversion:"
+"the slot captures an :class:`int` and the handler asks for "
+"a :class:`~datetime.datetime`, Litestar applies the second conversion:"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:250
+#: ../../../usage/routing/parameters.rst:251
 msgid "Coercing a path parameter into a different type"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:250
+#: ../../../usage/routing/parameters.rst:251
 msgid ""
 "import dataclasses\n"
 "from datetime import UTC, datetime\n"
@@ -693,18 +698,18 @@ msgid ""
 "app = Litestar(route_handlers=[get_orders])"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:253
+#: ../../../usage/routing/parameters.rst:254
 msgid ""
 "The same conversion rules apply to header and cookie parameters: "
 "``FromHeader[int]`` will parse the header value as an integer, "
 "``FromCookie[datetime]`` will parse the cookie as a datetime, and so on."
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:258
+#: ../../../usage/routing/parameters.rst:259
 msgid "Aliasing"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:260
+#: ../../../usage/routing/parameters.rst:261
 msgid ""
 "By default, the name of the function parameter is used to retrieve the "
 "parameter data from the request. To decouple the two, for example to receive "
@@ -713,11 +718,11 @@ msgid ""
 "matching specifier class:"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:266
+#: ../../../usage/routing/parameters.rst:267
 msgid "Remapping a query parameter to a different URL name"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:266
+#: ../../../usage/routing/parameters.rst:267
 msgid ""
 "from typing import Annotated\n"
 "\n"
@@ -740,29 +745,30 @@ msgid ""
 "{\"param\":\"foo\"}"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:269
+#: ../../../usage/routing/parameters.rst:270
 msgid ""
 "A request to ``http://127.0.0.1:8000?camelCase=foo`` will be received as "
 "``snake_case=\"foo\"`` inside the handler."
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:272
+#: ../../../usage/routing/parameters.rst:273
 msgid ""
-"The same pattern applies to :class:`~.params.HeaderParameter`, :class:`~."
-"params.CookieParameter` and :class:`~.params.PathParameter`."
+"The same pattern applies "
+"to :class:`~.params.HeaderParameter`, :class:`~.params.CookieParameter` "
+"and :class:`~.params.PathParameter`."
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:278
+#: ../../../usage/routing/parameters.rst:279
 msgid "Validation constraints"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:280
+#: ../../../usage/routing/parameters.rst:281
 msgid ""
 "All parameters can be given certain validation constraints, that will be "
 "validated when a request is received, and represented in the OpenAPI schema."
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:283
+#: ../../../usage/routing/parameters.rst:284
 msgid ""
 "Currently supported constraints are: ``gt``, ``ge``, ``lt``, ``le``, "
 "``multiple_of``, ``min_length``, ``max_length``, ``min_items``, "
@@ -770,11 +776,11 @@ msgid ""
 "raises :exc:`~.exceptions.http_exceptions.ValidationException`:"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:289
+#: ../../../usage/routing/parameters.rst:290
 msgid "Constraining a query parameter to integers larger than 5"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:289
+#: ../../../usage/routing/parameters.rst:290
 msgid ""
 "from typing import Annotated\n"
 "\n"
@@ -790,21 +796,21 @@ msgid ""
 "app = Litestar(route_handlers=[index])"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:294
+#: ../../../usage/routing/parameters.rst:295
 msgid "OpenAPI metadata"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:296
+#: ../../../usage/routing/parameters.rst:297
 msgid ""
 "Parameters can extend or alter their OpenAPI schema, e.g. to customize their "
 "title, add a description or examples:"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:300
+#: ../../../usage/routing/parameters.rst:301
 msgid "Adding  OpenAPI metadata to a path parameter"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:300
+#: ../../../usage/routing/parameters.rst:301
 msgid ""
 "import dataclasses\n"
 "from typing import Annotated, Any\n"
@@ -847,26 +853,26 @@ msgid ""
 "app = Litestar(route_handlers=[get_product_version])"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:305
+#: ../../../usage/routing/parameters.rst:306
 msgid "Customizing enum schemas"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:307
+#: ../../../usage/routing/parameters.rst:308
 msgid ""
 "By default, the OpenAPI schema generated for an enum-typed parameter uses "
 "the enum's docstring for the description section of the schema. Overriding "
 "the description via :attr:`~.params.KwargDefinition.description` would "
 "change it for every parameter sharing that enum, because only one schema is "
-"generated per enum. To get distinct descriptions, also pass :attr:`~.params."
-"KwargDefinition.schema_component_key` so a separate schema component is "
-"generated per parameter:"
+"generated per enum. To get distinct descriptions, also "
+"pass :attr:`~.params.KwargDefinition.schema_component_key` so a separate "
+"schema component is generated per parameter:"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:315
+#: ../../../usage/routing/parameters.rst:316
 msgid "Distinct OpenAPI components for parameters sharing the same enum type"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:315
+#: ../../../usage/routing/parameters.rst:316
 msgid ""
 "from enum import StrEnum\n"
 "from typing import Annotated\n"
@@ -895,7 +901,7 @@ msgid ""
 "app = Litestar([index])"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:318
+#: ../../../usage/routing/parameters.rst:319
 msgid ""
 "In the above example, the schema for ``q1`` references a \"q1\" schema "
 "component with description \"This is q1\"; the schema for ``q2`` references "
@@ -904,7 +910,7 @@ msgid ""
 "description \"This is q3\"."
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:323
+#: ../../../usage/routing/parameters.rst:324
 msgid ""
 "Without the :attr:`~.params.KwargDefinition.schema_component_key` arguments "
 "on ``q1`` and ``q3``, all three would share the same \"MyEnum\" component "
@@ -912,11 +918,11 @@ msgid ""
 "wins."
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:329
+#: ../../../usage/routing/parameters.rst:330
 msgid "Layered Parameters"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:331
+#: ../../../usage/routing/parameters.rst:332
 msgid ""
 "As part of Litestar's :ref:`layered architecture <usage/applications:layered "
 "architecture>`, you can declare :term:`parameters <parameter>` not only on "
@@ -924,11 +930,11 @@ msgid ""
 "application:"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:336
+#: ../../../usage/routing/parameters.rst:337
 msgid "Declaring parameters on different layers of the application"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:336
+#: ../../../usage/routing/parameters.rst:337
 msgid ""
 "from typing import Annotated, Union\n"
 "\n"
@@ -970,7 +976,7 @@ msgid ""
 "    route_handlers=[MyController],\n"
 "    parameters={\n"
 "        \"router_param\": HeaderParameter(annotation=str, name=\"MyHeader\", "
-"pattern=\"^[a-zA-Z]$\", required=False),\n"
+"pattern=\"^[a-zA-Z]$\"),\n"
 "    },\n"
 ")\n"
 "\n"
@@ -987,7 +993,7 @@ msgstr ""
 msgid "Python 3.10+"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:336
+#: ../../../usage/routing/parameters.rst:337
 msgid ""
 "from typing import Annotated\n"
 "\n"
@@ -1029,7 +1035,7 @@ msgid ""
 "    route_handlers=[MyController],\n"
 "    parameters={\n"
 "        \"router_param\": HeaderParameter(annotation=str, name=\"MyHeader\", "
-"pattern=\"^[a-zA-Z]$\", required=False),\n"
+"pattern=\"^[a-zA-Z]$\"),\n"
 "    },\n"
 ")\n"
 "\n"
@@ -1042,45 +1048,45 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:339
+#: ../../../usage/routing/parameters.rst:340
 msgid ""
-"In the above we declare :term:`parameters <parameter>` on the :class:"
-"`Litestar app <.app.Litestar>`, :class:`router <.router.Router>`, and :class:"
-"`controller <.controller.Controller>` layers in addition to those declared "
-"in the route handler. Examine these more closely:"
+"In the above we declare :term:`parameters <parameter>` on "
+"the :class:`Litestar app <.app.Litestar>`, :class:`router <.router.Router>`, "
+"and :class:`controller <.controller.Controller>` layers in addition to those "
+"declared in the route handler. Examine these more closely:"
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:343
+#: ../../../usage/routing/parameters.rst:344
 msgid ""
 "``app_param`` is a cookie parameter with the key ``special-cookie``, "
-"declared via :class:`~.params.CookieParameter` on the :class:`Litestar app <."
-"app.Litestar>` with ``annotation=str``. ``required=False`` makes it "
+"declared via :class:`~.params.CookieParameter` on the :class:`Litestar app "
+"<.app.Litestar>` with ``annotation=str``. ``required=False`` makes it "
 "optional; without that argument it would be required by default."
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:347
+#: ../../../usage/routing/parameters.rst:348
 msgid ""
 "Because the route handler function does not declare ``app_param`` at all, "
 "the parameter is still extracted and validated at the application level even "
 "though the handler never sees it."
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:350
+#: ../../../usage/routing/parameters.rst:351
 msgid ""
 "``router_param`` is a header parameter with the key ``MyHeader``, declared "
-"via :class:`~.params.HeaderParameter` on the router. It is declared "
-"``required=False`` on the router, so it does not fail validation if absent — "
-"unless the handler explicitly opts in by re-declaring it (as this one does)."
+"via :class:`~.params.HeaderParameter` on the router. On the handler, it is "
+"declared as :class:`FromHeader[str] <.params.FromHeader>`, taking on the "
+"router's declaration. If a value *is* provided, it is also tested against "
+"the router-declared regex."
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:354
+#: ../../../usage/routing/parameters.rst:355
 msgid ""
-"The handler types it as :class:`FromHeader[str] <.params.FromHeader>` "
-"(rather than ``str | None``), making it required at the handler level. If a "
-"value *is* provided, it is also tested against the router-declared regex."
+"Had the router declared it ``required=False``, the handler would have to "
+"give it a default, e.g. ``router_param: FromHeader[str] = \"a\"``."
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:357
+#: ../../../usage/routing/parameters.rst:358
 msgid ""
 "``controller_param`` is a query parameter with the key ``controller_param``, "
 "declared via :class:`~.params.QueryParameter` on the controller with "
@@ -1089,7 +1095,7 @@ msgid ""
 "than 50 for this particular route."
 msgstr ""
 
-#: ../../../usage/routing/parameters.rst:362
+#: ../../../usage/routing/parameters.rst:363
 msgid ""
 "``local_param`` is a route-handler-local :ref:`query parameter <usage/"
 "routing/parameters:query parameters>` (``FromQuery[str]``), and "

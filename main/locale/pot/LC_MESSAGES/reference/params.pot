@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-19 17:13+0000\n"
+"POT-Creation-Date: 2026-11-09 18:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -443,16 +443,19 @@ msgstr ""
 
 #: ../../../../litestar/params.py:docstring of
 #: litestar.params.ParameterKwarg.required:3
-msgid "If set to False, None values will be allowed. Defaults to True."
+msgid ""
+"If set to False, a function parameter receiving it must declare a default, "
+"which it receives when the parameter is missing from the request. Defaults "
+"to True."
 msgstr ""
 
 #: ../../../../litestar/params.py:docstring of
 #: litestar.params.ParameterMarker:1
 msgid ""
 "Base class of the annotation metadata that marks how Litestar handles a "
-"parameter: parameter and body kwargs such as :class:`QueryParameter` and :"
-"class:`BodyKwarg`, the marker :data:`~litestar.di.NamedDependency` carries, "
-"and :class:`SkipValidationMarker`."
+"parameter: parameter and body kwargs such as :class:`QueryParameter` "
+"and :class:`BodyKwarg`, the marker :data:`~litestar.di.NamedDependency` "
+"carries, and :class:`SkipValidationMarker`."
 msgstr ""
 
 #: ../../../../litestar/params.py:docstring of litestar.params.PathParameter:1
@@ -469,6 +472,22 @@ msgstr ""
 
 #: ../../../../litestar/params.py:docstring of litestar.params.QueryParameter:3
 msgid "In the OpenAPI, this maps to a parameter ``in: query``."
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.QueryParams:1
+msgid "All query parameters of the request, for the ``query`` parameter"
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.RawBody:1
+msgid "The raw request body, for the ``body`` parameter"
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of typing.Annotated:1
+msgid "Declare a request body of the default media type, 'application/json'"
+msgstr ""
+
+#: ../../../../litestar/params.py:docstring of litestar.params.RequestCookies:1
+msgid "All cookies of the request, for the ``cookies`` parameter"
 msgstr ""
 
 #: ../../../../litestar/params.py:docstring of typing.Annotated:1
