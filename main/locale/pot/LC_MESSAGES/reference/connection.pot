@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-19 17:13+0000\n"
+"POT-Creation-Date: 2026-11-09 18:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -166,6 +166,15 @@ msgstr ""
 
 #: ../../../../litestar/connection/base.py:docstring of
 #: litestar.connection.ASGIConnection.cookies:3
+msgid ""
+"Every ``cookie`` header is parsed: a client may send one per cookie over "
+"HTTP/2 and HTTP/3, where :rfc:`9113` and :rfc:`9114` respectively have them "
+"reassembled with the ``\"; \"`` delimiter. A cookie name sent more than once "
+"keeps the first value it was sent with."
+msgstr ""
+
+#: ../../../../litestar/connection/base.py:docstring of
+#: litestar.connection.ASGIConnection.cookies:8
 msgid "Returns any cookies stored in the header as a parsed dictionary."
 msgstr ""
 
@@ -242,9 +251,9 @@ msgstr ""
 #: ../../../../litestar/connection/base.py:docstring of
 #: litestar.connection.base.ASGIConnection.set_session:3
 msgid ""
-"If the :class:`SessionMiddleware <.middleware.session.base."
-"SessionMiddleware>` is enabled, the session will be added to the response as "
-"a cookie header."
+"If the :class:`SessionMiddleware "
+"<.middleware.session.base.SessionMiddleware>` is enabled, the session will "
+"be added to the response as a cookie header."
 msgstr ""
 
 #: ../../../../litestar/connection/base.py:docstring of
@@ -275,9 +284,9 @@ msgstr ""
 #: ../../../../litestar/connection/base.py:docstring of
 #: litestar.connection.base.ASGIConnection.clear_session:3
 msgid ""
-"If the :class:`Litestar SessionMiddleware <.middleware.session.base."
-"SessionMiddleware>` is enabled, this will cause the session data to be "
-"cleared."
+"If the :class:`Litestar SessionMiddleware "
+"<.middleware.session.base.SessionMiddleware>` is enabled, this will cause "
+"the session data to be cleared."
 msgstr ""
 
 #: ../../../../litestar/connection/base.py:docstring of
@@ -349,8 +358,8 @@ msgstr ""
 #: ../../../../litestar/connection/request.py:docstring of
 #: litestar.connection.Request.accept:1
 msgid ""
-"Parse the request's 'Accept' header, returning an :class:`Accept <litestar."
-"datastructures.headers.Accept>` instance."
+"Parse the request's 'Accept' header, returning an :class:`Accept "
+"<litestar.datastructures.headers.Accept>` instance."
 msgstr ""
 
 #: ../../../../litestar/connection/request.py:docstring of

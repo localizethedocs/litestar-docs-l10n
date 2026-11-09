@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-19 17:13+0000\n"
+"POT-Creation-Date: 2026-11-09 18:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,16 +24,16 @@ msgstr ""
 #: ../../../usage/testing.rst:4
 msgid ""
 "Testing a Litestar application is made simple by the testing utilities "
-"provided out of the box. Based on `httpx <https://www.python-httpx.org/>`_, "
-"they come with a familiar interface and integrate seamlessly into "
+"provided out of the box. Based on `httpx2 <https://github.com/pydantic/"
+"httpx2>`_, they come with a familiar interface and integrate seamlessly into "
 "synchronous or asynchronous tests."
 msgstr ""
 
 #: ../../../usage/testing.rst:8
 msgid ""
-"``httpx`` is not installed by default. It is bundled in the ``testing`` "
-"extra, which you will need to install to use anything from :mod:`litestar."
-"testing`:"
+"``httpx2`` is not installed by default. It is bundled in the ``testing`` "
+"extra, which you will need to install to use anything "
+"from :mod:`litestar.testing`:"
 msgstr ""
 
 #: ../../../usage/testing.rst:11
@@ -335,28 +335,28 @@ msgstr ""
 
 #: ../../../usage/testing.rst:175
 msgid ""
-"A common issue when using `anyio's pytest plugin <https://anyio.readthedocs."
-"io/en/stable/testing.html>`_ or `pytest-asyncio <https://github.com/pytest-"
-"dev/pytest-asyncio>`_ to run asynchronous tests or fixtures, using the "
-"synchronous :class:`~litestar.testing.TestClient` means that the application "
-"will run in a *different event loop* than the test or fixture. In practice, "
-"this can result in some difficult to debug and solve situations, especially "
-"when setting up async resources outside the application, for example when "
-"using the factory pattern."
+"A common issue when using `anyio's pytest plugin <https://"
+"anyio.readthedocs.io/en/stable/testing.html>`_ or `pytest-asyncio <https://"
+"github.com/pytest-dev/pytest-asyncio>`_ to run asynchronous tests or "
+"fixtures, using the synchronous :class:`~litestar.testing.TestClient` means "
+"that the application will run in a *different event loop* than the test or "
+"fixture. In practice, this can result in some difficult to debug and solve "
+"situations, especially when setting up async resources outside the "
+"application, for example when using the factory pattern."
 msgstr ""
 
 #: ../../../usage/testing.rst:181
 msgid ""
-"The following example uses a shared instance of an ``httpx.AsyncClient``. It "
-"uses the common factory function, which allows to customise the client for "
-"tests, for example to add authentication headers."
+"The following example uses a shared instance of an ``httpx2.AsyncClient``. "
+"It uses the common factory function, which allows to customise the client "
+"for tests, for example to add authentication headers."
 msgstr ""
 
 #: ../../../usage/testing.rst:185
 msgid ""
 "from collections.abc import AsyncIterator\n"
 "\n"
-"import httpx\n"
+"import httpx2\n"
 "import pytest\n"
 "import pytest_asyncio\n"
 "\n"
@@ -365,13 +365,13 @@ msgid ""
 "\n"
 "\n"
 "@get(\"/\")\n"
-"async def handler(http_client: httpx.AsyncClient) -> dict[str, int]:\n"
+"async def handler(http_client: httpx2.AsyncClient) -> dict[str, int]:\n"
 "    response = await http_client.get(\"https://example.org\")\n"
 "    return {\"status\": response.status_code}\n"
 "\n"
 "\n"
-"def create_app(http_client: httpx.AsyncClient) -> Litestar:\n"
-"    async def provide_http_client() -> httpx.AsyncClient:\n"
+"def create_app(http_client: httpx2.AsyncClient) -> Litestar:\n"
+"    async def provide_http_client() -> httpx2.AsyncClient:\n"
 "        return http_client\n"
 "\n"
 "    return Litestar([handler], dependencies={\"http_client\": "
@@ -379,14 +379,14 @@ msgid ""
 "\n"
 "\n"
 "@pytest_asyncio.fixture()\n"
-"async def http_test_client() -> AsyncIterator[httpx.AsyncClient]:\n"
-"    client = httpx.AsyncClient(headers={\"Authorization\": \"something\"})\n"
+"async def http_test_client() -> AsyncIterator[httpx2.AsyncClient]:\n"
+"    client = httpx2.AsyncClient(headers={\"Authorization\": \"something\"})\n"
 "    yield client\n"
 "    await client.aclose()\n"
 "\n"
 "\n"
 "@pytest.fixture()\n"
-"def app(http_test_client: httpx.AsyncClient) -> Litestar:\n"
+"def app(http_test_client: httpx2.AsyncClient) -> Litestar:\n"
 "    return create_app(http_client=http_test_client)\n"
 "\n"
 "\n"
@@ -414,7 +414,7 @@ msgstr ""
 
 #: ../../../usage/testing.rst:193
 msgid ""
-"A call to ``http_client.get``, the ``httpx.AsyncClient`` instance creates a "
+"A call to ``http_client.get``, the ``httpx2.AsyncClient`` instance creates a "
 "new connection within *loop B* and attaches it to the client instance"
 msgstr ""
 
@@ -424,24 +424,25 @@ msgstr ""
 
 #: ../../../usage/testing.rst:196
 msgid ""
-"The cleanup step of the ``http_test_client`` fixture calls ``httpx."
-"AsyncClient.aclose()`` instance within *loop A*, which internally tries to "
-"close the connection made in the previous step. That connection however is "
-"still attached to *loop B* that was owned by the ``TestClient`` instance, "
-"and is now closed"
+"The cleanup step of the ``http_test_client`` fixture calls "
+"``httpx2.AsyncClient.aclose()`` instance within *loop A*, which internally "
+"tries to close the connection made in the previous step. That connection "
+"however is still attached to *loop B* that was owned by the ``TestClient`` "
+"instance, and is now closed"
 msgstr ""
 
 #: ../../../usage/testing.rst:201
 msgid ""
-"This can easily fixed by switching the test from :class:`~litestar.testing."
-"TestClient` to :class:`~litestar.testing.AsyncTestClient`:"
+"This can easily fixed by switching the test "
+"from :class:`~litestar.testing.TestClient` "
+"to :class:`~litestar.testing.AsyncTestClient`:"
 msgstr ""
 
 #: ../../../usage/testing.rst:205
 msgid ""
 "from collections.abc import AsyncIterator\n"
 "\n"
-"import httpx\n"
+"import httpx2\n"
 "import pytest\n"
 "import pytest_asyncio\n"
 "\n"
@@ -450,13 +451,13 @@ msgid ""
 "\n"
 "\n"
 "@get(\"/\")\n"
-"async def handler(http_client: httpx.AsyncClient) -> dict[str, int]:\n"
+"async def handler(http_client: httpx2.AsyncClient) -> dict[str, int]:\n"
 "    response = await http_client.get(\"https://example.org\")\n"
 "    return {\"status\": response.status_code}\n"
 "\n"
 "\n"
-"def create_app(http_client: httpx.AsyncClient) -> Litestar:\n"
-"    async def provide_http_client() -> httpx.AsyncClient:\n"
+"def create_app(http_client: httpx2.AsyncClient) -> Litestar:\n"
+"    async def provide_http_client() -> httpx2.AsyncClient:\n"
 "        return http_client\n"
 "\n"
 "    return Litestar([handler], dependencies={\"http_client\": "
@@ -464,14 +465,14 @@ msgid ""
 "\n"
 "\n"
 "@pytest_asyncio.fixture()\n"
-"async def http_test_client() -> AsyncIterator[httpx.AsyncClient]:\n"
-"    client = httpx.AsyncClient(headers={\"Authorization\": \"something\"})\n"
+"async def http_test_client() -> AsyncIterator[httpx2.AsyncClient]:\n"
+"    client = httpx2.AsyncClient(headers={\"Authorization\": \"something\"})\n"
 "    yield client\n"
 "    await client.aclose()\n"
 "\n"
 "\n"
 "@pytest.fixture()\n"
-"def app(http_test_client: httpx.AsyncClient) -> Litestar:\n"
+"def app(http_test_client: httpx2.AsyncClient) -> Litestar:\n"
 "    return create_app(http_client=http_test_client)\n"
 "\n"
 "\n"
@@ -534,21 +535,23 @@ msgstr ""
 
 #: ../../../usage/testing.rst:218
 msgid ""
-"Litestar's test client enhances the httpx client to support websockets. To "
-"test a websocket endpoint, you can use the :meth:`websocket_connect "
+"Litestar's test client adds websocket support that routes through the ASGI "
+"app rather than over a real connection, so ``httpx2``'s own ``websocket()`` "
+"method does not apply. To test a websocket endpoint, use "
+"the :meth:`websocket_connect "
 "<litestar.testing.TestClient.websocket_connect>` method on the test client. "
 "The method returns a websocket connection object that you can use to send "
 "and receive messages, see an example below for json:"
 msgstr ""
 
-#: ../../../usage/testing.rst:222
+#: ../../../usage/testing.rst:223
 msgid ""
-"For more information, see also the :class:`WebSocket <litestar.connection."
-"WebSocket>` class in the API documentation and the :ref:`websocket <usage/"
-"websockets:websockets>` documentation."
+"For more information, see also the :class:`WebSocket "
+"<litestar.connection.WebSocket>` class in the API documentation and "
+"the :ref:`websocket <usage/websockets:websockets>` documentation."
 msgstr ""
 
-#: ../../../usage/testing.rst:232
+#: ../../../usage/testing.rst:233
 msgid ""
 "from typing import Any\n"
 "\n"
@@ -571,7 +574,7 @@ msgid ""
 "        assert data == {\"message\": {\"hello\": \"world\"}}"
 msgstr ""
 
-#: ../../../usage/testing.rst:238
+#: ../../../usage/testing.rst:239
 msgid ""
 "from typing import Any\n"
 "\n"
@@ -597,11 +600,11 @@ msgid ""
 "        assert data == {\"message\": {\"hello\": \"world\"}}"
 msgstr ""
 
-#: ../../../usage/testing.rst:242
+#: ../../../usage/testing.rst:243
 msgid "Using sessions"
 msgstr ""
 
-#: ../../../usage/testing.rst:244
+#: ../../../usage/testing.rst:245
 msgid ""
 "If you are using :ref:`session middleware <usage/middleware/builtin-"
 "middleware:session middleware>` for session persistence across requests, "
@@ -609,19 +612,19 @@ msgid ""
 "this, :class:`TestClient <.testing.TestClient>` provides two methods:"
 msgstr ""
 
-#: ../../../usage/testing.rst:248
+#: ../../../usage/testing.rst:249
 msgid ":meth:`set_session_data <litestar.testing.TestClient.set_session_data>`"
 msgstr ""
 
-#: ../../../usage/testing.rst:249
+#: ../../../usage/testing.rst:250
 msgid ":meth:`get_session_data <litestar.testing.TestClient.get_session_data>`"
 msgstr ""
 
-#: ../../../usage/testing.rst:258 ../../../usage/testing.rst:270
+#: ../../../usage/testing.rst:259 ../../../usage/testing.rst:271
 msgid "Setting session data"
 msgstr ""
 
-#: ../../../usage/testing.rst:258
+#: ../../../usage/testing.rst:259
 msgid ""
 "from typing import Any\n"
 "\n"
@@ -637,8 +640,8 @@ msgid ""
 "    return request.session\n"
 "\n"
 "\n"
-"app = Litestar(route_handlers=[get_session_data], middleware=[session_config."
-"middleware], debug=True)\n"
+"app = Litestar(route_handlers=[get_session_data], "
+"middleware=[session_config.middleware], debug=True)\n"
 "\n"
 "\n"
 "def test_get_session_data() -> None:\n"
@@ -647,11 +650,11 @@ msgid ""
 "        assert client.get(\"/test\").json() == {\"foo\": \"bar\"}"
 msgstr ""
 
-#: ../../../usage/testing.rst:263 ../../../usage/testing.rst:275
+#: ../../../usage/testing.rst:264 ../../../usage/testing.rst:276
 msgid "Getting session data"
 msgstr ""
 
-#: ../../../usage/testing.rst:263
+#: ../../../usage/testing.rst:264
 msgid ""
 "from litestar import Litestar, Request, post\n"
 "from litestar.middleware.session.server_side import ServerSideSessionConfig\n"
@@ -665,15 +668,15 @@ msgid ""
 "    request.session[\"foo\"] = \"bar\"\n"
 "\n"
 "\n"
-"app = Litestar(route_handlers=[set_session_data], middleware=[session_config."
-"middleware], debug=True)\n"
+"app = Litestar(route_handlers=[set_session_data], "
+"middleware=[session_config.middleware], debug=True)\n"
 "\n"
 "with TestClient(app=app, session_config=session_config) as client:\n"
 "    client.post(\"/test\").json()\n"
 "    assert client.get_session_data() == {\"foo\": \"bar\"}"
 msgstr ""
 
-#: ../../../usage/testing.rst:270
+#: ../../../usage/testing.rst:271
 msgid ""
 "from typing import Any\n"
 "\n"
@@ -689,8 +692,8 @@ msgid ""
 "    return request.session\n"
 "\n"
 "\n"
-"app = Litestar(route_handlers=[get_session_data], middleware=[session_config."
-"middleware], debug=True)\n"
+"app = Litestar(route_handlers=[get_session_data], "
+"middleware=[session_config.middleware], debug=True)\n"
 "\n"
 "\n"
 "async def test_get_session_data() -> None:\n"
@@ -701,7 +704,7 @@ msgid ""
 "        assert res.json() == {\"foo\": \"bar\"}"
 msgstr ""
 
-#: ../../../usage/testing.rst:275
+#: ../../../usage/testing.rst:276
 msgid ""
 "from litestar import Litestar, Request, post\n"
 "from litestar.middleware.session.server_side import ServerSideSessionConfig\n"
@@ -715,8 +718,8 @@ msgid ""
 "    request.session[\"foo\"] = \"bar\"\n"
 "\n"
 "\n"
-"app = Litestar(route_handlers=[set_session_data], middleware=[session_config."
-"middleware], debug=True)\n"
+"app = Litestar(route_handlers=[set_session_data], "
+"middleware=[session_config.middleware], debug=True)\n"
 "\n"
 "\n"
 "async def test_set_session_data() -> None:\n"
@@ -726,29 +729,29 @@ msgid ""
 "        assert await client.get_session_data() == {\"foo\": \"bar\"}"
 msgstr ""
 
-#: ../../../usage/testing.rst:280
+#: ../../../usage/testing.rst:281
 msgid "Running async functions on TestClient"
 msgstr ""
 
-#: ../../../usage/testing.rst:282
+#: ../../../usage/testing.rst:283
 msgid ""
 "When using the synchronous :class:`TestClient <.testing.TestClient>`, it "
 "runs the application in a separate thread, which provides the event loop. "
-"For this, it makes use of :class:`anyio.BlockingPortal <anyio.abc."
-"BlockingPortal>`."
+"For this, it makes use of :class:`anyio.BlockingPortal "
+"<anyio.abc.BlockingPortal>`."
 msgstr ""
 
-#: ../../../usage/testing.rst:285
+#: ../../../usage/testing.rst:286
 msgid ""
 "``TestClient`` makes this portal public, so it can be used to run arbitrary "
 "asynchronous code in the same event loop as the application:"
 msgstr ""
 
-#: ../../../usage/testing.rst:289
+#: ../../../usage/testing.rst:290
 msgid "Using a blocking portal"
 msgstr ""
 
-#: ../../../usage/testing.rst:289
+#: ../../../usage/testing.rst:290
 msgid ""
 "from concurrent.futures import Future, wait\n"
 "\n"
@@ -771,8 +774,8 @@ msgid ""
 "\n"
 "    with create_test_client(route_handlers=[]) as test_client:\n"
 "        # start a background task with the portal\n"
-"        future: Future[float] = test_client.blocking_portal."
-"start_task_soon(get_float, 0.25)\n"
+"        future: Future[float] = "
+"test_client.blocking_portal.start_task_soon(get_float, 0.25)\n"
 "        # do other work\n"
 "        assert test_client.blocking_portal.call(get_float, 0.1) == 0.1\n"
 "        # wait for the background task to complete\n"
@@ -781,11 +784,11 @@ msgid ""
 "        assert future.result() == 0.25"
 msgstr ""
 
-#: ../../../usage/testing.rst:294
+#: ../../../usage/testing.rst:295
 msgid "Creating a test app"
 msgstr ""
 
-#: ../../../usage/testing.rst:296
+#: ../../../usage/testing.rst:297
 msgid ""
 "Litestar also offers a helper function called :func:`create_test_client "
 "<litestar.testing.create_test_client>` which first creates an instance of "
@@ -794,11 +797,11 @@ msgid ""
 "specific Litestar app, or when you want to test endpoints in isolation."
 msgstr ""
 
-#: ../../../usage/testing.rst:302
+#: ../../../usage/testing.rst:303
 msgid "``my_app/tests/test_health_check.py``"
 msgstr ""
 
-#: ../../../usage/testing.rst:302
+#: ../../../usage/testing.rst:303
 msgid ""
 "from litestar.status_codes import HTTP_200_OK\n"
 "from litestar.testing import create_test_client\n"
@@ -812,35 +815,36 @@ msgid ""
 "        assert response.text == \"healthy\""
 msgstr ""
 
-#: ../../../usage/testing.rst:317
+#: ../../../usage/testing.rst:318
 msgid "Running a live server"
 msgstr ""
 
-#: ../../../usage/testing.rst:319
+#: ../../../usage/testing.rst:320
 msgid ""
-"The test clients make use of HTTPX's ability to directly call into an ASGI "
-"app, without having to run an actual server. In most cases this is "
+"The test clients make use of ``httpx2``'s ability to directly call into an "
+"ASGI app, without having to run an actual server. In most cases this is "
 "sufficient but there are some exceptions where this won't work, due to the "
 "limitations of the emulated client-server communication."
 msgstr ""
 
-#: ../../../usage/testing.rst:324
+#: ../../../usage/testing.rst:325
 msgid ""
 "For example, when using server-sent events with an infinite generator, it "
-"will lock up the test client, since HTTPX tries to consume the full response "
-"before returning a request."
+"will lock up the test client, since ``httpx2`` tries to consume the full "
+"response before returning a request."
 msgstr ""
 
-#: ../../../usage/testing.rst:328
+#: ../../../usage/testing.rst:329
 msgid ""
-"Litestar offers two helper functions, :func:`litestar.testing."
-"subprocess_sync_client` and :func:`litestar.testing.subprocess_async_client` "
-"that will launch a Litestar instance with in a subprocess and set up an "
-"httpx client for running tests. You can either load your actual app file or "
-"create subsets from it as you would with the regular test client setup:"
+"Litestar offers two helper "
+"functions, :func:`litestar.testing.subprocess_sync_client` "
+"and :func:`litestar.testing.subprocess_async_client` that will launch a "
+"Litestar instance with in a subprocess and set up an ``httpx2`` client for "
+"running tests. You can either load your actual app file or create subsets "
+"from it as you would with the regular test client setup:"
 msgstr ""
 
-#: ../../../usage/testing.rst:336
+#: ../../../usage/testing.rst:337
 msgid ""
 "\"\"\"\n"
 "Assemble components into an app that shall be tested\n"
@@ -869,7 +873,7 @@ msgid ""
 "app = Litestar(route_handlers=[get_notified])"
 msgstr ""
 
-#: ../../../usage/testing.rst:339
+#: ../../../usage/testing.rst:340
 msgid ""
 "\"\"\"\n"
 "Test the app running in a subprocess\n"
@@ -878,8 +882,7 @@ msgid ""
 "import pathlib\n"
 "from collections.abc import AsyncIterator\n"
 "\n"
-"import httpx\n"
-"import httpx_sse\n"
+"import httpx2\n"
 "import pytest\n"
 "\n"
 "from litestar.testing import subprocess_async_client\n"
@@ -888,13 +891,13 @@ msgid ""
 "\n"
 "\n"
 "@pytest.fixture(name=\"async_client\")\n"
-"async def fx_async_client() -> AsyncIterator[httpx.AsyncClient]:\n"
+"async def fx_async_client() -> AsyncIterator[httpx2.AsyncClient]:\n"
 "    async with subprocess_async_client(workdir=ROOT, "
 "app=\"subprocess_sse_app:app\") as client:\n"
 "        yield client\n"
 "\n"
 "\n"
-"async def test_subprocess_async_client(async_client: httpx.AsyncClient) -> "
+"async def test_subprocess_async_client(async_client: httpx2.AsyncClient) -> "
 "None:\n"
 "    \"\"\"Demonstrates functionality of the async client with an infinite "
 "SSE source that cannot be tested with the\n"
@@ -902,54 +905,53 @@ msgid ""
 "    \"\"\"\n"
 "    topic = \"demo\"\n"
 "\n"
-"    async with httpx_sse.aconnect_sse(async_client, \"GET\", f\"/notify/"
-"{topic}\") as event_source:\n"
-"        async for event in event_source.aiter_sse():\n"
+"    async with async_client.sse(f\"/notify/{topic}\") as event_source:\n"
+"        async for event in event_source:\n"
 "            assert event.data == topic\n"
 "            break"
 msgstr ""
 
-#: ../../../usage/testing.rst:341
+#: ../../../usage/testing.rst:342
 msgid ""
 "By default, the subprocess client will capture all output from the litestar "
 "instance. To discard output in the main (testing) process, set the "
 "``capture_output`` argument to ``False`` when creating the client:"
 msgstr ""
 
-#: ../../../usage/testing.rst:344
+#: ../../../usage/testing.rst:345
 msgid ""
 "@pytest.fixture(name=\"async_client\")\n"
-"async def fx_async_client() -> AsyncIterator[httpx.AsyncClient]:\n"
+"async def fx_async_client() -> AsyncIterator[httpx2.AsyncClient]:\n"
 "    async with subprocess_async_client(workdir=ROOT, "
 "app=\"subprocess_sse_app:app\", capture_output=False) as client:\n"
 "        yield client"
 msgstr ""
 
-#: ../../../usage/testing.rst:352
+#: ../../../usage/testing.rst:353
 msgid "RequestFactory"
 msgstr ""
 
-#: ../../../usage/testing.rst:354
+#: ../../../usage/testing.rst:355
 msgid ""
-"Another helper is the :class:`RequestFactory <litestar.testing."
-"RequestFactory>` class, which creates instances of :class:`litestar."
-"connection.request.Request <litestar.connection.request.Request>`. The use "
-"case for this helper is when you need to test logic that expects to receive "
-"a request object."
+"Another helper is the :class:`RequestFactory "
+"<litestar.testing.RequestFactory>` class, which creates instances "
+"of :class:`litestar.connection.request.Request "
+"<litestar.connection.request.Request>`. The use case for this helper is when "
+"you need to test logic that expects to receive a request object."
 msgstr ""
 
-#: ../../../usage/testing.rst:358
+#: ../../../usage/testing.rst:359
 msgid ""
 "For example, lets say we wanted to unit test a *guard* function in "
 "isolation, to which end we'll reuse the examples from the :doc:`route guards "
 "</usage/security/guards>` documentation:"
 msgstr ""
 
-#: ../../../usage/testing.rst:363
+#: ../../../usage/testing.rst:364
 msgid "``my_app/guards.py``"
 msgstr ""
 
-#: ../../../usage/testing.rst:363
+#: ../../../usage/testing.rst:364
 msgid ""
 "from litestar import Request\n"
 "from litestar.exceptions import NotAuthorizedException\n"
@@ -966,15 +968,15 @@ msgid ""
 "        raise NotAuthorizedException()"
 msgstr ""
 
-#: ../../../usage/testing.rst:377
+#: ../../../usage/testing.rst:378
 msgid "We already have our route handler in place:"
 msgstr ""
 
-#: ../../../usage/testing.rst:380
+#: ../../../usage/testing.rst:381
 msgid "``my_app/secret.py``"
 msgstr ""
 
-#: ../../../usage/testing.rst:380
+#: ../../../usage/testing.rst:381
 msgid ""
 "from os import environ\n"
 "\n"
@@ -983,20 +985,20 @@ msgid ""
 "from my_app.guards import secret_token_guard\n"
 "\n"
 "\n"
-"@get(path=\"/secret\", guards=[secret_token_guard], opt={\"secret\": environ."
-"get(\"SECRET\")})\n"
+"@get(path=\"/secret\", guards=[secret_token_guard], opt={\"secret\": "
+"environ.get(\"SECRET\")})\n"
 "def secret_endpoint() -> None: ..."
 msgstr ""
 
-#: ../../../usage/testing.rst:392
+#: ../../../usage/testing.rst:393
 msgid "We could thus test the guard function like so:"
 msgstr ""
 
-#: ../../../usage/testing.rst:395
+#: ../../../usage/testing.rst:396
 msgid "``tests/guards/test_secret_token_guard.py``"
 msgstr ""
 
-#: ../../../usage/testing.rst:395
+#: ../../../usage/testing.rst:396
 msgid ""
 "import pytest\n"
 "\n"

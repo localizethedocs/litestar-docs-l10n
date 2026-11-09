@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-10-19 08:58:57 +0300",
-      "hash" : "af5003e830c3a44dc22cad499200e28b898c1407",
-      "title" : "chore(deps): bump actions/create-github-app-token from 3.2.0 to 3.3.0 (#5141)"
+      "date" : "2026-11-09 14:41:22 +0100",
+      "hash" : "082ebd93266fca7527828ccbe3aa26651bf7811e",
+      "title" : "fix(core): Ensure exception hooks are only called once per exception (#5203)"
     }
   },
   "type" : "branch",

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-19 17:13+0000\n"
+"POT-Creation-Date: 2026-11-09 18:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -221,11 +221,11 @@ msgstr ""
 
 #: ../../../release-notes/whats-new-3.rst:91
 msgid ""
-"Only a parameter marked with :data:`~.params.FromPath` or :class:`~.params."
-"PathParameter` is read from the path. In v2, a parameter whose name matched "
-"a path segment was read from the path even when it was marked as a query, "
-"header or cookie parameter. In v3 it is read from the location it is marked "
-"with:"
+"Only a parameter marked with :data:`~.params.FromPath` "
+"or :class:`~.params.PathParameter` is read from the path. In v2, a parameter "
+"whose name matched a path segment was read from the path even when it was "
+"marked as a query, header or cookie parameter. In v3 it is read from the "
+"location it is marked with:"
 msgstr ""
 
 #: ../../../release-notes/whats-new-3.rst:97
@@ -239,9 +239,9 @@ msgstr ""
 #: ../../../release-notes/whats-new-3.rst:102
 msgid ""
 "A parameter named like a path segment that declares no location, such as the "
-"deprecated ``item_id: int``, raises :exc:`~.exceptions."
-"ImproperlyConfiguredException` when the application is created. Declare it "
-"as ``item_id: FromPath[int]``."
+"deprecated ``item_id: int``, "
+"raises :exc:`~.exceptions.ImproperlyConfiguredException` when the "
+"application is created. Declare it as ``item_id: FromPath[int]``."
 msgstr ""
 
 #: ../../../release-notes/whats-new-3.rst:108
@@ -261,10 +261,10 @@ msgstr ""
 #: ../../../release-notes/whats-new-3.rst:116
 msgid ""
 "Previously, users configured elements such as the root path and styling by "
-"subclassing OpenAPIController and setting it on the ``OpenAPIConfig."
-"openapi_controller`` attribute. As of version 3.0, this pattern has been "
-"removed. Instead, users are required to transition to using UI plugins for "
-"configuration."
+"subclassing OpenAPIController and setting it on the "
+"``OpenAPIConfig.openapi_controller`` attribute. As of version 3.0, this "
+"pattern has been removed. Instead, users are required to transition to using "
+"UI plugins for configuration."
 msgstr ""
 
 #: ../../../release-notes/whats-new-3.rst:120
@@ -303,16 +303,16 @@ msgstr ""
 msgid ""
 "The ``OpenAPIConfig.enabled_endpoints`` attribute is no longer available in "
 "version 3.0.0. This attribute previously enabled a set of endpoints that "
-"would serve different OpenAPI UIs. In the new version, only the ``openapi."
-"json`` endpoint is enabled by default, alongside the ``Scalar`` UI plugin as "
-"the default."
+"would serve different OpenAPI UIs. In the new version, only the "
+"``openapi.json`` endpoint is enabled by default, alongside the ``Scalar`` UI "
+"plugin as the default."
 msgstr ""
 
 #: ../../../release-notes/whats-new-3.rst:136
 msgid ""
 "To adapt to this change, you should explicitly configure any additional "
-"endpoints you need by properly setting up the necessary plugins within the :"
-"attr:`OpenAPIConfig.render_plugins` parameter."
+"endpoints you need by properly setting up the necessary plugins within "
+"the :attr:`OpenAPIConfig.render_plugins` parameter."
 msgstr ""
 
 #: ../../../release-notes/whats-new-3.rst:140
@@ -323,8 +323,8 @@ msgstr ""
 msgid ""
 "The ``root_schema_site`` attribute, which enabled serving a particular UI at "
 "the OpenAPI root path, has been removed in version 3.0. The new approach "
-"automatically assigns the first :class:`OpenAPIRenderPlugin` listed in the :"
-"attr:`OpenAPIConfig.render_plugins` list to serve at the ``/schema`` "
+"automatically assigns the first :class:`OpenAPIRenderPlugin` listed in "
+"the :attr:`OpenAPIConfig.render_plugins` list to serve at the ``/schema`` "
 "endpoint, unless a plugin has been defined with the root path (``/``), in "
 "which case that plugin will be used."
 msgstr ""
@@ -333,8 +333,8 @@ msgstr ""
 msgid ""
 "For those previously using the ``root_schema_site`` attribute, the migration "
 "involves ensuring that the UI intended to be served at the ``/schema`` "
-"endpoint is the first plugin listed in the :attr:`OpenAPIConfig."
-"render_plugins`."
+"endpoint is the first plugin listed in "
+"the :attr:`OpenAPIConfig.render_plugins`."
 msgstr ""
 
 #: ../../../release-notes/whats-new-3.rst:152
@@ -350,25 +350,26 @@ msgstr ""
 #: ../../../release-notes/whats-new-3.rst:156
 msgid ""
 "If you were using ``RapidocRenderPlugin``, migrate to one of the other "
-"bundled UI plugins via :attr:`OpenAPIConfig.render_plugins`, e.g. :class:"
-"`ScalarRenderPlugin` (the default), :class:`SwaggerRenderPlugin`, :class:"
-"`RedocRenderPlugin` or :class:`StoplightRenderPlugin`."
+"bundled UI plugins via :attr:`OpenAPIConfig.render_plugins`, "
+"e.g. :class:`ScalarRenderPlugin` (the "
+"default), :class:`SwaggerRenderPlugin`, :class:`RedocRenderPlugin` "
+"or :class:`StoplightRenderPlugin`."
 msgstr ""
 
 #: ../../../release-notes/whats-new-3.rst:162
-#: ../../../release-notes/whats-new-3.rst:235
+#: ../../../release-notes/whats-new-3.rst:272
 msgid ""
 "Deprecated ``app`` parameter for ``Response.to_asgi_response`` has been "
 "removed"
 msgstr ""
 
 #: ../../../release-notes/whats-new-3.rst:164
-#: ../../../release-notes/whats-new-3.rst:237
+#: ../../../release-notes/whats-new-3.rst:274
 msgid ""
 "The parameter ``app`` for :meth:`~response.Response.to_asgi_response` has "
 "been removed. If you need access to the app instance inside a custom "
-"``to_asgi_response`` method, replace the usages of ``app`` with ``request."
-"app``."
+"``to_asgi_response`` method, replace the usages of ``app`` with "
+"``request.app``."
 msgstr ""
 
 #: ../../../release-notes/whats-new-3.rst:170
@@ -424,29 +425,78 @@ msgid ""
 msgstr ""
 
 #: ../../../release-notes/whats-new-3.rst:199
-msgid "Removal of semantic HTTP route handler classes"
+msgid ""
+"Deprecated ``DTOField`` declaration via Pydantic's ``Field.extra`` removed"
 msgstr ""
 
 #: ../../../release-notes/whats-new-3.rst:201
 msgid ""
-"The semantic ``HTTPRouteHandler`` classes have been removed in favour of "
-"functional decorators. ``route``, ``get``, ``post``, ``patch``, ``put``, "
-"``head`` and ``delete`` are now all decorator functions returning :class:`~."
-"handlers.HTTPRouteHandler` instances."
+"Declaring a :class:`~.dto.field.DTOField` through Pydantic's "
+"``Field.extra``, that is ``Field(**dto_field(\"read-only\"))``, is no longer "
+"supported. The mark was already being ignored in 2.x and only produced a "
+"deprecation warning."
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:206
+#: ../../../release-notes/whats-new-3.rst:205
+msgid ""
+"Remove the declaration: it leaves an internal key in the field's "
+"``json_schema_extra``, which can make OpenAPI schema generation fail."
+msgstr ""
+
+#: ../../../release-notes/whats-new-3.rst:208
+#: ../../../release-notes/whats-new-3.rst:247
+msgid "Before:"
+msgstr ""
+
+#: ../../../release-notes/whats-new-3.rst:211
+msgid ""
+"import pydantic\n"
+"\n"
+"from litestar.dto import dto_field\n"
+"\n"
+"\n"
+"class User(pydantic.BaseModel):\n"
+"    id: int = pydantic.Field(**dto_field(\"read-only\"))"
+msgstr ""
+
+#: ../../../release-notes/whats-new-3.rst:220
+#: ../../../release-notes/whats-new-3.rst:258
+msgid "After:"
+msgstr ""
+
+#: ../../../release-notes/whats-new-3.rst:223
+msgid ""
+"from typing import Annotated\n"
+"\n"
+"import pydantic\n"
+"\n"
+"from litestar.dto import DTOField\n"
+"\n"
+"\n"
+"class User(pydantic.BaseModel):\n"
+"    id: Annotated[int, DTOField(mark=\"read-only\")]"
+msgstr ""
+
+#: ../../../release-notes/whats-new-3.rst:236
+msgid "Removal of semantic HTTP route handler classes"
+msgstr ""
+
+#: ../../../release-notes/whats-new-3.rst:238
+msgid ""
+"The semantic ``HTTPRouteHandler`` classes have been removed in favour of "
+"functional decorators. ``route``, ``get``, ``post``, ``patch``, ``put``, "
+"``head`` and ``delete`` are now all decorator functions "
+"returning :class:`~.handlers.HTTPRouteHandler` instances."
+msgstr ""
+
+#: ../../../release-notes/whats-new-3.rst:243
 msgid ""
 "As a result, customizing the decorators directly is not possible anymore. "
 "Instead, to use a route handler decorator with a custom route handler class, "
 "the ``handler_class`` parameter to the decorator function can be used:"
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:210
-msgid "Before:"
-msgstr ""
-
-#: ../../../release-notes/whats-new-3.rst:213
+#: ../../../release-notes/whats-new-3.rst:250
 msgid ""
 "class my_get_handler(get):\n"
 "    ... # custom handler\n"
@@ -456,11 +506,7 @@ msgid ""
 "    ..."
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:221
-msgid "After:"
-msgstr ""
-
-#: ../../../release-notes/whats-new-3.rst:224
+#: ../../../release-notes/whats-new-3.rst:261
 msgid ""
 "class MyHTTPRouteHandler(HTTPRouteHandler):\n"
 "    ... # custom handler\n"
@@ -471,13 +517,13 @@ msgid ""
 "    ..."
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:243
+#: ../../../release-notes/whats-new-3.rst:280
 msgid ""
 "Removal of deprecated ``litestar.middleware.exceptions`` module and "
 "``ExceptionHandlerMiddleware``"
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:245
+#: ../../../release-notes/whats-new-3.rst:282
 msgid ""
 "The deprecated ``litestar.middleware.exceptions`` module and the "
 "``ExceptionHandlerMiddleware`` have been removed. Since "
@@ -485,140 +531,150 @@ msgid ""
 "scenes if necessary, no action is required."
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:251
+#: ../../../release-notes/whats-new-3.rst:288
 msgid "Update MessagePack media type to ``application/vnd.msgpack``"
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:253
+#: ../../../release-notes/whats-new-3.rst:290
 msgid ""
 "Change the default media type of ``MessagePack`` from ``application/x-"
 "msgpack`` to the newly introduced official ``application/vnd.msgpack``."
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:256
+#: ../../../release-notes/whats-new-3.rst:293
 msgid "https://www.iana.org/assignments/media-types/application/vnd.msgpack"
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:260
+#: ../../../release-notes/whats-new-3.rst:297
 msgid "Deprecated ``resolve_`` methods on route handlers"
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:262
+#: ../../../release-notes/whats-new-3.rst:299
 msgid ""
-"All ``resolve_`` methods on the route handlers (e.g. ``HTTPRouteHandler."
-"resolve_response_headers``) have been deprecated and will be removed in "
-"``4.0``. The attributes can now safely be accessed directly (e.g. "
-"`HTTPRouteHandlers.response_headers`)."
+"All ``resolve_`` methods on the route handlers (e.g. "
+"``HTTPRouteHandler.resolve_response_headers``) have been deprecated and will "
+"be removed in ``4.0``. The attributes can now safely be accessed directly "
+"(e.g. `HTTPRouteHandlers.response_headers`)."
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:269
+#: ../../../release-notes/whats-new-3.rst:306
 msgid "Moved routing related methods from ``Router`` to ``Litestar``"
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:271
+#: ../../../release-notes/whats-new-3.rst:308
 msgid ""
 ":class:`~litestar.router.Router` now only holds route handlers and "
-"configuration, while the actual routing is done in :class:`~litestar.app."
-"Litestar`. With this, several methods and properties have been moved from "
-"``Router`` to ``Litestar``:"
+"configuration, while the actual routing is done "
+"in :class:`~litestar.app.Litestar`. With this, several methods and "
+"properties have been moved from ``Router`` to ``Litestar``:"
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:275
+#: ../../../release-notes/whats-new-3.rst:312
 msgid "``route_handler_method_map``"
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:276
+#: ../../../release-notes/whats-new-3.rst:313
 msgid "``get_route_handler_map``"
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:277
+#: ../../../release-notes/whats-new-3.rst:314
 msgid "``routes``"
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:281
+#: ../../../release-notes/whats-new-3.rst:318
 msgid "Removal of  ``CLIPluginProtocol``"
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:283
+#: ../../../release-notes/whats-new-3.rst:320
 msgid ""
 "The :class:`~typing.Protocol` ``CLIPluginProtocol`` has been removed in "
 "favour of the abstract ``CLIPluginProtocol``. The functionality and "
 "interface remain the same, the only difference being that plugins that wish "
-"to provide this functionality are now required to inherit from :class:`~."
-"plugins.CLIPlugin`."
+"to provide this functionality are now required to inherit "
+"from :class:`~.plugins.CLIPlugin`."
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:290
+#: ../../../release-notes/whats-new-3.rst:327
 msgid "Removal of ``OpenAPISchemaPluginProtocol``"
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:292
+#: ../../../release-notes/whats-new-3.rst:329
 msgid ""
 "The :class:`~typing.Protocol` ``OpenAPISchemaPluginProtocol`` has been "
-"removed in favour of the abstract :class:`~litestar.plugins."
-"OpenAPISchemaPlugin`. The functionality and interface remain the same, the "
-"only difference being that plugins that wish to provide this functionality "
-"are now required to inherit from :class:`~.plugins.OpenAPISchemaPlugin`."
+"removed in favour of the "
+"abstract :class:`~litestar.plugins.OpenAPISchemaPlugin`. The functionality "
+"and interface remain the same, the only difference being that plugins that "
+"wish to provide this functionality are now required to inherit "
+"from :class:`~.plugins.OpenAPISchemaPlugin`."
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:300
+#: ../../../release-notes/whats-new-3.rst:337
 msgid "Dropped support for starlette middleware protocol"
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:302
+#: ../../../release-notes/whats-new-3.rst:339
 msgid ""
 "The `starlette middleware protocol <https://www.starlette.io/middleware>`_ "
 "is no longer supported."
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:305
+#: ../../../release-notes/whats-new-3.rst:342
 msgid ""
 "Only the \"factory\" pattern will now be supported, i.e. a callable that "
 "receives an ASGI callable as its only argument and returns another ASGI "
 "callable:"
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:309
+#: ../../../release-notes/whats-new-3.rst:346
 msgid ""
 "def middleware(app: ASGIApp) -> ASGIApp:\n"
 "    ..."
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:315
+#: ../../../release-notes/whats-new-3.rst:352
 msgid ":doc:`/usage/middleware/index`"
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:319
+#: ../../../release-notes/whats-new-3.rst:356
 msgid "Built-in middleware migrated to ``ASGIMiddleware``"
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:321
+#: ../../../release-notes/whats-new-3.rst:358
 msgid ""
 "Litestar's built-in middleware are being moved from the legacy "
-"``AbstractMiddleware`` and ``MiddlewareProtocol`` bases onto :class:"
-"`~litestar.middleware.ASGIMiddleware`. ``CORSMiddleware`` and "
-"``ResponseCacheMiddleware`` have made this move. ``ResponseCacheMiddleware`` "
-"has also been moved into ``litestar.middleware._internal``, removing it from "
-"the public API."
+"``AbstractMiddleware`` and ``MiddlewareProtocol`` bases "
+"onto :class:`~litestar.middleware.ASGIMiddleware`. ``CORSMiddleware``, "
+"``ResponseCacheMiddleware`` and ``CSRFMiddleware`` have made this move. "
+"``ResponseCacheMiddleware`` and ``CSRFMiddleware`` have also been moved into "
+"``litestar.middleware._internal``, removing them from the public API; for "
+"CSRF this includes the ``litestar.middleware.csrf`` module and its "
+"``generate_csrf_token`` / ``generate_csrf_hash`` helpers."
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:327
+#: ../../../release-notes/whats-new-3.rst:366
 msgid ""
 "These classes are constructed by Litestar itself from their configuration "
-"objects, so applications that only configure them - for CORS, via :class:"
-"`~litestar.config.cors.CORSConfig`, and for response caching, via :class:"
-"`~litestar.config.response_cache.ResponseCacheConfig` and the handler-level "
-"``cache`` argument - are unaffected."
+"objects (for CSRF, via a ``from_config`` classmethod on the middleware), so "
+"applications that only configure them - for CORS, "
+"via :class:`~litestar.config.cors.CORSConfig`, for response caching, "
+"via :class:`~litestar.config.response_cache.ResponseCacheConfig` and the "
+"handler-level ``cache`` argument, and for CSRF, "
+"via :class:`~litestar.config.csrf.CSRFConfig` - are unaffected, with one "
+"exception: :attr:`~litestar.config.csrf.CSRFConfig.exclude` patterns are now "
+"matched against the **handler's path template** (e.g. ``/user/{user_id:int}"
+"``) at startup, instead of the request path (e.g. ``/user/1``) at runtime. "
+"Patterns targeting literal paths keep working; patterns written to match "
+"expanded path parameters must be rewritten against the template."
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:333
+#: ../../../release-notes/whats-new-3.rst:378
 msgid ""
 "Code that composed one of them directly into an ASGI stack must drop the "
 "``app`` argument, pass the settings as keyword arguments rather than a "
 "configuration object, and apply the instance to the next ASGI app:"
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:338
+#: ../../../release-notes/whats-new-3.rst:383
 msgid ""
 "# before\n"
 "middleware = CORSMiddleware(app=next_app, config=cors_config)\n"
@@ -636,154 +692,237 @@ msgid ""
 "asgi_app = middleware(next_app)"
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:354
+#: ../../../release-notes/whats-new-3.rst:399
 msgid ""
 "The settings are copied on construction, so mutating ``CORSConfig`` after "
 "the application has been created no longer affects the middleware."
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:357
+#: ../../../release-notes/whats-new-3.rst:402
 msgid ""
 "Because ``ASGIMiddleware.__call__`` returns a closure rather than the "
 "middleware instance, a middleware stack can no longer be introspected by "
 "walking the ``.app`` attribute of each layer."
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:361
+#: ../../../release-notes/whats-new-3.rst:406
 msgid ""
 "Subclasses must also rename ``__call__`` to ``handle``, which receives the "
-"next ASGI app as an additional ``next_app`` argument in place of ``self."
-"app``."
+"next ASGI app as an additional ``next_app`` argument in place of "
+"``self.app``."
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:365
+#: ../../../release-notes/whats-new-3.rst:410
 msgid ":ref:`asgi-middleware-migration`"
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:369
+#: ../../../release-notes/whats-new-3.rst:414
 msgid "Removal of ``SerializationPluginProtocol``"
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:371
+#: ../../../release-notes/whats-new-3.rst:416
 msgid ""
 "The :class:`~typing.Protocol` ``SerializationPluginProtocol`` has been "
-"removed in favour of the abstract :class:`~litestar.plugins."
-"SerializationPlugin`. The functionality and interface remain the same, the "
-"only difference being that plugins that wish to provide this functionality "
-"are now required to inherit from :class:`~.plugins.SerializationPlugin`."
+"removed in favour of the "
+"abstract :class:`~litestar.plugins.SerializationPlugin`. The functionality "
+"and interface remain the same, the only difference being that plugins that "
+"wish to provide this functionality are now required to inherit "
+"from :class:`~.plugins.SerializationPlugin`."
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:379
+#: ../../../release-notes/whats-new-3.rst:424
 msgid "Removal of ``body`` in streaming responses"
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:381
+#: ../../../release-notes/whats-new-3.rst:426
 msgid ""
-"The unsupported ``body`` parameter of :class:`~.ASGIStreamingResponse` and :"
-"class:`.ASGIFileResponse` has been removed."
+"The unsupported ``body`` parameter of :class:`~.ASGIStreamingResponse` "
+"and :class:`.ASGIFileResponse` has been removed."
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:384
+#: ../../../release-notes/whats-new-3.rst:429
 msgid ""
 "This does not change any behaviour, as this parameter was previously ignored."
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:388
+#: ../../../release-notes/whats-new-3.rst:433
 msgid "``polyfactory`` package removed from default dependencies"
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:390
+#: ../../../release-notes/whats-new-3.rst:435
 msgid ""
 "The `polyfactory <https://polyfactory.litestar.dev/>`_ library has been "
 "moved from the default dependencies to the ``litestar[polyfactory]`` package "
 "extra. It is also included in ``litestar[full]``."
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:396
+#: ../../../release-notes/whats-new-3.rst:441
 msgid "``pyyaml`` package removed from default dependencies"
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:398
+#: ../../../release-notes/whats-new-3.rst:443
 msgid ""
 "The `PyYAML <https://pyyaml.org/wiki/PyYAMLDocumentation>`_ library, used to "
 "render the OpenAPI schema as YAML has been moved from the default "
 "dependencies to the ``litestar[yaml]`` package extra."
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:404
+#: ../../../release-notes/whats-new-3.rst:449
 msgid "``litestar-htmx`` package removed from default dependencies"
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:406
+#: ../../../release-notes/whats-new-3.rst:451
 msgid ""
 "The `litestar-htmx <https://github.com/litestar-org/litestar-htmx/>`_ "
 "package powering the :doc:`HTMX plugin </usage/htmx>` has been moved to the "
 "``litestar[htmx]`` extra."
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:411
+#: ../../../release-notes/whats-new-3.rst:456
 msgid ""
 "``click``, ``rich`` and ``rich-click`` packages removed from default "
 "dependencies"
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:413
+#: ../../../release-notes/whats-new-3.rst:458
 msgid ""
-"The `click <https://click.palletsprojects.com/>`_, `rich <https://rich."
-"readthedocs.io>`_ and `rich-click <https://github.com/ewels/rich-click>`_ "
-"libraries powering the :doc:`CLI </usage/cli>` have been moved from the "
-"default dependencies to the ``litestar[cli]`` package extra. They are also "
-"included in ``litestar[standard]`` and ``litestar[full]``."
+"The `click <https://click.palletsprojects.com/>`_, `rich <https://"
+"rich.readthedocs.io>`_ and `rich-click <https://github.com/ewels/rich-"
+"click>`_ libraries powering the :doc:`CLI </usage/cli>` have been moved from "
+"the default dependencies to the ``litestar[cli]`` package extra. They are "
+"also included in ``litestar[standard]`` and ``litestar[full]``."
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:419
+#: ../../../release-notes/whats-new-3.rst:464
 msgid ""
 "Installing ``litestar`` on its own therefore no longer provides the "
-"``litestar`` command. Invoking it without the extra raises a :class:"
-"`MissingDependencyException <litestar.exceptions."
-"MissingDependencyException>` naming the extra to install:"
+"``litestar`` command. Invoking it without the extra raises "
+"a :class:`MissingDependencyException "
+"<litestar.exceptions.MissingDependencyException>` naming the extra to "
+"install:"
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:424
+#: ../../../release-notes/whats-new-3.rst:469
 msgid "Install the CLI"
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:424
+#: ../../../release-notes/whats-new-3.rst:469
 msgid "pip install 'litestar[cli]'"
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:431
-msgid "``httpx`` package removed from default dependencies"
-msgstr ""
-
-#: ../../../release-notes/whats-new-3.rst:433
+#: ../../../release-notes/whats-new-3.rst:476
 msgid ""
-"The `httpx <https://www.python-httpx.org/>`_ library, on which the :doc:"
-"`test clients </usage/testing>` are based, has been moved from the default "
-"dependencies to the ``litestar[testing]`` package extra. It is also included "
-"in ``litestar[full]``."
+"Test clients are based on ``httpx2``, installed via the ``testing`` extra"
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:438
+#: ../../../release-notes/whats-new-3.rst:478
+msgid ""
+"The :doc:`test clients </usage/testing>` were based on `httpx <https://"
+"www.python-httpx.org/>`_, which was a default dependency. In 3.0 they are "
+"based on `httpx2 <https://pydantic.dev/docs/httpx2/>`_, the fork of "
+"``httpx`` maintained by Pydantic, and it is installed by the "
+"``litestar[testing]`` extra rather than by default."
+msgstr ""
+
+#: ../../../release-notes/whats-new-3.rst:484
 msgid ""
 "Importing anything from :mod:`litestar.testing` without the extra installed "
-"raises a :class:`MissingDependencyException <litestar.exceptions."
-"MissingDependencyException>` naming the extra to install:"
+"raises a :class:`MissingDependencyException "
+"<litestar.exceptions.MissingDependencyException>` naming the extra to "
+"install:"
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:442
+#: ../../../release-notes/whats-new-3.rst:488
 msgid "Install the testing extra"
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:442
+#: ../../../release-notes/whats-new-3.rst:488
 msgid "pip install 'litestar[testing]'"
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:449
+#: ../../../release-notes/whats-new-3.rst:493
+msgid ""
+"``httpx2`` keeps the public API of ``httpx`` 0.28.1, but it is a distinct "
+"module, so every reference in a test suite has to be renamed:"
+msgstr ""
+
+#: ../../../release-notes/whats-new-3.rst:497
+msgid ""
+"# before\n"
+"response: httpx.Response = client.get(\"/\")\n"
+"with pytest.raises(httpx.HTTPStatusError):\n"
+"    response.raise_for_status()\n"
+"\n"
+"# after\n"
+"response: httpx2.Response = client.get(\"/\")\n"
+"with pytest.raises(httpx2.HTTPStatusError):\n"
+"    response.raise_for_status()"
+msgstr ""
+
+#: ../../../release-notes/whats-new-3.rst:508
+msgid ""
+"If you cannot rename a test suite yet, ``httpx2.alias_httpx()`` makes "
+"``import httpx`` resolve to ``httpx2`` process-wide. It has to be called "
+"before anything imports ``httpx`` or ``httpcore``, and "
+"raises :exc:`RuntimeError` otherwise. Litestar never calls it for you."
+msgstr ""
+
+#: ../../../release-notes/whats-new-3.rst:513
+msgid "Beyond the rename, these are worth checking:"
+msgstr ""
+
+#: ../../../release-notes/whats-new-3.rst:515
+msgid ""
+":class:`~litestar.testing.TestClient` "
+"and :class:`~litestar.testing.AsyncTestClient` now subclass "
+"``httpx2.Client`` and ``httpx2.AsyncClient``, "
+"and :func:`~litestar.testing.subprocess_sync_client` / :func:`~litestar.testing.subprocess_async_client` "
+"return ``httpx2`` clients."
+msgstr ""
+
+#: ../../../release-notes/whats-new-3.rst:519
+msgid ""
+"``httpx2`` raises its own exceptions, which do not inherit from the "
+"``httpx`` ones. An ``except httpx.HTTPError`` around a test client call "
+"stops matching, and does so silently if ``httpx`` is still installed for "
+"other reasons."
+msgstr ""
+
+#: ../../../release-notes/whats-new-3.rst:522
+msgid ""
+"The logger is named ``httpx2``. Logging configuration and ``caplog`` "
+"assertions that reference the ``httpx`` logger need updating."
+msgstr ""
+
+#: ../../../release-notes/whats-new-3.rst:524
+msgid ""
+"The clients inherit ``httpx2``'s ``sse()``, which works through the test "
+"transport, so ``httpx-sse`` is no longer needed. The inherited "
+"``websocket()`` does not work against the test transport; "
+"use :meth:`websocket_connect "
+"<litestar.testing.TestClient.websocket_connect>` instead."
+msgstr ""
+
+#: ../../../release-notes/whats-new-3.rst:528
+msgid ""
+":func:`~litestar.testing.subprocess_sync_client` "
+"and :func:`~litestar.testing.subprocess_async_client` send ``User-Agent: "
+"python-httpx2/<version>``. :class:`~litestar.testing.TestClient` "
+"and :class:`~litestar.testing.AsyncTestClient` keep sending ``testclient``."
+msgstr ""
+
+#: ../../../release-notes/whats-new-3.rst:532
+msgid ""
+"The extra pulls ``anyio>=4.10`` and ``idna>=3.18``, neither of which can be "
+"satisfied alongside a lower pin. TLS verification uses the operating system "
+"trust store via ``truststore`` rather than ``certifi``."
+msgstr ""
+
+#: ../../../release-notes/whats-new-3.rst:538
 msgid "``rich-click>=1.9`` is now required by the CLI"
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:451
+#: ../../../release-notes/whats-new-3.rst:540
 msgid ""
 "The ``litestar[cli]`` extra now requires ``rich-click>=1.9``, which is "
 "needed for the themed :doc:`CLI </usage/cli>` output. Previously ``rich-"
@@ -791,61 +930,120 @@ msgid ""
 "underlying option only exists from 1.9 onwards."
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:455
+#: ../../../release-notes/whats-new-3.rst:544
 msgid ""
 "This only affects applications that additionally pin ``rich-click<1.9`` "
 "themselves."
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:459
+#: ../../../release-notes/whats-new-3.rst:548
 msgid "Improved file system handling / fsspec integration"
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:461
+#: ../../../release-notes/whats-new-3.rst:550
 msgid ""
 "A more coherent :doc:`file system </usage/file_systems>` integration was "
-"added, with improved support for `fsspec <https://filesystem-spec."
-"readthedocs.io/en/latest/>`_. This new implementation is more stable, "
+"added, with improved support for `fsspec <https://filesystem-"
+"spec.readthedocs.io/en/latest/>`_. This new implementation is more stable, "
 "performant and consistent, and includes new features such as random access "
 "to all supported file systems as well as streaming (optionally with offsets, "
 "even if the underlying file system does not support it natively)."
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:469
+#: ../../../release-notes/whats-new-3.rst:558
 msgid ":doc:`/usage/file_systems`"
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:473
+#: ../../../release-notes/whats-new-3.rst:562
 msgid ""
 "Removal of ``resolve_symlinks`` parameter to ``create_static_files_router``"
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:475
+#: ../../../release-notes/whats-new-3.rst:564
 msgid ""
-"``resolve_symlinks`` parameter of :func:`~litestar.static_files."
-"create_static_files_router` has been removed in favour of the new :paramref:"
-"`~litestar.static_files.create_static_files_router."
-"allow_symlinks_outside_directory` parameter."
+"``resolve_symlinks`` parameter "
+"of :func:`~litestar.static_files.create_static_files_router` has been "
+"removed in favour of the "
+"new :paramref:`~litestar.static_files.create_static_files_router.allow_symlinks_outside_directory` "
+"parameter."
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:482
+#: ../../../release-notes/whats-new-3.rst:571
 msgid ""
 "This has been intentionally made a breaking change because the new parameter "
 "has slightly different behaviour and defaults to ``False`` instead of "
 "``True``."
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:487
+#: ../../../release-notes/whats-new-3.rst:576
 msgid "Middleware configuration constraints"
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:489
+#: ../../../release-notes/whats-new-3.rst:578
 msgid ""
 ":class:`~litestar.middleware.ASGIMiddleware`\\ s can now express constraints "
 "for how they are applied in the middleware stack, which are then validated "
 "on application startup."
 msgstr ""
 
-#: ../../../release-notes/whats-new-3.rst:495
+#: ../../../release-notes/whats-new-3.rst:584
 msgid ":ref:`usage/middleware/creating-middleware:Configuration constraints`"
+msgstr ""
+
+#: ../../../release-notes/whats-new-3.rst:588
+msgid "``copy_scope`` defaults to ``True`` for ASGI handlers"
+msgstr ""
+
+#: ../../../release-notes/whats-new-3.rst:590
+msgid ""
+"Every :func:`~.handlers.asgi` handler, mounted or not, now receives a copy "
+"of the ASGI ``scope``, so the wrapped application can no longer add, replace "
+"or remove top-level scope keys seen by the outer application. In 2.x the "
+"default was ``None``, which passed the original scope through, warned at "
+"registration and warned again when the wrapped application mutated the "
+"scope. Both warnings are gone."
+msgstr ""
+
+#: ../../../release-notes/whats-new-3.rst:596
+msgid ""
+"The copy is shallow, so nested values such as ``scope[\"state\"]`` are still "
+"shared with the outer scope."
+msgstr ""
+
+#: ../../../release-notes/whats-new-3.rst:599
+msgid ""
+"Set ``copy_scope=False`` where the wrapped application is meant to "
+"communicate with the outer application through the scope:"
+msgstr ""
+
+#: ../../../release-notes/whats-new-3.rst:603
+msgid ""
+"@asgi(\"/some/sub-path\", is_mount=True, copy_scope=False)\n"
+"async def my_asgi_app(scope: Scope, receive: Receive, send: Send) -> "
+"None: ..."
+msgstr ""
+
+#: ../../../release-notes/whats-new-3.rst:607
+msgid ""
+"You need the opt-out if the wrapped application writes a top-level scope key "
+"the outer application reads, such as ``scope[\"user\"]``, or "
+"calls :meth:`~.connection.ASGIConnection.set_session` "
+"or :meth:`~.connection.ASGIConnection.clear_session`, both of which rebind "
+"``scope[\"session\"]``. A mounted Starlette or FastAPI application also sets "
+"``scope[\"endpoint\"]`` and ``scope[\"route\"]``, which outer Sentry or "
+"OpenTelemetry layers read after the response to name the transaction. All of "
+"these now fail silently."
+msgstr ""
+
+#: ../../../release-notes/whats-new-3.rst:615
+msgid ""
+"``copy_scope`` is set per handler; there is no router- or application-level "
+"equivalent, so an application with several mounts opts out on each handler. "
+"A ``handler_class`` subclass that pinned ``copy_scope`` by passing it to "
+"``super().__init__()`` must now accept it as a parameter and forward it, "
+"because :func:`~.handlers.asgi` always passes it."
+msgstr ""
+
+#: ../../../release-notes/whats-new-3.rst:622
+msgid ":ref:`usage/routing/handlers:ASGI route handler considerations`"
 msgstr ""

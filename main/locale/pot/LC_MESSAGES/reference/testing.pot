@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-19 17:13+0000\n"
+"POT-Creation-Date: 2026-11-09 18:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,7 +41,7 @@ msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:31
-#: litestar.testing.helpers.create_test_client:33
+#: litestar.testing.helpers.create_test_client:32
 #: ../../../../litestar/testing/client/async_client.py:docstring
 #: litestar.testing.client.async_client.AsyncTestClient.__init__:4
 #: ../../../../litestar/testing/client/sync_client.py:docstring
@@ -61,7 +61,7 @@ msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:34
-#: litestar.testing.helpers.create_test_client:36
+#: litestar.testing.helpers.create_test_client:35
 #: ../../../../litestar/testing/client/async_client.py:docstring
 #: litestar.testing.client.async_client.AsyncTestClient.__init__:7
 #: ../../../../litestar/testing/client/sync_client.py:docstring
@@ -71,7 +71,7 @@ msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:120
-#: litestar.testing.helpers.create_test_client:122
+#: litestar.testing.helpers.create_test_client:121
 #: ../../../../litestar/testing/client/async_client.py:docstring
 #: litestar.testing.client.async_client.AsyncTestClient.__init__:8
 #: ../../../../litestar/testing/client/sync_client.py:docstring
@@ -89,7 +89,7 @@ msgstr ""
 #: ../../../../litestar/testing/client/async_client.py:docstring of
 #: litestar.testing.client.async_client.AsyncTestClient.__init__:10
 #: ../../../../litestar/testing/client/sync_client.py:docstring
-#: litestar.testing.client.sync_client.TestClient.__init__:12
+#: litestar.testing.client.sync_client.TestClient.__init__:11
 msgid "Session backend configuration"
 msgstr ""
 
@@ -220,8 +220,8 @@ msgid ""
 "\n"
 "\n"
 "app = Litestar(\n"
-"    route_handlers=[set_session_data], middleware=[session_config."
-"middleware]\n"
+"    route_handlers=[set_session_data], "
+"middleware=[session_config.middleware]\n"
 ")\n"
 "\n"
 "async with AsyncTestClient(app=app, session_config=session_config) as "
@@ -277,8 +277,8 @@ msgid ""
 "\n"
 "\n"
 "app = Litestar(\n"
-"    route_handlers=[get_session_data], middleware=[session_config."
-"middleware]\n"
+"    route_handlers=[get_session_data], "
+"middleware=[session_config.middleware]\n"
 ")\n"
 "\n"
 "async with AsyncTestClient(app=app, session_config=session_config) as "
@@ -493,8 +493,8 @@ msgstr ""
 #: ../../../../litestar/testing/request_factory.py:docstring of
 #: litestar.testing.request_factory.RequestFactory.__init__:3
 msgid ""
-"An instance of :class:`Litestar <litestar.app.Litestar>` to set as ``request."
-"scope[\"litestar_app\"]``."
+"An instance of :class:`Litestar <litestar.app.Litestar>` to set as "
+"``request.scope[\"litestar_app\"]``."
 msgstr ""
 
 #: ../../../../litestar/testing/request_factory.py:docstring of
@@ -553,10 +553,10 @@ msgid ""
 ")\n"
 "\n"
 "# Create a request with a media type\n"
-"request_with_media_type = RequestFactory(app=my_app, server=my_server)."
-"post(\n"
-"    \"/person\", data=person, request_media_type=RequestEncodingType."
-"MULTI_PART\n"
+"request_with_media_type = RequestFactory(app=my_app, "
+"server=my_server).post(\n"
+"    \"/person\", data=person, "
+"request_media_type=RequestEncodingType.MULTI_PART\n"
 ")"
 msgstr ""
 
@@ -717,14 +717,7 @@ msgstr ""
 #: litestar.testing.helpers.create_test_client:31
 #: ../../../../litestar/testing/client/sync_client.py:docstring
 #: litestar.testing.client.sync_client.TestClient.__init__:10
-msgid "The async backend to use, options are \"asyncio\" or \"trio\"."
-msgstr ""
-
-#: ../../../../litestar/testing/__init__.py:docstring of
-#: litestar.testing.helpers.create_test_client:32
-#: ../../../../litestar/testing/client/sync_client.py:docstring
-#: litestar.testing.client.sync_client.TestClient.__init__:11
-msgid "``anyio`` options."
+msgid "``anyio`` options of the asyncio backend."
 msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
@@ -775,14 +768,14 @@ msgstr ""
 #: litestar.testing.helpers.create_test_client:28
 msgid ""
 "A single handler or a sequence of route handlers, which can include "
-"instances of :class:`Router <litestar.router.Router>`, subclasses of :class:"
-"`Controller <.controller.Controller>` or any function decorated by the route "
-"handler decorators."
+"instances of :class:`Router <litestar.router.Router>`, subclasses "
+"of :class:`Controller <.controller.Controller>` or any function decorated by "
+"the route handler decorators."
 msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:32
-#: litestar.testing.helpers.create_test_client:34
+#: litestar.testing.helpers.create_test_client:33
 msgid ""
 "Flag for underlying the test client to raise server exceptions instead of "
 "wrapping them in an HTTP response."
@@ -790,7 +783,7 @@ msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:35
-#: litestar.testing.helpers.create_test_client:37
+#: litestar.testing.helpers.create_test_client:36
 msgid ""
 "Configuration for Session Middleware class to create raw session cookies for "
 "request to the route handlers."
@@ -798,17 +791,18 @@ msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:37
-#: litestar.testing.helpers.create_test_client:39
+#: litestar.testing.helpers.create_test_client:38
 msgid ""
-"A sequence of :class:`exception hook handlers <.types."
-"AfterExceptionHookHandler>`. This hook is called after an exception occurs. "
-"In difference to exception handlers, it is not meant to return a response - "
-"only to process the exception (e.g. log it, send it to Sentry etc.)."
+"A sequence of :class:`exception hook handlers "
+"<.types.AfterExceptionHookHandler>`. This hook is called after an exception "
+"occurs. In difference to exception handlers, it is not meant to return a "
+"response - only to process the exception (e.g. log it, send it to Sentry "
+"etc.)."
 msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:40
-#: litestar.testing.helpers.create_test_client:42
+#: litestar.testing.helpers.create_test_client:41
 msgid ""
 "A sync or async function executed after the route handler function returned "
 "and the response object has been resolved. Receives the response object."
@@ -816,7 +810,7 @@ msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:42
-#: litestar.testing.helpers.create_test_client:44
+#: litestar.testing.helpers.create_test_client:43
 msgid ""
 "A sync or async function called after the response has been awaited. It "
 "receives the :class:`Request <.connection.Request>` object and should not "
@@ -825,16 +819,16 @@ msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:44
-#: litestar.testing.helpers.create_test_client:46
+#: litestar.testing.helpers.create_test_client:45
 msgid ""
-"A sequence of allowed hosts, or an :class:`AllowedHostsConfig <.config."
-"allowed_hosts.AllowedHostsConfig>` instance. Enables the builtin allowed "
-"hosts middleware."
+"A sequence of allowed hosts, or an :class:`AllowedHostsConfig "
+"<.config.allowed_hosts.AllowedHostsConfig>` instance. Enables the builtin "
+"allowed hosts middleware."
 msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:47
-#: litestar.testing.helpers.create_test_client:49
+#: litestar.testing.helpers.create_test_client:48
 msgid ""
 "A sync or async function called immediately before calling the route "
 "handler. Receives the :class:`Request <.connection.Request>` instance and "
@@ -844,24 +838,25 @@ msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:50
-#: litestar.testing.helpers.create_test_client:52
+#: litestar.testing.helpers.create_test_client:51
 msgid ""
-"A sequence of :class:`before send hook handlers <.types."
-"BeforeMessageSendHookHandler>`. Called when the ASGI send function is called."
+"A sequence of :class:`before send hook handlers "
+"<.types.BeforeMessageSendHookHandler>`. Called when the ASGI send function "
+"is called."
 msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:52
-#: litestar.testing.helpers.create_test_client:54
+#: litestar.testing.helpers.create_test_client:53
 msgid ""
-"A ``cache-control`` header of type :class:`CacheControlHeader <litestar."
-"datastructures.CacheControlHeader>` to add to route handlers of this app. "
-"Can be overridden by route handlers."
+"A ``cache-control`` header of type :class:`CacheControlHeader "
+"<litestar.datastructures.CacheControlHeader>` to add to route handlers of "
+"this app. Can be overridden by route handlers."
 msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:55
-#: litestar.testing.helpers.create_test_client:57
+#: litestar.testing.helpers.create_test_client:56
 msgid ""
 "Configures compression behaviour of the application, this enabled a builtin "
 "or user defined Compression middleware."
@@ -869,32 +864,31 @@ msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:57
-#: litestar.testing.helpers.create_test_client:59
+#: litestar.testing.helpers.create_test_client:58
 msgid "If set, configures CORS handling for the application."
 msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:58
-#: litestar.testing.helpers.create_test_client:60
-msgid ""
-"If set, configures :class:`CSRFMiddleware <.middleware.csrf.CSRFMiddleware>`."
+#: litestar.testing.helpers.create_test_client:59
+msgid "If set, enables CSRF protection."
 msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:59
-#: litestar.testing.helpers.create_test_client:61
+#: litestar.testing.helpers.create_test_client:60
 msgid "If ``True``, app errors rendered as HTML with a stack trace."
 msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:60
-#: litestar.testing.helpers.create_test_client:62
+#: litestar.testing.helpers.create_test_client:61
 msgid "A string keyed mapping of dependency :class:`Providers <.di.Provide>`."
 msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:61
-#: litestar.testing.helpers.create_test_client:63
+#: litestar.testing.helpers.create_test_client:62
 msgid ""
 ":class:`AbstractDTO <.dto.base_dto.AbstractDTO>` to use for (de)serializing "
 "and validation of request data."
@@ -902,7 +896,7 @@ msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:63
-#: litestar.testing.helpers.create_test_client:65
+#: litestar.testing.helpers.create_test_client:64
 msgid ""
 "An ``etag`` header of type :class:`ETag <.datastructures.ETag>` to add to "
 "route handlers of this app. Can be overridden by route handlers."
@@ -910,27 +904,27 @@ msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:65
-#: litestar.testing.helpers.create_test_client:67
+#: litestar.testing.helpers.create_test_client:66
 msgid ""
-"A subclass of :class:`BaseEventEmitterBackend <.events.emitter."
-"BaseEventEmitterBackend>`."
+"A subclass of :class:`BaseEventEmitterBackend "
+"<.events.emitter.BaseEventEmitterBackend>`."
 msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:67
-#: litestar.testing.helpers.create_test_client:69
+#: litestar.testing.helpers.create_test_client:68
 msgid "A mapping of status codes and/or exception types to handler functions."
 msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:68
-#: litestar.testing.helpers.create_test_client:70
+#: litestar.testing.helpers.create_test_client:69
 msgid "A sequence of :class:`Guard <.types.Guard>` callables."
 msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:69
-#: litestar.testing.helpers.create_test_client:71
+#: litestar.testing.helpers.create_test_client:70
 msgid ""
 "A boolean flag dictating whether  the route handler should be documented in "
 "the OpenAPI schema."
@@ -938,7 +932,7 @@ msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:70
-#: litestar.testing.helpers.create_test_client:72
+#: litestar.testing.helpers.create_test_client:71
 msgid ""
 "A list of callables returning async context managers, wrapping the lifespan "
 "of the ASGI application"
@@ -946,19 +940,19 @@ msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:71
-#: litestar.testing.helpers.create_test_client:73
+#: litestar.testing.helpers.create_test_client:72
 msgid "A sequence of :class:`EventListener <.events.listener.EventListener>`."
 msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:72
-#: litestar.testing.helpers.create_test_client:74
+#: litestar.testing.helpers.create_test_client:73
 msgid "A sequence of :class:`Middleware <.types.Middleware>`."
 msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:73
-#: litestar.testing.helpers.create_test_client:75
+#: litestar.testing.helpers.create_test_client:74
 msgid ""
 "The maximal number of allowed parts in a multipart/formdata request. This "
 "limit is intended to protect from DoS attacks."
@@ -966,19 +960,19 @@ msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:75
-#: litestar.testing.helpers.create_test_client:77
+#: litestar.testing.helpers.create_test_client:76
 msgid ""
 "A sequence of :class:`OnAppInitHandler <.types.OnAppInitHandler>` instances. "
 "Handlers receive an instance of :class:`AppConfig <.config.app.AppConfig>` "
-"that will have been initially populated with the parameters passed to :class:"
-"`Litestar <litestar.app.Litestar>`, and must return an instance of same. If "
-"more than one handler is registered they are called in the order they are "
-"provided."
+"that will have been initially populated with the parameters passed "
+"to :class:`Litestar <litestar.app.Litestar>`, and must return an instance of "
+"same. If more than one handler is registered they are called in the order "
+"they are provided."
 msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:79
-#: litestar.testing.helpers.create_test_client:81
+#: litestar.testing.helpers.create_test_client:80
 msgid ""
 "A sequence of :class:`LifespanHook <.types.LifespanHook>` called during "
 "application shutdown."
@@ -986,7 +980,7 @@ msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:81
-#: litestar.testing.helpers.create_test_client:83
+#: litestar.testing.helpers.create_test_client:82
 msgid ""
 "A sequence of :class:`LifespanHook <litestar.types.LifespanHook>` called "
 "during application startup."
@@ -994,22 +988,23 @@ msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:83
-#: litestar.testing.helpers.create_test_client:85
+#: litestar.testing.helpers.create_test_client:84
 msgid "Defaults to :attr:`DEFAULT_OPENAPI_CONFIG`"
 msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:84
-#: litestar.testing.helpers.create_test_client:86
+#: litestar.testing.helpers.create_test_client:85
 msgid ""
-"A string keyed mapping of arbitrary values that can be accessed in :class:"
-"`Guards <.types.Guard>` or wherever you have access to :class:`Request "
-"<litestar.connection.request.Request>` or :class:`ASGI Scope <.types.Scope>`."
+"A string keyed mapping of arbitrary values that can be accessed "
+"in :class:`Guards <.types.Guard>` or wherever you have access "
+"to :class:`Request <litestar.connection.request.Request>` or :class:`ASGI "
+"Scope <.types.Scope>`."
 msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:87
-#: litestar.testing.helpers.create_test_client:89
+#: litestar.testing.helpers.create_test_client:88
 msgid ""
 "A mapping of :class:`Parameter <.params.ParameterKwarg>` definitions "
 "available to all application paths."
@@ -1017,7 +1012,7 @@ msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:89
-#: litestar.testing.helpers.create_test_client:91
+#: litestar.testing.helpers.create_test_client:90
 msgid ""
 "A path fragment that is prefixed to all route handlers, controllers and "
 "routers associated with the application instance.  .. versionadded:: 2.8.0"
@@ -1025,7 +1020,7 @@ msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:89
-#: litestar.testing.helpers.create_test_client:91
+#: litestar.testing.helpers.create_test_client:90
 msgid ""
 "A path fragment that is prefixed to all route handlers, controllers and "
 "routers associated with the application instance."
@@ -1033,19 +1028,19 @@ msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:93
-#: litestar.testing.helpers.create_test_client:95
+#: litestar.testing.helpers.create_test_client:94
 msgid "Drop into the PDB when an exception occurs."
 msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:94
-#: litestar.testing.helpers.create_test_client:96
+#: litestar.testing.helpers.create_test_client:95
 msgid "Sequence of plugins."
 msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:95
-#: litestar.testing.helpers.create_test_client:97
+#: litestar.testing.helpers.create_test_client:96
 msgid ""
 "An optional subclass of :class:`Request <.connection.Request>` to use for "
 "http connections."
@@ -1053,7 +1048,7 @@ msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:96
-#: litestar.testing.helpers.create_test_client:98
+#: litestar.testing.helpers.create_test_client:97
 msgid ""
 "A custom subclass of :class:`Response <.response.Response>` to be used as "
 "the app's default response."
@@ -1061,27 +1056,27 @@ msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:98
-#: litestar.testing.helpers.create_test_client:100
+#: litestar.testing.helpers.create_test_client:99
 msgid "A sequence of :class:`Cookie <.datastructures.Cookie>`."
 msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:99
-#: litestar.testing.helpers.create_test_client:101
+#: litestar.testing.helpers.create_test_client:100
 msgid ""
-"A string keyed mapping of :class:`ResponseHeader <.datastructures."
-"ResponseHeader>`"
+"A string keyed mapping of :class:`ResponseHeader "
+"<.datastructures.ResponseHeader>`"
 msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:100
-#: litestar.testing.helpers.create_test_client:102
+#: litestar.testing.helpers.create_test_client:101
 msgid "Configures caching behavior of the application."
 msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:101
-#: litestar.testing.helpers.create_test_client:103
+#: litestar.testing.helpers.create_test_client:102
 msgid ""
 ":class:`AbstractDTO <.dto.base_dto.AbstractDTO>` to use for serializing "
 "outbound response data."
@@ -1089,25 +1084,26 @@ msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:103
-#: litestar.testing.helpers.create_test_client:105
+#: litestar.testing.helpers.create_test_client:104
 msgid ""
 "A sequence of route handlers, which can include instances of :class:`Router "
-"<.router.Router>`, subclasses of :class:`Controller <.controller."
-"Controller>` or any callable decorated by the route handler decorators."
+"<.router.Router>`, subclasses of :class:`Controller "
+"<.controller.Controller>` or any callable decorated by the route handler "
+"decorators."
 msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:106
-#: litestar.testing.helpers.create_test_client:108
+#: litestar.testing.helpers.create_test_client:107
 msgid ""
 "A sequence of dicts that will be added to the schema of all route handlers "
-"in the application. See :data:`SecurityRequirement <.openapi.spec."
-"SecurityRequirement>` for details."
+"in the application. See :data:`SecurityRequirement "
+"<.openapi.spec.SecurityRequirement>` for details."
 msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:109
-#: litestar.testing.helpers.create_test_client:111
+#: litestar.testing.helpers.create_test_client:110
 msgid ""
 "A mapping of names to types for use in forward reference resolution during "
 "signature modelling."
@@ -1115,7 +1111,7 @@ msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:110
-#: litestar.testing.helpers.create_test_client:112
+#: litestar.testing.helpers.create_test_client:111
 msgid ""
 "A sequence of types for use in forward reference resolution during signature "
 "modelling. These types will be added to the signature namespace using their "
@@ -1124,14 +1120,14 @@ msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:112
-#: litestar.testing.helpers.create_test_client:114
+#: litestar.testing.helpers.create_test_client:113
 msgid ""
 "An optional :class:`State <.datastructures.State>` for application state."
 msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:113
-#: litestar.testing.helpers.create_test_client:115
+#: litestar.testing.helpers.create_test_client:114
 msgid ""
 "Central registry of :class:`Store <.stores.base.Store>` that will be "
 "available throughout the application. If this is a dictionary to it will be "
@@ -1142,7 +1138,7 @@ msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:117
-#: litestar.testing.helpers.create_test_client:119
+#: litestar.testing.helpers.create_test_client:118
 msgid ""
 "A sequence of string tags that will be appended to the schema of all route "
 "handlers under the application."
@@ -1150,13 +1146,13 @@ msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:119
-#: litestar.testing.helpers.create_test_client:121
+#: litestar.testing.helpers.create_test_client:120
 msgid "An instance of :class:`TemplateConfig <.template.TemplateConfig>`"
 msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:121
-#: litestar.testing.helpers.create_test_client:123
+#: litestar.testing.helpers.create_test_client:122
 msgid ""
 "A mapping of types to callables that transform them into types supported for "
 "serialization."
@@ -1164,7 +1160,7 @@ msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:122
-#: litestar.testing.helpers.create_test_client:124
+#: litestar.testing.helpers.create_test_client:123
 msgid ""
 "An optional subclass of :class:`WebSocket <.connection.WebSocket>` to use "
 "for websocket connections."
@@ -1172,7 +1168,7 @@ msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.helpers.create_async_test_client:124
-#: litestar.testing.helpers.create_test_client:126
+#: litestar.testing.helpers.create_test_client:125
 msgid "An iterable of experimental features to enable"
 msgstr ""
 
@@ -1207,7 +1203,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
-#: litestar.testing.helpers.create_test_client:128
+#: litestar.testing.helpers.create_test_client:127
 msgid ""
 "An instance of :class:`TestClient <.testing.TestClient>` with a created app "
 "instance."
@@ -1216,7 +1212,7 @@ msgstr ""
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.client.subprocess_client.subprocess_async_client:1
 msgid ""
-"Provides an async httpx client for a litestar app launched in a subprocess."
+"Provides an async httpx2 client for a litestar app launched in a subprocess."
 msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
@@ -1229,8 +1225,8 @@ msgstr ""
 #: litestar.testing.client.subprocess_client.subprocess_async_client:4
 #: litestar.testing.client.subprocess_client.subprocess_sync_client:4
 msgid ""
-"Uvicorn app string that can be resolved in the provided working directory, e."
-"g.: \"app:app\""
+"Uvicorn app string that can be resolved in the provided working directory, "
+"e.g.: \"app:app\""
 msgstr ""
 
 #: ../../../../litestar/testing/__init__.py:docstring of
@@ -1244,5 +1240,5 @@ msgstr ""
 #: ../../../../litestar/testing/__init__.py:docstring of
 #: litestar.testing.client.subprocess_client.subprocess_sync_client:1
 msgid ""
-"Provides a sync httpx client for a litestar app launched in a subprocess."
+"Provides a sync httpx2 client for a litestar app launched in a subprocess."
 msgstr ""

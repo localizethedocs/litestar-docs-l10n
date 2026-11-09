@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 12:12+0000\n"
+"POT-Creation-Date: 2026-11-09 18:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,24 +29,10 @@ msgid ""
 msgstr ""
 
 #: ../../../../litestar/concurrency.py:docstring of
-#: litestar.concurrency.get_trio_capacity_limiter:1
-msgid ""
-"Get the capacity limiter used when running synchronous callable within a "
-"trio context"
-msgstr ""
-
-#: ../../../../litestar/concurrency.py:docstring of
 #: litestar.concurrency.set_asyncio_executor:1
 msgid ""
 "Set the executor in which synchronous callables will be run within an "
 "asyncio context"
-msgstr ""
-
-#: ../../../../litestar/concurrency.py:docstring of
-#: litestar.concurrency.set_trio_capacity_limiter:1
-msgid ""
-"Set the capacity limiter used when running synchronous callable within a "
-"trio context"
 msgstr ""
 
 #: ../../../../litestar/concurrency.py:docstring of
@@ -57,18 +43,9 @@ msgstr ""
 #: ../../../../litestar/concurrency.py:docstring of
 #: litestar.concurrency.sync_to_thread:3
 msgid ""
-"When called from asyncio, uses :meth:`asyncio.loop.run_in_executor` to run "
-"the callable. No executor is specified by default so the current loop's "
-"executor is used. A specific executor can be set using :func:`~litestar."
-"concurrency.set_asyncio_executor`. This does not affect the loop's default "
-"executor."
-msgstr ""
-
-#: ../../../../litestar/concurrency.py:docstring of
-#: litestar.concurrency.sync_to_thread:9
-msgid ""
-"When called from trio, uses :func:`trio.to_thread.run_sync` to run the "
-"callable. No capacity limiter is specified by default, but one can be set "
-"using :func:`~litestar.concurrency.set_trio_capacity_limiter`. This does not "
-"affect trio's default capacity limiter."
+"Uses :meth:`asyncio.loop.run_in_executor` to run the callable. No executor "
+"is specified by default so the current loop's executor is used. A specific "
+"executor can be set "
+"using :func:`~litestar.concurrency.set_asyncio_executor`. This does not "
+"affect the loop's default executor."
 msgstr ""
