@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-10-19 08:58:57 +0300",
-      "hash" : "af5003e830c3a44dc22cad499200e28b898c1407",
-      "title" : "chore(deps): bump actions/create-github-app-token from 3.2.0 to 3.3.0 (#5141)"
+      "date" : "2026-11-14 18:13:49 +0100",
+      "hash" : "aea23e62c7aec6e77025ce73c183528d355252f6",
+      "title" : "fix: only accept known charsets for multipart form fields (#5211)"
     }
   },
   "type" : "branch",
