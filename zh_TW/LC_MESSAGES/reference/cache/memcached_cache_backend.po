@@ -1,0 +1,171 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/cache/memcached_cache_backend.rst:2
+msgid "memcached_cache_backend"
+msgstr ""
+
+#: ../../../../starlite/cache/memcached_cache_backend.py:docstring of
+#: starlite.cache.memcached_cache_backend.MemcachedCacheBackendConfig:1
+msgid "Bases: :py:class:`~pydantic.main.BaseModel`"
+msgstr ""
+
+#: ../../../../starlite/cache/memcached_cache_backend.py:docstring of
+#: starlite.cache.memcached_cache_backend.MemcachedCacheBackendConfig:1
+msgid "Memcached cache backend configuration."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.cache.memcached_cache_backend.MemcachedCacheBackendConfig.host:1
+msgid "Memcached host."
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.cache.memcached_cache_backend.MemcachedCacheBackendConfig.port:1
+msgid "memcached port (optional, defaults to 11211)"
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.cache.memcached_cache_backend.MemcachedCacheBackendConfig.pool_size:1
+msgid "Maximum number of memcached open connections (optional, defaults to 2)"
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.cache.memcached_cache_backend.MemcachedCacheBackendConfig.pool_minsize:1
+msgid "memcached minimum pool size (optional, by default set to ``pool_size``)"
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.cache.memcached_cache_backend.MemcachedCacheBackendConfig.serialize:1
+msgid ""
+"A callable to serialize data that goes into the cache from an object to "
+"bytes, defaults to `pickle.dumps`"
+msgstr ""
+
+#: ../../../../docstring of
+#: starlite.cache.memcached_cache_backend.MemcachedCacheBackendConfig.deserialize:1
+msgid ""
+"A callable to deserialize data coming from the cache from bytes to an "
+"object, defaults to `pickle.loads`"
+msgstr ""
+
+#: ../../../../starlite/cache/memcached_cache_backend.py:docstring of
+#: starlite.cache.memcached_cache_backend.MemcachedCacheBackend:1
+msgid "Bases: :py:class:`~starlite.cache.base.CacheBackendProtocol`"
+msgstr ""
+
+#: ../../../../starlite/cache/memcached_cache_backend.py:docstring of
+#: starlite.cache.memcached_cache_backend.MemcachedCacheBackend:1
+msgid "Memcached-based cache backend."
+msgstr ""
+
+#: ../../../../starlite/cache/memcached_cache_backend.py:docstring of
+#: starlite.cache.memcached_cache_backend.MemcachedCacheBackend.__init__:1
+msgid "Initialize ``MemcachedCacheBackend``."
+msgstr ""
+
+#: ../../../../starlite/cache/memcached_cache_backend.py:docstring of
+#: starlite.cache.memcached_cache_backend.MemcachedCacheBackend.__init__:0
+#: starlite.cache.memcached_cache_backend.MemcachedCacheBackend.delete:0
+#: starlite.cache.memcached_cache_backend.MemcachedCacheBackend.get:0
+#: starlite.cache.memcached_cache_backend.MemcachedCacheBackend.set:0
+msgid "Parameters"
+msgstr "參數"
+
+#: ../../../../starlite/cache/memcached_cache_backend.py:docstring of
+#: starlite.cache.memcached_cache_backend.MemcachedCacheBackend.__init__:3
+msgid "required configuration to connect to memcached."
+msgstr ""
+
+#: ../../../../starlite/cache/memcached_cache_backend.py:docstring of
+#: starlite.cache.memcached_cache_backend.MemcachedCacheBackend.get:1
+msgid "Retrieve a value from cache corresponding to the given key."
+msgstr ""
+
+#: ../../../../starlite/cache/memcached_cache_backend.py:docstring of
+#: starlite.cache.memcached_cache_backend.MemcachedCacheBackend.get:3
+msgid "name of cached value."
+msgstr ""
+
+#: ../../../../starlite/cache/memcached_cache_backend.py:docstring of
+#: starlite.cache.memcached_cache_backend.MemcachedCacheBackend.delete:0
+#: starlite.cache.memcached_cache_backend.MemcachedCacheBackend.get:0
+#: starlite.cache.memcached_cache_backend.MemcachedCacheBackend.set:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../../starlite/cache/memcached_cache_backend.py:docstring of
+#: starlite.cache.memcached_cache_backend.MemcachedCacheBackend.get:5
+msgid "Cached value if existing else ``None``."
+msgstr ""
+
+#: ../../../../starlite/cache/memcached_cache_backend.py:docstring of
+#: starlite.cache.memcached_cache_backend.MemcachedCacheBackend.set:1
+msgid ""
+"Set sa value in cache for a given key for a duration determined by "
+"expiration."
+msgstr ""
+
+#: ../../../../starlite/cache/memcached_cache_backend.py:docstring of
+#: starlite.cache.memcached_cache_backend.MemcachedCacheBackend.set:3
+msgid "key to cache ``value`` under."
+msgstr ""
+
+#: ../../../../starlite/cache/memcached_cache_backend.py:docstring of
+#: starlite.cache.memcached_cache_backend.MemcachedCacheBackend.set:4
+msgid "the value to be cached."
+msgstr ""
+
+#: ../../../../starlite/cache/memcached_cache_backend.py:docstring of
+#: starlite.cache.memcached_cache_backend.MemcachedCacheBackend.set:5
+msgid "expiration of cached value in seconds."
+msgstr ""
+
+#: ../../../../starlite/cache/memcached_cache_backend.py:docstring of
+#: starlite.cache.memcached_cache_backend.MemcachedCacheBackend.delete:5
+#: starlite.cache.memcached_cache_backend.MemcachedCacheBackend.set:7
+msgid "Notes"
+msgstr ""
+
+#: ../../../../starlite/cache/memcached_cache_backend.py:docstring of
+#: starlite.cache.memcached_cache_backend.MemcachedCacheBackend.set:9
+msgid "expiration is in seconds."
+msgstr ""
+
+#: ../../../../starlite/cache/memcached_cache_backend.py:docstring of
+#: starlite.cache.memcached_cache_backend.MemcachedCacheBackend.delete:7
+#: starlite.cache.memcached_cache_backend.MemcachedCacheBackend.set:10
+msgid "return value is not used by Starlite internally."
+msgstr ""
+
+#: ../../../../starlite/cache/memcached_cache_backend.py:docstring of
+#: starlite.cache.memcached_cache_backend.MemcachedCacheBackend.delete:9
+#: starlite.cache.memcached_cache_backend.MemcachedCacheBackend.set:12
+msgid "None"
+msgstr ""
+
+#: ../../../../starlite/cache/memcached_cache_backend.py:docstring of
+#: starlite.cache.memcached_cache_backend.MemcachedCacheBackend.delete:1
+msgid "Delete a value from the cache and remove the given key."
+msgstr ""
+
+#: ../../../../starlite/cache/memcached_cache_backend.py:docstring of
+#: starlite.cache.memcached_cache_backend.MemcachedCacheBackend.delete:3
+msgid "key to be deleted from the cache."
+msgstr ""
