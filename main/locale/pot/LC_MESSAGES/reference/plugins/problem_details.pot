@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-19 17:13+0000\n"
+"POT-Creation-Date: 2026-11-23 20:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -137,7 +137,7 @@ msgstr ""
 #: litestar.plugins.problem_details.ProblemDetailsPlugin.on_app_init:6
 msgid ""
 "from litestar import Litestar, get\n"
-"from litestar.di import Provide\n"
+"from litestar.di import Provider\n"
 "from litestar.plugins import InitPluginProtocol\n"
 "\n"
 "\n"
@@ -152,7 +152,9 @@ msgid ""
 "\n"
 "class MyPlugin(InitPluginProtocol):\n"
 "    def on_app_init(self, app_config: AppConfig) -> AppConfig:\n"
-"        app_config.dependencies[\"name\"] = Provide(get_name)\n"
+"        app_config.dependencies[\"name\"] = Provider(\n"
+"            get_name, key=\"name\", sync_to_thread=False\n"
+"        )\n"
 "        app_config.route_handlers.append(my_route_handler)\n"
 "        return app_config\n"
 "\n"
@@ -161,7 +163,7 @@ msgid ""
 msgstr ""
 
 #: ../../../../litestar/plugins/problem_details.py:docstring of
-#: litestar.plugins.problem_details.ProblemDetailsPlugin.on_app_init:30
+#: litestar.plugins.problem_details.ProblemDetailsPlugin.on_app_init:32
 msgid "The :class:`AppConfig <litestar.config.app.AppConfig>` instance."
 msgstr ""
 
@@ -170,6 +172,6 @@ msgid "Returns"
 msgstr ""
 
 #: ../../../../litestar/plugins/problem_details.py:docstring of
-#: litestar.plugins.problem_details.ProblemDetailsPlugin.on_app_init:32
+#: litestar.plugins.problem_details.ProblemDetailsPlugin.on_app_init:34
 msgid "The app config object."
 msgstr ""

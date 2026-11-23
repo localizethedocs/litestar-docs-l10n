@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-19 17:13+0000\n"
+"POT-Creation-Date: 2026-11-23 20:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,18 +33,35 @@ msgstr ""
 
 #: ../../../../litestar/middleware/rate_limit.py:docstring of
 #: litestar.middleware.rate_limit.RateLimitConfig.rate_limit:1
+#: litestar.middleware.rate_limit.RateLimitMiddleware.__init__:3
 msgid ""
-"A tuple containing a time unit (second, minute, hour, day) and quantity, e."
-"g. (\"day\", 1) or (\"minute\", 5)."
+"A tuple containing a time unit (second, minute, hour, day) and quantity, "
+"e.g. (\"day\", 1) or (\"minute\", 5)."
 msgstr ""
 
 #: ../../../../litestar/middleware/rate_limit.py:docstring of
 #: litestar.middleware.rate_limit.RateLimitConfig.exclude:1
-msgid "A pattern or list of patterns to skip in the rate limiting middleware."
+#: litestar.middleware.rate_limit.RateLimitMiddleware.__init__:16
+msgid ""
+"A pattern or list of patterns to skip in the rate limiting middleware, "
+"matched against the request path."
+msgstr ""
+
+#: ../../../../litestar/middleware/rate_limit.py:docstring of
+#: litestar.middleware.rate_limit.RateLimitConfig.exclude_path_pattern:1
+msgid ""
+"A pattern or list of patterns to skip in the rate limiting middleware, "
+"matched against the handler path at startup."
+msgstr ""
+
+#: ../../../../litestar/middleware/rate_limit.py:docstring of
+#: litestar.middleware.rate_limit.RateLimitConfig.exclude_path_pattern:4
+msgid "See :attr:`~litestar.middleware.ASGIMiddleware.exclude_path_pattern`."
 msgstr ""
 
 #: ../../../../litestar/middleware/rate_limit.py:docstring of
 #: litestar.middleware.rate_limit.RateLimitConfig.exclude_opt_key:1
+#: litestar.middleware.rate_limit.RateLimitMiddleware.__init__:21
 msgid ""
 "An identifier to use on routes to disable rate limiting for a particular "
 "route."
@@ -54,8 +71,9 @@ msgstr ""
 #: litestar.middleware.rate_limit.get_remote_address:1
 msgid ""
 "A callable that receives the request and returns an identifier for which the "
-"limit should be applied. Defaults to :func:`~litestar.middleware.rate_limit."
-"get_remote_address`, which returns the client's address."
+"limit should be applied. Defaults "
+"to :func:`~litestar.middleware.rate_limit.get_remote_address`, which returns "
+"the client's address."
 msgstr ""
 
 #: ../../../../litestar/middleware/rate_limit.py:docstring of
@@ -66,12 +84,13 @@ msgid ""
 "implicitly. If running behind a proxy, a secure way of updating the client's "
 "address should be implemented, such as uvicorn's `ProxyHeaderMiddleware "
 "<https://github.com/encode/uvicorn/blob/master/uvicorn/middleware/"
-"proxy_headers.py>`_ or hypercon's `ProxyFixMiddleware <https://hypercorn."
-"readthedocs.io/en/latest/how_to_guides/proxy_fix.html>`_ ."
+"proxy_headers.py>`_ or hypercon's `ProxyFixMiddleware <https://"
+"hypercorn.readthedocs.io/en/latest/how_to_guides/proxy_fix.html>`_ ."
 msgstr ""
 
 #: ../../../../litestar/middleware/rate_limit.py:docstring of
 #: litestar.middleware.rate_limit.RateLimitConfig.check_throttle_handler:1
+#: litestar.middleware.rate_limit.RateLimitMiddleware.__init__:9
 msgid ""
 "Handler callable that receives the request instance, returning a boolean "
 "dictating whether or not the request should be checked for rate limiting."
@@ -84,27 +103,32 @@ msgstr ""
 
 #: ../../../../litestar/middleware/rate_limit.py:docstring of
 #: litestar.middleware.rate_limit.RateLimitConfig.set_rate_limit_headers:1
+#: litestar.middleware.rate_limit.RateLimitMiddleware.__init__:11
 msgid ""
 "Boolean dictating whether to set the rate limit headers on the response."
 msgstr ""
 
 #: ../../../../litestar/middleware/rate_limit.py:docstring of
 #: litestar.middleware.rate_limit.RateLimitConfig.rate_limit_policy_header_key:1
+#: litestar.middleware.rate_limit.RateLimitMiddleware.__init__:12
 msgid "Key to use for the rate limit policy header."
 msgstr ""
 
 #: ../../../../litestar/middleware/rate_limit.py:docstring of
 #: litestar.middleware.rate_limit.RateLimitConfig.rate_limit_remaining_header_key:1
+#: litestar.middleware.rate_limit.RateLimitMiddleware.__init__:14
 msgid "Key to use for the rate limit remaining header."
 msgstr ""
 
 #: ../../../../litestar/middleware/rate_limit.py:docstring of
 #: litestar.middleware.rate_limit.RateLimitConfig.rate_limit_reset_header_key:1
+#: litestar.middleware.rate_limit.RateLimitMiddleware.__init__:15
 msgid "Key to use for the rate limit reset header."
 msgstr ""
 
 #: ../../../../litestar/middleware/rate_limit.py:docstring of
 #: litestar.middleware.rate_limit.RateLimitConfig.rate_limit_limit_header_key:1
+#: litestar.middleware.rate_limit.RateLimitMiddleware.__init__:13
 msgid "Key to use for the rate limit limit header."
 msgstr ""
 
@@ -116,32 +140,8 @@ msgstr ""
 #: ../../../../litestar/middleware/rate_limit.py:docstring of
 #: litestar.middleware.rate_limit.RateLimitConfig.middleware:1
 msgid ""
-"Use this property to insert the config into a middleware list on one of the "
-"application layers."
-msgstr ""
-
-#: ../../../../litestar/middleware/rate_limit.py:docstring of
-#: litestar.middleware.rate_limit.RateLimitConfig.middleware:3
-msgid "Examples"
-msgstr ""
-
-#: ../../../../litestar/middleware/rate_limit.py:docstring of
-#: litestar.middleware.rate_limit.RateLimitConfig.middleware:6
-msgid ""
-"from litestar import Litestar, Request, get\n"
-"from litestar.middleware.rate_limit import RateLimitConfig\n"
-"\n"
-"# limit to 10 requests per minute, excluding the schema path\n"
-"throttle_config = RateLimitConfig(rate_limit=(\"minute\", 10), exclude=[\"/"
-"schema\"])\n"
-"\n"
-"\n"
-"@get(\"/\")\n"
-"def my_handler(request: Request) -> None: ...\n"
-"\n"
-"\n"
-"app = Litestar(route_handlers=[my_handler], middleware=[throttle_config."
-"middleware])"
+"Create an instance of :attr:`middleware_class`, configured from this config "
+"instance."
 msgstr ""
 
 #: ../../../reference/middleware/rate_limit.rst:0
@@ -149,22 +149,27 @@ msgid "Returns"
 msgstr ""
 
 #: ../../../../litestar/middleware/rate_limit.py:docstring of
-#: litestar.middleware.rate_limit.RateLimitConfig.middleware:20
+#: litestar.middleware.rate_limit.RateLimitConfig.middleware:3
 msgid ""
-"An instance of :class:`DefineMiddleware <.middleware.base.DefineMiddleware>` "
-"including ``self`` as the config kwarg value."
+"An instance of :attr:`middleware_class`, configured from this config "
+"instance."
 msgstr ""
 
 #: ../../../../litestar/middleware/rate_limit.py:docstring of
 #: litestar.middleware.rate_limit.RateLimitConfig.get_store_from_app:1
 msgid ""
-"Get the store defined in :attr:`store` from an :class:`Litestar <.app."
-"Litestar>` instance."
+"Get the store defined in :attr:`store` from an :class:`Litestar "
+"<.app.Litestar>` instance."
 msgstr ""
 
 #: ../../../../litestar/middleware/rate_limit.py:docstring of
 #: litestar.middleware.rate_limit.RateLimitMiddleware:1
 msgid "Rate-limiting middleware."
+msgstr ""
+
+#: ../../../../litestar/middleware/rate_limit.py:docstring of
+#: litestar.middleware.rate_limit.RateLimitMiddleware.scopes:1
+msgid "Scope types this middleware should be applied to"
 msgstr ""
 
 #: ../../../../litestar/middleware/rate_limit.py:docstring of
@@ -177,13 +182,57 @@ msgid "Parameters"
 msgstr ""
 
 #: ../../../../litestar/middleware/rate_limit.py:docstring of
-#: litestar.middleware.rate_limit.RateLimitMiddleware.__init__:3
-msgid "The ``next`` ASGI app to call."
+#: litestar.middleware.rate_limit.RateLimitMiddleware.__init__:5
+msgid ""
+"Name of the :class:`Store <.stores.base.Store>` to use, looked up on the "
+"application's store registry."
 msgstr ""
 
 #: ../../../../litestar/middleware/rate_limit.py:docstring of
-#: litestar.middleware.rate_limit.RateLimitMiddleware.__init__:4
-msgid "An instance of RateLimitConfig."
+#: litestar.middleware.rate_limit.RateLimitMiddleware.__init__:7
+msgid ""
+"A callable that receives the request and returns an identifier for which the "
+"limit should be applied."
+msgstr ""
+
+#: ../../../../litestar/middleware/rate_limit.py:docstring of
+#: litestar.middleware.rate_limit.RateLimitMiddleware.__init__:18
+msgid ""
+"A pattern or list of patterns to skip in the rate limiting middleware, "
+"matched against the handler path at startup. "
+"See :attr:`~litestar.middleware.ASGIMiddleware.exclude_path_pattern`."
+msgstr ""
+
+#: ../../../../litestar/middleware/rate_limit.py:docstring of
+#: litestar.middleware.rate_limit.RateLimitMiddleware.handle:1
+msgid "Handle ASGI call."
+msgstr ""
+
+#: ../../../../litestar/middleware/rate_limit.py:docstring of
+#: litestar.middleware.rate_limit.RateLimitMiddleware.handle:3
+msgid "The ASGI connection scope."
+msgstr ""
+
+#: ../../../../litestar/middleware/rate_limit.py:docstring of
+#: litestar.middleware.rate_limit.RateLimitMiddleware.handle:4
+msgid "The ASGI receive function."
+msgstr ""
+
+#: ../../../../litestar/middleware/rate_limit.py:docstring of
+#: litestar.middleware.rate_limit.RateLimitMiddleware.create_send_wrapper:3
+#: litestar.middleware.rate_limit.RateLimitMiddleware.handle:5
+msgid "The ASGI send function."
+msgstr ""
+
+#: ../../../../litestar/middleware/rate_limit.py:docstring of
+#: litestar.middleware.rate_limit.RateLimitMiddleware.handle:6
+msgid "The next ASGI application in the middleware stack to call."
+msgstr ""
+
+#: ../../../../litestar/middleware/rate_limit.py:docstring of
+#: litestar.middleware.rate_limit.RateLimitMiddleware.handle:8
+#: litestar.middleware.rate_limit.RateLimitMiddleware.set_cached_history:7
+msgid "None"
 msgstr ""
 
 #: ../../../../litestar/middleware/rate_limit.py:docstring of
@@ -191,11 +240,6 @@ msgstr ""
 msgid ""
 "Create a ``send`` function that wraps the original send to inject response "
 "headers."
-msgstr ""
-
-#: ../../../../litestar/middleware/rate_limit.py:docstring of
-#: litestar.middleware.rate_limit.RateLimitMiddleware.create_send_wrapper:3
-msgid "The ASGI send function."
 msgstr ""
 
 #: ../../../../litestar/middleware/rate_limit.py:docstring of
@@ -239,11 +283,6 @@ msgstr ""
 #: litestar.middleware.rate_limit.RateLimitMiddleware.create_response_headers:7
 #: litestar.middleware.rate_limit.RateLimitMiddleware.set_cached_history:4
 msgid "A :class:`CacheObject`."
-msgstr ""
-
-#: ../../../../litestar/middleware/rate_limit.py:docstring of
-#: litestar.middleware.rate_limit.RateLimitMiddleware.set_cached_history:7
-msgid "None"
 msgstr ""
 
 #: ../../../../litestar/middleware/rate_limit.py:docstring of

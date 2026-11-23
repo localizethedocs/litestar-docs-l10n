@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-19 17:13+0000\n"
+"POT-Creation-Date: 2026-11-23 20:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,42 +21,984 @@ msgstr ""
 msgid "di"
 msgstr ""
 
-#: ../../../../litestar/di.py:docstring of typing.Annotated:1
-msgid "Mark a parameter for name-based dependency injection."
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.DIContext:1
+msgid "A live DI scope. Manages resolution and lifetime of dependencies"
 msgstr ""
 
-#: ../../../../litestar/di.py:docstring of typing.Annotated:3
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.DIContext.__init__:1
+msgid "A DI context to resolve dependencies."
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.DIContext.__init__:3
 msgid ""
-"The name of the function parameter will be used as the name for the "
-"dependency to inject."
-msgstr ""
-
-#: ../../../../litestar/di.py:docstring of litestar.di.Provide:1
-msgid "Wrapper class for dependency injection"
-msgstr ""
-
-#: ../../../../litestar/di.py:docstring of litestar.di.Provide.__init__:1
-msgid "Initialize ``Provide``"
+"If ``scope`` is not given, the outermost scope is used, or, when ``parent`` "
+"is given, the scope immediately following the parent's. Creating a context "
+"freezes ``registry``."
 msgstr ""
 
 #: ../../../reference/di.rst:0
 msgid "Parameters"
 msgstr ""
 
-#: ../../../../litestar/di.py:docstring of litestar.di.Provide.__init__:3
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.DIContext.__init__:7
+msgid "The registry to resolve through"
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.DIContext.__init__:8
+msgid "The scope this context owns"
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.DIContext.__init__:9
+msgid "The context before this"
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.DIContext.__init__:10
 msgid ""
-"Callable to call or class to instantiate. The result is then injected as a "
-"dependency."
+"Values for the seed keys of this scope. If ``registry`` declares seeds, "
+"values for all seeds must be given"
 msgstr ""
 
-#: ../../../../litestar/di.py:docstring of litestar.di.Provide.__init__:4
-msgid "Cache the dependency return value. Defaults to False."
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.DIContext.__init__:12
+msgid ""
+"The :class:`PreparedDIContext` of ``registry``, ``scope`` and ``parent``, "
+"which has checked them. If not given, it is created"
 msgstr ""
 
-#: ../../../../litestar/di.py:docstring of litestar.di.Provide.__init__:5
-msgid "Run sync code in an async thread. Defaults to False."
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.DIContext.inject:1
+msgid ""
+"Resolve all dependencies of ``fn``, inject them into ``fn``, and return its "
+"return value."
 msgstr ""
 
-#: ../../../../litestar/di.py:docstring of litestar.di.Provide.__call__:1
-msgid "Call the provider's dependency."
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.DIContext.inject:4
+msgid ""
+"``args`` and ``kwargs`` are passed to ``fn``. When a parameter is declared a "
+"dependency but still passed explicitly, the explicit form will take "
+"precedence."
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.DIContext.inject:7 litestar.di.context.DIContext.solve:3
+#: litestar.di.context.DIContext.solve_many:3
+msgid ""
+"This method should not be used from within a dependency provider, as it can "
+"result in deadlocks: When solved dynamically, a dependency can request "
+"itself, creating a cycle, which can only be checked exhaustively if all "
+"dependencies are declared upfront. A best-effort check is performed to "
+"prevent calling this method from within a dependency, but it should not be "
+"relied on."
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.DIContext.inject:13
+#: litestar.di.context.DIContext.solve_arguments:5
+#: ../../../../litestar/di/registry.py:docstring
+#: litestar.di.registry.DIRegistry.check_target:3
+msgid "A callable or an :class:`InjectionTarget`"
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.DIContext.inject:14
+msgid "Positional arguments for ``fn``"
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.DIContext.inject:15
+msgid "Keyword arguments for ``fn``"
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.DIContext.inject:16
+msgid "Whether a synchronous ``fn`` runs in a worker thread"
+msgstr ""
+
+#: ../../../reference/di.rst:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.DIContext.inject:18
+#: litestar.di.context.DIContext.solve_arguments:8
+msgid "If a required dependency has no provider."
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.DIContext.inject:19
+#: litestar.di.context.DIContext.solve:10
+msgid ""
+"If the call is found to come from inside a factory; a best effort     check "
+"to avoid misuse."
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.DIContext.solve_arguments:1
+msgid "Return the resolved dependencies of ``fn``, keyed by parameter name."
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.DIContext.solve_arguments:3
+msgid ""
+"Parameters in ``supplied`` and optional dependencies without a provider are "
+"left out."
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.DIContext.solve_arguments:6
+msgid "Names of parameters not to be resolved"
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.DIContext.solve_arguments:9
+msgid ""
+"If ``supplied`` names a parameter ``fn`` does not declare, unless     ``fn`` "
+"takes ``**kwargs``; or if the call is found to come from inside a "
+"factory,     a best effort check to avoid misuse."
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.DIContext.solve_many:1
+msgid ""
+"Solve all ``keys``, and return their resolved values in the order of "
+"``keys``."
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.DIContext.solve:9
+#: litestar.di.context.DIContext.solve_many:9
+msgid "If a key has no provider."
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.DIContext.solve_many:10
+msgid ""
+"If the call is found to come from inside a factory; a     best effort check "
+"to avoid misuse."
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.DIContext.solve:1
+msgid "Solve for ``key`` and return its value."
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.DIContext.get:1
+msgid "Return the previously solved value of ``key``."
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.DIContext.get:3
+msgid "If the key has not been resolved in this context or a parent"
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.DIContext.__aenter__:1
+msgid "Open this context."
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.DIContext.__aenter__:3
+msgid ""
+"A context can only be entered once. Closing and re-entering it again is an "
+"error."
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.DIContext.__aenter__:5
+msgid "If this context, or its parent context, has already been closed"
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.DIContext.__aenter__:6
+msgid "If it has already been entered, or its parent has not been"
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.DIContext.__aexit__:1
+msgid "Close this context and clean up all its dependencies"
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.DIContext.enter_nested:1
+msgid "A new :class:`DIContext`, with this instance set as its parent."
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.DIContext.enter_nested:4
+msgid ""
+"async with app_context.enter_nested() as request_context:\n"
+"    ..."
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.DIContext.enter_nested:8
+msgid "The registry the child resolves through. Defaults to this context's"
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.DIContext.enter_nested:9
+msgid ""
+"The scope to enter. Defaults to the one immediately following this context's"
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.DIContext.enter_nested:10
+msgid "Values for the seed keys of the nested scope"
+msgstr ""
+
+#: ../../../../litestar/di/registry.py:docstring of
+#: litestar.di.registry.DIRegistry:1 litestar.di.registry.DIRegistry.__init__:1
+msgid "A registry of DI providers."
+msgstr ""
+
+#: ../../../../litestar/di/registry.py:docstring of
+#: litestar.di.registry.DIRegistry.__init__:3
+msgid "A registry holds every provider needed to satisfy the keys it declares."
+msgstr ""
+
+#: ../../../../litestar/di/registry.py:docstring of
+#: litestar.di.registry.DIRegistry.__init__:5
+msgid ""
+"A registry is mutable until the first time a graph is solved from it, "
+"creating a :class:`DIContext` or calling :meth:`predecessors_of`, at which "
+"point it *freezes*, validating the graph and disallowing further "
+"registrations."
+msgstr ""
+
+#: ../../../../litestar/di/registry.py:docstring of
+#: litestar.di.registry.DIRegistry.__init__:9
+msgid ""
+"Name of this registry. Only used for debugging purposes in error messages"
+msgstr ""
+
+#: ../../../../litestar/di/registry.py:docstring of
+#: litestar.di.registry.DIRegistry.__init__:10
+msgid "Providers available in this registry"
+msgstr ""
+
+#: ../../../../litestar/di/registry.py:docstring of
+#: litestar.di.registry.DIRegistry.__init__:11
+msgid ""
+"Available scopes, in order, outermost first. Defaults to ``(\"app\", "
+"\"request\", \"handler\")``"
+msgstr ""
+
+#: ../../../../litestar/di/registry.py:docstring of
+#: litestar.di.registry.DIRegistry.__init__:13
+msgid "If the scopes or the providers are invalid."
+msgstr ""
+
+#: ../../../../litestar/di/registry.py:docstring of
+#: litestar.di.DIRegistry.providers:1
+msgid "The registry's providers"
+msgstr ""
+
+#: ../../../../litestar/di/registry.py:docstring of
+#: litestar.di.registry.DIRegistry.register:1
+msgid "Register a provider."
+msgstr ""
+
+#: ../../../../litestar/di/registry.py:docstring of
+#: litestar.di.registry.DIRegistry.register:3
+msgid "The provider or callable to create a provider instance"
+msgstr ""
+
+#: ../../../../litestar/di/registry.py:docstring of
+#: litestar.di.registry.DIRegistry.register:4
+#: litestar.di.registry.DIRegistry.register_callable:12
+msgid ""
+"If ``False``, trying to register a provider for an already existing key "
+"raises :exc:`DIRegistrationError`"
+msgstr ""
+
+#: ../../../../litestar/di/registry.py:docstring of
+#: litestar.di.registry.DIRegistry.register:7
+msgid ""
+"If the registry is frozen, the key is a duplicate and ``override``     is "
+"not set, the scope is unknown, or the provider cannot be inspected."
+msgstr ""
+
+#: ../../../../litestar/di/registry.py:docstring of
+#: litestar.di.registry.DIRegistry.register_callable:1
+msgid "Register a callable as a new provider."
+msgstr ""
+
+#: ../../../../litestar/di/registry.py:docstring of
+#: litestar.di.registry.DIRegistry.register_callable:3
+msgid ""
+"``fn`` will be wrapped in one :class:`Provider`. The key type is inferred "
+"from ``key``: A string will be a provider for a ``NamedDependency``, "
+"anything else a ``TypeDependency``."
+msgstr ""
+
+#: ../../../../litestar/di/registry.py:docstring of
+#: litestar.di.registry.DIRegistry.register_callable:7
+msgid "The factory callable to create a provider instance from"
+msgstr ""
+
+#: ../../../../litestar/di/registry.py:docstring of
+#: litestar.di.registry.DIRegistry.register_callable:8
+msgid "Key to register under"
+msgstr ""
+
+#: ../../../../litestar/di/registry.py:docstring of
+#: litestar.di.registry.DIRegistry.register_callable:9
+msgid "Scope of the new provider"
+msgstr ""
+
+#: ../../../../litestar/di/registry.py:docstring of
+#: litestar.di.registry.DIRegistry.register_callable:10
+msgid ""
+"Whether a bare sync callable runs in a worker thread: see :class:`Provider`"
+msgstr ""
+
+#: ../../../../litestar/di/registry.py:docstring of
+#: litestar.di.registry.DIRegistry.register_callable:15
+msgid ""
+"If the registry is frozen, the key is a duplicate and     ``override`` is "
+"not set, the scope is unknown, or the provider cannot be     inspected."
+msgstr ""
+
+#: ../../../../litestar/di/registry.py:docstring of
+#: litestar.di.registry.DIRegistry.get_provider:1
+msgid ""
+"Return the provider for ``key``, or ``None`` if no provider for ``key`` has "
+"been registered"
+msgstr ""
+
+#: ../../../../litestar/di/registry.py:docstring of
+#: litestar.di.registry.DIRegistry.check_target:1
+msgid ""
+"Check that this registry has a provider for every required dependency of "
+"``target``."
+msgstr ""
+
+#: ../../../../litestar/di/registry.py:docstring of
+#: litestar.di.registry.DIRegistry.check_target:5
+msgid "If a required dependency of ``target`` has no provider"
+msgstr ""
+
+#: ../../../../litestar/di/registry.py:docstring of
+#: litestar.di.registry.DIRegistry.predecessors_of:1
+msgid "Return predecessors of ``provider`` as declared in this registry."
+msgstr ""
+
+#: ../../../../litestar/di/registry.py:docstring of
+#: litestar.di.registry.DIRegistry.predecessors_of:3
+msgid "If this registry does not declare ``provider``."
+msgstr ""
+
+#: ../../../../litestar/di/registry.py:docstring of
+#: litestar.di.registry.DIRegistry.freeze:1
+msgid "Freeze the registry and validate the dependency graph."
+msgstr ""
+
+#: ../../../../litestar/di/registry.py:docstring of
+#: litestar.di.registry.DIRegistry.freeze:3
+msgid "Subsequent calls to this method are a no-op."
+msgstr ""
+
+#: ../../../../litestar/di/registry.py:docstring of
+#: litestar.di.registry.DIRegistry.freeze:5
+msgid "If any dependency has no registered provider"
+msgstr ""
+
+#: ../../../../litestar/di/registry.py:docstring of
+#: litestar.di.registry.DIRegistry.freeze:6
+msgid "If any provider depends on itself, directly or indirectly"
+msgstr ""
+
+#: ../../../../litestar/di/registry.py:docstring of
+#: litestar.di.registry.DIRegistry.freeze:7
+msgid "If any provider depends on a value from a later scope"
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.provider.Dependency:1
+msgid "Mark a parameter as a dependency."
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.provider.Dependency:4
+msgid ""
+"async def handler(\n"
+"    session: Annotated[Session, Dependency(\"db_session\")],\n"
+"    replica: Annotated[Engine, Dependency(ReplicaEngine)],\n"
+") -> None: ..."
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.Dependency.key:1
+msgid "The key to resolve"
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.Dependency.kind:1
+msgid ""
+"Whether to resolve by name or by type. If not given, inferred from 'key', or "
+"by name without a key"
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.provider.InjectionParameter:1
+msgid "A parameter of a provider or an injection target that DI fills."
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.InjectionParameter.parameter_name:1
+msgid "Name of the parameter on the callable."
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.InjectionParameter.key:1
+msgid "Key of the dependency"
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.InjectionParameter.kind:1
+msgid "The provider kind"
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.InjectionParameter.optional:1
+msgid "Whether the parameter is optional (i.e. has a default)"
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.provider.InjectionTarget:1
+msgid ""
+"A callable whose dependencies are read from its signature, "
+"for :meth:`DIContext.inject`, :meth:`DIContext.solve_arguments` "
+"and :meth:`DIRegistry.check_target`."
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.provider.InjectionTarget:4
+msgid ""
+"It has the same calling semantics as a :class:`Provider`, but does not "
+"provide a value into the context."
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.provider.InjectionTarget.__init__:1
+msgid "Wrap ``fn`` as an injection target."
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.provider.InjectionTarget.__init__:3
+msgid "The callable to call with its dependencies resolved"
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.provider.InjectionTarget.__init__:4
+#: litestar.di.provider.Provider.__init__:35
+msgid ""
+"The parsed signature of ``fn``, used instead of reading it from ``fn``. For "
+"a :func:`functools.partial`, it may be that of the callable it wraps"
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.InjectionTarget.fn:1
+msgid "The wrapped callable"
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.provider.InjectionTarget.__call__:1
+msgid "Call the callable as-is"
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.PreparedDIContext:1
+msgid ""
+"Factory to create a DIContext, from a given registry, scope, and parent "
+"context"
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.PreparedDIContext.__init__:1
+msgid "Prepare contexts of ``registry`` at ``scope``, nested in ``parent``."
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.PreparedDIContext.__init__:3
+msgid ""
+"If ``scope`` is not given, the outermost scope is used, or, when ``parent`` "
+"is given, the scope immediately following the parent's. Freezes ``registry``."
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.PreparedDIContext.__init__:6
+msgid "The registry the contexts resolve through"
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.PreparedDIContext.__init__:7
+msgid "The scope the contexts own"
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.PreparedDIContext.__init__:8
+msgid "The context before these, or its prepared context"
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.PreparedDIContext.__init__:10
+msgid ""
+"If ``registry`` and the registry of ``parent`` declare different scopes,     "
+"``registry`` has no scope ``scope``, or ``scope`` is not the one following "
+"the     scope of ``parent``, without a parent the outermost one"
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.PreparedDIContext.__init__:11
+msgid "If ``parent`` is a closed context"
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.PreparedDIContext.__init__:12
+msgid ""
+"If ``parent`` is a context and ``registry`` was created after     the "
+"outermost context before it was entered"
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.PreparedDIContext.create:1
+msgid "Return a new :class:`DIContext` of the registry at the scope."
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.PreparedDIContext.create:3
+msgid ""
+"The context before the new one: a context of the registry and scope of the "
+"``parent`` given to this prepared context, with the outermost context "
+"entered after the registry was created"
+msgstr ""
+
+#: ../../../../litestar/di/context.py:docstring of
+#: litestar.di.context.PreparedDIContext.create:6
+msgid ""
+"Values for the seed keys of the scope. If the registry declares seeds, "
+"values for all seeds must be given"
+msgstr ""
+
+#: ../../../../litestar/di/_provide.py:docstring of
+#: litestar.di._provide.Provide:1
+msgid ""
+"A dependency declaration, converted at handler registration to "
+"a :class:`~litestar.di.Provider` of ``dependency`` under the key it is "
+"declared with: scope ``\"app\"`` with ``use_cache=True``, ``\"handler\"`` "
+"otherwise, and ``sync_to_thread`` as given."
+msgstr ""
+
+#: ../../../../litestar/di/_provide.py:docstring of
+#: litestar.di._provide.Provide.__init__:1
+msgid "Store the arguments, warning that ``Provide`` is deprecated."
+msgstr ""
+
+#: ../../../../litestar/di/_provide.py:docstring of
+#: litestar.di._provide.Provide.__init__:3
+msgid "The factory callable"
+msgstr ""
+
+#: ../../../../litestar/di/_provide.py:docstring of
+#: litestar.di._provide.Provide.__init__:4
+msgid "Whether the provider has scope ``\"app\"`` instead of ``\"handler\"``"
+msgstr ""
+
+#: ../../../../litestar/di/_provide.py:docstring of
+#: litestar.di._provide.Provide.__init__:5
+#: ../../../../litestar/di/provider.py:docstring
+#: litestar.di.provider.Provider.__init__:34
+msgid "Whether a sync callable runs in a worker thread"
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.provider.Provider:1
+msgid "A factory to produce a value"
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.provider.Provider.__init__:1
+msgid "DI provider. A factory to produce a value."
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.provider.Provider.__init__:3
+msgid "A factory callable may be:"
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.provider.Provider.__init__:5
+msgid "an async callable"
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.provider.Provider.__init__:6
+msgid ""
+"a sync callable: In this case, sync_to_thread must be passed explicitly, to "
+"define how it should be invoked. Blocking synchronous callables should pass "
+"sync_to_thread=True, so they can run in a thread pool without blocking the "
+"main event loop. See :doc:`/topics/sync-vs-async` for more info. A class is "
+"treated as a non-blocking sync callable. It's __init__ and __new__ methods "
+"should *never* block"
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.provider.Provider.__init__:12
+msgid ""
+"an async generator, yielding exactly once. The yielded value is the factory "
+"value. the code after the ``yield`` will be invoked as a cleanup step when "
+"this provider's DIContext closes. If the context is closing with an active "
+"exception, that exception will be thrown into the generator. Cleanups are "
+"guaranteed to run in reverse order they providers were invoked in. Every "
+"cleanup will be invoked, even if prior cleanups raised an exception. "
+"Exceptions during cleanup steps are re-raised once all cleanups have "
+"completed."
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.provider.Provider.__init__:18
+msgid ""
+"a sync generator, yielding exactly once, with the cleanup step of an async "
+"generator. The code up to the ``yield`` runs in a worker thread, the cleanup "
+"step in a thread of its own, both in one :class:`contextvars.Context`: a "
+"context variable set before the ``yield`` is set after it, and set for "
+"whoever resolves the provider. A context variable set where the context "
+"closes is set for the cleanup step"
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.provider.Provider.__init__:24
+msgid ""
+"A provider may declare no 'fn', which makes it a *seed*. Seeds are expected "
+"to be given values for their context explicitly when that context is "
+"created. The shorthand for this is :meth:`Provider.seed()`"
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.provider.Provider.__init__:27
+msgid ""
+"The factory callable, or ``None`` to declare a seed, whose value is given to "
+"the context owning its scope when it is built"
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.provider.Provider.__init__:29
+msgid "Whether this provider is keyed by name or by type"
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.provider.Provider.__init__:30
+msgid "Name of the lifetime-scope where the produced value is stored"
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.provider.Provider.__init__:31
+msgid ""
+"The key to register under. If omitted it is inferred: from ``fn.__name__`` "
+"for a named provider, and from the return annotation (or the class itself) "
+"for a type provider"
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.provider.Provider.__init__:38
+msgid ""
+"If ``fn`` is not a supported callable, ``key`` contradicts     ``kind``, a "
+"seed is declared without a key or with a signature, or     "
+"``sync_to_thread`` contradicts the callable's form."
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.provider.Provider.seed:1
+msgid ""
+"Create a provider without a factory. Its value must be passed to the "
+"DIContext explicitly at creation time."
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.provider.Provider.seed:3
+msgid ""
+"The kind is inferred from the key. A string key creates a name dependency, "
+"anything else a type dependency."
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of litestar.di.Provider.key:1
+msgid "Key this provider is registered under"
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.Provider.dependencies:1
+msgid "Sub-dependencies of this provider"
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.Provider.non_di_parameters:1
+msgid ""
+"Names of the factory callable's parameters that a :func:`functools.partial` "
+"binds by keyword"
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.Provider.request_parameters:1
+msgid "Sub-dependencies of this provider that carry a parameter or body marker"
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.Provider.is_seed:1
+msgid "Whether this provider is a seed"
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.provider.Provider.resolve_signature:1
+msgid ""
+"Extract sub-dependencies and the remaining parameters from the provider "
+"callable's signature. ``signature`` is read instead of the callable's when "
+"the provider was given none at construction."
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.provider.Provider.__call__:1
+msgid "Call underlying factory as-is"
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.provider.ProviderKind:1
+msgid "Types of provider keys"
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.ProviderKind.NAMED:1
+msgid "Keyed by a name"
+msgstr ""
+
+#: ../../../../litestar/di/provider.py:docstring of
+#: litestar.di.ProviderKind.TYPE:1
+msgid "Keyed by a type"
+msgstr ""
+
+#: ../../../../litestar/di/_request.py:docstring of
+#: litestar.di._request.RequestParameter:1
+msgid ""
+"Parameter of a Provider or InjectionTarget declared by a parameter marker, "
+"such as ``FromQuery[...]``, or a body marker, such as ``JSONBody[...]``"
+msgstr ""
+
+#: ../../../../litestar/di/_request.py:docstring of
+#: litestar.di.RequestParameter.parameter_name:1
+msgid "Name of the parameter on the callable"
+msgstr ""
+
+#: ../../../../litestar/di/_request.py:docstring of
+#: litestar.di.RequestParameter.param_type:1
+msgid "Type of the request parameter. ``None`` for the request body"
+msgstr ""
+
+#: ../../../../litestar/di/_request.py:docstring of
+#: litestar.di.RequestParameter.name:1
+msgid ""
+"Name of the request parameter in the request, as declared. Empty for the "
+"request body"
+msgstr ""
+
+#: ../../../../litestar/di/_request.py:docstring of
+#: litestar.di.RequestParameter.field_definition:1
+msgid "The parameter's declaration. Its ``kwarg_definition`` is the marker"
+msgstr ""
+
+#: ../../../../litestar/di/_request.py:docstring of
+#: litestar.di.RequestParameter.marker:1
+msgid "The parameter marker or body marker declaring the parameter"
+msgstr ""
+
+#: ../../../../litestar/di/_request.py:docstring of
+#: litestar.di.RequestParameter.is_body:1
+msgid "Whether a body marker declares the parameter"
+msgstr ""
+
+#: ../../../../litestar/di/_request.py:docstring of
+#: litestar.di.RequestParameter.key:1
+msgid ""
+"The dependency key, ``\"<param type>:<name>\"`` with a header's name lower-"
+"cased, or ``\"body:\"`` for the request body"
+msgstr ""
+
+#: ../../../../litestar/di/registry.py:docstring of
+#: litestar.di.registry.ValueGraphDivergence:1
+msgid ""
+"Finding of :func:`~litestar.di.check_divergence`: a node at which two "
+"registries' value graphs diverge. ``provider``, declared under ``key`` by "
+"both, has different predecessors in ``registry`` than in ``first_registry``"
+msgstr ""
+
+#: ../../../../litestar/di/registry.py:docstring of
+#: litestar.di.ValueGraphDivergence.bindings:1
+msgid ""
+"bindings that differ, as ``(first, this)`` per key, ``None`` for an unbound "
+"optional dependency"
+msgstr ""
+
+#: ../../../../litestar/di/__init__.py:docstring of
+#: litestar.di.registry.check_divergence:1
+msgid ""
+"Check for divergences in the predecessors of providers shared by "
+"``registries``."
+msgstr ""
+
+#: ../../../../litestar/di/__init__.py:docstring of
+#: litestar.di.registry.check_divergence:3
+msgid ""
+"Why does this matter? A provider registered in one or more registry that, "
+"through differing predecessors in each registry, will create unique values "
+"below the lifetimes of its scope."
+msgstr ""
+
+#: ../../../../litestar/di/__init__.py:docstring of
+#: litestar.di.registry.check_divergence:7
+msgid ""
+"@provide(scope=\"app\", key=\"session\")\n"
+"async def create_session(engine: NamedDependency[Engine]) -> Session:\n"
+"    with Session(bind=engine) as session:\n"
+"        yield session\n"
+"\n"
+"@provide(scope=\"app\", key=\"engine\")\n"
+"async def engine_one() -> str:\n"
+"    return create_engine(<some params>)\n"
+"\n"
+"@provide(scope=\"app\", key=\"engine\")\n"
+"async def engine_two() -> str:\n"
+"    return create_engine(<some other params>)\n"
+"\n"
+"alice = DIRegistry(\"alice\", [create_session, engine_one])\n"
+"bob = DIRegistry(\"bob\", [create_session, engine_two])\n"
+"\n"
+"app_ctx = DIContext(registry=DIRegistry(), scope=\"app\")\n"
+"alice_ctx = DIContext(alice, scope=\"request\", parent=app_ctx)\n"
+"bob_ctx = DIContext(alice, scope=\"request\", parent=app_ctx)\n"
+"\n"
+"await alice_ctx.solve(\"session\")  # there is now an 'engine' and a "
+"'session' in app_ctx\n"
+"await bob_ctx.solve(\"session\")  # a distinct 'engine' and a 'session' are "
+"created in app_ctx"
+msgstr ""
+
+#: ../../../../litestar/di/__init__.py:docstring of
+#: litestar.di.registry.check_divergence:32
+msgid ""
+"In this example, both registries share the provider for the 'session' key, "
+"but have different providers for the 'engine' key. Since 'session' depends "
+"on 'engine', this is a divergence. When resolving 'session' through "
+"'alice_ctx' , it must get a different 'engine' then when resolved through "
+"'bob_ctx', which the context will solve by invoking 'create_session' again, "
+"even if a value for its key is already present in 'app_ctx'."
+msgstr ""
+
+#: ../../../../litestar/di/__init__.py:docstring of
+#: litestar.di.registry.check_divergence:39
+msgid "If ``raise_on_divergence`` is set, at the first finding."
+msgstr ""
+
+#: ../../../../litestar/di/__init__.py:docstring of
+#: litestar.di.provider.provide:1
+msgid "A decorator wrapping the callable into a :class:`Provider`."
+msgstr ""
+
+#: ../../../../litestar/di/__init__.py:docstring of
+#: litestar.di.provider.provide:3
+msgid "Name of the scope owning the produced value."
+msgstr ""
+
+#: ../../../../litestar/di/__init__.py:docstring of
+#: litestar.di.provider.provide:4
+msgid ""
+"Whether the provider is keyed by name or by type. If not given, inferred "
+"from ``key``, or by name without a key"
+msgstr ""
+
+#: ../../../../litestar/di/__init__.py:docstring of
+#: litestar.di.provider.provide:6
+msgid ""
+"Key this factory provides for. If not given, will be inferred. From the "
+"callable's name for ``kind=\"named\"`` (the default), and from the "
+"callable's return type for ``kind=\"type\"``"
+msgstr ""
+
+#: ../../../../litestar/di/__init__.py:docstring of
+#: litestar.di.provider.provide:9
+msgid ""
+"Whether a sync callable runs in a worker thread; see :class:`Provider` for "
+"more information"
+msgstr ""
+
+#: ../../../../litestar/di/__init__.py:docstring of
+#: litestar.di.provider.provide:12
+msgid "If used as a bare ``@provide`` without parentheses."
+msgstr ""
+
+#: ../../../reference/di.rst:11
+msgid "Mark a parameter as a dependency resolved by *name*."
+msgstr ""
+
+#: ../../../reference/di.rst:13
+msgid "Equivalent to ``Annotated[T, Dependency(kind=\"named\")]``"
+msgstr ""
+
+#: ../../../reference/di.rst:17
+msgid "Mark a parameter as a dependency resolved by *type*."
+msgstr ""
+
+#: ../../../reference/di.rst:19
+msgid "Equivalent to ``Annotated[T, Dependency(kind=\"type\")]``"
+msgstr ""
+
+#: ../../../../litestar/di/exceptions.py:docstring of
+#: litestar.di.exceptions.CaptiveDependencyError:1
+msgid ""
+"A provider depends on a value from a later scope, which it would keep using "
+"after that value was cleaned up"
+msgstr ""
+
+#: ../../../../litestar/di/exceptions.py:docstring of
+#: litestar.di.exceptions.DIContextClosedError:1
+msgid "A :class:`DIContext` was used after it was closed."
+msgstr ""
+
+#: ../../../../litestar/di/exceptions.py:docstring of
+#: litestar.di.exceptions.DIScopeError:1
+msgid ""
+"A scope was entered out of order, skipped, repeated, not at all, does not "
+"exist"
+msgstr ""
+
+#: ../../../../litestar/di/exceptions.py:docstring of
+#: litestar.di.exceptions.DivergenceError:1
+#: litestar.di.exceptions.DivergenceWarning:1
+msgid "Covering a :class:`ValueGraphDivergence`"
+msgstr ""
+
+#: ../../../../litestar/di/exceptions.py:docstring of
+#: litestar.di.exceptions.MissingProviderError:1
+msgid "A dependency has no provider registered in the registry"
+msgstr ""
+
+#: ../../../../litestar/di/exceptions.py:docstring of
+#: litestar.di.exceptions.MissingSeedError:1
+msgid ""
+"A context was built without a value for a seed key its registry declares at "
+"its scope"
+msgstr ""
+
+#: ../../../../litestar/di/exceptions.py:docstring of
+#: litestar.di.exceptions.ScopeMismatchError:1
+msgid ""
+"A provider exists, but its scope is not entered by the requesting context or "
+"any context above it"
 msgstr ""

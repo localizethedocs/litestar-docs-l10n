@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-19 17:13+0000\n"
+"POT-Creation-Date: 2026-11-23 20:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,16 +28,22 @@ msgstr ""
 
 #: ../../../../litestar/plugins/prometheus/config.py:docstring of
 #: litestar.plugins.prometheus.PrometheusConfig.app_name:1
+#: ../../../../litestar/plugins/prometheus/middleware.py:docstring
+#: litestar.plugins.prometheus.middleware.PrometheusMiddleware.__init__:3
 msgid "The name of the application to use in the metrics."
 msgstr ""
 
 #: ../../../../litestar/plugins/prometheus/config.py:docstring of
 #: litestar.plugins.prometheus.PrometheusConfig.prefix:1
+#: ../../../../litestar/plugins/prometheus/middleware.py:docstring
+#: litestar.plugins.prometheus.middleware.PrometheusMiddleware.__init__:4
 msgid "The prefix to use for the metrics."
 msgstr ""
 
 #: ../../../../litestar/plugins/prometheus/config.py:docstring of
 #: litestar.plugins.prometheus.PrometheusConfig.labels:1
+#: ../../../../litestar/plugins/prometheus/middleware.py:docstring
+#: litestar.plugins.prometheus.middleware.PrometheusMiddleware.__init__:5
 msgid ""
 "A mapping of labels to add to the metrics. The values can be either a string "
 "or a callable that returns a string."
@@ -52,11 +58,15 @@ msgstr ""
 
 #: ../../../../litestar/plugins/prometheus/config.py:docstring of
 #: litestar.plugins.prometheus.PrometheusConfig.buckets:1
+#: ../../../../litestar/plugins/prometheus/middleware.py:docstring
+#: litestar.plugins.prometheus.middleware.PrometheusMiddleware.__init__:9
 msgid "A list of buckets to use for the histogram."
 msgstr ""
 
 #: ../../../../litestar/plugins/prometheus/config.py:docstring of
 #: litestar.plugins.prometheus.PrometheusConfig.excluded_http_methods:1
+#: ../../../../litestar/plugins/prometheus/middleware.py:docstring
+#: litestar.plugins.prometheus.middleware.PrometheusMiddleware.__init__:10
 msgid "A list of http methods to exclude from the metrics."
 msgstr ""
 
@@ -67,7 +77,23 @@ msgstr ""
 
 #: ../../../../litestar/plugins/prometheus/config.py:docstring of
 #: litestar.plugins.prometheus.PrometheusConfig.exclude:1
-msgid "A pattern or list of patterns for routes to exclude from the metrics."
+#: ../../../../litestar/plugins/prometheus/middleware.py:docstring
+#: litestar.plugins.prometheus.middleware.PrometheusMiddleware.__init__:11
+msgid ""
+"A pattern or list of patterns for routes to exclude from the metrics, "
+"matched against the request path."
+msgstr ""
+
+#: ../../../../litestar/plugins/prometheus/config.py:docstring of
+#: litestar.plugins.prometheus.PrometheusConfig.exclude_path_pattern:1
+msgid ""
+"A pattern or list of patterns for routes to exclude from the metrics, "
+"matched against the handler path at startup."
+msgstr ""
+
+#: ../../../../litestar/plugins/prometheus/config.py:docstring of
+#: litestar.plugins.prometheus.PrometheusConfig.exclude_path_pattern:4
+msgid "See :attr:`~litestar.middleware.ASGIMiddleware.exclude_path_pattern`."
 msgstr ""
 
 #: ../../../../litestar/plugins/prometheus/config.py:docstring of
@@ -86,21 +112,17 @@ msgstr ""
 
 #: ../../../../litestar/plugins/prometheus/config.py:docstring of
 #: litestar.plugins.prometheus.PrometheusConfig.group_path:1
+#: ../../../../litestar/plugins/prometheus/middleware.py:docstring
+#: litestar.plugins.prometheus.middleware.PrometheusMiddleware.__init__:20
 msgid "Whether to group paths in the metrics to avoid cardinality explosion."
 msgstr ""
 
 #: ../../../../litestar/plugins/prometheus/config.py:docstring of
 #: litestar.plugins.prometheus.PrometheusConfig.middleware:1
 msgid ""
-"Create an instance of :class:`DefineMiddleware <litestar.middleware.base."
-"DefineMiddleware>` that wraps with."
-msgstr ""
-
-#: ../../../../litestar/plugins/prometheus/config.py:docstring of
-#: litestar.plugins.prometheus.PrometheusConfig.middleware:3
-msgid ""
-"[PrometheusMiddleware][litestar.plugins.prometheus.PrometheusMiddleware]. or "
-"a subclass of this middleware."
+"Create an instance of :class:`PrometheusMiddleware "
+"<litestar.plugins.prometheus.PrometheusMiddleware>`, or a subclass of this "
+"middleware, configured from this config instance."
 msgstr ""
 
 #: ../../../reference/plugins/prometheus.rst:0
@@ -108,8 +130,8 @@ msgid "Returns"
 msgstr ""
 
 #: ../../../../litestar/plugins/prometheus/config.py:docstring of
-#: litestar.plugins.prometheus.PrometheusConfig.middleware:6
-msgid "An instance of ``DefineMiddleware``."
+#: litestar.plugins.prometheus.PrometheusConfig.middleware:4
+msgid "An instance of :attr:`middleware_class`."
 msgstr ""
 
 #: ../../../../litestar/plugins/prometheus/controller.py:docstring of
@@ -125,8 +147,8 @@ msgstr ""
 #: ../../../../litestar/plugins/prometheus/controller.py:docstring of
 #: litestar.plugins.prometheus.PrometheusController.after_request:1
 msgid ""
-"A sync or async function executed before a :class:`Request <.connection."
-"Request>` is passed to any route handler."
+"A sync or async function executed before a :class:`Request "
+"<.connection.Request>` is passed to any route handler."
 msgstr ""
 
 #: ../../../../litestar/plugins/prometheus/controller.py:docstring of
@@ -177,8 +199,9 @@ msgstr ""
 #: ../../../../litestar/plugins/prometheus/controller.py:docstring of
 #: litestar.plugins.prometheus.PrometheusController.dependencies:1
 msgid ""
-"A string keyed dictionary of dependency :class:`Provider <.di.Provide>` "
-"instances."
+"A sequence of :class:`Provider <.di.Provider>` instances, or a mapping of "
+"names or types to providers, :class:`Provide <.di.Provide>` instances or "
+"callables."
 msgstr ""
 
 #: ../../../../litestar/plugins/prometheus/controller.py:docstring of
@@ -220,9 +243,10 @@ msgstr ""
 #: ../../../../litestar/plugins/prometheus/controller.py:docstring of
 #: litestar.plugins.prometheus.PrometheusController.opt:1
 msgid ""
-"A string key mapping of arbitrary values that can be accessed in :class:"
-"`Guards <.types.Guard>` or wherever you have access to :class:`Request <."
-"connection.Request>` or :class:`ASGI Scope <.types.Scope>`."
+"A string key mapping of arbitrary values that can be accessed "
+"in :class:`Guards <.types.Guard>` or wherever you have access "
+"to :class:`Request <.connection.Request>` or :class:`ASGI Scope "
+"<.types.Scope>`."
 msgstr ""
 
 #: ../../../../litestar/plugins/prometheus/controller.py:docstring of
@@ -261,8 +285,8 @@ msgstr ""
 #: ../../../../litestar/plugins/prometheus/controller.py:docstring of
 #: litestar.plugins.prometheus.PrometheusController.response_headers:1
 msgid ""
-"A string keyed dictionary mapping :class:`ResponseHeader <.datastructures."
-"ResponseHeader>` instances."
+"A string keyed dictionary mapping :class:`ResponseHeader "
+"<.datastructures.ResponseHeader>` instances."
 msgstr ""
 
 #: ../../../../litestar/plugins/prometheus/controller.py:docstring of
@@ -348,13 +372,61 @@ msgid "Parameters"
 msgstr ""
 
 #: ../../../../litestar/plugins/prometheus/middleware.py:docstring of
-#: litestar.plugins.prometheus.middleware.PrometheusMiddleware.__init__:3
-msgid "The ``next`` ASGI app to call."
+#: litestar.plugins.prometheus.middleware.PrometheusMiddleware.__init__:7
+msgid ""
+"A callable that returns a list of exemplars to add to the metrics. Only "
+"supported in openmetrics-text exposition format."
 msgstr ""
 
 #: ../../../../litestar/plugins/prometheus/middleware.py:docstring of
-#: litestar.plugins.prometheus.middleware.PrometheusMiddleware.__init__:4
+#: litestar.plugins.prometheus.middleware.PrometheusMiddleware.__init__:13
 msgid ""
-"An instance of :class:`PrometheusConfig <.plugins.prometheus."
-"PrometheusConfig>`"
+"A pattern or list of patterns for routes to exclude from the metrics, "
+"matched against the handler path at startup. "
+"See :attr:`~litestar.middleware.ASGIMiddleware.exclude_path_pattern`."
+msgstr ""
+
+#: ../../../../litestar/plugins/prometheus/middleware.py:docstring of
+#: litestar.plugins.prometheus.middleware.PrometheusMiddleware.__init__:16
+msgid ""
+"A key in ``opt`` with which a route handler can \"opt-out\" of the "
+"middleware."
+msgstr ""
+
+#: ../../../../litestar/plugins/prometheus/middleware.py:docstring of
+#: litestar.plugins.prometheus.middleware.PrometheusMiddleware.__init__:17
+msgid ""
+"ASGI scopes processed by the middleware; if ``None`` or empty, ``http``, "
+"``websocket`` and ASGI route handlers are all processed. Mounted ASGI apps "
+"stay wrapped regardless, with their connections filtered by scope type."
+msgstr ""
+
+#: ../../../../litestar/plugins/prometheus/middleware.py:docstring of
+#: litestar.plugins.prometheus.middleware.PrometheusMiddleware.handle:1
+msgid "Handle ASGI call."
+msgstr ""
+
+#: ../../../../litestar/plugins/prometheus/middleware.py:docstring of
+#: litestar.plugins.prometheus.middleware.PrometheusMiddleware.handle:3
+msgid "The ASGI connection scope."
+msgstr ""
+
+#: ../../../../litestar/plugins/prometheus/middleware.py:docstring of
+#: litestar.plugins.prometheus.middleware.PrometheusMiddleware.handle:4
+msgid "The ASGI receive function."
+msgstr ""
+
+#: ../../../../litestar/plugins/prometheus/middleware.py:docstring of
+#: litestar.plugins.prometheus.middleware.PrometheusMiddleware.handle:5
+msgid "The ASGI send function."
+msgstr ""
+
+#: ../../../../litestar/plugins/prometheus/middleware.py:docstring of
+#: litestar.plugins.prometheus.middleware.PrometheusMiddleware.handle:6
+msgid "The next ASGI application in the middleware stack to call."
+msgstr ""
+
+#: ../../../../litestar/plugins/prometheus/middleware.py:docstring of
+#: litestar.plugins.prometheus.middleware.PrometheusMiddleware.handle:8
+msgid "None"
 msgstr ""
