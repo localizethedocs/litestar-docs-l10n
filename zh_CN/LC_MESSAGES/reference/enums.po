@@ -1,0 +1,71 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Starlite-API
+# This file is distributed under the same license as the Starlite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Starlite 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 02:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/enums.rst:2
+msgid "starlite.enums"
+msgstr ""
+
+#: ../../../../starlite/enums.py:docstring of
+#: starlite.enums.CompressionEncoding:1 starlite.enums.HttpMethod:1
+#: starlite.enums.MediaType:1 starlite.enums.OpenAPIMediaType:1
+#: starlite.enums.ParamType:1 starlite.enums.RequestEncodingType:1
+#: starlite.enums.ScopeType:1
+msgid "Bases: :py:class:`str`, :py:class:`~enum.Enum`"
+msgstr ""
+
+#: ../../../../starlite/enums.py:docstring of starlite.enums.HttpMethod:1
+msgid "An Enum for HTTP methods."
+msgstr ""
+
+#: ../../../../starlite/enums.py:docstring of starlite.enums.MediaType:1
+msgid "An Enum for ``Content-Type`` header values."
+msgstr ""
+
+#: ../../../../starlite/enums.py:docstring of starlite.enums.OpenAPIMediaType:1
+msgid "An Enum for OpenAPI specific response ``Content-Type`` header values."
+msgstr ""
+
+#: ../../../../starlite/enums.py:docstring of
+#: starlite.enums.RequestEncodingType:1
+msgid ""
+"An Enum for request ``Content-Type`` header values designating encoding "
+"formats."
+msgstr ""
+
+#: ../../../../starlite/enums.py:docstring of starlite.enums.ScopeType:1
+msgid "An Enum for the 'http' key stored under Scope."
+msgstr ""
+
+#: ../../../../starlite/enums.py:docstring of starlite.enums.ScopeType:3
+msgid "Notes"
+msgstr ""
+
+#: ../../../../starlite/enums.py:docstring of starlite.enums.ScopeType:5
+msgid ""
+"``asgi`` is used by Starlite internally and is not part of the specification."
+msgstr ""
+
+#: ../../../../starlite/enums.py:docstring of starlite.enums.ParamType:1
+msgid "An Enum for the types of parameters a request can receive."
+msgstr ""
+
+#: ../../../../starlite/enums.py:docstring of
+#: starlite.enums.CompressionEncoding:1
+msgid "An Enum for supported compression encodings."
+msgstr ""
