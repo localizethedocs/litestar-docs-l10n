@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-19 17:13+0000\n"
+"POT-Creation-Date: 2026-11-23 20:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -278,15 +278,15 @@ msgstr ""
 #: ../../../../litestar/security/jwt/auth.py:docstring of
 #: litestar.security.jwt.BaseJWTAuth.security_requirement:5
 msgid ""
-"An OpenAPI 3.1 :data:`SecurityRequirement <.openapi.spec."
-"SecurityRequirement>` dictionary."
+"An OpenAPI 3.1 :data:`SecurityRequirement "
+"<.openapi.spec.SecurityRequirement>` dictionary."
 msgstr ""
 
 #: ../../../../litestar/security/jwt/auth.py:docstring of
 #: litestar.security.jwt.BaseJWTAuth.middleware:1
 msgid ""
-"Create :class:`JWTAuthenticationMiddleware` wrapped in :class:"
-"`DefineMiddleware <.middleware.base.DefineMiddleware>`."
+"Create :class:`JWTAuthenticationMiddleware` wrapped "
+"in :class:`DefineMiddleware <.middleware.base.DefineMiddleware>`."
 msgstr ""
 
 #: ../../../../litestar/security/jwt/auth.py:docstring of
@@ -483,7 +483,10 @@ msgstr ""
 #: litestar.security.jwt.JWTAuth.dependencies:1
 #: litestar.security.jwt.JWTCookieAuth.dependencies:1
 #: litestar.security.jwt.OAuth2PasswordBearerAuth.dependencies:1
-msgid "An optional dictionary of dependency providers."
+msgid ""
+"A sequence of :class:`Provider <.di.Provider>` instances, or a mapping of "
+"names or types to providers, :class:`Provide <.di.Provide>` instances or "
+"callables."
 msgstr ""
 
 #: ../../../../litestar/security/jwt/auth.py:docstring of

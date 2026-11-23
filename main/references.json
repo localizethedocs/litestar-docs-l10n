@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-10-19 08:58:57 +0300",
-      "hash" : "af5003e830c3a44dc22cad499200e28b898c1407",
-      "title" : "chore(deps): bump actions/create-github-app-token from 3.2.0 to 3.3.0 (#5141)"
+      "date" : "2026-11-23 16:50:14 +0000",
+      "hash" : "b68d296876df988f402ec30e71249ac3350c1126",
+      "title" : "feat: add Python 3.15 support to pyproject and ci test (#5176)"
     }
   },
   "type" : "branch",

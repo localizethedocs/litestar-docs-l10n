@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-19 17:13+0000\n"
+"POT-Creation-Date: 2026-11-23 20:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -97,7 +97,21 @@ msgstr ""
 
 #: ../../../../litestar/middleware/session/base.py:docstring of
 #: litestar.middleware.session.base.BaseBackendConfig.exclude:1
-msgid "A pattern or list of patterns to skip in the session middleware."
+msgid ""
+"A pattern or list of patterns to skip in the session middleware, matched "
+"against the request path."
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.BaseBackendConfig.exclude_path_pattern:1
+msgid ""
+"A pattern or list of patterns to skip in the session middleware, matched "
+"against the handler path at startup."
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.BaseBackendConfig.exclude_path_pattern:3
+msgid "See :attr:`~litestar.middleware.ASGIMiddleware.exclude_path_pattern`."
 msgstr ""
 
 #: ../../../../litestar/middleware/session/base.py:docstring of
@@ -125,7 +139,7 @@ msgid ""
 "from os import urandom\n"
 "\n"
 "from litestar import Litestar, Request, get\n"
-"from litestar.middleware.sessions.cookie_backend import CookieBackendConfig\n"
+"from litestar.middleware.session.client_side import CookieBackendConfig\n"
 "\n"
 "session_config = CookieBackendConfig(secret=urandom(16))\n"
 "\n"
@@ -134,8 +148,8 @@ msgid ""
 "def my_handler(request: Request) -> None: ...\n"
 "\n"
 "\n"
-"app = Litestar(route_handlers=[my_handler], middleware=[session_config."
-"middleware])"
+"app = Litestar(route_handlers=[my_handler], "
+"middleware=[session_config.middleware])"
 msgstr ""
 
 #: ../../../reference/middleware/session/base.rst:0
@@ -145,7 +159,8 @@ msgstr ""
 #: ../../../../litestar/middleware/session/base.py:docstring of
 #: litestar.middleware.session.base.BaseBackendConfig.middleware:21
 msgid ""
-"An instance of DefineMiddleware including ``self`` as the config kwarg value."
+"A :class:`SessionMiddleware` instance created with a backend built from "
+"``self``."
 msgstr ""
 
 #: ../../../../litestar/middleware/session/base.py:docstring of
@@ -255,6 +270,7 @@ msgstr ""
 #: ../../../../litestar/middleware/session/base.py:docstring of
 #: litestar.middleware.session.base.BaseSessionBackend.store_in_message:7
 #: litestar.middleware.session.base.SessionMiddleware.create_send_wrapper:5
+#: litestar.middleware.session.base.SessionMiddleware.handle:8
 msgid "None"
 msgstr ""
 
@@ -294,11 +310,6 @@ msgstr ""
 
 #: ../../../../litestar/middleware/session/base.py:docstring of
 #: litestar.middleware.session.base.SessionMiddleware.__init__:3
-msgid "An ASGI application"
-msgstr ""
-
-#: ../../../../litestar/middleware/session/base.py:docstring of
-#: litestar.middleware.session.base.SessionMiddleware.__init__:4
 msgid ""
 "A :class:`BaseSessionBackend` instance used to store and retrieve session "
 "data"
@@ -314,4 +325,29 @@ msgstr ""
 #: ../../../../litestar/middleware/session/base.py:docstring of
 #: litestar.middleware.session.base.SessionMiddleware.create_send_wrapper:3
 msgid "ASGIConnection"
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.SessionMiddleware.handle:1
+msgid "Handle ASGI call."
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.SessionMiddleware.handle:3
+msgid "The ASGI connection scope."
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.SessionMiddleware.handle:4
+msgid "The ASGI receive function."
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.SessionMiddleware.handle:5
+msgid "The ASGI send function."
+msgstr ""
+
+#: ../../../../litestar/middleware/session/base.py:docstring of
+#: litestar.middleware.session.base.SessionMiddleware.handle:6
+msgid "The next ASGI application in the middleware stack to call."
 msgstr ""

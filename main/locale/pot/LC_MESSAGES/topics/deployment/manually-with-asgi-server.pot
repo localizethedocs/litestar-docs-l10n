@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-19 17:13+0000\n"
+"POT-Creation-Date: 2026-11-23 20:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -103,8 +103,8 @@ msgstr ""
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:40
 msgid ""
-"`Uvicorn <https://uvicorn.dev/>`_ is an ASGI server that supports "
-"``HTTP/1.1`` and WebSocket."
+"`Uvicorn <https://uvicorn.dev/>`_ is an ASGI server that supports ``HTTP/"
+"1.1`` and WebSocket."
 msgstr ""
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:0
@@ -196,7 +196,7 @@ msgstr ""
 #: ../../../topics/deployment/manually-with-asgi-server.rst:114
 #: ../../../topics/deployment/manually-with-asgi-server.rst:129
 #: ../../../topics/deployment/manually-with-asgi-server.rst:142
-#: ../../../topics/deployment/manually-with-asgi-server.rst:156
+#: ../../../topics/deployment/manually-with-asgi-server.rst:168
 msgid "Console Output"
 msgstr ""
 
@@ -231,48 +231,61 @@ msgstr ""
 
 #: ../../../topics/deployment/manually-with-asgi-server.rst:142
 msgid ""
-"INFO - 2023-11-12 23:31:51,571 - daphne.cli - cli - Starting server at tcp:"
-"port=8000:interface=127.0.0.1\n"
+"INFO - 2023-11-12 23:31:51,571 - daphne.cli - cli - Starting server at "
+"tcp:port=8000:interface=127.0.0.1\n"
 "INFO - 2023-11-12 23:31:51,572 - daphne.server - server - Listening on TCP "
 "address 127.0.0.1:8000"
 msgstr ""
 
-#: ../../../topics/deployment/manually-with-asgi-server.rst:151
+#: ../../../topics/deployment/manually-with-asgi-server.rst:150
+msgid ""
+"Daphne does not support the ASGI lifespan protocol. Litestar requires the "
+"lifespan protocol to support app-scoped dependencies, and the app will fail "
+"to start if the lifespan does not run. To fix this, create ann app without "
+"the ``app`` dependency scope, and make sure to not use any dependency "
+"providers with that scope."
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:157
+msgid "app = Litestar(..., dependency_scopes=(\"request\", \"handler\"))"
+msgstr ""
+
+#: ../../../topics/deployment/manually-with-asgi-server.rst:163
 msgid "Run Granian with the default configuration"
 msgstr ""
 
-#: ../../../topics/deployment/manually-with-asgi-server.rst:151
+#: ../../../topics/deployment/manually-with-asgi-server.rst:163
 msgid "granian --interface asgi app:app"
 msgstr ""
 
-#: ../../../topics/deployment/manually-with-asgi-server.rst:156
+#: ../../../topics/deployment/manually-with-asgi-server.rst:168
 msgid ""
 "[INFO] Starting granian\n"
 "[INFO] Listening at: 127.0.0.1:8000"
 msgstr ""
 
-#: ../../../topics/deployment/manually-with-asgi-server.rst:163
+#: ../../../topics/deployment/manually-with-asgi-server.rst:175
 msgid "Gunicorn with Uvicorn workers"
 msgstr ""
 
-#: ../../../topics/deployment/manually-with-asgi-server.rst:165
+#: ../../../topics/deployment/manually-with-asgi-server.rst:177
 msgid "**Deprecation Notice**"
 msgstr ""
 
-#: ../../../topics/deployment/manually-with-asgi-server.rst:167
+#: ../../../topics/deployment/manually-with-asgi-server.rst:179
 msgid ""
 "The Gunicorn+Uvicorn pattern is considered legacy for ASGI deployments since "
 "`Uvicorn 0.30.0+ <https://github.com/encode/uvicorn/releases/tag/0.30.0/>`_ "
 "includes native worker management."
 msgstr ""
 
-#: ../../../topics/deployment/manually-with-asgi-server.rst:169
+#: ../../../topics/deployment/manually-with-asgi-server.rst:181
 msgid ""
 "Uvicorn added a new multiprocess manager, that is meant to replace Gunicorn "
 "entirely. Refer to the pull request `#2183 <https://github.com/encode/"
 "uvicorn/pull/2183/>`_ for implementation details."
 msgstr ""
 
-#: ../../../topics/deployment/manually-with-asgi-server.rst:171
+#: ../../../topics/deployment/manually-with-asgi-server.rst:183
 msgid "For new deployments, use Uvicorn directly."
 msgstr ""

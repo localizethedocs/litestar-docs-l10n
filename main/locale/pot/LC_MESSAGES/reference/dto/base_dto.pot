@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Litestar main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-19 17:13+0000\n"
+"POT-Creation-Date: 2026-11-23 20:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -122,7 +122,6 @@ msgid "Check support for the given type."
 msgstr ""
 
 #: ../../../../litestar/dto/base_dto.py:docstring of
-#: litestar.dto.base_dto.AbstractDTO.create_for_field_definition:3
 #: litestar.dto.base_dto.AbstractDTO.is_supported_model_type_field:3
 msgid "A :class:`FieldDefinition <litestar.typing.FieldDefinition>` instance."
 msgstr ""
@@ -138,18 +137,26 @@ msgid "Creates a DTO subclass for a field definition."
 msgstr ""
 
 #: ../../../../litestar/dto/base_dto.py:docstring of
-#: litestar.dto.base_dto.AbstractDTO.create_for_field_definition:4
-#: litestar.dto.base_dto.AbstractDTO.create_openapi_schema:4
-msgid "ID of the route handler for which to create a DTO instance."
+#: litestar.dto.base_dto.AbstractDTO.create_for_field_definition:3
+msgid ""
+"A :class:`FieldDefinition <litestar.typing.FieldDefinition>` instance. "
+"Declared as a body, e.g. ``JSONBody[Model]``, it is the data the handler "
+"receives, otherwise the data it returns."
 msgstr ""
 
 #: ../../../../litestar/dto/base_dto.py:docstring of
 #: litestar.dto.base_dto.AbstractDTO.create_for_field_definition:5
+#: litestar.dto.base_dto.AbstractDTO.create_openapi_schema:6
+msgid "ID of the route handler for which to create a DTO instance."
+msgstr ""
+
+#: ../../../../litestar/dto/base_dto.py:docstring of
+#: litestar.dto.base_dto.AbstractDTO.create_for_field_definition:6
 msgid "Alternative DTO backend class to use"
 msgstr ""
 
 #: ../../../../litestar/dto/base_dto.py:docstring of
-#: litestar.dto.base_dto.AbstractDTO.create_for_field_definition:7
+#: litestar.dto.base_dto.AbstractDTO.create_for_field_definition:8
 msgid "None"
 msgstr ""
 
@@ -161,18 +168,20 @@ msgstr ""
 #: ../../../../litestar/dto/base_dto.py:docstring of
 #: litestar.dto.base_dto.AbstractDTO.create_openapi_schema:3
 msgid ""
-"A parsed type annotation that represents the annotation used on the handler."
+"A parsed type annotation that represents the annotation used on the handler. "
+"Declared as a body, e.g. ``JSONBody[Model]``, it is the data the handler "
+"receives, otherwise the data it returns."
 msgstr ""
 
 #: ../../../../litestar/dto/base_dto.py:docstring of
-#: litestar.dto.base_dto.AbstractDTO.create_openapi_schema:5
+#: litestar.dto.base_dto.AbstractDTO.create_openapi_schema:7
 msgid ""
 "A factory for creating schemas. Has a ``for_field_definition()`` method that "
 "accepts a :class:`~litestar.typing.FieldDefinition` instance."
 msgstr ""
 
 #: ../../../../litestar/dto/base_dto.py:docstring of
-#: litestar.dto.base_dto.AbstractDTO.create_openapi_schema:8
+#: litestar.dto.base_dto.AbstractDTO.create_openapi_schema:10
 msgid "OpenAPI request body."
 msgstr ""
 
