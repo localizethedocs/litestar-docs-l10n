@@ -386,7 +386,7 @@ VERSION=main
 git clone --recurse-submodule https://github.com/localizethedocs/litestar-docs-l10n.git
 cd litestar-docs-l10n
 cmake --preset ${LANGUAGE} -DVERSION=${VERSION}
-cmake --build out/build/${LANGUAGE}
+cmake --build --preset ${LANGUAGE}
 ```
 
 您可以透過飛出式導航選單切換到其他可用的語言和版本。
